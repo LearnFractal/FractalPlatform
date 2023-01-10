@@ -1,0 +1,30 @@
+{
+  "NewTopic": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Register": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Login": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Logout": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  }
+}

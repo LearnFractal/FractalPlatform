@@ -1,0 +1,18 @@
+{
+   "NewOrders": {
+      "MenuItems": [
+         {
+            "Text": "Take",
+            "Action": "Take"
+         }
+      ]
+   },
+   "ActiveOrders": {
+      "MenuItems": [
+         {
+            "Text": "Complete",
+            "Action": "Complete"
+         }
+      ]
+   }
+}

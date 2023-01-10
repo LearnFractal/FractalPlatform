@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Databases\SocialNetwork\NewFolder\**" />
+    <Compile Remove="Files\PhotoAlbum\**" />
+    <EmbeddedResource Remove="Databases\SocialNetwork\NewFolder\**" />
+    <EmbeddedResource Remove="Files\PhotoAlbum\**" />
+    <None Remove="Databases\SocialNetwork\NewFolder\**" />
+    <None Remove="Files\PhotoAlbum\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BigDoc.Client">
+      <HintPath>..\Bin\BigDoc.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="BigDoc.Common">
+      <HintPath>..\Bin\BigDoc.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BigDoc.Database">
+      <HintPath>..\Bin\BigDoc.Database.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\" />
+    <Folder Include="Layouts\" />
+  </ItemGroup>
+
+</Project>

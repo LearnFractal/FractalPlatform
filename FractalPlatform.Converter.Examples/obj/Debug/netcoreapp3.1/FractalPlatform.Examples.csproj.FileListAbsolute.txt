@@ -1,0 +1,14 @@
+C:\FractalPlatform\FractalPlatform.Examples\bin\Debug\netcoreapp3.1\FractalPlatform.Examples.deps.json
+C:\FractalPlatform\FractalPlatform.Examples\bin\Debug\netcoreapp3.1\FractalPlatform.Examples.dll
+C:\FractalPlatform\FractalPlatform.Examples\bin\Debug\netcoreapp3.1\FractalPlatform.Examples.pdb
+C:\FractalPlatform\FractalPlatform.Examples\bin\Debug\netcoreapp3.1\BigDoc.Client.dll
+C:\FractalPlatform\FractalPlatform.Examples\bin\Debug\netcoreapp3.1\BigDoc.Common.dll
+C:\FractalPlatform\FractalPlatform.Examples\bin\Debug\netcoreapp3.1\BigDoc.Database.dll
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.csproj.AssemblyReference.cache
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.GeneratedMSBuildEditorConfig.editorconfig
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.AssemblyInfoInputs.cache
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.AssemblyInfo.cs
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.csproj.CoreCompileInputs.cache
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.csproj.CopyComplete
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.dll
+C:\FractalPlatform\FractalPlatform.Examples\obj\Debug\netcoreapp3.1\FractalPlatform.Examples.pdb

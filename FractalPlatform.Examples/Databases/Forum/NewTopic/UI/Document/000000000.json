@@ -1,0 +1,14 @@
+{
+  "Who": {
+    "Enabled": false
+  },
+  "CountMessages": {
+    "Visible": false
+  },
+  "CountViews": {
+    "Visible": false
+  },
+  "Message": {
+    "Visible": false
+  }
+}

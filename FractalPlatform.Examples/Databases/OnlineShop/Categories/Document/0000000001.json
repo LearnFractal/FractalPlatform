@@ -1,0 +1,24 @@
+﻿{
+  "Name": "Cars",
+  "Description": "Cars",
+  "Filters": [
+    {
+      "Name": "Price",
+      "Text": "0-100",
+      "Query": "{'Price':Range(0,100)}",
+      "Checked": false
+    },
+    {
+      "Name": "Price",
+      "Text": "100-200",
+      "Query": "{'Price':Range(100,200)}",
+      "Checked": false
+    },
+    {
+      "Name": "Price",
+      "Text": "200-1000",
+      "Query": "{'Price':Range(200,1000)}",
+      "Checked": false
+    }
+  ]
+}

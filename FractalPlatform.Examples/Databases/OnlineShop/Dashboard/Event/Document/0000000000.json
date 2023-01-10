@@ -1,0 +1,24 @@
+﻿{
+  "Header": {
+    "Category": {
+      "OnChange": "Category"
+    },
+    "SearchButton": {
+      "OnClick": "Search"
+    }
+  },
+  "Filters": [
+    {
+      "Category": {
+        "OnClick": "Category"
+      }
+    }
+  ],
+  "Products": [
+    {
+      "OpenButton": {
+        "OnClick": "Open"
+      }
+    }
+  ]
+}

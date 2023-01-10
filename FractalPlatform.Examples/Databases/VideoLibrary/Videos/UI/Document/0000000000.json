@@ -1,0 +1,14 @@
+﻿{
+  "Enabled": false,
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Videos": [
+    {
+      "Style": "Type:Link;Hide:Video;HasLabel:true",
+      "Video": {
+        "ControlType": "Video"
+      }
+    }
+  ]
+}

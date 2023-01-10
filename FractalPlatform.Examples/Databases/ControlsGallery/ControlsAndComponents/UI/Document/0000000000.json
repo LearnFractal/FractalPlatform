@@ -1,0 +1,18 @@
+﻿{
+  "Style": "Save:false;Hide:Dimensions,Example,Control,Age,Value",
+  "ReadOnly": true,
+  "Controls": [
+    {
+      "Example": {
+        "ReadOnly": false
+      }
+    }
+  ],
+  "Components": [
+    {
+      "Example": {
+        "ReadOnly": false
+      }
+    }
+  ]
+}

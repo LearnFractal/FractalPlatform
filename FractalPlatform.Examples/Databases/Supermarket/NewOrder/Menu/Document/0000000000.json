@@ -1,0 +1,10 @@
+{
+  "StockProducts": {
+    "MenuItems": [
+      {
+        "Text": "Add To Cart",
+        "Action": "AddToCart"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+﻿{
+   "Choose": "Bob",
+   "ExpiredAnswers": "11/14/2022 8:52:06 pm",
+   "ExpiredChooses": "11/14/2022 8:57:06 pm",
+   "ExpiredParticipants": "11/14/2022 8:47:06 pm",
+   "ID": "2",
+   "StartDate": "11/14/2022 8:42:06 pm",
+   "Status": "Finished",
+   "AnswerQuestions": [
+      {
+         "Answer": "Ok",
+         "From": "Bob",
+         "Question": "Your question",
+         "To": "Jane"
+      },
+      {
+         "Answer": "Ok",
+         "From": "Bob",
+         "Question": "Your question",
+         "To": "Jane"
+      },
+      {
+         "Answer": "Ok",
+         "From": "Bob",
+         "Question": "Your question",
+         "To": "Jane"
+      },
+      {
+         "Answer": "Ok",
+         "From": "Jane",
+         "Question": "Your question",
+         "To": "Bob"
+      },
+      {
+         "Answer": "Ok",
+         "From": "Jane",
+         "Question": "Your question",
+         "To": "Bob"
+      },
+      {
+         "Answer": "Ok",
+         "From": "Jane",
+         "Question": "Your question",
+         "To": "Bob"
+      }
+   ],
+   "Boys": [
+      {
+         "Choose": "Jane",
+         "Contracts": null,
+         "Gender": "Boy",
+         "GenderGroup": "Boys",
+         "Name": "Bob",
+         "Photo": null,
+         "Questions": [
+            "Your question",
+            "Your question",
+            "Your question"
+         ]
+      }
+   ],
+   "Girls": [
+      {
+         "Choose": "Bob",
+         "Contracts": null,
+         "Gender": "Girl",
+         "GenderGroup": "Girls",
+         "Name": "Jane",
+         "Photo": null,
+         "Questions": [
+            "Your question",
+            "Your question",
+            "Your question"
+         ]
+      }
+   ]
+}

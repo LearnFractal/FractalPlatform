@@ -1,0 +1,20 @@
+{
+  "Name": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 16
+  },
+  "Gender": {
+    "IsRequired": true
+  },
+  "Contacts": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 16
+  },
+  "Questions": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 16
+  }
+}

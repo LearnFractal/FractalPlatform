@@ -1,0 +1,11 @@
+{
+   "Cars":{
+      "OnClick":"Cars"
+   },
+   "Companies":{
+      "OnClick":"Companies"
+   },
+   "Users":{
+      "OnClick":"Users"
+   }
+}

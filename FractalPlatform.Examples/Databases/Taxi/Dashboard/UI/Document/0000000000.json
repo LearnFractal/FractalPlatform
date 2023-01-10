@@ -1,0 +1,24 @@
+{
+  "Style": "Save:false;Cancel:false",
+  "LoginButton": {
+    "ControlType": "Button"
+  },
+  "LogoutButton": {
+    "ControlType": "Button"
+  },
+  "Register": {
+    "ControlType": "Button"
+  },
+  "MyUser": {
+    "ControlType": "Button"
+  },
+  "MyDashboard": {
+    "ControlType": "Button"
+  },
+  "NewOrder": {
+    "ControlType": "Button"
+  },
+  "UserName": {
+    "ControlType": "Label"
+  }
+}

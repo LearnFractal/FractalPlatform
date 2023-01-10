@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "BigDoc.Deployment": {
+      "commandName": "Project"
+    }
+  }
+}

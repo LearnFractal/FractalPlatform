@@ -1,0 +1,12 @@
+﻿{
+  "Name": { "Index": 1 },
+  "Description": { "Index": 2 },
+  "Filters": [
+    {
+      "Name": { "Index": 3 },
+      "Text": { "Index": 4 },
+      "Query": { "Index": 5 },
+      "Checked": { "Index": 6 }
+    }
+  ]
+}

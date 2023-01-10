@@ -1,0 +1,15 @@
+{
+   "Address": "Avenue",
+   "Products": [
+      {
+         "Product": "Car",
+         "Count": "7",
+         "Price": 100
+      },
+      {
+         "Product": "Milk",
+         "Count": "97",
+         "Price": 1
+      }
+   ]
+}

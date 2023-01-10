@@ -1,0 +1,17 @@
+{
+  "Who": "Bob",
+  "Products": [
+    {
+      "Product": "Car",
+      "Count": 1,
+      "Price": 100
+    }
+  ],
+  "StockProducts": [
+    {
+      "Product": "Car",
+      "Count": 1,
+      "Price": 100
+    }
+  ]
+}

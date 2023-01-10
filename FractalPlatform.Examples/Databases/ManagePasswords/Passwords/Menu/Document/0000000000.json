@@ -1,0 +1,10 @@
+{
+   "Passwords": {
+    "MenuItems": [
+      {
+        "Text": "Copy Password",
+        "Action": "CopyPassword"
+      }
+    ]
+   }
+}

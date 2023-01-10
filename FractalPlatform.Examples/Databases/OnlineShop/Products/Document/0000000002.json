@@ -1,0 +1,8 @@
+﻿{
+  "Name": "Reno",
+  "Description": "",
+  "Quantity": 10,
+  "Price": 200,
+  "Categories": [ "Cars" ],
+  "OpenButton": "Open"
+}

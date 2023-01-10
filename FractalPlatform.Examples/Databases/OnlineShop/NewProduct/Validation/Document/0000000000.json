@@ -1,0 +1,22 @@
+﻿{
+  "Name": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Description": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Quantiy": {
+    "IsRequired": true,
+    "MinValue": 0,
+    "MaxValue": 1000
+  },
+  "Price": {
+    "IsRequired": true,
+    "MinValue": 1,
+    "MaxValue": 1000
+  }
+}

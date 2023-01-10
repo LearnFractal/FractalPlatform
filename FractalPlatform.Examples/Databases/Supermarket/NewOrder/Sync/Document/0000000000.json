@@ -1,0 +1,26 @@
+{
+   "CollVersion": 1,
+   "StockProducts": {
+      "Receive": {
+         "Query": "Collection.GetDoc(1).Select({'Products':[R,$]},true)",
+         "Version": "0",
+         "Enabled": true,
+         "Connection": {
+            "Host": "localhost",
+            "Port": "4477",
+            "DatabaseName": "Supermarket",
+            "CollectionName": "Stock"
+         },
+         "Download": {
+            "Mode": "ByView"
+         }
+      },
+      "Send": {
+         "ResolveConficts": "Overwrite",
+         "Enabled": true,
+         "Upload": {
+            "Mode": "ByView"
+         }
+      }
+   }
+}
