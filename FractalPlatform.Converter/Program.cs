@@ -1,17 +1,13 @@
-﻿using BigDoc.Database.Converter;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Diagnostics;
-using System.IO;
 using System.Net.Http;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace FractalPlatform.Converter
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             var threads = 16;
             var count = 1000;

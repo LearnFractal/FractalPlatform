@@ -1,9 +1,9 @@
-﻿using BigDoc.Client;
+﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Database.Engine;
+using BigDoc.Database.Engine.Info;
 using BigDoc.Database.Storages;
 using System;
-using System.ComponentModel;
 
 namespace FractalPlatform.Examples.Applications.Template
 {
@@ -25,9 +25,9 @@ namespace FractalPlatform.Examples.Applications.Template
                   .OpenForm();
         }
 
-        public override bool OnEventDimension(Context context, Collection collection, KeyMap key, AttrValue attrValue, uint docID, string eventType, string action)
+        public override bool OnEventDimension(Context context, EventInfo eventInfo)
         {
-            Client.SetDefaultCollection(action)
+            Client.SetDefaultCollection(eventInfo.Action)
                   .GetFirstDoc()
                   .WantModifyExistingDocuments()
                   .OpenForm();
