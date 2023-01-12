@@ -6,7 +6,6 @@ using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
 using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
-using BigDoc.Database.Storages;
 
 namespace FractalPlatform.Examples.Applications.OnlineShop
 {
