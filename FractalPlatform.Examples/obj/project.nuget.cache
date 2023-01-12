@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lZSh+QwMNE8QEjpJakADmaLjde4uX5a5M4z+uSB5vpA+BMVAfWAdt5a9oHTs8t3uLVsxflkqF/8nDMrWXgW/Zw==",
+  "dgSpecHash": "kn9VmRXunshVPf0Zr25YlkCI8GCSpCjgNCX4VC7xq3SozIclDHTqlnkJvsCqvr3lohJsgH25IKjF+Qnd5Wv8jQ==",
   "success": true,
   "projectFilePath": "C:\\FractalPlatform\\FractalPlatform.Examples\\FractalPlatform.Examples.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\v.makoveichuk\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\tuzvy\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
