@@ -36,7 +36,7 @@ namespace FractalPlatform.Examples.Applications.VideoLibrary
 
             Client.SetDefaultCollection("Videos")
                   .GetFirstDoc()
-                  .ExtendDocument(ToJson(obj))
+                  .ExtendDocument(obj.ToJson())
                   .OpenForm();
             */
         }

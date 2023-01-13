@@ -39,7 +39,7 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
                     NotCompleted = GetAmountTasks(context, false)
                 };
 
-                new Collection("Report", ToJson(report))
+                new Collection("Report", report.ToJson())
                     .SetDimension(context, DimensionType.UI, "{'Enabled':false,'Title':{'ControlType':'Label'}}")
                     .OpenForm(context);
             }
