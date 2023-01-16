@@ -6,6 +6,7 @@ using BigDoc.Database.Engine;
 using BigDoc.Common.Enums;
 using BigDoc.Client.App;
 using BigDoc.Database.Engine.Info;
+using BigDoc.Client;
 
 namespace FractalPlatform.Examples.Applications.Supermarket
 {
@@ -78,9 +79,9 @@ namespace FractalPlatform.Examples.Applications.Supermarket
                               var count = Client.SetDefaultCollection("Stock")
                                                 .GetFirstDoc()
                                                 .AndWhere("{'Products':[{'Product':@Product}]}", product.Product)
-                                                .Value("{'Products':[{'Count':$}]}");
+                                                .IntValue("{'Products':[{'Count':$}]}");
 
-                              var newCount = int.Parse(count) - product.Count;
+                              var newCount = count - product.Count;
 
                               Client.SetDefaultCollection("Stock")
                                                 .GetFirstDoc()

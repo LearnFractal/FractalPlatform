@@ -1,4 +1,5 @@
 ﻿using System;
+using BigDoc.Client;
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Database.Engine;
@@ -77,11 +78,11 @@ namespace FractalPlatform.Examples.Applications.Forum
             {
                 var countViews = Client.SetDefaultCollection("Topics")
                                        .GetDoc(formInfo.DocID)
-                                       .Value("{'CountViews':$}");
+                                       .IntValue("{'CountViews':$}");
 
                 Client.SetDefaultCollection("Topics")
                       .GetDoc(formInfo.DocID)
-                      .UpdateByObject(new { CountViews = int.Parse(countViews) + 1 });
+                      .UpdateByObject(new { CountViews = countViews + 1 });
 
                 formInfo.Collection.ReloadData();
             }
