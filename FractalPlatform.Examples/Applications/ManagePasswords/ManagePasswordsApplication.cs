@@ -1,4 +1,5 @@
 ﻿using System;
+using BigDoc.Client;
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
