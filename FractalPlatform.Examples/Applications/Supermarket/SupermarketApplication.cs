@@ -127,7 +127,8 @@ namespace FractalPlatform.Examples.Applications.Supermarket
                         }
 
                         //save
-                        storage.GetDoc(context, menuInfo.DocID).Update(cart);
+                        storage.GetDoc(context, menuInfo.DocID)
+                               .UpdateByObject(cart);
 
                         return false; //do not reload data
                     }
