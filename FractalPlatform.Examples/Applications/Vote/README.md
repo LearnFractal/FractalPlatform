@@ -7,7 +7,7 @@
 
 ## Functionality
 
-Application implements small engine for votes with next functionality:
+Application implements small engine for anonymous votes with next functionality:
 
 - The app ask user a question and provide several options to vote
 - User can vote for an option
