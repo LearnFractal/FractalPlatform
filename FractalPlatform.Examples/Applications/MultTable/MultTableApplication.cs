@@ -92,7 +92,10 @@ namespace FractalPlatform.Examples.Applications.MultTable
 
                           new Collection("Collection", sbDoc.ToString())
                               .SetDimension(Context, DimensionType.Validation, sbVal.ToString())
-                              .OpenForm(Context, Constants.FIRST_DOC_ID);
+                              .OpenForm(Context, Constants.FIRST_DOC_ID, null, handleResult =>
+                              {
+                                  MessageBox("All answers are successful !", "Result");
+                              });
                       }
                   });
         }
