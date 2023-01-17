@@ -1,17 +1,19 @@
-# Chat
+# Video Library
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/VideoLibrary)
+- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/VideoLibrary)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/VideoLibrary)
 
 ## Functionality
 
-Application moderates
+Application demonstrates web catalog of online videos with next functionality:
 
-- Login
+- Read list of video files from the server
+- Create web site that contains list of videos with pagination
+- User is available to search videos by name in the search text box
+- User can view a video in the web browser
 
 ## How it implemented
 
@@ -19,5 +21,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[VideoLibrary](https://booben.com/jupiter/?appName=VideoLibrary)
 

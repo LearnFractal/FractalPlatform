@@ -1,17 +1,15 @@
-# Chat
+# Photo Album
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/PhotoAlbum)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/PhotoAlbum)
 
 ## Functionality
 
-Application moderates
-
-- Login
+Application demonstrates how to create photo album with:
+- Upload a photo on the server
+- View catalog of photos with pagination
 
 ## How it implemented
 
@@ -19,5 +17,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[Chat](https://booben.com/PhotoAlbum/?appName=PhotoAlbum)
 

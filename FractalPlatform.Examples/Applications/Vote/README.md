@@ -1,17 +1,17 @@
-# Chat
+# Vote
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Vote)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Vote)
 
 ## Functionality
 
-Application moderates
+Application implements small engine for votes with next functionality:
 
-- Login
+- The app ask user a question and provide several options to vote
+- User can vote for an option
+- After vote user can review Report that demonstrates distribution of votes by options.
 
 ## How it implemented
 
@@ -19,5 +19,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[Vote](https://booben.com/jupiter/?appName=Vote)
 

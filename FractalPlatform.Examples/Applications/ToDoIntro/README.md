@@ -1,17 +1,20 @@
-# Chat
+# ToDo Intro
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoIntro)
+- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/ToDoIntro)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/ToDoIntro)
 
 ## Functionality
 
-Application moderates
+Application creates as wizard with onboarding course 
+for new users with next functionality:
 
-- Login
+- Learn basics of Fractal Platform
+- Create ToDo list as example
+- Make categories, validation and other features in ToDo example
+- Leave feedback about this small course
 
 ## How it implemented
 
@@ -19,5 +22,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[ToDoIntro](https://booben.com/jupiter/?appName=ToDoIntro)
 

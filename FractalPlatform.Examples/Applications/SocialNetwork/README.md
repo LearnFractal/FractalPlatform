@@ -1,4 +1,4 @@
-# Chat
+# Social Network
 
 ## Sources
 
@@ -9,9 +9,19 @@
 
 ## Functionality
 
-Application moderates
+Application moderates a simple social network with next functionality:
 
-- Login
+- Login user
+- Register user
+- Review and edit my user profile
+- Review other user profiles
+- Send Friend request to an user
+- Review Friend requests from other users, accept requests
+- Create a post in Newsline
+- Review in Newsline my posts and posts from my friends
+- Like friend posts
+- Leave comments under friend posts
+- Remove user from Friends
 
 ## How it implemented
 
@@ -19,5 +29,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[Chat](https://booben.com/jupiter/?appName=SocialNetwork)
 

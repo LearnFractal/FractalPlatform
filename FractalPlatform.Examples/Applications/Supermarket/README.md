@@ -1,17 +1,19 @@
-# Chat
+# Supermarket
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Supermarket)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Supermarket)
 
 ## Functionality
 
-Application moderates
+Application moderates the simple backet of supermarket.
+User can login or register in the Supermarket.
+Supermarket stock contains list of products with quantity and prices.
+User can create order with list of products.
+Products that participate in order should be subtracted from the stock.
+Admin can change the stock: Add new products, remove products, change price, change quantity
 
-- Login
 
 ## How it implemented
 
@@ -19,5 +21,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[Supermarket](https://booben.com/jupiter/?appName=Supermarket)
 

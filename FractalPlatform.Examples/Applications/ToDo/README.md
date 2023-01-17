@@ -1,17 +1,17 @@
-# Chat
+# ToDo List
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDo)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/ToDo)
 
 ## Functionality
 
-Application moderates
-
-- Login
+Application demonstrates the simplest ToDo list with next functionality:
+- Add task
+- Edit task
+- Mark task as Completed
+- Delete task from list
 
 ## How it implemented
 
@@ -19,5 +19,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[ToDo](https://booben.com/jupiter/?appName=ToDo)
 

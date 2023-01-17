@@ -1,17 +1,20 @@
-# Chat
+# ToDo List With Categories
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoWithCategories)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/ToDoWithCategories)
 
 ## Functionality
 
-Application moderates
-
-- Login
+Application demonstrates ToDo list with categories with next functionality:
+- Add category of tasks
+- Edit category of tasks
+- Delete category of tasks
+- Add task to a category
+- Edit task in a category
+- Mark task as Completed
+- Delete task from category
 
 ## How it implemented
 
@@ -19,5 +22,4 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
-
+[ToDoWithCategories](https://booben.com/jupiter/?appName=ToDoWithCategories)
