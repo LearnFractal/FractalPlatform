@@ -1,17 +1,13 @@
-# Chat
+# Login
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Login)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Login)
 
 ## Functionality
 
-Application moderates
-
-- Login
+Application demonstrates how to works with user credentials
 
 ## How it implemented
 
@@ -19,5 +15,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[Login](https://booben.com/jupiter/?appName=Login)
 

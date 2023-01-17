@@ -1,17 +1,14 @@
-# Chat
+# Manage Passwords
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ManagePasswords)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/ManagePasswords)
 
 ## Functionality
 
-Application moderates
-
-- Login
+Notebook for credentials (logins and passwords) on different resources.
+Application demonstrates how to work with encrypted data in the database.
 
 ## How it implemented
 
@@ -19,5 +16,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[ManagePasswords](https://booben.com/jupiter/?appName=ManagePasswords)
 

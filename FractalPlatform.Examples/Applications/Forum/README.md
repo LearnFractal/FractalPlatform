@@ -1,17 +1,19 @@
-# Chat
+# Forum
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Forum)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Forum)
 
 ## Functionality
 
-Application moderates
+Application moderates simple web forum with topics
 
-- Login
+- Login user
+- Registration user
+- Create a topic
+- Leave message in topic
+- Show amount of views and amount of answers in each topic
 
 ## How it implemented
 
@@ -19,5 +21,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[Forum](https://booben.com/jupiter/?appName=Forum)
 

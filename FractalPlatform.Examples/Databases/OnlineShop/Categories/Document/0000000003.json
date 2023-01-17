@@ -1,0 +1,24 @@
+﻿{
+  "Name": "Toys",
+  "Description": "Toys",
+  "Filters": [
+    {
+      "Name": "Price",
+      "Text": "0-10",
+      "Query": "{'Price':Range(0,10)}",
+      "Checked": false
+    },
+    {
+      "Name": "Price",
+      "Text": "10-20",
+      "Query": "{'Price':Range(10,20)}",
+      "Checked": false
+    },
+    {
+      "Name": "Price",
+      "Text": "20-100",
+      "Query": "{'Price':Range(20,100)}",
+      "Checked": false
+    }
+  ]
+}

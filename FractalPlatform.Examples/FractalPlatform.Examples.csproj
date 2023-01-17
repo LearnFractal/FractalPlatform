@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Databases\OnlineShop\Orders\**" />
     <Compile Remove="Databases\SocialNetwork\NewFolder\**" />
+    <EmbeddedResource Remove="Databases\OnlineShop\Orders\**" />
     <EmbeddedResource Remove="Databases\SocialNetwork\NewFolder\**" />
+    <None Remove="Databases\OnlineShop\Orders\**" />
     <None Remove="Databases\SocialNetwork\NewFolder\**" />
   </ItemGroup>
 
@@ -16,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Databases\Forum\Users\Document\" />
-    <Folder Include="Databases\OnlineShop\Orders\" />
     <Folder Include="Databases\ToDoIntro\Intro\Document\" />
     <Folder Include="Databases\VideoLibrary\" />
     <Folder Include="Files\PhotoAlbum\" />

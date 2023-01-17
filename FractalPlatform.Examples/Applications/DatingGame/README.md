@@ -28,5 +28,5 @@ On fifth stage the server try find matches between boys and girls
 
 ## Web Link
 
-[DatingGame](https://booben.com/?appName=DatingGame)
+[DatingGame](https://booben.com/jupiter/?appName=DatingGame)
 

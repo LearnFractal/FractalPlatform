@@ -1,17 +1,12 @@
-# Chat
+# Hello World
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/SocialNetwork)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Files/SocialNetwork)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/SocialNetwork)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld)
 
 ## Functionality
 
-Application moderates
-
-- Login
+Application shows "Hello Fractal World !" message
 
 ## How it implemented
 
@@ -19,5 +14,5 @@ Application moderates
 
 ## Web Link
 
-[Chat](https://booben.com/?appName=Chat)
+[HelloWorld](https://booben.com/jupiter/?appName=HelloWorld)
 
