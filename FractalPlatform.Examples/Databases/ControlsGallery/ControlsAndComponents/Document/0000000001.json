@@ -78,6 +78,94 @@
           }
         ]
       }
+    },
+    {
+      "Description": "Line graphs chart",
+      "Name": "LineGraphs Chart",
+      "Dimensions": {
+        "Document": "{'Control':'{'Title':{'Name':'LineGraph','X':'Time','Y':'Value'},'Lines':[{'Name':'One','Points':[{'X':1,'Y':1},{'X':2,'Y':2},{'X':3,'Y':3}]},{'Name':'Two','Points':[{'X':1,'Y':1},{'X':2,'Y':3},{'X':3,'Y':5}]}]}'}",
+        "UI": "{'ControlType':'Chart'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Title": {
+              "Name": "LineGraphs",
+              "X": "Time",
+              "Y": "Value"
+            },
+            "Lines": [
+              {
+                "Name": "One",
+                "Points": [
+                  {
+                    "X": 1,
+                    "Y": 1
+                  },
+                  {
+                    "X": 2,
+                    "Y": 2
+                  },
+                  {
+                    "X": 3,
+                    "Y": 3
+                  }
+                ]
+              },
+              {
+                "Name": "Two",
+                "Points": [
+                  {
+                    "X": 1,
+                    "Y": 1
+                  },
+                  {
+                    "X": 2,
+                    "Y": 3
+                  },
+                  {
+                    "X": 3,
+                    "Y": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Description": "Bar Chart",
+      "Name": "Bar Chart",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}",
+        "UI": "{'ControlType':'Chart','Style':'Type:Bar'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Title": {
+              "Name": "Bar",
+              "X": "Bars",
+              "Y": "Value"
+            },
+            "Columns": [
+              {
+                "Name": "One",
+                "Value": 10
+              },
+              {
+                "Name": "Two",
+                "Value": 20
+              },
+              {
+                "Name": "Three",
+                "Value": 30
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "Controls": [
