@@ -166,6 +166,35 @@
           }
         ]
       }
+    },
+    {
+      "Description": "Pie Chart",
+      "Name": "Pie Chart",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':'Pie','Parts':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}",
+        "UI": "{'ControlType':'Chart','Style':'Type:Pie'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Title": "Pie",
+            "Parts": [
+              {
+                "Name": "One",
+                "Value": 10
+              },
+              {
+                "Name": "Two",
+                "Value": 20
+              },
+              {
+                "Name": "Three",
+                "Value": 30
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "Controls": [
