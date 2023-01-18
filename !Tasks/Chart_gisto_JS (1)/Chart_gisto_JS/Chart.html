@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>гистограмма</title>
+    <script src="BarChart.js"></script>
+    <script>
+        //  var data = [30, 6, 88, 91, 2, 45, 100, 150, 200];
+//          var modelChart = {
+            
+//   Root: {
+
+            
+//            Title: "This is my Chart",
+
+//            data: [
+//                  { Name: "One", Value: 80 },
+//                  { Name: "Two", Value: 75 },
+//                  { Name: "Three", Value: 95 },
+//                  { Name: "One", Value: 80 }
+//                 ],
+                
+//     Coordinates: {
+//       Y: {
+//         MaxValue: 100,
+//         StepValue: 50
+//       }
+
+//         }
+//     }
+// };
+
+var  colors = ["Red", "Black", "Navy", "Green", "Yellow"];
+var modelChart = {
+  Root: {
+    Title: "This is my Chart",
+    Lines: [
+      {
+        Name: "One",
+        Value: 80
+      },
+      {
+        Name: "Two",
+        Value: 75
+      },
+      {
+        Name: "Three",
+        Value: 95
+      }
+    ],
+    Coordinates: {
+      Y: {
+        "MaxValue": 100,
+        "StepValue": 50
+      }
+    }
+  }
+};
+
+
+        window.addEventListener("load", function () {
+            var chart = createBarChart(
+                modelChart.Root.Lines,
+                600,
+                modelChart.Root.Coordinates.Y.MaxValue,
+                colors
+                );
+
+            var container = document.getElementById("chartContainer");
+            var Title = document.getElementById("Title");
+            
+            //  let top = modelChart.Root.Coordinates.Y.MaxValue;
+            // Title.style.right=300;
+            Title.append(modelChart.Root.Title);
+            container.appendChild(chart);
+
+        });
+    </script>
+</head>
+<body>
+  <div id="Title" ></div>
+    <div id="chartContainer" ></div>
+    
+</body>
+</html>
