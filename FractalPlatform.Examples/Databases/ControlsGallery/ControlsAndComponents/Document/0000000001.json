@@ -211,7 +211,6 @@
       },
       "Example": {
         "Control": {
-          "Title": "Pie",
           "Parts": [
             {
               "Name": "One",
@@ -225,7 +224,8 @@
               "Name": "Three",
               "Value": 30
             }
-          ]
+          ],
+          "Title": "Pie"
         }
       }
     }
