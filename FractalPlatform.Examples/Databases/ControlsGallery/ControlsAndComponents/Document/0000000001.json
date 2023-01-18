@@ -164,6 +164,45 @@
       }
     },
     {
+      "Description": "Bar Group Chart",
+      "Name": "Bar Group Chart",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'Left','Group':'One','Value':10},{'Name':'Right','Group':'One','Value':20},{'Name':'Left','Group':'Two','Value':30},{'Name':'Right','Group':'Two','Value':40}]}}",
+        "UI": "{'ControlType':'Chart','Style':'Type:Bar'}"
+      },
+      "Example": {
+        "Control": {
+          "Columns": [
+            {
+              "Name": "Left",
+              "Group": "One",
+              "Value": 10
+            },
+            {
+              "Name": "Right",
+              "Group": "One",
+              "Value": 20
+            },
+            {
+              "Name": "Left",
+              "Group": "Two",
+              "Value": 30
+            },
+            {
+              "Name": "Right",
+              "Group": "Two",
+              "Value": 40
+            }
+          ],
+          "Title": {
+            "Name": "Bar",
+            "X": "Bars",
+            "Y": "Value"
+          }
+        }
+      }
+    },
+    {
       "Description": "Pie Chart",
       "Name": "Pie Chart",
       "Dimensions": {
