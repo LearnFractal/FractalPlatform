@@ -84,54 +84,52 @@
       "Name": "LineGraphs Chart",
       "Dimensions": {
         "Document": "{'Control':'{'Title':{'Name':'LineGraph','X':'Time','Y':'Value'},'Lines':[{'Name':'One','Points':[{'X':1,'Y':1},{'X':2,'Y':2},{'X':3,'Y':3}]},{'Name':'Two','Points':[{'X':1,'Y':1},{'X':2,'Y':3},{'X':3,'Y':5}]}]}'}",
-        "UI": "{'ControlType':'Chart'}"
+        "UI": "{'ControlType':'Chart','Style':'Type:LineGraphs'}"
       },
       "Example": {
-        "Control": [
-          {
-            "Title": {
-              "Name": "LineGraphs",
-              "X": "Time",
-              "Y": "Value"
+        "Control": {
+          "Lines": [
+            {
+              "Name": "One",
+              "Points": [
+                {
+                  "X": 1,
+                  "Y": 1
+                },
+                {
+                  "X": 2,
+                  "Y": 2
+                },
+                {
+                  "X": 3,
+                  "Y": 3
+                }
+              ]
             },
-            "Lines": [
-              {
-                "Name": "One",
-                "Points": [
-                  {
-                    "X": 1,
-                    "Y": 1
-                  },
-                  {
-                    "X": 2,
-                    "Y": 2
-                  },
-                  {
-                    "X": 3,
-                    "Y": 3
-                  }
-                ]
-              },
-              {
-                "Name": "Two",
-                "Points": [
-                  {
-                    "X": 1,
-                    "Y": 1
-                  },
-                  {
-                    "X": 2,
-                    "Y": 3
-                  },
-                  {
-                    "X": 3,
-                    "Y": 5
-                  }
-                ]
-              }
-            ]
+            {
+              "Name": "Two",
+              "Points": [
+                {
+                  "X": 1,
+                  "Y": 1
+                },
+                {
+                  "X": 2,
+                  "Y": 3
+                },
+                {
+                  "X": 3,
+                  "Y": 5
+                }
+              ]
+            }
+          ],
+          "Title": {
+            "Name": "LineGraphs",
+            "X": "Time",
+            "Y": "Value"
           }
-        ]
+        }
       }
     },
     {
@@ -142,29 +140,27 @@
         "UI": "{'ControlType':'Chart','Style':'Type:Bar'}"
       },
       "Example": {
-        "Control": [
-          {
-            "Title": {
-              "Name": "Bar",
-              "X": "Bars",
-              "Y": "Value"
+        "Control": {
+          "Columns": [
+            {
+              "Name": "One",
+              "Value": 10
             },
-            "Columns": [
-              {
-                "Name": "One",
-                "Value": 10
-              },
-              {
-                "Name": "Two",
-                "Value": 20
-              },
-              {
-                "Name": "Three",
-                "Value": 30
-              }
-            ]
+            {
+              "Name": "Two",
+              "Value": 20
+            },
+            {
+              "Name": "Three",
+              "Value": 30
+            }
+          ],
+          "Title": {
+            "Name": "Bar",
+            "X": "Bars",
+            "Y": "Value"
           }
-        ]
+        }
       }
     },
     {
@@ -175,25 +171,23 @@
         "UI": "{'ControlType':'Chart','Style':'Type:Pie'}"
       },
       "Example": {
-        "Control": [
-          {
-            "Title": "Pie",
-            "Parts": [
-              {
-                "Name": "One",
-                "Value": 10
-              },
-              {
-                "Name": "Two",
-                "Value": 20
-              },
-              {
-                "Name": "Three",
-                "Value": 30
-              }
-            ]
-          }
-        ]
+        "Control": {
+          "Title": "Pie",
+          "Parts": [
+            {
+              "Name": "One",
+              "Value": 10
+            },
+            {
+              "Name": "Two",
+              "Value": 20
+            },
+            {
+              "Name": "Three",
+              "Value": 30
+            }
+          ]
+        }
       }
     }
   ],
