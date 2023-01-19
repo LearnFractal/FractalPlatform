@@ -228,6 +228,39 @@
           "Title": "Pie"
         }
       }
+    },
+    {
+      "Description": "Phone",
+      "Name": "Phone",
+      "Dimensions": {
+        "Document": "{'Control':{'CountryCode':'+38','OperatorCode':'067','Number':'1234567'}}",
+        "UI": "{'ControlType':'Phone'}"
+      },
+      "Example": {
+        "Control": {
+          "CountryCode": "+38",
+          "OperatorCode": "067",
+          "Number": "1234567"
+        }
+      }
+    },
+    {
+      "Description": "Address",
+      "Name": "Address",
+      "Dimensions": {
+        "Document": "{'Control':{'Country':'Ukraine','City':'Kyiv','District':'Area','Street':'Avenue','House':'1','Appartment':'1'}}",
+        "UI": "{'ControlType':'Address'}"
+      },
+      "Example": {
+        "Control": {
+          "Country": "Ukraine",
+          "City": "Kyiv",
+          "District": "Area",
+          "Street": "Avenue",
+          "House": "1",
+          "Appartment": "1"
+        }
+      }
     }
   ],
   "Controls": [
