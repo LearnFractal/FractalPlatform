@@ -6,7 +6,8 @@
 
 ## Functionality
 
-Application calls coindesk.com free REST api to get actual BTC rate and show web form with USD and EUR actual currencies
+Application shows web form based on REST api call.
+In current case application shows BTC price in USD/EUR currencies from Coindesk.com market.
 
 ## How it implemented
 
