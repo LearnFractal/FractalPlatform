@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.PhotoAlbum
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("NewPhoto")
                   .WantCreateNewDocumentForArray("Photos", Constants.FIRST_DOC_ID, "{'Photos':[$]}")

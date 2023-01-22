@@ -20,7 +20,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
         {
         }
 
-        public override bool OnEventDimension(Context context, EventInfo eventInfo)
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
             switch (eventInfo.Action)
             {
@@ -60,14 +60,14 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                     }
                 case "Category":
                     {
-                        OpenCategory(context, eventInfo.AttrValue.ToString());
+                        OpenCategory(eventInfo.AttrValue.ToString());
 
                         return true;
                     }
                 case "Open":
                     {
                         var name = eventInfo.Collection
-                                            .GetWhere(context, eventInfo.AttrPath.Parent)
+                                            .GetWhere(eventInfo.AttrPath.Parent)
                                             .Value("{'Products':[{'Name':$}]}");
 
                         Client.SetDefaultCollection("Products")
@@ -80,7 +80,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                 case "Search":
                     {
                         var searchText = eventInfo.Collection
-                                                  .GetFirstDoc(context)
+                                                  .GetFirstDoc()
                                                   .Value("{'Header':{'SearchText':$}}");
 
                         var categories = Client.SetDefaultCollection("Products")
@@ -90,27 +90,27 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                                                .Select(x => x.Value.ToString())
                                                .Distinct()
                                                .Select(x => new { Category = x })
-                                               .ToStorage(context);
+                                               .ToStorage();
 
                         var products = Client.SetDefaultCollection("Products")
                                              .GetWhere("{'Name':@Name}", searchText)
                                              .ToStorage();
                     
                         eventInfo.Collection
-                                 .DeleteByParent(context, "Filters")
-                                 .DeleteByParent(context, "Products")
-                                 .MergeAsArray(context, categories, "Filters")
-                                 .MergeAsArray(context, products, "Products")
-                                 .OpenForm(context);
+                                 .DeleteByParent("Filters")
+                                 .DeleteByParent("Products")
+                                 .MergeAsArray(categories, "Filters")
+                                 .MergeAsArray(products, "Products")
+                                 .OpenForm();
 
                         return true;
                     }
                 default:
-                    return base.OnEventDimension(context, eventInfo);
+                    return base.OnEventDimension(eventInfo);
             }
         }
 
-        public override List<string> OnEnumDimension(Context context, EnumInfo enumInfo)
+        public override List<string> OnEnumDimension(EnumInfo enumInfo)
         {
             if (enumInfo.Variable == "Categories")
             {
@@ -120,7 +120,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
             }
             else
             {
-                return base.OnEnumDimension(context, enumInfo);
+                return base.OnEnumDimension(enumInfo);
             }
         }
 
@@ -129,11 +129,11 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
             if (result.Result)
             {
                 var category = result.Collection
-                                     .GetFirstDoc(Context)
+                                     .GetFirstDoc()
                                      .Value("{'Header':{'Category':$}}");
 
                 var filters = result.Collection
-                                     .GetWhere(Context, "{'Filters':[{'Checked':true}]}")
+                                     .GetWhere("{'Filters':[{'Checked':true}]}")
                                      .Values("{'Filters':[{'Query':$}]}");
 
                 Storage products;
@@ -161,32 +161,32 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                 }
 
                 result.Collection
-                      .DeleteByParent(Context, "Products")
-                      .MergeAsArray(Context, products, "Products")
-                      .OpenForm(Context, Filter);
+                      .DeleteByParent("Products")
+                      .MergeAsArray(products, "Products")
+                      .OpenForm(Filter);
             }
         }
 
-        public void OpenCategory(Context context, string category)
+        public void OpenCategory(string category)
         {
             var collection = Client.SetDefaultCollection("Dashboard")
                                    .GetFirstDoc()
                                    .ToCollection();
 
-            collection.GetFirstDoc(context)
+            collection.GetFirstDoc()
                       .Update("{'Header':{'Category':@Category}}", category);
 
             var filter = Client.SetDefaultCollection("Categories")
                                .GetWhere("{'Name':@Category}", category)
                                .ToStorage("{'Filters':[$]}", true);
 
-            collection.MergeAsDoc(context, filter)
-                      .OpenForm(Context, Filter);
+            collection.MergeAsDoc(filter)
+                      .OpenForm(Filter);
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
-            OpenCategory(context, "Cars");
+            OpenCategory("Cars");
         }
 
         public override BaseRenderForm CreateRenderForm(string formName)

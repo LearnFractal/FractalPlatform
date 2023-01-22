@@ -18,7 +18,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             this.InputBox("EncryptPassword",
                           null,
@@ -27,7 +27,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
                               if (result.Result)
                               {
                                   var password = result.Collection
-                                                   .GetFirstDoc(context)
+                                                   .GetFirstDoc()
                                                    .Value("{'EncryptPassword':$}");
 
                                   if (password?.Length >= 6)
@@ -46,7 +46,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
                                   {
                                       MessageBox("Password should be more than 6 symbols.",
                                                  "Wrong password length",
-                                                 result => OnStart(context));
+                                                 result => OnStart());
                                   }
 
                               }
@@ -55,8 +55,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
 
         }
 
-        public override bool OnMenuDimension(Context context,
-                                             MenuInfo menuInfo)
+        public override bool OnMenuDimension(MenuInfo menuInfo)
         {
             switch (menuInfo.Action)
             {

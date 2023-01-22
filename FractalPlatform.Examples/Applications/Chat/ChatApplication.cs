@@ -22,7 +22,7 @@ namespace FractalPlatform.Examples.Applications.Chat
             public string Message { get; set; }
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("Chats")
                   .GetFirstDoc()
@@ -31,7 +31,7 @@ namespace FractalPlatform.Examples.Applications.Chat
                       if (result.Result)
                       {
                           var message = result.Collection
-                                              .GetDoc(context, Constants.FIRST_DOC_ID)
+                                              .GetDoc(Constants.FIRST_DOC_ID)
                                               .SelectOne<MessageInfo>();
 
                           Client.SetDefaultCollection("Chats")
@@ -40,7 +40,7 @@ namespace FractalPlatform.Examples.Applications.Chat
                                             message.Who,
                                             message.Message);
 
-                          OnStart(context);
+                          OnStart();
                       }
                   });
         }

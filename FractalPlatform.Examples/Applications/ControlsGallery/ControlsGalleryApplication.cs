@@ -37,7 +37,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
         {
         }
 
-        public override bool OnOpenForm(Context context, FormInfo formInfo)
+        public override bool OnOpenForm(FormInfo formInfo)
         {
             if (!formInfo.AttrPath.IsEmpty &&
                  formInfo.AttrPath.Count == 2)
@@ -45,31 +45,29 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
                 if (formInfo.AttrPath.GetFirstPath() == "Controls")
                 {
                     var uiDimension = formInfo.Collection
-                                              .GetWhere(context, formInfo.AttrPath)
+                                              .GetWhere(formInfo.AttrPath)
                                               .Value("{'Controls':[{'Dimensions':{'UI':$}}]}");
 
                     formInfo.Collection
-                            .ExtendDimension(context,
-                                             DimensionType.UI,
+                            .ExtendDimension(DimensionType.UI,
                                              DQL("{'Controls':[{'Example':{'Control':@UIDimension}}]}", uiDimension));
                 }
                 else //Components
                 {
                     var uiDimension = formInfo.Collection
-                                              .GetWhere(context, formInfo.AttrPath)
+                                              .GetWhere(formInfo.AttrPath)
                                               .Value("{'Components':[{'Dimensions':{'UI':$}}]}");
 
                     formInfo.Collection
-                            .ExtendDimension(context,
-                                             DimensionType.UI,
+                            .ExtendDimension(DimensionType.UI,
                                              DQL("{'Components':[{'Example':{'Control':@UIDimension}}]}", uiDimension));
                 }
             }
 
-            return base.OnOpenForm(context, formInfo);
+            return base.OnOpenForm(formInfo);
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("ControlsAndComponents")
                   .GetFirstDoc()

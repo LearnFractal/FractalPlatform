@@ -40,7 +40,7 @@ namespace FractalPlatform.Examples.Applications.Supermarket
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("Dashboard")
                   .OpenForm();
@@ -69,7 +69,7 @@ namespace FractalPlatform.Examples.Applications.Supermarket
                       if (result.Result)
                       {
                           var cart = result.Collection
-                                           .GetDoc(Context, result.DocID)
+                                           .GetDoc(result.DocID)
                                            .SelectOne<Cart>();
 
                           Client.BeginTran(TranType.RepeatableRead);
@@ -88,19 +88,18 @@ namespace FractalPlatform.Examples.Applications.Supermarket
                   });
         }
 
-        public override bool OnMenuDimension(Context context,
-                                             MenuInfo menuInfo)
+        public override bool OnMenuDimension(MenuInfo menuInfo)
         {
             switch (menuInfo.Action)
             {
                 case "AddToCart":
                     {
-                        var storage = menuInfo.Collection.DocumentStorage;
+                        var coll = menuInfo.Collection;
 
                         //read entities
-                        var stock = storage.GetWhere(context, menuInfo.AttrPath).SelectOne<Stock>();
+                        var stock = coll.GetWhere(menuInfo.AttrPath).SelectOne<Stock>();
 
-                        var cart = storage.GetDoc(context, menuInfo.DocID).SelectOne<Cart>();
+                        var cart = coll.GetDoc(menuInfo.DocID).SelectOne<Cart>();
 
                         var stockProduct = stock.StockProducts[0];
 
@@ -121,8 +120,8 @@ namespace FractalPlatform.Examples.Applications.Supermarket
                         }
 
                         //save
-                        storage.GetDoc(context, menuInfo.DocID)
-                               .UpdateByObject(cart);
+                        coll.GetDoc(menuInfo.DocID)
+                            .UpdateByObject(cart);
 
                         return false; //do not reload data
                     }
@@ -131,8 +130,7 @@ namespace FractalPlatform.Examples.Applications.Supermarket
             }
         }
 
-        public override bool OnEventDimension(Context context,
-                                              EventInfo eventInfo)
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
             switch (eventInfo.Action)
             {
@@ -149,7 +147,7 @@ namespace FractalPlatform.Examples.Applications.Supermarket
                     ViewOrders();
                     return true;
                 default:
-                    return base.OnEventDimension(context, eventInfo);
+                    return base.OnEventDimension(eventInfo);
             }
         }
     }

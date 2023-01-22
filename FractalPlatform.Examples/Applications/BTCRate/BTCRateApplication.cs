@@ -16,20 +16,20 @@ namespace FractalPlatform.Examples.Applications.BTCRate
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             var query = REST.Get("https://api.coindesk.com/v1/bpi/currentprice.json")
-                            .ToCollection(context)
-                            .GetFirstDoc(context);
+                            .ToCollection()
+                            .GetFirstDoc();
 
             new
             {
                 USD = query.Value("{'bpi':{'USD':{'rate':$}}}"),
                 EUR = query.Value("{'bpi':{'EUR':{'rate':$}}}")
             }
-            .ToCollection(context, Constants.FIRST_DOC_ID)
-            .SetDimension(context, DimensionType.UI, "{'ReadOnly':true,'Style':'Cancel:Refresh'}")
-            .OpenForm(context);
+            .ToCollection(Constants.FIRST_DOC_ID)
+            .SetDimension(DimensionType.UI, "{'ReadOnly':true,'Style':'Cancel:Refresh'}")
+            .OpenForm();
         }
     }
 }

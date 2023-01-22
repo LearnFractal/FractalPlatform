@@ -18,7 +18,7 @@ namespace FractalPlatform.Examples.Applications.Taxi
         { 
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("Dashboard")
                   .OpenForm();
@@ -49,8 +49,7 @@ namespace FractalPlatform.Examples.Applications.Taxi
                   .OpenForm();
         }
 
-        public override bool OnEventDimension(Context context,
-                                              EventInfo eventInfo)
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
             switch (eventInfo.Action)
             {
@@ -67,12 +66,11 @@ namespace FractalPlatform.Examples.Applications.Taxi
                     NewOrder();
                     return true;
                 default:
-                    return base.OnEventDimension(context, eventInfo);
+                    return base.OnEventDimension(eventInfo);
             }
         }
 
-        public override bool OnMenuDimension(Context context,
-                                             MenuInfo menuInfo)
+        public override bool OnMenuDimension(MenuInfo menuInfo)
         {
             switch (menuInfo.Action)
             {

@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.ToDoWithCategories
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("ToDoList")
                   .GetFirstDoc()

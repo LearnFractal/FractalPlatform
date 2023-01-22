@@ -24,23 +24,23 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                   .OpenForm();
         }
 
-        public override bool OnOpenForm(Context context, FormInfo formInfo)
+        public override bool OnOpenForm(FormInfo formInfo)
         {
             if (formInfo.AttrPath.GetFirstPath() == "ViewPosts")
             {
                 var uid = formInfo.Collection
-                                  .GetWhere(context, formInfo.AttrPath)
+                                  .GetWhere(formInfo.AttrPath)
                                   .Value("{'ViewPosts':[{'UID':$}]}");
 
                 var who = formInfo.Collection
-                                  .GetWhere(context, formInfo.AttrPath)
+                                  .GetWhere(formInfo.AttrPath)
                                   .Value("{'ViewPosts':[{'Who':$}]}");
 
                 var query = Client.SetDefaultCollection("Users")
                                   .GetWhere("{'Posts':[{'UID':@UID}]}", uid)
                                   .WantModifyExistingDocuments();
 
-                if (context.User.Name == who)
+                if (Context.User.Name == who)
                 {
                     query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Message':{'Enabled':true}}]}");
                 }
@@ -123,8 +123,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                   .OpenForm();
         }
 
-        public override bool OnEventDimension(Context context,
-                                              EventInfo eventInfo)
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
             switch (eventInfo.Action)
             {
@@ -147,12 +146,11 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                     NewComment(eventInfo.AttrPath, eventInfo.DocID);
                     return true;
                 default:
-                    return base.OnEventDimension(context, eventInfo);
+                    return base.OnEventDimension(eventInfo);
             }
         }
 
-        public override object OnComputedDimension(Context context,
-                                                   ComputedInfo computedInfo)
+        public override object OnComputedDimension(ComputedInfo computedInfo)
         {
             switch(computedInfo.Variable)
             {
@@ -165,7 +163,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                     return photo;
                 }
                 default:
-                    return base.OnComputedDimension(context, computedInfo);
+                    return base.OnComputedDimension(computedInfo);
             }
         }
 
@@ -205,8 +203,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
             }
         }
 
-        public override bool OnMenuDimension(Context context,
-                                             MenuInfo menuInfo)
+        public override bool OnMenuDimension(MenuInfo menuInfo)
         {
             switch (menuInfo.Action)
             {

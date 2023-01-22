@@ -17,7 +17,7 @@ namespace FractalPlatform.Examples.Applications.VideoLibrary
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             //This code just as example. The assembly cannot be deployed with security issue to the server
             //(means reference to System.IO.Directory.GetFiles)

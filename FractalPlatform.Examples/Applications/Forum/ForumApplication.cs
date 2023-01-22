@@ -18,7 +18,7 @@ namespace FractalPlatform.Examples.Applications.Forum
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("Dashboard")
                   .OpenForm();
@@ -30,7 +30,7 @@ namespace FractalPlatform.Examples.Applications.Forum
             {
                 //get message
                 var message = result.Collection
-                                    .GetDoc(Context, result.DocID)
+                                    .GetDoc(result.DocID)
                                     .Value("{'Message':$}");
 
                 //get user avatar
@@ -71,7 +71,7 @@ namespace FractalPlatform.Examples.Applications.Forum
                   .OpenForm();
         }
 
-        public override bool OnOpenForm(Context context, FormInfo formInfo)
+        public override bool OnOpenForm(FormInfo formInfo)
         {
             if (formInfo.Collection.Name == "Topics" &&
                formInfo.DocID != Constants.ANY_DOC_ID)
@@ -90,8 +90,7 @@ namespace FractalPlatform.Examples.Applications.Forum
             return true;
         }
 
-        public override object OnComputedDimension(Context context,
-                                                   ComputedInfo computedInfo)
+        public override object OnComputedDimension(ComputedInfo computedInfo)
         {
             switch (computedInfo.Variable)
             {
@@ -107,11 +106,10 @@ namespace FractalPlatform.Examples.Applications.Forum
                     break;
             }
 
-            return base.OnComputedDimension(context, computedInfo);
+            return base.OnComputedDimension(computedInfo);
         }
 
-        public override bool OnEventDimension(Context context,
-                                              EventInfo eventInfo)
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
             switch (eventInfo.Action)
             {
@@ -125,7 +123,7 @@ namespace FractalPlatform.Examples.Applications.Forum
                     NewTopic();
                     return true;
                 default:
-                    return base.OnEventDimension(context, eventInfo);
+                    return base.OnEventDimension(eventInfo);
             }
         }
 

@@ -51,7 +51,7 @@ namespace FractalPlatform.Examples.Applications.MultTable
 
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("Setting")
                   .GetDoc(Constants.FIRST_DOC_ID)
@@ -60,7 +60,7 @@ namespace FractalPlatform.Examples.Applications.MultTable
                       if (result.Result)
                       {
                           var setting = result.Collection
-                                              .GetDoc(Context, Constants.FIRST_DOC_ID)
+                                              .GetDoc(Constants.FIRST_DOC_ID)
                                               .SelectOne<Setting>();
 
                           var sbDoc = new StringBuilder();
@@ -91,8 +91,8 @@ namespace FractalPlatform.Examples.Applications.MultTable
                           sbVal.Append('}');
 
                           new Collection("Collection", sbDoc.ToString())
-                              .SetDimension(Context, DimensionType.Validation, sbVal.ToString())
-                              .OpenForm(Context, Constants.FIRST_DOC_ID, null, handleResult =>
+                              .SetDimension(DimensionType.Validation, sbVal.ToString())
+                              .OpenForm(Constants.FIRST_DOC_ID, null, handleResult =>
                               {
                                   MessageBox("All answers are successful !", "Result");
                               });

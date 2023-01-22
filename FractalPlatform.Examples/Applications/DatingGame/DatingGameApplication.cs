@@ -118,7 +118,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                                if (result.Result)
                                {
                                    _myParticipant.Choose = result.Collection
-                                                                 .GetDoc(Context, _gameID)
+                                                                 .GetDoc(_gameID)
                                                                  .Value("{'Choose':$}");
 
                                    Client.SetDefaultCollection("Games")
@@ -244,7 +244,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
             }
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             //1. Register participant
             Client.SetDefaultCollection("NewParticipant")
@@ -255,7 +255,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                       {
                           //2. Get participant
                           _myParticipant = result.Collection
-                                             .GetFirstDoc(context)
+                                             .GetFirstDoc()
                                              .SelectOne<Participant>();
 
                           if (_myParticipant.Questions.Count > MAX_GENDER_QUESTIONS)

@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.Vote
         {
         }
 
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("Questionary")
                   .WantMergeDocumentFor("Report", Constants.FIRST_DOC_ID)
