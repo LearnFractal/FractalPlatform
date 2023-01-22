@@ -21,7 +21,7 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
 
         private Collection _collection;
 
-        public uint GetAmountTasks(Context context, bool isCompleted)
+        public uint GetAmountTasks(bool isCompleted)
         {
             return _collection.GetWhere("{'Categories':[{'Tasks':[{'Completed':@IsCompleted}]}]}", isCompleted)
                               .Count("{'Categories':[{'Tasks':[{'Completed':$}]}]}");
@@ -34,13 +34,13 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
                 var report = new
                 {
                     Title = "Task progress",
-                    Completed = GetAmountTasks(Context, true),
-                    NotCompleted = GetAmountTasks(Context, false)
+                    Completed = GetAmountTasks(true),
+                    NotCompleted = GetAmountTasks(false)
                 };
 
                 new Collection("Report", report.ToJson())
                     .SetDimension(DimensionType.UI, "{'Enabled':false,'Title':{'ControlType':'Label'}}")
-                    .OpenForm(Context);
+                    .OpenForm();
             }
             else if(eventInfo.Action == "ToDoList")
             {
@@ -50,7 +50,7 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
                                     .GetFirstDoc()
                                     .ToCollection();
 
-                FormBuilder.OpenForm(Context, _collection, Constants.FIRST_DOC_ID);
+                FormBuilder.OpenForm(_collection, Constants.FIRST_DOC_ID);
             }
             else
             {

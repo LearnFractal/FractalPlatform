@@ -40,7 +40,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                                   .GetWhere("{'Posts':[{'UID':@UID}]}", uid)
                                   .WantModifyExistingDocuments();
 
-                if (Context.User.Name == who)
+                if (User.Name == who)
                 {
                     query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Message':{'Enabled':true}}]}");
                 }

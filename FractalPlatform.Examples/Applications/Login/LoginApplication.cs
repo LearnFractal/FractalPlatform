@@ -22,7 +22,7 @@ namespace FractalPlatform.Examples.Applications.Login
 
         protected override void OnLogin(FormResult result)
         {
-            MessageBox($"You logged in as: {Context.User.Name} with role {Context.User.Roles[0]}");
+            MessageBox($"You logged in as: {User.Name} with role {User.Roles[0]}");
         }
     }
 }
