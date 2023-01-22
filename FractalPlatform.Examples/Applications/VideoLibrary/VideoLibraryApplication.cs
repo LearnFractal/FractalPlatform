@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using BigDoc.Client.App;
 using BigDoc.Database.Engine;
@@ -8,15 +7,6 @@ namespace FractalPlatform.Examples.Applications.VideoLibrary
 {
     public class VideoLibraryApplication : BaseApplication
     {
-        public VideoLibraryApplication(Guid sessionId,
-                                       BigDocInstance instance,
-                                       IFormFactory formFactory) : base(sessionId,
-                                                                        instance,
-                                                                        formFactory,
-                                                                        "VideoLibrary")
-        {
-        }
-
         public override void OnStart()
         {
             //This code just as example. The assembly cannot be deployed with security issue to the server

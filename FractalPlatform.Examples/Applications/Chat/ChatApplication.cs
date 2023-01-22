@@ -1,5 +1,4 @@
-﻿using System;
-using BigDoc.Client.App;
+﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Database.Engine;
 
@@ -7,15 +6,6 @@ namespace FractalPlatform.Examples.Applications.Chat
 {
     public class ChatApplication : BaseApplication
     {
-        public ChatApplication(Guid sessionId,
-                               BigDocInstance instance,
-                               IFormFactory formFactory) : base(sessionId,
-                                                               instance,
-                                                               formFactory,
-                                                               "Chat")
-        {
-        }
-
         private class MessageInfo
         {
             public string Who { get; set; }

@@ -16,7 +16,6 @@
 # along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System;
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
@@ -25,18 +24,8 @@ using BigDoc.Database.Engine.Info;
 
 namespace FractalPlatform.Examples.Applications.ControlsGallery
 {
-
     public class ControlsGalleryApplication : BaseApplication
     {
-        public ControlsGalleryApplication(Guid sessionId,
-                               BigDocInstance instance,
-                               IFormFactory formFactory) : base(sessionId,
-                                                               instance,
-                                                               formFactory,
-                                                               "ControlsGallery")
-        {
-        }
-
         public override bool OnOpenForm(FormInfo formInfo)
         {
             if (!formInfo.AttrPath.IsEmpty &&

@@ -1,5 +1,4 @@
-﻿using System;
-using BigDoc.Client.App;
+﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Database.Engine;
 
@@ -7,19 +6,10 @@ namespace FractalPlatform.Examples.Applications.PhotoAlbum
 {
     public class PhotoAlbumApplication : BaseApplication
     {
-        public PhotoAlbumApplication(Guid sessionId,
-                                     BigDocInstance instance,
-                                     IFormFactory formFactory) : base(sessionId,
-                                                                     instance,
-                                                                     formFactory,
-                                                                     "PhotoAlbum")
-        {
-        }
-
         public override void OnStart()
         {
             Client.SetDefaultCollection("NewPhoto")
-                  .WantCreateNewDocumentForArray("Photos", Constants.FIRST_DOC_ID, "{'Photos':[$]}")
+                  .WantCreateNewDocumentForArray("Photos", "{'Photos':[$]}")
                   .OpenForm(result =>
                   {
                       Client.SetDefaultCollection("Photos")

@@ -2,22 +2,12 @@
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
-using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
 
 namespace FractalPlatform.Examples.Applications.ManagePasswords
 {
     public class ManagePasswordsApplication : BaseApplication
     {
-        public ManagePasswordsApplication(Guid sessionId,
-                               BigDocInstance instance,
-                               IFormFactory formFactory) : base(sessionId,
-                                                               instance,
-                                                               formFactory,
-                                                               "ManagePasswords")
-        {
-        }
-
         public override void OnStart()
         {
             this.InputBox("EncryptPassword",

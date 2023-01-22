@@ -1,6 +1,4 @@
-﻿using System;
-using BigDoc.Client;
-using BigDoc.Client.App;
+﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
@@ -9,15 +7,6 @@ namespace FractalPlatform.Examples.Applications.Forum
 {
     public class ForumApplication : DashboardApplication
     {
-        public ForumApplication(Guid sessionId,
-                                BigDocInstance instance,
-                                IFormFactory formFactory) : base(sessionId,
-                                                                instance,
-                                                                formFactory,
-                                                                "Forum")
-        {
-        }
-
         public override void OnStart()
         {
             Client.SetDefaultCollection("Dashboard")

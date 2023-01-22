@@ -10,15 +10,6 @@ namespace FractalPlatform.Examples.Applications.MultTable
 {
     public class MultTableApplication : BaseApplication
     {
-        public MultTableApplication(Guid sessionId,
-                                    BigDocInstance instance,
-                                    IFormFactory formFactory) : base(sessionId,
-                                                                    instance,
-                                                                    formFactory,
-                                                                    "MultTable")
-        {
-        }
-
         private class Setting
         {
             public uint From { get; set; }

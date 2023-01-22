@@ -1,5 +1,4 @@
-﻿using System;
-using BigDoc.Client.App;
+﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
 using BigDoc.Database.Engine;
@@ -8,14 +7,6 @@ namespace FractalPlatform.Examples.Applications.BTCRate
 {
     public class BTCRateApplication : BaseApplication
     {
-        public BTCRateApplication(Guid sessionId,
-                                  BigDocInstance instance,
-                                  IFormFactory formFactory) : base(sessionId,
-                                                                   instance,
-                                                                   formFactory)
-        {
-        }
-
         public override void OnStart()
         {
             var query = REST.Get("https://api.coindesk.com/v1/bpi/currentprice.json")

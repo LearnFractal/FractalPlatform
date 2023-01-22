@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
@@ -11,15 +10,6 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 {
     public class OnlineShopApplication : BaseApplication
     {
-        public OnlineShopApplication(Guid sessionId,
-                                     BigDocInstance instance,
-                                     IFormFactory formFactory) : base(sessionId,
-                                                                      instance,
-                                                                      formFactory,
-                                                                      "OnlineShop")
-        {
-        }
-
         public override bool OnEventDimension(EventInfo eventInfo)
         {
             switch (eventInfo.Action)

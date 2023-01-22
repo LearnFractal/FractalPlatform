@@ -1,5 +1,4 @@
-﻿using System;
-using BigDoc.Client.App;
+﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
 using BigDoc.Database.Engine;
@@ -10,15 +9,6 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
 
     public class ToDoIntroApplication : BaseApplication
     {
-        public ToDoIntroApplication(Guid sessionId,
-                               BigDocInstance instance,
-                               IFormFactory formFactory) : base(sessionId,
-                                                               instance,
-                                                               formFactory,
-                                                               "ToDoIntro")
-        {
-        }
-
         private Collection _collection;
 
         public uint GetAmountTasks(bool isCompleted)

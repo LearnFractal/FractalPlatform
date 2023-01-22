@@ -2,11 +2,9 @@
 using System.Linq;
 using System.Collections.Generic;
 using BigDoc.Client.UI;
-using BigDoc.Database.Engine;
 using BigDoc.Common.Enums;
 using BigDoc.Client.App;
 using BigDoc.Database.Engine.Info;
-using BigDoc.Client;
 
 namespace FractalPlatform.Examples.Applications.Supermarket
 {
@@ -29,15 +27,6 @@ namespace FractalPlatform.Examples.Applications.Supermarket
         private class Cart
         {
             public List<ProductItem> Products { get; set; }
-        }
-
-        public SupermarketApplication(Guid sessionId,
-                                      BigDocInstance instance,
-                                      IFormFactory formFactory) : base(sessionId,
-                                                                        instance,
-                                                                        formFactory,
-                                                                        "Supermarket")
-        {
         }
 
         public override void OnStart()

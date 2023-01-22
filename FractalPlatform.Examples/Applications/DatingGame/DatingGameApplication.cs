@@ -10,15 +10,6 @@ namespace FractalPlatform.Examples.Applications.DatingGame
 {
     public class DatingGameApplication : BaseApplication
     {
-        public DatingGameApplication(Guid sessionId,
-                               BigDocInstance instance,
-                               IFormFactory formFactory) : base(sessionId,
-                                                               instance,
-                                                               formFactory,
-                                                               "DatingGame")
-        {
-        }
-
         private const int MAX_GENDER_PARTICIPANTS = 3;
 
         private const int MAX_GENDER_QUESTIONS = 3;

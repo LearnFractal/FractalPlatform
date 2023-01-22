@@ -1,20 +1,10 @@
-﻿using System;
-using BigDoc.Client.App;
+﻿using BigDoc.Client.App;
 using BigDoc.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.Login
 {
     public class LoginApplication : DashboardApplication
     {
-        public LoginApplication(Guid sessionId,
-                                 BigDocInstance instance,
-                                 IFormFactory formFactory) : base(sessionId,
-                                                                 instance,
-                                                                 formFactory,
-                                                                 "Login")
-        {
-        }
-
         public override void OnStart()
         {
             Login();

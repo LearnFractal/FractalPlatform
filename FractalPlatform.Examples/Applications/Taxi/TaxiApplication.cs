@@ -2,22 +2,12 @@
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
-using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
 
 namespace FractalPlatform.Examples.Applications.Taxi
 {
     public class TaxiApplication : DashboardApplication
     {
-        public TaxiApplication(Guid sessionId,
-                               BigDocInstance instance,
-                               IFormFactory formFactory) : base(sessionId,
-                                                                instance,
-                                                                formFactory,
-                                                                "Taxi")
-        { 
-        }
-
         public override void OnStart()
         {
             Client.SetDefaultCollection("Dashboard")
@@ -45,7 +35,7 @@ namespace FractalPlatform.Examples.Applications.Taxi
         public void NewOrder()
         {
             Client.SetDefaultCollection("NewOrder")
-                  .WantCreateNewDocumentForArray("Orders", Constants.FIRST_DOC_ID, "{'Orders':[$]}")
+                  .WantCreateNewDocumentForArray("Orders", "{'Orders':[$]}")
                   .OpenForm();
         }
 

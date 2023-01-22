@@ -9,15 +9,6 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 {
     public class SocialNetworkApplication : DashboardApplication
     {
-        public SocialNetworkApplication(Guid sessionId,
-                                        BigDocInstance instance,
-                                        IFormFactory formFactory) : base(sessionId,
-                                                                        instance,
-                                                                        formFactory,
-                                                                        "SocialNetwork")
-        {
-        }
-
         private void Dashboard()
         {
             Client.SetDefaultCollection("Dashboard")
@@ -87,7 +78,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                               .GetFirstID();
 
             Client.SetDefaultCollection("NewPost")
-                 .WantCreateNewDocumentForArray("Users", docID, "{'Posts':[$]}")
+                 .WantCreateNewDocumentForArray("Users", "{'Posts':[$]}", docID)
                  .OpenForm(result => Dashboard());
         }
 
@@ -119,7 +110,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
             Log(attrPath);
 
             Client.SetDefaultCollection("NewComment")
-                  .WantCreateNewDocumentForArray("Users", docID, attrPath)
+                  .WantCreateNewDocumentForArray("Users", attrPath, docID)
                   .OpenForm();
         }
 
