@@ -21,5 +21,5 @@ Application demonstrates web catalog of online videos with next functionality:
 
 ## Web Link
 
-[VideoLibrary](https://booben.com/jupiter/?appName=VideoLibrary)
+[VideoLibrary](http://booben.com/jupiter/?appName=VideoLibrary)
 

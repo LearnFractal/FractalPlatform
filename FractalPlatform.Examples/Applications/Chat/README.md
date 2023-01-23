@@ -15,5 +15,5 @@ Application moderates anonimous chat where users can send messages
 
 ## Web Link
 
-[Chat](https://booben.com/jupiter/?appName=Chat)
+[Chat](http://booben.com/jupiter/?appName=Chat)
 

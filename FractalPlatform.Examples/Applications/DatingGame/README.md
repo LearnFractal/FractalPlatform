@@ -26,5 +26,5 @@ Details of implementation
 
 ## Web Link
 
-[DatingGame](https://booben.com/jupiter/?appName=DatingGame)
+[DatingGame](http://booben.com/jupiter/?appName=DatingGame)
 

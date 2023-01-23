@@ -19,5 +19,5 @@ Application implements small engine for anonymous votes with next functionality:
 
 ## Web Link
 
-[Vote](https://booben.com/jupiter/?appName=Vote)
+[Vote](http://booben.com/jupiter/?appName=Vote)
 

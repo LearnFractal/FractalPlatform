@@ -21,5 +21,5 @@ On third stage if all answers are right
 
 ## Web Link
 
-[MultTable](https://booben.com/jupiter/?appName=MultTable)
+[MultTable](http://booben.com/jupiter/?appName=MultTable)
 
