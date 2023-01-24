@@ -30,26 +30,15 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
             if (!formInfo.AttrPath.IsEmpty &&
                  formInfo.AttrPath.Count == 2)
             {
-                if (formInfo.AttrPath.GetFirstPath() == "Controls")
-                {
-                    var uiDimension = formInfo.Collection
-                                              .GetWhere(formInfo.AttrPath)
-                                              .Value("{'Controls':[{'Dimensions':{'UI':$}}]}");
+                var path = formInfo.AttrPath.GetFirstPath();
 
-                    formInfo.Collection
-                            .ExtendDimension(DimensionType.UI,
-                                             DQL("{'Controls':[{'Example':{'Control':@UIDimension}}]}", uiDimension));
-                }
-                else //Components
-                {
-                    var uiDimension = formInfo.Collection
-                                              .GetWhere(formInfo.AttrPath)
-                                              .Value("{'Components':[{'Dimensions':{'UI':$}}]}");
+                var uiDimension = formInfo.Collection
+                                             .GetWhere(formInfo.AttrPath)
+                                             .Value("{'Controls':[{'Dimensions':{'UI':$}}]}");
 
-                    formInfo.Collection
-                            .ExtendDimension(DimensionType.UI,
-                                             DQL("{'Components':[{'Example':{'Control':@UIDimension}}]}", uiDimension));
-                }
+                formInfo.Collection
+                        .ExtendDimension(DimensionType.UI,
+                                         DQL("{'Controls':[{'Example':{'Control':@UIDimension}}]}", uiDimension));
             }
 
             return base.OnOpenForm(formInfo);
