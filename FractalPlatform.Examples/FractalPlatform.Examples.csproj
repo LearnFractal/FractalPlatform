@@ -7,10 +7,13 @@
   <ItemGroup>
     <Compile Remove="Databases\OnlineShop\Orders\**" />
     <Compile Remove="Databases\SocialNetwork\NewFolder\**" />
+    <Compile Remove="Databases\ToDoIntro\Intro\**" />
     <EmbeddedResource Remove="Databases\OnlineShop\Orders\**" />
     <EmbeddedResource Remove="Databases\SocialNetwork\NewFolder\**" />
+    <EmbeddedResource Remove="Databases\ToDoIntro\Intro\**" />
     <None Remove="Databases\OnlineShop\Orders\**" />
     <None Remove="Databases\SocialNetwork\NewFolder\**" />
+    <None Remove="Databases\ToDoIntro\Intro\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Databases\Forum\Users\Document\" />
-    <Folder Include="Databases\ToDoIntro\Intro\Document\" />
     <Folder Include="Databases\VideoLibrary\" />
     <Folder Include="Files\PhotoAlbum\" />
   </ItemGroup>

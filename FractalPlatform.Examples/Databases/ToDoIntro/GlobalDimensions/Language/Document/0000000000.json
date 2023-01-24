@@ -70,10 +70,10 @@
          "EN": "Test Me!",
          "UA": "Test Me!"
       },
-      {
-         "EN": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD application. It is so easy !",
-         "UA": "Зазвичай в Fractal Platform якщо у вас є JSON (Document) - у Вас є CRUD додаток. Це так просто !"
-      },
+    {
+      "EN": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD (Create/Read/Update/Delete operations), Delete application. It is so easy !",
+      "UA": "Зазвичай в Fractal Platform якщо у вас є JSON (Document) - у Вас є CRUD (Create/Read/Update/Delete операції) додаток. Це так просто !"
+    },
       {
          "EN": "Step 2 of 4",
          "UA": "Крок 2 з 4"

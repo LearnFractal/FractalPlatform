@@ -18,7 +18,7 @@
     "Desc2": "That's it ! You have created your first application.",
     "Desc2a": "Click 'Test Me!' button to check your app !",
     "ToDoListV1": "Test Me!",
-    "Desc3": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD application. It is so easy !",
+    "Desc3": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD (Create/Read/Update/Delete operations), Delete application. It is so easy !",
     "Picture3": "havejson_haveapp.jpg"
   },
   "Step 2 of 4": {
