@@ -1,6 +1,5 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
-using BigDoc.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.Chat
 {
@@ -21,7 +20,7 @@ namespace FractalPlatform.Examples.Applications.Chat
                       if (result.Result)
                       {
                           var message = result.Collection
-                                              .GetDoc(Constants.FIRST_DOC_ID)
+                                              .GetFirstDoc()
                                               .SelectOne<MessageInfo>();
 
                           Client.SetDefaultCollection("Chats")

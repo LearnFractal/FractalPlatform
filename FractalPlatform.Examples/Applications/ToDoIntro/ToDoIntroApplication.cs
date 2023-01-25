@@ -40,7 +40,7 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
                                     .GetFirstDoc()
                                     .ToCollection();
 
-                FormBuilder.OpenForm(_collection, Constants.FIRST_DOC_ID);
+                _collection.OpenForm();
             }
             else
             {

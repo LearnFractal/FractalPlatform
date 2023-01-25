@@ -9,7 +9,7 @@ namespace FractalPlatform.Examples.Applications.Vote
         public override void OnStart()
         {
             Client.SetDefaultCollection("Questionary")
-                  .WantMergeDocumentFor("Report", Constants.FIRST_DOC_ID)
+                  .WantMergeDocumentFor("Report")
                   .OpenForm(result => 
                   {
                       if(result.Result)

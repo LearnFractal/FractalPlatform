@@ -45,13 +45,13 @@ namespace FractalPlatform.Examples.Applications.MultTable
         public override void OnStart()
         {
             Client.SetDefaultCollection("Setting")
-                  .GetDoc(Constants.FIRST_DOC_ID)
+                  .GetFirstDoc()
                   .OpenForm(null, null, result =>
                   {
                       if (result.Result)
                       {
                           var setting = result.Collection
-                                              .GetDoc(Constants.FIRST_DOC_ID)
+                                              .GetFirstDoc()
                                               .SelectOne<Setting>();
 
                           var sbDoc = new StringBuilder();
@@ -83,7 +83,7 @@ namespace FractalPlatform.Examples.Applications.MultTable
 
                           new Collection("Collection", sbDoc.ToString())
                               .SetDimension(DimensionType.Validation, sbVal.ToString())
-                              .OpenForm(Constants.FIRST_DOC_ID, null, handleResult =>
+                              .OpenForm(handleResult =>
                               {
                                   MessageBox("All answers are successful !", "Result");
                               });
