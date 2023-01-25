@@ -9,7 +9,10 @@ namespace FractalPlatform.Examples.Applications.VideoLibrary
     {
         public override void OnStart()
         {
-            //This code just as example. The assembly cannot be deployed with security issue to the server
+            //This code just as example.
+            //The assembly cannot be deployed with security issue (access to hard drive)
+            //to the server without special permissions
+
             //(means reference to System.IO.Directory.GetFiles)
             /*
             var obj = new
