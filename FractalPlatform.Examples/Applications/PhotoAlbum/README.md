@@ -17,5 +17,5 @@ Application demonstrates how to create photo album with:
 
 ## Web Link
 
-[Chat](http://booben.com/PhotoAlbum/?appName=PhotoAlbum)
+[PhotoAlbum](http://booben.com/PhotoAlbum/?appName=PhotoAlbum)
 

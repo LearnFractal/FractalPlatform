@@ -29,5 +29,5 @@ Application moderates a simple social network with next functionality:
 
 ## Web Link
 
-[Chat](http://booben.com/jupiter/?appName=SocialNetwork)
+[SocialNetwork](http://booben.com/jupiter/?appName=SocialNetwork)
 
