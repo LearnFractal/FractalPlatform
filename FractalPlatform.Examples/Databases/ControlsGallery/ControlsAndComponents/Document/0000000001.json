@@ -230,6 +230,31 @@
       }
     },
     {
+      "Description": "Map",
+      "Name": "Map",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':'My Map','Key':'','Zoom':15,'Center':{'Lat':'47.212325','Lng':'38.933663'},'Points':[{'Lat':'47.212325','Lng':'38.933663'}]}}",
+        "UI": "{'ControlType':'Map'}"
+      },
+      "Example": {
+        "Control": {
+          "Title": "My Map",
+          "Key": "",
+          "Zoom": 15,
+          "Center": {
+            "Lat": "47.212325",
+            "Lng": "38.933663"
+          },
+          "Points": [
+            {
+              "Lat": "47.212325",
+              "Lng": "38.933663"
+            }
+          ]
+        }
+      }
+    },
+    {
       "Description": "Phone",
       "Name": "Phone",
       "Dimensions": {
