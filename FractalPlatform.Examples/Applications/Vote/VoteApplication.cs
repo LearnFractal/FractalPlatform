@@ -1,6 +1,5 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
-using BigDoc.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.Vote
 {
