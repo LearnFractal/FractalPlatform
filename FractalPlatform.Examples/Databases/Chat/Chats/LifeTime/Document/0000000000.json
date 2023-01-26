@@ -1,7 +1,7 @@
 {
   "Messages": {
     "Limit": {
-      "Count": 5,
+      "MaxCount": 5,
       "Strategy": "RemoveOld"
     }
   }
