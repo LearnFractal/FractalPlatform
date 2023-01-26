@@ -271,6 +271,33 @@
           "Appartment": "1"
         }
       }
+    },
+    {
+      "Description": "TreeView",
+      "Name": "TreeView",
+      "Dimensions": {
+        "Document": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'}]}",
+        "UI": "{'ControlType':'TreeView'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Parent": null,
+            "Name": "MyParent",
+            "Text": "My Parent"
+          },
+          {
+            "Parent": "MyParent",
+            "Name": "MyChildA",
+            "Text": "My Child A"
+          },
+          {
+            "Parent": "MyParent",
+            "Name": "MyChildB",
+            "Text": "My Child B"
+          }
+        ]
+      }
     }
   ],
   "Controls": [
