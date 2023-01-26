@@ -18,7 +18,8 @@ namespace FractalPlatform.Examples.Applications.Chat
                                 .Update("{'Messages':[Add,{'OnDate':@Now,'Who':@Who,'Message':@Message}]}",
                                         result.Collection
                                               .GetFirstDoc()
-                                              .Values("{'Who':$,'Message':$}"));
+                                              .Values("{'Who':$,'Message':$}")
+                                              .ToArray());
 
                           OnStart();
                       }
