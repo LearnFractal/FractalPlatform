@@ -20,9 +20,9 @@ namespace FractalPlatform.Examples.Applications.Chat
                                               .GetFirstDoc()
                                               .Values("{'Who':$,'Message':$}")
                                               .ToArray());
-
-                          OnStart();
                       }
+
+                      OnStart();
                   });
         }
 
