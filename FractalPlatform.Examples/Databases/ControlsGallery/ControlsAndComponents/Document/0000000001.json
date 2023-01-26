@@ -506,8 +506,8 @@
       "Description": "TreeView",
       "Name": "TreeView",
       "Dimensions": {
-        "Document": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'}]}",
-        "UI": "{'ControlType':'TreeView'}"
+        "Document": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'},{'Parent':'MyChildB','MyChildC','Text':'My Child C'}]}",
+        "UI": "{'ControlType':'TreeView','Style':'Type:'}"
       },
       "Example": {
         "Control": [
@@ -525,6 +525,11 @@
             "Parent": "MyParent",
             "Name": "MyChildB",
             "Text": "My Child B"
+          },
+          {
+            "Parent": "MyChildB",
+            "Name": "MyChildC",
+            "Text": "My Child C"
           }
         ]
       }
