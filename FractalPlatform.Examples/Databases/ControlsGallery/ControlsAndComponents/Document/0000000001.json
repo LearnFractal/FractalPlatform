@@ -271,33 +271,6 @@
           "Appartment": "1"
         }
       }
-    },
-    {
-      "Description": "TreeView",
-      "Name": "TreeView",
-      "Dimensions": {
-        "Document": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'}]}",
-        "UI": "{'ControlType':'TreeView'}"
-      },
-      "Example": {
-        "Control": [
-          {
-            "Parent": null,
-            "Name": "MyParent",
-            "Text": "My Parent"
-          },
-          {
-            "Parent": "MyParent",
-            "Name": "MyChildA",
-            "Text": "My Child A"
-          },
-          {
-            "Parent": "MyParent",
-            "Name": "MyChildB",
-            "Text": "My Child B"
-          }
-        ]
-      }
     }
   ],
   "Controls": [
@@ -417,7 +390,7 @@
       "Name": "Grid",
       "Dimensions": {
         "Document": "{'Control':[{'Name':'Bob','Age':15},{'Name':'Rebeca','Age':20}]}",
-        "UI": "{'ControlType':'Grid'}"
+        "UI": "{'ControlType':'Grid','Style':'Type:'}"
       },
       "Example": {
         "Control": [
@@ -527,6 +500,33 @@
       },
       "Example": {
         "Control": "+380981112233"
+      }
+    },
+    {
+      "Description": "TreeView",
+      "Name": "TreeView",
+      "Dimensions": {
+        "Document": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'}]}",
+        "UI": "{'ControlType':'TreeView'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Parent": null,
+            "Name": "MyParent",
+            "Text": "My Parent"
+          },
+          {
+            "Parent": "MyParent",
+            "Name": "MyChildA",
+            "Text": "My Child A"
+          },
+          {
+            "Parent": "MyParent",
+            "Name": "MyChildB",
+            "Text": "My Child B"
+          }
+        ]
       }
     }
   ]
