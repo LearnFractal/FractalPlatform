@@ -5,12 +5,6 @@ namespace FractalPlatform.Examples.Applications.Chat
 {
     public class ChatApplication : BaseApplication
     {
-        private class MessageInfo
-        {
-            public string Who { get; set; }
-            public string Message { get; set; }
-        }
-
         public override void OnStart()
         {
             Client.SetDefaultCollection("Chats")
@@ -19,15 +13,12 @@ namespace FractalPlatform.Examples.Applications.Chat
                   {
                       if (result.Result)
                       {
-                          var message = result.Collection
-                                              .GetFirstDoc()
-                                              .SelectOne<MessageInfo>();
-
                           Client.SetDefaultCollection("Chats")
                                 .GetFirstDoc()
                                 .Update("{'Messages':[Add,{'OnDate':@Now,'Who':@Who,'Message':@Message}]}",
-                                            message.Who,
-                                            message.Message);
+                                        result.Collection
+                                              .GetFirstDoc()
+                                              .Values("{'Who':$,'Message':$}"));
 
                           OnStart();
                       }
