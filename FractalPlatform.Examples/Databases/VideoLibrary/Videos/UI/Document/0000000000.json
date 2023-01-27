@@ -7,7 +7,8 @@
     {
       "Style": "Type:Link;Hide:Video;HasLabel:true",
       "Video": {
-        "ControlType": "Video"
+        "ControlType": "Media",
+        "Style": "Type:Video"
       }
     }
   ]
