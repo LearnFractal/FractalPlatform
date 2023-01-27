@@ -441,7 +441,7 @@
       "Name": "Video - mp4",
       "Dimensions": {
         "Document": "{'Control':'MyVideo.mp4'}",
-        "UI": "{'ControlType':'Video'}"
+        "UI": "{'ControlType':'Media'}"
       },
       "Example": {
         "Control": "MyVideo.mp4"
@@ -452,7 +452,7 @@
       "Name": "Video - youtube",
       "Dimensions": {
         "Document": "{'Control':'https://www.youtube.com/watch?v=LhOSM6uCWxk'}",
-        "UI": "{'ControlType':'Video','Style':'Type:Youtube'}"
+        "UI": "{'ControlType':'Media','Style':'Type:Youtube'}"
       },
       "Example": {
         "Control": "https://www.youtube.com/watch?v=LhOSM6uCWxk"
@@ -463,7 +463,7 @@
       "Name": "Audio - mp3",
       "Dimensions": {
         "Document": "{'Control':'MyAudio.mp3'}",
-        "UI": "{'ControlType':'Audio'}"
+        "UI": "{'ControlType':'Media','Style':'Type:Audio'}"
       },
       "Example": {
         "Control": "MyAudio.mp3"
