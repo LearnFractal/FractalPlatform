@@ -459,6 +459,17 @@
       }
     },
     {
+      "Description": "Embedded mp3 audio",
+      "Name": "Audio - mp3",
+      "Dimensions": {
+        "Document": "{'Control':'MyAudio.mp3'}",
+        "UI": "{'ControlType':'Audio'}"
+      },
+      "Example": {
+        "Control": "MyAudio.mp3"
+      }
+    },
+    {
       "Description": "Calendar",
       "Name": "Calendar",
       "Dimensions": {
