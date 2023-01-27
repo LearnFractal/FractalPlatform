@@ -1,0 +1,27 @@
+﻿{
+  "Title": { "Index": 1 },
+  "Controls": [
+    {
+      "Name": { "Index": 2 },
+      "Description": { "Index": 3 },
+      "Dimensions": {
+        "Document": { "Index": 4 },
+        "UI": { "Index": 5 },
+        "Enum": { "Index": 6 }
+      },
+      "Example": { "Index": 7 }
+    }
+  ],
+  "Components": [
+    {
+      "Name": { "Index": 10 },
+      "Description": { "Index": 11 },
+      "Dimensions": {
+        "Document": { "Index": 12 },
+        "UI": { "Index": 13 },
+        "Enum": { "Index": 14 }
+      },
+      "Example": { "Index": 15 }
+    }
+  ]
+}
