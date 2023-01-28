@@ -153,8 +153,6 @@ namespace FractalPlatform.Deployment
                     var fileBytes = await File.ReadAllBytesAsync(filePath);
 
                     await UploadAsync(baseUrl, appName, "Assembly", assemblyFile, fileBytes, deploymentKey);
-
-                    File.Delete(zipPath);
                 }
             }
         }
