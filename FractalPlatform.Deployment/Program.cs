@@ -193,7 +193,7 @@ namespace FractalPlatform.Deployment
                 Deploy(options, appName);
             }
 
-            Console.WriteLine("Applications are deployed !");
+            Console.WriteLine("All applications are deployed !");
         }
     }
 }
