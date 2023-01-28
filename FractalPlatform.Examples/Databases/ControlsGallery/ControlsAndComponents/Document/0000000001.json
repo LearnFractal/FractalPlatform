@@ -233,7 +233,7 @@
       "Description": "Map",
       "Name": "Map",
       "Dimensions": {
-        "Document": "{'Control':{'Title':'My Map','Key':'','Zoom':15,'Center':{'Lat':'47.212325','Lng':'38.933663'},'Points':[{'Lat':'47.212325','Lng':'38.933663'}]}}",
+        "Document": "{'Control':{'Title':'My Map','Key':'','Zoom':15,'Center':{'Lat':'50.4778514','Lng':'30.4470756'},'Points':[{'Lat':'50.4778514','Lng':'30.4470756'}]}}",
         "UI": "{'ControlType':'Map'}"
       },
       "Example": {
@@ -242,13 +242,13 @@
           "Key": "",
           "Zoom": 15,
           "Center": {
-            "Lat": "47.212325",
-            "Lng": "38.933663"
+            "Lat": "50.4778514",
+            "Lng": "30.4470756"
           },
           "Points": [
             {
-              "Lat": "47.212325",
-              "Lng": "38.933663"
+              "Lat": "50.4778514",
+              "Lng": "30.4470756"
             }
           ]
         }
