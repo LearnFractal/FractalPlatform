@@ -5,7 +5,7 @@
   },
   "Videos": [
     {
-      "Style": "Type:Link;Hide:Video;HasLabel:true",
+      "Style": "Type:Link;Hide:Video,Download;HasLabel:true",
       "Video": {
         "ControlType": "Media",
         "Style": "Type:Video"
