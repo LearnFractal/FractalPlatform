@@ -177,7 +177,7 @@ namespace FractalPlatform.Deployment
                         options.IsDeployFiles,
                         options.IsDeployApplication).Wait();
 
-            Console.WriteLine("Application is deployed !");
+            Console.WriteLine($"{appName} application is deployed !");
 
             if (options.IsRunBrowser)
             {
