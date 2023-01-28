@@ -22,5 +22,5 @@ Application demonstrates the simple platform for Taxi company with next function
 
 ## Web Link
 
-[Taxi](http://booben.com/Taxi/?appName=Taxi)
+[Taxi](http://booben.com/jupiter/?appName=Taxi)
 
