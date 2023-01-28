@@ -150,38 +150,50 @@ namespace FractalPlatform.Deployment
             }
         }
 
-        static void Main(string[] args)
+        static void Deploy(Options options, string appName)
         {
-            var appSettings = File.ReadAllText("appsettings.json");
+            Console.WriteLine($"Start deploying {appName} application to {options.BaseUrl} host ...");
 
-            var options = JsonConvert.DeserializeObject<Options>(appSettings);
+            var assembly = options.Assemblies.FirstOrDefault(assembly => IsAssemblyHasApp(assembly, appName));
 
-            Console.WriteLine($"Start deploying {options.AppName} application to {options.BaseUrl} host ...");
-
-            var assembly = options.Assemblies.FirstOrDefault(assembly => IsAssemblyHasApp(assembly, options.AppName));
-
-            if(assembly == null)
+            if (assembly == null)
             {
-                throw new InvalidOperationException($"'{options.AppName}' application is not found in assemblies.");
+                throw new InvalidOperationException($"'{appName}' application is not found in assemblies.");
             }
 
             UploadAsync(options.BaseUrl,
-                        options.AppName,
+                        appName,
                         assembly,
                         options.DeploymentKey,
                         options.IsDeployDatabase,
                         options.IsRecreateDatabase,
                         options.IsDeployFiles,
                         options.IsDeployApplication).Wait();
-            
+
             Console.WriteLine("Application is deployed !");
 
             if (options.IsRunBrowser)
             {
-                var url = string.Format($"{options.BaseUrl}?appName={options.AppName}");
+                var url = string.Format($"{options.BaseUrl}?appName={appName}");
 
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
             }
+        }
+
+        static void Main(string[] args)
+        {
+            var appSettings = File.ReadAllText("appsettings.json");
+
+            var options = JsonConvert.DeserializeObject<Options>(appSettings);
+
+            Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
+
+            foreach (var appName in options.AppNames)
+            {
+                Deploy(options, appName);
+            }
+
+            Console.WriteLine("Applications are deployed !");
         }
     }
 }

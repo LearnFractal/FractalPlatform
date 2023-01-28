@@ -6,7 +6,7 @@ namespace FractalPlatform.Deployment
     {
         public string BaseUrl { get; set; }
         
-        public string AppName { get; set; }
+        public List<string> AppNames { get; set; }
         
         public List<string> Assemblies { get; set; }
 
