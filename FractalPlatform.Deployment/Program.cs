@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.VisualBasic.FileIO;
+using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -101,6 +102,8 @@ namespace FractalPlatform.Deployment
                                       fileBytes,
                                       deploymentKey,
                                       isRecreateDatabase.ToString());
+
+                    File.Delete(zipPath);
                 }
             }
 
@@ -119,6 +122,8 @@ namespace FractalPlatform.Deployment
                                       $"{appName}.zip",
                                       fileBytes,
                                       deploymentKey);
+
+                    File.Delete(zipPath);
                 }
             }
 
@@ -132,6 +137,8 @@ namespace FractalPlatform.Deployment
                     var fileBytes = await File.ReadAllBytesAsync(zipPath);
 
                     await UploadAsync(baseUrl, appName, "Layouts", $"{appName}.zip", fileBytes, deploymentKey);
+
+                    File.Delete(zipPath);
                 }
 
                 //upload assembly
@@ -146,6 +153,8 @@ namespace FractalPlatform.Deployment
                     var fileBytes = await File.ReadAllBytesAsync(filePath);
 
                     await UploadAsync(baseUrl, appName, "Assembly", assemblyFile, fileBytes, deploymentKey);
+
+                    File.Delete(zipPath);
                 }
             }
         }
