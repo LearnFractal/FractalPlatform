@@ -54,20 +54,24 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 
                         return true;
                     }
-                case "Open":
+                case "OpenButton":
                     {
                         var name = eventInfo.Collection
                                             .GetWhere(eventInfo.AttrPath.Parent)
                                             .Value("{'Products':[{'Name':$}]}");
 
+                        var categories = eventInfo.Collection
+                                            .GetWhere(eventInfo.AttrPath.Parent)
+                                            .Values("{'Products':[{'Categories':[$]}]}");
+
                         Client.SetDefaultCollection("Products")
-                              .GetWhere("{'Name':@Name}", name)
+                              .GetWhere("{'Name':@Name,'Categories':[In,@Categories]}", name, categories)
                               .ExtendDimension(DimensionType.UI, "{'ReadOnly':true}")
                               .OpenForm();
 
                         return true;
                     }
-                case "Search":
+                case "SearchButton":
                     {
                         var searchText = eventInfo.Collection
                                                   .GetFirstDoc()
@@ -85,7 +89,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                         var products = Client.SetDefaultCollection("Products")
                                              .GetWhere("{'Name':@Name}", searchText)
                                              .ToStorage();
-                    
+
                         eventInfo.Collection
                                  .DeleteByParent("Filters")
                                  .DeleteByParent("Products")
