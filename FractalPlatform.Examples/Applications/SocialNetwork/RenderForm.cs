@@ -7,6 +7,7 @@ using System.Linq;
 using BigDoc.Client.UI.DOM;
 using BigDoc.Client.App;
 using BigDoc.Client.UI.DOM.Controls.Component;
+using System.Globalization;
 
 namespace FractalPlatform.Examples.Applications.SocialNetwork
 {
@@ -62,7 +63,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
                 //test change
 
-                foreach (var post in posts.Root.OrderByDescending(x => DateTime.Parse(x.OnDate)))
+                foreach (var post in posts.Root.OrderByDescending(x => DateTime.Parse(x.OnDate, CultureInfo.InvariantCulture)))
                 {
                     var html = @"<tr style='cursor:pointer' onclick='javascript:editComponentRow(@ComponentName,@Number)'>
                                     <td>
