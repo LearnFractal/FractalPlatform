@@ -2,18 +2,13 @@
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
+using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
 
 namespace FractalPlatform.Examples.Applications.Taxi
 {
     public class TaxiApplication : DashboardApplication
     {
-        public override void OnStart()
-        {
-            Client.SetDefaultCollection("Dashboard")
-                  .OpenForm();
-        }
-
         public void MyUser()
         {
             Client.SetDefaultCollection("Users")
@@ -85,6 +80,17 @@ namespace FractalPlatform.Examples.Applications.Taxi
             }
 
             return true;
+        }
+
+        public override void OnStart()
+        {
+            Login();
+        }
+
+        protected override void OnLogin(FormResult result)
+        {
+            Client.SetDefaultCollection("Dashboard")
+                  .OpenForm();
         }
     }
 }

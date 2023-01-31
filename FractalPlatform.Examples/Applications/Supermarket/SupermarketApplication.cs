@@ -29,12 +29,6 @@ namespace FractalPlatform.Examples.Applications.Supermarket
             public List<ProductItem> Products { get; set; }
         }
 
-        public override void OnStart()
-        {
-            Client.SetDefaultCollection("Dashboard")
-                  .OpenForm();
-        }
-
         public void ViewStock()
         {
             Client.SetDefaultCollection("Stock")
@@ -138,6 +132,12 @@ namespace FractalPlatform.Examples.Applications.Supermarket
                 default:
                     return base.OnEventDimension(eventInfo);
             }
+        }
+
+        public override void OnStart()
+        {
+            Client.SetDefaultCollection("Dashboard")
+                  .OpenForm();
         }
     }
 }
