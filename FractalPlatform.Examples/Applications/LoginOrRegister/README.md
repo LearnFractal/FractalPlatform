@@ -1,9 +1,9 @@
-# Login
+# LoginOrRegister
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Login/LoginApplication.cs)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Login)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Login/LoginOrRegisterApplication.cs)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/LoginOrRegister)
 
 ## Functionality
 
@@ -15,5 +15,5 @@ Application demonstrates how to works with user credentials
 
 ## Web Link
 
-[Login](http://booben.com/jupiter/?appName=Login)
+[LoginOrRegister](http://booben.com/jupiter/?appName=LoginOrRegister)
 

@@ -1,7 +1,7 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Database.Engine;
 
-namespace FractalPlatform.Examples.Applications.Login
+namespace FractalPlatform.Examples.Applications.LoginOrRegister
 {
     public class LoginOrRegisterApplication : DashboardApplication
     {
