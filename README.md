@@ -7,6 +7,7 @@
 - [Dating Game](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/DatingGame)
 - [Forum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Forum)
 - [Login](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Login)
+- [LoginOrRegister](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/LoginOrRegister)
 - [Manage Passwords](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ManagePasswords)
 - [Mult Table](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/MultTable)
 - [Online Shop](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/OnlineShop)
