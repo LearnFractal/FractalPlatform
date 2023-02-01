@@ -5,6 +5,7 @@ using BigDoc.Client.UI;
 using BigDoc.Common.Enums;
 using BigDoc.Client.App;
 using BigDoc.Database.Engine.Info;
+using BigDoc.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.Supermarket
 {
@@ -135,6 +136,11 @@ namespace FractalPlatform.Examples.Applications.Supermarket
         }
 
         public override void OnStart()
+        {
+            Login("Bob", "Bob");
+        }
+
+        protected override void OnLogin(FormResult result)
         {
             Client.SetDefaultCollection("Dashboard")
                   .OpenForm();
