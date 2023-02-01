@@ -211,6 +211,8 @@ namespace FractalPlatform.Deployment
                 {
                     options.AppNames.Add(type.Name.Replace("Application", ""));
                 }
+
+                options.IsRunBrowser = false;
             }
 
             Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
