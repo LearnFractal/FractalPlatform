@@ -1,23 +1,4 @@
 ﻿{
    "Message": "Test",
-   "Receiver": "5018512422",
-   "TextMessages": [
-      {
-         "Message": "Test",
-         "Provider": "Telegram",
-         "Receiver": "5018512422"
-      },
-      {
-         "IsSent": false,
-         "Message": "Test",
-         "Provider": "Telegram",
-         "Receiver": "5018512422"
-      },
-      {
-         "IsSent": false,
-         "Message": "Hello Makar !",
-         "Provider": "Telegram",
-         "Receiver": "5018512422"
-      }
-   ]
+   "Receiver": "5018512422"
 }
