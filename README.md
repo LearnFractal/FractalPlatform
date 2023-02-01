@@ -12,6 +12,7 @@
 - [Mult Table](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/MultTable)
 - [Online Shop](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/OnlineShop)
 - [Photo Album](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/PhotoAlbum)
+- [Send Text Message](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SendTextMessage)
 - [Social Network](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork)
 - [Supermarket](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Supermarket)
 - [Taxi](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Taxi)
