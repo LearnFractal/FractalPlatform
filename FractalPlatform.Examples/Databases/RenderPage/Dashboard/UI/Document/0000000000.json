@@ -1,0 +1,29 @@
+{
+  "Enabled": false,
+  "Style": "Hide:Picture,Likes,Comments,NewComment;HasLabel:true",
+  "Location": "Dashboard.html",
+  "OnDate": {
+    "ControlType": "Calendar",
+    "LayoutLocation":"OnDate"
+  },
+  "Text": {
+    "ControlType": "RichTextBox",
+    "LayoutLocation": "Text"
+  },
+  "Picture": {
+    "ControlType": "Picture",
+    "LayoutLocation": "Picture"
+  },
+  "Likes": {
+    "ControlType": "Likes",
+    "LayoutLocation": "Likes"
+  },
+  "Comments": {
+    "ControlType": "Comments",
+    "LayoutLocation": "Comments"
+  },
+  "NewComment": {
+    "ControlType": "Button",
+    "LayoutLocation": "NewComment"
+  }
+}
