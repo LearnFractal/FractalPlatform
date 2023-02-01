@@ -18,5 +18,14 @@ namespace FractalPlatform.Examples.Applications.RenderPage
 
             return sb.ToString();
         }
+
+        public override string RenderButton(ButtonDOMControl domControl)
+        {
+            var sb = new StringBuilder();
+
+            sb.Append("<div>").Append(domControl.Value).Append("</div>");
+
+            return sb.ToString();
+        }
     }
 }
