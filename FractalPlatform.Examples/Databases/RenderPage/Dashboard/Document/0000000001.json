@@ -5,6 +5,7 @@
   "Text": "Hello World !",
   "Title": "Fractal Platform - Hello World !",
   "Who": "Bazist",
+  "Likes": [ "Bazist", "Lexa" ],
   "Comments": [
     {
       "Avatar": "",

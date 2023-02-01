@@ -1,7 +1,7 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 
-namespace FractalPlatform.Examples.Applications.HelloWorld
+namespace FractalPlatform.Examples.Applications.RenderPage
 {
     public class RenderPageApplication : BaseApplication
     {
@@ -9,6 +9,11 @@ namespace FractalPlatform.Examples.Applications.HelloWorld
         {
             Client.SetDefaultCollection("Dashboard")
                   .OpenForm();
+        }
+
+        public override BaseRenderForm CreateRenderForm(string formName)
+        {
+            return new ExtendedRenderForm(this);
         }
     }
 }

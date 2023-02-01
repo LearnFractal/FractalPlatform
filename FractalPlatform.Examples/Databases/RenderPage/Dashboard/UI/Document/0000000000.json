@@ -1,7 +1,6 @@
 {
   "Enabled": false,
-  "Style": "Hide:Picture,Likes,Comments,NewComment;HasLabel:true",
-  "Location": "Dashboard.html",
+  "Layout": "Dashboard",
   "OnDate": {
     "ControlType": "Calendar",
     "LayoutLocation":"OnDate"
