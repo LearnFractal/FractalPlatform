@@ -2,7 +2,11 @@
   "Layout": "Dashboard",
   "OnDate": {
     "ControlType": "Calendar",
-    "LayoutLocation":"OnDate"
+    "LayoutLocation": "OnDate"
+  },
+  "Title": {
+    "ControlType": "Label",
+    "LayoutLocation": "Title"
   },
   "Text": {
     "ControlType": "RichTextBox",
