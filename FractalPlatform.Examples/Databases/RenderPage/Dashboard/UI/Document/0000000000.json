@@ -1,5 +1,4 @@
 {
-  "Enabled": false,
   "Layout": "Dashboard",
   "OnDate": {
     "ControlType": "Calendar",
