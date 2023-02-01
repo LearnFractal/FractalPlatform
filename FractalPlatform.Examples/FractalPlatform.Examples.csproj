@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Databases\Forum\Users\Document\" />
-    <Folder Include="Databases\SendTextMessage\" />
     <Folder Include="Databases\ToDoIntro\Intro\Document\" />
     <Folder Include="Databases\VideoLibrary\" />
     <Folder Include="Files\PhotoAlbum\" />
