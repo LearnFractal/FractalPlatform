@@ -1,7 +1,7 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
 
-namespace FractalPlatform.Examples.Applications.HelloWorld
+namespace FractalPlatform.Examples.Applications.SendTextMessage
 {
     public class SendTextMessageApplication : BaseApplication
     {
