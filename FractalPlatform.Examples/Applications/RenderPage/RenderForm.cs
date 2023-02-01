@@ -1,13 +1,6 @@
-﻿using BigDoc.Client;
-using BigDoc.Client.UI.DOM.Controls;
-using System.Collections.Generic;
+﻿using BigDoc.Client.UI.DOM.Controls;
 using System.Text;
-using System;
-using System.Linq;
-using BigDoc.Client.UI.DOM;
 using BigDoc.Client.App;
-using BigDoc.Client.UI.DOM.Controls.Component;
-using System.Globalization;
 
 namespace FractalPlatform.Examples.Applications.RenderPage
 {
