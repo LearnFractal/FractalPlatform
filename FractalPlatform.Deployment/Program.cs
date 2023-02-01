@@ -1,12 +1,14 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 namespace FractalPlatform.Deployment
@@ -192,6 +194,24 @@ namespace FractalPlatform.Deployment
             var appSettings = File.ReadAllText("appsettings.json");
 
             var options = JsonConvert.DeserializeObject<Options>(appSettings);
+
+            if(options.AppNames == null)
+            {
+                var assemblyName = GetAssemblyName(options.Assemblies[0]);
+
+                var filePath = @$"{_deploymentPath}\{assemblyName}\bin\Debug\netcoreapp3.1\{options.Assemblies[0]}";
+
+                var bytes = File.ReadAllBytes(filePath);
+
+                var assembly = Assembly.Load(bytes);
+
+                options.AppNames = new List<string>();
+
+                foreach(var type in assembly.GetTypes().Where(x => x.Name.EndsWith("Application")))
+                {
+                    options.AppNames.Add(type.Name.Replace("Application", ""));
+                }
+            }
 
             Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
 
