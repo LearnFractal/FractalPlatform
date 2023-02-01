@@ -13,7 +13,7 @@ namespace FractalPlatform.Examples.Applications.RenderPage
 
         public override BaseRenderForm CreateRenderForm(string formName)
         {
-            return new ExtendedRenderForm(this);
+            return new RenderForm(this);
         }
     }
 }
