@@ -4,6 +4,7 @@ using BigDoc.Client.App;
 using BigDoc.Client.UI.DOM.Controls.Grid;
 using System.Data;
 using System.Collections.Generic;
+using System;
 
 namespace FractalPlatform.Examples.Applications.RenderPage
 {
@@ -15,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.RenderPage
 
         public class CommentInfo
         {
-            public string OnDate { get; set; }
+            public DateTime OnDate { get; set; }
         }
 
         public class GridInfo
