@@ -8,6 +8,7 @@ namespace FractalPlatform.Examples.Applications.RenderPage
         public override void OnStart()
         {
             Client.SetDefaultCollection("Dashboard")
+                  .GetAll()
                   .OpenForm();
         }
 
