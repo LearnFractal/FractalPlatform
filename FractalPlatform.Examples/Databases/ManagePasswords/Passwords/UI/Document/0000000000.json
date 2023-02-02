@@ -1,8 +1,0 @@
-{
-  "Title": {
-    "ControlType": "Label"
-  },
-  "Passwords": {
-    "Style": "Hide:Password"
-  }
-}

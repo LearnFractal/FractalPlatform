@@ -1,8 +1,0 @@
-﻿{
-  "Name": "Tomato",
-  "Description": "",
-  "Quantity": 10,
-  "Price": 30,
-  "Categories": [ "Foods" ],
-  "OpenButton": "Open"
-}

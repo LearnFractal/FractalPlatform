@@ -1,9 +1,0 @@
-{
-  "Style": "Save:Vote",
-  "Question": {
-    "ControlType": "Label"
-  },
-  "Options": {
-    "ControlType": "RadioButton"
-  }
-}

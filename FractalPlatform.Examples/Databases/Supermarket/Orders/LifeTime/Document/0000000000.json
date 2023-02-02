@@ -1,8 +1,0 @@
-{
-  //Do not save StockProducts in the Order document at all
-  "StockProducts": {
-    "Limit": {
-      "MaxCount": 0
-    }
-  }
-}

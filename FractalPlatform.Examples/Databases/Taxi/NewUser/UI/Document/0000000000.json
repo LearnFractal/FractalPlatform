@@ -1,9 +1,0 @@
-{
-  "Style": "Save:Register",
-  "Password": {
-    "Style": "Type:Password"
-  },
-  "NewOrders": {
-    "Visible": false
-  }
-}

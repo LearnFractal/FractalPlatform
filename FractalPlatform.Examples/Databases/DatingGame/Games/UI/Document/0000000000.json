@@ -1,9 +1,0 @@
-{
-  "Enabled":  false,
-  "Gender": { "ControlType": "ComboBox" },
-  "Photo": { "ControlType": "Picture" },
-  "Questions": { "Visible": false },
-  "Answers": { "Visible": false },
-  "Choose": { "Visible": false },
-  "GenderGroup": { "Visible": false }
-}

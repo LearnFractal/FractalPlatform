@@ -1,8 +1,0 @@
-﻿{
-  "Name": "Tesla",
-  "Description": "",
-  "Quantity": 100,
-  "Price": 50,
-  "Categories": [ "Toys" ],
-  "OpenButton": "Open"
-}
