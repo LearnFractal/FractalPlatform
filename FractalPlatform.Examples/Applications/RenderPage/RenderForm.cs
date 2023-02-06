@@ -33,21 +33,16 @@ namespace FractalPlatform.Examples.Applications.RenderPage
 
         public class CalendarInfo
         {
-            public List<DayInfo> Calendar { get; set; }
-        }
-
-        public class RootInfo
-        {
-            public CalendarInfo Root { get; set; }
+            public List<DayInfo> Root { get; set; }
         }
 
         public override string RenderComponent(ComponentDOMControl domControl)
         {
-            var model = JsonConvert.Deserialize<RootInfo>(domControl.Value);
+            var model = JsonConvert.Deserialize<CalendarInfo>(domControl.Value);
 
             var sb = new StringBuilder();
 
-            sb.Append(model.Root.Calendar.Count);
+            sb.Append(model.Root.Count);
 
             return sb.ToString();
         }
