@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FractalPlatform.Converter.Examples\FractalPlatform.Converter.Examples.csproj" />
     <ProjectReference Include="..\FractalPlatform.Examples\FractalPlatform.Examples.csproj" />
+    <ProjectReference Include="..\FractalPlatform.Portal\FractalPlatform.Portal.csproj" />
   </ItemGroup>
 
 </Project>

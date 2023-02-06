@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Files\PhotoAlbum\**" />
+    <EmbeddedResource Remove="Files\PhotoAlbum\**" />
+    <None Remove="Files\PhotoAlbum\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BigDoc.Client">
+      <HintPath>..\Bin\BigDoc.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="BigDoc.Common">
+      <HintPath>..\Bin\BigDoc.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BigDoc.Database">
+      <HintPath>..\Bin\BigDoc.Database.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Databases\Portal\" />
+    <Folder Include="Files\Portal\" />
+    <Folder Include="Layouts\Portal\" />
+  </ItemGroup>
+
+</Project>
