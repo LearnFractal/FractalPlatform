@@ -1,5 +1,6 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
+using BigDoc.Client.UI.DOM;
 using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
 
@@ -116,6 +117,6 @@ namespace FractalPlatform.Examples.Applications.Forum
             }
         }
 
-        public override BaseRenderForm CreateRenderForm(string formName) => new RenderForm(this);
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this);
     }
 }

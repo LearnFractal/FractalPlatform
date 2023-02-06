@@ -1,5 +1,6 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
+using BigDoc.Client.UI.DOM;
 
 namespace FractalPlatform.Examples.Applications.PhotoAlbum
 {
@@ -17,6 +18,6 @@ namespace FractalPlatform.Examples.Applications.PhotoAlbum
                   });
         }
 
-        public override BaseRenderForm CreateRenderForm(string formName) => new RenderForm(this);
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this);
     }
 }

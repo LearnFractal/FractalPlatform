@@ -4,6 +4,7 @@ using BigDoc.Client.App.Chart;
 using BigDoc.Client.DQL;
 using BigDoc.Client.SQL;
 using BigDoc.Client.UI;
+using BigDoc.Client.UI.DOM;
 using BigDoc.Common.Enums;
 using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
@@ -3003,7 +3004,7 @@ namespace FractalPlatform.Applications.Portal
 
         #endregion
 
-        public override BaseRenderForm CreateRenderForm(string formName)
+        public override BaseRenderForm CreateRenderForm(DOMForm form)
         {
             return new RenderForm(this);
         }

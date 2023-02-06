@@ -1,5 +1,6 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
+using BigDoc.Client.UI.DOM;
 
 namespace FractalPlatform.Examples.Applications.RenderPage
 {
@@ -11,7 +12,7 @@ namespace FractalPlatform.Examples.Applications.RenderPage
                   .OpenForm();
         }
 
-        public override BaseRenderForm CreateRenderForm(string formName)
+        public override BaseRenderForm CreateRenderForm(DOMForm form)
         {
             return new RenderForm(this);
         }

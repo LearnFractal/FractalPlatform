@@ -2,6 +2,7 @@
 using System.Linq;
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
+using BigDoc.Client.UI.DOM;
 using BigDoc.Common.Enums;
 using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
@@ -183,7 +184,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
             OpenCategory("Cars");
         }
 
-        public override BaseRenderForm CreateRenderForm(string formName)
+        public override BaseRenderForm CreateRenderForm(DOMForm form)
         {
             return new RenderForm(this);
         }

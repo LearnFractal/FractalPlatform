@@ -1,5 +1,6 @@
 ﻿using BigDoc.Client.App;
 using BigDoc.Client.UI;
+using BigDoc.Client.UI.DOM;
 
 namespace FractalPlatform.Examples.Applications.Chat
 {
@@ -26,6 +27,6 @@ namespace FractalPlatform.Examples.Applications.Chat
                   });
         }
 
-        public override BaseRenderForm CreateRenderForm(string formName) => new RenderForm(this);
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this);
     }
 }
