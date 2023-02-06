@@ -1803,14 +1803,7 @@ namespace FractalPlatform.Applications.Portal
             switch (eventInfo.Action)
             {
                 case "Login":
-                    if (Environment.MachineName == "TX-N-0729")
-                    {
-                        Login("Bazist", "Bob");
-                    }
-                    else
-                    {
-                        Login();
-                    }
+                    Login();
                     break;
                 case "Logout":
                     AddNotificationToUser("Logout", SeverityType.NotImportant, "User logged out");
