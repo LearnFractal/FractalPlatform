@@ -14,7 +14,7 @@ namespace FractalPlatform.Examples.Applications.RenderPage
 
         public override BaseRenderForm CreateRenderForm(DOMForm form)
         {
-            return new RenderForm(this);
+            return new RenderForm(this, form);
         }
     }
 }

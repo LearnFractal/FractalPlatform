@@ -9,23 +9,14 @@ namespace FractalPlatform.Examples.Applications.Test
 {
     public class TestApplication : BaseApplication
     {
-        public TestApplication(Guid sessionId,
-                               BigDocInstance instance,
-                               IFormFactory formFactory) : base(sessionId,
-                                                               instance,
-                                                               formFactory,
-                                                               "Test")
-        {
-        }
-
-        public override void OnStart(Context context)
+        public override void OnStart()
         {
             Client.SetDefaultCollection("Dashboard")
                   .GetFirstDoc()
                   .OpenForm();
         }
 
-        public override bool OnEventDimension(Context context, EventInfo eventInfo)
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
             Client.SetDefaultCollection(eventInfo.Action)
                   .GetFirstDoc()

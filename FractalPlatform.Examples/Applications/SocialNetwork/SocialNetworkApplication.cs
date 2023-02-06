@@ -212,6 +212,6 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
             return true;
         }
 
-        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this);
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this, form);
     }
 }

@@ -117,6 +117,6 @@ namespace FractalPlatform.Examples.Applications.Forum
             }
         }
 
-        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this);
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this, form);
     }
 }

@@ -17,6 +17,7 @@
 */
 
 using BigDoc.Client.App;
+using BigDoc.Client.UI.DOM;
 using BigDoc.Client.UI.DOM.Controls.Component;
 using System.Text;
 
@@ -24,7 +25,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 {
     public class RenderForm : ExtendedRenderForm
     {
-        public RenderForm(BaseApplication application) : base (application)
+        public RenderForm(BaseApplication application, DOMForm form) : base (application, form)
         {
 
         }

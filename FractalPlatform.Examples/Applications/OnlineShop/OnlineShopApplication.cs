@@ -186,7 +186,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 
         public override BaseRenderForm CreateRenderForm(DOMForm form)
         {
-            return new RenderForm(this);
+            return new RenderForm(this, form);
         }
     }
 }

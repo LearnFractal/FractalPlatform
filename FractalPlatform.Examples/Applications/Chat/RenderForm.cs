@@ -1,4 +1,5 @@
 ﻿using BigDoc.Client.App;
+using BigDoc.Client.UI.DOM;
 using BigDoc.Client.UI.DOM.Controls.Grid;
 using System.Data;
 using System.Text;
@@ -7,7 +8,7 @@ namespace FractalPlatform.Examples.Applications.Chat
 {
     public class RenderForm: BaseRenderForm
     {
-        public RenderForm(BaseApplication application) : base(application)
+        public RenderForm(BaseApplication application, DOMForm form) : base(application, form)
         {
 
         }

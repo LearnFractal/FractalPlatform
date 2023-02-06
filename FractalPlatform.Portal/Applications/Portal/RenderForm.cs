@@ -6,7 +6,7 @@ namespace FractalPlatform.Applications.Portal
 {
     public class RenderForm : ExtendedRenderForm
     {
-        public RenderForm(BaseApplication application) : base (application)
+        public RenderForm(BaseApplication application, DOMForm form) : base (application, form)
         {
 
         }

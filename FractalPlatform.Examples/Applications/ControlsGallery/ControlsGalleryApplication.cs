@@ -36,7 +36,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
 
         public override BaseRenderForm CreateRenderForm(DOMForm form)
         {
-            return new ExtendedRenderForm(this);
+            return new ExtendedRenderForm(this, form);
         }
     }
 }
