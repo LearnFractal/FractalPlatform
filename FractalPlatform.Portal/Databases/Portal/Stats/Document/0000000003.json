@@ -1,0 +1,82 @@
+﻿{
+   "AppName": "VideoLibrary",
+   "Logs": [
+      {
+         "Date": "1/24/2023 12:15:12 AM",
+         "Errors": 2,
+         "Period": 289824,
+         "Requests": 3,
+         "TimeInMsec": 58122
+      },
+      {
+         "Date": "25/01/2023 01:17:30",
+         "Errors": 0,
+         "Period": 289849,
+         "Requests": 2,
+         "TimeInMsec": 44
+      },
+      {
+         "Date": "27/01/2023 06:40:22",
+         "Errors": 0,
+         "Period": 289902,
+         "Requests": 5,
+         "TimeInMsec": 48
+      },
+      {
+         "Date": "27/01/2023 14:01:00",
+         "Errors": 1,
+         "Period": 289910,
+         "Requests": 42,
+         "TimeInMsec": 657
+      },
+      {
+         "Date": "27/01/2023 15:00:43",
+         "Errors": 0,
+         "Period": 289911,
+         "Requests": 16,
+         "TimeInMsec": 52
+      },
+      {
+         "Date": "28/01/2023 05:37:09",
+         "Errors": 0,
+         "Period": 289925,
+         "Requests": 4,
+         "TimeInMsec": 23
+      },
+      {
+         "Date": "28/01/2023 13:56:32",
+         "Errors": 0,
+         "Period": 289933,
+         "Requests": 8,
+         "TimeInMsec": 57
+      },
+      {
+         "Date": "28/01/2023 14:04:08",
+         "Errors": 0,
+         "Period": 289934,
+         "Requests": 21,
+         "TimeInMsec": 261
+      },
+      {
+         "Date": "28/01/2023 17:43:58",
+         "Errors": 0,
+         "Period": 289937,
+         "Requests": 1,
+         "TimeInMsec": 2
+      },
+      {
+         "Date": "30/01/2023 19:19:44",
+         "Errors": 0,
+         "Period": 289987,
+         "Requests": 3,
+         "TimeInMsec": 41
+      },
+      {
+         "Date": "31/01/2023 10:04:55",
+         "Errors": 0,
+         "Period": 290002,
+         "Requests": 8,
+         "TimeInMsec": 38
+      }
+   ]
+}

@@ -1,0 +1,41 @@
+{
+  "Name": {
+    "Index": 1
+  },
+  "Title": {
+    "Index": 2
+  },
+  "Language": {
+    "Index": 3
+  },
+  "Video": {
+    "Index": 4
+  },
+  "VideoDescription": {
+    "Index": 5
+  },
+  "VisualStudioCommunity": {
+    "Index": 6
+  },
+  "Book": {
+    "Index": 7
+  },
+  "Examples": {
+    "Index": 8
+  },
+  "Description": {
+    "Index": 9
+  },
+  "StartCourse": {
+    "Index": 10
+  },
+  "Likes": {
+    "Index": 11
+  },
+  "Comments": {
+    "Index": 12
+  },
+  "NewComment": {
+    "Index": 13
+  }
+}

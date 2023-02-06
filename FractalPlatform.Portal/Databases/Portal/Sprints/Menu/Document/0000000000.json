@@ -1,0 +1,18 @@
+{
+  "Stories": {
+    "MenuItems": [
+      {
+        "Text": "Remove Story From Sprint",
+        "Action": "RemoveStoryFromSprint"
+      }
+    ]
+  },
+  "AvailableStories": {
+    "MenuItems": [
+      {
+        "Text": "Add Story To Sprint",
+        "Action": "AddStoryToSprint"
+      }
+    ]
+  }
+}

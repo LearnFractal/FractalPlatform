@@ -1,0 +1,11 @@
+{
+  "TemplateName": "SendTextMessage",
+  "Title": "Send Text Message",
+  "Description": "SendTextMessage app",
+  "Owner": "Bazist",
+  "View": "http://booben.com/jupiter/?appName=SendTextMessage",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SendTextMessage",
+  "Category": "Example",
+  "CodeLines": 27,
+  "Collections": 1
+}

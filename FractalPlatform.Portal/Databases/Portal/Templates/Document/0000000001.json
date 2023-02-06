@@ -1,0 +1,11 @@
+{
+  "TemplateName": "FractalPlatform",
+  "Title": "Fractal Platform",
+  "Description": "Fractal Platform based on FP",
+  "Owner": "Bazist",
+  "Category": "ERP",
+  "CodeLines": 2500,
+  "Collections": 38,
+  "View": "http://booben.com/jupiter/?appName=FractalPlatform",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FractalPlatform"
+}

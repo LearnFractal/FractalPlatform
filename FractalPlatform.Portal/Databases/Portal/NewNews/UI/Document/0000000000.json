@@ -1,0 +1,32 @@
+{
+  "Style": "HasLabel:true",
+  "Likes": {
+    "Visible": false
+  },
+  "Picture": {
+    "ControlType": "UploadFile"
+  },
+  "Text": {
+    "ControlType": "RichTextBox"
+  },
+  "OnDate": {
+    "ControlType": "Calendar",
+    "Enabled": false
+  },
+  "Who": {
+    "Enabled": false
+  },
+  "Projects": [
+    {
+      "ControlType": "ComboBox"
+    }
+  ],
+  "Teams": [
+    {
+      "ControlType": "ComboBox"
+    }
+  ],
+  "NewComment": {
+    "Visible": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Who": {
+    "Formula": "@UserName"
+  },
+  "StoryNumber": {
+    "Formula": "@NewStoryNumber"
+  },
+  "ProjectName": {
+    "Formula": "@CurrentProject"
+  }
+}

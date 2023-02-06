@@ -1,0 +1,11 @@
+{
+  "TemplateName": "VideoLibrary",
+  "Title": "Video library",
+  "Description": "Video library app",
+  "Owner": "Bazist",
+  "Category": "Communication",
+  "CodeLines": 42,
+  "Collections": 1,
+  "View": "http://booben.com/jupiter/?appName=VideoLibrary",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/VideoLibrary"
+}

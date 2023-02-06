@@ -1,0 +1,20 @@
+{
+  "Name": {
+    "IsRequired": "true"
+  },
+  "Gender": {
+    "IsRequired": "true"
+  },
+  "Age": {
+    "IsRequired": "true"
+  },
+  "Expirience": {
+    "IsRequired": "true"
+  },
+  "Details": {
+    "IsRequired": "true"
+  },
+  "Contacts": {
+    "IsRequired": "true"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Style": "Save:Refresh",
+  "Layout": "Reports",
+  "AppName": {
+    "LayoutLocation": "AppName"
+  },
+  "Period": {
+    "LayoutLocation": "Period"
+  },
+  "Reports": {
+    "Activity": {
+      "Report": {
+        "Style": "Type:Bar",
+        "ControlType": "Chart",
+        "LayoutLocation": "Activity"
+      }
+    },
+    "Storage": {
+      "Report": {
+        "Style": "Type:Pie",
+        "ControlType": "Chart",
+        "LayoutLocation": "Storage"
+      }
+    },
+    "Performance": {
+      "Report": {
+        "Style": "Type:LineGraphs",
+        "ControlType": "Chart",
+        "LayoutLocation": "Performance"
+      }
+    },
+    "Errors": {
+      "Report": {
+        "Style": "Type:Bar",
+        "ControlType": "Chart",
+        "LayoutLocation": "Errors"
+      }
+    }
+  }
+}

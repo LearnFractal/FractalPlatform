@@ -1,0 +1,20 @@
+{
+  "MenuItems": [
+    {
+      "Text": "Run Scenario",
+      "Action": "RunScenario"
+    },
+    {
+      "Text": "Start Recording",
+      "Action": "StartRecording"
+    },
+    {
+      "Text": "Finish Recording",
+      "Action": "FinishRecording"
+    },
+    {
+      "Text": "Run All Scenarios",
+      "Action": "RunAllScenarios"
+    }
+  ]
+}

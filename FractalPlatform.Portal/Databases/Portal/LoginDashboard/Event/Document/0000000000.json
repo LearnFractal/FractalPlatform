@@ -1,0 +1,10 @@
+{
+  "User": {
+    "LoginButton": {
+      "OnClick": "Login"
+    },
+    "Register": {
+      "OnClick": "Register"
+    }
+  }
+}

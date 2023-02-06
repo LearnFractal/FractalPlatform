@@ -1,0 +1,19 @@
+﻿{
+   "AppName": "Forum",
+   "Logs": [
+      {
+         "Date": "25/01/2023 12:37:07",
+         "Errors": 1,
+         "Period": 289860,
+         "Requests": 1,
+         "TimeInMsec": 34
+      },
+      {
+         "Date": "28/01/2023 06:24:17",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 7,
+         "TimeInMsec": 84
+      }
+   ]
+}

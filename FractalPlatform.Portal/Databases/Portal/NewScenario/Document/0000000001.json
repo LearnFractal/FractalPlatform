@@ -1,0 +1,10 @@
+﻿{
+  "Name": "",
+  "AppName": "",
+  "OnDate": "",
+  "Status": "New",
+  "RunEvery": "Never",
+  "Progress": "",
+  "CheckResult": "AttrsAndValuesTheSame",
+  "RunAllScenarios": "Run All Scenarios"
+}

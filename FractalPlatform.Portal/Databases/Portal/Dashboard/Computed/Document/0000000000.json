@@ -1,0 +1,68 @@
+{
+  "User": {
+    "UserName": {
+      "Formula": "\"User: \" + @UserName"
+    },
+    "CurrentProject": {
+      "Formula": "\"Current Project: \" + @CurrentProject"
+    },
+    "Users": {
+      "Formula": "@Users"
+    },
+    "Teams": {
+      "Formula": "@Teams"
+    },
+    "Vacancies": {
+      "Formula": "@Vacancies"
+    }
+  },
+  "Messages": {
+    "News": {
+      "Formula": "@News"
+    },
+    "Chats": {
+      "Formula": "@Chats"
+    },
+    "Notifications": {
+      "Formula": "@Notifications"
+    }
+  },
+  "Learn": {
+    "Articles": {
+      "Formula": "@Articles"
+    }
+  },
+  "Meetings": {
+    "Meetings": {
+      "Formula": "@Meetings"
+    }
+  },
+  "Project": {
+    "Specifications": {
+      "Formula": "@Specifications"
+    },
+    "Projects": {
+      "Formula": "@Projects"
+    }
+  },
+  "Sprint": {
+    "Sprints": {
+      "Formula": "@Sprints"
+    }
+  },
+  "Story": {
+    "Stories": {
+      "Formula": "@Stories"
+    }
+  },
+  "Report": {
+    "Votes": {
+      "Formula": "@Votes"
+    }
+  },
+  "Environment": {
+    "Environments": {
+      "Formula": "@Environments"
+    }
+  }
+}

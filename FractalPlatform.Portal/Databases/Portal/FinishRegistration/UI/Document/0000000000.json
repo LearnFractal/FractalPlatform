@@ -1,0 +1,8 @@
+{
+  "Style": "Save:false;Cancel:false",
+  "Role": { "Visible": false },
+  "Title": { "ControlType": "Label" },
+  "VideoLabel": { "ControlType": "Label" },
+  "Video": { "ControlType": "Media" },
+  "Go To Login": { "ControlType": "Link" }
+}

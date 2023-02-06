@@ -1,0 +1,12 @@
+﻿{
+   "AppName": "Vote",
+   "Logs": [
+      {
+         "Date": "28/01/2023 06:26:36",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 2,
+         "TimeInMsec": 13
+      }
+   ]
+}

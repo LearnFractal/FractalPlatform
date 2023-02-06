@@ -1,0 +1,14 @@
+{
+  "StoryEstimated": {
+    "Formula": "@SprintStoryEstimated"
+  },
+  "TotalDays": {
+    "Formula": "@SprintTotalDays"
+  },
+  "DaysRemained": {
+    "Formula": "@SprintDaysRemained"
+  },
+  "RemainedTasks": {
+    "Formula": "@RemainedTasks"
+  }
+}

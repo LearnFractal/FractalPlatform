@@ -1,0 +1,49 @@
+﻿{
+   "CollVersion": 14,
+   "AvailableStories": {
+      "Receive": {
+         "Enabled": true,
+         "Query": "Collection.GetWhere(\{'SprintNumber':''\}).Select(\{'StoryNumber':$,'Title':$,'StoryEstimated':$\})",
+         "Version": "0",
+         "Connection": {
+            "CollectionName": "Stories",
+            "DatabaseName": "FractalPlatform",
+            "Host": "localhost",
+            "Port": "4477"
+         },
+         "Download": {
+            "Mode": "ByView"
+         }
+      },
+      "Send": {
+         "Enabled": true,
+         "ResolveConficts": "Overwrite",
+         "Upload": {
+            "Mode": "ByView"
+         }
+      }
+   },
+   "Stories": {
+      "Receive": {
+         "Enabled": true,
+         "Query": "Collection.GetWhere(\{'SprintNumber':Document.SprintNumber\}).Select(\{'StoryNumber':$,'Title':$,'StoryEstimated':$\})",
+         "Version": "0",
+         "Connection": {
+            "CollectionName": "Stories",
+            "DatabaseName": "FractalPlatform",
+            "Host": "localhost",
+            "Port": "4477"
+         },
+         "Download": {
+            "Mode": "ByView"
+         }
+      },
+      "Send": {
+         "Enabled": true,
+         "ResolveConficts": "Overwrite",
+         "Upload": {
+            "Mode": "ByView"
+         }
+      }
+   }
+}

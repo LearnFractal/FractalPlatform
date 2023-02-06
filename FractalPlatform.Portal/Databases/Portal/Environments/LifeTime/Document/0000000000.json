@@ -1,0 +1,14 @@
+{
+  "Deployments": {
+    "Limit": {
+      "MaxCount": 100,
+      "Strategy": "RemoveOld"
+    }
+  },
+  "Logs": {
+    "Limit": {
+      "MaxCount": 100,
+      "Strategy": "RemoveOld"
+    }
+  }
+}

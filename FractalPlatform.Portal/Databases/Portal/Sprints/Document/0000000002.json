@@ -1,0 +1,20 @@
+{
+  "SprintNumber": "SP-0002",
+  "ProjectName": "FractalPlatformMedia",
+  "Title": "Make first Media course for students",
+  "StoryEstimated": "5",
+  "Status": "Active",
+  "Description": "Make first Media course for studentsg",
+  "StartDate": "2022-07-07",
+  "EndDate": "2022-07-21",
+  "TotalDays": 14,
+  "DaysRemained": 14,
+"RemainedTasks": 0,
+  "RemainedHistory": [
+    {
+      "OnDate": "20230101",
+      "Estimated": 0
+    }
+  ],
+  "NewComment": "New Comment"
+}

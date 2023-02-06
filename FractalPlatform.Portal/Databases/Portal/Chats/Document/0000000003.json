@@ -1,0 +1,23 @@
+{
+  "Name": "Media",
+  "Who": "Bazist",
+  "Messages": [
+    {
+      "Text": "Test message",
+      "OnDate": "2022-07-07",
+      "Who": "Bazist"
+    }
+  ],
+  "Projects": [
+    "FractalPlatform",
+    "FractalPlatformMedia"
+  ],
+  "Teams": [
+    "Core",
+    "FE",
+    "Media"
+  ],
+  "Users": [
+    "Bazist"
+  ]
+}

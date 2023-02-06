@@ -1,0 +1,110 @@
+﻿{
+   "Battery": "98%",
+   "Description": "Sandbox for any guest developer",
+   "EnvironmentName": "Jupiter",
+   "Level": "Sandbox",
+   "Power": "Battery (Life: 19 hours 21 minutes)",
+   "Status": "Active",
+   "ViewApps": "View Apps",
+   "ViewDeployments": "View Deployments",
+   "ViewLogs": "View Logs",
+   "Deployments": [
+      {
+         "DeploymentType": "Assembly",
+         "Name": "HelloWorld",
+         "OnDate": "28/01/2023"
+      }
+   ],
+   "Logs": [
+      {
+         "Message": "Object reference not set to an instance of an object.",
+         "OnDate": "2023-01-30",
+         "StackTrace": "   at AspNetCore.Views_Home_Index.ExecuteAsync() in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Views\\Home\\Index.cshtml:line 9\n   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)\n   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)\n   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()"
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62"
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62"
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Collection with Name = Stats is not found.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Database.Engine.Collections.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Collections.cs:line 62\n   at BigDoc.Database.Engine.Database.GetCollectionByName(String name) in C:\\BigDoc\\Clients\\Net\\BigDoc.Database\\Engine\\Database.cs:line 72\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddAttr(String appName, String attr, UInt32 value) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 51\n   at BigDoc.Client.WebApp.Sessions.StatManager.AddRequest(String appName) in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Sessions\\StatManager.cs:line 89\n   at BigDoc.Client.WebApp.Controllers.HomeController.I..."
+      },
+      {
+         "Message": "Object reference not set to an instance of an object.",
+         "OnDate": "2023-02-03",
+         "StackTrace": "   at BigDoc.Client.WebApp.Controllers.HomeController.get_IsMobileDevice() in C:\\BigDoc\\Clients\\Net\\BigDoc.Client.WebApp\\Controllers\\HomeController.cs:line 87"
+      }
+   ]
+}

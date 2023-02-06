@@ -1,0 +1,14 @@
+﻿{
+  "User": "",
+  "Reports": {
+    "UserStories": {
+      "Title": "User Stories"
+    },
+    "SprintStories": {
+      "Title": "Sprint Stories"
+    },
+    "RemainedStories": {
+      "Title": "Remained Stories"
+    }
+  }
+}

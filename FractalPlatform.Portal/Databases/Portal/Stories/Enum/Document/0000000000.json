@@ -1,0 +1,31 @@
+{
+  "Epic": {
+    "Items": [ "Backend", "Frontend", "Documentation", "BugFix" ]
+  },
+  "Status": {
+    "Items": [ "New", "Active", "InProgress", "ReadyForQA", "Closed" ]
+  },
+  "Tasks": [
+    {
+      "Status": {
+        "Items": [ "New", "Active", "InProgress", "Closed" ]
+      },
+      "AssignedTo": {
+        "Formula": "Users"
+      }
+    }
+  ],
+  "Defects": [
+    {
+      "Status": {
+        "Items": [ "New", "Active", "InProgress", "ReadyForQA", "Closed" ]
+      },
+      "AssignedTo": {
+        "Formula": "Users"
+      }
+    }
+  ],
+  "AssignedTo": {
+    "Formula": "Users"
+  }
+}

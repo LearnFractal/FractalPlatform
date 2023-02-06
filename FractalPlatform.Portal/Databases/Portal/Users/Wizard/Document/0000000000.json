@@ -1,0 +1,27 @@
+{
+  "Page": 1,
+  "Manager": {
+    "Page": 2
+  },
+  "Role": {
+    "Page": 2
+  },
+  "Notification": {
+    "Page": 3
+  },
+  "Projects": {
+    "Page": 4
+  },
+  "Teams": {
+    "Page": 4
+  },
+  "Roles": {
+    "Page": 4
+  },
+  "Exams": {
+    "Page": 4
+  },
+  "Contacts": {
+    "Page": 5
+  }
+}

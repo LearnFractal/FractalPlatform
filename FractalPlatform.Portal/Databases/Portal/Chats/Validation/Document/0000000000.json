@@ -1,0 +1,17 @@
+{
+  "Projects": [
+    {
+      "IsUnique": true
+    }
+  ],
+  "Teams": [
+    {
+      "IsUnique": true
+    }
+  ],
+  "Users": [
+    {
+      "IsUnique": true
+    }
+  ]
+}

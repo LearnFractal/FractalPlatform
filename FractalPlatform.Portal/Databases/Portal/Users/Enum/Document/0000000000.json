@@ -1,0 +1,18 @@
+{
+  "Position": {
+    "Items": [ "No Position", "Frontend Engineer", "Backend Engineer", "QA Engineer" ]
+  },
+  "Gender": {
+    "Items": [ "Male", "Female", "Other" ]
+  },
+  "Projects": [
+    {
+      "Formula": "Projects" 
+    }
+  ],
+  "Teams": [
+    {
+      "Formula": "Teams" 
+    }
+  ]
+}

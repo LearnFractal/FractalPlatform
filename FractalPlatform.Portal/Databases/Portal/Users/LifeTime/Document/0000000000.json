@@ -1,0 +1,10 @@
+{
+  "Notification": {
+    "Messages": {
+      "Limit": {
+        "MaxCount": 10,
+        "Strategy": "RemoveOld"
+      }
+    } 
+  }
+}

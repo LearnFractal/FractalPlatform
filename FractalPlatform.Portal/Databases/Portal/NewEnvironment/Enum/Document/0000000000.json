@@ -1,0 +1,8 @@
+{
+  "Status": {
+    "Items": [ "Active", "Inactive", "Closed" ]
+  },
+  "Level": {
+    "Items": [ "Sandbox", "Stage", "Prod" ]
+  }
+}

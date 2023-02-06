@@ -1,0 +1,19 @@
+﻿{
+   "AppName": "Login",
+   "Logs": [
+      {
+         "Date": "28/01/2023 06:24:35",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 1,
+         "TimeInMsec": 5
+      },
+      {
+         "Date": "30/01/2023 07:58:48",
+         "Errors": 0,
+         "Period": 289975,
+         "Requests": 1,
+         "TimeInMsec": 4
+      }
+   ]
+}

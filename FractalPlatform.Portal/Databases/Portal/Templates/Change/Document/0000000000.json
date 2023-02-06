@@ -1,0 +1,6 @@
+{
+  "OnCreateDocument": "CreateDocument",
+  "Owner": {
+    "OnUpdate": "Owner"
+  }
+}

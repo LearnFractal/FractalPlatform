@@ -1,0 +1,14 @@
+{
+  "Status": {
+    "ControlType": "ComboBox"
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "AssignedTo": {
+    "ControlType": "ComboBox"
+  },
+  "NewComment": {
+    "Visible": false
+  }
+}

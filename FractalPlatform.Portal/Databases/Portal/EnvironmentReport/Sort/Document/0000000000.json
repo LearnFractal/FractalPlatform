@@ -1,0 +1,26 @@
+{
+  "AppName": { "Index": 1 },
+  "Period": { "Index": 2 },
+  "Reports": {
+    "Activity": {
+      "Report": {
+        "Index": 3
+      }
+    },
+    "Storage": {
+      "Report": {
+        "Index": 4
+      }
+    },
+    "Performance": {
+      "Report": {
+        "Index": 5
+      }
+    },
+    "Errors": {
+      "Report": {
+        "Index": 6
+      }
+    }
+  }
+}

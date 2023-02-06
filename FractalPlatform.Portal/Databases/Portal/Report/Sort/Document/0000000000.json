@@ -1,0 +1,14 @@
+{
+  "User": { "Index": 1 },
+  "Reports": {
+    "UserStories": {
+      "Index": 2
+    },
+    "SprintStories": {
+      "Index": 3
+    },
+    "RemainedStories": {
+      "Index": 4
+    }
+  }
+}

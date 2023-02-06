@@ -1,0 +1,62 @@
+{
+  "User": {
+    "UserName": "",
+    "CurrentProject": "",
+    "Logout": "LogOut",
+    "Users": "Users",
+    "Teams": "Teams",
+    "NewVacancy": "New Vacancy",
+    "Vacancies": "Vacancies"
+  },
+  "Story": {
+    "Stories": "Stories",
+    "MyStories": "My Stories",
+    "NewStory": "New Story"
+  },
+  "Project": {
+    "NewSpecification": "New Specification",
+    "Specifications": "Specifications",
+    "NewProject": "New Project",
+    "Projects": "Projects"
+  },
+  "Sprint": {
+    "Sprints": "Sprints",
+    "NewSprint": "New Sprint",
+    "CurrentSprint": "Current Sprint"
+  },
+  "Messages": {
+    "NewNews": "New News",
+    "News": "News",
+    "Notifications": "Notifications",
+    "Chats": "Chats"
+  },
+  "Meetings": {
+    "Calendar": "Calendar",
+    "Meetings": "Meetings",
+    "NewMeeting": "New Meeting"
+  },
+  "Learn": {
+    "NewArticle": "New Article",
+    "Articles": "Articles",
+    "Courses": "Courses",
+    "Exams": "Exams"
+  },
+  "Report": {
+    "Votes": "Votes",
+    "Raiting": "Raiting",
+    "Report": "Report"
+  },
+  "Environment": {
+    "Templates": "Templates",
+    "NewEnvironment": "New Environment",
+    "Environments": "Environments",
+    "DBConsole": "DBConsole",
+    "Report": "Report"
+  },
+  "Testing": {
+    "Scenarios": "Scenarios",
+    "NewScenario": "New Scenario",
+    "RunResults": "Run Results",
+    "Report": "Report"
+  }
+}

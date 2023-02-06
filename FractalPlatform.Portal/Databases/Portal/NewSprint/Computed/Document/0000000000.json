@@ -1,0 +1,11 @@
+{
+  "StoryEstimated": {
+    "Formula": "@SprintStoryEstimated"
+  },
+  "ProjectName": {
+    "Formula": "@CurrentProject"
+  },
+  "SprintNumber": {
+    "Formula": "@NewSprintNumber"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "SprintNumber": {
+    "Enabled": false
+  },
+  "StoryEstimated": {
+    "Visible": false
+  },
+  "ProjectName": {
+    "Enabled": false
+  },
+  "Status": {
+    "ControlType": "ComboBox"
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "TotalDays": {
+    "Visible": false
+  },
+  "DaysRemained": {
+    "Visible": false
+  },
+  "StartDate": {
+    "ControlType": "Calendar"
+  },
+  "EndDate": {
+    "ControlType": "Calendar"
+  },
+  "RemainedTasks": {
+    "Visible": false
+  },
+  "RemainedHistory": {
+    "Visible": false
+  },
+  "NewComment": {
+    "Visible": false
+  }
+}

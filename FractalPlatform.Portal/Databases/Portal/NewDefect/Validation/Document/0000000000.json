@@ -1,0 +1,21 @@
+{
+  "Title": {
+    "MaxLen": "128",
+    "MinLen": "3",
+    "IsRequired": "true"
+  },
+  "Description": {
+    "MaxLen": "128",
+    "MinLen": "3",
+    "IsRequired": "true"
+  },
+  "AssignedTo": {
+    "IsRequired": "true"
+  },
+  "Estimated": {
+    "IsRequired": "true"
+  },
+  "Remained": {
+    "IsRequired": "true"
+  }
+}

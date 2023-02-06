@@ -1,0 +1,23 @@
+{
+  "Title": {
+    "MaxLen": "128",
+    "MinLen": "3",
+    "IsRequired": "true"
+  },
+  "StoryEstimated": {
+    "IsRequired": "true",
+    "MinLen": "1",
+    "MaxLen": "3"
+  },
+  "Status": {
+    "IsRequired": "true"
+  },
+  "StartDate": {
+    "IsRequired": "true",
+    "Formula": "@Value < Document.EndDate"
+  },
+  "EndDate": {
+    "IsRequired": "true",
+    "Formula": "Document.StartDate < @Value"
+  }
+}

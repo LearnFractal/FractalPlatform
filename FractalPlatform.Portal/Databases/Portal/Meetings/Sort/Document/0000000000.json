@@ -1,0 +1,16 @@
+{
+  "MeetingNumber": { "Index": 1 },
+  "Who": { "Index": 2 },
+  "Title": { "Index": 3 },
+  "Link": { "Index": 4 },
+  "Location": { "Index": 5 },
+  "Description": { "Index": 6 },
+  "Teams": { "Index": 7 },
+  "Projects": { "Index": 8 },
+  "Users": { "Index": 9 },
+  "StartDate": { "Index": 10 },
+  "EndDate": { "Index": 11 },
+  "ExceptDates": { "Index": 12 },
+  "StartTime": { "Index": 13 },
+  "EndTime": { "Index": 14 }
+}

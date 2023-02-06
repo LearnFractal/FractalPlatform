@@ -1,0 +1,47 @@
+﻿{
+   "AppName": "OnlineShop",
+   "Logs": [
+      {
+         "Date": "28/01/2023 06:25:12",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 9,
+         "TimeInMsec": 82
+      },
+      {
+         "Date": "29/01/2023 16:35:14",
+         "Errors": 0,
+         "Period": 289960,
+         "Requests": 1,
+         "TimeInMsec": 44
+      },
+      {
+         "Date": "30/01/2023 05:16:55",
+         "Errors": 0,
+         "Period": 289973,
+         "Requests": 11,
+         "TimeInMsec": 268
+      },
+      {
+         "Date": "30/01/2023 10:53:44",
+         "Errors": 0,
+         "Period": 289978,
+         "Requests": 53,
+         "TimeInMsec": 1012
+      },
+      {
+         "Date": "30/01/2023 18:17:15",
+         "Errors": 0,
+         "Period": 289986,
+         "Requests": 7,
+         "TimeInMsec": 222
+      },
+      {
+         "Date": "31/01/2023 10:05:58",
+         "Errors": 0,
+         "Period": 290002,
+         "Requests": 7,
+         "TimeInMsec": 41
+      }
+   ]
+}

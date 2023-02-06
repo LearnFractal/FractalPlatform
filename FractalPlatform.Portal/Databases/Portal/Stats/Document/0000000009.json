@@ -1,0 +1,47 @@
+﻿{
+   "AppName": "Chat",
+   "Logs": [
+      {
+         "Date": "25/01/2023 15:13:19",
+         "Errors": 0,
+         "Period": 289863,
+         "Requests": 6,
+         "TimeInMsec": 58
+      },
+      {
+         "Date": "26/01/2023 03:43:48",
+         "Errors": 1,
+         "Period": 289875,
+         "Requests": 20,
+         "TimeInMsec": 243
+      },
+      {
+         "Date": "26/01/2023 04:00:50",
+         "Errors": 0,
+         "Period": 289876,
+         "Requests": 12,
+         "TimeInMsec": 98
+      },
+      {
+         "Date": "26/01/2023 09:14:20",
+         "Errors": 0,
+         "Period": 289881,
+         "Requests": 29,
+         "TimeInMsec": 289
+      },
+      {
+         "Date": "28/01/2023 05:36:40",
+         "Errors": 0,
+         "Period": 289925,
+         "Requests": 4,
+         "TimeInMsec": 16
+      },
+      {
+         "Date": "29/01/2023 21:06:55",
+         "Errors": 0,
+         "Period": 289965,
+         "Requests": 1,
+         "TimeInMsec": 12
+      }
+   ]
+}

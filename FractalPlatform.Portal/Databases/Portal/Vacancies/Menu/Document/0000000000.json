@@ -1,0 +1,8 @@
+{
+  "MenuItems": [
+    {
+      "Text": "Apply Vacancy",
+      "Action": "ApplyVacancy"
+    }
+  ]
+}

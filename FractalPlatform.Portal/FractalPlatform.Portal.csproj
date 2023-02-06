@@ -28,8 +28,6 @@
 
   <ItemGroup>
     <Folder Include="Databases\Portal\" />
-    <Folder Include="Files\Portal\" />
-    <Folder Include="Layouts\Portal\" />
   </ItemGroup>
 
 </Project>

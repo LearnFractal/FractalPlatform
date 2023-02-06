@@ -1,0 +1,27 @@
+{
+  "Style": "HasLabel:true",
+  "VacancyNumber": {
+    "Enabled": false
+  },
+  "Skills": {
+    "ControlType": "RichTextBox"
+  },
+  "Responsibilities": {
+    "ControlType": "RichTextBox"
+  },
+  "IsClosed": {
+    "ControlType": "CheckBox"
+  },
+  "Candidates": {
+    "Visible": false
+  },
+  "NewComment": {
+    "ControlType": "Button"
+  },
+  "Team": {
+    "ControlType": "ComboBox"
+  },
+  "Project": {
+    "ControlType": "ComboBox"
+  }
+}

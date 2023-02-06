@@ -1,0 +1,11 @@
+{
+  "TemplateName": "Supermarket",
+  "Title": "Supermarket",
+  "Description": "Supermarket app",
+  "Owner": "Bazist",
+  "Category": "ERP",
+  "CodeLines": 203,
+  "Collections": 6,
+  "View": "http://booben.com/jupiter/?appName=Supermarket",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Supermarket"
+}

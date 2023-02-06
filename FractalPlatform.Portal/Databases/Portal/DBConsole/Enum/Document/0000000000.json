@@ -1,0 +1,8 @@
+{
+  "QueryLanguage": {
+    "Items": [ "SQL", "DQL" ]
+  },
+  "Database": {
+    "Formula": "Databases"
+  }
+}

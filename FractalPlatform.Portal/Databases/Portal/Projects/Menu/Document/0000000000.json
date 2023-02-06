@@ -1,0 +1,8 @@
+{
+  "MenuItems": [
+    {
+      "Text": "Set As Current Project",
+      "Action": "SetAsCurrentProject"
+    }
+  ]
+}

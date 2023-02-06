@@ -1,0 +1,16 @@
+{
+  "SprintNumber": { "Index": 1 },
+  "Title": { "Index": 2 },
+  "Status": { "Index": 3 },
+  "StoryEstimated": { "Index": 4 },
+  "StartDate": { "Index": 5 },
+  "EndDate": { "Index": 6 },
+  "TotalDays": { "Index": 7 },
+  "DaysRemained": { "Index": 8 },
+  "RemainedTasks": { "Index": 9 },
+  "ProjectName": { "Index": 10 },
+  "Description": { "Index": 11 },
+  "AvailableStories": { "Index": 12 },
+  "Stories": { "Index": 13 },
+  "NewComment": { "Index": 14 }
+}

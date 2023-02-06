@@ -1,0 +1,19 @@
+﻿{
+   "AppName": "LoginOrRegister",
+   "Logs": [
+      {
+         "Date": "31/01/2023 12:17:47",
+         "Errors": 0,
+         "Period": 290004,
+         "Requests": 13,
+         "TimeInMsec": 39
+      },
+      {
+         "Date": "31/01/2023 13:55:09",
+         "Errors": 0,
+         "Period": 290005,
+         "Requests": 9,
+         "TimeInMsec": 0
+      }
+   ]
+}

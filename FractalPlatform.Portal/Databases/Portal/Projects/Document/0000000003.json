@@ -1,0 +1,13 @@
+{
+  "Name": "FractalPlatformMedia",
+  "Title": "Fractal Platform - Media",
+  "Owner": "Bazist",
+  "Status": "Active",
+  "Description": "Fractal Platform Media",
+  "StartDate": "2022-07-07",
+  "EndDate": "",
+  "DeploymentKey": "",
+  "Environments": [ "Jupiter" ],
+  "Likes": [ "Test" ],
+  "NewComment": "New Comment"
+}

@@ -1,0 +1,11 @@
+{
+  "TemplateName": "LoginOrRegister",
+  "Title": "Login Or Register",
+  "Description": "LoginOrRegister app",
+  "Owner": "Bazist",
+  "View": "http://booben.com/jupiter/?appName=LoginOrRegister",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/LoginOrRegister",
+  "Category": "Example",
+  "CodeLines": 18,
+  "Collections": 3
+}

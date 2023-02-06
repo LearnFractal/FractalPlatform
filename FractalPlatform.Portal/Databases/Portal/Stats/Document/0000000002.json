@@ -1,0 +1,159 @@
+﻿{
+   "AppName": "Test",
+   "Logs": [
+      {
+         "Date": "1/21/2023 7:34:58 AM",
+         "Errors": 0,
+         "Period": 289759,
+         "Requests": 31,
+         "TimeInMsec": 18203
+      },
+      {
+         "Date": "1/21/2023 8:31:16 AM",
+         "Errors": 0,
+         "Period": 289760,
+         "Requests": 37,
+         "TimeInMsec": 1921
+      },
+      {
+         "Date": "1/22/2023 12:28:22 PM",
+         "Errors": 0,
+         "Period": 289788,
+         "Requests": 27,
+         "TimeInMsec": 1524
+      },
+      {
+         "Date": "1/23/2023 7:59:25 AM",
+         "Errors": 0,
+         "Period": 289807,
+         "Requests": 1,
+         "TimeInMsec": 341
+      },
+      {
+         "Date": "1/24/2023 10:25:04 AM",
+         "Errors": 0,
+         "Period": 289834,
+         "Requests": 31,
+         "TimeInMsec": 3129
+      },
+      {
+         "Date": "1/24/2023 2:39:55 PM",
+         "Errors": 0,
+         "Period": 289838,
+         "Requests": 1,
+         "TimeInMsec": 413
+      },
+      {
+         "Date": "1/24/2023 5:19:21 PM",
+         "Errors": 0,
+         "Period": 289841,
+         "Requests": 6,
+         "TimeInMsec": 200
+      },
+      {
+         "Date": "1/24/2023 7:03:10 PM",
+         "Errors": 0,
+         "Period": 289843,
+         "Requests": 6,
+         "TimeInMsec": 267
+      },
+      {
+         "Date": "1/25/2023 9:34:59 AM",
+         "Errors": 0,
+         "Period": 289857,
+         "Requests": 1,
+         "TimeInMsec": 57
+      },
+      {
+         "Date": "1/25/2023 10:11:09 AM",
+         "Errors": 0,
+         "Period": 289858,
+         "Requests": 223,
+         "TimeInMsec": 38198
+      },
+      {
+         "Date": "1/25/2023 2:24:53 PM",
+         "Errors": 0,
+         "Period": 289862,
+         "Requests": 7,
+         "TimeInMsec": 570
+      },
+      {
+         "Date": "1/26/2023 3:42:15 AM",
+         "Errors": 0,
+         "Period": 289875,
+         "Requests": 7,
+         "TimeInMsec": 13170
+      },
+      {
+         "Date": "1/26/2023 4:20:46 AM",
+         "Errors": 0,
+         "Period": 289876,
+         "Requests": 2,
+         "TimeInMsec": 159
+      },
+      {
+         "Date": "1/26/2023 9:34:58 AM",
+         "Errors": 0,
+         "Period": 289881,
+         "Requests": 1,
+         "TimeInMsec": 92
+      },
+      {
+         "Date": "1/26/2023 11:36:21 AM",
+         "Errors": 0,
+         "Period": 289883,
+         "Requests": 36,
+         "TimeInMsec": 12061
+      },
+      {
+         "Date": "1/26/2023 12:05:17 PM",
+         "Errors": 0,
+         "Period": 289884,
+         "Requests": 54,
+         "TimeInMsec": 335928
+      },
+      {
+         "Date": "1/26/2023 2:20:57 PM",
+         "Errors": 0,
+         "Period": 289886,
+         "Requests": 59,
+         "TimeInMsec": 10105
+      },
+      {
+         "Date": "1/26/2023 3:10:05 PM",
+         "Errors": 0,
+         "Period": 289887,
+         "Requests": 12,
+         "TimeInMsec": 527
+      },
+      {
+         "Date": "1/26/2023 5:34:09 PM",
+         "Errors": 0,
+         "Period": 289889,
+         "Requests": 4,
+         "TimeInMsec": 133
+      },
+      {
+         "Date": "2/1/2023 10:36:05 AM",
+         "Errors": 0,
+         "Period": 290026,
+         "Requests": 14,
+         "TimeInMsec": 916
+      },
+      {
+         "Date": "2/1/2023 12:05:40 PM",
+         "Errors": 0,
+         "Period": 290028,
+         "Requests": 11,
+         "TimeInMsec": 466
+      },
+      {
+         "Date": "2/1/2023 1:53:55 PM",
+         "Errors": 0,
+         "Period": 290029,
+         "Requests": 2,
+         "TimeInMsec": 151
+      }
+   ]
+}

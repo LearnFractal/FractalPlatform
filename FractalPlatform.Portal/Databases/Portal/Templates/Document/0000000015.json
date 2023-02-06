@@ -1,0 +1,11 @@
+{
+  "TemplateName": "ToDoWithCategories",
+  "Title": "ToDo with categories",
+  "Description": "ToDo with categories app",
+  "Owner": "Bazist",
+  "Category": "Example",
+  "CodeLines": 27,
+  "Collections": 1,
+  "View": "http://booben.com/jupiter/?appName=ToDoWithCategories",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoWithCategories"
+}

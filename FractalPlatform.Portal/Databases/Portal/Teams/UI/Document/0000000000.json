@@ -1,0 +1,6 @@
+{
+  "Position": {
+    "ControlType": "ComboBox"
+  },
+  "Style": "Add:false;Del:false;Hide:Users,Value"
+}

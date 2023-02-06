@@ -1,0 +1,11 @@
+{
+  "TemplateName": "ToDoIntro",
+  "Title": "ToDo intro",
+  "Description": "ToDo intro app",
+  "Owner": "Bazist",
+  "Category": "Example",
+  "CodeLines": 50,
+  "Collections": 3,
+  "View": "http://booben.com/jupiter/?appName=ToDoIntro",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoIntro"
+}

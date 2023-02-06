@@ -1,0 +1,38 @@
+﻿{
+   "AssignedTo": "Lexa",
+   "Attachment": "",
+   "Description": "Make DQL trainer",
+   "Epic": "Backend",
+   "NewComment": "New Comment",
+   "NewDefect": "New Defect",
+   "NewTask": "New Task",
+   "ProjectName": "FractalPlatformUI",
+   "SprintNumber": "SP-0004",
+   "Status": "New",
+   "StoryEstimated": "1",
+   "StoryNumber": "S-0012",
+   "TaskEstimated": "15",
+   "TaskRemained": "15",
+   "Title": "DQL Trainer",
+   "Who": "Bazist",
+   "Tasks": [
+      {
+         "AssignedTo": "Lexa",
+         "Description": "Create requirements",
+         "Estimated": "5",
+         "NewComment": "New Comment",
+         "Remained": "5",
+         "Status": "New",
+         "Title": "Create requirements"
+      },
+      {
+         "AssignedTo": "Lexa",
+         "Description": "Create app",
+         "Estimated": "10",
+         "NewComment": "New Comment",
+         "Remained": "10",
+         "Status": "New",
+         "Title": "Create app"
+      }
+   ]
+}

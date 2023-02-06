@@ -1,0 +1,12 @@
+{
+  "OnCreateDocument": "CreateDocument",
+  "Users": {
+    "OnInsert": "User"
+  },
+  "Projects": {
+    "OnInsert": "Project"
+  },
+  "Teams": {
+    "OnInsert": "Team"
+  }
+}

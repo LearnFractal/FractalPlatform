@@ -1,0 +1,91 @@
+﻿{
+   "AssignedTo": "Bazist",
+   "Attachment": "",
+   "Description": "Create draft controls",
+   "Epic": "Frontend",
+   "NewComment": "New Comment",
+   "NewDefect": "New Defect",
+   "NewTask": "New Task",
+   "ProjectName": "FractalPlatformUI",
+   "SprintNumber": "SP-0003",
+   "Status": "InProgress",
+   "StoryEstimated": "5",
+   "StoryNumber": "S-0003",
+   "TaskEstimated": "23",
+   "TaskRemained": "22",
+   "Title": "Create draft controls",
+   "Who": "Bazist",
+   "Tasks": [
+      {
+         "AssignedTo": "Bazist",
+         "Description": "Create Comment control",
+         "Estimated": "1",
+         "Remained": "1",
+         "Status": "Closed",
+         "Title": "Create Comment control"
+      },
+      {
+         "AssignedTo": "Bazist",
+         "Comments": "",
+         "Description": "Create Articles control",
+         "Estimated": "2",
+         "Remained": "1",
+         "Status": "Closed",
+         "Title": "Create Articles control"
+      },
+      {
+         "AssignedTo": "Bazist",
+         "Comments": "",
+         "Description": "Create calendar control",
+         "Estimated": "1",
+         "Remained": "1",
+         "Status": "Closed",
+         "Title": "Create calendar control"
+      },
+      {
+         "AssignedTo": "Bazist",
+         "Comments": "",
+         "Description": "Create Array Values control",
+         "Estimated": "1",
+         "Remained": "1",
+         "Status": "Closed",
+         "Title": "Create Array Values control"
+      },
+      {
+         "AssignedTo": "Lexa",
+         "Comments": "",
+         "Description": "Create Likes control",
+         "Estimated": "1",
+         "Remained": "1",
+         "Status": "Closed",
+         "Title": "Create Likes control"
+      },
+      {
+         "AssignedTo": "Bazist",
+         "Description": "map control",
+         "Estimated": "15",
+         "NewComment": "New Comment",
+         "Remained": "15",
+         "Status": "Closed",
+         "Title": "Map control"
+      },
+      {
+         "AssignedTo": "Bazist",
+         "Description": "Create phone control",
+         "Estimated": "1",
+         "NewComment": "New Comment",
+         "Remained": "1",
+         "Status": "Closed",
+         "Title": "Create Phone control"
+      },
+      {
+         "AssignedTo": "Bazist",
+         "Description": "Create TreeView control",
+         "Estimated": "1",
+         "NewComment": "New Comment",
+         "Remained": "1",
+         "Status": "Closed",
+         "Title": "Create TreeView control"
+      }
+   ]
+}

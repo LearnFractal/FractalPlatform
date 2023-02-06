@@ -1,0 +1,17 @@
+{
+  "Style": "Save:Refresh",
+  "Reports": {
+    "UserStories": {
+      "Style": "Type:Pie",
+      "ControlType": "Chart"
+    },
+    "SprintStories": {
+      "Style": "Type:Pie",
+      "ControlType": "Chart"
+    },
+    "RemainedStories": {
+      "Style": "Type:LineGraphs",
+      "ControlType": "Chart"
+    }
+  }
+}

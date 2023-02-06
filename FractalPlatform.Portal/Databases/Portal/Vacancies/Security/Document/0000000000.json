@@ -1,0 +1,38 @@
+{
+  "Position": {
+    "Disallow": {
+      "Write": [
+        "Guest",
+        "Observer",
+        "Developer"
+      ]
+    }
+  },
+  "Skills": {
+    "Disallow": {
+      "Write": [
+        "Guest",
+        "Observer",
+        "Developer"
+      ]
+    }
+  },
+  "Responsibilities": {
+    "Disallow": {
+      "Write": [
+        "Guest",
+        "Observer",
+        "Developer"
+      ]
+    }
+  },
+  "Team": {
+    "Disallow": {
+      "Write": [
+        "Guest",
+        "Observer",
+        "Developer"
+      ]
+    }
+  }
+}

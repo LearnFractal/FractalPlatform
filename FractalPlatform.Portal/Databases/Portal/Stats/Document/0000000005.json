@@ -1,0 +1,68 @@
+﻿{
+   "AppName": "ControlsGallery",
+   "Logs": [
+      {
+         "Date": "24/01/2023 11:40:46",
+         "Errors": 0,
+         "Period": 289835,
+         "Requests": 3,
+         "TimeInMsec": 122
+      },
+      {
+         "Date": "24/01/2023 12:46:31",
+         "Errors": 0,
+         "Period": 289836,
+         "Requests": 73,
+         "TimeInMsec": 1559
+      },
+      {
+         "Date": "24/01/2023 13:00:06",
+         "Errors": 0,
+         "Period": 289837,
+         "Requests": 11,
+         "TimeInMsec": 338
+      },
+      {
+         "Date": "24/01/2023 15:23:39",
+         "Errors": 0,
+         "Period": 289839,
+         "Requests": 1,
+         "TimeInMsec": 86
+      },
+      {
+         "Date": "28/01/2023 06:09:41",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 20,
+         "TimeInMsec": 720
+      },
+      {
+         "Date": "28/01/2023 09:42:06",
+         "Errors": 0,
+         "Period": 289929,
+         "Requests": 16,
+         "TimeInMsec": 290
+      },
+      {
+         "Date": "30/01/2023 05:15:41",
+         "Errors": 0,
+         "Period": 289973,
+         "Requests": 19,
+         "TimeInMsec": 440
+      },
+      {
+         "Date": "30/01/2023 17:15:21",
+         "Errors": 0,
+         "Period": 289985,
+         "Requests": 1,
+         "TimeInMsec": 37
+      },
+      {
+         "Date": "31/01/2023 13:12:25",
+         "Errors": 0,
+         "Period": 290005,
+         "Requests": 8,
+         "TimeInMsec": 450
+      }
+   ]
+}

@@ -1,0 +1,26 @@
+﻿{
+   "AppName": "ToDo",
+   "Logs": [
+      {
+         "Date": "27/01/2023 13:38:06",
+         "Errors": 2,
+         "Period": 289909,
+         "Requests": 2,
+         "TimeInMsec": 63
+      },
+      {
+         "Date": "28/01/2023 06:07:57",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 2,
+         "TimeInMsec": 11
+      },
+      {
+         "Date": "30/01/2023 12:53:59",
+         "Errors": 0,
+         "Period": 289980,
+         "Requests": 1,
+         "TimeInMsec": 3
+      }
+   ]
+}

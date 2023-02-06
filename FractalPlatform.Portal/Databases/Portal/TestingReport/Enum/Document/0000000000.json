@@ -1,0 +1,8 @@
+{
+  "AppName": {
+    "Formula": "Databases"
+  },
+  "Period": {
+    "Items": [ "LastDay", "LastWeek", "LastMonth", "LastYear" ]
+  }
+}

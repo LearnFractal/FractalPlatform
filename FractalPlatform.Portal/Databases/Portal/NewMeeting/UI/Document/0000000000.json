@@ -1,0 +1,53 @@
+{
+  "Style": "HasLabel:true",
+  "MeetingNumber": {
+    "Enabled": false
+  },
+  "Who": {
+    "Enabled": false
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "StartDate": {
+    "ControlType": "Calendar"
+  },
+  "EndDate": {
+    "ControlType": "Calendar"
+  },
+  "StartTime": {
+    "ControlType": "Time"
+  },
+  "EndTime": {
+    "ControlType": "Time"
+  },
+  "Period": {
+    "Once": {
+      "ControlType": "CheckBox"
+    },
+    "EveryDay": {
+      "ControlType": "CheckBox"
+    },
+    "EveryWorkingDay": {
+      "ControlType": "CheckBox"
+    },
+    "EveryWeekAt": {
+      "ControlType": "ComboBox"
+    }
+  },
+  "Teams": [
+    {
+      "ControlType": "ComboBox"
+    }
+  ],
+  "Projects": [
+    {
+      "ControlType": "ComboBox"
+    }
+  ],
+  "Users": [
+    {
+      "ControlType": "ComboBox"
+    }
+  ]
+}

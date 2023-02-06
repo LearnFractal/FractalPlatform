@@ -1,0 +1,23 @@
+{
+  "Name": {
+    "IsRequired": "true",
+    "MinLen": "3",
+    "MaxLen": "16",
+    "Formula": "@UniqueUser"
+  },
+  "Password": {
+    "IsRequired": "true",
+    "MinLen": "3",
+    "MaxLen": "16",
+    "Formula": "Document.RepeatPassword = @Value"
+  },
+  "RepeatPassword": {
+    "IsRequired": "true",
+    "MinLen": "3",
+    "MaxLen": "16",
+    "Formula": "Document.Password = @Value"
+  },
+  "PromoCode": {
+    "Formula": "@Value = 'GloryToUkraine'"
+  }
+}

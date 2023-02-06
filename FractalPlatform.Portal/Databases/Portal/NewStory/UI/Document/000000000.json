@@ -1,0 +1,48 @@
+{
+  "Style": "HasLabel:true",
+  "Who": {
+    "Enabled": false
+  },
+  "StoryNumber": {
+    "Enabled": false
+  },
+  "Links": {
+    "Visible": false
+  },
+  "Tasks": {
+    "Visible": false
+  },
+  "Defects": {
+    "Visible": false
+  },
+  "Comments": {
+    "Visible": false
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "Epic": {
+    "ControlType": "ComboBox"
+  },
+  "Status": {
+    "ControlType": "ComboBox"
+  },
+  "AssignedTo": {
+    "ControlType": "ComboBox"
+  },
+  "ProjectName": {
+    "Enabled": false
+  },
+  "Attachment": {
+    "ControlType": "UploadFile"
+  },
+  "NewTask": {
+    "Visible": false
+  },
+  "NewDefect": {
+    "Visible": false
+  },
+  "NewComment": {
+    "Visible": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "EnvironmentName": "Jupiter",
+  "Description": "Test",
+  "Level": "Prod",
+  "Status": "Active",
+  "Deployments": [
+    {
+      "ProjectName": "Test",
+      "OnDate": "2022-01-01"
+    }
+  ]
+}

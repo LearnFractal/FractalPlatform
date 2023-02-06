@@ -1,0 +1,11 @@
+{
+  "TemplateName": "DatingGame",
+  "Title": "Dating game",
+  "Description": "Dating game app",
+  "Owner": "Bazist",
+  "Category": "Game",
+  "CodeLines": 334,
+  "Collections": 2,
+  "View": "http://booben.com/jupiter/?appName=DatingGame",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/DatingGame"
+}

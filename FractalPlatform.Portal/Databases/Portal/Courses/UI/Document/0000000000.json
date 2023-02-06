@@ -1,0 +1,52 @@
+﻿{
+  "Style": "Save:false;Hide:Likes,Comments,NewComment,StartCourse,Value",
+  "Book": {
+    "ControlType": "Link"
+  },
+  "Comments": {
+    "ControlType": "Comments"
+  },
+  "Description": {
+    "Enabled": false
+  },
+  "Examples": {
+    "ControlType": "Link"
+  },
+  "Language": {
+    "Enabled": false
+  },
+  "Lessons": {
+    "Visible": false
+  },
+  "Likes": {
+    "ControlType": "Likes"
+  },
+  "Name": {
+    "Enabled": false
+  },
+  "NewComment": {
+    "ControlType": "Button",
+    "Enabled": true
+  },
+  "Options": {
+    "ControlType": "RadioButton"
+  },
+  "References": {
+    "Visible": false
+  },
+  "Title": {
+    "Enabled": false
+  },
+  "StartCourse": {
+    "ControlType": "Button"
+  },
+  "Video": {
+    "ControlType": "Media"
+  },
+  "VideoDescription": {
+    "ControlType": "Label"
+  },
+  "VisualStudioCommunity": {
+    "ControlType": "Link"
+  }
+}

@@ -1,0 +1,161 @@
+﻿{
+  "Contacts": {
+    "Email": {
+      "Address": "",
+      "UseForNotifications": false
+    },
+    "Phone": {
+      "Number": "",
+      "UseForNotifications": false
+    },
+    "Skype": {
+      "Name": "",
+      "UseForNotifications": false
+    },
+    "Telegram": {
+      "ChatId": "",
+      "UseForNotifications": false
+    },
+    "Viber": {
+      "Number": "",
+      "UseForNotifications": false
+    }
+  },
+  "CurrentProject": "",
+  "Gender": "Other",
+  "Name": "Welcome",
+  "Password": "40BE4E59B9A2A2B5DFFB918C0E86B3D7",
+  "Photo": "73f766d689464bc6a6228c9861f136d7.jpg",
+  "Position": "",
+  "RepeatPassword": "40BE4E59B9A2A2B5DFFB918C0E86B3D7",
+  "Manager": {
+    "Contacts": "learn.fractal@gmail.com",
+    "Name": "Bazist"
+  },
+  "Notification": {
+    "Filter": {
+      "Important": true,
+      "NotImportant": true,
+      "Sections": [
+        "Login",
+        "Logout",
+        "Register",
+        "Articles",
+        "Chats",
+        "Teams",
+        "Users",
+        "Votes",
+        "Stories",
+        "Sprints",
+        "Projects",
+        "Meetings",
+        "News",
+        "Environments"
+      ]
+    },
+    "Messages": [
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-24",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'Make Videos - UA' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-24",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'Make Videos - EN' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-26",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'Video Portal' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-29",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'Send message from C# to Telegram' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-29",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'Create JSon Trainer' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'DQL Trainer' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'App front design' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'Electricity app' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "Story 'Build correct URL path' was created"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": false,
+        "OnDate": "2023-01-30",
+        "Section": "Sprints",
+        "Severity": "Important",
+        "Text": "Sprint 'Stabilization' was created"
+      }
+    ]
+  },
+  "Projects": [
+    "Guest"
+  ],
+  "Role": {
+    "I am Customer": false,
+    "I am Developer": false,
+    "I am Guest": true
+  },
+  "Roles": [
+    "Observer"
+  ],
+  "Teams": [
+    "Guest"
+  ],
+  "TextMessages": [
+    {
+      "Provider": "Email",
+      "Receiver": "test@mail.com",
+      "Message": "Test",
+      "IsSent": true
+    }
+  ]
+}

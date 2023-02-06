@@ -1,0 +1,18 @@
+﻿{
+   "AssignedTo": "Bazist",
+   "Attachment": "",
+   "Description": "Make Deployment Configuration",
+   "Epic": "Backend",
+   "NewComment": "New Comment",
+   "NewDefect": "New Defect",
+   "NewTask": "New Task",
+   "ProjectName": "FractalPlatformUI",
+   "SprintNumber": "SP-0001",
+   "Status": "Closed",
+   "StoryEstimated": "1",
+   "StoryNumber": "S-0004",
+   "TaskEstimated": "0",
+   "TaskRemained": "0",
+   "Title": "Make deployment configuration",
+   "Who": "Bazist"
+}

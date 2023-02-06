@@ -1,0 +1,11 @@
+{
+  "TemplateName": "SocialNetwork",
+  "Title": "Social network",
+  "Description": "Social network app",
+  "Owner": "Bazist",
+  "Category": "Communication",
+  "CodeLines": 231,
+  "Collections": 6,
+  "View": "http://booben.com/jupiter/?appName=SocialNetwork",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork"
+}

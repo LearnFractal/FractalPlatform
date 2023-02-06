@@ -1,0 +1,26 @@
+﻿{
+   "CollVersion": 12,
+   "Users": {
+      "Receive": {
+         "Enabled": true,
+         "Query": "Collection.GetWhere({'Projects':[Document.Name]}).Select({'Name':$,'Position':$})",
+         "Version": "0",
+         "Connection": {
+            "CollectionName": "Users",
+            "DatabaseName": "FractalPlatform",
+            "Host": "localhost",
+            "Port": "4477"
+         },
+         "Download": {
+            "Mode": "ByView"
+         }
+      },
+      "Send": {
+         "Enabled": true,
+         "ResolveConficts": "Overwrite",
+         "Upload": {
+            "Mode": "ByView"
+         }
+      }
+   }
+}

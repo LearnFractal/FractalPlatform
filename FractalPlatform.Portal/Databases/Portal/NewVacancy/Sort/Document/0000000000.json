@@ -1,0 +1,10 @@
+{
+  "VacancyNumber": { "Index": 1 },
+  "Position": { "Index": 2 },
+  "Team": { "Index": 3 },
+  "Project": { "Index": 4 },
+  "Skills": { "Index": 5 },
+  "Responsibilities": { "Index": 6 },
+  "IsClosed": { "Index": 7 },
+  "NewComment": { "Index": 8 }
+}

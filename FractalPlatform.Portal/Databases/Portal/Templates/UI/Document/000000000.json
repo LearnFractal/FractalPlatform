@@ -1,0 +1,10 @@
+{
+  "Enabled": false,
+  "Style": "Hide:View,Download",
+  "View": {
+    "ControlType": "Link"
+  },
+  "Download": {
+    "ControlType": "Link"
+  }
+}

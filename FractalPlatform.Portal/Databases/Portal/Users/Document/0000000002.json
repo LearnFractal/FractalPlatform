@@ -1,0 +1,176 @@
+﻿{
+  "ChangePassword": "Change Password",
+  "Contacts": {
+    "Email": {
+      "Address": "",
+      "UseForNotifications": false
+    },
+    "Phone": {
+      "Number": "",
+      "UseForNotifications": false
+    },
+    "Skype": {
+      "Name": "",
+      "UseForNotifications": false
+    },
+    "Telegram": {
+      "ChatId": "5822263050",
+      "UseForNotifications": true
+    },
+    "Viber": {
+      "Number": "",
+      "UseForNotifications": false
+    }
+  },
+  "CurrentProject": "FractalPlatformUI",
+  "Gender": "Male",
+  "Language": "RU",
+  "Name": "Lexa",
+  "Password": "2FC1C0BEB992CD7096975CFEBF9D5C3B",
+  "Photo": "ebb64bb7c7b24f06ac6aa353c47b8cb4.jpg",
+  "Position": "Frontend Engineer",
+  "RepeatPassword": "406ACBB976536F340832C9E9983A9230",
+  "Theme": "Dark",
+  "Exams": [
+    {
+      "Name": "JustExamples exam",
+      "OnDate": "2023-01-31",
+      "Points": 30
+    },
+    {
+      "Name": "Developer exam",
+      "OnDate": "2023-01-31",
+      "Points": 60
+    }
+  ],
+  "Manager": {
+    "Contacts": "learn.fractal@gmail.com",
+    "Name": "Bazist"
+  },
+  "Notification": {
+    "Filter": {
+      "Important": true,
+      "NotImportant": true,
+      "Sections": [
+        "Login",
+        "Logout",
+        "Register",
+        "Articles",
+        "Chats",
+        "Teams",
+        "Users",
+        "Votes",
+        "Stories",
+        "Sprints",
+        "Projects",
+        "Meetings",
+        "News",
+        "Environments"
+      ]
+    },
+    "Messages": [
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": true,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "You have new assigned to you task in 'Electricity app' story"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": true,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "You have new assigned to you task in 'Create JSon Trainer' story"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": true,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "You have new assigned to you task in 'Create JSon Trainer' story"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": true,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "You have new assigned to you task in 'Send message from C# to Telegram' story"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": true,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "You have new assigned to you task in 'DQL Trainer' story"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": true,
+        "OnDate": "2023-01-30",
+        "Section": "Stories",
+        "Severity": "Important",
+        "Text": "You have new assigned to you task in 'DQL Trainer' story"
+      },
+      {
+        "CurrentUser": "Bazist",
+        "IsRead": true,
+        "OnDate": "2023-01-30",
+        "Section": "Sprints",
+        "Severity": "Important",
+        "Text": "Sprint 'Stabilization' was created"
+      },
+      {
+        "CurrentUser": "Lexa",
+        "IsRead": true,
+        "OnDate": "2023-01-31",
+        "Section": "Login",
+        "Severity": "NotImportant",
+        "Text": "User logged in"
+      },
+      {
+        "CurrentUser": "Lexa",
+        "IsRead": true,
+        "OnDate": "2023-01-31",
+        "Section": "Login",
+        "Severity": "NotImportant",
+        "Text": "User logged in"
+      },
+      {
+        "CurrentUser": "Lexa",
+        "IsRead": true,
+        "OnDate": "2023-01-31",
+        "Section": "Login",
+        "Severity": "NotImportant",
+        "Text": "User logged in"
+      }
+    ]
+  },
+  "Projects": [
+    "FractalPlatformUI"
+  ],
+  "Role": {
+    "I am Customer": false,
+    "I am Developer": true,
+    "I am Guest": false
+  },
+  "Roles": [
+    "Developer"
+  ],
+  "Teams": [
+    "FE"
+  ],
+  "TextMessages": [
+    {
+      "Provider": "Email",
+      "Receiver": "test@mail.com",
+      "Message": "Test",
+      "IsSent": true
+    }
+  ]
+}

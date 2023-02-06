@@ -1,0 +1,8 @@
+{
+  "Status": {
+    "ControlType": "ComboBox"
+  },
+  "Level": {
+    "ControlType": "ComboBox"
+  }
+}

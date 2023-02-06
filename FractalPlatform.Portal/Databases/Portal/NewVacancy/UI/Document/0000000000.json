@@ -1,0 +1,27 @@
+{
+  "Style": "Save:Send;HasLabel:true",
+  "Who": {
+    "Enabled": false
+  },
+  "VacancyNumber": {
+    "Enabled": false
+  },
+  "Skills": {
+    "ControlType": "RichTextBox"
+  },
+  "Responsibilities": {
+    "ControlType": "RichTextBox"
+  },
+  "IsClosed": {
+    "Visible": false
+  },
+  "Candidates": {
+    "Visible": false
+  },
+  "Team": {
+    "ControlType": "ComboBox"
+  },
+  "Project": {
+    "ControlType": "ComboBox"
+  }
+}

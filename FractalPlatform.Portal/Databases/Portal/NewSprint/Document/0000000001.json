@@ -1,0 +1,20 @@
+{
+  "SprintNumber": "SP-0001",
+  "ProjectName": "FractalPlatformUI",
+  "Title": "My New Sprint",
+  "StoryEstimated": "1",
+  "Status": "Active",
+  "Description": "",
+  "StartDate": "",
+  "EndDate": "",
+  "TotalDays": 0,
+  "DaysRemained": 0,
+  "RemainedTasks": 0,
+  "RemainedHistory": [
+    {
+      "OnDate": "20230101",
+      "Estimated": 0
+    }
+  ],
+  "NewComment": "New Comment"
+}

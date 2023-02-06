@@ -1,0 +1,4176 @@
+﻿{
+   "AutoCreateNotFoundKeys": true,
+   "DefaultLanguage": "EN",
+   "Languages": [
+      "EN",
+      "UA",
+      "RU",
+      "GE",
+      "FR",
+      "DE",
+      "ES"
+   ],
+   "Regexps": [
+      {
+         "Description": "Ignore numbers in values",
+         "Label": "\[NUMBER\]",
+         "Regexp": "\[0-9\]+"
+      },
+      {
+         "Description": "Ignore names in values",
+         "Label": ": \[NAME\]",
+         "Regexp": ": \[a-zA-Z0-9\]+"
+      }
+   ],
+   "Values": [
+      {
+         "DE": "Betreten",
+         "EN": "Log In",
+         "ES": "Entrar",
+         "FR": "Entrer",
+         "GE": "Log In",
+         "RU": "Войти",
+         "UA": "Ввійти"
+      },
+      {
+         "DE": "Anmeldung",
+         "EN": "Register",
+         "ES": "Registro",
+         "FR": "Inscription",
+         "GE": "Register",
+         "RU": "Регистрация",
+         "UA": "Реєстрація"
+      },
+      {
+         "DE": "Anmeldung",
+         "EN": "LoginDashboard",
+         "ES": "Acceso",
+         "FR": "Connexion",
+         "GE": "LoginDashboard",
+         "RU": "Вход в систему",
+         "UA": "Вхід в систему"
+      },
+      {
+         "DE": "Neuer Benutzer",
+         "EN": "NewUser",
+         "ES": "Nuevo Usuario",
+         "FR": "Nouvel utilisateur",
+         "GE": "NewUser",
+         "RU": "Новый пользователь",
+         "UA": "Новий користувач"
+      },
+      {
+         "DE": "Speichern",
+         "EN": "Save",
+         "ES": "Ahorrar",
+         "FR": "Enregistrer",
+         "GE": "Save",
+         "RU": "Сохранить",
+         "UA": "Зберегти"
+      },
+      {
+         "DE": "Absagen",
+         "EN": "Cancel",
+         "ES": "Cancelar",
+         "FR": "Annuler",
+         "GE": "Cancel",
+         "RU": "Отменить",
+         "UA": "Відмінити"
+      },
+      {
+         "DE": "Eingang",
+         "EN": "LoginButton",
+         "ES": "Entrada",
+         "FR": "Entrée",
+         "GE": "LoginButton",
+         "RU": "Вход",
+         "UA": "Вхід"
+      },
+      {
+         "DE": "Name",
+         "EN": "Name",
+         "ES": "Nombre",
+         "FR": "Nom",
+         "GE": "Name",
+         "RU": "Имя",
+         "UA": "Ім'я"
+      },
+      {
+         "DE": "Passwort",
+         "EN": "Password",
+         "ES": "Clave",
+         "FR": "Mot de passe",
+         "GE": "Password",
+         "RU": "Пароль",
+         "UA": "Пароль"
+      },
+      {
+         "DE": "Passwort wiederholen",
+         "EN": "RepeatPassword",
+         "ES": "Repita la contraseña",
+         "FR": "Répéter le mot de passe",
+         "GE": "RepeatPassword",
+         "RU": "Повторить пароль",
+         "UA": "Повторити пароль"
+      },
+      {
+         "DE": "Ein Foto",
+         "EN": "Photo",
+         "ES": "Una fotografía",
+         "FR": "Une photo",
+         "GE": "Photo",
+         "RU": "Фото",
+         "UA": "Фото"
+      },
+      {
+         "DE": "Ich bin Kunde",
+         "EN": "I am Customer",
+         "ES": "Soy un cliente",
+         "FR": "je suis client",
+         "GE": "I am Customer",
+         "RU": "Я заказчик",
+         "UA": "Я замовник"
+      },
+      {
+         "DE": "Rolle",
+         "EN": "Role",
+         "ES": "Role",
+         "FR": "Rôle",
+         "GE": "Role",
+         "RU": "Роль",
+         "UA": "Роль"
+      },
+      {
+         "DE": "Ich bin Entwickler",
+         "EN": "I am Developer",
+         "ES": "Soy un desarrollador",
+         "FR": "je suis développeur",
+         "GE": "I am Developer",
+         "RU": "Я разработчик",
+         "UA": "Я розробник"
+      },
+      {
+         "DE": "Ich bin ein Gast",
+         "EN": "I am Guest",
+         "ES": "Soy un invitado",
+         "FR": "je suis un invité",
+         "GE": "I am Guest",
+         "RU": "Я гость",
+         "UA": "Я гість"
+      },
+      {
+         "DE": "Sex",
+         "EN": "Gender",
+         "ES": "Sexo",
+         "FR": "le sexe",
+         "GE": "Gender",
+         "RU": "Пол",
+         "UA": "Стать"
+      },
+      {
+         "DE": "Werbe-Code",
+         "EN": "PromoCode",
+         "ES": "Código promocional",
+         "FR": "Code promo",
+         "GE": "PromoCode",
+         "RU": "Промокод",
+         "UA": "Промо код"
+      },
+      {
+         "DE": "Untersuchung",
+         "EN": "Capcha",
+         "ES": "Examen",
+         "FR": "Examen",
+         "GE": "Capcha",
+         "RU": "Проверка",
+         "UA": "Перевірка"
+      },
+      {
+         "DE": "Passwort ändern",
+         "EN": "ChangePassword",
+         "ES": "Cambia la contraseña",
+         "FR": "Changer le mot de passe",
+         "GE": "ChangePassword",
+         "RU": "Сменить пароль",
+         "UA": "Змінити пароль"
+      },
+      {
+         "DE": "Kontakte",
+         "EN": "Contacts",
+         "ES": "Contactos",
+         "FR": "Contacts",
+         "GE": "Contacts",
+         "RU": "Контакты",
+         "UA": "Контакти"
+      },
+      {
+         "DE": "Derzeitiges Projekt",
+         "EN": "CurrentProject",
+         "ES": "Proyecto actual",
+         "FR": "Projet en cours",
+         "GE": "CurrentProject",
+         "RU": "Текущий проект",
+         "UA": "Поточний проект"
+      },
+      {
+         "DE": "Berufsbezeichnung",
+         "EN": "Position",
+         "ES": "Título profesional",
+         "FR": "Titre d'emploi",
+         "GE": "Position",
+         "RU": "Должность",
+         "UA": "Посада"
+      },
+      {
+         "DE": "Manager",
+         "EN": "Manager",
+         "ES": "Gerente",
+         "FR": "Gestionnaire",
+         "GE": "Manager",
+         "RU": "Менеджер",
+         "UA": "Менеджер"
+      },
+      {
+         "DE": "Wichtig",
+         "EN": "Important",
+         "ES": "Importante",
+         "FR": "Important",
+         "GE": "Important",
+         "RU": "Важно",
+         "UA": "Важливо"
+      },
+      {
+         "DE": "Benachrichtigung",
+         "EN": "Notification",
+         "ES": "Notificación",
+         "FR": "Notification",
+         "GE": "Notification",
+         "RU": "Уведомление",
+         "UA": "Повідомлення"
+      },
+      {
+         "DE": "Filter",
+         "EN": "Filter",
+         "ES": "Filtrar",
+         "FR": "Filtre",
+         "GE": "Filter",
+         "RU": "Фильтр",
+         "UA": "Фільтр"
+      },
+      {
+         "DE": "Unwichtig",
+         "EN": "NotImportant",
+         "ES": "no importa",
+         "FR": "Peu importe",
+         "GE": "NotImportant",
+         "RU": "Не важно",
+         "UA": "Не важливо"
+      },
+      {
+         "DE": "Männlich",
+         "EN": "Male",
+         "ES": "Masculino",
+         "FR": "Masculin",
+         "GE": "Male",
+         "RU": "Мужской",
+         "UA": "Чоловіча"
+      },
+      {
+         "DE": "Weiblich",
+         "EN": "Female",
+         "ES": "Femenino",
+         "FR": "aux femmes",
+         "GE": "Female",
+         "RU": "Женский",
+         "UA": "Жіноча"
+      },
+      {
+         "DE": "Sonstiges",
+         "EN": "Other",
+         "ES": "Otro",
+         "FR": "Autre",
+         "GE": "Other",
+         "RU": "Другое",
+         "UA": "Інше"
+      },
+      {
+         "DE": "Abschnitte",
+         "EN": "Dashboard",
+         "ES": "Secciones",
+         "FR": "Sections",
+         "GE": "Dashboard",
+         "RU": "Разделы",
+         "UA": "Розділи"
+      },
+      {
+         "DE": "Benutzername",
+         "EN": "UserName",
+         "ES": "Nombre de usuario",
+         "FR": "Nom d'utilisateur",
+         "GE": "UserName",
+         "RU": "Имя пользователя",
+         "UA": "Ім'я користвувача"
+      },
+      {
+         "DE": "Benutzer",
+         "EN": "User",
+         "ES": "Usuario",
+         "FR": "Utilisateur",
+         "GE": "User",
+         "RU": "Пользователь",
+         "UA": "Користувач"
+      },
+      {
+         "DE": "Hinausgehen",
+         "EN": "LogOut",
+         "ES": "Salir",
+         "FR": "Sortir",
+         "GE": "LogOut",
+         "RU": "Выйти",
+         "UA": "Вийти"
+      },
+      {
+         "DE": "Benutzer",
+         "EN": "Users",
+         "ES": "Usuario",
+         "FR": "Utilisateurs",
+         "GE": "Users",
+         "RU": "Пользователи",
+         "UA": "Користувачі"
+      },
+      {
+         "DE": "Mannschaften",
+         "EN": "Teams",
+         "ES": "Equipos",
+         "FR": "Équipes",
+         "GE": "Teams",
+         "RU": "Команды",
+         "UA": "Команди"
+      },
+      {
+         "DE": "Neue Stelle",
+         "EN": "NewVacancy",
+         "ES": "Nueva vacante",
+         "FR": "Nouveau poste vacant",
+         "GE": "NewVacancy",
+         "RU": "Новая вакансия",
+         "UA": "Нова вакансія"
+      },
+      {
+         "DE": "Arbeitsplätze",
+         "EN": "Vacancies",
+         "ES": "Trabajos",
+         "FR": "Travaux",
+         "GE": "Vacancies",
+         "RU": "Вакансии",
+         "UA": "Вакансії"
+      },
+      {
+         "DE": "Geschichten",
+         "EN": "Stories",
+         "ES": "Cuentos",
+         "FR": "Histoires",
+         "GE": "Stories",
+         "RU": "Истории",
+         "UA": "Історії"
+      },
+      {
+         "DE": "Geschichte",
+         "EN": "Story",
+         "ES": "Historia",
+         "FR": "Histoire",
+         "GE": "Story",
+         "RU": "История",
+         "UA": "Історія"
+      },
+      {
+         "DE": "Meine Geschichten",
+         "EN": "MyStories",
+         "ES": "Mis historias",
+         "FR": "Mes histoires",
+         "GE": "MyStories",
+         "RU": "Мои истории",
+         "UA": "Мої історії"
+      },
+      {
+         "DE": "Neue Geschichte",
+         "EN": "NewStory",
+         "ES": "Nueva historia",
+         "FR": "Nouvelle histoire",
+         "GE": "NewStory",
+         "RU": "Новая история",
+         "UA": "Нова історія"
+      },
+      {
+         "DE": "Neue Spezifikation",
+         "EN": "NewSpecification",
+         "ES": "Nueva especificación",
+         "FR": "Nouvelle spécification",
+         "GE": "NewSpecification",
+         "RU": "Новая спецификация",
+         "UA": "Нова спеціфікація"
+      },
+      {
+         "DE": "Projekt",
+         "EN": "Project",
+         "ES": "Proyecto",
+         "FR": "Projet",
+         "GE": "Project",
+         "RU": "Проект",
+         "UA": "Проект"
+      },
+      {
+         "DE": "Spezifikationen",
+         "EN": "Specifications",
+         "ES": "Especificaciones",
+         "FR": "Spécifications",
+         "GE": "Specifications",
+         "RU": "Спецификации",
+         "UA": "Спеціфікації"
+      },
+      {
+         "DE": "Projekt",
+         "EN": "NewProject",
+         "ES": "Proyecto",
+         "FR": "Nouveau projet",
+         "GE": "NewProject",
+         "RU": "Новий проект",
+         "UA": "Новій проект"
+      },
+      {
+         "DE": "Projekte",
+         "EN": "Projects",
+         "ES": "Proyectos",
+         "FR": "Projets",
+         "GE": "Projects",
+         "RU": "Проекты",
+         "UA": "Проекти"
+      },
+      {
+         "DE": "Sprints",
+         "EN": "Sprints",
+         "ES": "Sprints",
+         "FR": "Sprints",
+         "GE": "Sprints",
+         "RU": "Спринты",
+         "UA": "Спрінти"
+      },
+      {
+         "DE": "Sprint",
+         "EN": "Sprint",
+         "ES": "Sprint",
+         "FR": "Sprint",
+         "GE": "Sprint",
+         "RU": "Спринт",
+         "UA": "Спрінт"
+      },
+      {
+         "DE": "Fügen Sie einen Sprint hinzu",
+         "EN": "NewSprint",
+         "ES": "Agregar un sprint",
+         "FR": "Ajouter un sprint",
+         "GE": "NewSprint",
+         "RU": "Добавить спринт",
+         "UA": "Додати спринт"
+      },
+      {
+         "DE": "Derzeitiges Projekt",
+         "EN": "CurrentSprint",
+         "ES": "Proyecto actual",
+         "FR": "Projet en cours",
+         "GE": "CurrentSprint",
+         "RU": "Текущий проект",
+         "UA": "Поточний проект"
+      },
+      {
+         "DE": "Neuigkeiten hinzufügen",
+         "EN": "NewNews",
+         "ES": "Añadir noticia",
+         "FR": "Ajouter des nouvelles",
+         "GE": "NewNews",
+         "RU": "Добавить новость",
+         "UA": "Додати новину"
+      },
+      {
+         "DE": "Mitteilungen",
+         "EN": "Messages",
+         "ES": "Mensajes",
+         "FR": "Messages",
+         "GE": "Messages",
+         "RU": "Сообщения",
+         "UA": "Повідомлення"
+      },
+      {
+         "DE": "Nachrichten",
+         "EN": "News",
+         "ES": "Noticias",
+         "FR": "Nouvelles",
+         "GE": "News",
+         "RU": "Новости",
+         "UA": "Новини"
+      },
+      {
+         "DE": "Benachrichtigungen",
+         "EN": "Notifications",
+         "ES": "Notificaciones",
+         "FR": "Avis",
+         "GE": "Notifications",
+         "RU": "Уведомления",
+         "UA": "Сповіщення"
+      },
+      {
+         "DE": "Chats",
+         "EN": "Chats",
+         "ES": "Charlas",
+         "FR": "Chats",
+         "GE": "Chats",
+         "RU": "Чаты",
+         "UA": "Чати"
+      },
+      {
+         "DE": "Kalender",
+         "EN": "Calendar",
+         "ES": "Calendario",
+         "FR": "Calendrier",
+         "GE": "Calendar",
+         "RU": "Календарь",
+         "UA": "Календар"
+      },
+      {
+         "DE": "Treffen",
+         "EN": "Meetings",
+         "ES": "Reuniones",
+         "FR": "Réunions",
+         "GE": "Meetings",
+         "RU": "Совещания",
+         "UA": "Наради"
+      },
+      {
+         "DE": "Fügen Sie eine Besprechung hinzu",
+         "EN": "NewMeeting",
+         "ES": "Agregar una reunión",
+         "FR": "Ajouter une réunion",
+         "GE": "NewMeeting",
+         "RU": "Добавить совещание",
+         "UA": "Додати нараду"
+      },
+      {
+         "DE": "Artikel hinzufügen",
+         "EN": "NewArticle",
+         "ES": "Añadir artículo",
+         "FR": "Ajouter un article",
+         "GE": "NewArticle",
+         "RU": "Добавить статью",
+         "UA": "Додати статтю"
+      },
+      {
+         "DE": "Ausbildung",
+         "EN": "Learn",
+         "ES": "Educación",
+         "FR": "Éducation",
+         "GE": "Learn",
+         "RU": "Обучение",
+         "UA": "Навчання"
+      },
+      {
+         "DE": "Artikel",
+         "EN": "Articles",
+         "ES": "Artículos",
+         "FR": "Des articles",
+         "GE": "Articles",
+         "RU": "Статьи",
+         "UA": "Статті"
+      },
+      {
+         "DE": "Kurse",
+         "EN": "Courses",
+         "ES": "Cursos",
+         "FR": "Cours",
+         "GE": "Courses",
+         "RU": "Курсы",
+         "UA": "Курси"
+      },
+      {
+         "DE": "Prüfungen",
+         "EN": "Exams",
+         "ES": "Exámenes",
+         "FR": "Examens",
+         "GE": "Exams",
+         "RU": "Экзамены",
+         "UA": "Екзамени"
+      },
+      {
+         "DE": "Wählen",
+         "EN": "Votes",
+         "ES": "Votación",
+         "FR": "Vote",
+         "GE": "Votes",
+         "RU": "Голосования",
+         "UA": "Голосування"
+      },
+      {
+         "DE": "Bericht",
+         "EN": "Report",
+         "ES": "Reporte",
+         "FR": "Signaler",
+         "GE": "Report",
+         "RU": "Отчет",
+         "UA": "Звіт"
+      },
+      {
+         "DE": "Bewertungen",
+         "EN": "Raiting",
+         "ES": "Calificaciones",
+         "FR": "Notes",
+         "GE": "Raiting",
+         "RU": "Рейтинги",
+         "UA": "Рейтинги"
+      },
+      {
+         "DE": "Vorlagen",
+         "EN": "Templates",
+         "ES": "Plantillas",
+         "FR": "Modèles",
+         "GE": "Templates",
+         "RU": "Шаблоны",
+         "UA": "Шаблони"
+      },
+      {
+         "DE": "Laufzeit",
+         "EN": "Environment",
+         "ES": "tiempo de ejecución",
+         "FR": "Durée",
+         "GE": "Environment",
+         "RU": "Среда выполнения",
+         "UA": "Середовище виконання"
+      },
+      {
+         "DE": "Laufzeit hinzufügen",
+         "EN": "NewEnvironment",
+         "ES": "Agregar tiempo de ejecución",
+         "FR": "Ajouter un temps d'exécution",
+         "GE": "NewEnvironment",
+         "RU": "Добавить среду выполнения",
+         "UA": "Додати Середовище"
+      },
+      {
+         "DE": "Laufzeiten",
+         "EN": "Environments",
+         "ES": "tiempos de ejecución",
+         "FR": "Temps d'exécution",
+         "GE": "Environments",
+         "RU": "Среды выполнения",
+         "UA": "Середовища виконання"
+      },
+      {
+         "DE": "Derzeitiges Projekt: \[NAME\]",
+         "EN": "Current Project: \[NAME\]",
+         "ES": "Proyecto actual: \[NAME\]",
+         "FR": "Projet en cours: \[NAME\]",
+         "GE": "Current Project: \[NAME\]",
+         "RU": "Текущий проект: \[NAME\]",
+         "UA": "Поточний проект: \[NAME\]"
+      },
+      {
+         "DE": "Stelle hinzufügen",
+         "EN": "New Vacancy",
+         "ES": "Agregar trabajo",
+         "FR": "Ajouter une tâche",
+         "GE": "New Vacancy",
+         "RU": "Добавить вакансию",
+         "UA": "Додати вакансію"
+      },
+      {
+         "DE": "Meine Geschichten",
+         "EN": "My Stories",
+         "ES": "Mis historias",
+         "FR": "Mes histoires",
+         "GE": "My Stories",
+         "RU": "Мои истории",
+         "UA": "Мої історії"
+      },
+      {
+         "DE": "Geschichte hinzufügen",
+         "EN": "New Story",
+         "ES": "Agregar historia",
+         "FR": "Ajouter une histoire",
+         "GE": "New Story",
+         "RU": "Добавить историю",
+         "UA": "Додати історію"
+      },
+      {
+         "DE": "Spezifikation hinzufügen",
+         "EN": "New Specification",
+         "ES": "Agregar especificación",
+         "FR": "Ajouter une spécification",
+         "GE": "New Specification",
+         "RU": "Добавить спецификацию",
+         "UA": "Додати спеціфікацію"
+      },
+      {
+         "DE": "Projekt hinzufügen",
+         "EN": "New Project",
+         "ES": "Agregar proyecto",
+         "FR": "Ajouter un projet",
+         "GE": "New Project",
+         "RU": "Добавить проект",
+         "UA": "Додати проект"
+      },
+      {
+         "DE": "Fügen Sie einen Sprint hinzu",
+         "EN": "New Sprint",
+         "ES": "Agregar un sprint",
+         "FR": "Ajouter un sprint",
+         "GE": "New Sprint",
+         "RU": "Добавить спринт",
+         "UA": "Додати спринт"
+      },
+      {
+         "DE": "Aktueller Sprint",
+         "EN": "Current Sprint",
+         "ES": "Sprint actual",
+         "FR": "Sprint actuel",
+         "GE": "Current Sprint",
+         "RU": "Текущий спринт",
+         "UA": "Поточний спринт"
+      },
+      {
+         "DE": "Neuigkeiten hinzufügen",
+         "EN": "New News",
+         "ES": "Añadir noticia",
+         "FR": "Ajouter des nouvelles",
+         "GE": "New News",
+         "RU": "Добавить новость",
+         "UA": "Додати новину"
+      },
+      {
+         "DE": "Benachrichtigungen (\[NUMBER\])",
+         "EN": "Notifications (\[NUMBER\])",
+         "ES": "Notificaciones (\[NUMBER\])",
+         "FR": "Notifications (\[NUMBER\])",
+         "GE": "Notifications (\[NUMBER\])",
+         "RU": "Уведомления (\[NUMBER\])",
+         "UA": "Сповіщення (\[NUMBER\])"
+      },
+      {
+         "DE": "Fügen Sie eine Besprechung hinzu",
+         "EN": "New Meeting",
+         "ES": "Agregar una reunión",
+         "FR": "Ajouter une réunion",
+         "GE": "New Meeting",
+         "RU": "Добавить совещание",
+         "UA": "Додати нараду"
+      },
+      {
+         "DE": "Artikel hinzufügen",
+         "EN": "New Article",
+         "ES": "Añadir artículo",
+         "FR": "Ajouter un article",
+         "GE": "New Article",
+         "RU": "Добавить статью",
+         "UA": "Додати статтю"
+      },
+      {
+         "DE": "Laufzeitumgebung hinzufügen",
+         "EN": "New Environment",
+         "ES": "Agregar entorno de tiempo de ejecución",
+         "FR": "Ajouter un environnement d'exécution",
+         "GE": "New Environment",
+         "RU": "Добавить окружение выполнения",
+         "UA": "Додати середовище виконання"
+      },
+      {
+         "DE": "Die Dokumente",
+         "EN": "Documents",
+         "ES": "Los documentos",
+         "FR": "Les documents",
+         "GE": "Documents",
+         "RU": "Документы",
+         "UA": "Документи"
+      },
+      {
+         "DE": "Rollen",
+         "EN": "Roles",
+         "ES": "Roles",
+         "FR": "Les rôles",
+         "GE": "Roles",
+         "RU": "Роли",
+         "UA": "Ролі"
+      },
+      {
+         "DE": "Dokumentieren",
+         "EN": "Document",
+         "ES": "Documento",
+         "FR": "Document",
+         "GE": "Document",
+         "RU": "Документ",
+         "UA": "Документ"
+      },
+      {
+         "DE": "Vorherige Seite",
+         "EN": "PrevPage",
+         "ES": "Pagina anterior",
+         "FR": "Page précédente",
+         "GE": "PrevPage",
+         "RU": "Предыдущая страница",
+         "UA": "Попередня сторінка"
+      },
+      {
+         "DE": "Nächste Seite",
+         "EN": "NextPage",
+         "ES": "Siguiente página",
+         "FR": "Page suivante",
+         "GE": "NextPage",
+         "RU": "Следующая страница",
+         "UA": "Наступна сторінка"
+      },
+      {
+         "DE": "Keine Stellung",
+         "EN": "No Position",
+         "ES": "Sin posición",
+         "FR": "Pas de poste",
+         "GE": "No Position",
+         "RU": "Нет должности",
+         "UA": "Немає посади"
+      },
+      {
+         "DE": "Frontend-Ingenieur",
+         "EN": "Frontend Engineer",
+         "ES": "Ingeniero Frontend",
+         "FR": "Ingénieur Frontend",
+         "GE": "Frontend Engineer",
+         "RU": "Фронтенд Инженер",
+         "UA": "Фронтенд Інженер"
+      },
+      {
+         "DE": "Backend-Ingenieur",
+         "EN": "Backend Engineer",
+         "ES": "Ingeniero de back-end",
+         "FR": "Ingénieur back-end",
+         "GE": "Backend Engineer",
+         "RU": "Бэкенд Инженер",
+         "UA": "Бекенд Інженер"
+      },
+      {
+         "DE": "Testingenieur",
+         "EN": "QA Engineer",
+         "ES": "Ingeniero de pruebas",
+         "FR": "Ingénieur d'essais",
+         "GE": "QA Engineer",
+         "RU": "Инженер по тестированию",
+         "UA": "Інженер по тестуванню"
+      },
+      {
+         "DE": "Passwort ändern",
+         "EN": "Change Password",
+         "ES": "Cambia la contraseña",
+         "FR": "Changer le mot de passe",
+         "GE": "Change Password",
+         "RU": "Изменить пароль",
+         "UA": "Змінити пароль"
+      },
+      {
+         "DE": "Beschreibung",
+         "EN": "Description",
+         "ES": "Descripción",
+         "FR": "La description",
+         "GE": "Description",
+         "RU": "Описание",
+         "UA": "Опис"
+      },
+      {
+         "DE": "Senden",
+         "EN": "Send",
+         "ES": "Enviar",
+         "FR": "Envoyer",
+         "GE": "Send",
+         "RU": "Отправить",
+         "UA": "Відправити"
+      },
+      {
+         "DE": "Auftragsnummer",
+         "EN": "VacancyNumber",
+         "ES": "Número de empleo",
+         "FR": "Numéro de poste vacant",
+         "GE": "VacancyNumber",
+         "RU": "Номер вакансии",
+         "UA": "Номер вакансії"
+      },
+      {
+         "DE": "Befehl",
+         "EN": "Team",
+         "ES": "Dominio",
+         "FR": "Commande",
+         "GE": "Team",
+         "RU": "Комманда",
+         "UA": "Команда"
+      },
+      {
+         "DE": "Berufserfahrung",
+         "EN": "Skills",
+         "ES": "Experiencia laboral",
+         "FR": "l'expérience professionnelle",
+         "GE": "Skills",
+         "RU": "Опыт работы",
+         "UA": "Досвід роботи"
+      },
+      {
+         "DE": "Eine Verantwortung",
+         "EN": "Responsibilities",
+         "ES": "Una responsabilidad",
+         "FR": "Une responsabilité",
+         "GE": "Responsibilities",
+         "RU": "Ответственность",
+         "UA": "Відповідальність"
+      },
+      {
+         "DE": "Abgeschlossen",
+         "EN": "IsClosed",
+         "ES": "Cerrado",
+         "FR": "Fermée",
+         "GE": "IsClosed",
+         "RU": "Закрыто",
+         "UA": "Закрито"
+      },
+      {
+         "DE": "Wer",
+         "EN": "Who",
+         "ES": "Quién",
+         "FR": "Qui",
+         "GE": "Who",
+         "RU": "Кто",
+         "UA": "Хто"
+      },
+      {
+         "DE": "Reichen Sie Ihre Kandidatur ein",
+         "EN": "Apply Vacancy",
+         "ES": "Envía tu candidatura",
+         "FR": "Déposez votre candidature",
+         "GE": "Apply Vacancy",
+         "RU": "Отправить кандидатуру",
+         "UA": "Відправити кандидатуру"
+      },
+      {
+         "DE": "Geschichte Nummer",
+         "EN": "StoryNumber",
+         "ES": "Número de historial",
+         "FR": "Numéro d'historique",
+         "GE": "StoryNumber",
+         "RU": "Номер истории",
+         "UA": "Номер історії"
+      },
+      {
+         "DE": "Header",
+         "EN": "Title",
+         "ES": "Encabezamiento",
+         "FR": "Entête",
+         "GE": "Title",
+         "RU": "Заголовок",
+         "UA": "Заголовок"
+      },
+      {
+         "DE": "Kapitel",
+         "EN": "Epic",
+         "ES": "Capítulo",
+         "FR": "Chapitre",
+         "GE": "Epic",
+         "RU": "Раздел",
+         "UA": "Розділ"
+      },
+      {
+         "DE": "Ernennung",
+         "EN": "AssignedTo",
+         "ES": "Fijado",
+         "FR": "Nommé",
+         "GE": "AssignedTo",
+         "RU": "Назначено",
+         "UA": "Назначено"
+      },
+      {
+         "DE": "Status",
+         "EN": "Status",
+         "ES": "Estado",
+         "FR": "Statut",
+         "GE": "Status",
+         "RU": "Статус",
+         "UA": "Статус"
+      },
+      {
+         "DE": "Sprintnummer",
+         "EN": "SprintNumber",
+         "ES": "Número de carrera",
+         "FR": "Numéro de sprint",
+         "GE": "SprintNumber",
+         "RU": "Номер спринта",
+         "UA": "Номер спринта"
+      },
+      {
+         "DE": "Geschichte Partitur",
+         "EN": "StoryEstimated",
+         "ES": "Puntuación de la historia",
+         "FR": "Partition de l'histoire",
+         "GE": "StoryEstimated",
+         "RU": "Оценка истории",
+         "UA": "Оцінка історії"
+      },
+      {
+         "DE": "Mir zuweisen",
+         "EN": "Assign To Me",
+         "ES": "Asigname",
+         "FR": "Attribuez-moi",
+         "GE": "Assign To Me",
+         "RU": "Назначить на меня",
+         "UA": "Призначити на мене"
+      },
+      {
+         "DE": "Zum aktuellen Sprint hinzufügen",
+         "EN": "Add To Current Sprint",
+         "ES": "Agregar al sprint actual",
+         "FR": "Добавить в текущий спринт",
+         "GE": "Add To Current Sprint",
+         "RU": "Добавить в текущий спринт",
+         "UA": "Додати в поточний спринт"
+      },
+      {
+         "DE": "Neuen Status festlegen",
+         "EN": "Set New Status",
+         "ES": "Establecer nuevo estado",
+         "FR": "Définir un nouveau statut",
+         "GE": "Set New Status",
+         "RU": "Установить Новый статус",
+         "UA": "Встановити Новий статус"
+      },
+      {
+         "DE": "Stellen Sie den Aktiv-Status ein",
+         "EN": "Set Active Status",
+         "ES": "Establecer estado activo",
+         "FR": "Définir le statut Actif",
+         "GE": "Set Active Status",
+         "RU": "Установить Активный статус",
+         "UA": "Встановити Активний статус"
+      },
+      {
+         "DE": "Legen Sie den Status In Bearbeitung fest",
+         "EN": "Set InProgress Status",
+         "ES": "Establecer en estado de progreso",
+         "FR": "Définir l'état En cours",
+         "GE": "Set InProgress Status",
+         "RU": "Установить В работе статус",
+         "UA": "Встановити В роботі статус"
+      },
+      {
+         "DE": "Stellen Sie den Status „Bereit zum Testen“ ein",
+         "EN": "Set ReadyForQA Status",
+         "ES": "Establezca Listo para el estado de prueba",
+         "FR": "Définir l'état Prêt pour le test",
+         "GE": "Set ReadyForQA Status",
+         "RU": "Установить Готово для тестирования статус",
+         "UA": "Встановити Готово для тестування статус"
+      },
+      {
+         "DE": "Geschlossen-Status festlegen",
+         "EN": "Set Closed Status",
+         "ES": "Establecer estado cerrado",
+         "FR": "Définir le statut fermé",
+         "GE": "Set Closed Status",
+         "RU": "Установить Закрыто статус",
+         "UA": "Встановити Закрито статус"
+      },
+      {
+         "DE": "Aufgabenauswertung",
+         "EN": "TaskEstimated",
+         "ES": "Evaluación de tareas",
+         "FR": "Évaluation des tâches",
+         "GE": "TaskEstimated",
+         "RU": "Оценка задачи",
+         "UA": "Оцінка задачі"
+      },
+      {
+         "DE": "Verbleibende Aufgaben",
+         "EN": "TaskRemained",
+         "ES": "Tareas restantes",
+         "FR": "Tâches restantes",
+         "GE": "TaskRemained",
+         "RU": "Осталось задачи",
+         "UA": "Залишилось задачі"
+      },
+      {
+         "DE": "Aufgaben",
+         "EN": "Tasks",
+         "ES": "Tareas",
+         "FR": "Tâches",
+         "GE": "Tasks",
+         "RU": "Задачи",
+         "UA": "Задачі"
+      },
+      {
+         "DE": "Klasse",
+         "EN": "Estimated",
+         "ES": "Calificación",
+         "FR": "Noter",
+         "GE": "Estimated",
+         "RU": "Оценка",
+         "UA": "Оцінка"
+      },
+      {
+         "DE": "Links",
+         "EN": "Remained",
+         "ES": "Izquierda",
+         "FR": "La gauche",
+         "GE": "Remained",
+         "RU": "Осталось",
+         "UA": "Залишилось"
+      },
+      {
+         "DE": "Aufgabe hinzufügen",
+         "EN": "NewTask",
+         "ES": "Agregar tarea",
+         "FR": "Ajouter une tâche",
+         "GE": "NewTask",
+         "RU": "Добавить задачу",
+         "UA": "Додати задачу"
+      },
+      {
+         "DE": "Mängel",
+         "EN": "Defects",
+         "ES": "Defectos",
+         "FR": "Défauts",
+         "GE": "Defects",
+         "RU": "Дефекты",
+         "UA": "Дефекти"
+      },
+      {
+         "DE": "Bild",
+         "EN": "Picture",
+         "ES": "Imagen",
+         "FR": "Image",
+         "GE": "Picture",
+         "RU": "Рисунок",
+         "UA": "Рисунок"
+      },
+      {
+         "DE": "Kommentare",
+         "EN": "Comments",
+         "ES": "Comentarios",
+         "FR": "Commentaires",
+         "GE": "Comments",
+         "RU": "Комментарии",
+         "UA": "Коментарі"
+      },
+      {
+         "DE": "Neuer Kommentar",
+         "EN": "NewComment",
+         "ES": "Nuevo comentario",
+         "FR": "Nouveau commentaire",
+         "GE": "NewComment",
+         "RU": "Новый комментарий",
+         "UA": "Новий коментар"
+      },
+      {
+         "DE": "Neuer Defekt",
+         "EN": "NewDefect",
+         "ES": "Nuevo defecto",
+         "FR": "Nouveau défaut",
+         "GE": "NewDefect",
+         "RU": "Новый дефект",
+         "UA": "Новий дефект"
+      },
+      {
+         "DE": "Backend",
+         "EN": "Backend",
+         "ES": "back-end",
+         "FR": "Backend",
+         "GE": "Backend",
+         "RU": "Бэкенд",
+         "UA": "Бекенд"
+      },
+      {
+         "DE": "Frontend",
+         "EN": "Frontend",
+         "ES": "Interfaz",
+         "FR": "Frontend",
+         "GE": "Frontend",
+         "RU": "Фронтенд",
+         "UA": "Фронтенд"
+      },
+      {
+         "DE": "Dokumentation",
+         "EN": "Documentation",
+         "ES": "Documentación",
+         "FR": "Documentation",
+         "GE": "Documentation",
+         "RU": "Документация",
+         "UA": "Документація"
+      },
+      {
+         "DE": "Fehlerbehebung",
+         "EN": "BugFix",
+         "ES": "Corrección de errores",
+         "FR": "Corrections de bogues",
+         "GE": "BugFix",
+         "RU": "Исправление багов",
+         "UA": "Виправлення багів"
+      },
+      {
+         "DE": "Neu",
+         "EN": "New",
+         "ES": "Nuevo",
+         "FR": "Nouveau",
+         "GE": "New",
+         "RU": "Новый",
+         "UA": "Новий"
+      },
+      {
+         "DE": "Aktiv",
+         "EN": "Active",
+         "ES": "Activo",
+         "FR": "Actif",
+         "GE": "Active",
+         "RU": "Активный",
+         "UA": "Активний"
+      },
+      {
+         "DE": "In Arbeit",
+         "EN": "InProgress",
+         "ES": "En el trabajo",
+         "FR": "Au travail",
+         "GE": "InProgress",
+         "RU": "В работе",
+         "UA": "В роботі"
+      },
+      {
+         "DE": "Bereit zum Testen",
+         "EN": "ReadyForQA",
+         "ES": "Listo para la prueba",
+         "FR": "Prêt pour les tests",
+         "GE": "ReadyForQA",
+         "RU": "Готов для тестирования",
+         "UA": "Готовий до тестування"
+      },
+      {
+         "DE": "Abgeschlossen",
+         "EN": "Closed",
+         "ES": "Cerrado",
+         "FR": "Fermé",
+         "GE": "Closed",
+         "RU": "Закрыто",
+         "UA": "Закрито"
+      },
+      {
+         "DE": "Aufgabe hinzufügen",
+         "EN": "New Task",
+         "ES": "Agregar tarea",
+         "FR": "Ajouter une tâche",
+         "GE": "New Task",
+         "RU": "Добавить задачу",
+         "UA": "Додати задачу"
+      },
+      {
+         "DE": "Defekt hinzufügen",
+         "EN": "New Defect",
+         "ES": "Agregar defecto",
+         "FR": "Ajouter un défaut",
+         "GE": "New Defect",
+         "RU": "Добавить дефект",
+         "UA": "Додати дефект"
+      },
+      {
+         "DE": "Einen Kommentar hinzufügen",
+         "EN": "New Comment",
+         "ES": "Añadir un comentario",
+         "FR": "Ajouter un commentaire",
+         "GE": "New Comment",
+         "RU": "Добавить комментарий",
+         "UA": "Додати коментар"
+      },
+      {
+         "DE": "Aufgabenelement",
+         "EN": "Tasks item",
+         "ES": "Elemento de tarea",
+         "FR": "Elément de tâche",
+         "GE": "Tasks item",
+         "RU": "Элемент задачи",
+         "UA": "Елемент задачі"
+      },
+      {
+         "DE": "Artikelmängel",
+         "EN": "Defects item",
+         "ES": "Defectos del artículo",
+         "FR": "Défauts de l'article",
+         "GE": "Defects item",
+         "RU": "Элемент дефектов",
+         "UA": "Елемент дефектів"
+      },
+      {
+         "DE": "Schaffen",
+         "EN": "Create",
+         "ES": "Crear",
+         "FR": "Créer",
+         "GE": "Create",
+         "RU": "Создать",
+         "UA": "Створити"
+      },
+      {
+         "DE": "Eigentümer",
+         "EN": "Owner",
+         "ES": "Dueño",
+         "FR": "Propriétaire",
+         "GE": "Owner",
+         "RU": "Владелец",
+         "UA": "Власник"
+      },
+      {
+         "DE": "Grundlegende Funktionalität",
+         "EN": "BaseFunctionality",
+         "ES": "Funcionalidad básica",
+         "FR": "Fonctionnalité de base",
+         "GE": "BaseFunctionality",
+         "RU": "Базовая функциональность",
+         "UA": "Базова функціональність"
+      },
+      {
+         "DE": "Funktionalität",
+         "EN": "Functionality",
+         "ES": "Funcionalidad",
+         "FR": "Fonctionnalité",
+         "GE": "Functionality",
+         "RU": "Функциональность",
+         "UA": "Функціональність"
+      },
+      {
+         "DE": "Bildschirmliste",
+         "EN": "ListOfScreens",
+         "ES": "Lista de pantallas",
+         "FR": "Liste d'écrans",
+         "GE": "ListOfScreens",
+         "RU": "Список экранов",
+         "UA": "Список екранів"
+      },
+      {
+         "DE": "Ähnliche Projekte",
+         "EN": "SimilarProjects",
+         "ES": "Proyectos similares",
+         "FR": "Projets similaires",
+         "GE": "SimilarProjects",
+         "RU": "Подобные проекты",
+         "UA": "Подібні проекти"
+      },
+      {
+         "DE": "Konkurrenten",
+         "EN": "Competiors",
+         "ES": "Competidores",
+         "FR": "Concurrents",
+         "GE": "Competiors",
+         "RU": "Конкуренты",
+         "UA": "Конкуренти"
+      },
+      {
+         "DE": "Ihre Hauptvorteile",
+         "EN": "YourMainFeature",
+         "ES": "Sus principales beneficios",
+         "FR": "Vos principaux avantages",
+         "GE": "YourMainFeature",
+         "RU": "Ваши основные преимущества",
+         "UA": "Ваші основні переваги"
+      },
+      {
+         "DE": "Zielgruppe",
+         "EN": "TargetAudience",
+         "ES": "El público objetivo",
+         "FR": "Le public ciblé",
+         "GE": "TargetAudience",
+         "RU": "Целевая аудитория",
+         "UA": "TargetAudience"
+      },
+      {
+         "DE": "Anwendungsleistung",
+         "EN": "Performance",
+         "ES": "Rendimiento de la aplicación",
+         "FR": "Performances des applications",
+         "GE": "Performance",
+         "RU": "Быстродействие приложения",
+         "UA": "Швидкість додатку"
+      },
+      {
+         "DE": "Anwendungslast",
+         "EN": "HighLoad",
+         "ES": "Carga de aplicaciones",
+         "FR": "Charge d'application",
+         "GE": "HighLoad",
+         "RU": "Нагруженность приложения",
+         "UA": "Навантаження додатку"
+      },
+      {
+         "DE": "Datenbank",
+         "EN": "Database",
+         "ES": "Base de datos",
+         "FR": "Base de données",
+         "GE": "Database",
+         "RU": "База данных",
+         "UA": "База данних"
+      },
+      {
+         "DE": "das Datum des Beginns",
+         "EN": "StartDate",
+         "ES": "la fecha del comienzo",
+         "FR": "la date du début",
+         "GE": "StartDate",
+         "RU": "Дата начала",
+         "UA": "Дата початку"
+      },
+      {
+         "DE": "Datum der Fertigstellung",
+         "EN": "EndDate",
+         "ES": "Fecha de realización",
+         "FR": "Date d'achèvement",
+         "GE": "EndDate",
+         "RU": "Дата завершения",
+         "UA": "Дата завершення"
+      },
+      {
+         "DE": "Abgeschlossen",
+         "EN": "Completed",
+         "ES": "Terminado",
+         "FR": "Complété",
+         "GE": "Completed",
+         "RU": "Завершено",
+         "UA": "Завершено"
+      },
+      {
+         "DE": "Gefallen",
+         "EN": "Likes",
+         "ES": "Apreciado",
+         "FR": "Aimé",
+         "GE": "Likes",
+         "RU": "Понравилось",
+         "UA": "Сподобалось"
+      },
+      {
+         "DE": "Bereitstellungsschlüssel",
+         "EN": "DeploymentKey",
+         "ES": "Clave de implementación",
+         "FR": "Clé de déploiement",
+         "GE": "DeploymentKey",
+         "RU": "Ключ для развертывания",
+         "UA": "Ключ для розгортання"
+      },
+      {
+         "DE": "Als aktuelles Projekt festlegen",
+         "EN": "Set As Current Project",
+         "ES": "Establecer como proyecto actual",
+         "FR": "Définir comme projet en cours",
+         "GE": "Set As Current Project",
+         "RU": "Установить как текущий проект",
+         "UA": "Встановити як поточний проект"
+      },
+      {
+         "DE": "Gesamtzahl der Tage",
+         "EN": "TotalDays",
+         "ES": "Número total de días",
+         "FR": "Nombre total de jours",
+         "GE": "TotalDays",
+         "RU": "Общее количество дней",
+         "UA": "Загальна кількість днів"
+      },
+      {
+         "DE": "Tage übrig",
+         "EN": "DaysRemained",
+         "ES": "Días restantes",
+         "FR": "Jours restants",
+         "GE": "DaysRemained",
+         "RU": "Осталось дней",
+         "UA": "Залишилось днів"
+      },
+      {
+         "DE": "Verfügbare Geschichten",
+         "EN": "AvailableStories",
+         "ES": "Historias disponibles",
+         "FR": "Histoires disponibles",
+         "GE": "AvailableStories",
+         "RU": "Доступные истории",
+         "UA": "Доступні історії"
+      },
+      {
+         "DE": "Fügen Sie einem Sprint eine Story hinzu",
+         "EN": "Add Story To Sprint",
+         "ES": "Agregar una historia a un sprint",
+         "FR": "Ajouter une histoire à un sprint",
+         "GE": "Add Story To Sprint",
+         "RU": "Добавить историю в спринт",
+         "UA": "Додати історію в спринт"
+      },
+      {
+         "DE": "Historie aus Sprint entfernen",
+         "EN": "Remove Story From Sprint",
+         "ES": "Eliminar historial de sprint",
+         "FR": "Supprimer l'historique du sprint",
+         "GE": "Remove Story From Sprint",
+         "RU": "Удалить историю из спринта",
+         "UA": "Видалити історію з спринта"
+      },
+      {
+         "DE": "Barrierefreies Geschichtenelement",
+         "EN": "AvailableStories item",
+         "ES": "Elemento de historias accesibles",
+         "FR": "Élément d'histoires accessibles",
+         "GE": "AvailableStories item",
+         "RU": "Элемент доступных историй",
+         "UA": "Елемент доступних історій"
+      },
+      {
+         "DE": "Text",
+         "EN": "Text",
+         "ES": "Texto",
+         "FR": "Texte",
+         "GE": "Text",
+         "RU": "Текст",
+         "UA": "Текст"
+      },
+      {
+         "DE": "das Datum",
+         "EN": "OnDate",
+         "ES": "la fecha",
+         "FR": "la date",
+         "GE": "OnDate",
+         "RU": "Дата",
+         "UA": "Дата"
+      },
+      {
+         "DE": "Abschnitt",
+         "EN": "Section",
+         "ES": "Sección",
+         "FR": "Section",
+         "GE": "Section",
+         "RU": "Секция",
+         "UA": "Секція"
+      },
+      {
+         "DE": "Bedeutung",
+         "EN": "Severity",
+         "ES": "Importancia",
+         "FR": "Importance",
+         "GE": "Severity",
+         "RU": "Важность",
+         "UA": "Важливість"
+      },
+      {
+         "DE": "Besprechungsnummer",
+         "EN": "MeetingNumber",
+         "ES": "Número de reunión",
+         "FR": "Numéro de réunion",
+         "GE": "MeetingNumber",
+         "RU": "Номер совещания",
+         "UA": "Номер наради"
+      },
+      {
+         "DE": "Verknüpfung",
+         "EN": "Link",
+         "ES": "Enlace",
+         "FR": "Lien",
+         "GE": "Link",
+         "RU": "Ссылка",
+         "UA": "Ссилка"
+      },
+      {
+         "DE": "Wo",
+         "EN": "Location",
+         "ES": "Dónde",
+         "FR": "Où",
+         "GE": "Location",
+         "RU": "Где",
+         "UA": "Де"
+      },
+      {
+         "DE": "Außer Datteln",
+         "EN": "ExceptDates",
+         "ES": "Excepto fechas",
+         "FR": "Hors dates",
+         "GE": "ExceptDates",
+         "RU": "За исключением дат",
+         "UA": "За виключенням дат"
+      },
+      {
+         "DE": "Startzeit",
+         "EN": "StartTime",
+         "ES": "Hora de inicio",
+         "FR": "Heure de début",
+         "GE": "StartTime",
+         "RU": "Время начала",
+         "UA": "Час початку"
+      },
+      {
+         "DE": "Endzeit",
+         "EN": "EndTime",
+         "ES": "Hora de finalización",
+         "FR": "Heure de fin",
+         "GE": "EndTime",
+         "RU": "Время окончания",
+         "UA": "Час закінчення"
+      },
+      {
+         "DE": "Täglich",
+         "EN": "EveryDay",
+         "ES": "Todos los días",
+         "FR": "Каждый день",
+         "GE": "EveryDay",
+         "RU": "Каждый день",
+         "UA": "Кожен день"
+      },
+      {
+         "DE": "Zeitraum",
+         "EN": "Period",
+         "ES": "Período",
+         "FR": "Période",
+         "GE": "Period",
+         "RU": "Период",
+         "UA": "Період"
+      },
+      {
+         "DE": "Jeder Zeitraum in Tagen",
+         "EN": "EveryPeriodInDays",
+         "ES": "Cada período en días",
+         "FR": "Chaque période en jours",
+         "GE": "EveryPeriodInDays",
+         "RU": "Каждый период в днях",
+         "UA": "Кожен період в днях"
+      },
+      {
+         "DE": "Jede Woche rein",
+         "EN": "EveryWeekAt",
+         "ES": "Cada semana en",
+         "FR": "Chaque semaine dans",
+         "GE": "EveryWeekAt",
+         "RU": "Каждую неделю в",
+         "UA": "Кожен тиждень в"
+      },
+      {
+         "DE": "Jeden Werktag in",
+         "EN": "EveryWorkingDay",
+         "ES": "Todos los días laborables en",
+         "FR": "Chaque jour ouvrable dans",
+         "GE": "EveryWorkingDay",
+         "RU": "Каждый рабочий день в",
+         "UA": "Кожен робочий день в"
+      },
+      {
+         "DE": "Einmal",
+         "EN": "Once",
+         "ES": "Una vez",
+         "FR": "Une fois que",
+         "GE": "Once",
+         "RU": "Единожды",
+         "UA": "Одноразово"
+      },
+      {
+         "DE": "Nein",
+         "EN": "None",
+         "ES": "No",
+         "FR": "Pas",
+         "GE": "None",
+         "RU": "Нет",
+         "UA": "Ні"
+      },
+      {
+         "DE": "Montag",
+         "EN": "Monday",
+         "ES": "Lunes",
+         "FR": "Lundi",
+         "GE": "Monday",
+         "RU": "Понедельник",
+         "UA": "Понеділок"
+      },
+      {
+         "DE": "Dienstag",
+         "EN": "Tuesday",
+         "ES": "Martes",
+         "FR": "Mardi",
+         "GE": "Tuesday",
+         "RU": "Вторник",
+         "UA": "Вівторок"
+      },
+      {
+         "DE": "Mittwoch",
+         "EN": "Wednesday",
+         "ES": "Miercoles",
+         "FR": "Mercredi",
+         "GE": "Wednesday",
+         "RU": "Среда",
+         "UA": "Середа"
+      },
+      {
+         "DE": "Donnerstag ",
+         "EN": "Thursday",
+         "ES": "Jueves",
+         "FR": "Jeudi",
+         "GE": "Thursday",
+         "RU": "Четверг",
+         "UA": "Четверг"
+      },
+      {
+         "DE": "Freitag",
+         "EN": "Friday",
+         "ES": "Viernes",
+         "FR": "Vendredi",
+         "GE": "Friday",
+         "RU": "Пятница",
+         "UA": "Пятниця"
+      },
+      {
+         "DE": "Samstag",
+         "EN": "Saturday",
+         "ES": "Sabado",
+         "FR": "Samedi",
+         "GE": "Saturday",
+         "RU": "Суббота",
+         "UA": "Субота"
+      },
+      {
+         "DE": "Sonntag",
+         "EN": "Sunday",
+         "ES": "Domingo",
+         "FR": "Dimanche",
+         "GE": "Sunday",
+         "RU": "Воскресенье",
+         "UA": "Неділя"
+      },
+      {
+         "DE": "Kurs starten",
+         "EN": "Start Course",
+         "ES": "Iniciar curso",
+         "FR": "Commencer le cours",
+         "GE": "Start Course",
+         "RU": "Начать курс",
+         "UA": "Почати курс"
+      },
+      {
+         "DE": "Fortfahren",
+         "EN": "Continue",
+         "ES": "Proceder",
+         "FR": "Procéder",
+         "GE": "Continue",
+         "RU": "Продолжить",
+         "UA": "Продовжити"
+      },
+      {
+         "DE": "Frage",
+         "EN": "Question",
+         "ES": "Pregunta",
+         "FR": "Question",
+         "GE": "Question",
+         "RU": "Вопрос",
+         "UA": "Питання"
+      },
+      {
+         "DE": "Art der",
+         "EN": "Type",
+         "ES": "Tipo de",
+         "FR": "Type de",
+         "GE": "Type",
+         "RU": "Тип",
+         "UA": "Тип"
+      },
+      {
+         "DE": "Umfrage hinzufügen",
+         "EN": "NewVote",
+         "ES": "Añadir un sondeo",
+         "FR": "Ajouter un sondage",
+         "GE": "NewVote",
+         "RU": "Добавить голосование",
+         "UA": "Додати голосування"
+      },
+      {
+         "DE": "Abstimmung",
+         "EN": "Vote",
+         "ES": "Votar",
+         "FR": "Voter",
+         "GE": "Vote",
+         "RU": "Голосование",
+         "UA": "Голосування"
+      },
+      {
+         "DE": "Antworten",
+         "EN": "Answers",
+         "ES": "Respuestas",
+         "FR": "Réponses",
+         "GE": "Answers",
+         "RU": "Ответы",
+         "UA": "Відповіді"
+      },
+      {
+         "DE": "Welches Paradigma halten Sie für das vielversprechendste?",
+         "EN": "What paradigm do you think more perspective ?",
+         "ES": "¿Qué paradigma crees que es el más prometedor?",
+         "FR": "Selon vous, quel paradigme est le plus prometteur ?",
+         "GE": "What paradigm do you think more perspective ?",
+         "RU": "Какая парадигма вы думаете наиболее перспективна ?",
+         "UA": "Яка парадігма на ваш погляд найбіль перспективна ?"
+      },
+      {
+         "DE": "Objekt orientierte Programmierung",
+         "EN": "Object Oriented Programming",
+         "ES": "Programación orientada a objetos",
+         "FR": "Programmation orientée objet",
+         "GE": "Object Oriented Programming",
+         "RU": "Объектно Ориентированное Программирование",
+         "UA": "Обьєктно Орієнтовано Програмування"
+      },
+      {
+         "DE": "Funktionale Programmierung",
+         "EN": "Functional Programming",
+         "ES": "Programación funcional",
+         "FR": "Programmation fonctionnelle",
+         "GE": "Functional Programming",
+         "RU": "Функциональное Программирование",
+         "UA": "Функціональне Програмування"
+      },
+      {
+         "DE": "Aspektorientierte Programmierung",
+         "EN": "Aspect Oriented Programming",
+         "ES": "Programación Orientada a Aspectos",
+         "FR": "Programmation orientée aspect",
+         "GE": "Aspect Oriented Programming",
+         "RU": "Аспектно Ориентированное Программирование",
+         "UA": "Аспектно Орієнтовно Програмування"
+      },
+      {
+         "DE": "Java oder C#",
+         "EN": "Java or C# ?",
+         "ES": "Java o C #",
+         "FR": "Java ou C# ?",
+         "GE": "Java or C# ?",
+         "RU": "Java или С# ?",
+         "UA": "Java або C# ?"
+      },
+      {
+         "DE": "C#",
+         "EN": "C#",
+         "ES": "C#",
+         "FR": "C#",
+         "GE": "C#",
+         "RU": "C#",
+         "UA": "C#"
+      },
+      {
+         "DE": "Java",
+         "EN": "Java",
+         "ES": "Java",
+         "FR": "Java",
+         "GE": "Java",
+         "RU": "Java",
+         "UA": "Java"
+      },
+      {
+         "DE": "Sonstiges",
+         "EN": "Neither",
+         "ES": "Otro",
+         "FR": "Autre",
+         "GE": "Neither",
+         "RU": "Другое",
+         "UA": "Інше"
+      },
+      {
+         "DE": "Vorlagenname",
+         "EN": "TemplateName",
+         "ES": "Nombre de la plantilla",
+         "FR": "Nom du modèle",
+         "GE": "TemplateName",
+         "RU": "Имя шаблона",
+         "UA": "Ім'я шаблона"
+      },
+      {
+         "DE": "Download",
+         "EN": "Download",
+         "ES": "Descargar",
+         "FR": "Télécharger",
+         "GE": "Download",
+         "RU": "Загрузить",
+         "UA": "Завантажити"
+      },
+      {
+         "DE": "Ein Ansatz",
+         "EN": "Approach",
+         "ES": "Un acercamiento",
+         "FR": "Une approche",
+         "GE": "Approach",
+         "RU": "Подход",
+         "UA": "Підхід"
+      },
+      {
+         "DE": "Anzahl der Codezeilen",
+         "EN": "CodeLines",
+         "ES": "Número de líneas de código",
+         "FR": "Nombre de lignes de code",
+         "GE": "CodeLines",
+         "RU": "Количество строк кода",
+         "UA": "Кількість рядків коду"
+      },
+      {
+         "DE": "Klassisch",
+         "EN": "Classic",
+         "ES": "Clásico",
+         "FR": "Classique",
+         "GE": "Classic",
+         "RU": "Классический",
+         "UA": "Класичний"
+      },
+      {
+         "DE": "Tische",
+         "EN": "Tables",
+         "ES": "Mesas",
+         "FR": "les tables",
+         "GE": "Tables",
+         "RU": "Таблицы",
+         "UA": "Таблиці"
+      },
+      {
+         "DE": "FractalPlatform",
+         "EN": "FractalPlatform",
+         "ES": "FractalPlatform",
+         "FR": "FractalPlatform",
+         "GE": "FractalPlatform",
+         "RU": "FractalPlatform",
+         "UA": "FractalPlatform"
+      },
+      {
+         "DE": "Essenzen",
+         "EN": "Entities",
+         "ES": "Esencias",
+         "FR": "Essences",
+         "GE": "Entities",
+         "RU": "Сущности",
+         "UA": "Сутності"
+      },
+      {
+         "DE": "Laufzeitname",
+         "EN": "EnvironmentName",
+         "ES": "Nombre del tiempo de ejecución",
+         "FR": "Nom d'exécution",
+         "GE": "EnvironmentName",
+         "RU": "Имя среды выполнения",
+         "UA": "Ім'я середи виконання"
+      },
+      {
+         "DE": "Eben",
+         "EN": "Level",
+         "ES": "Nivel",
+         "FR": "Niveau",
+         "GE": "Level",
+         "RU": "Уровень",
+         "UA": "Рівень"
+      },
+      {
+         "DE": "Bereitstellungen",
+         "EN": "Deployments",
+         "ES": "Despliegues",
+         "FR": "Déploiements",
+         "GE": "Deployments",
+         "RU": "Развертывания",
+         "UA": "Розгортання"
+      },
+      {
+         "DE": "Sandkasten",
+         "EN": "Sandbox",
+         "ES": "Salvadera",
+         "FR": "bac à sable",
+         "GE": "Sandbox",
+         "RU": "Песочница",
+         "UA": "Пісочниця"
+      },
+      {
+         "DE": "Bühne",
+         "EN": "Stage",
+         "ES": "Escenario",
+         "FR": "Organiser",
+         "GE": "Stage",
+         "RU": "Стейдж",
+         "UA": "Стейдж"
+      },
+      {
+         "DE": "Produktion",
+         "EN": "Prod",
+         "ES": "Producción",
+         "FR": "Production",
+         "GE": "Prod",
+         "RU": "Продакшн",
+         "UA": "Продакшин"
+      },
+      {
+         "DE": "Nicht aktiv",
+         "EN": "Inactive",
+         "ES": "No activo",
+         "FR": "Pas actif",
+         "GE": "Inactive",
+         "RU": "Не активно",
+         "UA": "Не активно"
+      },
+      {
+         "DE": "Bereitstellungstyp",
+         "EN": "DeploymentType",
+         "ES": "Tipo de implementación",
+         "FR": "Type de déploiement",
+         "GE": "DeploymentType",
+         "RU": "Тип развертывания",
+         "UA": "Тип розгортання"
+      },
+      {
+         "DE": "Protokolle",
+         "EN": "Logs",
+         "ES": "Registros",
+         "FR": "Logs",
+         "GE": "Logs",
+         "RU": "Логи",
+         "UA": "Логи"
+      },
+      {
+         "DE": "Nachricht",
+         "EN": "Message",
+         "ES": "Mensaje",
+         "FR": "Message",
+         "GE": "Message",
+         "RU": "Сообщение",
+         "UA": "Повідомлення"
+      },
+      {
+         "DE": "Call-Stack",
+         "EN": "StackTrace",
+         "ES": "Pila de llamadas",
+         "FR": "Pile d'appels",
+         "GE": "StackTrace",
+         "RU": "Стек вызовов",
+         "UA": "Стек викликів"
+      },
+      {
+         "DE": "Benutzer: \[NAME\]",
+         "EN": "User: \[NAME\]",
+         "ES": "Usuario: \[NAME\]",
+         "FR": "Utilisateur: \[NAME\]",
+         "GE": "User: \[NAME\]",
+         "RU": "Пользователь: \[NAME\]",
+         "UA": "Користувач: \[NAME\]"
+      },
+      {
+         "DE": "Nummer",
+         "EN": "Number",
+         "ES": "Número",
+         "FR": "Numéro",
+         "GE": "Number",
+         "RU": "Номер",
+         "UA": "Номер"
+      },
+      {
+         "DE": "Betreten",
+         "EN": "Login",
+         "ES": "Entrar",
+         "FR": "Entrer",
+         "GE": "Login",
+         "RU": "Войти",
+         "UA": "Увійти"
+      },
+      {
+         "DE": "Bedeutung",
+         "EN": "Value",
+         "ES": "Sentido",
+         "FR": "Sens",
+         "GE": "Value",
+         "RU": "Значение",
+         "UA": "Значення"
+      },
+      {
+         "DE": "Nützliche Links aus dem Video:",
+         "EN": "Links from the video:",
+         "ES": "Enlaces útiles del video:",
+         "FR": "Liens utiles de la vidéo:",
+         "GE": "Links from the video:",
+         "RU": "Полезные ссылки из видео:",
+         "UA": "Корисні посилання з відео:"
+      },
+      {
+         "DE": "VisualStudioCommunity",
+         "EN": "VisualStudioCommunity",
+         "ES": "VisualStudioCommunity",
+         "FR": "VisualStudioCommunity",
+         "GE": "VisualStudioCommunity",
+         "RU": "VisualStudioCommunity",
+         "UA": "VisualStudioCommunity"
+      },
+      {
+         "DE": "Beispiele",
+         "EN": "Examples",
+         "ES": "Ejemplos",
+         "FR": "Exemples",
+         "GE": "Examples",
+         "RU": "Примеры",
+         "UA": "Приклади"
+      },
+      {
+         "DE": "Nächste Lektion",
+         "EN": "NextLesson",
+         "ES": "Siguiente lección",
+         "FR": "Prochaine leçon",
+         "GE": "NextLesson",
+         "RU": "Следующий урок",
+         "UA": "Наступний урок"
+      },
+      {
+         "DE": "Vorherige Lektion",
+         "EN": "PrevLesson",
+         "ES": "Leccion previa",
+         "FR": "Leçon précédente",
+         "GE": "PrevLesson",
+         "RU": "Предыдущий урок",
+         "UA": "Попередній урок"
+      },
+      {
+         "DE": "Sprache",
+         "EN": "Language",
+         "ES": "Idioma",
+         "FR": "Langue",
+         "GE": "Language",
+         "RU": "Язык",
+         "UA": "Мова"
+      },
+      {
+         "DE": "DBKonsole",
+         "EN": "DBConsole",
+         "ES": "DBConsole",
+         "FR": "DBConsole",
+         "GE": "DBConsole",
+         "RU": "DBConsole",
+         "UA": "DBConsole"
+      },
+      {
+         "DE": "Stil",
+         "EN": "Style",
+         "ES": "Estilo",
+         "FR": "Style",
+         "GE": "Style",
+         "RU": "Стиль",
+         "UA": "Стиль"
+      },
+      {
+         "DE": "SQL",
+         "EN": "SQL",
+         "ES": "SQL",
+         "FR": "SQL",
+         "GE": "SQL",
+         "RU": "SQL",
+         "UA": "SQL"
+      },
+      {
+         "DE": "DQL",
+         "EN": "DQL",
+         "ES": "DQL",
+         "FR": "DQL",
+         "GE": "DQL",
+         "RU": "DQL",
+         "UA": "DQL"
+      },
+      {
+         "DE": "Anfrage",
+         "EN": "Query",
+         "ES": "Solicitud",
+         "FR": "Demande",
+         "GE": "Query",
+         "RU": "Запрос",
+         "UA": "Запит"
+      },
+      {
+         "DE": "Ergebnis",
+         "EN": "Result",
+         "ES": "Resultado",
+         "FR": "Résultat",
+         "GE": "Result",
+         "RU": "Результат",
+         "UA": "Результат"
+      },
+      {
+         "DE": "Laufen",
+         "EN": "Run",
+         "ES": "Correr",
+         "FR": "Courir",
+         "GE": "Run",
+         "RU": "Запустить",
+         "UA": "Запустити"
+      },
+      {
+         "DE": "Abfragesprache",
+         "EN": "QueryLanguage",
+         "ES": "Lenguaje de consulta",
+         "FR": "Langage de requête",
+         "GE": "QueryLanguage",
+         "RU": "Язык запросов",
+         "UA": "Мова запитів"
+      },
+      {
+         "DE": "DocID",
+         "EN": "DocID",
+         "ES": "DocID",
+         "FR": "DocID",
+         "GE": "DocID",
+         "RU": "DocID",
+         "UA": "DocID"
+      },
+      {
+         "DE": "Prüfung starten",
+         "EN": "Start Exam",
+         "ES": "Iniciar examen",
+         "FR": "Commencer l'examen",
+         "GE": "Start Exam",
+         "RU": "Начать экзамен",
+         "UA": "Почати екзамен"
+      },
+      {
+         "DE": "Frage \[NUMBER\]",
+         "EN": "Question\[NUMBER\]",
+         "ES": "Pregunta \[NUMBER\]",
+         "FR": "Question \[NUMBER\]",
+         "GE": "Question\[NUMBER\]",
+         "RU": "Вопрос \[NUMBER\]",
+         "UA": "Питання \[NUMBER\]"
+      },
+      {
+         "DE": "MessageBox",
+         "EN": "MessageBox",
+         "ES": "MessageBox",
+         "FR": "MessageBox",
+         "GE": "MessageBox",
+         "RU": "MessageBox",
+         "UA": "MessageBox"
+      },
+      {
+         "DE": "Chat",
+         "EN": "Chat",
+         "ES": "Chat",
+         "FR": "Chat",
+         "GE": "Chat",
+         "RU": "Chat",
+         "UA": "Chat"
+      },
+      {
+         "DE": "Messanger",
+         "EN": "Messanger",
+         "ES": "Messanger",
+         "FR": "Messanger",
+         "GE": "Messanger",
+         "RU": "Messanger",
+         "UA": "Messanger"
+      },
+      {
+         "DE": "ToDoList",
+         "EN": "ToDoList",
+         "ES": "ToDoList",
+         "FR": "ToDoList",
+         "GE": "ToDoList",
+         "RU": "ToDoList",
+         "UA": "ToDoList"
+      },
+      {
+         "DE": "Cache",
+         "EN": "Cache",
+         "ES": "Cache",
+         "FR": "Cache",
+         "GE": "Cache",
+         "RU": "Cache",
+         "UA": "Cache"
+      },
+      {
+         "DE": "Localization",
+         "EN": "Localization",
+         "ES": "Localization",
+         "FR": "Localization",
+         "GE": "Localization",
+         "RU": "Localization",
+         "UA": "Localization"
+      },
+      {
+         "DE": "OpenForm",
+         "EN": "OpenForm",
+         "ES": "OpenForm",
+         "FR": "OpenForm",
+         "GE": "OpenForm",
+         "RU": "OpenForm",
+         "UA": "OpenForm"
+      },
+      {
+         "DE": "Security",
+         "EN": "Security",
+         "ES": "Security",
+         "FR": "Security",
+         "GE": "Security",
+         "RU": "Security",
+         "UA": "Security"
+      },
+      {
+         "DE": "Welches Projekt wurde im Kurs nicht berücksichtigt?",
+         "EN": "Which project was not represented in the course yet ?",
+         "ES": "¿Qué proyecto no se consideró en el curso?",
+         "FR": "Quel projet n'a pas été abordé dans le cours ?",
+         "GE": "Which project was not represented in the course yet ?",
+         "RU": "Какой проект не был рассмотрен в курсе ?",
+         "UA": "Який проект не був розглянутий в курсі ?"
+      },
+      {
+         "DE": "Welche Art von Logik kann nicht mit AOP abgedeckt werden?",
+         "EN": "Which logic can not be covered by AOP via add dimensions ?",
+         "ES": "¿Qué tipo de lógica no se puede cubrir con AOP?",
+         "FR": "Quel type de logique ne peut pas être couvert par AOP ?",
+         "GE": "Which logic can not be covered by AOP via add dimensions ?",
+         "RU": "Какая логика не может быть покрыта с помощью AOP ?",
+         "UA": "Яка логіка не може бути покрита за допомогою AOP ?"
+      },
+      {
+         "DE": "Pagination",
+         "EN": "Pagination",
+         "ES": "Pagination",
+         "FR": "Pagination",
+         "GE": "Pagination",
+         "RU": "Pagination",
+         "UA": "Pagination"
+      },
+      {
+         "DE": "Welche Steuerung aggregiert einige Werte im Dokument?",
+         "EN": "Which control handles multiple values in a document ?",
+         "ES": "¿Qué kontrol agrega algunos valores en el documento?",
+         "FR": "Quel kontrol agrège certaines valeurs dans le document ?",
+         "GE": "Which control handles multiple values in a document ?",
+         "RU": "Какой контрол агрегирует несколько значений в документе ?",
+         "UA": "Який контрол агрегує кілька значень в документі ?"
+      },
+      {
+         "DE": "Button",
+         "EN": "Button",
+         "ES": "Button",
+         "FR": "Button",
+         "GE": "Button",
+         "RU": "Button",
+         "UA": "Button"
+      },
+      {
+         "DE": "CheckBox",
+         "EN": "CheckBox",
+         "ES": "CheckBox",
+         "FR": "CheckBox",
+         "GE": "CheckBox",
+         "RU": "CheckBox",
+         "UA": "CheckBox"
+      },
+      {
+         "DE": "Grid",
+         "EN": "Grid",
+         "ES": "Grid",
+         "FR": "Grid",
+         "GE": "Grid",
+         "RU": "Grid",
+         "UA": "Grid"
+      },
+      {
+         "DE": "TextBox",
+         "EN": "TextBox",
+         "ES": "TextBox",
+         "FR": "TextBox",
+         "GE": "TextBox",
+         "RU": "TextBox",
+         "UA": "TextBox"
+      },
+      {
+         "DE": "Welchen Aufruf verwenden wir, um eine einfache Nachricht anzuzeigen?",
+         "EN": "Which statement we use to show simple message ?",
+         "ES": "¿Qué llamada usamos para mostrar un mensaje simple?",
+         "FR": "Quel appel utilisons-nous pour afficher un message simple ?",
+         "GE": "Which statement we use to show simple message ?",
+         "RU": "Какой вызов мы используем чтобы показать простое сообщение ?",
+         "UA": "Який виклик ми використовуємо щоб вивести просте повідомлення ?"
+      },
+      {
+         "DE": "Alert",
+         "EN": "Alert",
+         "ES": "Alert",
+         "FR": "Alerte",
+         "GE": "Alert",
+         "RU": "Alert",
+         "UA": "Alert"
+      },
+      {
+         "DE": "Drucken",
+         "EN": "Print",
+         "ES": "Impresión",
+         "FR": "imprimer",
+         "GE": "Print",
+         "RU": "Print",
+         "UA": "Print"
+      },
+      {
+         "DE": "Wie viele Beispiele werden im JustExamples-Kurs behandelt?",
+         "EN": "How many examples in the JustExamples course ?",
+         "ES": "¿Cuántos ejemplos se cubren en el curso JustExamples?",
+         "FR": "Combien d'exemples sont couverts dans le cours JustExamples ?",
+         "GE": "How many examples in the JustExamples course ?",
+         "RU": "Сколько примеров рассмотрено в JustExamples курсе ?",
+         "UA": "Скільки прикладів розглянутов в JustExamples курсі ?"
+      },
+      {
+         "DE": "Fünf",
+         "EN": "Five",
+         "ES": "Cinco",
+         "FR": "Cinq",
+         "GE": "Five",
+         "RU": "Пять",
+         "UA": "П'ять"
+      },
+      {
+         "DE": "Zehn",
+         "EN": "Ten",
+         "ES": "Diez",
+         "FR": "Dix",
+         "GE": "Ten",
+         "RU": "Десять",
+         "UA": "Десять"
+      },
+      {
+         "DE": "Zwölf",
+         "EN": "Twelve",
+         "ES": "Doce",
+         "FR": "Douze",
+         "GE": "Twelve",
+         "RU": "Двенадцать",
+         "UA": "Дванадцять"
+      },
+      {
+         "DE": "Sie haben \[NUMBER\] Punkte in der JustExamples-Prüfung.",
+         "EN": "You have \[NUMBER\] points in JustExamples exam.",
+         "ES": "Tienes \[NUMBER\] puntos en el examen de JustExamples.",
+         "FR": "Vous avez \[NUMBER\] points à l'examen JustExamples.",
+         "GE": "You have \[NUMBER\] points in JustExamples exam.",
+         "RU": "У Вас \[NUMBER\] баллов в JustExamples экзамене.",
+         "UA": "Ви отримали \[NUMBER\] балів в JustExamples екзамені."
+      },
+      {
+         "DE": "Frage \[NUMBER\]",
+         "EN": "Question \[NUMBER\]",
+         "ES": "Pregunta \[NUMBER\]",
+         "FR": "Question \[NUMBER\]",
+         "GE": "Question \[NUMBER\]",
+         "RU": "Вопрос \[NUMBER\]",
+         "UA": "Питання \[NUMBER\]"
+      },
+      {
+         "DE": "Neuer Kandidat",
+         "EN": "NewCandidate",
+         "ES": "Nuevo candidato",
+         "FR": "Nouveau candidat",
+         "GE": "NewCandidate",
+         "RU": "Новый Кандидат",
+         "UA": "Новий Кандидат"
+      },
+      {
+         "DE": "Das Alter",
+         "EN": "Age",
+         "ES": "Años",
+         "FR": "Âge",
+         "GE": "Age",
+         "RU": "Возраст",
+         "UA": "Вік"
+      },
+      {
+         "DE": "Berufserfahrung",
+         "EN": "Expirience",
+         "ES": "Experiencia laboral",
+         "FR": "l'expérience professionnelle",
+         "GE": "Expirience",
+         "RU": "Опыт работы",
+         "UA": "Досвід роботи"
+      },
+      {
+         "DE": "<\[NUMBER\] Jahre",
+         "EN": "<\[NUMBER\] year",
+         "ES": "<\[NUMBER\] años",
+         "FR": "<\[NUMBER\] années",
+         "GE": "<\[NUMBER\] year",
+         "RU": "<\[NUMBER\] лет",
+         "UA": "<\[NUMBER\] років"
+      },
+      {
+         "DE": "\[NUMBER\]-\[NUMBER2\] Jahre",
+         "EN": "\[NUMBER\]-\[NUMBER2\] years",
+         "ES": "\[NUMBER\]-\[NUMBER2\] años",
+         "FR": "\[NUMBER\]-\[NUMBER2\] années",
+         "GE": "\[NUMBER\]-\[NUMBER2\] years",
+         "RU": "\[NUMBER\]-\[NUMBER2\] лет",
+         "UA": "\[NUMBER\]-\[NUMBER2\] років"
+      },
+      {
+         "DE": "> \[NUMBER\] Jahre",
+         "EN": "> \[NUMBER\] years",
+         "ES": "> \[NUMBER\] años",
+         "FR": "> \[NUMBER\] années",
+         "GE": "> \[NUMBER\] years",
+         "RU": "> \[NUMBER\] лет",
+         "UA": "> \[NUMBER\] років"
+      },
+      {
+         "DE": "Beschreibung",
+         "EN": "Details",
+         "ES": "Descripción",
+         "FR": "La description",
+         "GE": "Details",
+         "RU": "Описание",
+         "UA": "Опис"
+      },
+      {
+         "DE": "JustExamples-Prüfung",
+         "EN": "JustExamples exam",
+         "ES": "examen JustExamples",
+         "FR": "Examen JustExamples",
+         "GE": "JustExamples exam",
+         "RU": "JustExamples экзамен",
+         "UA": "JustExamples екзамен"
+      },
+      {
+         "DE": "Abschnitt in Entwicklung",
+         "EN": "Not Implemented",
+         "ES": "Sección en desarrollo",
+         "FR": "Rubrique en développement",
+         "GE": "Not Implemented",
+         "RU": "Раздел в разработке",
+         "UA": "Розділ в розробці"
+      },
+      {
+         "DE": "Abschnitte",
+         "EN": "Sections",
+         "ES": "Secciones",
+         "FR": "Sections",
+         "GE": "Sections",
+         "RU": "Секции",
+         "UA": "Секція"
+      },
+      {
+         "DE": "Punkte",
+         "EN": "Points",
+         "ES": "Puntos",
+         "FR": "Points",
+         "GE": "Points",
+         "RU": "Баллы",
+         "UA": "Бали"
+      },
+      {
+         "DE": "Neuer Chat",
+         "EN": "NewChat",
+         "ES": "Nueva conversación",
+         "FR": "Nouvelle conversation",
+         "GE": "NewChat",
+         "RU": "Новый чат",
+         "UA": "Новий чат"
+      },
+      {
+         "DE": "Was enthält es?",
+         "EN": "What Domain Object contains ?",
+         "ES": "¿Qué contiene?",
+         "FR": "Que contient-il ?",
+         "GE": "What Domain Object contains ?",
+         "RU": "Что содержит ?",
+         "UA": "Що містить Domain Object ?"
+      },
+      {
+         "DE": "Dokument und Abmessungen",
+         "EN": "Document And Dimensions",
+         "ES": "Documento y Dimensiones",
+         "FR": "Documents et cotes",
+         "GE": "Document And Dimensions",
+         "RU": "Document и Dimensions",
+         "UA": "Document та Dimensions"
+      },
+      {
+         "DE": "Dokument und Teil der Anwendungslogik",
+         "EN": "Document And part logic of Application",
+         "ES": "Documento y parte de la lógica de la aplicación",
+         "FR": "Document et partie de la logique d'application",
+         "GE": "Document And part logic of Application",
+         "RU": "Document и часть логики Application",
+         "UA": "Document та частину логіки Application"
+      },
+      {
+         "DE": "Was sind die Hauptvorteile von AOP?",
+         "EN": "Which advatages of AOP ?",
+         "ES": "¿Cuáles son los principales beneficios de AOP?",
+         "FR": "Quels sont les principaux avantages de l'AOP ?",
+         "GE": "Which advatages of AOP ?",
+         "RU": "Какие основные преимущества AOP ?",
+         "UA": "Які основні переваги АОП ?"
+      },
+      {
+         "DE": "Hinzufügen/Entfernen der Geschäftslogikschicht ohne Codeänderung",
+         "EN": "Add/Remove BL layers without rewrite code",
+         "ES": "Agregar/Eliminar capa de lógica empresarial sin modificación de código",
+         "FR": "Ajouter/supprimer une couche de logique métier sans modification de code",
+         "GE": "Add/Remove BL layers without rewrite code",
+         "RU": "Добавить/Удалить слой бизнес логики без модификации кода",
+         "UA": "Додати/Видалити прошарок бізнесс логіки без модифікації коду"
+      },
+      {
+         "DE": "Alles das oben Genannte",
+         "EN": "All above",
+         "ES": "Todo lo anterior",
+         "FR": "Tout ce qui précède",
+         "GE": "All above",
+         "RU": "Все выше перечисленное",
+         "UA": "Все перечислене"
+      },
+      {
+         "DE": "Vermische keine Logik",
+         "EN": "Dont mix logic",
+         "ES": "No mezcles la lógica",
+         "FR": "Ne mélangez pas la logique",
+         "GE": "Dont mix logic",
+         "RU": "Не смешивать логику",
+         "UA": "Не змішувати бізнесс логіку"
+      },
+      {
+         "DE": "Ist es möglich, eine AOP-Ebene der Geschäftslogik hinzuzufügen, wenn dies beim Entwerfen der Anwendung nicht berücksichtigt wurde?",
+         "EN": "Is it possible to add AOP layer if it is not designed in archetecture app ?",
+         "ES": "¿Es posible agregar una capa AOP de lógica de negocios si no se pensó al diseñar la aplicación?",
+         "FR": "Est-il possible d'ajouter une couche AOP de logique métier si cela n'a pas été pensé lors de la conception de l'application ?",
+         "GE": "Is it possible to add AOP layer if it is not designed in archetecture app ?",
+         "RU": "Возможно ли добавить АОП слой бизнес логики если это не задумывалось при проектировании приложения ?",
+         "UA": "Чи можливо додати АОП слой бізнес логіки якщо це не замислювалося при проектуванні додатку ?"
+      },
+      {
+         "DE": "Ja, es ist für die meisten AOP-Layer möglich",
+         "EN": "It is possible for most AOP layers",
+         "ES": "Sí, es posible para la mayoría de las capas AOP",
+         "FR": "Oui, c'est possible pour la plupart des couches AOP",
+         "GE": "It is possible for most AOP layers",
+         "RU": "Да, возможно для большинства АОП слоев",
+         "UA": "Так, можливо для більшості АОП прошарків"
+      },
+      {
+         "DE": "Nein unmöglich",
+         "EN": "No, we cant",
+         "ES": "No imposible",
+         "FR": "Pas impossible",
+         "GE": "No, we cant",
+         "RU": "Нет, не возможно",
+         "UA": "Ні, не можливо"
+      },
+      {
+         "DE": "ja wir können",
+         "EN": "Yes, we can",
+         "ES": "Si podemos",
+         "FR": "Oui nous pouvons",
+         "GE": "Yes, we can",
+         "RU": "Да, мы можем",
+         "UA": "Так, ми можемо"
+      },
+      {
+         "DE": "Was ist die unteilbare Basiseinheit für Speicher?",
+         "EN": "What is atomic entity for Storage ?",
+         "ES": "¿Cuál es la entidad indivisible base para el almacenamiento?",
+         "FR": "Quelle est l'entité indivisible de base pour le Stockage ?",
+         "GE": "What is atomic entity for Storage ?",
+         "RU": "Что есть базовой неделимой сущностью для Storage ?",
+         "UA": "Що є базовою неподільною сутністью для Storage ?"
+      },
+      {
+         "DE": "Attribut (Schlüssel/Wert)",
+         "EN": "Attribute (key/value)",
+         "ES": "Atributo (clave/valor)",
+         "FR": "Attribut (key/value)",
+         "GE": "Attribute (key/value)",
+         "RU": "Атрибут (key/value)",
+         "UA": "Атрибут (key/value)"
+      },
+      {
+         "DE": "Textwert",
+         "EN": "Text value",
+         "ES": "Valor de texto",
+         "FR": "Valeur de texte",
+         "GE": "Text value",
+         "RU": "Текстовое значение",
+         "UA": "Текстове значення"
+      },
+      {
+         "DE": "Was ist die maximale Dokumentengröße?",
+         "EN": "What is max size of Document ?",
+         "ES": "¿Cuál es el tamaño máximo del documento?",
+         "FR": "Quelle est la taille maximale du document ?",
+         "GE": "What is max size of Document ?",
+         "RU": "Какой максимальный размер документа ?",
+         "UA": "Який максимальний розмір документа ?"
+      },
+      {
+         "DE": "\[NUMBER\] mb",
+         "EN": "\[NUMBER\] mb",
+         "ES": "\[NUMBER\] mb",
+         "FR": "\[NUMBER\] mb",
+         "GE": "\[NUMBER\] mb",
+         "RU": "\[NUMBER\] mb",
+         "UA": "\[NUMBER\] mb"
+      },
+      {
+         "DE": "Keine Einschränkungen (abhängig von der Speicherimplementierung)",
+         "EN": "No restrictions (depends on Storage implementation)",
+         "ES": "Sin restricciones (depende de la implementación del almacenamiento)",
+         "FR": "Aucune restriction (dépend de l'implémentation du stockage)",
+         "GE": "No restrictions (depends on Storage implementation)",
+         "RU": "Нет ограничений (зависит от реализации Storage)",
+         "UA": "Немає обмежень (залежить від реалізації Storage)"
+      },
+      {
+         "DE": "Welches Dateiformat verwendet Storage für die Speicherung?",
+         "EN": "What is file format for Storage ?",
+         "ES": "¿Qué formato de archivo utiliza Storage para el almacenamiento?",
+         "FR": "Quel format de fichier le stockage utilise-t-il pour le stockage ?",
+         "GE": "What is file format for Storage ?",
+         "RU": "Какой файл формат использует Storage для хранения ?",
+         "UA": "Який формат файлу використовує Storage для зберігання ?"
+      },
+      {
+         "DE": "Binärdateien",
+         "EN": "Binary file",
+         "ES": "Binarios",
+         "FR": "Binaires",
+         "GE": "Binary file",
+         "RU": "Бинарные файлы",
+         "UA": "Бінарні файли"
+      },
+      {
+         "DE": "Implementierungsabhängig",
+         "EN": "Depends on Storage implementation",
+         "ES": "Dependiente de la implementación",
+         "FR": "Dépendant de la mise en œuvre",
+         "GE": "Depends on Storage implementation",
+         "RU": "Зависит от реализации Storage",
+         "UA": "Залежить від реалізації Storage"
+      },
+      {
+         "DE": "json-Textdatei",
+         "EN": "Json text file",
+         "ES": "archivo de texto json",
+         "FR": "fichier texte json",
+         "GE": "Json text file",
+         "RU": "Json текстовый файл",
+         "UA": "Json текстовий файл"
+      },
+      {
+         "DE": "Wozu dient DQL?",
+         "EN": "For what DQL exists ?",
+         "ES": "¿Para qué sirve DQL?",
+         "FR": "A quoi sert DQL ?",
+         "GE": "For what DQL exists ?",
+         "RU": "Для чего существует DQL ?",
+         "UA": "Для чого існує DQL ?"
+      },
+      {
+         "DE": "Anfragen stellen",
+         "EN": "Make queries",
+         "ES": "Hacer peticiones",
+         "FR": "Faire des demandes",
+         "GE": "Make queries",
+         "RU": "Делать запросы",
+         "UA": "Робити запити"
+      },
+      {
+         "DE": "Stellen Sie Anfragen und öffnen Sie Formulare",
+         "EN": "Make queries and open forms",
+         "ES": "Hacer solicitudes y abrir formularios",
+         "FR": "Faire des demandes et ouvrir des formulaires",
+         "GE": "Make queries and open forms",
+         "RU": "Делать запросы и открывать формы",
+         "UA": "Робити запити і відкривати форми"
+      },
+      {
+         "DE": "Offene Formen",
+         "EN": "Open forms",
+         "ES": "formularios abiertos",
+         "FR": "formulaires ouverts",
+         "GE": "Open forms",
+         "RU": "Открывать формы",
+         "UA": "Відкривати форми"
+      },
+      {
+         "DE": "Was sind die Hauptvorteile von DQL?",
+         "EN": "What are main advantages of DQL ?",
+         "ES": "¿Cuáles son las principales ventajas de DQL?",
+         "FR": "Quels sont les principaux avantages de DQL ?",
+         "GE": "What are main advantages of DQL ?",
+         "RU": "Какие основные преимущества DQL ?",
+         "UA": "Які основні переваги DQL ?"
+      },
+      {
+         "DE": "Verkehrsreduzierung",
+         "EN": "Reduce trafic",
+         "ES": "reducción de tráfico",
+         "FR": "Réduction du trafic",
+         "GE": "Reduce trafic",
+         "RU": "Уменьшение трафика",
+         "UA": "Зменшення трафіку"
+      },
+      {
+         "DE": "Reduzierung des Datenverkehrs und der Abfragegeschwindigkeit",
+         "EN": "Reduce trafic and speed of queries",
+         "ES": "Reducir el tráfico y la velocidad de consulta",
+         "FR": "Réduction du trafic et de la vitesse des requêtes",
+         "GE": "Reduce trafic and speed of queries",
+         "RU": "Уменьшение трафика и скорость запросов",
+         "UA": "Зменшення трафіку так швидкість запитів"
+      },
+      {
+         "DE": "Geschwindigkeit anfordern",
+         "EN": "Speed of queries",
+         "ES": "Solicitar velocidad",
+         "FR": "Vitesse de demande",
+         "GE": "Speed of queries",
+         "RU": "Скорость запросов",
+         "UA": "Швидкість запитів"
+      },
+      {
+         "DE": "Welches Paradigma verwendet DQL?",
+         "EN": "Which paradigm DQL uses ?",
+         "ES": "¿Qué paradigma utiliza DQL?",
+         "FR": "Quel paradigme utilise DQL ?",
+         "GE": "Which paradigm DQL uses ?",
+         "RU": "Какую парадигму использует DQL ?",
+         "UA": "Яку парадігму використовує DQL ?"
+      },
+      {
+         "DE": "AOP",
+         "EN": "AOP",
+         "ES": "POA",
+         "FR": "AOP",
+         "GE": "AOP",
+         "RU": "АОП",
+         "UA": "АОП"
+      },
+      {
+         "DE": "FP",
+         "EN": "FP",
+         "ES": "FP",
+         "FR": "FP",
+         "GE": "FP",
+         "RU": "ФП",
+         "UA": "ФП"
+      },
+      {
+         "DE": "OOP",
+         "EN": "OOP",
+         "ES": "Programación orientada a objetos",
+         "FR": "OOP",
+         "GE": "OOP",
+         "RU": "ООП",
+         "UA": "ООП"
+      },
+      {
+         "DE": "Wann verwenden wir Sync?",
+         "EN": "When we use Sync ?",
+         "ES": "¿Cuándo usamos Sync?",
+         "FR": "Quand utilisons-nous Sync ?",
+         "GE": "When we use Sync ?",
+         "RU": "Когда мы используем Sync ?",
+         "UA": "Коли ми використовуємо Sync ?"
+      },
+      {
+         "DE": "Wenn wir duplizierte Daten synchronisieren müssen",
+         "EN": "When we need sync any duplicated data",
+         "ES": "Cuando necesitamos sincronizar cualquier dato duplicado",
+         "FR": "Lorsque nous devons synchroniser des données dupliquées",
+         "GE": "When we need sync any duplicated data",
+         "RU": "Когда нам нужно синхронизировать любые продублированные данные",
+         "UA": "Коли нам необхідно синхронізувати любі продубльовані данні"
+      },
+      {
+         "DE": "Wann müssen wir Daten über verschiedene Hosts hinweg synchronisieren?",
+         "EN": "When we need sync data on different hosts",
+         "ES": "¿Cuándo necesitamos sincronizar datos entre diferentes hosts?",
+         "FR": "Quand devons-nous synchroniser les données entre différents hôtes",
+         "GE": "When we need sync data on different hosts",
+         "RU": "Когда нам нужно синхронизировать данные на разных хостах",
+         "UA": "Коли нам необхідно синхронізувати данні на різних хостах"
+      },
+      {
+         "DE": "Wann müssen wir Daten auf demselben Host synchronisieren?",
+         "EN": "When we need sync data on one host",
+         "ES": "¿Cuándo necesitamos sincronizar datos en el mismo host?",
+         "FR": "Quand devons-nous synchroniser les données sur le même hôte",
+         "GE": "When we need sync data on one host",
+         "RU": "Когда нам нужно синхронизировать данные на одном хосте",
+         "UA": "Коли нам необхідно синхронізувати данні на одному хості"
+      },
+      {
+         "DE": "Welche Probleme löst Sync?",
+         "EN": "Which problems are solved by Sync ?",
+         "ES": "¿Qué problemas resuelve Sync?",
+         "FR": "Quels problèmes Sync résout-il ?",
+         "GE": "Which problems are solved by Sync ?",
+         "RU": "Какие проблемы решает Sync ?",
+         "UA": "Які проблеми вирішує Sync ?"
+      },
+      {
+         "DE": "Anfängliche Synchronisierung und Datensynchronisierung",
+         "EN": "Initial sync and sync data",
+         "ES": "Sincronización inicial y sincronización de datos",
+         "FR": "Synchronisation initiale et synchronisation des données",
+         "GE": "Initial sync and sync data",
+         "RU": "Начальная синхронизация и синхронизация данных",
+         "UA": "Початкова синхронізація так синхронізація данних"
+      },
+      {
+         "DE": "Anfängliche Synchronisierung, Datensynchronisierung, Datenwiederherstellung",
+         "EN": "Initial sync, sync data, recovery data",
+         "ES": "Sincronización inicial, sincronización de datos, recuperación de datos",
+         "FR": "Synchronisation initiale, synchronisation des données, récupération des données",
+         "GE": "Initial sync, sync data, recovery data",
+         "RU": "Начальная синхронизация, синхронизация данных, восстановление данных",
+         "UA": "Початкова синхронізація, синхронізація данних, відновлення данних"
+      },
+      {
+         "DE": "Datensynchronisierung",
+         "EN": "Sync data",
+         "ES": "Sincronización de datos",
+         "FR": "Synchronisation des données",
+         "GE": "Sync data",
+         "RU": "Синхронизация данных",
+         "UA": "Синхронізація данних"
+      },
+      {
+         "DE": "Was ist die Hauptaufgabe des Masterknotens?",
+         "EN": "Which is main role of Master node ?",
+         "ES": "¿Cuál es el rol principal del Nodo Maestro?",
+         "FR": "Quel est le rôle principal du nœud maître ?",
+         "GE": "Which is main role of Master node ?",
+         "RU": "Какая основная роль Master ноды ?",
+         "UA": "Яка основна роль Master ноди ?"
+      },
+      {
+         "DE": "Daten immer aktuell halten",
+         "EN": "Contains always fresh data",
+         "ES": "Mantenga los datos siempre actualizados",
+         "FR": "Gardez les données toujours à jour",
+         "GE": "Contains always fresh data",
+         "RU": "Хранить всегда актуальные данные",
+         "UA": "Зберігати завжди актуальні данні"
+      },
+      {
+         "DE": "Führen Sie die anfängliche Synchronisation für den Slave-Knoten durch",
+         "EN": "Make initial sync for Slave node",
+         "ES": "Realice la sincronización inicial para el nodo esclavo",
+         "FR": "Effectuer la synchronisation initiale pour le nœud esclave",
+         "GE": "Make initial sync for Slave node",
+         "RU": "Выполнять начальную синхронизацию для Slave ноды",
+         "UA": "Виконувати початкову синхронізацію для Slave ноди"
+      },
+      {
+         "DE": "Seien Sie in Konfliktsituationen eine Quelle der Wahrheit",
+         "EN": "To be source of truth in conflict situations",
+         "ES": "Ser fuente de verdad en situaciones de conflicto",
+         "FR": "Être une source de vérité dans les situations de conflit",
+         "GE": "To be source of truth in conflict situations",
+         "RU": "Быть источником правды в конфликтных ситуациях",
+         "UA": "Бути джерелом правди в конфліктних ситуаціях"
+      },
+      {
+         "DE": "Die Standard-Benutzeroberfläche basiert auf",
+         "EN": "Standard UI based on",
+         "ES": "La interfaz de usuario estándar se basa en",
+         "FR": "L'interface utilisateur standard est basée sur",
+         "GE": "Standard UI based on",
+         "RU": "Стандартный UI базируется на",
+         "UA": "Стандартний UI базується на"
+      },
+      {
+         "DE": "AOP-Schichten",
+         "EN": "AOP layers",
+         "ES": "capas AOP",
+         "FR": "Couches AOP",
+         "GE": "AOP layers",
+         "RU": "АОП слоях",
+         "UA": "АОП прошарках"
+      },
+      {
+         "DE": "JSON-Dokument",
+         "EN": "JSON document",
+         "ES": "documento JSON",
+         "FR": "document JSON",
+         "GE": "JSON document",
+         "RU": "JSON документе",
+         "UA": "JSON документі"
+      },
+      {
+         "DE": "JSON-Dokument und AOP-Layer",
+         "EN": "JSON document and AOP layers",
+         "ES": "Documento JSON y capas AOP",
+         "FR": "Document JSON et couches AOP",
+         "GE": "JSON document and AOP layers",
+         "RU": "JSON документе и АОП слоях",
+         "UA": "JSON документі та AOP прошарках"
+      },
+      {
+         "DE": "Was beinhaltet Layout?",
+         "EN": "What is Layout contains ?",
+         "ES": "¿Qué contiene Layout?",
+         "FR": "Que contient Layout?",
+         "GE": "What is Layout contains ?",
+         "RU": "Что содержит Layout ?",
+         "UA": "Що містить Layout ?"
+      },
+      {
+         "DE": "Bedienelemente und Komponenten",
+         "EN": "Controls and Components",
+         "ES": "Controles y Componentes",
+         "FR": "Commandes et composants",
+         "GE": "Controls and Components",
+         "RU": "Контролы и Компоненты",
+         "UA": "Контроли та Компоненти"
+      },
+      {
+         "DE": "Steuerelemente und verschachtelte Layouts",
+         "EN": "Controls and sub Layouts ",
+         "ES": "Controles y diseños anidados",
+         "FR": "Commandes et mises en page imbriquées",
+         "GE": "Controls and sub Layouts ",
+         "RU": "Контролы и вложенные Лейауты",
+         "UA": "Контроли та вкладені Лейаути"
+      },
+      {
+         "DE": "Steuerelemente, Komponenten und verschachtelte Layouts",
+         "EN": "Controls, Components and sub Layouts",
+         "ES": "Controles, componentes y diseños anidados",
+         "FR": "Commandes, composants et mises en page imbriquées",
+         "GE": "Controls, Components and sub Layouts",
+         "RU": "Контролы, Компоненты и вложенные Лейауты",
+         "UA": "Контроли, Компоненти та вкладені Лейаути"
+      },
+      {
+         "DE": "Sie haben \[NUMBER\] Punkte in der Entwicklerprüfung erzielt.",
+         "EN": "You have \[NUMBER\] points in Developer exam.",
+         "ES": "Obtuvo \[NUMBER\] puntos en el examen de desarrollador.",
+         "FR": "Vous avez obtenu \[NUMBER\] points à l'examen de développeur.",
+         "GE": "You have \[NUMBER\] points in Developer exam.",
+         "RU": "Вы набрали \[NUMBER\] баллов в Developer экзамене.",
+         "UA": "Ви набрали \[NUMBER\] балів в Developer екзамені."
+      },
+      {
+         "DE": "Buch",
+         "EN": "Book",
+         "ES": "Libro",
+         "FR": "Livre",
+         "GE": "Book",
+         "RU": "Книга",
+         "UA": "Книга"
+      },
+      {
+         "DE": "Benutzername oder Passwort falsch.",
+         "EN": "Wrong credentials.",
+         "ES": "Nombre de usuario o contraseña incorrecta.",
+         "FR": "Identifiant ou mot de passe incorrect.",
+         "GE": "Wrong credentials.",
+         "RU": "Неправильные логин или пароль.",
+         "UA": "Неправильні логін або пароль."
+      },
+      {
+         "DE": "Altes Passwort",
+         "EN": "OldPassword",
+         "ES": "Contraseña anterior",
+         "FR": "Ancien mot de passe",
+         "GE": "OldPassword",
+         "RU": "Старый пароль",
+         "UA": "Старий пароль"
+      },
+      {
+         "DE": "Neues Passwort",
+         "EN": "NewPassword",
+         "ES": "Nueva contraseña",
+         "FR": "Nouveau mot de passe",
+         "GE": "NewPassword",
+         "RU": "Новый пароль",
+         "UA": "Новий пароль"
+      },
+      {
+         "DE": "Geschichten (\[NUMBER\])",
+         "EN": "Stories (\[NUMBER\])",
+         "ES": "Historias (\[NUMBER\])",
+         "FR": "Histoires (\[NUMBER\])",
+         "GE": "Stories (\[NUMBER\])",
+         "RU": "Stories (\[NUMBER\])",
+         "UA": "Stories (\[NUMBER\])"
+      },
+      {
+         "DE": "@Key-Attribut ist erforderlich",
+         "EN": "@Key attribute is required.",
+         "ES": "Se requiere el atributo @Key",
+         "FR": "L'attribut @Key est obligatoire",
+         "GE": "@Key attribute is required.",
+         "RU": "@Key attribute is required.",
+         "UA": "@Key attribute is required."
+      },
+      {
+         "DE": "Benutzer (\[NUMBER\])",
+         "EN": "Users (\[NUMBER\])",
+         "ES": "Usuarios (\[NUMBER\])",
+         "FR": "Utilisateurs (\[NUMBER\])",
+         "GE": "Users (\[NUMBER\])",
+         "RU": "Users (\[NUMBER\])",
+         "UA": "Users (\[NUMBER\])"
+      },
+      {
+         "DE": "Sprints (\[NUMBER\])",
+         "EN": "Sprints (\[NUMBER\])",
+         "ES": "Sprints (\[NUMBER\])",
+         "FR": "Sprints (\[NUMBER\])",
+         "GE": "Sprints (\[NUMBER\])",
+         "RU": "Sprints (\[NUMBER\])",
+         "UA": "Sprints (\[NUMBER\])"
+      },
+      {
+         "DE": "Konkurrentinnen",
+         "EN": "Competitors",
+         "ES": "Competidoras",
+         "FR": "Concurrentes",
+         "GE": "Competitors",
+         "RU": "Competitors",
+         "UA": "Competitors"
+      },
+      {
+         "DE": "Core",
+         "EN": "Core",
+         "ES": "Core",
+         "FR": "Core",
+         "GE": "Core",
+         "RU": "Core",
+         "UA": "Core"
+      },
+      {
+         "DE": "Media",
+         "EN": "Media",
+         "ES": "Media",
+         "FR": "Media",
+         "GE": "Media",
+         "RU": "Media",
+         "UA": "Media"
+      },
+      {
+         "DE": "FE",
+         "EN": "FE",
+         "ES": "FE",
+         "FR": "FE",
+         "GE": "FE",
+         "RU": "FE",
+         "UA": "FE"
+      },
+      {
+         "DE": "FractalPlatformUI",
+         "EN": "FractalPlatformUI",
+         "ES": "FractalPlatformUI",
+         "FR": "FractalPlatformUI",
+         "GE": "FractalPlatformUI",
+         "RU": "FractalPlatformUI",
+         "UA": "FractalPlatformUI"
+      },
+      {
+         "DE": "FractalPlatformCore",
+         "EN": "FractalPlatformCore",
+         "ES": "FractalPlatformCore",
+         "FR": "FractalPlatformCore",
+         "GE": "FractalPlatformCore",
+         "RU": "FractalPlatformCore",
+         "UA": "FractalPlatformCore"
+      },
+      {
+         "DE": "FractalPlatformMedia",
+         "EN": "FractalPlatformMedia",
+         "ES": "FractalPlatformMedia",
+         "FR": "FractalPlatformMedia",
+         "GE": "FractalPlatformMedia",
+         "RU": "FractalPlatformMedia",
+         "UA": "FractalPlatformMedia"
+      },
+      {
+         "DE": "Neues Proj",
+         "EN": "New Proj",
+         "ES": "Nuevo proyecto",
+         "FR": "Nouveau projet",
+         "GE": "New Proj",
+         "RU": "New Proj",
+         "UA": "New Proj"
+      },
+      {
+         "DE": "Angestellter Kandidat",
+         "EN": "HiredCandidate",
+         "ES": "Candidato contratado",
+         "FR": "EmbauchéCandidat",
+         "GE": "HiredCandidate",
+         "RU": "HiredCandidate",
+         "UA": "HiredCandidate"
+      },
+      {
+         "DE": "Projektname",
+         "EN": "ProjectName",
+         "ES": "Nombre del proyecto",
+         "FR": "Nom du projet",
+         "GE": "ProjectName",
+         "RU": "ProjectName",
+         "UA": "ProjectName"
+      },
+      {
+         "DE": "Projektartikel",
+         "EN": "Projects item",
+         "ES": "Elemento de proyectos",
+         "FR": "Élément Projets",
+         "GE": "Projects item",
+         "RU": "Projects item",
+         "UA": "Projects item"
+      },
+      {
+         "DE": "Projekte\[\[NUMBER\]\]",
+         "EN": "Projects\[\[NUMBER\]\]",
+         "ES": "Proyectos\[\[NUMBER\]\]",
+         "FR": "Projets\[\[NUMBER\]\]",
+         "GE": "Projects\[\[NUMBER\]\]",
+         "RU": "Projects\[\[NUMBER\]\]",
+         "UA": "Projects\[\[NUMBER\]\]"
+      },
+      {
+         "DE": "Teams-Element",
+         "EN": "Teams item",
+         "ES": "elemento de equipos",
+         "FR": "Élément d'équipes",
+         "GE": "Teams item",
+         "RU": "Teams item",
+         "UA": "Teams item"
+      },
+      {
+         "DE": "Mannschaften\[\[NUMBER\]\]",
+         "EN": "Teams\[\[NUMBER\]\]",
+         "ES": "equipos\[\[NUMBER\]\]",
+         "FR": "Équipes\[\[NUMBER\]\]",
+         "GE": "Teams\[\[NUMBER\]\]",
+         "RU": "Teams\[\[NUMBER\]\]",
+         "UA": "Teams\[\[NUMBER\]\]"
+      },
+      {
+         "DE": "Nachrichtenelement",
+         "EN": "Messages item",
+         "ES": "Elemento de mensajes",
+         "FR": "Élément Messages",
+         "GE": "Messages item",
+         "RU": "Messages item",
+         "UA": "Messages item"
+      },
+      {
+         "DE": "Datingspiel",
+         "EN": "DatingGame",
+         "ES": "CitasJuego",
+         "FR": "Jeu de la séduction",
+         "GE": "DatingGame",
+         "RU": "DatingGame",
+         "UA": "DatingGame"
+      },
+      {
+         "DE": "Entwickler Prüfung",
+         "EN": "Developer exam",
+         "ES": "Examen de desarrollador",
+         "FR": "Examen de développeur",
+         "GE": "Developer exam",
+         "RU": "Developer exam",
+         "UA": "Developer exam"
+      },
+      {
+         "DE": "ExceptDates-Element",
+         "EN": "ExceptDates item",
+         "ES": "Elemento ExceptDates",
+         "FR": "Élément ExceptDates",
+         "GE": "ExceptDates item",
+         "RU": "ExceptDates item",
+         "UA": "ExceptDates item"
+      },
+      {
+         "DE": "Außer Daten\[\[NUMBER\]\]",
+         "EN": "ExceptDates\[\[NUMBER\]\]",
+         "ES": "Excepto Fechas\[\[NUMBER\]\]",
+         "FR": "Hors Dates\[\[NUMBER\]\]",
+         "GE": "ExceptDates\[\[NUMBER\]\]",
+         "RU": "ExceptDates\[\[NUMBER\]\]",
+         "UA": "ExceptDates\[\[NUMBER\]\]"
+      },
+      {
+         "DE": "@Key-Attribut sollte eindeutig sein",
+         "EN": "@Key attribute should be unique.",
+         "ES": "El atributo @Key debe ser único",
+         "FR": "L'attribut @Key doit être unique",
+         "GE": "@Key attribute should be unique.",
+         "RU": "Атрибут @Key должен быть уникальным.",
+         "UA": "Атрибут @Key має бути унікальним.."
+      },
+      {
+         "DE": "Bazist",
+         "EN": "Bazist",
+         "ES": "Bazist",
+         "FR": "Bazist",
+         "GE": "Bazist",
+         "RU": "Bazist",
+         "UA": "Bazist"
+      },
+      {
+         "DE": "Lexa",
+         "EN": "Lexa",
+         "ES": "Lexa",
+         "FR": "Lexa",
+         "GE": "Lexa",
+         "RU": "Lexa",
+         "UA": "Lexa"
+      },
+      {
+         "DE": "Prüfen",
+         "EN": "Test",
+         "ES": "Prueba",
+         "FR": "Test",
+         "GE": "Test",
+         "RU": "Тест",
+         "UA": "Тест"
+      },
+      {
+         "DE": "@Key-Attribut ist nicht gleich Formel: @Formula.",
+         "EN": "@Key attribute doesn't equal formula: @Formula.",
+         "ES": "El atributo @Key no es igual a la fórmula: @Formula.",
+         "FR": "L'attribut @Key n'est pas égal à la formule : @Formula.",
+         "GE": "@Key attribute doesn't equal formula: @Formula.",
+         "RU": "Атрибут @Key не равен формуле: @Formula.",
+         "UA": "Атрибут @Key не дорівнює формулі: @Formula."
+      },
+      {
+         "DE": "Bild von links wiederholen",
+         "EN": "Repeat picture from the left",
+         "ES": "Repita la imagen de la izquierda",
+         "FR": "Répéter l'image à partir de la gauche",
+         "GE": "Repeat picture from the left",
+         "RU": "Повторіть картинку зліва",
+         "UA": "Повторіть картинку зліва"
+      },
+      {
+         "DE": "FinishRegistration",
+         "EN": "FinishRegistration",
+         "ES": "FinishRegistration",
+         "FR": "FinishRegistration",
+         "GE": "FinishRegistration",
+         "RU": "FinishRegistration",
+         "UA": "FinishRegistration"
+      },
+      {
+         "DE": "VideoLabel",
+         "EN": "VideoLabel",
+         "ES": "VideoLabel",
+         "FR": "VideoLabel",
+         "GE": "VideoLabel",
+         "RU": "VideoLabel",
+         "UA": "VideoLabel"
+      },
+      {
+         "DE": "Video",
+         "EN": "Video",
+         "ES": "Video",
+         "FR": "Vidéo",
+         "GE": "Video",
+         "RU": "Видео",
+         "UA": "Відео"
+      },
+      {
+         "DE": "Gehen Sie zu Login",
+         "EN": "Go To Login",
+         "ES": "Ir a iniciar sesión",
+         "FR": "Aller à la connexion",
+         "GE": "Go To Login",
+         "RU": "Перейти к входу в систему",
+         "UA": "Перейдіть до входу"
+      },
+      {
+         "DE": "Glückwunsch! Sie haben sich erfolgreich mit der Kundenrolle registriert.",
+         "EN": "Congratulation ! You have registered successfully with Customer role.",
+         "ES": "¡Felicidades! Se ha registrado correctamente con el rol de Cliente.",
+         "FR": "Félicitation ! Vous vous êtes enregistré avec succès avec le rôle de client.",
+         "GE": "Congradulation ! You have regisetered succesfuly with Customer role.",
+         "RU": "Поздравляем! Вы успешно зарегистрировались с ролью клиента.",
+         "UA": "Вітаю! Ви успішно зареєструвалися в ролі клієнта."
+      },
+      {
+         "DE": "Bitte sehen Sie sich das Tutorial zur Verwendung der Fractal Platform an:",
+         "EN": "Please see tutorial how to use Fractal Platform:",
+         "ES": "Consulte el tutorial Cómo usar la plataforma fractal:",
+         "FR": "Please see tutorial how to use Fractal Platform:",
+         "GE": "Please see tutorial how to use Fractal Platform:",
+         "RU": "Пожалуйста, ознакомьтесь с руководством по использованию Fractal Platform:",
+         "UA": "Будь ласка, перегляньте підручник, як використовувати Fractal Platform:"
+      },
+      {
+         "DE": "Glückwünsche ! Sie haben sich erfolgreich mit der Kundenrolle registriert.",
+         "EN": "Congratulations ! You have registered successfully with Customer role.",
+         "ES": "Felicidades ! Se ha registrado correctamente con el rol de Cliente.",
+         "FR": "Toutes nos félicitations ! Vous vous êtes inscrit avec succès avec le rôle client.",
+         "GE": "Congradulations ! You have regisetered succesfuly with Customer role.",
+         "RU": "Поздравляем! Вы успешно зарегистрировались с ролью клиента.",
+         "UA": "Щиро вітаю! Ви успішно зареєструвалися в ролі клієнта."
+      },
+      {
+         "DE": "Bereitstellungsartikel",
+         "EN": "Deployments item",
+         "ES": "Elemento de implementaciones",
+         "FR": "Élément de déploiements",
+         "GE": "Deployments item",
+         "RU": "Развертывание пункт",
+         "UA": "Пункт розгортання"
+      },
+      {
+         "DE": "VideoLibrary",
+         "EN": "VideoLibrary",
+         "ES": "VideoLibrary",
+         "FR": "VideoLibrary",
+         "GE": "VideoLibrary",
+         "RU": "VideoLibrary",
+         "UA": "VideoLibrary"
+      },
+      {
+         "DE": "Thema",
+         "EN": "Theme",
+         "ES": "Temática",
+         "FR": "Thème",
+         "GE": "Theme",
+         "RU": "Тема",
+         "UA": "Тема"
+      },
+      {
+         "DE": "Ergebnisartikel",
+         "EN": "Result item",
+         "ES": "Elemento de resultado",
+         "FR": "Élément de résultat",
+         "GE": "Result item",
+         "RU": "Элемент результата",
+         "UA": "Елемент результату"
+      },
+      {
+         "DE": "Benutzerartikel",
+         "EN": "Users item",
+         "ES": "Elemento de usuarios",
+         "FR": "Élément Utilisateurs",
+         "GE": "Users item",
+         "RU": "Пользовательский элемент",
+         "UA": "Пользовательский элемент"
+      },
+      {
+         "DE": "Benutzer\[\[NUMBER\]\]",
+         "EN": "Users\[\[NUMBER\]\]",
+         "ES": "Usuarios\[\[NUMBER\]\]",
+         "FR": "Utilisateurs\[\[NUMBER\]\]",
+         "GE": "Users\[\[NUMBER\]\]",
+         "RU": "Пользователи\[\[NUMBER\]\]",
+         "UA": "Користувачі\[\[NUMBER\]\]"
+      },
+      {
+         "DE": "Sammlungen",
+         "EN": "Collections",
+         "ES": "Colecciones",
+         "FR": "Collections",
+         "GE": "Collections",
+         "RU": "Коллекции",
+         "UA": "Колекції"
+      },
+      {
+         "DE": "Kategorie",
+         "EN": "Category",
+         "ES": "Categoría",
+         "FR": "Catégorie",
+         "GE": "Category",
+         "RU": "Категория",
+         "UA": "Категорія"
+      },
+      {
+         "DE": "Berichte",
+         "EN": "Reports",
+         "ES": "Informes",
+         "FR": "Rapports",
+         "GE": "Reports",
+         "RU": "Отчеты",
+         "UA": "Звіти"
+      },
+      {
+         "DE": "Liste der Berichte",
+         "EN": "List of Reports",
+         "ES": "Lista de Reportes",
+         "FR": "Liste des rapports",
+         "GE": "List of Reports",
+         "RU": "Список отчетов",
+         "UA": "Список звітів"
+      },
+      {
+         "DE": "LastDay",
+         "EN": "LastDay",
+         "ES": "LastDay",
+         "FR": "LastDay",
+         "GE": "LastDay",
+         "RU": "LastDay",
+         "UA": "LastDay"
+      },
+      {
+         "DE": "LastWeek",
+         "EN": "LastWeek",
+         "ES": "LastWeek",
+         "FR": "LastWeek",
+         "GE": "LastWeek",
+         "RU": "LastWeek",
+         "UA": "LastWeek"
+      },
+      {
+         "DE": "LastMonth",
+         "EN": "LastMonth",
+         "ES": "LastMonth",
+         "FR": "LastMonth",
+         "GE": "LastMonth",
+         "RU": "LastMonth",
+         "UA": "LastMonth"
+      },
+      {
+         "DE": "LastYear",
+         "EN": "LastYear",
+         "ES": "LastYear",
+         "FR": "LastYear",
+         "GE": "LastYear",
+         "RU": "LastYear",
+         "UA": "LastYear"
+      },
+      {
+         "DE": "Erfrischen",
+         "EN": "Refresh",
+         "ES": "Refrescar",
+         "FR": "Rafraîchir",
+         "GE": "Refresh",
+         "RU": "Обновить",
+         "UA": "Оновити"
+      },
+      {
+         "DE": "ControlsGallery",
+         "EN": "ControlsGallery",
+         "ES": "ControlsGallery",
+         "FR": "ControlsGallery",
+         "GE": "ControlsGallery",
+         "RU": "ControlsGallery",
+         "UA": "ControlsGallery"
+      },
+      {
+         "DE": "Forum",
+         "EN": "Forum",
+         "ES": "Foro",
+         "FR": "Forum",
+         "GE": "Forum",
+         "RU": "Форум",
+         "UA": "Форум"
+      },
+      {
+         "DE": "ManagePasswords",
+         "EN": "ManagePasswords",
+         "ES": "ManagePasswords",
+         "FR": "ManagePasswords",
+         "GE": "ManagePasswords",
+         "RU": "ManagePasswords",
+         "UA": "ManagePasswords"
+      },
+      {
+         "DE": "MultTable",
+         "EN": "MultTable",
+         "ES": "MultTable",
+         "FR": "MultTable",
+         "GE": "MultTable",
+         "RU": "MultTable",
+         "UA": "MultTable"
+      },
+      {
+         "DE": "OnlineShop",
+         "EN": "OnlineShop",
+         "ES": "OnlineShop",
+         "FR": "OnlineShop",
+         "GE": "OnlineShop",
+         "RU": "OnlineShop",
+         "UA": "OnlineShop"
+      },
+      {
+         "DE": "PhotoAlbum",
+         "EN": "PhotoAlbum",
+         "ES": "PhotoAlbum",
+         "FR": "PhotoAlbum",
+         "GE": "PhotoAlbum",
+         "RU": "PhotoAlbum",
+         "UA": "PhotoAlbum"
+      },
+      {
+         "DE": "Supermarkt",
+         "EN": "Supermarket",
+         "ES": "Supermercado",
+         "FR": "Supermarché",
+         "GE": "Supermarket",
+         "RU": "Супермаркет",
+         "UA": "Супермаркет"
+      },
+      {
+         "DE": "Taxi",
+         "EN": "Taxi",
+         "ES": "Taxi",
+         "FR": "Taxi",
+         "GE": "Taxi",
+         "RU": "Такси",
+         "UA": "Taxi"
+      },
+      {
+         "DE": "ToDo",
+         "EN": "ToDo",
+         "ES": "ToDo",
+         "FR": "ToDo",
+         "GE": "ToDo",
+         "RU": "ToDo",
+         "UA": "ToDo"
+      },
+      {
+         "DE": "ToDoIntro",
+         "EN": "ToDoIntro",
+         "ES": "ToDoIntro",
+         "FR": "ToDoIntro",
+         "GE": "ToDoIntro",
+         "RU": "ToDoIntro",
+         "UA": "ToDoIntro"
+      },
+      {
+         "DE": "ToDoWithCategories",
+         "EN": "ToDoWithCategories",
+         "ES": "ToDoWithCategories",
+         "FR": "ToDoWithCategories",
+         "GE": "ToDoWithCategories",
+         "RU": "ToDoWithCategories",
+         "UA": "ToDoWithCategories"
+      },
+      {
+         "DE": "AppName",
+         "EN": "AppName",
+         "ES": "AppName",
+         "FR": "AppName",
+         "GE": "AppName",
+         "RU": "AppName",
+         "UA": "AppName"
+      },
+      {
+         "DE": "Aktivität",
+         "EN": "Activity",
+         "ES": "Actividad",
+         "FR": "Activité",
+         "GE": "Activity",
+         "RU": "Активность",
+         "UA": "Активність"
+      },
+      {
+         "DE": "Lagerung",
+         "EN": "Storage",
+         "ES": "Almacenamiento",
+         "FR": "Stockage",
+         "GE": "Storage",
+         "RU": "Хранилище",
+         "UA": "Сховище"
+      },
+      {
+         "DE": "Fehler",
+         "EN": "Errors",
+         "ES": "Errores",
+         "FR": "les erreurs",
+         "GE": "Errors",
+         "RU": "Ошибки",
+         "UA": "Помилки"
+      },
+      {
+         "DE": "Artikel (\[NUMBER\])",
+         "EN": "Articles (\[NUMBER\])",
+         "ES": "Artículos (\[NUMBER\])",
+         "FR": "Des articles (\[NUMBER\])",
+         "GE": "Articles (\[NUMBER\])",
+         "RU": "Статьи (\[NUMBER\])",
+         "UA": "Статті (\[NUMBER\])"
+      },
+      {
+         "DE": "BTCRate",
+         "EN": "BTCRate",
+         "ES": "BTCRate",
+         "FR": "BTCRate",
+         "GE": "BTCRate",
+         "RU": "BTCRate",
+         "UA": "BTCRate"
+      },
+      {
+         "DE": "Hallo Welt",
+         "EN": "HelloWorld",
+         "ES": "Hola Mundo",
+         "FR": "Hola Mundo",
+         "GE": "HelloWorld",
+         "RU": "Привет мир",
+         "UA": "Привіт Світ"
+      },
+      {
+         "DE": "Soziales Netzwerk",
+         "EN": "SocialNetwork",
+         "ES": "Red social",
+         "FR": "Réseau social",
+         "GE": "SocialNetwork",
+         "RU": "Социальная сеть",
+         "UA": "Соціальна мережа"
+      },
+      {
+         "DE": "Anhang",
+         "EN": "Attachment",
+         "ES": "Adjunto",
+         "FR": "Pièce jointe",
+         "GE": "Attachment",
+         "RU": "Вложение",
+         "UA": "Вкладення"
+      },
+      {
+         "DE": "Derzeitiges Projekt: ",
+         "EN": "Current Project: ",
+         "ES": "Proyecto actual: ",
+         "FR": "Projet en cours: ",
+         "GE": "Current Project: ",
+         "RU": "Текущий проект: ",
+         "UA": "Поточний проект:"
+      },
+      {
+         "DE": "Sie haben kein aktuelles Projekt.",
+         "EN": "You don't have current project.",
+         "ES": "No tienes proyecto actual.",
+         "FR": "Vous n'avez pas de projet en cours.",
+         "GE": "თქვენ არ გაქვთ მიმდინარე პროექტი.",
+         "RU": "У вас нет текущего проекта.",
+         "UA": "У вас немає поточного проекту."
+      },
+      {
+         "DE": "StartCourse",
+         "EN": "StartCourse",
+         "ES": "StartCourse",
+         "FR": "StartCourse",
+         "GE": "StartCourse",
+         "RU": "StartCourse",
+         "UA": "StartCourse"
+      },
+      {
+         "DE": "",
+         "EN": "",
+         "ES": "",
+         "FR": "",
+         "GE": "",
+         "RU": "",
+         "UA": ""
+      },
+      {
+         "DE": "",
+         "EN": "",
+         "ES": "",
+         "FR": "",
+         "GE": "",
+         "RU": "",
+         "UA": ""
+      },
+      {
+         "DE": "Your session is closed.",
+         "EN": "Your session is closed.",
+         "ES": "Your session is closed.",
+         "FR": "Your session is closed.",
+         "GE": "Your session is closed.",
+         "RU": "Your session is closed.",
+         "UA": "Your session is closed."
+      },
+      {
+         "DE": "OK",
+         "EN": "OK",
+         "ES": "OK",
+         "FR": "OK",
+         "GE": "OK",
+         "RU": "OK",
+         "UA": "OK"
+      },
+      {
+         "DE": "StartExam",
+         "EN": "StartExam",
+         "ES": "StartExam",
+         "FR": "StartExam",
+         "GE": "StartExam",
+         "RU": "StartExam",
+         "UA": "StartExam"
+      },
+      {
+         "DE": "Power",
+         "EN": "Power",
+         "ES": "Power",
+         "FR": "Power",
+         "GE": "Power",
+         "RU": "Power",
+         "UA": "Power"
+      },
+      {
+         "DE": "Battery",
+         "EN": "Battery",
+         "ES": "Battery",
+         "FR": "Battery",
+         "GE": "Battery",
+         "RU": "Battery",
+         "UA": "Battery"
+      },
+      {
+         "DE": "ViewDeployments",
+         "EN": "ViewDeployments",
+         "ES": "ViewDeployments",
+         "FR": "ViewDeployments",
+         "GE": "ViewDeployments",
+         "RU": "ViewDeployments",
+         "UA": "ViewDeployments"
+      },
+      {
+         "DE": "ViewLogs",
+         "EN": "ViewLogs",
+         "ES": "ViewLogs",
+         "FR": "ViewLogs",
+         "GE": "ViewLogs",
+         "RU": "ViewLogs",
+         "UA": "ViewLogs"
+      },
+      {
+         "DE": "Logs item",
+         "EN": "Logs item",
+         "ES": "Logs item",
+         "FR": "Logs item",
+         "GE": "Logs item",
+         "RU": "Logs item",
+         "UA": "Logs item"
+      },
+      {
+         "DE": "SprintStories",
+         "EN": "SprintStories",
+         "ES": "SprintStories",
+         "FR": "SprintStories",
+         "GE": "SprintStories",
+         "RU": "SprintStories",
+         "UA": "SprintStories"
+      },
+      {
+         "DE": "Parts",
+         "EN": "Parts",
+         "ES": "Parts",
+         "FR": "Parts",
+         "GE": "Parts",
+         "RU": "Parts",
+         "UA": "Parts"
+      },
+      {
+         "DE": "Stories item",
+         "EN": "Stories item",
+         "ES": "Stories item",
+         "FR": "Stories item",
+         "GE": "Stories item",
+         "RU": "Stories item",
+         "UA": "Stories item"
+      },
+      {
+         "DE": "Electricity",
+         "EN": "Electricity",
+         "ES": "Electricity",
+         "FR": "Electricity",
+         "GE": "Electricity",
+         "RU": "Electricity",
+         "UA": "Electricity"
+      },
+      {
+         "DE": "RemainedTasks",
+         "EN": "RemainedTasks",
+         "ES": "RemainedTasks",
+         "FR": "RemainedTasks",
+         "GE": "RemainedTasks",
+         "RU": "RemainedTasks",
+         "UA": "RemainedTasks"
+      },
+      {
+         "DE": "RemainedStories",
+         "EN": "RemainedStories",
+         "ES": "RemainedStories",
+         "FR": "RemainedStories",
+         "GE": "RemainedStories",
+         "RU": "RemainedStories",
+         "UA": "RemainedStories"
+      },
+      {
+         "DE": "Columns",
+         "EN": "Columns",
+         "ES": "Columns",
+         "FR": "Columns",
+         "GE": "Columns",
+         "RU": "Columns",
+         "UA": "Columns"
+      },
+      {
+         "DE": "Email",
+         "EN": "Email",
+         "ES": "Email",
+         "FR": "Email",
+         "GE": "Email",
+         "RU": "Email",
+         "UA": "Email"
+      },
+      {
+         "DE": "Address",
+         "EN": "Address",
+         "ES": "Address",
+         "FR": "Address",
+         "GE": "Address",
+         "RU": "Address",
+         "UA": "Address"
+      },
+      {
+         "DE": "IsSendNotifications",
+         "EN": "IsSendNotifications",
+         "ES": "IsSendNotifications",
+         "FR": "IsSendNotifications",
+         "GE": "IsSendNotifications",
+         "RU": "IsSendNotifications",
+         "UA": "IsSendNotifications"
+      },
+      {
+         "DE": "Phone",
+         "EN": "Phone",
+         "ES": "Phone",
+         "FR": "Phone",
+         "GE": "Phone",
+         "RU": "Phone",
+         "UA": "Phone"
+      },
+      {
+         "DE": "Skype",
+         "EN": "Skype",
+         "ES": "Skype",
+         "FR": "Skype",
+         "GE": "Skype",
+         "RU": "Skype",
+         "UA": "Skype"
+      },
+      {
+         "DE": "Telegram",
+         "EN": "Telegram",
+         "ES": "Telegram",
+         "FR": "Telegram",
+         "GE": "Telegram",
+         "RU": "Telegram",
+         "UA": "Telegram"
+      },
+      {
+         "DE": "ChatId",
+         "EN": "ChatId",
+         "ES": "ChatId",
+         "FR": "ChatId",
+         "GE": "ChatId",
+         "RU": "ChatId",
+         "UA": "ChatId"
+      },
+      {
+         "DE": "Viber",
+         "EN": "Viber",
+         "ES": "Viber",
+         "FR": "Viber",
+         "GE": "Viber",
+         "RU": "Viber",
+         "UA": "Viber"
+      },
+      {
+         "DE": "UseForNotifications",
+         "EN": "UseForNotifications",
+         "ES": "UseForNotifications",
+         "FR": "UseForNotifications",
+         "GE": "UseForNotifications",
+         "RU": "UseForNotifications",
+         "UA": "UseForNotifications"
+      },
+      {
+         "DE": "Scenarios",
+         "EN": "Scenarios",
+         "ES": "Scenarios",
+         "FR": "Scenarios",
+         "GE": "Scenarios",
+         "RU": "Scenarios",
+         "UA": "Scenarios"
+      },
+      {
+         "DE": "New Scenario",
+         "EN": "New Scenario",
+         "ES": "New Scenario",
+         "FR": "New Scenario",
+         "GE": "New Scenario",
+         "RU": "New Scenario",
+         "UA": "New Scenario"
+      },
+      {
+         "DE": "Run Results",
+         "EN": "Run Results",
+         "ES": "Run Results",
+         "FR": "Run Results",
+         "GE": "Run Results",
+         "RU": "Run Results",
+         "UA": "Run Results"
+      },
+      {
+         "DE": "Testing",
+         "EN": "Testing",
+         "ES": "Testing",
+         "FR": "Testing",
+         "GE": "Testing",
+         "RU": "Testing",
+         "UA": "Testing"
+      },
+      {
+         "DE": "View Deployments",
+         "EN": "View Deployments",
+         "ES": "View Deployments",
+         "FR": "View Deployments",
+         "GE": "View Deployments",
+         "RU": "View Deployments",
+         "UA": "View Deployments"
+      },
+      {
+         "DE": "View Logs",
+         "EN": "View Logs",
+         "ES": "View Logs",
+         "FR": "View Logs",
+         "GE": "View Logs",
+         "RU": "View Logs",
+         "UA": "View Logs"
+      },
+      {
+         "DE": "View Apps",
+         "EN": "View Apps",
+         "ES": "View Apps",
+         "FR": "View Apps",
+         "GE": "View Apps",
+         "RU": "View Apps",
+         "UA": "View Apps"
+      },
+      {
+         "DE": "LoginOrRegister",
+         "EN": "LoginOrRegister",
+         "ES": "LoginOrRegister",
+         "FR": "LoginOrRegister",
+         "GE": "LoginOrRegister",
+         "RU": "LoginOrRegister",
+         "UA": "LoginOrRegister"
+      },
+      {
+         "DE": "RenderPage",
+         "EN": "RenderPage",
+         "ES": "RenderPage",
+         "FR": "RenderPage",
+         "GE": "RenderPage",
+         "RU": "RenderPage",
+         "UA": "RenderPage"
+      },
+      {
+         "DE": "SendTextMessage",
+         "EN": "SendTextMessage",
+         "ES": "SendTextMessage",
+         "FR": "SendTextMessage",
+         "GE": "SendTextMessage",
+         "RU": "SendTextMessage",
+         "UA": "SendTextMessage"
+      },
+      {
+         "DE": "NewScenario",
+         "EN": "NewScenario",
+         "ES": "NewScenario",
+         "FR": "NewScenario",
+         "GE": "NewScenario",
+         "RU": "NewScenario",
+         "UA": "NewScenario"
+      },
+      {
+         "DE": "Recording",
+         "EN": "Recording",
+         "ES": "Recording",
+         "FR": "Recording",
+         "GE": "Recording",
+         "RU": "Recording",
+         "UA": "Recording"
+      },
+      {
+         "DE": "Ready",
+         "EN": "Ready",
+         "ES": "Ready",
+         "FR": "Ready",
+         "GE": "Ready",
+         "RU": "Ready",
+         "UA": "Ready"
+      },
+      {
+         "DE": "Paused",
+         "EN": "Paused",
+         "ES": "Paused",
+         "FR": "Paused",
+         "GE": "Paused",
+         "RU": "Paused",
+         "UA": "Paused"
+      },
+      {
+         "DE": "CheckResult",
+         "EN": "CheckResult",
+         "ES": "CheckResult",
+         "FR": "CheckResult",
+         "GE": "CheckResult",
+         "RU": "CheckResult",
+         "UA": "CheckResult"
+      },
+      {
+         "DE": "NoExceptions",
+         "EN": "NoExceptions",
+         "ES": "NoExceptions",
+         "FR": "NoExceptions",
+         "GE": "NoExceptions",
+         "RU": "NoExceptions",
+         "UA": "NoExceptions"
+      },
+      {
+         "DE": "PageNameTheSame",
+         "EN": "PageNameTheSame",
+         "ES": "PageNameTheSame",
+         "FR": "PageNameTheSame",
+         "GE": "PageNameTheSame",
+         "RU": "PageNameTheSame",
+         "UA": "PageNameTheSame"
+      },
+      {
+         "DE": "CountAttrsTheSame",
+         "EN": "CountAttrsTheSame",
+         "ES": "CountAttrsTheSame",
+         "FR": "CountAttrsTheSame",
+         "GE": "CountAttrsTheSame",
+         "RU": "CountAttrsTheSame",
+         "UA": "CountAttrsTheSame"
+      },
+      {
+         "DE": "AttrsTheSame",
+         "EN": "AttrsTheSame",
+         "ES": "AttrsTheSame",
+         "FR": "AttrsTheSame",
+         "GE": "AttrsTheSame",
+         "RU": "AttrsTheSame",
+         "UA": "AttrsTheSame"
+      },
+      {
+         "DE": "AttrsAndValuesTheSame",
+         "EN": "AttrsAndValuesTheSame",
+         "ES": "AttrsAndValuesTheSame",
+         "FR": "AttrsAndValuesTheSame",
+         "GE": "AttrsAndValuesTheSame",
+         "RU": "AttrsAndValuesTheSame",
+         "UA": "AttrsAndValuesTheSame"
+      },
+      {
+         "DE": "PageContentTheSame",
+         "EN": "PageContentTheSame",
+         "ES": "PageContentTheSame",
+         "FR": "PageContentTheSame",
+         "GE": "PageContentTheSame",
+         "RU": "PageContentTheSame",
+         "UA": "PageContentTheSame"
+      }
+   ]
+}

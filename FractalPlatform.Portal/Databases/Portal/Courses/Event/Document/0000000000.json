@@ -1,0 +1,8 @@
+{
+  "NewComment": {
+    "OnClick": "NewCourseComment"
+  },
+  "StartCourse": {
+    "OnClick": "StartCourse"
+  }
+}

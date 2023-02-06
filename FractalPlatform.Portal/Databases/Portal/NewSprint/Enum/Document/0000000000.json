@@ -1,0 +1,8 @@
+{
+  "Status": {
+    "Items": [ "Active", "Completed" ]
+  },
+  "ProjectName": {
+    "Formula": "Projects"
+  }
+}

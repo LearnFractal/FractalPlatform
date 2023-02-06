@@ -1,0 +1,68 @@
+{
+  "Name": "",
+  "Password": "",
+  "RepeatPassword": "",
+  "Position": "",
+  "Gender": "Male",
+  "Photo": "",
+  "PromoCode": "",
+  "Capcha": "",
+  "ChangePassword": "Change Password",
+  "CurrentProject": "",
+  "Manager": {
+    "Contacts": "learn.fractal@gmail.com",
+    "Name": "Bazist"
+  },
+  "Role": {
+    "I am Customer": false,
+    "I am Developer": false,
+    "I am Guest": false
+  },
+  "Contacts": {
+    "Email": {
+      "Address": "",
+      "UseForNotifications": false
+    },
+    "Phone": {
+      "Number": "",
+      "UseForNotifications": false
+    },
+    "Skype": {
+      "Name": "",
+      "UseForNotifications": false
+    },
+    "Telegram": {
+      "ChatId": "",
+      "IsSendNotifications": false
+    },
+    "Viber": {
+      "Number": "",
+      "UseForNotifications": false
+    }
+  },
+  "Projects": [ "FE" ],
+  "Teams": [ "FractalPlatformUI" ],
+  "Notification": {
+    "Filter": {
+      "Important": true,
+      "NotImportant": true,
+      "Sections": [
+        "Login",
+        "Logout",
+        "Register",
+        "Articles",
+        "Chats",
+        "Teams",
+        "Users",
+        "Votes",
+        "Stories",
+        "Sprints",
+        "Projects",
+        "Meetings",
+        "News",
+        "Environments"
+      ]
+    }
+  },
+  "Roles": [ "Observer" ]
+}

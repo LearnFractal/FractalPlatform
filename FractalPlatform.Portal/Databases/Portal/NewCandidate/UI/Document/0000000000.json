@@ -1,0 +1,14 @@
+{
+  "Gender": {
+    "ControlType": "ComboBox"
+  },
+  "Expirience": {
+    "ControlType": "ComboBox"
+  },
+  "Details": {
+    "ControlType": "RichTextBox"
+  },
+  "IsHired": {
+    "Visible": false
+  }
+}

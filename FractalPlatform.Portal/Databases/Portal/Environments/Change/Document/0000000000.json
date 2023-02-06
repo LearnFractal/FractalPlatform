@@ -1,0 +1,10 @@
+{
+  "OnCreateDocument": "CreateDocument",
+  "Deployments": [
+    {
+      "Name": {
+        "OnInsert": "Deployment" 
+      }
+    }
+  ]
+}

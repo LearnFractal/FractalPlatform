@@ -1,0 +1,137 @@
+{
+  "Description": "Many examples",
+  "NewComment": "New Comment",
+  "Title": "Just Examples",
+  "Language": "EN",
+  "StartCourse": "Start Course",
+  "Lessons": [
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld",
+      "Name": "Lesson1",
+      "Title": "How To Build & Deploy App",
+      "Video": "HowToBuildAndDeployAppEN.mp4",
+      "VideoDescription": "Links from the video:",
+      "VisualStudioCommunity": "https://visualstudio.microsoft.com/vs/community/",
+      "Options": {
+        "NextLesson": true
+      },
+      "References": {
+        "NextLesson": "Lesson2"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDo",
+      "Name": "Lesson2",
+      "Title": "Create ToDo list",
+      "Video": "CreateToDoListEN.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson3",
+        "PrevLesson": "Lesson1"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoWithCategories",
+      "Name": "Lesson3",
+      "Title": "Create ToDo list with Categories",
+      "Video": "CreateToDoListWithCategoriesEN.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson4",
+        "PrevLesson": "Lesson2"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Vote",
+      "Name": "Lesson4",
+      "Title": "Create Vote application",
+      "Video": "CreateVoteEN.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson5",
+        "PrevLesson": "Lesson3"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Chat",
+      "Name": "Lesson5",
+      "Title": "Create Chat application",
+      "Video": "CreateChatEN.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson6",
+        "PrevLesson": "Lesson4"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/MultTable",
+      "Name": "Lesson6",
+      "Title": "Create MultTable application",
+      "Video": "CreateMultTableEN.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson7",
+        "PrevLesson": "Lesson5"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/PhotoAlbum",
+      "Name": "Lesson7",
+      "Title": "Create Photo Album application",
+      "Video": "CreatePhotoAlbumEN.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson8",
+        "PrevLesson": "Lesson6"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Login",
+      "Name": "Lesson8",
+      "Title": "Create Login application",
+      "Video": "CreateLoginEN.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson9",
+        "PrevLesson": "Lesson7"
+      }
+    },
+    {
+      "Examples": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Forum",
+      "Name": "Lesson9",
+      "Title": "Create Forum application",
+      "Video": "CreateForumEN.mp4",
+      "Options": {
+        "PrevLesson": true
+      },
+      "References": {
+        "PrevLesson": "Lesson8"
+      }
+    }
+  ],
+  "Likes": [
+    "Test",
+    "Bazist"
+  ]
+}

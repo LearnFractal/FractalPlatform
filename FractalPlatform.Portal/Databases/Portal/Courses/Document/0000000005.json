@@ -1,0 +1,126 @@
+{
+  "Description": "Developer Guide",
+  "NewComment": "New Comment",
+  "Title": "Developer Guide",
+  "Language": "RU",
+  "StartCourse": "Start Course",
+  "Lessons": [
+    {
+      "Name": "Lesson1",
+      "Title": "Introduction",
+      "Video": "IntroductionRU.mp4",
+      "Options": {
+        "NextLesson": true
+      },
+      "References": {
+        "NextLesson": "Lesson2"
+      }
+    },
+    {
+      "Name": "Lesson2",
+      "Title": "Architecture",
+      "Video": "ArchitectureRU.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson3",
+        "PrevLesson": "Lesson1"
+      }
+    },
+    {
+      "Name": "Lesson3",
+      "Title": "What is JSON ?",
+      "Video": "WhatIsJsonRU.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson4",
+        "PrevLesson": "Lesson2"
+      }
+    },
+    {
+      "Name": "Lesson4",
+      "Title": "What is AOP ?",
+      "Video": "AOPRU.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson5",
+        "PrevLesson": "Lesson3"
+      }
+    },
+    {
+      "Name": "Lesson5",
+      "Title": "How AOP Works ?",
+      "Video": "HowAOPWorksRU.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson6",
+        "PrevLesson": "Lesson4"
+      }
+    },
+    {
+      "Name": "Lesson6",
+      "Title": "Document Query Language",
+      "Video": "StorageRU.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson7",
+        "PrevLesson": "Lesson5"
+      }
+    },
+    {
+      "Name": "Lesson7",
+      "Title": "Document Query Language",
+      "Video": "DQLRU.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson8",
+        "PrevLesson": "Lesson6"
+      }
+    },
+    {
+      "Name": "Lesson8",
+      "Title": "User Interface",
+      "Video": "UIRU.mp4",
+      "Options": {
+        "NextLesson": true,
+        "PrevLesson": false
+      },
+      "References": {
+        "NextLesson": "Lesson9",
+        "PrevLesson": "Lesson7"
+      }
+    },
+    {
+      "Name": "Lesson9",
+      "Title": "Synchronization",
+      "Video": "SyncRU.mp4",
+      "Options": {
+        "PrevLesson": true
+      },
+      "References": {
+        "PrevLesson": "Lesson8"
+      }
+    }
+  ],
+  "Likes": [
+    "Test",
+    "Bazist"
+  ]
+}

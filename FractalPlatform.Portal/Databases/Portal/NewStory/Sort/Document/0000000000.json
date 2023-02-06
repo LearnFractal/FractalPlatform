@@ -1,0 +1,17 @@
+{
+  "StoryNumber": { "Index": 1 },
+  "Title": { "Index": 2 },
+  "Epic": { "Index": 3 },
+  "Who": { "Index": 4 },
+  "AssignedTo": { "Index": 5 },
+  "Status": { "Index": 6 },
+  "Description": { "Index": 7 },
+
+  "ProjectName": { "Index": 8 },
+  "SprintNumber": { "Index": 9 },
+
+  "StoryEstimated": { "Index": 10 },
+  "TaskEstimated": { "Index": 11 },
+  "TaskRemained": { "Index": 12 },
+  "Attachment": { "Index": 13 }
+}

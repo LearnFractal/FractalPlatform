@@ -1,0 +1,48 @@
+{
+  "Description": "Fractal Platform Introduction",
+  "NewComment": "New Comment",
+  "Title": "Fractal Platform Introduction",
+  "Language": "RU",
+  "StartCourse": "Start Course",
+  "Lessons": [
+    {
+      "Name": "Lesson1",
+      "Title": "Lesson 1",
+      "Video": "FractalPlatformIntroRU.mp4",
+      "Options": {
+        "NextLesson": true
+      },
+      "References": {
+        "NextLesson": "Lesson2"
+      }
+    },
+    {
+      "Name": "Lesson2",
+      "Title": "Lesson 2",
+      "Video": "FractalPlatformOverviewRU.mp4",
+      "Options": {
+        "PrevLesson": false,
+        "NextLesson": true
+      },
+      "References": {
+        "PrevLesson": "Lesson1",
+        "NextLesson": "Lesson3"
+      }
+    },
+    {
+      "Name": "Lesson3",
+      "Title": "Lesson 3",
+      "Video": "IntroductionRU.mp4",
+      "Options": {
+        "PrevLesson": true
+      },
+      "References": {
+        "PrevLesson": "Lesson2"
+      }
+    }
+  ],
+  "Likes": [
+    "Test",
+    "Bazist"
+  ]
+}

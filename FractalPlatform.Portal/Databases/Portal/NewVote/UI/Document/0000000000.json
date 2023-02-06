@@ -1,0 +1,12 @@
+{
+  "Style": "Save:Vote",
+  "Names": {
+    "Visible": false
+  },
+  "Question": {
+    "ControlType": "Label"
+  },
+  "Answers": {
+    "ControlType": "RadioButton"
+  }
+}

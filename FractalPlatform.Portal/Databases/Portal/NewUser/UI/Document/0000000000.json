@@ -1,0 +1,45 @@
+{
+  "Manager": {
+    "Visible": false
+  },
+  "Password": {
+    "Style": "Type:Password"
+  },
+  "RepeatPassword": {
+    "Style": "Type:Password"
+  },
+  "Capcha": {
+    "Style": "Type:Capcha"
+  },
+  "CurrentProject": {
+    "Visible": false
+  },
+  "Projects": {
+    "Visible": false
+  },
+  "Teams": {
+    "Visible": false
+  },
+  "Notification": {
+    "Visible": false
+  },
+  "Position": {
+    "Visible": false
+  },
+  "Photo": {
+    "ControlType": "UploadFile"
+  },
+  "Role": {
+    "ControlType": "CheckBox"
+  },
+  "Gender": {
+    "ControlType": "ComboBox"
+  },
+  "ChangePassword": {
+    "Visible": false
+  },
+  "Roles": {
+    "Visible": false
+  },
+  "Style": "Save:Register"
+}

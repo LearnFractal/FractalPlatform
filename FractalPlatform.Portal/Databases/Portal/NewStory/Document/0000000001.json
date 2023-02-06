@@ -1,0 +1,21 @@
+{
+  "StoryNumber": "",
+  "SprintNumber": "",
+  "ProjectName": "",
+  "Title": "",
+  "Description": "",
+  "Epic": "Backend",
+  "Who": "",
+  "AssignedTo": "",
+  "Status": "",
+  "StoryEstimated": "1",
+  "TaskEstimated": "1",
+  "TaskRemained": "1",
+  "Attachment": "",
+  "Tasks": [],
+  "NewTask": "New Task",
+  "Defects": [],
+  "NewDefect": "New Defect",
+  "Comments": [],
+  "NewComment": "New Comment"
+}

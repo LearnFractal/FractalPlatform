@@ -1,0 +1,32 @@
+{
+  "Enabled": false,
+  "Style": "Save:false",
+  "Status": {
+    "ControlType": "ComboBox"
+  },
+  "Level": {
+    "ControlType": "ComboBox"
+  },
+  "ViewDeployments": {
+    "ControlType": "Button",
+    "Enabled": true
+  },
+  "ViewLogs": {
+    "ControlType": "Button",
+    "Enabled": true
+  },
+  "ViewApps": {
+    "ControlType": "Button",
+    "Enabled": true
+  },
+  "Deployments": [
+    {
+      "Visible": false
+    }
+  ],
+  "Logs": [
+    {
+      "Visible": false
+    }
+  ]
+}

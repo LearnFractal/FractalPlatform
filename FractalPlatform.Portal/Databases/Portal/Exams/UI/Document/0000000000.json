@@ -1,0 +1,41 @@
+{
+  "Style": "Save:false;Hide:Likes,NewComment,StartExam,Value,Comments",
+  "Section": {
+    "Enabled": false
+  },
+  "Title": {
+    "Enabled": false,
+    "ControlType": "Label"
+  },
+  "Language": {
+    "Enabled": false
+  },
+  "Description": {
+    "Enabled": false
+  },
+  "Questions": {
+    "Visible": false
+  },
+  "Name": {
+    "Enabled": false
+  },
+  "Options": {
+    "ControlType": "RadioButton"
+  },
+  "Points": {
+    "Visible": false
+  },
+  "StartExam": {
+    "ControlType": "Button"
+  },
+  "Likes": {
+    "ControlType": "Likes"
+  },
+  "Comments": {
+    "ControlType": "Comments"
+  },
+  "NewComment": {
+    "ControlType": "Button",
+    "Enabled": true
+  }
+}

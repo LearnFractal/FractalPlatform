@@ -1,0 +1,29 @@
+﻿{
+   "AssignedTo": "Lexa",
+   "Attachment": "",
+   "Description": "Create video portal",
+   "Epic": "Backend",
+   "NewComment": "New Comment",
+   "NewDefect": "New Defect",
+   "NewTask": "New Task",
+   "ProjectName": "FractalPlatformUI",
+   "SprintNumber": "SP-0003",
+   "Status": "InProgress",
+   "StoryEstimated": "1",
+   "StoryNumber": "S-0009",
+   "TaskEstimated": "10",
+   "TaskRemained": "10",
+   "Title": "Video Portal",
+   "Who": "Bazist",
+   "Tasks": [
+      {
+         "AssignedTo": "Lexa",
+         "Description": "Create C# function to extract frame from mp4 video file",
+         "Estimated": "10",
+         "NewComment": "New Comment",
+         "Remained": "10",
+         "Status": "Closed",
+         "Title": "Extract frame from Video"
+      }
+   ]
+}

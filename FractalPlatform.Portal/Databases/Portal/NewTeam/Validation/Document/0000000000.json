@@ -1,0 +1,7 @@
+{
+  "Name": {
+    "MaxLen": "128",
+    "MinLen": "3",
+    "IsRequired": "true"
+  }
+}

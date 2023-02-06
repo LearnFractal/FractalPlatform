@@ -1,0 +1,96 @@
+﻿{
+  "AppName": "FractalPlatform",
+  "Period": "LastDay",
+  "Reports": {
+    "Activity": {
+      "Report": {
+        "Columns": [
+          {
+            "Name": "Users",
+            "Group": "Monday",
+            "Value": 10
+          },
+          {
+            "Name": "Requests",
+            "Group": "Monday",
+            "Value": 20
+          }
+        ],
+        "Title": {
+          "Name": "Amount Errors",
+          "X": "Days",
+          "Y": "Count"
+        }
+      }
+    },
+    "Storage": {
+      "Report": {
+        "Title": "Space (mb)",
+        "Parts": [
+          {
+            "Name": "Used",
+            "Value": 10
+          },
+          {
+            "Name": "Free",
+            "Value": 90
+          }
+        ]
+      }
+    },
+    "Performance": {
+      "Report": {
+        "Points": [
+          {
+            "Name": "Mon",
+            "Value": 10
+          }
+        ],
+        "Title": {
+          "Name": "Time (ms)",
+          "X": "Days",
+          "Y": "Time"
+        }
+      }
+    },
+    "Errors": {
+      "Report": {
+        "Columns": [
+          {
+            "Name": "Mon",
+            "Value": 10
+          },
+          {
+            "Name": "Tue",
+            "Value": 20
+          },
+          {
+            "Name": "Wed",
+            "Value": 30
+          },
+          {
+            "Name": "Thu",
+            "Value": 10
+          },
+          {
+            "Name": "Fri",
+            "Value": 20
+          },
+          {
+            "Name": "Sat",
+            "Value": 30
+          },
+          {
+            "Name": "Sun",
+            "Value": 10
+          }
+        ],
+        "Title": {
+          "Name": "Amount Errors",
+          "X": "Days",
+          "Y": "Count"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "Style": "Add:false;Hide:TaskEstimated,TaskRemained,Tasks,Defects,NewDefect,NewTask,NewComment,Attachment,Picture,Comments;HasLabel:true",
+  "Who": {
+    "Enabled": false
+  },
+  "StoryNumber": {
+    "Enabled": false
+  },
+  "ProjectName": {
+    "Enabled": false
+  },
+  "TaskEstimated": {
+    "Enabled": false
+  },
+  "TaskRemained": {
+    "Enabled": false
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "AssignedTo": {
+    "ControlType": "ComboBox"
+  },
+  "Epic": {
+    "ControlType": "ComboBox"
+  },
+  "Status": {
+    "ControlType": "ComboBox"
+  },
+  "Tasks": [
+    {
+      "Status": {
+        "ControlType": "ComboBox"
+      },
+      "Description": {
+        "ControlType": "RichTextBox"
+      },
+      "Comments": {
+        "ControlType": "Comments"
+      },
+      "AssignedTo": {
+        "ControlType": "ComboBox"
+      },
+      "NewComment": {
+        "ControlType": "Button"
+      }
+    }
+  ],
+  "NewTask": {
+    "ControlType": "Button"
+  },
+  "Defects": [
+    {
+      "Status": {
+        "ControlType": "ComboBox"
+      },
+      "Description": {
+        "ControlType": "RichTextBox"
+      },
+      "Picture": {
+        "ControlType": "Picture"
+      },
+      "Comments": {
+        "ControlType": "Comments"
+      },
+      "AssignedTo": {
+        "ControlType": "ComboBox"
+      },
+      "NewComment": {
+        "ControlType": "Button"
+      }
+    }
+  ],
+  "NewDefect": {
+    "ControlType": "Button"
+  },
+  "Comments": {
+    "ControlType": "Comments"
+  },
+  "NewComment": {
+    "ControlType": "Button"
+  },
+  "Attachment": {
+    "ControlType": "Link"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "TemplateName": "Vote",
+  "Title": "Vote",
+  "Description": "Vote app",
+  "Owner": "Bazist",
+  "Category": "Example",
+  "CodeLines": 33,
+  "Collections": 2,
+  "View": "http://booben.com/jupiter/?appName=Vote",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Vote"
+}

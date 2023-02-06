@@ -1,0 +1,14 @@
+{
+  "Epic": {
+    "Items": [ "Backend", "Frontend", "Documentation", "BugFix" ]
+  },
+  "Status": {
+    "Items": [ "New", "Active", "InProgress", "ReadyForQA", "Closed" ]
+  },
+  "ProjectName": {
+    "Formula": "Projects"
+  },
+  "AssignedTo": {
+    "Formula": "Users"
+  }
+}

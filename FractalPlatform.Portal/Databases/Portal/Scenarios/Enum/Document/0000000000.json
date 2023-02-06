@@ -1,0 +1,19 @@
+{
+  "AppName": {
+    "Formula": "Databases"
+  },
+  "RunEvery": {
+    "Items": [ "Never", "Day" ]
+  },
+  "CheckResult": {
+    "Items": [
+      "None",
+      "NoExceptions",
+      "PageNameTheSame",
+      "CountAttrsTheSame",
+      "AttrsTheSame",
+      "AttrsAndValuesTheSame",
+      "PageContentTheSame"
+    ]
+  }
+}

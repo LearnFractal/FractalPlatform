@@ -1,0 +1,23 @@
+{
+  "Name": {
+    "Index": 1
+  },
+  "AppName": {
+    "Index": 2
+  },
+  "OnDate": {
+    "Index": 3
+  },
+  "Status": {
+    "Index": 4
+  },
+  "CheckResult": {
+    "Index": 5
+  },
+  "RunEvery": {
+    "Index": 6
+  },
+  "Progress": {
+    "Index": 7
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "VacancyNumber": "V-0001",
+  "Position": "HTML Designer",
+  "Team": "FE",
+  "Project": "FractalPlatformUI",
+  "Skills": "HTML",
+  "Responsibilities": "Make design for HTML controls",
+  "HiredCandidate": "",
+  "IsClosed": false,
+  "Candidates": [
+    {
+      "Name": "",
+      "Gender": "",
+      "Age": 0,
+      "Expirience": "",
+      "Details": "",
+      "Contacts": "",
+      "IsHired": false
+    }
+  ],
+  "NewComment": "New Comment"
+}

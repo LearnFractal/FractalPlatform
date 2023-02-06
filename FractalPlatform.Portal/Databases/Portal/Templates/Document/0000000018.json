@@ -1,0 +1,11 @@
+{
+  "TemplateName": "ControlsGallery",
+  "Title": "Controls and Components examples",
+  "Description": "Controls and Components gallery app",
+  "Owner": "Bazist",
+  "Category": "Example",
+  "CodeLines": 84,
+  "Collections": 1,
+  "View": "http://booben.com/jupiter/?appName=ControlsGallery",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ControlsGallery"
+}

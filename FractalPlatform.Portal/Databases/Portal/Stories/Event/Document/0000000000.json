@@ -1,0 +1,25 @@
+{
+  "NewTask": {
+    "OnClick": "NewTask"
+  },
+  "NewDefect": {
+    "OnClick": "NewDefect"
+  },
+  "NewComment": {
+    "OnClick": "NewStoryComment"
+  },
+  "Tasks": [
+    {
+      "NewComment": {
+        "OnClick": "NewTaskComment"
+      }
+    }
+  ],
+  "Defects": [
+    {
+      "NewComment": {
+        "OnClick": "NewDefectComment"
+      }
+    }
+  ]
+}

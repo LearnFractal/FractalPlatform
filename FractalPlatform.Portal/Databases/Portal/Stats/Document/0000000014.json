@@ -1,0 +1,47 @@
+﻿{
+   "AppName": "PhotoAlbum",
+   "Logs": [
+      {
+         "Date": "28/01/2023 05:39:25",
+         "Errors": 3,
+         "Period": 289925,
+         "Requests": 8,
+         "TimeInMsec": 205
+      },
+      {
+         "Date": "28/01/2023 06:00:10",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 16,
+         "TimeInMsec": 130
+      },
+      {
+         "Date": "28/01/2023 14:27:59",
+         "Errors": 0,
+         "Period": 289934,
+         "Requests": 8,
+         "TimeInMsec": 134
+      },
+      {
+         "Date": "29/01/2023 16:30:36",
+         "Errors": 0,
+         "Period": 289960,
+         "Requests": 10,
+         "TimeInMsec": 73
+      },
+      {
+         "Date": "29/01/2023 17:42:52",
+         "Errors": 0,
+         "Period": 289961,
+         "Requests": 2,
+         "TimeInMsec": 42
+      },
+      {
+         "Date": "29/01/2023 19:39:20",
+         "Errors": 0,
+         "Period": 289963,
+         "Requests": 1,
+         "TimeInMsec": 42
+      }
+   ]
+}

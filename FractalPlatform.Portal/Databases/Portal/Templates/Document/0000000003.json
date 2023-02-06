@@ -1,0 +1,11 @@
+{
+  "TemplateName": "HelloWorld",
+  "Title": "Hello World",
+  "Description": "HelloWorld app",
+  "Owner": "Bazist",
+  "Category": "Example",
+  "CodeLines": 1,
+  "Collections": 0,
+  "View": "http://booben.com/jupiter/?appName=HelloWorld",
+  "Download": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld"
+}

@@ -1,0 +1,84 @@
+{
+  "MenuItems": [
+    {
+      "Text": "Assign To Me",
+      "Action": "AssignStoryToMe"
+    },
+    {
+      "Text": "Add To Current Sprint",
+      "Action": "AddToCurrentSprint"
+    },
+    {
+      "Text": "Set New Status",
+      "Action": "SetNewStatusForStory"
+    },
+    {
+      "Text": "Set Active Status",
+      "Action": "SetActiveStatusForStory"
+    },
+    {
+      "Text": "Set InProgress Status",
+      "Action": "SetInProgressStatusForStory"
+    },
+    {
+      "Text": "Set ReadyForQA Status",
+      "Action": "SetReadyForQAStatusForStory"
+    },
+    {
+      "Text": "Set Closed Status",
+      "Action": "SetClosedStatusForStory"
+    }
+  ],
+  "Tasks": {
+    "MenuItems": [
+      {
+        "Text": "Assign To Me",
+        "Action": "AssignTaskToMe"
+      },
+      {
+        "Text": "Set New Status",
+        "Action": "SetNewStatusForTask"
+      },
+      {
+        "Text": "Set Active Status",
+        "Action": "SetActiveStatusForTask"
+      },
+      {
+        "Text": "Set InProgress Status",
+        "Action": "SetInProgressStatusForTask"
+      },
+      {
+        "Text": "Set Closed Status",
+        "Action": "SetClosedStatusForTask"
+      }
+    ]
+  },
+  "Defects": {
+    "MenuItems": [
+      {
+        "Text": "Assign To Me",
+        "Action": "AssignDefectToMe"
+      },
+      {
+        "Text": "Set New Status",
+        "Action": "SetNewStatusForDefect"
+      },
+      {
+        "Text": "Set Active Status",
+        "Action": "SetActiveStatusForDefect"
+      },
+      {
+        "Text": "Set InProgress Status",
+        "Action": "SetInProgressStatusForDefect"
+      },
+      {
+        "Text": "Set ReadyForQA Status",
+        "Action": "SetReadyForQAStatusForDefect"
+      },
+      {
+        "Text": "Set Closed Status",
+        "Action": "SetClosedStatusForDefect"
+      }
+    ]
+  }
+}

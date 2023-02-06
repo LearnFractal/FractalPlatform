@@ -1,0 +1,23 @@
+{
+  "Messages": {
+    "Visible": false
+  },
+  "Who": {
+    "Enabled": false
+  },
+  "Projects": [
+    {
+      "ControlType": "ComboBox" 
+    }
+  ],
+  "Teams": [
+    {
+      "ControlType": "ComboBox" 
+    }
+  ],
+  "Users": [
+    {
+      "ControlType": "ComboBox" 
+    }
+  ]
+}

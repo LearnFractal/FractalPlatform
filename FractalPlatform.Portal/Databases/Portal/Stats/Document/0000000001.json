@@ -1,0 +1,859 @@
+﻿{
+   "AppName": "FractalPlatform",
+   "Logs": [
+      {
+         "Date": "1/21/2023 1:48:59 PM",
+         "Errors": 0,
+         "Period": 289765,
+         "Requests": 17,
+         "TimeInMsec": 3462
+      },
+      {
+         "Date": "1/21/2023 2:00:38 PM",
+         "Errors": 0,
+         "Period": 289766,
+         "Requests": 23,
+         "TimeInMsec": 10140
+      },
+      {
+         "Date": "1/22/2023 6:44:42 AM",
+         "Errors": 0,
+         "Period": 289782,
+         "Requests": 11,
+         "TimeInMsec": 2366
+      },
+      {
+         "Date": "1/22/2023 7:03:34 AM",
+         "Errors": 1,
+         "Period": 289783,
+         "Requests": 36,
+         "TimeInMsec": 7102
+      },
+      {
+         "Date": "1/22/2023 5:25:09 PM",
+         "Errors": 0,
+         "Period": 289793,
+         "Requests": 12,
+         "TimeInMsec": 6277
+      },
+      {
+         "Date": "1/22/2023 7:45:12 PM",
+         "Errors": 0,
+         "Period": 289795,
+         "Requests": 4,
+         "TimeInMsec": 2191
+      },
+      {
+         "Date": "1/23/2023 2:07:54 AM",
+         "Errors": 1,
+         "Period": 289802,
+         "Requests": 32,
+         "TimeInMsec": 136678
+      },
+      {
+         "Date": "1/23/2023 7:59:33 AM",
+         "Errors": 0,
+         "Period": 289807,
+         "Requests": 7,
+         "TimeInMsec": 1065
+      },
+      {
+         "Date": "1/23/2023 8:00:00 AM",
+         "Errors": 0,
+         "Period": 289808,
+         "Requests": 23,
+         "TimeInMsec": 1983
+      },
+      {
+         "Date": "1/23/2023 10:46:11 AM",
+         "Errors": 0,
+         "Period": 289810,
+         "Requests": 21,
+         "TimeInMsec": 6122
+      },
+      {
+         "Date": "1/23/2023 11:24:47 AM",
+         "Errors": 0,
+         "Period": 289811,
+         "Requests": 5,
+         "TimeInMsec": 2908
+      },
+      {
+         "Date": "1/23/2023 9:38:10 PM",
+         "Errors": 0,
+         "Period": 289821,
+         "Requests": 9,
+         "TimeInMsec": 11511
+      },
+      {
+         "Date": "23/01/2023 19:58:13",
+         "Errors": 0,
+         "Period": 289819,
+         "Requests": 1,
+         "TimeInMsec": 886
+      },
+      {
+         "Date": "1/24/2023 6:37:44 AM",
+         "Errors": 0,
+         "Period": 289830,
+         "Requests": 16,
+         "TimeInMsec": 3164
+      },
+      {
+         "Date": "1/24/2023 10:24:12 AM",
+         "Errors": 0,
+         "Period": 289834,
+         "Requests": 2,
+         "TimeInMsec": 977
+      },
+      {
+         "Date": "1/24/2023 2:40:05 PM",
+         "Errors": 0,
+         "Period": 289838,
+         "Requests": 70,
+         "TimeInMsec": 11519
+      },
+      {
+         "Date": "1/24/2023 3:12:13 PM",
+         "Errors": 0,
+         "Period": 289839,
+         "Requests": 125,
+         "TimeInMsec": 8399
+      },
+      {
+         "Date": "1/24/2023 4:00:00 PM",
+         "Errors": 0,
+         "Period": 289840,
+         "Requests": 94,
+         "TimeInMsec": 6039
+      },
+      {
+         "Date": "1/24/2023 5:09:36 PM",
+         "Errors": 0,
+         "Period": 289841,
+         "Requests": 13,
+         "TimeInMsec": 2148
+      },
+      {
+         "Date": "1/24/2023 7:32:25 PM",
+         "Errors": 0,
+         "Period": 289843,
+         "Requests": 21,
+         "TimeInMsec": 2413
+      },
+      {
+         "Date": "25/01/2023 01:23:55",
+         "Errors": 0,
+         "Period": 289849,
+         "Requests": 24,
+         "TimeInMsec": 1122
+      },
+      {
+         "Date": "25/01/2023 03:20:19",
+         "Errors": 0,
+         "Period": 289851,
+         "Requests": 126,
+         "TimeInMsec": 4930
+      },
+      {
+         "Date": "25/01/2023 05:47:27",
+         "Errors": 0,
+         "Period": 289853,
+         "Requests": 7,
+         "TimeInMsec": 1123
+      },
+      {
+         "Date": "1/25/2023 6:53:42 AM",
+         "Errors": 0,
+         "Period": 289854,
+         "Requests": 19,
+         "TimeInMsec": 7847
+      },
+      {
+         "Date": "1/25/2023 7:00:45 AM",
+         "Errors": 0,
+         "Period": 289855,
+         "Requests": 46,
+         "TimeInMsec": 4628
+      },
+      {
+         "Date": "1/25/2023 9:33:20 AM",
+         "Errors": 0,
+         "Period": 289857,
+         "Requests": 4,
+         "TimeInMsec": 779
+      },
+      {
+         "Date": "1/25/2023 10:41:24 AM",
+         "Errors": 0,
+         "Period": 289858,
+         "Requests": 37,
+         "TimeInMsec": 1897
+      },
+      {
+         "Date": "1/25/2023 2:53:38 PM",
+         "Errors": 0,
+         "Period": 289862,
+         "Requests": 18,
+         "TimeInMsec": 1511
+      },
+      {
+         "Date": "1/26/2023 2:40:05 AM",
+         "Errors": 0,
+         "Period": 289874,
+         "Requests": 1,
+         "TimeInMsec": 753
+      },
+      {
+         "Date": "1/26/2023 3:38:58 AM",
+         "Errors": 0,
+         "Period": 289875,
+         "Requests": 4,
+         "TimeInMsec": 1645
+      },
+      {
+         "Date": "1/26/2023 9:35:16 AM",
+         "Errors": 0,
+         "Period": 289881,
+         "Requests": 173,
+         "TimeInMsec": 9222
+      },
+      {
+         "Date": "1/26/2023 11:36:08 AM",
+         "Errors": 0,
+         "Period": 289883,
+         "Requests": 1,
+         "TimeInMsec": 461
+      },
+      {
+         "Date": "1/26/2023 5:37:57 PM",
+         "Errors": 0,
+         "Period": 289889,
+         "Requests": 21,
+         "TimeInMsec": 3319
+      },
+      {
+         "Date": "1/26/2023 6:11:47 PM",
+         "Errors": 0,
+         "Period": 289890,
+         "Requests": 40,
+         "TimeInMsec": 6497
+      },
+      {
+         "Date": "1/26/2023 8:00:05 PM",
+         "Errors": 0,
+         "Period": 289892,
+         "Requests": 176,
+         "TimeInMsec": 153085
+      },
+      {
+         "Date": "27/01/2023 03:23:27",
+         "Errors": 10,
+         "Period": 289899,
+         "Requests": 132,
+         "TimeInMsec": 8372
+      },
+      {
+         "Date": "27/01/2023 04:01:30",
+         "Errors": 5,
+         "Period": 289900,
+         "Requests": 141,
+         "TimeInMsec": 6963
+      },
+      {
+         "Date": "27/01/2023 05:25:22",
+         "Errors": 1,
+         "Period": 289901,
+         "Requests": 98,
+         "TimeInMsec": 7793
+      },
+      {
+         "Date": "27/01/2023 06:03:09",
+         "Errors": 0,
+         "Period": 289902,
+         "Requests": 89,
+         "TimeInMsec": 4581
+      },
+      {
+         "Date": "27/01/2023 07:17:29",
+         "Errors": 0,
+         "Period": 289903,
+         "Requests": 16,
+         "TimeInMsec": 1408
+      },
+      {
+         "Date": "27/01/2023 08:35:53",
+         "Errors": 0,
+         "Period": 289904,
+         "Requests": 6,
+         "TimeInMsec": 301
+      },
+      {
+         "Date": "27/01/2023 10:04:46",
+         "Errors": 0,
+         "Period": 289906,
+         "Requests": 52,
+         "TimeInMsec": 1557
+      },
+      {
+         "Date": "27/01/2023 11:05:46",
+         "Errors": 0,
+         "Period": 289907,
+         "Requests": 66,
+         "TimeInMsec": 1992
+      },
+      {
+         "Date": "27/01/2023 12:12:13",
+         "Errors": 0,
+         "Period": 289908,
+         "Requests": 100,
+         "TimeInMsec": 3786
+      },
+      {
+         "Date": "27/01/2023 13:11:33",
+         "Errors": 0,
+         "Period": 289909,
+         "Requests": 110,
+         "TimeInMsec": 2654
+      },
+      {
+         "Date": "27/01/2023 14:02:44",
+         "Errors": 0,
+         "Period": 289910,
+         "Requests": 10,
+         "TimeInMsec": 1023
+      },
+      {
+         "Date": "27/01/2023 15:01:41",
+         "Errors": 0,
+         "Period": 289911,
+         "Requests": 34,
+         "TimeInMsec": 1416
+      },
+      {
+         "Date": "27/01/2023 16:00:55",
+         "Errors": 0,
+         "Period": 289912,
+         "Requests": 51,
+         "TimeInMsec": 1909
+      },
+      {
+         "Date": "27/01/2023 18:48:54",
+         "Errors": 0,
+         "Period": 289914,
+         "Requests": 1,
+         "TimeInMsec": 76
+      },
+      {
+         "Date": "28/01/2023 02:06:56",
+         "Errors": 0,
+         "Period": 289922,
+         "Requests": 47,
+         "TimeInMsec": 1757
+      },
+      {
+         "Date": "28/01/2023 03:36:24",
+         "Errors": 0,
+         "Period": 289923,
+         "Requests": 1,
+         "TimeInMsec": 107
+      },
+      {
+         "Date": "28/01/2023 04:01:01",
+         "Errors": 0,
+         "Period": 289924,
+         "Requests": 23,
+         "TimeInMsec": 889
+      },
+      {
+         "Date": "28/01/2023 05:01:22",
+         "Errors": 0,
+         "Period": 289925,
+         "Requests": 17,
+         "TimeInMsec": 1083
+      },
+      {
+         "Date": "28/01/2023 06:00:27",
+         "Errors": 0,
+         "Period": 289926,
+         "Requests": 13,
+         "TimeInMsec": 1248
+      },
+      {
+         "Date": "28/01/2023 09:22:35",
+         "Errors": 0,
+         "Period": 289929,
+         "Requests": 20,
+         "TimeInMsec": 1491
+      },
+      {
+         "Date": "28/01/2023 11:00:54",
+         "Errors": 0,
+         "Period": 289931,
+         "Requests": 12,
+         "TimeInMsec": 856
+      },
+      {
+         "Date": "28/01/2023 12:18:11",
+         "Errors": 0,
+         "Period": 289932,
+         "Requests": 6,
+         "TimeInMsec": 552
+      },
+      {
+         "Date": "28/01/2023 13:03:09",
+         "Errors": 0,
+         "Period": 289933,
+         "Requests": 18,
+         "TimeInMsec": 1720
+      },
+      {
+         "Date": "28/01/2023 14:08:09",
+         "Errors": 0,
+         "Period": 289934,
+         "Requests": 26,
+         "TimeInMsec": 1670
+      },
+      {
+         "Date": "28/01/2023 16:23:43",
+         "Errors": 0,
+         "Period": 289936,
+         "Requests": 55,
+         "TimeInMsec": 2311
+      },
+      {
+         "Date": "28/01/2023 17:00:14",
+         "Errors": 0,
+         "Period": 289937,
+         "Requests": 1,
+         "TimeInMsec": 74
+      },
+      {
+         "Date": "28/01/2023 21:01:30",
+         "Errors": 0,
+         "Period": 289941,
+         "Requests": 38,
+         "TimeInMsec": 2122
+      },
+      {
+         "Date": "28/01/2023 22:07:08",
+         "Errors": 0,
+         "Period": 289942,
+         "Requests": 8,
+         "TimeInMsec": 877
+      },
+      {
+         "Date": "28/01/2023 23:13:32",
+         "Errors": 0,
+         "Period": 289943,
+         "Requests": 12,
+         "TimeInMsec": 1083
+      },
+      {
+         "Date": "29/01/2023 03:59:06",
+         "Errors": 0,
+         "Period": 289947,
+         "Requests": 12,
+         "TimeInMsec": 332
+      },
+      {
+         "Date": "29/01/2023 04:00:25",
+         "Errors": 0,
+         "Period": 289948,
+         "Requests": 22,
+         "TimeInMsec": 877
+      },
+      {
+         "Date": "29/01/2023 05:07:12",
+         "Errors": 1,
+         "Period": 289949,
+         "Requests": 26,
+         "TimeInMsec": 1914
+      },
+      {
+         "Date": "29/01/2023 06:02:20",
+         "Errors": 0,
+         "Period": 289950,
+         "Requests": 195,
+         "TimeInMsec": 5528
+      },
+      {
+         "Date": "29/01/2023 07:08:26",
+         "Errors": 0,
+         "Period": 289951,
+         "Requests": 58,
+         "TimeInMsec": 2463
+      },
+      {
+         "Date": "29/01/2023 08:27:26",
+         "Errors": 0,
+         "Period": 289952,
+         "Requests": 16,
+         "TimeInMsec": 772
+      },
+      {
+         "Date": "29/01/2023 09:11:46",
+         "Errors": 0,
+         "Period": 289953,
+         "Requests": 11,
+         "TimeInMsec": 650
+      },
+      {
+         "Date": "29/01/2023 11:49:04",
+         "Errors": 0,
+         "Period": 289955,
+         "Requests": 13,
+         "TimeInMsec": 666
+      },
+      {
+         "Date": "29/01/2023 12:01:23",
+         "Errors": 0,
+         "Period": 289956,
+         "Requests": 9,
+         "TimeInMsec": 109
+      },
+      {
+         "Date": "29/01/2023 15:18:15",
+         "Errors": 0,
+         "Period": 289959,
+         "Requests": 11,
+         "TimeInMsec": 636
+      },
+      {
+         "Date": "29/01/2023 16:14:28",
+         "Errors": 0,
+         "Period": 289960,
+         "Requests": 1,
+         "TimeInMsec": 207
+      },
+      {
+         "Date": "29/01/2023 17:43:20",
+         "Errors": 0,
+         "Period": 289961,
+         "Requests": 11,
+         "TimeInMsec": 660
+      },
+      {
+         "Date": "29/01/2023 18:01:05",
+         "Errors": 0,
+         "Period": 289962,
+         "Requests": 47,
+         "TimeInMsec": 1271
+      },
+      {
+         "Date": "29/01/2023 21:33:27",
+         "Errors": 0,
+         "Period": 289965,
+         "Requests": 12,
+         "TimeInMsec": 669
+      },
+      {
+         "Date": "29/01/2023 22:17:22",
+         "Errors": 0,
+         "Period": 289966,
+         "Requests": 22,
+         "TimeInMsec": 535
+      },
+      {
+         "Date": "29/01/2023 23:00:08",
+         "Errors": 0,
+         "Period": 289967,
+         "Requests": 9,
+         "TimeInMsec": 149
+      },
+      {
+         "Date": "30/01/2023 03:40:29",
+         "Errors": 0,
+         "Period": 289971,
+         "Requests": 1,
+         "TimeInMsec": 340
+      },
+      {
+         "Date": "30/01/2023 04:22:29",
+         "Errors": 0,
+         "Period": 289972,
+         "Requests": 120,
+         "TimeInMsec": 3209
+      },
+      {
+         "Date": "30/01/2023 05:10:08",
+         "Errors": 0,
+         "Period": 289973,
+         "Requests": 48,
+         "TimeInMsec": 1001
+      },
+      {
+         "Date": "30/01/2023 06:02:21",
+         "Errors": 1,
+         "Period": 289974,
+         "Requests": 2,
+         "TimeInMsec": 329
+      },
+      {
+         "Date": "30/01/2023 07:57:45",
+         "Errors": 0,
+         "Period": 289975,
+         "Requests": 18,
+         "TimeInMsec": 1121
+      },
+      {
+         "Date": "30/01/2023 08:00:31",
+         "Errors": 0,
+         "Period": 289976,
+         "Requests": 44,
+         "TimeInMsec": 1845
+      },
+      {
+         "Date": "30/01/2023 11:28:34",
+         "Errors": 0,
+         "Period": 289979,
+         "Requests": 46,
+         "TimeInMsec": 2371
+      },
+      {
+         "Date": "30/01/2023 12:00:42",
+         "Errors": 1,
+         "Period": 289980,
+         "Requests": 21,
+         "TimeInMsec": 825
+      },
+      {
+         "Date": "30/01/2023 13:00:52",
+         "Errors": 0,
+         "Period": 289981,
+         "Requests": 9,
+         "TimeInMsec": 502
+      },
+      {
+         "Date": "30/01/2023 14:06:44",
+         "Errors": 0,
+         "Period": 289982,
+         "Requests": 48,
+         "TimeInMsec": 2060
+      },
+      {
+         "Date": "30/01/2023 15:01:59",
+         "Errors": 0,
+         "Period": 289983,
+         "Requests": 49,
+         "TimeInMsec": 2717
+      },
+      {
+         "Date": "30/01/2023 16:36:53",
+         "Errors": 0,
+         "Period": 289984,
+         "Requests": 36,
+         "TimeInMsec": 1178
+      },
+      {
+         "Date": "30/01/2023 18:17:47",
+         "Errors": 1,
+         "Period": 289986,
+         "Requests": 182,
+         "TimeInMsec": 8089
+      },
+      {
+         "Date": "30/01/2023 19:09:42",
+         "Errors": 0,
+         "Period": 289987,
+         "Requests": 8,
+         "TimeInMsec": 521
+      },
+      {
+         "Date": "30/01/2023 21:57:33",
+         "Errors": 0,
+         "Period": 289989,
+         "Requests": 2,
+         "TimeInMsec": 559
+      },
+      {
+         "Date": "31/01/2023 06:31:07",
+         "Errors": 0,
+         "Period": 289998,
+         "Requests": 4,
+         "TimeInMsec": 691
+      },
+      {
+         "Date": "31/01/2023 08:35:55",
+         "Errors": 0,
+         "Period": 290000,
+         "Requests": 24,
+         "TimeInMsec": 1094
+      },
+      {
+         "Date": "31/01/2023 09:49:36",
+         "Errors": 0,
+         "Period": 290001,
+         "Requests": 42,
+         "TimeInMsec": 1584
+      },
+      {
+         "Date": "31/01/2023 10:00:01",
+         "Errors": 0,
+         "Period": 290002,
+         "Requests": 43,
+         "TimeInMsec": 1049
+      },
+      {
+         "Date": "31/01/2023 11:34:58",
+         "Errors": 0,
+         "Period": 290003,
+         "Requests": 27,
+         "TimeInMsec": 1166
+      },
+      {
+         "Date": "31/01/2023 12:08:41",
+         "Errors": 0,
+         "Period": 290004,
+         "Requests": 23,
+         "TimeInMsec": 1162
+      },
+      {
+         "Date": "31/01/2023 13:23:31",
+         "Errors": 0,
+         "Period": 290005,
+         "Requests": 77,
+         "TimeInMsec": 2822
+      },
+      {
+         "Date": "31/01/2023 14:20:23",
+         "Errors": 0,
+         "Period": 290006,
+         "Requests": 31,
+         "TimeInMsec": 2687
+      },
+      {
+         "Date": "31/01/2023 15:12:27",
+         "Errors": 0,
+         "Period": 290007,
+         "Requests": 17,
+         "TimeInMsec": 1731
+      },
+      {
+         "Date": "31/01/2023 16:09:34",
+         "Errors": 3,
+         "Period": 290008,
+         "Requests": 62,
+         "TimeInMsec": 4875
+      },
+      {
+         "Date": "31/01/2023 17:00:00",
+         "Errors": 1,
+         "Period": 290009,
+         "Requests": 48,
+         "TimeInMsec": 11934
+      },
+      {
+         "Date": "1/31/2023 6:00:01 PM",
+         "Errors": 1,
+         "Period": 290010,
+         "Requests": 62,
+         "TimeInMsec": 34401
+      },
+      {
+         "Date": "2/1/2023 9:17:11 AM",
+         "Errors": 0,
+         "Period": 290025,
+         "Requests": 40,
+         "TimeInMsec": 2817
+      },
+      {
+         "Date": "2/1/2023 10:35:59 AM",
+         "Errors": 0,
+         "Period": 290026,
+         "Requests": 1,
+         "TimeInMsec": 509
+      },
+      {
+         "Date": "2/1/2023 2:14:29 PM",
+         "Errors": 0,
+         "Period": 290030,
+         "Requests": 7,
+         "TimeInMsec": 913
+      },
+      {
+         "Date": "2/1/2023 3:00:57 PM",
+         "Errors": 0,
+         "Period": 290031,
+         "Requests": 25,
+         "TimeInMsec": 84385
+      },
+      {
+         "Date": "2/1/2023 4:39:15 PM",
+         "Errors": 0,
+         "Period": 290032,
+         "Requests": 4,
+         "TimeInMsec": 3399
+      },
+      {
+         "Date": "2/1/2023 5:38:10 PM",
+         "Errors": 0,
+         "Period": 290033,
+         "Requests": 13,
+         "TimeInMsec": 4452
+      },
+      {
+         "Date": "2/2/2023 5:52:30 AM",
+         "Errors": 0,
+         "Period": 290045,
+         "Requests": 13,
+         "TimeInMsec": 1686
+      },
+      {
+         "Date": "2/2/2023 1:58:54 PM",
+         "Errors": 0,
+         "Period": 290053,
+         "Requests": 8,
+         "TimeInMsec": 1164
+      },
+      {
+         "Date": "2/2/2023 6:19:36 PM",
+         "Errors": 0,
+         "Period": 290058,
+         "Requests": 2,
+         "TimeInMsec": 2243
+      },
+      {
+         "Date": "2/3/2023 7:25:57 AM",
+         "Errors": 0,
+         "Period": 290071,
+         "Requests": 35,
+         "TimeInMsec": 5291
+      },
+      {
+         "Date": "2/3/2023 8:06:23 AM",
+         "Errors": 0,
+         "Period": 290072,
+         "Requests": 18,
+         "TimeInMsec": 1901
+      },
+      {
+         "Date": "2/3/2023 10:21:05 AM",
+         "Errors": 0,
+         "Period": 290074,
+         "Requests": 17,
+         "TimeInMsec": 2906
+      },
+      {
+         "Date": "2/3/2023 3:56:30 PM",
+         "Errors": 0,
+         "Period": 290079,
+         "Requests": 9,
+         "TimeInMsec": 1116
+      },
+      {
+         "Date": "2/3/2023 4:18:49 PM",
+         "Errors": 0,
+         "Period": 290080,
+         "Requests": 13,
+         "TimeInMsec": 6982
+      },
+      {
+         "Date": "2/3/2023 8:03:48 PM",
+         "Errors": 0,
+         "Period": 290084,
+         "Requests": 2,
+         "TimeInMsec": 932
+      }
+   ]
+}

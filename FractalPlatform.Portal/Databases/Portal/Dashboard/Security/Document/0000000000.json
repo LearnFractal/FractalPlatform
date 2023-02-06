@@ -1,0 +1,302 @@
+{
+  "User": {
+    "Users": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Teams": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "NewVacancy": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer",
+          "Developer"
+        ]
+      }
+    },
+    "Vacancies": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  },
+  "Story": {
+    "NewStory": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer",
+          "Developer"
+        ]
+      }
+    },
+    "Stories": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "MyStories": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer"
+        ]
+      }
+    }
+  },
+  "Sprint": {
+    "Sprints": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "NewSprint": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer",
+          "Developer"
+        ]
+      }
+    },
+    "CurrentSprint": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  },
+  "Project": {
+    "NewProject": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer"
+        ]
+      }
+    },
+    "Projects": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "NewSpecification": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer",
+          "Developer"
+        ]
+      }
+    },
+    "Specifications": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  },
+  "Messages": {
+    "NewNews": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer"
+        ]
+      }
+    },
+    "News": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Notifications": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Chats": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  },
+  "Meetings": {
+    "Calendar": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Meetings": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "NewMeeting": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer"
+        ]
+      }
+    }
+  },
+  "Learn": {
+    "NewArticle": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer"
+        ]
+      }
+    },
+    "Articles": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Courses": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Exams": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  },
+  "Report": {
+    "Votes": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Raiting": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Report": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  },
+  "Environment": {
+    "Templates": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "NewEnvironment": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer",
+          "Developer",
+          "Customer"
+        ]
+      }
+    },
+    "Environments": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+
+    "DBConsole": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer",
+          "Developer",
+          "Customer"
+        ]
+      }
+    },
+    "Report": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  },
+  "Testing": {
+    "Scenarios": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "NewScenario": {
+      "Disallow": {
+        "Read": [
+          "Guest",
+          "Observer"
+        ]
+      }
+    },
+    "RunResults": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    },
+    "Report": {
+      "Disallow": {
+        "Read": [
+          "Guest"
+        ]
+      }
+    }
+  }
+}

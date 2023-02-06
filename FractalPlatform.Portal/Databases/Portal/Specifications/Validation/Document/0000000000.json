@@ -1,0 +1,28 @@
+{
+  "ProjectName": {
+    "MaxLen": "128",
+    "MinLen": "3",
+    "IsRequired": "true"
+  },
+  "Title": {
+    "MaxLen": "128",
+    "MinLen": "3",
+    "IsRequired": "true"
+  },
+  "Owner": {
+    "IsRequired": "true"
+  },
+  "Status": {
+    "IsRequired": "true"
+  },
+  "StartDate": {
+    "IsRequired": "true"
+  },
+  "EndDate": {
+    "IsRequired": "true"
+  },
+  "Functionality": {
+    "BaseFunctionality": { "IsRequired": true },
+    "TargetAudience": { "IsRequired": true }
+  }
+}

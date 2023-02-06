@@ -1,0 +1,6 @@
+{
+  "Style": "Save:Create;",
+  "OnDate": { "Enabled": false },
+  "Status": { "Enabled": false },
+  "Progress": { "Visible": false }
+}

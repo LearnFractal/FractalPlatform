@@ -1,0 +1,29 @@
+{
+  "EnvironmentName": {
+    "Index": 1
+  },
+  "Level": {
+    "Index": 2
+  },
+  "Status": {
+    "Index": 3
+  },
+  "Power": {
+    "Index": 4
+  },
+  "Battery": {
+    "Index": 5
+  },
+  "Description": {
+    "Index": 6
+  },
+  "ViewDeployments": {
+    "Index": 7
+  },
+  "ViewLogs": {
+    "Index": 8
+  },
+  "ViewApps": {
+    "Index": 9
+  }
+}

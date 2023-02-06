@@ -1,0 +1,17 @@
+{
+  "Status": {
+    "ControlType": "ComboBox"
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "Picture": {
+    "ControlType": "UploadFile"
+  },
+  "AssignedTo": {
+    "ControlType": "ComboBox"
+  },
+  "NewComment": {
+    "Visible": false
+  }
+}

@@ -1,0 +1,12 @@
+﻿{
+   "AppName": "ToDoOstap",
+   "Logs": [
+      {
+         "Date": "26/01/2023 18:03:13",
+         "Errors": 0,
+         "Period": 289890,
+         "Requests": 15,
+         "TimeInMsec": 25
+      }
+   ]
+}

@@ -1,0 +1,35 @@
+{
+  "Description": {
+    "IsRequired": true,
+    "MinLen": 3
+  },
+  "Epic": {
+    "IsRequired": true
+  },
+  "Status": {
+    "IsRequired": true
+  },
+  "StoryEstimated": {
+    "IsRequired": true,
+    "MinLen": 1,
+    "MaxLen": 3
+  },
+  "TaskEstimated": {
+    "MaxLen": 3,
+    "MinLen": 1,
+    "IsRequired": true
+  },
+  "TaskRemained": {
+    "IsRequired": true,
+    "MaxLen": 3,
+    "MinLen": 1
+  },
+  "Title": {
+    "MaxLen": 128,
+    "MinLen": 3,
+    "IsRequired": true
+  },
+  "Who": {
+    "IsRequired": true
+  }
+}
