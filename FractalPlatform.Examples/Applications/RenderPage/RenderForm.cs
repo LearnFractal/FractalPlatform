@@ -1,10 +1,8 @@
-﻿using BigDoc.Client.UI.DOM.Controls;
-using System.Text;
+﻿using System.Text;
 using BigDoc.Client.App;
-using BigDoc.Client.UI.DOM.Controls.Grid;
-using System.Data;
 using System.Collections.Generic;
-using System;
+using BigDoc.Client.UI.DOM.Controls.Component;
+using BigDoc.Common.Serialization;
 
 namespace FractalPlatform.Examples.Applications.RenderPage
 {
@@ -14,41 +12,42 @@ namespace FractalPlatform.Examples.Applications.RenderPage
         {
         }
 
-        public class CommentInfo
-        {
-            public DateTime OnDate { get; set; }
-        }
-
-        public class GridInfo
-        {
+        public class MeetingInfo
+        { 
             public string Title { get; set; }
 
-            public string OnDate { get; set; }
+            public string StartTime { get; set; }
 
-            public string Who { get; set; }
-
-            public string Picture { get; set; }
-
-            public List<CommentInfo> Comments { get; set; }
-
-            public List<string> Likes { get; set; }
+            public string EndTime { get; set; }
         }
 
 
-        public override string RenderMainGrid(GridDOMControl domControl)
+        public class DayInfo
         {
+            public string Date { get; set; }
+
+            public string Day { get; set; }
+
+            public List<MeetingInfo> Meetings { get; set; }
+        }
+
+        public class CalendarInfo
+        {
+            public List<DayInfo> Calendar { get; set; }
+        }
+
+        public class RootInfo
+        {
+            public CalendarInfo Root { get; set; }
+        }
+
+        public override string RenderComponent(ComponentDOMControl domControl)
+        {
+            var model = JsonConvert.Deserialize<RootInfo>(domControl.Value);
+
             var sb = new StringBuilder();
 
-            var infos = Application.Client
-                                  .SetDefaultCollection("Dashboard")
-                                  .GetAll()
-                                  .Select<GridInfo>();
-
-            foreach(var info in infos)
-            {
-                sb.Append("<div>Title:").Append(info.Title).Append("</div>");
-                sb.Append("<div>Comments:").Append(info.Comments.Count.ToString()).Append("</div>");
-            }
+            sb.Append(model.Root.Calendar.Count);
 
             return sb.ToString();
         }
