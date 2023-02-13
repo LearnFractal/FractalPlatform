@@ -374,6 +374,17 @@
       }
     },
     {
+      "Description": "Submit button sends changed values on form",
+      "Name": "Button - Submit",
+      "Dimensions": {
+        "Document": "{'Control':'This is submit Button'}",
+        "UI": "{'ControlType':'Button','Style':'Type:Submit'}"
+      },
+      "Example": {
+        "Control": "This is submit Button"
+      }
+    },
+    {
       "Description": "Enumerate values",
       "Name": "ComboBox",
       "Dimensions": {
