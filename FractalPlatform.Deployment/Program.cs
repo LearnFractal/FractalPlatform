@@ -207,13 +207,12 @@ namespace FractalPlatform.Deployment
 
                 options.AppNames = new List<string>();
 
-                var skipAppNames = new [] { "VideoLibrary" };
-
                 foreach(var type in assembly.GetTypes().Where(x => x.Name.EndsWith("Application")))
                 {
                     var appName = type.Name.Replace("Application", "");
 
-                    if (!skipAppNames.Contains(appName))
+                    if (options.ExcludeAppNames == null ||
+                        !options.ExcludeAppNames.Contains(appName))
                     {
                         options.AppNames.Add(appName);
                     }
