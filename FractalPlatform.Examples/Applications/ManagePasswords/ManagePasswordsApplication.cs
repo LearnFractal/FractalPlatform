@@ -36,6 +36,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
                                   {
                                       MessageBox("Password should be more than 6 symbols.",
                                                  "Wrong password length",
+                                                 MessageBoxButtonType.Cancel,
                                                  result => OnStart());
                                   }
 

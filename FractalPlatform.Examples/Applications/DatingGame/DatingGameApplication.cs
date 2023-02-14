@@ -34,6 +34,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                 //Match !
                 MessageBox("Congratulations, you have MATCH ! Click Ok to show details of your choose",
                            "Match",
+                           MessageBoxButtonType.OkCancel,
                            result => 
                            {
                                if (result.Result)
@@ -49,7 +50,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                                {
                                    MessageBox("Game is finished.");
                                }
-                           }, MessageBoxButtonType.OkCancel);
+                           });
             }
             else
             {
@@ -85,8 +86,8 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                 {
                     MessageBox($"We are waiting chooses from all participants (Count chooses:{0}). Game is going to continue in {game.ExpiredChooses.Subtract(DateTime.Now).Seconds} seconds or earlier. Press OK to refresh ...",
                                null,
-                               WaitChooses,
-                               MessageBoxButtonType.Ok);
+                               MessageBoxButtonType.Ok,
+                               WaitChooses);
                 }
             }
         }
@@ -139,8 +140,8 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                 {
                     MessageBox($"We are waiting answers (Count answers:{game.Boys.Count}). Game is going to continue in {game.ExpiredAnswers.Subtract(DateTime.Now).Seconds} seconds or earlier. Press OK to refresh ...",
                                null,
-                               WaitAnswers,
-                               MessageBoxButtonType.Ok);
+                               MessageBoxButtonType.Ok,
+                               WaitAnswers);
                 }
             }
         }
@@ -228,8 +229,8 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                     {
                         MessageBox($"We are waiting participants (Boys:{game.Boys.Count} / Girls:{game.Girls.Count}). Game is going to start: {game.ExpiredParticipants}. Press OK to refresh ...",
                                null,
-                               StartGame,
-                               MessageBoxButtonType.Ok);
+                               MessageBoxButtonType.Ok,
+                               StartGame);
                     }
                 }
             }
