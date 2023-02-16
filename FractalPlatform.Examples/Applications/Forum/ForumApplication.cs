@@ -8,12 +8,6 @@ namespace FractalPlatform.Examples.Applications.Forum
 {
     public class ForumApplication : DashboardApplication
     {
-        public override void OnStart()
-        {
-            Client.SetDefaultCollection("Dashboard")
-                  .OpenForm();
-        }
-
         private void SendMessage(FormResult result)
         {
             if (result.Result)
@@ -115,6 +109,22 @@ namespace FractalPlatform.Examples.Applications.Forum
                 default:
                     return base.OnEventDimension(eventInfo);
             }
+        }
+
+        private void Dashboard()
+        {
+            Client.SetDefaultCollection("Dashboard")
+                  .OpenForm();
+        }
+
+        public override void OnStart()
+        {
+            Dashboard();
+        }
+
+        protected override void OnLogin(FormResult result)
+        {
+            Dashboard();
         }
 
         public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this, form);
