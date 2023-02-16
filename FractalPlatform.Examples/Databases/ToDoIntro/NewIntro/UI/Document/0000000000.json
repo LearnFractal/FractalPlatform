@@ -9,7 +9,7 @@
   "Learn JSON format": {
     "Title": { "ControlType": "Label" },
     "Desc1": { "ControlType": "Label" },
-    "Video1": { "ControlType": "Media", "Style": "Type:Video" },
+    "Video1": { "ControlType": "Media", "Style": "Type:Youtube" },
     "Desc2": { "ControlType": "Label" },
     "Picture2": { "ControlType": "Picture" }
   },
