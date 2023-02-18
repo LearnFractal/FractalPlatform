@@ -7,7 +7,7 @@
     "ControlType": "ComboBox"
   },
   "Captcha": {
-    "Style": "Type:Captcha"
+    "Style": "Type:Capcha"
   },
   "Photo": {
     "ControlType": "UploadFile"
