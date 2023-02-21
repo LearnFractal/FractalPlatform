@@ -1,6 +1,6 @@
 {
   "StockProducts": {
-    "MenuItems": [
+    "Items": [
       {
         "Text": "Add To Cart",
         "Action": "AddToCart"

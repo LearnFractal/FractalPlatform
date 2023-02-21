@@ -1,6 +1,6 @@
 {
    "Passwords": {
-    "MenuItems": [
+    "Items": [
       {
         "Text": "Copy Password",
         "Action": "CopyPassword"

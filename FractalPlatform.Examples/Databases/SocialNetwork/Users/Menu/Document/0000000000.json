@@ -1,6 +1,6 @@
 {
-   "Friends": {
-    "MenuItems": [
+  "Friends": {
+    "Items": [
       {
         "Text": "Friend",
         "Action": "Friend"
@@ -10,5 +10,5 @@
         "Action": "Unfriend"
       }
     ]
-   }
+  }
 }
