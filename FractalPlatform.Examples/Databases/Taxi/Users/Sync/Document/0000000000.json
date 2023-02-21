@@ -4,7 +4,7 @@
       "Receive": {
          "Enabled": true,
          "Version": "0",
-         "Query": "Collection.GetDoc(1).AndWhere({'Orders':[{'Who':Document.Name,'IsCompleted':false}]}).Select({'Orders':[$]},true)",
+         "Query": "Collection.GetDoc(1).AndWhere({'Orders':[{'Who':Document.Name,'IsCompleted':false}]}).Select({'Orders':[$]})",
          "Connection": {
             "CollectionName": "Orders",
             "Port": "4477",
@@ -29,7 +29,7 @@
     "Receive": {
       "Enabled": true,
       "Version": "0",
-      "Query": "Collection.GetDoc(1).AndWhere({'Orders':[{'Who':Document.Name,'IsCompleted':true}]}).Select({'Orders':[$]},true)",
+      "Query": "Collection.GetDoc(1).AndWhere({'Orders':[{'Who':Document.Name,'IsCompleted':true}]}).Select({'Orders':[$]})",
       "Connection": {
         "DatabaseName": "Taxi",
         "CollectionName": "Orders",
@@ -52,7 +52,7 @@
    },
    "NewOrders": {
     "Receive": {
-      "Query": "Collection.GetDoc(1).AndWhere({'Orders':[{'Who':''}]}).Select({'Orders':[$]},true)",
+      "Query": "Collection.GetDoc(1).AndWhere({'Orders':[{'Who':''}]}).Select({'Orders':[$]})",
       "Version": "0",
       "Enabled": true,
       "Connection": {

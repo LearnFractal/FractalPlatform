@@ -2,7 +2,7 @@
    "CollVersion": 1,
    "StockProducts": {
       "Receive": {
-         "Query": "Collection.GetDoc(1).Select({'Products':[R,$]},true)",
+         "Query": "Collection.GetDoc(1).Select({'Products':[R,$]})",
          "Version": "0",
          "Enabled": true,
          "Connection": {

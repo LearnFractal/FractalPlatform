@@ -44,7 +44,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                                                        _gameID,
                                                        choosedParticipant.GenderGroup,
                                                        choosedParticipant.Name)
-                                         .OpenForm(DQL("{@Gender:[!$]}", choosedParticipant.GenderGroup), "Match", true);
+                                         .OpenForm(DQL("{@Gender:[!$]}", choosedParticipant.GenderGroup), "Match");
                                }
                                else
                                {

@@ -41,7 +41,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                     query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Style':'Save:false;HasLabel:true'}]}");
                 }
 
-                query.OpenForm("{'Posts':[$]}", null, null, true);
+                query.OpenForm("{'Posts':[$]}");
 
                 return false;
             }

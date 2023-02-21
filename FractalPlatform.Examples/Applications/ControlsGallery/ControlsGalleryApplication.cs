@@ -17,7 +17,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
 
                 var uiDimension = formInfo.Collection
                                           .GetWhere(formInfo.AttrPath)
-                                          .Value("{@PathName:[{'Dimensions':{'UI':$}}]}", pathName);
+                                          .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}", pathName));
 
                 formInfo.Collection
                         .ExtendDimension(DimensionType.UI,

@@ -173,7 +173,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 
             var filter = Client.SetDefaultCollection("Categories")
                                .GetWhere("{'Name':@Category}", category)
-                               .ToStorage("{'Filters':[$]}", true);
+                               .ToStorage("{'Filters':[$]}");
 
             collection.MergeAsDoc(filter)
                       .OpenForm(Filter);
