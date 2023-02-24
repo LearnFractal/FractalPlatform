@@ -183,7 +183,7 @@ namespace FractalPlatform.Deployment
 
             if (options.IsRunBrowser)
             {
-                var url = string.Format($"{options.BaseUrl}?appName={appName}");
+                var url = string.Format($"{options.BaseUrl}?app={appName}");
 
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
             }
