@@ -21,5 +21,5 @@ Application moderates simple web forum with topics
 
 ## Web Link
 
-[Forum](http://booben.com/jupiter/?appName=Forum)
+[Forum](http://booben.com/jupiter/?app=Forum)
 

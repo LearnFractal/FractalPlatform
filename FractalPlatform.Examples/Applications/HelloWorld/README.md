@@ -14,5 +14,5 @@ Application shows "Hello Fractal World !" message
 
 ## Web Link
 
-[HelloWorld](http://booben.com/jupiter/?appName=HelloWorld)
+[HelloWorld](http://booben.com/jupiter/?app=HelloWorld)
 

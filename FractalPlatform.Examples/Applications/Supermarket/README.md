@@ -21,5 +21,5 @@ Admin can change the stock: Add new products, remove products, change price, cha
 
 ## Web Link
 
-[Supermarket](http://booben.com/jupiter/?appName=Supermarket)
+[Supermarket](http://booben.com/jupiter/?app=Supermarket)
 

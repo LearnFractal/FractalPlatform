@@ -18,5 +18,5 @@ Application build report of electricity in each location:
 
 ## Web Link
 
-[Electricity](http://booben.com/jupiter/?appName=Electricity)
+[Electricity](http://booben.com/jupiter/?app=Electricity)
 

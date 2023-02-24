@@ -15,5 +15,5 @@ Application demonstrates how to works with user credentials
 
 ## Web Link
 
-[Login](http://booben.com/jupiter/?appName=Login)
+[Login](http://booben.com/jupiter/?app=Login)
 

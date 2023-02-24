@@ -27,5 +27,5 @@ Additional functionality
 
 ## Web Link
 
-[OnlineShop](http://booben.com/jupiter/?appName=OnlineShop)
+[OnlineShop](http://booben.com/jupiter/?app=OnlineShop)
 

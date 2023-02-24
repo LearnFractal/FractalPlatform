@@ -16,5 +16,5 @@ Application demonstrates how to work with encrypted data in the database.
 
 ## Web Link
 
-[ManagePasswords](http://booben.com/jupiter/?appName=ManagePasswords)
+[ManagePasswords](http://booben.com/jupiter/?app=ManagePasswords)
 

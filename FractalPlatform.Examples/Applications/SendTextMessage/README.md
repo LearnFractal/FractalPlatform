@@ -24,5 +24,5 @@ Send text message:
 
 ## Web Link
 
-[SendTextMessage](http://booben.com/jupiter/?appName=SendTextMessage)
+[SendTextMessage](http://booben.com/jupiter/?app=SendTextMessage)
 

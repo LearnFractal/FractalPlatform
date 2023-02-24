@@ -22,5 +22,5 @@ for new users with next functionality:
 
 ## Web Link
 
-[ToDoIntro](http://booben.com/jupiter/?appName=ToDoIntro)
+[ToDoIntro](http://booben.com/jupiter/?app=ToDoIntro)
 

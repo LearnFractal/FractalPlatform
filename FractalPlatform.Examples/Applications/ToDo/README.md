@@ -19,5 +19,5 @@ Application demonstrates the simplest ToDo list with next functionality:
 
 ## Web Link
 
-[ToDo](http://booben.com/jupiter/?appName=ToDo)
+[ToDo](http://booben.com/jupiter/?app=ToDo)
 

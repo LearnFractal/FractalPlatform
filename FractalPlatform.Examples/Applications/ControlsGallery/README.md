@@ -16,5 +16,5 @@ standard web UI controls and UI components
 
 ## Web Link
 
-[ControlsGallery](http://booben.com/jupiter/?appName=ControlsGallery)
+[ControlsGallery](http://booben.com/jupiter/?app=ControlsGallery)
 

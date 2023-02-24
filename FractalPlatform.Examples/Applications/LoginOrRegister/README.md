@@ -15,5 +15,5 @@ Application demonstrates how to works with user credentials
 
 ## Web Link
 
-[LoginOrRegister](http://booben.com/jupiter/?appName=LoginOrRegister)
+[LoginOrRegister](http://booben.com/jupiter/?app=LoginOrRegister)
 
