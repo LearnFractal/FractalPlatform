@@ -221,8 +221,6 @@ namespace FractalPlatform.Deployment
                 options.IsRunBrowser = false;
             }
 
-            var str = string.Join("\",\"", options.AppNames);
-
             Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
 
             foreach (var appName in options.AppNames)
