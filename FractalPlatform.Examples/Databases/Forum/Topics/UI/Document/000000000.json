@@ -1,11 +1,11 @@
 {
   "Style": "Save:Send;HasLabel:true",
-  "Enabled": false,
+  "ReadOnly": true,
   "Messages": {
-    "Enabled": true
+    "ReadOnly": false
   },
   "Message": {
     "ControlType": "RichTextBox",
-    "Enabled": true
+    "ReadOnly": false
   }
 }
