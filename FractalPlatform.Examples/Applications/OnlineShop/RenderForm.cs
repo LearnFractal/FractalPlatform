@@ -21,7 +21,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                 sb.Append("<span>");
                 sb.Append(domControl.Root["Category"].RenderComboBox()).Append("&nbsp;");
                 sb.Append(domControl.Root["SearchText"].RenderTextBox()).Append("&nbsp;");
-                sb.Append(domControl.Root["SearchButton"].RenderButton()).Append("&nbsp;");
+                sb.Append(domControl.Root["SearchButton"].RenderSubmitButton()).Append("&nbsp;");
                 sb.Append(domControl.Root["NewCategory"].RenderLinkButton()).Append("&nbsp;");
                 sb.Append(domControl.Root["Categories"].RenderLinkButton()).Append("&nbsp;");
                 sb.Append(domControl.Root["NewProduct"].RenderLinkButton()).Append("&nbsp;");
