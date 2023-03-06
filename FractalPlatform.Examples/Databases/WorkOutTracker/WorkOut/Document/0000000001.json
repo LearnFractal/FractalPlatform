@@ -1,0 +1,60 @@
+﻿{
+   "Name": "Bazist",
+   "Report": "Report",
+  "Results": [
+    {
+      "Exercise": "HorizontalBar",
+      "OnDate": "03/03/2023 14:00:25",
+      "Set1": 3,
+      "Set2": 3,
+      "Set3": 3,
+      "Set4": 1,
+      "Sum": null
+    },
+    {
+      "Exercise": "Pushups",
+      "OnDate": "03/03/2023 14:00:25",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 18,
+      "Set4": 0,
+      "Sum": null
+    },
+    {
+      "Exercise": "Triceps",
+      "OnDate": "03/03/2023 14:00:25",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 0,
+      "Sum": null
+    },
+    {
+      "Exercise": "HorizontalBar",
+      "OnDate": "03/06/2023 14:01:22",
+      "Set1": 3,
+      "Set2": 4,
+      "Set3": 4,
+      "Set4": 1,
+      "Sum": null
+    },
+    {
+      "Exercise": "Pushups",
+      "OnDate": "03/06/2023 14:01:22",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 5,
+      "Sum": null
+    },
+    {
+      "Exercise": "Triceps",
+      "OnDate": "03/06/2023 14:01:22",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 5,
+      "Sum": null
+    }
+  ]
+}

@@ -20,6 +20,7 @@
   <ItemGroup>
     <Folder Include="Databases\Forum\Users\Document\" />
     <Folder Include="Databases\VideoLibrary\" />
+    <Folder Include="Databases\WorkOutTracker\WorkOut\" />
     <Folder Include="Files\PhotoAlbum\" />
   </ItemGroup>
 

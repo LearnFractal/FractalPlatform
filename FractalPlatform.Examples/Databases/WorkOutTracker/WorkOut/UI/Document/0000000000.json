@@ -1,0 +1,19 @@
+{
+  "Name": {
+    "ReadOnly": true
+  },
+  "Report": {
+    "ControlType": "Button",
+    "Style": "Type:Link"
+  },
+  "Results": [
+    {
+      "OnDate": {
+        "ReadOnly": true
+      },
+      "Sum": {
+        "ReadOnly": true
+      }
+    }
+  ]
+}
