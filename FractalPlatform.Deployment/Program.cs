@@ -63,7 +63,7 @@ namespace FractalPlatform.Deployment
                 {
                     content.Add(new StreamContent(new MemoryStream(fileBytes)), "upload", fileName);
 
-                    var url = $"{baseUrl}/Home/UploadFile?appName={appName}&fileType={fileType}&deploymentKey={deploymentKey}&deploymentParams={deploymentParams}";
+                    var url = $"{baseUrl}/Home/UploadFile?app={appName}&fileType={fileType}&deploymentKey={deploymentKey}&deploymentParams={deploymentParams}";
 
                     var response = await client.PostAsync(url, content);
 

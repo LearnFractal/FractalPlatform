@@ -7,7 +7,7 @@ using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
 using System.Linq;
 
-namespace FractalPlatform.Examples.Applications.ToDo
+namespace FractalPlatform.Examples.Applications.WorkOutTracker
 {
     public class WorkOutTrackerApplication : BaseApplication
     {
