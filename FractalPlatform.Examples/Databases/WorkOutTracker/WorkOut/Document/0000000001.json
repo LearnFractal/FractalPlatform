@@ -30,6 +30,15 @@
       "Sum": null
     },
     {
+      "Exercise": "Sit-ups",
+      "OnDate": "04/04/2023 14:01:22",
+      "Set1": 30,
+      "Set2": 20,
+      "Set3": 0,
+      "Set4": 0,
+      "Sum": null
+    },
+    {
       "Exercise": "HorizontalBar",
       "OnDate": "03/06/2023 14:01:22",
       "Set1": 3,
@@ -54,6 +63,15 @@
       "Set2": 20,
       "Set3": 20,
       "Set4": 5,
+      "Sum": null
+    },
+    {
+      "Exercise": "Sit-ups",
+      "OnDate": "03/07/2023 14:01:22",
+      "Set1": 25,
+      "Set2": 25,
+      "Set3": 25,
+      "Set4": 0,
       "Sum": null
     }
   ]
