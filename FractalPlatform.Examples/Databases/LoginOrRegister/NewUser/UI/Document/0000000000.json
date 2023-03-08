@@ -6,7 +6,7 @@
   "Gender": {
     "ControlType": "ComboBox"
   },
-  "Captcha": {
+  "Capcha": {
     "Style": "Type:Capcha"
   },
   "Photo": {
