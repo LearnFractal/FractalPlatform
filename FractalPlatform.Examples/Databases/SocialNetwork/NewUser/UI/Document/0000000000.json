@@ -6,8 +6,8 @@
   "Gender": {
     "ControlType": "ComboBox"
   },
-  "Captcha": {
-    "Style": "Type:Captcha"
+  "Capcha": {
+    "Style": "Type:Capcha"
   },
   "Photo": {
     "ControlType": "UploadFile"
