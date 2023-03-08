@@ -73,6 +73,33 @@
       "Set3": 25,
       "Set4": 0,
       "Sum": null
+    },
+    {
+      "Exercise": "HorizontalBar",
+      "OnDate": "03/08/2023 14:01:22",
+      "Set1": 6,
+      "Set2": 6,
+      "Set3": 6,
+      "Set4": 0,
+      "Sum": null
+    },
+    {
+      "Exercise": "Bars",
+      "OnDate": "03/08/2023 14:01:22",
+      "Set1": 10,
+      "Set2": 10,
+      "Set3": 6,
+      "Set4": 0,
+      "Sum": null
+    },
+    {
+      "Exercise": "Triceps",
+      "OnDate": "03/06/2023 14:01:22",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 15,
+      "Sum": null
     }
   ]
 }
