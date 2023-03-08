@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Databases\Forum\Users\Document\" />
+    <Folder Include="Databases\SocialNetwork\" />
     <Folder Include="Databases\VideoLibrary\" />
     <Folder Include="Databases\WorkOutTracker\" />
     <Folder Include="Files\PhotoAlbum\" />

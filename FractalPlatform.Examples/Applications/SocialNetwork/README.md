@@ -11,6 +11,7 @@
 
 Application moderates a simple social network with next functionality:
 
+- Localization UI on few languages
 - Login user
 - Register user
 - Review and edit my user profile

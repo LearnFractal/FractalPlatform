@@ -34,11 +34,11 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
                 if (User.Name == who)
                 {
-                    query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Message':{'Enabled':true}}]}");
+                    query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Message':{'ReadOnly':false},'NewComment':{'ReadOnly':false}}]}");
                 }
                 else
                 {
-                    query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Style':'Save:false;HasLabel:true'}]}");
+                    query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Style':'Save:false;HasLabel:true','NewComment':{'ReadOnly':false}}]}");
                 }
 
                 query.OpenForm("{'Posts':[$]}");
@@ -51,7 +51,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
         protected override void OnLogin(FormResult result)
         {
-            if(result.Result)
+            if (result.Result)
             {
                 Dashboard();
             }
@@ -61,6 +61,8 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
         {
             Client.SetDefaultCollection("Users")
                   .GetWhere("{'Name':@UserName}")
+                  .WantModifyExistingDocuments()
+                  .ExtendDimension(DimensionType.UI, "{'ReadOnly':false,'Style':'Save:true;Hide:Avatar,Photo,Value,NewComment;Add:false'}")
                   .OpenForm();
         }
 
@@ -144,16 +146,16 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
         public override object OnComputedDimension(ComputedInfo computedInfo)
         {
-            switch(computedInfo.Variable)
+            switch (computedInfo.Variable)
             {
                 case "Avatar":
                     {
-                    var photo = Client.SetDefaultCollection("Users")
-                                       .GetWhere("{'Name':@UserName}")
-                                       .Value("{'Photo':$}");
+                        var photo = Client.SetDefaultCollection("Users")
+                                           .GetWhere("{'Name':@UserName}")
+                                           .Value("{'Photo':$}");
 
-                    return photo;
-                }
+                        return photo;
+                    }
                 default:
                     return base.OnComputedDimension(computedInfo);
             }

@@ -1,6 +1,4 @@
-﻿using BigDoc.Client;
-using BigDoc.Client.UI.DOM.Controls;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 using System;
 using System.Linq;
@@ -11,22 +9,22 @@ using System.Globalization;
 
 namespace FractalPlatform.Examples.Applications.SocialNetwork
 {
-    public class RenderForm: ExtendedRenderForm
+    public class RenderForm : ExtendedRenderForm
     {
         public RenderForm(BaseApplication application, DOMForm form) : base(application, form)
         {
         }
 
         private class PostInfo
-        { 
+        {
             public int Number { get; set; }
 
             public string Avatar { get; set; }
-            
+
             public string Who { get; set; }
-            
+
             public string OnDate { get; set; }
-            
+
             public string Message { get; set; }
 
             public string Photo { get; set; }
@@ -65,7 +63,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
                 foreach (var post in posts.Root.OrderByDescending(x => DateTime.Parse(x.OnDate, CultureInfo.InvariantCulture)))
                 {
-                    var html = @"<tr style='cursor:pointer' onclick='javascript:editComponentRow(@ComponentName,@Number)'>
+                    var html = @"<tr style='cursor:pointer' onclick=""@OnClickScript"">
                                     <td>
                                         <img style='max-width:50px;max-height:50px' src='@Avatar'>
                                     </td>
@@ -88,7 +86,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                                     </td>
                                  </tr>";
 
-                    html = html.Replace("@ComponentName", $"\"{domControl.GetEscapedName()}\"");
+                    html = html.Replace("@OnClickScript", this.OnEditComponentRowScript(domControl, post.Number));
                     html = html.Replace("@Number", post.Number.ToString());
                     html = html.Replace("@Message", post.Message);
                     html = html.Replace("@Who", post.Who);
