@@ -21,8 +21,18 @@
          "Photo": "post2.jpg",
          "UID": "B942FCCB-0584-485E-BE0A-3DE324F8BD76",
          "Who": "Tim",
+         "Comments": [
+            {
+               "Avatar": "rebeca.png",
+               "OnDate": "03/08/2023 10:59:05",
+               "Picture": "",
+               "Text": "Testtt",
+               "Who": "Rebeca"
+            }
+         ],
          "Likes": [
-            "Test"
+            "Test",
+            "Rebeca"
          ]
       }
    ]

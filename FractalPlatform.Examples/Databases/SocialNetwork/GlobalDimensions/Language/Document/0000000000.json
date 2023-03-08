@@ -295,6 +295,54 @@
          "GE": "Tim",
          "RU": "Tim",
          "UA": "Tim"
+      },
+      {
+         "EN": "New Comment",
+         "GE": "New Comment",
+         "RU": "New Comment",
+         "UA": "New Comment"
+      },
+      {
+         "EN": "Posts item",
+         "GE": "Posts item",
+         "RU": "Posts item",
+         "UA": "Posts item"
+      },
+      {
+         "EN": "Your have already sent friend request.",
+         "GE": "Your have already sent friend request.",
+         "RU": "Your have already sent friend request.",
+         "UA": "Your have already sent friend request."
+      },
+      {
+         "EN": "Friends item",
+         "GE": "Friends item",
+         "RU": "Friends item",
+         "UA": "Friends item"
+      },
+      {
+         "EN": "Text",
+         "GE": "Text",
+         "RU": "Text",
+         "UA": "Text"
+      },
+      {
+         "EN": "Picture",
+         "GE": "Picture",
+         "RU": "Picture",
+         "UA": "Picture"
+      },
+      {
+         "EN": "Comments",
+         "GE": "Comments",
+         "RU": "Comments",
+         "UA": "Comments"
+      },
+      {
+         "EN": "Bob",
+         "GE": "Bob",
+         "RU": "Bob",
+         "UA": "Bob"
       }
    ]
 }

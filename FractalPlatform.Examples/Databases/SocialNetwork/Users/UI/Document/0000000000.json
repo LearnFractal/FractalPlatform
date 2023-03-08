@@ -1,14 +1,14 @@
 {
-  "Style": "Hide:UID,Avatar,Who,Photo,Value,Password,Friends,Posts,RequestFriend,NewComment;Add:false;HasLabel:true",
-  "Language": {
-    "Enabled": false
-  },
+  "ReadOnly": true,
+  "Style": "Save:false;Hide:UID,Avatar,Who,Photo,Value,Password,Friends,Posts,RequestFriend,NewComment;Add:false;HasLabel:true",
   "Photo": {
     "ControlType": "Picture"
   },
   "Password": {
-    "Enabled": false,
-    "Style": "Type:Password"
+    "Visible": false
+  },
+  "Language": {
+    "ReadOnly": true
   },
   "Posts": [
     {
@@ -22,32 +22,23 @@
         "ControlType": "RichTextBox"
       },
       "NewComment": {
-        "ControlType": "Button",
-        "Enabled": true
+        "ControlType": "Button"
       },
       "Photo": {
         "ControlType": "Picture"
       },
       "Likes": {
         "ControlType": "Likes",
-        "Enabled": true
+        "ReadOnly": false
       },
       "Comments": {
-        "ControlType": "Comments"
+        "ControlType": "Comments",
+        "ReadOnly": false
       }
     }
   ],
-  "Age": {
-    "Enabled": false
-  },
-  "Gender": {
-    "Enabled": false
-  },
-  "Friends": {
-    "Enabled": false
-  },
   "RequestFriend": {
     "ControlType": "Button",
-    "Visible": false
+    "ReadOnly": false
   }
 }
