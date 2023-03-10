@@ -20,10 +20,7 @@ namespace FractalPlatform.Examples.Applications.Taxi
         {
             Client.SetDefaultCollection("Users")
                   .GetWhere("{'Name':@UserName}")
-                  .ExtendDimension(DimensionType.UI, @"{'Style':'Save:false',
-                                                        'ReadOnly':true,
-                                                        'Password':{'Visible':false},
-                                                        'NewOrders':{'Visible':true}}")
+                  .ExtendUIDimension(@"{'Style':'Save:false','ReadOnly':true,'Password':{'Visible':false},'NewOrders':{'Visible':true}}")
                   .OpenForm();
         }
 

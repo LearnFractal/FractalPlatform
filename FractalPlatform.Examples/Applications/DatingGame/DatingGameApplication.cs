@@ -101,9 +101,9 @@ namespace FractalPlatform.Examples.Applications.DatingGame
 
             Client.SetDefaultCollection("Games")
                   .GetWhere("{'ID':@ID,'AnswerQuestions':[{'From':@Name}]}", _gameID, _myParticipant.Name)
-                  .SetDimension(DimensionType.UI, "{'Style':'Add:false;Del:false','AnswerQuestion':{'Enabled':false},'Choose':{'ControlType':'ComboBox'}}")
+                  .SetUIDimension("{'Style':'Add:false;Del:false','AnswerQuestion':{'Enabled':false},'Choose':{'ControlType':'ComboBox'}}")
                   .SetDimension(DimensionType.Enum, DQL("{'Choose':{'Items':[@Participants]}}", chooseParticipants))
-                  .ExtendDimension(DimensionType.Document, "{'Choose':'NoBody'}", _gameID)
+                  .ExtendDocument("{'Choose':'NoBody'}", _gameID)
                   .OpenForm("{'AnswerQuestions':[{'To':$,'Question':$,'Answer':$}]}",
                             result =>
                             {
@@ -151,7 +151,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
             Client.SetDefaultCollection("Games")
                   .GetWhere("{'ID':@ID,'AnswerQuestions':[{'To':@Name}]}", _gameID, _myParticipant.Name)
                   .WantModifyExistingDocuments()
-                  .SetDimension(DimensionType.UI, "{'Style':'Add:false;Del:false','AnswerQuestions':[{'From':{'Enabled':false},'Question':{'Enabled':false}}]}")
+                  .SetUIDimension("{'Style':'Add:false;Del:false','AnswerQuestions':[{'From':{'Enabled':false},'Question':{'Enabled':false}}]}")
                   .SetDimension(DimensionType.Validation, "{'AnswerQuestions':[{'Answer':{'IsRequired':true}}]}")
                   .OpenForm("{'AnswerQuestions':[{'From':$,'Question':$,'Answer':$}]}",
                             result =>

@@ -67,7 +67,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 
                         Client.SetDefaultCollection("Products")
                               .GetWhere("{'Name':@Name,'Categories':[In,@Categories]}", name, categories)
-                              .ExtendDimension(DimensionType.UI, "{'ReadOnly':true}")
+                              .ExtendUIDimension("{'ReadOnly':true}")
                               .OpenForm();
 
                         return true;

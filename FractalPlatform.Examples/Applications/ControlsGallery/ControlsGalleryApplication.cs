@@ -20,8 +20,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
                                           .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}", pathName));
 
                 formInfo.Collection
-                        .ExtendDimension(DimensionType.UI,
-                                         DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}", pathName, uiDimension));
+                        .ExtendUIDimension(DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}", pathName, uiDimension));
             }
 
             return base.OnOpenForm(formInfo);

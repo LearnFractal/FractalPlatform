@@ -29,7 +29,7 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
                 };
 
                 new Collection("Report", report.ToJson())
-                    .SetDimension(DimensionType.UI, "{'Enabled':false,'Title':{'ControlType':'Label'}}")
+                    .SetUIDimension("{'Enabled':false,'Title':{'ControlType':'Label'}}")
                     .OpenForm();
             }
             else if(eventInfo.Action == "ToDoList")

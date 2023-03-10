@@ -48,7 +48,7 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
             //open report
             DQL("{'Chart':@Chart}", chart)
                 .ToCollection()
-                .SetDimension(DimensionType.UI, "{'ReadOnly':true,'Chart':{'ControlType':'Chart'}}")
+                .SetUIDimension("{'ReadOnly':true,'Chart':{'ControlType':'Chart'}}")
                 .OpenForm();
 
             return false;

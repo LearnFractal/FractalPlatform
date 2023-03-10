@@ -34,11 +34,11 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
                 if (User.Name == who)
                 {
-                    query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Message':{'ReadOnly':false},'NewComment':{'ReadOnly':false}}]}");
+                    query.ExtendUIDimension("{'Posts':[{'Message':{'ReadOnly':false},'NewComment':{'ReadOnly':false}}]}");
                 }
                 else
                 {
-                    query.ExtendDimension(DimensionType.UI, "{'Posts':[{'Style':'Save:false;HasLabel:true','NewComment':{'ReadOnly':false}}]}");
+                    query.ExtendUIDimension("{'Posts':[{'Style':'Save:false;HasLabel:true','NewComment':{'ReadOnly':false}}]}");
                 }
 
                 query.OpenForm("{'Posts':[$]}");
@@ -62,7 +62,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
             Client.SetDefaultCollection("Users")
                   .GetWhere("{'Name':@UserName}")
                   .WantModifyExistingDocuments()
-                  .ExtendDimension(DimensionType.UI, "{'ReadOnly':false,'Style':'Save:true;Hide:Avatar,Photo,Value,NewComment;Add:false'}")
+                  .ExtendUIDimension("{'ReadOnly':false,'Style':'Save:true;Hide:Avatar,Photo,Value,NewComment;Add:false'}")
                   .OpenForm();
         }
 
