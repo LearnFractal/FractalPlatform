@@ -21,4 +21,4 @@
 - [ToDo With Categories ](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoWithCategories)
 - [Video Library](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/VideoLibrary)
 - [Vote](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Vote)
-- [WorkOutTracking](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/WorkOutTracking)
+- [WorkOutTracker](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/WorkOutTracker)
