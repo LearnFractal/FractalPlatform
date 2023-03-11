@@ -1,9 +1,0 @@
-{
-  "OnCreateDocument": "CreateDocument",
-  "Projects": {
-    "OnInsert": "Project" 
-  },
-  "Teams": {
-    "OnInsert": "Team" 
-  }
-}

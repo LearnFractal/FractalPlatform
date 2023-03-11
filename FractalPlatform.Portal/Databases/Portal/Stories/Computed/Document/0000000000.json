@@ -1,8 +1,0 @@
-{
-  "TaskEstimated": {
-    "Formula": "@TaskEstimated"
-  },
-  "TaskRemained": {
-    "Formula": "@TaskRemained"
-  }
-}

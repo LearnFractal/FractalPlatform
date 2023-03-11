@@ -1,7 +1,0 @@
-{
-  "Style": "Save:Refresh;",
-  "AppName": { "Enabled": false },
-  "OnDate": { "Enabled": false },
-  "Status": { "Enabled": false },
-  "Progress": {"Enabled": false}
-}

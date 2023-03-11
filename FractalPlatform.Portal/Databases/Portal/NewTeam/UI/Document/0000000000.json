@@ -1,8 +1,0 @@
-{
-  "Manager": {
-    "Enabled": true
-  },
-  "Position": {
-    "ControlType": "ComboBox"
-  }
-}

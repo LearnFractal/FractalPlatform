@@ -1,6 +1,0 @@
-{
-  "OnCreateDocument": "CreateDocument",
-  "Likes": {
-    "OnInsert": "Like" 
-  }
-}

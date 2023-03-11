@@ -1,9 +1,0 @@
-{
-  "Name": { "Index": 1 },
-  "Title": { "Index": 2 },
-  "Status": { "Index": 3 },
-  "Owner": { "Index": 4 },
-  "StartDate": { "Index": 5 },
-  "EndDate": { "Index": 6 },
-  "Description": { "Index": 7 }
-}

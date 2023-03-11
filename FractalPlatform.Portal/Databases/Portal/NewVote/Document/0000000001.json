@@ -1,9 +1,0 @@
-{
-  "Question": "What paradigm do you think more perspective ?",
-  "Answers": {
-    "Object Oriented Programming": false,
-    "Functional Programming": false,
-    "Aspect Oriented Programming": false,
-    "Other": false
-  }
-}

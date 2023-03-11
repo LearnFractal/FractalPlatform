@@ -1,5 +1,0 @@
-﻿{
-   "Database": "FractalPlatform",
-   "Query": "SELECT * FROM Users",
-   "QueryLanguage": "SQL"
-}

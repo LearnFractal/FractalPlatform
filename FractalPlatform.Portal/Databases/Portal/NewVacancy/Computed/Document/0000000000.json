@@ -1,8 +1,0 @@
-{
-  "Who": {
-    "Formula": "@UserName"
-  },
-  "VacancyNumber": {
-    "Formula": "@NewVacancyNumber"
-  }
-}

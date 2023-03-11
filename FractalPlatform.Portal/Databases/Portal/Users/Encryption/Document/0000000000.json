@@ -1,8 +1,0 @@
-{
-  "Password": {
-    "EncryptAlgorithm": "MD5"
-  },
-  "RepeatPassword": {
-    "EncryptAlgorithm": "MD5"
-  }
-}

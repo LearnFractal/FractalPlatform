@@ -1,7 +1,0 @@
-{
-  "Disallow": {
-    "Write": [
-      "Guest", "Observer"
-    ]
-  }
-}

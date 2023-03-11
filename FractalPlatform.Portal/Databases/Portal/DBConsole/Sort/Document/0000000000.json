@@ -1,6 +1,0 @@
-{
-  "QueryLanguage": { "Index": 1 },
-  "Database": { "Index": 2 },
-  "Query": { "Index": 3 },
-  "Result": { "Index": 4 }
-}

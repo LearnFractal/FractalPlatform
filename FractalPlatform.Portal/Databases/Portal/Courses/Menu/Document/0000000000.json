@@ -1,8 +1,0 @@
-{
-  "MenuItems": [
-    {
-      "Text": "Start Course",
-      "Action": "StartCourse"
-    }
-  ]
-}

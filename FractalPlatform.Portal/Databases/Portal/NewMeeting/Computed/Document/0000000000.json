@@ -1,8 +1,0 @@
-{
-  "MeetingNumber": {
-    "Formula": "@NewMeetingNumber"
-  },
-  "Who": {
-    "Formula": "@UserName"
-  }
-}

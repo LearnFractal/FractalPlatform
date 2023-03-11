@@ -1,8 +1,0 @@
-{
-  "Status": {
-    "Items": [ "New", "Active", "InProgress", "ReadyForQA", "Closed" ]
-  },
-  "AssignedTo": {
-    "Formula": "Users"
-  }
-}
