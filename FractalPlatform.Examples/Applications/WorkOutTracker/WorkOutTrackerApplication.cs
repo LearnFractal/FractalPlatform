@@ -23,7 +23,7 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
             {
                 Title = new TitleChartInfo
                 {
-                    Name = "Exersizes",
+                    Name = "Exercises",
                     X = "Time",
                     Y = "Value"
                 },
