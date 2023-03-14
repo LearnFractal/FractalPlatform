@@ -10,7 +10,8 @@
 Application makes simple sport result tracker with progression results report:
 - Add results up to 4 sets: Set1, Set2, Set3, Set4
 - Calculate results for each training
-- Build report of progression results
+- Report screen to review results on a Chart
+- Configure screen to change list of exersices
 
 ## How it implemented
 
