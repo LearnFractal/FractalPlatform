@@ -2,6 +2,10 @@
   "Name": {
     "ReadOnly": true
   },
+  "Configure": {
+    "ControlType": "Button",
+    "Style": "Type:Link"
+  },
   "Report": {
     "ControlType": "Button",
     "Style": "Type:Link"

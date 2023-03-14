@@ -13,43 +13,53 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
     {
         public override bool OnEventDimension(EventInfo eventInfo)
         {
-            var exercises = eventInfo.Collection
-                                     .GetAll()
-                                     .Values("{'Results':[{'Exercise':$}]}")
-                                     .Distinct();
-
-            //create chart
-            var chart = new LineGraphsChartInfo
+            if (eventInfo.Action == "Report")
             {
-                Title = new TitleChartInfo
-                {
-                    Name = "Exercises",
-                    X = "Time",
-                    Y = "Value"
-                },
-                Lines = exercises.Select(e =>
-                {
-                    uint x = 0;
+                var exercises = eventInfo.Collection
+                                         .GetAll()
+                                         .Values("{'Results':[{'Exercise':$}]}")
+                                         .Distinct();
 
-                    var line = new LineChartInfo
+                //create chart
+                var chart = new LineGraphsChartInfo
+                {
+                    Title = new TitleChartInfo
                     {
-                        Name = e,
-                        Points = eventInfo.Collection
-                                          .GetWhere("{'Results':[{'Exercise':@Exercise}]}", e)
-                                          .IntValues("{'Results':[{'Sum':$}]}")
-                                          .Select(y => new PointChartInfo { X = x++, Y = y })
-                                          .ToList()
-                    };
+                        Name = "Exercises",
+                        X = "Time",
+                        Y = "Value"
+                    },
+                    Lines = exercises.Select(e =>
+                    {
+                        uint x = 0;
 
-                    return line;
-                }).ToList()
-            };
+                        var line = new LineChartInfo
+                        {
+                            Name = e,
+                            Points = eventInfo.Collection
+                                              .GetWhere("{'Results':[{'Exercise':@Exercise}]}", e)
+                                              .IntValues("{'Results':[{'Sum':$}]}")
+                                              .Select(y => new PointChartInfo { X = x++, Y = y })
+                                              .ToList()
+                        };
 
-            //open report
-            DQL("{'Chart':@Chart}", chart)
-                .ToCollection()
-                .SetUIDimension("{'ReadOnly':true,'Chart':{'ControlType':'Chart'}}")
-                .OpenForm();
+                        return line;
+                    }).ToList()
+                };
+
+                //open report
+                DQL("{'Chart':@Chart}", chart)
+                    .ToCollection()
+                    .SetUIDimension("{'ReadOnly':true,'Chart':{'ControlType':'Chart'}}")
+                    .OpenForm();
+            }
+            else //if (eventInfo.Action == "Configure")
+            {
+                Client.SetDefaultCollection("WorkOut")
+                      .SetDefaultDimension(DimensionType.Enum)
+                      .WantModifyExistingDocument()
+                      .OpenForm();
+            }
 
             return false;
         }

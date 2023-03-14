@@ -1,15 +1,16 @@
-{
-  "Results": [
-    {
-      "Exercise": {
-        "Items": [
-          "HorizontalBar",
-          "Pushups",
-          "Bars",
-          "Triceps",
-          "Sit-ups"
-        ]
+﻿{
+   "Results": [
+      {
+         "Exercise": {
+            "Items": [
+               "HorizontalBar",
+               "Pushups",
+               "Bars",
+               "Triceps",
+               "Sit-ups",
+               "Biceps"
+            ]
+         }
       }
-    }
-  ]
+   ]
 }

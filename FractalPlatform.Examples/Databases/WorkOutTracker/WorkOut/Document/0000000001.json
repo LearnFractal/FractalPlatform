@@ -1,6 +1,7 @@
 ﻿{
-   "Name": "Bazist",
-   "Report": "Report",
+  "Name": "Bazist",
+  "Configure": "Configure",
+  "Report": "Report",
   "Results": [
     {
       "Exercise": "HorizontalBar",

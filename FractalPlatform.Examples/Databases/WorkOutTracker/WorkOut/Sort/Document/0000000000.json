@@ -1,6 +1,7 @@
 {
   "Name": { "Index": 1 },
-  "Report": { "Index": 2 },
+  "Configure": { "Index": 2 },
+  "Report": { "Index": 3 },
   "Results": [
     {
       "Exercise": {
