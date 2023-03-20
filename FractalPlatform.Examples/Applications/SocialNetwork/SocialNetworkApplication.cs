@@ -49,7 +49,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
             return true;
         }
 
-        protected override void OnLogin(FormResult result)
+        public override void OnLogin(FormResult result)
         {
             if (result.Result)
             {

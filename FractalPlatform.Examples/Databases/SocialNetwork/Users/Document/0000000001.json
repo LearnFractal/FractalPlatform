@@ -1,15 +1,15 @@
 ﻿{
-   "Age": 21,
-   "Gender": "Male",
-   "Language": "EN",
-   "Name": "Bob",
-   "Password": "2FC1C0BEB992CD7096975CFEBF9D5C3B",
-   "Photo": "bob.png",
-   "RequestFriend": "Request Friend",
-   "Friends": [
-      {
-         "Approved": true,
-         "Name": "Rebeca"
-      }
-   ]
+  "Age": 21,
+  "Gender": "Male",
+  "Language": "EN",
+  "Name": "Bob",
+  "Password": "6A20D08E3A43AF3C3523A747986632AB",
+  "Photo": "bob.png",
+  "RequestFriend": "Request Friend",
+  "Friends": [
+    {
+      "Approved": true,
+      "Name": "Rebeca"
+    }
+  ]
 }

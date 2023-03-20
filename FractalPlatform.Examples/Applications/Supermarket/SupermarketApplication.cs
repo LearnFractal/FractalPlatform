@@ -140,7 +140,7 @@ namespace FractalPlatform.Examples.Applications.Supermarket
             Login("Bob", "Bob");
         }
 
-        protected override void OnLogin(FormResult result)
+        public override void OnLogin(FormResult result)
         {
             Client.SetDefaultCollection("Dashboard")
                   .OpenForm();

@@ -10,7 +10,7 @@ namespace FractalPlatform.Examples.Applications.Login
             Login();
         }
 
-        protected override void OnLogin(FormResult result)
+        public override void OnLogin(FormResult result)
         {
             MessageBox($"You logged in as: {User.Name} with role {User.Roles[0]}");
         }

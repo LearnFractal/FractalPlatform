@@ -122,7 +122,7 @@ namespace FractalPlatform.Examples.Applications.Forum
             Dashboard();
         }
 
-        protected override void OnLogin(FormResult result)
+        public override void OnLogin(FormResult result)
         {
             Dashboard();
         }

@@ -84,7 +84,7 @@ namespace FractalPlatform.Examples.Applications.Taxi
             Login();
         }
 
-        protected override void OnLogin(FormResult result)
+        public override void OnLogin(FormResult result)
         {
             Client.SetDefaultCollection("Dashboard")
                   .OpenForm();
