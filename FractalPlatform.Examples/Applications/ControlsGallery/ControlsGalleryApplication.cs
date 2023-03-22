@@ -15,15 +15,26 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
             {
                 var pathName = formInfo.AttrPath.GetFirstPath();
 
-                var uiDimension = formInfo.Collection
-                                          .GetWhere(formInfo.AttrPath)
-                                          .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}", pathName));
-
                 formInfo.Collection
-                        .ExtendUIDimension(DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}", pathName, uiDimension));
-            }
+                        .GetWhere(formInfo.AttrPath)
+                        .ToCollection(DQL("{@PathName:[$]}",
+                                      pathName))
+                        .ResetDimension(DimensionType.UI)
+                        .SetUIDimension("{'ReadOnly':true}")
+                        .ExtendUIDimension(DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}",
+                                               pathName,
+                                               formInfo.Collection
+                                                       .GetWhere(formInfo.AttrPath)
+                                                       .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}",
+                                                              pathName))))
+                        .OpenForm();
 
-            return base.OnOpenForm(formInfo);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public override void OnStart()

@@ -3,7 +3,6 @@
   "ReadOnly": true,
   "Controls": [
     {
-      "Style": "Hide:",
       "Example": {
         "ReadOnly": false
       }
