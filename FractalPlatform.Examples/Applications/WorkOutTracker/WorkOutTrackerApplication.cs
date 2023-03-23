@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
             if (eventInfo.Action == "Report")
             {
                 var exercises = eventInfo.Collection
-                                         .GetAll()
+                                         .GetDoc(eventInfo.DocID)
                                          .Values("{'Results':[{'Exercise':$}]}")
                                          .Distinct();
 

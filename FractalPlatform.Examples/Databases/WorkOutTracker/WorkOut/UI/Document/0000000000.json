@@ -1,4 +1,5 @@
 {
+  "Style": "Hide:Configure,Report,Results;Type:Link",
   "Name": {
     "ReadOnly": true
   },
