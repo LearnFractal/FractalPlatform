@@ -67,7 +67,7 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
         public override void OnStart()
         {
             Client.SetDefaultCollection("WorkOut")
-                  .GetFirstDoc()
+                  .GetAll()
                   .WantModifyExistingDocuments()
                   .OpenForm();
         }
