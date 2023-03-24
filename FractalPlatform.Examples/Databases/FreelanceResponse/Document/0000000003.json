@@ -1,0 +1,69 @@
+﻿{
+   "Archive": "8b1f04b061084e4ab36c06c200009fbd.jpg",
+   "Description": "new task",
+   "Developer": "Developer",
+   "EndDate": "03/22/2023 22:00:17",
+   "MaxPrice": 10000,
+   "MinPrice": 100,
+   "NewAccept": "I want this task",
+   "NewCustomerRate": "Rate Customer",
+   "NewDemo": "I have demo",
+   "OnDate": "03/22/2023 22:00:17",
+   "Picture": "",
+   "Reject": "Reject Task",
+   "StartDate": "03/22/2023 22:00:17",
+   "Status": "Completed",
+   "TaskNumber": "T-00003",
+   "TenderModel": "TheBestDemo",
+   "Title": "New task",
+   "Video": "",
+   "Who": "DNA Exp",
+   "Accepts": [
+      {
+         "AcceptDeveloper": "Accept Developer",
+         "Accepted": 0,
+         "Comment": "Good !",
+         "Completed": 0,
+         "MinPrice": 100,
+         "OnDate": "03/23/2023 11:32:05",
+         "Rating": 0,
+         "Who": "Developer"
+      }
+   ],
+   "Demos": [
+      {
+         "AcceptDemo": "Accept Demo",
+         "Archive": "",
+         "Comment": "TEst",
+         "Message": "",
+         "NewUserRate": "Rate User",
+         "OnDate": "03/23/2023 12:27:18",
+         "Picture": "",
+         "SendMessage": "Send Message",
+         "Video": "",
+         "Who": "Developer",
+         "Chat": [
+            {
+               "Avatar": "",
+               "OnDate": "03/23/2023 17:00:01",
+               "Text": "Testtt",
+               "Who": "DNA Exp"
+            },
+            {
+               "Avatar": "",
+               "OnDate": "03/23/2023 17:00:23",
+               "Text": "Hi too",
+               "Who": "Developer"
+            }
+         ]
+      }
+   ],
+   "PaymentTypes": [
+      "ZSU",
+      "Card",
+      "Crypto"
+   ],
+   "Skills": [
+      "C#"
+   ]
+}
