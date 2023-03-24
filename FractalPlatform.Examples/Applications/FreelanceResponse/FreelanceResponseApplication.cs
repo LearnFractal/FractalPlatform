@@ -6,7 +6,7 @@ using BigDoc.Database.Engine.Info;
 using System;
 using System.Linq;
 
-namespace BigDoc.Client.WebApp.Applications.FreelanceResponse
+namespace FractalPlatform.Examples.Applications.FreelanceResponse
 {
     public class FreelanceResponseApplication : DashboardApplication
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BigDoc.Client.WebApp.Applications.FreelanceResponse
+namespace FractalPlatform.Examples.Applications.FreelanceResponse
 {
     public enum StatusType
     {
