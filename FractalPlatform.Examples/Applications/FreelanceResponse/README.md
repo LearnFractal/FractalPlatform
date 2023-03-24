@@ -16,8 +16,8 @@ Application implements freelance exchange market with next functionality:
 5. Tender developers to execute Task by two strategies: BestDemo and BestDeveloper
 6. Task acceptance by Developer
 6. Create Demo with comment, photo, video and archive
-7. Open secret Demo chat if connection between Customer and Developer is established
-8. Rates Customers and rates Developers
+7. Open secret Demo chat if connection between Customer and Developer established
+8. Rate Customers and rate Developers
 
 ## How it implemented
 
