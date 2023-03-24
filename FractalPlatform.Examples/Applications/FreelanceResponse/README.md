@@ -7,14 +7,14 @@
 
 ## Functionality
 
-Application implements freelance exchange market 
-Main functionality:
+Application implements freelance exchange market with next functionality:
 
-1. User registration with capcha and photo
+1. User registration with capcha and upload photo
 2. User login
 3. Three roles in the system: Developer, Customer, Admin
 4. Create Task with status, description, photo, video and archive
 5. Tender developers to execute Task by two strategies: BestDemo and BestDeveloper
+6. Task acceptance by Developer
 6. Create Demo with comment, photo, video and archive
 7. Open secret Demo chat if connection between Customer and Developer is established
 8. Rates Customers and rates Developers
