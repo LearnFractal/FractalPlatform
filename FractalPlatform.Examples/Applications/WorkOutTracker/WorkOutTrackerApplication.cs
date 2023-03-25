@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
             if (eventInfo.Action == "Report")
             {
                 var exercises = eventInfo.Collection
-                                         .GetAll()
+                                         .GetDoc(eventInfo.DocID)
                                          .Values("{'Results':[{'Exercise':$}]}")
                                          .Distinct();
 
@@ -37,7 +37,8 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
                         {
                             Name = e,
                             Points = eventInfo.Collection
-                                              .GetWhere("{'Results':[{'Exercise':@Exercise}]}", e)
+                                              .GetDoc(eventInfo.DocID)
+                                              .AndWhere("{'Results':[{'Exercise':@Exercise}]}", e)
                                               .IntValues("{'Results':[{'Sum':$}]}")
                                               .Select(y => new PointChartInfo { X = x++, Y = y })
                                               .ToList()
@@ -67,7 +68,7 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
         public override void OnStart()
         {
             Client.SetDefaultCollection("WorkOut")
-                  .GetFirstDoc()
+                  .GetAll()
                   .WantModifyExistingDocuments()
                   .OpenForm();
         }
