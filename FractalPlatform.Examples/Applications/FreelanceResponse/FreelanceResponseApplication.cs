@@ -382,7 +382,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                                                .Value("{'Demos':[{'Message':$}]}");
 
                         var avatar = Client.SetDefaultCollection("Users")
-                                           .GetWhere("{'Name':UserName}")
+                                           .GetWhere("{'Name':@UserName}")
                                            .Value("{'Photo':$}");
 
                         eventInfo.Collection
