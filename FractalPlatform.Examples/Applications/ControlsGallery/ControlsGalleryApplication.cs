@@ -24,7 +24,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
                         .ToCollection(DQL("{@PathName:[$]}", pathName))
                         .ResetDimension(DimensionType.UI)
                         .SetDimension(DimensionType.Enum, "{'Controls':[{'Example':{'Control':{'Items':['One','Two','Three']}}}]}")
-                        .SetUIDimension(DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}", pathName, ui))
+                        .SetUIDimension(DQL("{'Style':'Save:false',@PathName:[{'Example':{'Control':@UIDimension}}]}", pathName, ui))
                         .OpenForm();
 
                 return false;
