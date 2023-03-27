@@ -385,17 +385,13 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                                            .GetWhere("{'Name':@UserName}")
                                            .Value("{'Photo':$}");
 
-                        eventInfo.Collection
-                                 .GetWhere(eventInfo.AttrPath)
-                                 .Update("{'Demos':[{'Chat':[Add,{'Avatar':@Avatar,'OnDate':@Now,'Who':@UserName,'Text':@Message}]}]}",
-                                           avatar,
-                                           message);
-
                         if (!string.IsNullOrEmpty(message))
                         {
                             Client.SetDefaultCollection("Tasks")
                                   .GetWhere(eventInfo.AttrPath)
-                                  .Update("{'Demos':[{'Chat':[Add,{'Avatar':@Avatar,'OnDate':@Now,'Who':@UserName,'Text':@Message}]}]}", "", message);
+                                  .Update("{'Demos':[{'Chat':[Add,{'Avatar':@Avatar,'OnDate':@Now,'Who':@UserName,'Text':@Message}]}]}",
+                                          avatar,
+                                          message);
 
                             eventInfo.Collection.ReloadData();
                         }
