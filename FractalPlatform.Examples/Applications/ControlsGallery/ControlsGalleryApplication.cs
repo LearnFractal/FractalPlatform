@@ -15,19 +15,16 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
             {
                 var pathName = formInfo.AttrPath.GetFirstPath();
 
+                var ui = formInfo.Collection
+                                 .GetWhere(formInfo.AttrPath)
+                                 .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}", pathName));
+
                 formInfo.Collection
                         .GetWhere(formInfo.AttrPath)
-                        .ToCollection(DQL("{@PathName:[$]}",
-                                      pathName))
+                        .ToCollection(DQL("{@PathName:[$]}", pathName))
                         .ResetDimension(DimensionType.UI)
-                        .SetUIDimension("{'ReadOnly':true}")
                         .SetDimension(DimensionType.Enum, "{'Controls':[{'Example':{'Control':{'Items':['One','Two','Three']}}}]}")
-                        .ExtendUIDimension(DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}",
-                                               pathName,
-                                               formInfo.Collection
-                                                       .GetWhere(formInfo.AttrPath)
-                                                       .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}",
-                                                              pathName))))
+                        .SetUIDimension(DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}", pathName, ui))
                         .OpenForm();
 
                 return false;
