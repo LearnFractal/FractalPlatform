@@ -1,0 +1,26 @@
+{
+  "NewCustomerRate": {
+    "Disallow": {
+      "Read": [
+        "Guest",
+        "Customer"
+      ]
+    }
+  },
+  "NewAccept": {
+    "Disallow": {
+      "Read": [
+        "Guest",
+        "Customer"
+      ]
+    }
+  },
+  "NewDemo": {
+    "Disallow": {
+      "Read": [
+        "Guest",
+        "Customer"
+      ]
+    }
+  }
+}

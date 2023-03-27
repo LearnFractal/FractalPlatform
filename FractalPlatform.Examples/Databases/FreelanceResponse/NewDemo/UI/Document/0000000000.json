@@ -12,10 +12,16 @@
   "Comment": {
     "ControlType": "RichTextBox"
   },
+  "Who": {
+    "Visible": false
+  },
+  "OnDate": {
+    "Visible": false
+  },
   "AcceptDemo": {
     "Visible": false
   },
-  "RateUser": {
+  "NewUserRate": {
     "Visible": false
   },
   "Chat": {

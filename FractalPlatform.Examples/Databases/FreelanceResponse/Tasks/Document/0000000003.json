@@ -1,4 +1,4 @@
-﻿{
+{
   "Archive": "8b1f04b061084e4ab36c06c200009fbd.jpg",
   "Description": "Task - TheBestDeveloper - InProgress",
   "Developer": "Developer",
@@ -17,19 +17,7 @@
   "TenderModel": "TheBestDemo",
   "Title": "Task - TheBestDeveloper - InProgress",
   "Video": "",
-  "Who": "DNA Exp",
-  "Accepts": [
-    {
-      "AcceptDeveloper": "Accept Developer",
-      "Accepted": 0,
-      "Comment": "Good !",
-      "Completed": 0,
-      "MinPrice": 100,
-      "OnDate": "03/23/2023 11:32:05",
-      "Rating": 0,
-      "Who": "Developer"
-    }
-  ],
+  "Who": "Customer",
   "PaymentTypes": [
     "ZSU",
     "Card",

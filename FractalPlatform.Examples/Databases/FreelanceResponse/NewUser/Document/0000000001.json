@@ -1,11 +1,13 @@
 {
-  "Name": "",
-  "Password": "",
-  "Capcha": "",
-  "Gender": "",
-  "Photo": "",
-  "Roles": [ "Developer" ],
-  "Accepted": 0,
-  "Completed": 0,
-  "Rating": 0
+   "Accepted": 0,
+   "Capcha": "",
+   "Completed": 0,
+   "Gender": "",
+   "Name": "",
+   "Password": "",
+   "Photo": "",
+   "Rating": 0,
+   "Roles": [
+      "Developer"
+   ]
 }

@@ -1,5 +1,8 @@
 {
   "Style": "Save:Accept",
+  "Who": {
+    "Visible": false
+  },
   "OnDate": {
     "Visible": false
   },

@@ -1,5 +1,5 @@
 {
-  "Style": "Save:false;HasLabel:true;Hide:Accepts,Demos,Archive,Video,Picture,Developer,BestDemo,Description,NewCustomerRate,NewAccept,NewDemo,Reject,AcceptDeveloper,AcceptDemo,Message,NewUserRate,SendMessage,Chat",
+  "Style": "Save:false;HasLabel:true;Hide:Accepts,Demos,Archive,Video,Picture,Developer,BestDemo,Description,NewCustomerRate,NewUserRate,NewAccept,NewDemo,Reject,AcceptDeveloper,AcceptDemo,Message,NewUserRate,SendMessage,Chat",
   "ReadOnly": true,
   "Description": {
     "ControlType": "RichTextBox"

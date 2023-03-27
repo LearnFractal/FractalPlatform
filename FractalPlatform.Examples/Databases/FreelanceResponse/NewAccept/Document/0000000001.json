@@ -1,10 +1,10 @@
 {
-  "Who": "",
-  "OnDate": "",
-  "Accepted": 0,
-  "Completed": 0,
-  "Rating": 0,
-  "MinPrice": "",
-  "Comment": "",
-  "AcceptDeveloper": "Accept Developer"
+   "AcceptDeveloper": "Accept Developer",
+   "Accepted": 0,
+   "Comment": "",
+   "Completed": 0,
+   "MinPrice": "",
+   "OnDate": "",
+   "Rating": 0,
+   "Who": ""
 }
