@@ -21,6 +21,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
                                       pathName))
                         .ResetDimension(DimensionType.UI)
                         .SetUIDimension("{'ReadOnly':true}")
+                        .SetDimension(DimensionType.Enum, "{'Controls':[{'Example':{'Control':{'Items':['One','Two','Three']}}}]}")
                         .ExtendUIDimension(DQL("{@PathName:[{'Example':{'Control':@UIDimension}}]}",
                                                pathName,
                                                formInfo.Collection
