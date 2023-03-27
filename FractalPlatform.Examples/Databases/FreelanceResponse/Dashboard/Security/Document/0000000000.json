@@ -1,0 +1,10 @@
+{
+  "NewTask": {
+    "Disallow": {
+      "Read": [
+        "Guest",
+        "Developer"
+      ]
+    }
+  }
+}

@@ -12,8 +12,8 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
 
     public enum TenerModelType
     {
-        BestDemo,
-        BestDeveloper
+        TheBestDemo,
+        TheBestDeveloper
     }
 
     public class DemoInfo

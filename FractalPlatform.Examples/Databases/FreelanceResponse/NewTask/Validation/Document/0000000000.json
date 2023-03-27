@@ -1,0 +1,29 @@
+{
+  "Title": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Description": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "MinPrice": {
+    "MinValue": 100,
+    "MaxValue": 10000
+  },
+  "MaxPrice": {
+    "MinValue": 100,
+    "MaxValue": 10000
+  },
+  "Archive": {
+    "IsRequired": true
+  },
+  "StartDate": {
+    "IsRequired": true
+  },
+  "EndDate": {
+    "IsRequired": true
+  }
+}

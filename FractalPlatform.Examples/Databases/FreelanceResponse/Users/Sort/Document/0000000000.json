@@ -1,0 +1,11 @@
+{
+  "Name": { "Index": 1 },
+  "Password": { "Index": 2 },
+  "Gender": { "Index": 4 },
+  "Photo": { "Index": 5 },
+  "Roles": { "Index": 6 },
+  "Accepted": { "Index": 7 },
+  "Completed": { "Index": 8 },
+  "Rating": { "Index": 9 },
+  "UserTasks": {"Index": 10}
+}

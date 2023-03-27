@@ -1,0 +1,11 @@
+{
+  "Name": "",
+  "Password": "",
+  "Capcha": "",
+  "Gender": "",
+  "Photo": "",
+  "Roles": [ "Developer" ],
+  "Accepted": 0,
+  "Completed": 0,
+  "Rating": 0
+}

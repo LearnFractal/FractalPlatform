@@ -1,0 +1,22 @@
+{
+  "OnDate": "",
+  "Who": "",
+  "Archive": "",
+  "Comment": "",
+  "Video": "",
+  "Picture": "",
+  "AcceptDemo": "Accept Demo",
+  "RateUser": "Rate User",
+  "Chat": [
+    {
+      "Avatar": "",
+      "OnDate": "",
+      "From": "",
+      "To": "",
+      "Message": "",
+      "IsRead": false
+    }
+  ],
+  "Message": "",
+  "SendMessage": "Send Message"
+}
