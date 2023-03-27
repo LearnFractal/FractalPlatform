@@ -103,7 +103,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
 
                         return task.Who != Context.User.Name &&
                                    !task.Accepts.Any(x => x.Who == Context.User.Name) &&
-                                   (string.IsNullOrEmpty(task.Developer) || task.TenderModel == TenerModelType.BestDemo) &&
+                                   (string.IsNullOrEmpty(task.Developer) || task.TenderModel == TenerModelType.TheBestDemo) &&
                                    (task.Status == StatusType.New || task.Status == StatusType.InProgress);
                     }
                 case "NewDemo":
@@ -112,8 +112,8 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
 
                         return task.Accepts.Any(x => x.Who == Context.User.Name) &&
                                !task.Demos.Any(x => x.Who == Context.User.Name) &&
-                               (task.TenderModel == TenerModelType.BestDemo || 
-                                (task.TenderModel == TenerModelType.BestDeveloper && task.Developer == Context.User.Name)) &&
+                               (task.TenderModel == TenerModelType.TheBestDemo || 
+                                (task.TenderModel == TenerModelType.TheBestDeveloper && task.Developer == Context.User.Name)) &&
                                (task.Status == StatusType.New || task.Status == StatusType.InProgress);
                     }
                 default:
