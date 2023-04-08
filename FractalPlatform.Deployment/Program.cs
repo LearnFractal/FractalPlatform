@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.FileIO;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +7,6 @@ using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
-using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 namespace FractalPlatform.Deployment
