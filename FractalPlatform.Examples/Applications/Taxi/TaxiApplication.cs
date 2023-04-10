@@ -1,7 +1,6 @@
 ﻿using System;
 using BigDoc.Client.App;
 using BigDoc.Client.UI;
-using BigDoc.Common.Enums;
 using BigDoc.Database.Engine;
 using BigDoc.Database.Engine.Info;
 
