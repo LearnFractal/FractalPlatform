@@ -34,9 +34,6 @@ namespace FractalPlatform.Examples.Applications.Taxi
         {
             switch (eventInfo.Action)
             {
-                case "Login":
-                    Login("Bob", "Bob");
-                    return true;
                 case "MyUser":
                     MyUser();
                     return true;
@@ -80,7 +77,7 @@ namespace FractalPlatform.Examples.Applications.Taxi
 
         public override void OnStart()
         {
-            Login();
+            Login("Bob", "Bob");
         }
 
         public override void OnLogin(FormResult result)
