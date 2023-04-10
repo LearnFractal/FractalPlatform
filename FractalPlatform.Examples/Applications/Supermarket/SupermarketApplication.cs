@@ -118,9 +118,6 @@ namespace FractalPlatform.Examples.Applications.Supermarket
         {
             switch (eventInfo.Action)
             {
-                case "Login":
-                    Login("Bob", "Bob");
-                    return true;
                 case "Stock":
                     ViewStock();
                     return true;
