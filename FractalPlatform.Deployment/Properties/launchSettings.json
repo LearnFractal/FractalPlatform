@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "BigDoc.Deployment": {
+    "FractalPlatform.Deployment": {
       "commandName": "Project"
     }
   }
