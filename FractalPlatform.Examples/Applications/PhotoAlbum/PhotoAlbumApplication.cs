@@ -1,6 +1,6 @@
-﻿using BigDoc.Client.App;
-using BigDoc.Client.UI;
-using BigDoc.Client.UI.DOM;
+﻿using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI;
+using FractalPlatform.Client.UI.DOM;
 
 namespace FractalPlatform.Examples.Applications.PhotoAlbum
 {

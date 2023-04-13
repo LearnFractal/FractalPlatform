@@ -1,4 +1,4 @@
-﻿namespace BigDoc.Client.WebApp.Applications.DatingGame
+﻿namespace FractalPlatform.Client.WebApp.Applications.DatingGame
 {
     public enum GameStatus
     {

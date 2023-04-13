@@ -1,7 +1,7 @@
-﻿using BigDoc.Client.UI.DOM.Controls;
+﻿using FractalPlatform.Client.UI.DOM.Controls;
 using System.Text;
-using BigDoc.Client.App;
-using BigDoc.Client.UI.DOM;
+using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI.DOM;
 
 namespace FractalPlatform.Examples.Applications.RenderPage
 {

@@ -2,9 +2,9 @@
 using System.Text;
 using System;
 using System.Linq;
-using BigDoc.Client.UI.DOM;
-using BigDoc.Client.App;
-using BigDoc.Client.UI.DOM.Controls.Component;
+using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI.DOM.Controls.Component;
 using System.Globalization;
 
 namespace FractalPlatform.Examples.Applications.SocialNetwork

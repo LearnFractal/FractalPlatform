@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Linq;
-using BigDoc.Client.App;
-using BigDoc.Database.Engine;
+using FractalPlatform.Client.App;
+using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.VideoLibrary
 {

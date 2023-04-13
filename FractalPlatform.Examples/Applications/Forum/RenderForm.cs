@@ -1,7 +1,7 @@
-﻿using BigDoc.Client;
-using BigDoc.Client.App;
-using BigDoc.Client.UI.DOM;
-using BigDoc.Client.UI.DOM.Controls.Grid;
+﻿using FractalPlatform.Client;
+using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Client.UI.DOM.Controls.Grid;
 using System.Data;
 using System.Text;
 

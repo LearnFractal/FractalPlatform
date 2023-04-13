@@ -145,7 +145,7 @@ namespace FractalPlatform.Deployment
 #if DEBUG
                 var filePath = @$"{_deploymentPath}\{assemblyName}\bin\Debug\netcoreapp3.1\{assemblyFile}";
 #else
-            var filePath = @$"{_deploymentPath}\BigDoc.App\bin\Release\netcoreapp3.1\{assemblyName}";
+            var filePath = @$"{_deploymentPath}\FractalPlatform.App\bin\Release\netcoreapp3.1\{assemblyName}";
 #endif
 
                 if (File.Exists(filePath))

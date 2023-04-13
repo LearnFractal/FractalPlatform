@@ -1,4 +1,4 @@
-﻿using BigDoc.Client.App;
+﻿using FractalPlatform.Client.App;
 
 namespace FractalPlatform.Examples.Applications.HelloWorld
 {

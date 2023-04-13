@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using BigDoc.Client.App;
-using BigDoc.Client.UI;
-using BigDoc.Client.WebApp.Applications.DatingGame;
-using BigDoc.Common.Enums;
-using BigDoc.Database.Engine;
+using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI;
+using FractalPlatform.Client.WebApp.Applications.DatingGame;
+using FractalPlatform.Common.Enums;
+using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.DatingGame
 {

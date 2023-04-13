@@ -1,8 +1,8 @@
-﻿using BigDoc.Client.App;
-using BigDoc.Client.UI;
-using BigDoc.Client.UI.DOM;
-using BigDoc.Common.Enums;
-using BigDoc.Database.Engine.Info;
+﻿using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI;
+using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Common.Enums;
+using FractalPlatform.Database.Engine.Info;
 
 namespace FractalPlatform.Examples.Applications.ControlsGallery
 {

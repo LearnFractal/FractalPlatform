@@ -1,4 +1,4 @@
-﻿using BigDoc.Client.WebApp.Applications.DatingGame;
+﻿using FractalPlatform.Client.WebApp.Applications.DatingGame;
 using System;
 using System.Collections.Generic;
 

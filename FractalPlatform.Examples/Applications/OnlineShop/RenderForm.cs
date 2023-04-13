@@ -1,6 +1,6 @@
-﻿using BigDoc.Client.App;
-using BigDoc.Client.UI.DOM;
-using BigDoc.Client.UI.DOM.Controls.Component;
+﻿using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Client.UI.DOM.Controls.Component;
 using System.Text;
 
 namespace FractalPlatform.Examples.Applications.OnlineShop

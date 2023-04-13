@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using BigDoc.Client.UI;
-using BigDoc.Common.Enums;
-using BigDoc.Client.App;
-using BigDoc.Database.Engine.Info;
-using BigDoc.Database.Engine;
+using FractalPlatform.Client.UI;
+using FractalPlatform.Common.Enums;
+using FractalPlatform.Client.App;
+using FractalPlatform.Database.Engine.Info;
+using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.Supermarket
 {
