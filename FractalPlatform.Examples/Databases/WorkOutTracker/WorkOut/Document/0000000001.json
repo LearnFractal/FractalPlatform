@@ -10,7 +10,7 @@
       "Set2": 3,
       "Set3": 3,
       "Set4": 1,
-      "Sum": null
+      "Sum": 10
     },
     {
       "Exercise": "Pushups",
@@ -19,7 +19,7 @@
       "Set2": 20,
       "Set3": 18,
       "Set4": 0,
-      "Sum": null
+      "Sum": 58
     },
     {
       "Exercise": "Triceps",
@@ -28,7 +28,7 @@
       "Set2": 20,
       "Set3": 20,
       "Set4": 0,
-      "Sum": null
+      "Sum": 60
     },
     {
       "Exercise": "Sit-ups",
@@ -37,7 +37,7 @@
       "Set2": 20,
       "Set3": 0,
       "Set4": 0,
-      "Sum": null
+      "Sum": 50
     },
     {
       "Exercise": "HorizontalBar",
@@ -46,7 +46,7 @@
       "Set2": 4,
       "Set3": 4,
       "Set4": 1,
-      "Sum": null
+      "Sum": 12
     },
     {
       "Exercise": "Pushups",
@@ -55,7 +55,7 @@
       "Set2": 20,
       "Set3": 20,
       "Set4": 5,
-      "Sum": null
+      "Sum": 65
     },
     {
       "Exercise": "Triceps",
@@ -64,7 +64,7 @@
       "Set2": 20,
       "Set3": 20,
       "Set4": 5,
-      "Sum": null
+      "Sum": 65
     },
     {
       "Exercise": "Sit-ups",
@@ -73,7 +73,7 @@
       "Set2": 25,
       "Set3": 25,
       "Set4": 0,
-      "Sum": null
+      "Sum": 75
     },
     {
       "Exercise": "HorizontalBar",
@@ -82,7 +82,7 @@
       "Set2": 6,
       "Set3": 6,
       "Set4": 0,
-      "Sum": null
+      "Sum": 18
     },
     {
       "Exercise": "Bars",
@@ -91,7 +91,7 @@
       "Set2": 10,
       "Set3": 6,
       "Set4": 0,
-      "Sum": null
+      "Sum": 26
     },
     {
       "Exercise": "Triceps",
@@ -100,7 +100,7 @@
       "Set2": 20,
       "Set3": 20,
       "Set4": 15,
-      "Sum": null
+      "Sum": 75
     }
   ]
 }
