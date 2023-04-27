@@ -185,11 +185,13 @@ namespace FractalPlatform.Converter
             return true;
         }
 
+        private bool Contains(List<Column> columns, string columnName) => columns.Any(x => x.Name == columnName);
+
         public virtual bool IsDictionaryTable(Table table)
         {
             return (table.Columns.Count == 2 &&
-                    table.Columns.Contains(GetPrimaryIdColumn(table)) &&
-                    table.Columns.Contains(GetDictionaryNameColumn(table)));
+                    Contains(table.Columns, GetPrimaryIdColumn(table)) &&
+                    Contains(table.Columns, GetDictionaryNameColumn(table)));
         }
 
         public virtual string GetCollectionName(Table table)
