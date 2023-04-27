@@ -1,4 +1,5 @@
 ﻿using FractalPlatform.Database.Converter;
+using System.IO;
 
 namespace FractalPlatform.Converter
 {
@@ -45,6 +46,11 @@ namespace FractalPlatform.Converter
             _converter.CreateSchemaIfNotExists(_schema);
 
             var dbPath = $@"{_deploymentPath}\{_assemblyName}\Databases\{_appName}\";
+
+            if(!Directory.Exists(dbPath))
+            {
+                throw new DirectoryNotFoundException(dbPath);
+            }
 
             _converter.ProcessDocuments(dbPath);
             
