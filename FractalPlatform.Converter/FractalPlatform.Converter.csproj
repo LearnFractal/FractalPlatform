@@ -18,14 +18,17 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
-    <Reference Include="BigDoc.Client">
-      <HintPath>..\Bin\BigDoc.Client.dll</HintPath>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FractalPlatform.Client">
+      <HintPath>..\Bin\FractalPlatform.Client.dll</HintPath>
     </Reference>
-    <Reference Include="BigDoc.Common">
-      <HintPath>..\Bin\BigDoc.Common.dll</HintPath>
+    <Reference Include="FractalPlatform.Common">
+      <HintPath>..\Bin\FractalPlatform.Common.dll</HintPath>
     </Reference>
-    <Reference Include="BigDoc.Database">
-      <HintPath>..\Bin\BigDoc.Database.dll</HintPath>
+    <Reference Include="FractalPlatform.Database">
+      <HintPath>..\Bin\FractalPlatform.Database.dll</HintPath>
     </Reference>
   </ItemGroup>
 

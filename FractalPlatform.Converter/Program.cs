@@ -9,70 +9,40 @@ namespace FractalPlatform.Converter
     {
         static void Main(string[] args)
         {
-            var threads = 16;
-            var count = 1000;
+            var appSettings = File.ReadAllText("appsettings.json");
 
-            for (int i = 0; i < threads; i++)
+            var options = JsonConvert.DeserializeObject<Options>(appSettings);
+
+            if (options.Direction == "TablesToCollections")
             {
-                ThreadPool.QueueUserWorkItem(async x =>
-                {
-                    var sum = 0;
+                Console.WriteLine($"Start converting tables to collections for {options.TablesToCollections.AppName} application ...");
 
-                    var watch = new Stopwatch();
+                var repo = new BaseRepository(options.TablesToCollections.ConnectionString);
 
-                    var client = new HttpClient();
+                var converter = new TablesToCollectionsConverter(repo,
+                                                                 options.TablesToCollections.AppName,
+                                                                 options.TablesToCollections.Schemas,
+                                                                 options.TablesToCollections.RecommendCollections);
 
-                    watch.Start();
-
-                    for (int i = 0; i < count; i++)
-                    {
-                        sum += (await client.GetStringAsync("https://localhost:44319/?appName=Test")).Length;
-                    }
-
-                    watch.Stop();
-
-                    Console.WriteLine((count / watch.Elapsed.Seconds * threads).ToString() + "ops");
-
-                    Console.WriteLine(sum);
-                });
+                converter.Run();
             }
+            else if (options.Direction == "CollectionsToTables")
+            {
+                Console.WriteLine($"Start converting collections to tables for {options.CollectionsToTables.AppName} application ...");
 
-            Console.ReadLine();
+                var repo = new BaseRepository(options.CollectionsToTables.ConnectionString);
 
-            //var appSettings = File.ReadAllText("appsettings.json");
+                var converter = new CollectionsToTablesConverter(repo,
+                                                                 options.CollectionsToTables.AppName,
+                                                                 options.CollectionsToTables.Schema,
+                                                                 options.CollectionsToTables.IsAddConstraints);
 
-            //var options = JsonConvert.DeserializeObject<Options>(appSettings);
-
-            //if (options.Direction == "TablesToCollections")
-            //{
-            //    Console.WriteLine($"Start converting tables to collections for {options.TablesToCollections.AppName} application ...");
-
-            //    var repo = new BaseRepository(options.TablesToCollections.ConnectionString);
-
-            //    var converter = new TablesToCollectionsConverter(repo,
-            //                                                     options.TablesToCollections.AppName,
-            //                                                     options.TablesToCollections.Schemas,
-            //                                                     options.TablesToCollections.RecommendCollections);
-
-            //    converter.Run();
-            //}
-            //else if(options.Direction == "CollectionsToTables")
-            //{
-            //    Console.WriteLine($"Start converting collections to tables for {options.CollectionsToTables.AppName} application ...");
-
-            //    var repo = new BaseRepository(options.CollectionsToTables.ConnectionString);
-
-            //    var converter = new CollectionsToTablesConverter(repo,
-            //                                                     options.CollectionsToTables.AppName,
-            //                                                     options.CollectionsToTables.Schema,
-            //                                                     options.CollectionsToTables.IsAddConstraints);
-
-            //    converter.Run();
-            //}
-            //else
-            //{
-            //    throw new InvalidOperationException($"Incorrect '{options.Direction}' direction");
-            //}
+                converter.Run();
+            }
+            else
+            {
+                throw new InvalidOperationException($"Incorrect '{options.Direction}' direction");
+            }
         }
     }
 }

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Deployment", "FractalPlatform.Deployment\FractalPlatform.Deployment.csproj", "{EB3C4466-306F-429B-BFB7-05CB3165435B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter", "FractalPlatform.Converter\FractalPlatform.Converter.csproj", "{8836A486-199C-4849-B36A-353443AB7432}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter.Examples", "FractalPlatform.Converter.Examples\FractalPlatform.Converter.Examples.csproj", "{13FCB6E3-54B0-4DA6-B39B-A967F4492C3E}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EB3C4466-306F-429B-BFB7-05CB3165435B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB3C4466-306F-429B-BFB7-05CB3165435B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB3C4466-306F-429B-BFB7-05CB3165435B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB3C4466-306F-429B-BFB7-05CB3165435B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8836A486-199C-4849-B36A-353443AB7432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8836A486-199C-4849-B36A-353443AB7432}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8836A486-199C-4849-B36A-353443AB7432}.Release|Any CPU.ActiveCfg = Release|Any CPU

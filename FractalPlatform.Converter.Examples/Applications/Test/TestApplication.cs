@@ -1,8 +1,8 @@
-using BigDoc.Client.App;
-using BigDoc.Client.UI;
-using BigDoc.Database.Engine;
-using BigDoc.Database.Engine.Info;
-using BigDoc.Database.Storages;
+using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI;
+using FractalPlatform.Database.Engine;
+using FractalPlatform.Database.Engine.Info;
+using FractalPlatform.Database.Storages;
 using System;
 
 namespace FractalPlatform.Examples.Applications.Test

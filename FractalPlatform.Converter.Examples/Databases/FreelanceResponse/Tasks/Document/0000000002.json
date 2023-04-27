@@ -1,0 +1,69 @@
+﻿{
+   "Archive": "8b1f04b061084e4ab36c06c200009fbd.jpg",
+   "Description": "Task - TheBestDeveloper - New",
+   "Developer": "",
+   "EndDate": "03/22/2023 22:00:17",
+   "MaxPrice": 10000,
+   "MinPrice": 100,
+   "NewAccept": "I want this task",
+   "NewCustomerRate": "Rate Customer",
+   "NewDemo": "I have demo",
+   "OnDate": "03/22/2023 22:00:17",
+   "Picture": "",
+   "Reject": "Reject Task",
+   "StartDate": "03/22/2023 22:00:17",
+   "Status": "New",
+   "TaskNumber": "T-00002",
+   "TenderModel": "TheBestDemo",
+   "Title": "Task - TheBestDeveloper - New",
+   "Video": "",
+   "Who": "Customer",
+   "Accepts": [
+      {
+         "AcceptDeveloper": "Accept Developer",
+         "Accepted": 0,
+         "Comment": "test",
+         "Completed": 0,
+         "MinPrice": 100,
+         "OnDate": "03/27/2023 12:58:10",
+         "Rating": 0,
+         "Who": "Developer1"
+      }
+   ],
+   "Demos": [
+      {
+         "AcceptDemo": "Accept Demo",
+         "Archive": "00000000000000000000000000000000.png",
+         "Comment": "test",
+         "Message": "",
+         "NewUserRate": "Rate User",
+         "OnDate": "03/27/2023 12:58:10",
+         "Picture": "",
+         "SendMessage": "Send Message",
+         "Video": "",
+         "Who": "Developer1",
+         "Chat": [
+            {
+               "Avatar": "",
+               "OnDate": "03/27/2023 15:47:55",
+               "Text": "test",
+               "Who": "Customer"
+            },
+            {
+               "Avatar": "",
+               "OnDate": "03/27/2023 15:47:55",
+               "Text": "test",
+               "Who": "Developer1"
+            }
+         ]
+      }
+   ],
+   "PaymentTypes": [
+      "ZSU",
+      "Card",
+      "Crypto"
+   ],
+   "Skills": [
+      "C#"
+   ]
+}

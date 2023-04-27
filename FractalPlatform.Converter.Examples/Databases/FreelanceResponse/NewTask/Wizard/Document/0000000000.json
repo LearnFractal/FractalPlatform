@@ -1,0 +1,17 @@
+{
+  "TaskNumber": { "Page": 1 },
+  "OnDate": { "Page": 1 },
+  "Who": { "Page": 1 },
+  "Title": { "Page": 1 },
+  "Description": { "Page": 1 },
+  "Skills": { "Page": 1 },
+  "Archive": { "Page": 2 },
+  "Video": { "Page": 2 },
+  "Picture": { "Page": 2 },
+  "PaymentTypes": { "Page": 3 },
+  "MinPrice": { "Page": 3 },
+  "MaxPrice": { "Page": 3 },
+  "TenderModel": { "Page": 3 },
+  "StartDate": { "Page": 3 },
+  "EndDate": { "Page": 3 }
+}
