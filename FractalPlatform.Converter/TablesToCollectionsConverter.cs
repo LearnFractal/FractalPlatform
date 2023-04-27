@@ -1,5 +1,4 @@
 ﻿using FractalPlatform.Common.Serialization;
-using FractalPlatform.Database.Converter;
 using FractalPlatform.Converter.Models;
 using System;
 using System.Collections.Generic;
@@ -551,7 +550,7 @@ namespace FractalPlatform.Converter
         private void SaveJsonFile(string fileName, string json)
         {
             SaveFile(fileName, JsonConvert.FormatJson(json));
-        }
+        } 
 
         private void SaveFile(string fileName, string content)
         {

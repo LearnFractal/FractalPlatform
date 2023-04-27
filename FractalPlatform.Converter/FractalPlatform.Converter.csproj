@@ -21,12 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BigDoc\Clients\Net\FractalPlatform.Database\FractalPlatform.Database.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="FractalPlatform.Client">
-      <HintPath>..\Bin\FractalPlatform.Client.dll</HintPath>
+    <Reference Include="FractalPlatform.Common">
+      <HintPath>..\Bin\FractalPlatform.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
 

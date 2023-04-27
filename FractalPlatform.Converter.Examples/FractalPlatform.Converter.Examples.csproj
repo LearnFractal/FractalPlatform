@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -18,20 +18,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="BigDoc.Client">
-      <HintPath>..\Bin\BigDoc.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="BigDoc.Common">
-      <HintPath>..\Bin\BigDoc.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="BigDoc.Database">
-      <HintPath>..\Bin\BigDoc.Database.dll</HintPath>
-    </Reference>
+    <Folder Include="Files\" />
+    <Folder Include="Layouts\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Files\" />
-    <Folder Include="Layouts\" />
+    <Reference Include="FractalPlatform.Client">
+      <HintPath>..\Bin\FractalPlatform.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="FractalPlatform.Common">
+      <HintPath>..\Bin\FractalPlatform.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FractalPlatform.Database">
+      <HintPath>..\Bin\FractalPlatform.Database.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

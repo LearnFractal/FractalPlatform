@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter.Examples", "FractalPlatform.Converter.Examples\FractalPlatform.Converter.Examples.csproj", "{13FCB6E3-54B0-4DA6-B39B-A967F4492C3E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Database", "..\BigDoc\Clients\Net\FractalPlatform.Database\FractalPlatform.Database.csproj", "{694F7504-BB06-43F8-8D35-5C9E3E31EDC8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Common", "..\BigDoc\Clients\Net\FractalPlatform.Common\FractalPlatform.Common.csproj", "{8B6FC974-A22E-4541-AA09-D6ADACC1E35B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{13FCB6E3-54B0-4DA6-B39B-A967F4492C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13FCB6E3-54B0-4DA6-B39B-A967F4492C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13FCB6E3-54B0-4DA6-B39B-A967F4492C3E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{694F7504-BB06-43F8-8D35-5C9E3E31EDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{694F7504-BB06-43F8-8D35-5C9E3E31EDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{694F7504-BB06-43F8-8D35-5C9E3E31EDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{694F7504-BB06-43F8-8D35-5C9E3E31EDC8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B6FC974-A22E-4541-AA09-D6ADACC1E35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B6FC974-A22E-4541-AA09-D6ADACC1E35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B6FC974-A22E-4541-AA09-D6ADACC1E35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B6FC974-A22E-4541-AA09-D6ADACC1E35B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
