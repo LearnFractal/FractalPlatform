@@ -3,5 +3,25 @@
   "Who": "Bob",
   "CountMessages": 0,
   "CountViews": 5,
-  "Message": "Put your message here"
+  "Message": "How are guys ??",
+  "Messages": [
+    {
+      "Who": "Bob",
+      "OnDate": "2023-01-01",
+      "Avatar": "Bob.png",
+      "Message": "Hello World 1"
+    },
+    {
+      "Who": "Bob",
+      "OnDate": "2023-01-01",
+      "Avatar": "Bob.png",
+      "Message": "Hello World 2"
+    },
+    {
+      "Who": "Bob",
+      "OnDate": "2023-01-01",
+      "Avatar": "Bob.png",
+      "Message": "Hello World 3"
+    }
+  ]
 }

@@ -1,6 +1,8 @@
 ﻿using FractalPlatform.Client;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Client.UI.DOM.Controls;
+using FractalPlatform.Client.UI.DOM.Controls.Component;
 using FractalPlatform.Client.UI.DOM.Controls.Grid;
 using System;
 using System.Collections.Generic;
@@ -45,7 +47,7 @@ body {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-margin-top: 15px;
+
 }
 
 .header, .content, .footer {
@@ -925,9 +927,9 @@ a.down {
         //string html = @"@Title<br>@Who<br>@CountMessages<br>@CountViews";
         string html = @"
 <tr class=""row1"">
-	<td class=""RowStyleB wo hide2""><img src=""./SQLRU.net_ Другие СУБД_files/read.png"" title=""Отслеживание прочитанных и непрочитанных сообщений доступно только зарегистрированным участникам"" alt="""" width=""22"" height=""22""></td>
+	<td class=""RowStyleB wo hide2""><img src=""@ReadImg"" title=""Отслеживание прочитанных и непрочитанных сообщений доступно только зарегистрированным участникам"" alt="""" width=""22"" height=""22""></td>
 	<td class=""RowStyleB wo ac hide2"">&nbsp;</td>
-	<td class=""RowStyleA""><a class=""big"" href=""https://sqlru.net/index.php/t/184/"">@Title</a><br><span class=""small"">Ссылки на серию статей</span>   <div class=""TopBy"">От: <a href=""https://sqlru.net/index.php/u/53/"">@Who</a> - <span class=""DateText"">@OnDate</span></div></td>
+	<td class=""RowStyleA""><a class=""big"" href=""@ReadMore"">@Title</a><br><span class=""small"">Ссылки на серию статей</span>   <div class=""TopBy"">От: <a href=""https://sqlru.net/index.php/u/53/"">@Who</a> - <span class=""DateText"">@OnDate</span></div></td>
 	<td class=""RowStyleB ac hide1"">@CountMessages</td>
 	<td class=""RowStyleB ac hide1"">@CountViews</td>
 	<td class=""RowStyleC nw hide2""><span class=""DateText"">@OnDate</span><br>От: <a href=""https://sqlru.net/index.php/u/53/"">@Who</a> <a href=""https://sqlru.net/index.php/m/1162/#msg_1162""><img src=""./SQLRU.net_ Другие СУБД_files/goto.gif"" title=""Перейти к последнему сообщению в этой теме"" alt=""""></a></td>
@@ -935,41 +937,157 @@ a.down {
 <tr><td><div  width: 5px; height: 5px;></div></td></tr>
 ";
 
+
+
         string endBody = @"
 </tbody></table><table border=""0"" cellspacing=""0"" cellpadding=""0"" class=""wa"">
 <tbody><tr>
 	<td class=""vt"">&nbsp;</td>
-	<td class=""GenText nw vb ar""><a href=""https://sqlru.net/index.php/r/frm_id/14/""><img src=""./SQLRU.net_ Другие СУБД_files/new_thread.gif"" alt=""Создать новую тему""></a></td>
+	<td class=""GenText nw vb ar""><a href=""https://sqlru.net/index.php/r/frm_id/14/""><img src=""@NewThreadImg"" alt=""Создать новую тему""></a></td>
 </tr>
 </tbody></table>
 </td></tr></tbody></table>
 </div>";
+        //=========================
 
-        public override string RenderGrid(GridDOMControl domControl)
+        string beginForumBody = @"<div class=""content"">
+";
+        string endForumBody = @"
+
+</div>";
+
+
+        string htmlForumContent = @"</tbody></table>
+
+<table cellspacing=""0"" cellpadding=""0"" class=""ContentTable""><tbody><tr>
+	<td class=""MsgSpacer"">
+		<table cellspacing=""0"" cellpadding=""0"" class=""MsgTable"">
+		<tbody><tr>
+			<td class=""MsgR1 vt al expanded""><img src=""./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/min.png"" alt=""-"" title=""Свернуть сообщение"" class=""collapsable clickable"" style=""cursor: pointer;""> <a name=""msg_num_1""></a><a name=""msg_96""></a><span class=""MsgSubText""><a href=""https://sqlru.net/index.php/mv/msg/42/96/#msg_96"" class=""MsgSubText"">Полнотекстовый поиск для Firebird</a></span> <span class=""SmallText"">[<a href=""https://sqlru.net/index.php/mv/msg/42/96/#msg_96"">сообщение #96</a>]</span></td>
+			<td class=""MsgR1 vt ar""><span class=""DateText"">Mon, 27 June 2022 09:39</span> <a href=""javascript://"" onclick=""chng_focus(&#39;#msg_num_2&#39;);""><img alt=""Переход к следующему сообщению"" title=""Переход к следующему сообщению"" src=""./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/down.png"" width=""16"" height=""11""></a></td>
+		</tr>
+		<tr class=""MsgR2"">
+			<td class=""MsgR2"" colspan=""2"">
+				<table cellspacing=""0"" cellpadding=""0"" class=""ContentTable"">
+				<tbody><tr class=""MsgR2"">
+				
+					<td class=""msgud"">
+						<img src=""./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/offline.png"" alt=""sim_84 в настоящее время не в онлайне"" title=""sim_84 в настоящее время не в онлайне"" width=""16"" height=""16"">&nbsp;
+						<a href=""https://sqlru.net/index.php/u/21/"">sim_84</a>
+						<br><b>Сообщений:</b> 129<br><b>Зарегистрирован:</b> June 2022 
+						
+					</td>
+					<td class=""msgud""><div class=""ctags"">Senior Member</div></td>
+					<td class=""msgot""></td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+<tr>
+	<td colspan=""2"" class=""MsgR3"">
+		<span class=""MsgBodyText"">Хочу представить OpenSource UDR для полнотекстового поиска на основе Lucene++.<br>
+<br>
+<a href=""https://github.com/IBSurgeon/lucene_udr"" target=""_blank"" title=""Opens in a new window"">https://github.com/IBSurgeon/lucene_udr</a><br>
+<br>
+Документация на русском языке <a href=""https://github.com/IBSurgeon/lucene_udr/blob/main/README_RUS.md"" target=""_blank"" title=""Opens in a new window"">README_RUS.md</a><br>
+<br>
+UDR FTS Lucene написана на языке C++, обладает высокой производительностью. Может быть использована в Firebird 3.0 и 4.0.<br>
+<br>
+Пожелания по функционалу (адекватные) и сообщения об ошибках приветствуются.</span>
+		
+		
+		<div class=""SmallText clear""><p class=""fl"">[Обновления: Tue, 28 June 2022 13:51]</p><p class=""fr""><a href=""https://sqlru.net/index.php/rm/96/"" rel=""nofollow"">Известить модератора</a></p></div>
+</td></tr>
+<tr>
+	<td colspan=""2"" class=""MsgToolBar"">
+		<table border=""0"" cellspacing=""0"" cellpadding=""0"" class=""wa"">
+		<tbody><tr>
+			<td class=""al nw"">
+				<a href=""https://sqlru.net/index.php/u/21/""><img alt="""" src=""./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/msg_about.gif""></a>&nbsp;<a href=""https://sqlru.net/index.php/pmm/toi/21/96/""><img alt=""Отправить личное сообщение этому участнику"" title=""Отправить личное сообщение этому участнику"" src=""./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/msg_pm.gif"" width=""71"" height=""18""></a>
+				
+			</td>
+			<td class=""GenText wa ac"">&nbsp;</td>
+			<td class=""nw ar"">
+				
+				
+				<a href=""https://sqlru.net/index.php/r/reply_to/96/""><img alt="""" src=""./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/msg_reply.gif"" width=""71"" height=""18""></a>&nbsp;
+				<a href=""https://sqlru.net/index.php/r/quote/true/96/""><img alt="""" src=""./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/msg_quote.gif"" width=""71"" height=""18""></a>
+			</td>
+		</tr>
+		</tbody></table>";
+
+		public class MessageInfo
         {
-            if(domControl.Key == "Messages")
+            public string Who { get; set; }
+
+            public DateTime OnDate { get; set; }
+
+            public string Avatar { get; set; }
+
+            public string Message { get; set; }
+        }
+
+        public class TopicInfo
+        {
+            public string Title { get; set; }
+
+            public string Who { get; set; }
+
+            public uint CountMessages { get; set; }
+
+            public uint CountViews { get; set; }
+
+			public string Message { get; set; }
+
+            public List<MessageInfo> Messages { get; set; }
+        }
+
+        public override string RenderControls(List<DOMControl> controls)
+        {
+            if (!DOMForm.IsAllDocs &&
+                DOMForm.Name == "Topics")
             {
+                var topic = DOMForm.Collection
+                                   .GetDoc(DOMForm.DocID)
+                                   .SelectOne<TopicInfo>();
+
                 var sb = new StringBuilder();
-                                
-                foreach(DataRow dr in domControl.DataTable.Rows)
-                {
-                    sb.Append(@$"<tr>
-                                    <td style='border:1px solid white' align='center'>
-                                       <img style='max-width:120px;max-height:120px' src='{GetFileUrl(dr["Avatar"].ToString())}'>
-                                       <div>{dr["Who"]}</div>
-                                       <div>{dr["OnDate"]}</div>
-                                    </td>
-                                    <td  style='border:1px solid white' align='left' valign='top'>
-                                        <div>{dr["Message"]}</div>
-                                    </td>
-                                 </tr>");
+
+				sb.AppendLine(beginForumBody);
+
+				sb.Append(
+                    "<table cellspacing=\"0\" cellpadding=\"0\" class=\"ContentTable\">" +
+					"<tbody><tr>\r\n\t<td class=\"MsgSpacer\">\r\n\t\t" +
+					"<table cellspacing=\"0\" cellpadding=\"0\" class=\"MsgTable\">\r\n" +
+                    "<tbody><tr>" +
+                    "<td class=\"MsgR1 vt al expanded\"><img src=\"./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/min.png\" alt=\"-\" title=\"Свернуть сообщение\" class=\"collapsable clickable\" style=\"cursor: pointer;\"> <a name=\"msg_num_1\"></a><a name=\"msg_96\"></a>" +
+					"<span class=\"MsgSubText\">" +
+                    "<a href=\"https://sqlru.net/index.php/mv/msg/42/96/#msg_96\" class=\"MsgSubText\">"+ topic.Title+"</a></span> <span class=\"SmallText\">[<a href=\"https://sqlru.net/index.php/mv/msg/42/96/#msg_96\">сообщение #96</a>]</span></td>" +
+                    "<td class=\"MsgR1 vt ar\"><span class=\"DateText\">Mon, 27 June 2022 09:39</span> <a href=\"javascript://\" onclick=\"chng_focus(&#39;#msg_num_2&#39;);\"><img alt=\"Переход к следующему сообщению\" title=\"Переход к следующему сообщению\" src=\"./SQLRU.net_ Firebird, HQbird, InterBase » Полнотекстовый поиск для Firebird_files/down.png\" width=\"16\" height=\"11\"></a></td>\r\n" +
+					"");
+
+				sb.AppendLine("<br>" + topic.Title);
+				sb.AppendLine("<br>" + topic.Who);
+				sb.AppendLine("<br>" + topic.CountViews.ToString());
+				sb.AppendLine("<br>" + topic.CountMessages.ToString());
+				sb.AppendLine("<br>" + topic.Message);
+
+				foreach(var message in topic.Messages) //3 messages
+				{
+                    sb.AppendLine("<br>================");
+                    sb.AppendLine("<br>" + message.Who);
+                    sb.AppendLine("<br>" + message.OnDate);
+                    sb.AppendLine("<br>" + message.Avatar);
+                    sb.AppendLine("<br>" + message.Message);
                 }
+
+                sb.AppendLine(endForumBody);
 
                 return sb.ToString();
             }
             else
             {
-                return base.RenderGrid(domControl);
+                return base.RenderControls(controls);
             }
         }
 
@@ -993,26 +1111,17 @@ a.down {
 				currHtml = currHtml.Replace("@CountMessages", info.CountMessages.ToString()); //количество сообщений в теме
 				currHtml = currHtml.Replace("@CountViews", info.CountViews.ToString()); //количество просмотров теми
                 currHtml = currHtml.Replace("@OnDate", DateTime.Now.ToString("yyyy-MM-dd HH:mm")); //
-				                                                               //var strImg = "<img src='" + GetFileUrl(info.Picture) + "'/>";
-
-                //currHtml = currHtml.Replace("@Picture", strImg);
-
-                //var urlComent = "<img title=\"Comments\" src='" + GetFileUrl("bx-message-rounded-check.svg") + "'/>" + "<span>" + info.Comments.Count.ToString() + "</span>";
-                //currHtml = currHtml.Replace("@Comments", urlComent);
-
-                //var urlLike = "<img src='" + GetFileUrl("Liked.svg") + "'width=\"25px\" height=\"25px\"/>" + "<span>" + (info.Likes.Count - 1).ToString() + "</span>";
-                //currHtml = currHtml.Replace("@Likes", urlLike);
-
-                //currHtml = currHtml.Replace("@ReadMore", OnEditGridRowScript(domControl, index));
-
+                currHtml = currHtml.Replace("@ReadMore", OnEditGridRowUrl(domControl, index));
+                currHtml = currHtml.Replace("@ReadImg", GetFileUrl("Read.png"));
+                
                 sb.AppendLine(currHtml);
-
-				//sb.Append("Privet Mir !!!");
 
 				index++;
 			}
 
-			sb.Append(endBody);
+            endBody = endBody.Replace("@NewThreadImg", GetFileUrl("new_thread.gif"));
+
+            sb.Append(endBody);
 
 			sb.Append("</td>");
 
