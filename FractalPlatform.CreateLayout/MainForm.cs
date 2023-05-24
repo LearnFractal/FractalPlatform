@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web.Helpers;
 using System.Windows.Forms;
@@ -41,27 +42,82 @@ namespace FractalPlatform.CreateLayout
             return Json.Decode(result);
         }
 
+        private void AddSpaces(StringBuilder sb, int spaces)
+        {
+            for (int i = 0; i < spaces; i++)
+            {
+                sb.Append(' ');
+            }
+        }
+
+        private string FormatHtml(string html)
+        {
+            var sb = new StringBuilder();
+
+            var spaces = 0;
+            
+            int i = 0;
+
+            for (; i < html.Length - 1; i++)
+            {
+                if (html[i] == '\n' || html[i] == '\r')
+                    continue;
+
+                if (html[i] == '<')
+                {
+                    if (i != 0)
+                    {
+                        sb.Append('\n');
+                    }
+
+                    if (html[i + 1] != '/')
+                    {
+                        AddSpaces(sb, spaces);
+
+                        spaces += 3;
+                    }
+                    else
+                    {
+                        spaces -= 3;
+
+                        AddSpaces(sb, spaces);
+                    }
+                }
+
+                sb.Append(html[i]);
+
+                if (html[i] == '>' && html[i + 1] != '<')
+                {
+                    sb.Append('\n');
+
+                    AddSpaces(sb, spaces);
+                }
+            }
+
+            sb.Append(html[i]);
+
+            return sb.ToString();
+        }
+
         private async void webView_WebMessageReceived(object sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
         {
             var html = await ExecuteScript("document.documentElement.innerHTML");
 
             _currentTagInfo = JsonConvert.DeserializeObject<TagInfo>(e.WebMessageAsJson);
 
-            rtbOuterHtml.Text = _currentTagInfo.OuterHTML;
+            rtbOuterHtml.Text = FormatHtml(_currentTagInfo.OuterHTML);
 
             var idx = html.IndexOf(_currentTagInfo.OuterHTML);
         }
 
         private void webView_CoreWebView2InitializationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs e)
         {
-            var script = @"document.addEventListener('contextmenu', function (event) {
-                        let elem = document.elementFromPoint(event.clientX, event.clientY);
-                        elem.style.backgroundColor = 'green';
+            var script = @"let currElem = null; document.addEventListener('contextmenu', function (event) {
+                        currElem = event.target;
+                        currElem.style.backgroundColor = 'yellow';
                         let jsonObject =
                         {
-                            OuterHTML: elem.outerHTML,
-                            ClientX: event.clientX,
-                            ClientY: event.clientY
+                            OuterHTML: currElem.outerHTML
                         };
                         window.chrome.webview.postMessage(jsonObject);
                         event.preventDefault();
@@ -92,7 +148,22 @@ namespace FractalPlatform.CreateLayout
 
         private async void btnRemove_Click(object sender, EventArgs e)
         {
-            await ExecuteScript($"document.elementFromPoint({_currentTagInfo.ClientX}, {_currentTagInfo.ClientY}).remove();");
+            await ExecuteScript($"currElem.remove();");
+        }
+
+        private async void btnMoveToParent_Click(object sender, EventArgs e)
+        {
+            var script = @"{
+                            currElem = currElem.parentElement;
+                            currElem.style.backgroundColor = 'yellow';
+                            let jsonObject =
+                            {
+                                OuterHTML: currElem.outerHTML
+                            };
+                            window.chrome.webview.postMessage(jsonObject);
+                           }";
+
+            await ExecuteScript(script);
         }
     }
 }

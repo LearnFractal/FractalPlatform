@@ -35,6 +35,7 @@
             this.btnNavigate = new System.Windows.Forms.Button();
             this.tbNavigate = new System.Windows.Forms.TextBox();
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.btnMoveToParent = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.rtbOuterHtml = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
@@ -60,6 +61,7 @@
             // 
             // splitMain.Panel2
             // 
+            this.splitMain.Panel2.Controls.Add(this.btnMoveToParent);
             this.splitMain.Panel2.Controls.Add(this.btnRemove);
             this.splitMain.Panel2.Controls.Add(this.rtbOuterHtml);
             this.splitMain.Size = new System.Drawing.Size(1182, 695);
@@ -139,9 +141,19 @@
             this.webView.NavigationStarting += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs>(this.webView_NavigationStarting);
             this.webView.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView_WebMessageReceived);
             // 
+            // btnMoveToParent
+            // 
+            this.btnMoveToParent.Location = new System.Drawing.Point(167, 289);
+            this.btnMoveToParent.Name = "btnMoveToParent";
+            this.btnMoveToParent.Size = new System.Drawing.Size(120, 23);
+            this.btnMoveToParent.TabIndex = 2;
+            this.btnMoveToParent.Text = "Move To Parent";
+            this.btnMoveToParent.UseVisualStyleBackColor = true;
+            this.btnMoveToParent.Click += new System.EventHandler(this.btnMoveToParent_Click);
+            // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(118, 215);
+            this.btnRemove.Location = new System.Drawing.Point(212, 362);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 23);
             this.btnRemove.TabIndex = 1;
@@ -153,9 +165,10 @@
             // 
             this.rtbOuterHtml.Location = new System.Drawing.Point(36, 46);
             this.rtbOuterHtml.Name = "rtbOuterHtml";
-            this.rtbOuterHtml.Size = new System.Drawing.Size(251, 135);
+            this.rtbOuterHtml.Size = new System.Drawing.Size(251, 237);
             this.rtbOuterHtml.TabIndex = 0;
             this.rtbOuterHtml.Text = "";
+            this.rtbOuterHtml.WordWrap = false;
             // 
             // MainForm
             // 
@@ -192,6 +205,7 @@
         private Microsoft.Web.WebView2.WinForms.WebView2 webView;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.RichTextBox rtbOuterHtml;
+        private System.Windows.Forms.Button btnMoveToParent;
     }
 }
 
