@@ -30,13 +30,13 @@
         {
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.splitView = new System.Windows.Forms.SplitContainer();
+            this.btnGoForward = new System.Windows.Forms.Button();
+            this.btnGoBack = new System.Windows.Forms.Button();
+            this.btnNavigate = new System.Windows.Forms.Button();
             this.tbNavigate = new System.Windows.Forms.TextBox();
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.btnNavigate = new System.Windows.Forms.Button();
-            this.btnGoBack = new System.Windows.Forms.Button();
-            this.btnGoForward = new System.Windows.Forms.Button();
-            this.rtbOuterHtml = new System.Windows.Forms.RichTextBox();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.rtbOuterHtml = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel1.SuspendLayout();
             this.splitMain.Panel2.SuspendLayout();
@@ -87,6 +87,36 @@
             this.splitView.SplitterDistance = 42;
             this.splitView.TabIndex = 0;
             // 
+            // btnGoForward
+            // 
+            this.btnGoForward.Location = new System.Drawing.Point(774, 10);
+            this.btnGoForward.Name = "btnGoForward";
+            this.btnGoForward.Size = new System.Drawing.Size(75, 23);
+            this.btnGoForward.TabIndex = 3;
+            this.btnGoForward.Text = ">>>";
+            this.btnGoForward.UseVisualStyleBackColor = true;
+            this.btnGoForward.Click += new System.EventHandler(this.btnGoForward_Click);
+            // 
+            // btnGoBack
+            // 
+            this.btnGoBack.Location = new System.Drawing.Point(711, 10);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(56, 23);
+            this.btnGoBack.TabIndex = 2;
+            this.btnGoBack.Text = "<<<";
+            this.btnGoBack.UseVisualStyleBackColor = true;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
+            // btnNavigate
+            // 
+            this.btnNavigate.Location = new System.Drawing.Point(630, 11);
+            this.btnNavigate.Name = "btnNavigate";
+            this.btnNavigate.Size = new System.Drawing.Size(75, 23);
+            this.btnNavigate.TabIndex = 1;
+            this.btnNavigate.Text = "Navigate";
+            this.btnNavigate.UseVisualStyleBackColor = true;
+            this.btnNavigate.Click += new System.EventHandler(this.btnNavigate_Click);
+            // 
             // tbNavigate
             // 
             this.tbNavigate.Location = new System.Drawing.Point(4, 13);
@@ -109,41 +139,6 @@
             this.webView.NavigationStarting += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs>(this.webView_NavigationStarting);
             this.webView.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView_WebMessageReceived);
             // 
-            // btnNavigate
-            // 
-            this.btnNavigate.Location = new System.Drawing.Point(630, 11);
-            this.btnNavigate.Name = "btnNavigate";
-            this.btnNavigate.Size = new System.Drawing.Size(75, 23);
-            this.btnNavigate.TabIndex = 1;
-            this.btnNavigate.Text = "Navigate";
-            this.btnNavigate.UseVisualStyleBackColor = true;
-            // 
-            // btnGoBack
-            // 
-            this.btnGoBack.Location = new System.Drawing.Point(711, 10);
-            this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(56, 23);
-            this.btnGoBack.TabIndex = 2;
-            this.btnGoBack.Text = "<<<";
-            this.btnGoBack.UseVisualStyleBackColor = true;
-            // 
-            // btnGoForward
-            // 
-            this.btnGoForward.Location = new System.Drawing.Point(774, 10);
-            this.btnGoForward.Name = "btnGoForward";
-            this.btnGoForward.Size = new System.Drawing.Size(75, 23);
-            this.btnGoForward.TabIndex = 3;
-            this.btnGoForward.Text = ">>>";
-            this.btnGoForward.UseVisualStyleBackColor = true;
-            // 
-            // rtbOuterHtml
-            // 
-            this.rtbOuterHtml.Location = new System.Drawing.Point(36, 46);
-            this.rtbOuterHtml.Name = "rtbOuterHtml";
-            this.rtbOuterHtml.Size = new System.Drawing.Size(251, 135);
-            this.rtbOuterHtml.TabIndex = 0;
-            this.rtbOuterHtml.Text = "";
-            // 
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(118, 215);
@@ -153,6 +148,14 @@
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // rtbOuterHtml
+            // 
+            this.rtbOuterHtml.Location = new System.Drawing.Point(36, 46);
+            this.rtbOuterHtml.Name = "rtbOuterHtml";
+            this.rtbOuterHtml.Size = new System.Drawing.Size(251, 135);
+            this.rtbOuterHtml.TabIndex = 0;
+            this.rtbOuterHtml.Text = "";
             // 
             // MainForm
             // 
