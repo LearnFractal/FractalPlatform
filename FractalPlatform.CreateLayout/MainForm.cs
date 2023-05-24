@@ -92,7 +92,7 @@ namespace FractalPlatform.CreateLayout
 
         private async void btnRemove_Click(object sender, EventArgs e)
         {
-            await ExecuteScript($"let elem = document.elementFromPoint({_currentTagInfo.ClientX}, {_currentTagInfo.ClientY});elem.remove();");
+            await ExecuteScript($"document.elementFromPoint({_currentTagInfo.ClientX}, {_currentTagInfo.ClientY}).remove();");
         }
     }
 }
