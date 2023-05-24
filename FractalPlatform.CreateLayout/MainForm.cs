@@ -2,6 +2,7 @@
 using System;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Helpers;
 using System.Windows.Forms;
 
@@ -25,12 +26,22 @@ namespace FractalPlatform.CreateLayout
 
         private void Navigate(string url)
         {
+            if(!url.StartsWith("http"))
+            {
+                url = "https://" + url;
+            }
+
             webView.Source = new Uri(url);
+        }
+
+        private void RemoveOuterHtml()
+        {
+            rtbOuterHtml.Text = string.Empty;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Navigate("https://sqlru.net");
+            Navigate("https://naps.com.ua");
         }
 
         private TagInfo _currentTagInfo;
@@ -122,8 +133,9 @@ namespace FractalPlatform.CreateLayout
 
         private void webView_CoreWebView2InitializationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs e)
         {
-            var script = @"let currElem = null; document.addEventListener('contextmenu', function (event) {
-                        currElem = event.target;
+            var script = @"let currElems = []; document.addEventListener('contextmenu', function (event) {
+                        let currElem = event.target;
+                        currElems.push(currElem);
                         currElem.style.backgroundColor = 'yellow';
                         let jsonObject =
                         {
@@ -158,22 +170,57 @@ namespace FractalPlatform.CreateLayout
 
         private async void btnRemove_Click(object sender, EventArgs e)
         {
-            await ExecuteScript($"currElem.remove();");
+            await ExecuteScript($"currElems.pop().remove();");
+
+            RemoveOuterHtml();
         }
 
         private async void btnMoveToParent_Click(object sender, EventArgs e)
         {
             var script = @"{
-                            currElem = currElem.parentElement;
+                            let currElem = currElems[currElems.length-1].parentElement;
+                            currElems.push(currElem);
+
                             currElem.style.backgroundColor = 'yellow';
                             let jsonObject =
                             {
                                 OuterHTML: currElem.outerHTML
                             };
-                            window.chrome.webview.postMessage(jsonObject);
-                           }";
+                            
+                            window.chrome.webview.postMessage(jsonObject);}";
 
             await ExecuteScript(script);
+        }
+
+        private async void btnMoveToChild_Click(object sender, EventArgs e)
+        {
+            var script = @"{
+                            currElems.pop();
+
+                            let currElem = currElems[currElems.length-1];
+                            
+                            currElem.style.backgroundColor = 'yellow';
+                            let jsonObject =
+                            {
+                                OuterHTML: currElem.outerHTML
+                            };
+                            
+                            window.chrome.webview.postMessage(jsonObject);}";
+
+            await ExecuteScript(script);
+        }
+
+        private async void btnApply_Click(object sender, EventArgs e)
+        {
+            var script = @"{
+                            currElems.pop().outerHTML = '@OuterHTML';
+                          }";
+
+            script = script.Replace("@OuterHTML", rtbOuterHtml.Text.Replace('\n',' '));
+
+            await ExecuteScript(script);
+
+            RemoveOuterHtml();
         }
     }
 }

@@ -35,9 +35,11 @@
             this.btnNavigate = new System.Windows.Forms.Button();
             this.tbNavigate = new System.Windows.Forms.TextBox();
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.btnMoveToChild = new System.Windows.Forms.Button();
             this.btnMoveToParent = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.rtbOuterHtml = new System.Windows.Forms.RichTextBox();
+            this.btnApply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel1.SuspendLayout();
             this.splitMain.Panel2.SuspendLayout();
@@ -61,6 +63,8 @@
             // 
             // splitMain.Panel2
             // 
+            this.splitMain.Panel2.Controls.Add(this.btnApply);
+            this.splitMain.Panel2.Controls.Add(this.btnMoveToChild);
             this.splitMain.Panel2.Controls.Add(this.btnMoveToParent);
             this.splitMain.Panel2.Controls.Add(this.btnRemove);
             this.splitMain.Panel2.Controls.Add(this.rtbOuterHtml);
@@ -141,6 +145,16 @@
             this.webView.NavigationStarting += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs>(this.webView_NavigationStarting);
             this.webView.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView_WebMessageReceived);
             // 
+            // btnMoveToChild
+            // 
+            this.btnMoveToChild.Location = new System.Drawing.Point(36, 289);
+            this.btnMoveToChild.Name = "btnMoveToChild";
+            this.btnMoveToChild.Size = new System.Drawing.Size(120, 23);
+            this.btnMoveToChild.TabIndex = 3;
+            this.btnMoveToChild.Text = "Move To Child";
+            this.btnMoveToChild.UseVisualStyleBackColor = true;
+            this.btnMoveToChild.Click += new System.EventHandler(this.btnMoveToChild_Click);
+            // 
             // btnMoveToParent
             // 
             this.btnMoveToParent.Location = new System.Drawing.Point(167, 289);
@@ -169,6 +183,16 @@
             this.rtbOuterHtml.TabIndex = 0;
             this.rtbOuterHtml.Text = "";
             this.rtbOuterHtml.WordWrap = false;
+            // 
+            // btnApply
+            // 
+            this.btnApply.Location = new System.Drawing.Point(36, 331);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(120, 23);
+            this.btnApply.TabIndex = 4;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // MainForm
             // 
@@ -206,6 +230,8 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.RichTextBox rtbOuterHtml;
         private System.Windows.Forms.Button btnMoveToParent;
+        private System.Windows.Forms.Button btnMoveToChild;
+        private System.Windows.Forms.Button btnApply;
     }
 }
 
