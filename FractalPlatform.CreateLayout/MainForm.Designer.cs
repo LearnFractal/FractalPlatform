@@ -50,8 +50,9 @@
             this.pnlNavigate.Controls.Add(this.tbNavigate);
             this.pnlNavigate.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNavigate.Location = new System.Drawing.Point(0, 0);
+            this.pnlNavigate.MinimumSize = new System.Drawing.Size(904, 45);
             this.pnlNavigate.Name = "pnlNavigate";
-            this.pnlNavigate.Size = new System.Drawing.Size(904, 45);
+            this.pnlNavigate.Size = new System.Drawing.Size(904, 57);
             this.pnlNavigate.TabIndex = 0;
             // 
             // btnForward
@@ -59,6 +60,7 @@
             this.btnForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnForward.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForward.Location = new System.Drawing.Point(814, -2);
+            this.btnForward.MinimumSize = new System.Drawing.Size(87, 35);
             this.btnForward.Name = "btnForward";
             this.btnForward.Size = new System.Drawing.Size(87, 35);
             this.btnForward.TabIndex = 3;
@@ -71,8 +73,9 @@
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBack.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(721, 0);
+            this.btnBack.MinimumSize = new System.Drawing.Size(87, 35);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(87, 33);
+            this.btnBack.Size = new System.Drawing.Size(87, 35);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "<<<";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -81,6 +84,7 @@
             // 
             this.btnNavigate.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNavigate.Location = new System.Drawing.Point(551, 1);
+            this.btnNavigate.MinimumSize = new System.Drawing.Size(113, 34);
             this.btnNavigate.Name = "btnNavigate";
             this.btnNavigate.Size = new System.Drawing.Size(113, 34);
             this.btnNavigate.TabIndex = 1;
@@ -96,14 +100,13 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 54);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.webView);
-            this.splitContainer1.Size = new System.Drawing.Size(904, 600);
+            this.splitContainer1.Size = new System.Drawing.Size(904, 546);
             this.splitContainer1.SplitterDistance = 675;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -112,10 +115,9 @@
             this.webView.AllowExternalDrop = true;
             this.webView.CreationProperties = null;
             this.webView.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webView.Location = new System.Drawing.Point(0, 0);
+            this.webView.Location = new System.Drawing.Point(0, 3);
             this.webView.Name = "webView";
-            this.webView.Size = new System.Drawing.Size(675, 600);
+            this.webView.Size = new System.Drawing.Size(672, 537);
             this.webView.TabIndex = 0;
             this.webView.ZoomFactor = 1D;
             this.webView.CoreWebView2InitializationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs>(this.webView_CoreWebView2InitializationCompleted);
