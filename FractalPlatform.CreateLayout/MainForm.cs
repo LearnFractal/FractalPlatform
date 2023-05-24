@@ -22,9 +22,14 @@ namespace FractalPlatform.CreateLayout
             InitializeComponent();
         }
 
+        private void Navigate(string url)
+        {
+            webView.Source = new Uri(url);
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
-            webView.Source = new Uri("https://finance.ua");
+            Navigate("https://sqlru.net");
         }
 
         private TagInfo _currentTagInfo;
@@ -41,6 +46,8 @@ namespace FractalPlatform.CreateLayout
             var html = await ExecuteScript("document.documentElement.innerHTML");
 
             _currentTagInfo = JsonConvert.DeserializeObject<TagInfo>(e.WebMessageAsJson);
+
+            rtbOuterHtml.Text = _currentTagInfo.OuterHTML;
 
             var idx = html.IndexOf(_currentTagInfo.OuterHTML);
         }
@@ -76,6 +83,16 @@ namespace FractalPlatform.CreateLayout
         private void webView_NavigationStarting(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs e)
         {
             tbNavigate.Text = e.Uri.ToString();
+        }
+
+        private void btnNavigate_Click(object sender, EventArgs e)
+        {
+            Navigate(tbNavigate.Text);
+        }
+
+        private async void btnRemove_Click(object sender, EventArgs e)
+        {
+            await ExecuteScript($"let elem = document.elementFromPoint({_currentTagInfo.ClientX}, {_currentTagInfo.ClientY});elem.remove();");
         }
     }
 }
