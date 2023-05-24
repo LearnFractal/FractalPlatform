@@ -55,10 +55,12 @@ namespace FractalPlatform.CreateLayout
             var sb = new StringBuilder();
 
             var spaces = 0;
-            
+
+            char openedTag = ' ';
+
             int i = 0;
 
-            for (; i < html.Length - 1; i++)
+            for (; i < html.Length - 2; i++)
             {
                 if (html[i] == '\n' || html[i] == '\r')
                     continue;
@@ -75,9 +77,16 @@ namespace FractalPlatform.CreateLayout
                         AddSpaces(sb, spaces);
 
                         spaces += 3;
+
+                        openedTag = html[i + 1];
                     }
                     else
                     {
+                        if (html[i + 2] != openedTag)
+                        {
+                            spaces -= 3;
+                        }
+
                         spaces -= 3;
 
                         AddSpaces(sb, spaces);
@@ -95,6 +104,7 @@ namespace FractalPlatform.CreateLayout
             }
 
             sb.Append(html[i]);
+            sb.Append(html[i + 1]);
 
             return sb.ToString();
         }
