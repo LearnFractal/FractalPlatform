@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Web.Helpers;
 using System.Windows.Forms;
 
@@ -20,6 +21,11 @@ namespace FractalPlatform.CreateLayout
         {
             var html = await webView.CoreWebView2.ExecuteScriptAsync("document.body.outerHTML");
             var htmldecoded = Json.Decode(html);
+
+            var xx = JsonConvert.DeserializeObject<dynamic>(e.WebMessageAsJson);
+
+            var clientX = xx.ClientX;
+            var clientY = xx.ClientY;
         }
 
         private void webView_CoreWebView2InitializationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs e)

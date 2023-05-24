@@ -56,8 +56,9 @@
             // 
             // btnForward
             // 
+            this.btnForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnForward.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForward.Location = new System.Drawing.Point(814, 3);
+            this.btnForward.Location = new System.Drawing.Point(814, -2);
             this.btnForward.Name = "btnForward";
             this.btnForward.Size = new System.Drawing.Size(87, 35);
             this.btnForward.TabIndex = 3;
@@ -67,8 +68,9 @@
             // 
             // btnBack
             // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBack.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(721, 4);
+            this.btnBack.Location = new System.Drawing.Point(721, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 33);
             this.btnBack.TabIndex = 2;
@@ -78,7 +80,7 @@
             // btnNavigate
             // 
             this.btnNavigate.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavigate.Location = new System.Drawing.Point(551, 3);
+            this.btnNavigate.Location = new System.Drawing.Point(551, 1);
             this.btnNavigate.Name = "btnNavigate";
             this.btnNavigate.Size = new System.Drawing.Size(113, 34);
             this.btnNavigate.TabIndex = 1;
@@ -87,7 +89,6 @@
             // 
             // tbNavigate
             // 
-            this.tbNavigate.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbNavigate.Location = new System.Drawing.Point(0, 0);
             this.tbNavigate.Name = "tbNavigate";
             this.tbNavigate.Size = new System.Drawing.Size(545, 38);
@@ -96,13 +97,13 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 45);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.webView);
-            this.splitContainer1.Size = new System.Drawing.Size(904, 405);
+            this.splitContainer1.Size = new System.Drawing.Size(904, 600);
             this.splitContainer1.SplitterDistance = 675;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -114,7 +115,7 @@
             this.webView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView.Location = new System.Drawing.Point(0, 0);
             this.webView.Name = "webView";
-            this.webView.Size = new System.Drawing.Size(675, 405);
+            this.webView.Size = new System.Drawing.Size(675, 600);
             this.webView.TabIndex = 0;
             this.webView.ZoomFactor = 1D;
             this.webView.CoreWebView2InitializationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs>(this.webView_CoreWebView2InitializationCompleted);
@@ -125,9 +126,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 450);
-            this.Controls.Add(this.splitContainer1);
+            this.ClientSize = new System.Drawing.Size(904, 600);
             this.Controls.Add(this.pnlNavigate);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
