@@ -50,19 +50,21 @@
             this.pnlNavigate.Controls.Add(this.tbNavigate);
             this.pnlNavigate.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNavigate.Location = new System.Drawing.Point(0, 0);
-            this.pnlNavigate.MinimumSize = new System.Drawing.Size(904, 45);
+            this.pnlNavigate.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pnlNavigate.MinimumSize = new System.Drawing.Size(339, 19);
             this.pnlNavigate.Name = "pnlNavigate";
-            this.pnlNavigate.Size = new System.Drawing.Size(904, 57);
+            this.pnlNavigate.Size = new System.Drawing.Size(1182, 24);
             this.pnlNavigate.TabIndex = 0;
             // 
             // btnForward
             // 
             this.btnForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnForward.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForward.Location = new System.Drawing.Point(814, -2);
-            this.btnForward.MinimumSize = new System.Drawing.Size(87, 35);
+            this.btnForward.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForward.Location = new System.Drawing.Point(805, -2);
+            this.btnForward.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnForward.MinimumSize = new System.Drawing.Size(33, 15);
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(87, 35);
+            this.btnForward.Size = new System.Drawing.Size(64, 25);
             this.btnForward.TabIndex = 3;
             this.btnForward.Text = ">>>";
             this.btnForward.UseVisualStyleBackColor = true;
@@ -71,43 +73,50 @@
             // btnBack
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(721, 0);
-            this.btnBack.MinimumSize = new System.Drawing.Size(87, 35);
+            this.btnBack.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(738, -1);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBack.MinimumSize = new System.Drawing.Size(33, 15);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(87, 35);
+            this.btnBack.Size = new System.Drawing.Size(65, 24);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "<<<";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
             // btnNavigate
             // 
-            this.btnNavigate.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavigate.Location = new System.Drawing.Point(551, 1);
-            this.btnNavigate.MinimumSize = new System.Drawing.Size(113, 34);
+            this.btnNavigate.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavigate.Location = new System.Drawing.Point(655, 1);
+            this.btnNavigate.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnNavigate.MinimumSize = new System.Drawing.Size(42, 14);
             this.btnNavigate.Name = "btnNavigate";
-            this.btnNavigate.Size = new System.Drawing.Size(113, 34);
+            this.btnNavigate.Size = new System.Drawing.Size(81, 24);
             this.btnNavigate.TabIndex = 1;
             this.btnNavigate.Text = "Navigate";
             this.btnNavigate.UseVisualStyleBackColor = true;
             // 
             // tbNavigate
             // 
+            this.tbNavigate.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNavigate.Location = new System.Drawing.Point(0, 0);
+            this.tbNavigate.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tbNavigate.Name = "tbNavigate";
-            this.tbNavigate.Size = new System.Drawing.Size(545, 38);
+            this.tbNavigate.Size = new System.Drawing.Size(653, 23);
             this.tbNavigate.TabIndex = 0;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(0, 54);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.webView);
-            this.splitContainer1.Size = new System.Drawing.Size(904, 546);
-            this.splitContainer1.SplitterDistance = 675;
+            this.splitContainer1.Size = new System.Drawing.Size(1182, 695);
+            this.splitContainer1.SplitterDistance = 870;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 1;
             // 
             // webView
@@ -115,9 +124,11 @@
             this.webView.AllowExternalDrop = true;
             this.webView.CreationProperties = null;
             this.webView.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView.Location = new System.Drawing.Point(0, 3);
+            this.webView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView.Location = new System.Drawing.Point(0, 0);
+            this.webView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.webView.Name = "webView";
-            this.webView.Size = new System.Drawing.Size(672, 537);
+            this.webView.Size = new System.Drawing.Size(870, 695);
             this.webView.TabIndex = 0;
             this.webView.ZoomFactor = 1D;
             this.webView.CoreWebView2InitializationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs>(this.webView_CoreWebView2InitializationCompleted);
@@ -126,11 +137,12 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 600);
+            this.ClientSize = new System.Drawing.Size(1182, 695);
             this.Controls.Add(this.pnlNavigate);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
