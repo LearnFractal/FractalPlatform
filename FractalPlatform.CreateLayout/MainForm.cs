@@ -56,7 +56,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"\\files\\{_dbName}\\", $"..\\files\\{_dbName}\\");
+            html = HtmlHelpers.ReplaceLinks(html, $"/files/{_dbName}/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -69,7 +69,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"\\files\\{_dbName}\\", $"..\\files\\{_dbName}\\");
+            html = HtmlHelpers.ReplaceLinks(html, $"/files/{_dbName}/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -429,13 +429,13 @@ namespace FractalPlatform.CreateLayout
                     return false;
                 }
 
-                Navigate(openHtmlFileDialog.FileName);
-
-                _documentFileName = tbLayout.Text
+                _documentFileName = openHtmlFileDialog.FileName
                                             .Replace("Layouts", "Databases")
                                             .Replace(".html", @"\Document\0000000001.json");
 
                 RefreshComboBoxes();
+
+                Navigate(openHtmlFileDialog.FileName);
 
                 return true;
             }
@@ -559,7 +559,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.RemoveTagIds(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"..\\files\\{_dbName}\\", $"\\files\\{_dbName}\\");
+            html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"/files/{_dbName}/");
 
             WriteHtml(html);
         }
@@ -1039,10 +1039,17 @@ namespace FractalPlatform.CreateLayout
 
                 if (dirInfo != null)
                 {
-                    html = HtmlHelpers.ReplaceLinks(html, $"\\{dirInfo.Name}\\", $"\\files\\{_dbName}\\{dirInfo.Name}\\");
+                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"/files/{_dbName}/{dirInfo.Name}/");
                 }
 
-                var htmlPath = $"{path}\\Layouts\\{_dbName}\\{_collName}.html";
+                dirName = $"{path}\\Layouts\\{_dbName}";
+
+                if (!Directory.Exists(dirName))
+                {
+                    Directory.CreateDirectory(dirName);
+                }
+
+                var htmlPath = $"{dirName}\\{_collName}.html";
 
                 File.WriteAllText(htmlPath, html);
 
