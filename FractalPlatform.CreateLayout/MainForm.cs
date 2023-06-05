@@ -137,7 +137,7 @@ namespace FractalPlatform.CreateLayout
             Apply();
         }
 
-        private bool CreateControlTag()
+        private bool CreateControlTag(bool isStandardType = false)
         {
             if (HasControlTag)
             {
@@ -155,9 +155,18 @@ namespace FractalPlatform.CreateLayout
 
             if (dlgChooseAttribute.ShowDialog() == DialogResult.OK)
             {
-                rtbOuterHtml.Text = rtbOuterHtml.Text.Replace("yellow", "lightGreen");
+                var attr = dlgChooseAttribute.Attribute.Replace("\\", "\\\\");
 
-                var html = $"<control attr=\"{dlgChooseAttribute.Attribute.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>";
+                string html;
+
+                if (!isStandardType)
+                {
+                    html = $"<control attr=\"{attr}\">" + rtbOuterHtml.Text + "</control>";
+                }
+                else
+                {
+                    html = $"<control attr=\"{attr}\" type=\"standard\"></control>";
+                }
 
                 rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
 
@@ -795,6 +804,16 @@ namespace FractalPlatform.CreateLayout
         private void createComponentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!CreateControlTag())
+            {
+                return;
+            }
+
+            Apply();
+        }
+
+        private void createStandardComponentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!CreateControlTag(true))
             {
                 return;
             }
