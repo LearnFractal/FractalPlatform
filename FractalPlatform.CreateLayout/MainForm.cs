@@ -56,6 +56,8 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
+            html = HtmlHelpers.ReplaceLinks(html, $"\\files\\{_dbName}\\", $"..\\files\\{_dbName}\\");
+
             WriteHtml(html);
 
             webView.Source = new Uri(path);
@@ -66,6 +68,8 @@ namespace FractalPlatform.CreateLayout
             var html = ReadHtml();
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
+
+            html = HtmlHelpers.ReplaceLinks(html, $"\\files\\{_dbName}\\", $"..\\files\\{_dbName}\\");
 
             WriteHtml(html);
 
@@ -554,6 +558,8 @@ namespace FractalPlatform.CreateLayout
             var html = ReadHtml();
 
             html = HtmlHelpers.RemoveTagIds(html);
+
+            html = HtmlHelpers.ReplaceLinks(html, $"..\\files\\{_dbName}\\", $"\\files\\{_dbName}\\");
 
             WriteHtml(html);
         }
