@@ -1015,11 +1015,13 @@ namespace FractalPlatform.CreateLayout
 
                 var path = _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
 
+                DirectoryInfo dirInfo = null;
+
                 if (Directory.Exists(dirName))
                 {
-                    var dirInfo = new DirectoryInfo(dirName);
+                    dirInfo = new DirectoryInfo(dirName);
 
-                    var dirPath = $"{path}\\Layouts\\{_dbName}\\{dirInfo.Name}";
+                    var dirPath = $"{path}\\Files\\{_dbName}\\{dirInfo.Name}";
 
                     FileHelpers.CopyFilesRecursively(dirName, dirPath);
                 }
@@ -1028,6 +1030,11 @@ namespace FractalPlatform.CreateLayout
                 var html = File.ReadAllText(fileName);
 
                 html = HtmlHelpers.AddScriptsToHtml(html);
+
+                if (dirInfo != null)
+                {
+                    html = HtmlHelpers.ReplaceLinks(html, $"\\{dirInfo.Name}\\", $"\\files\\{_dbName}\\{dirInfo.Name}\\");
+                }
 
                 var htmlPath = $"{path}\\Layouts\\{_dbName}\\{_collName}.html";
 

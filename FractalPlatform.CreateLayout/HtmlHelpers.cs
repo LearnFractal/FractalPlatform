@@ -141,6 +141,11 @@ namespace FractalPlatform.CreateLayouts
             return sb.ToString();
         }
 
+        public static string ReplaceLinks(string html, string oldLink, string newLink)
+        {
+            return html.Replace(oldLink, newLink);
+        }
+
         public static string AddTagIdsToHtml(string html)
         {
             var lastID = 0;
