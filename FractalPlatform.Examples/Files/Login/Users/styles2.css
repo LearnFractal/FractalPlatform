@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "Gotham Book";
+    src: url("fonts/Gotham-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gotham Bold";
+    src: url("fonts/Gotham-Bold.otf") format("opentype");
+}
+
+body {
+    margin: 0;
+    font-family: "Gotham Book", Arial, sans-serif;
+    background-color: #F0F2F5;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-family: "Gotham Bold", Arial, sans-serif;
+}
+
+
+header {
+    background-color: #1877F2;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+main {
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.new-block {
+    text-align: center; /* отцентровка содержимого по горизонтали */
+}
+
+.new-block p {
+    padding-left: 10%; /* отступ слева */
+    padding-right: 10%; /* отступ справа */
+}
+
+.new-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+.message {
+    display: none;
+    text-align: center;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 4px;
+    position: relative;
+    width: auto;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.privacy-policy {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    width: 70%
+}
+
+.privacy-policy input[type="checkbox"] {
+    margin-right: 5px;
+    width: 30%
+}
+
+.privacy-policy label {
+    font-size: 14px;
+    color: #777;
+}
+
+.privacy-policy a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
+
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-block, .right-block {
+    width: 48%;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left-block, .right-block {
+        width: 100%;
+    }
+}
+
+.left-block {
+    text-align: center;
+}
+
+.left-block img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form, .registration-form {
+    background-color: #FFF;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form input, .registration-form input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    width: 93%; /* поля ввода теперь занимают 100% ширины */
+}
+
+.login-form button, .registration-form button {
+    background-color: #1877F2;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%; /* кнопки теперь занимают 100% ширины */
+}
+
+.register-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #1877F2;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.register-btn:hover {
+    background-color: #0f62d0;
+}
+
+
+.cancel-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ccc;
+}
+
+.login-form + .register-btn {
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    display: none;
+    margin-top: 10px;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+.register-btn:hover, .cancel-btn:hover, .login-form button:hover, .registration-form button:hover {
+    background-color: #0f62d0;
+}
+
+.privacy-content {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .left-block, .right-block {
+        width: 100%;
+    }
+}
+
+
