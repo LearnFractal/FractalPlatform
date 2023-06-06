@@ -194,6 +194,7 @@ namespace FractalPlatform.CreateLayout
         private void BindControl(string[] tagNames,
                                  string nameAlias,
                                  string onClickAlias,
+                                 string onClickUrlAlias,
                                  string onChangeAlias,
                                  string valueAlias,
                                  string[] removeWords = null,
@@ -204,11 +205,15 @@ namespace FractalPlatform.CreateLayout
 
             var bFind = false;
 
-            foreach (var tagName in tagNames)
+            var tagName = string.Empty;
+
+            for(int i=0; i<tagNames.Length;i++)
             {
-                if (text.StartsWith("<" + tagName))
+                if (text.StartsWith("<" + tagNames[i]))
                 {
                     bFind = true;
+
+                    tagName = tagNames[i];
 
                     break;
                 }
@@ -230,6 +235,7 @@ namespace FractalPlatform.CreateLayout
 
             var isNameExists = false;
             var isOnClickExists = false;
+            var isOnClickUrlExists = false;
             var isOnChangeExists = false;
             var isValueExists = false;
 
@@ -249,7 +255,8 @@ namespace FractalPlatform.CreateLayout
 
                     isNameExists = true;
                 }
-                else if (attr == "onclick")
+                else if (attr == "onclick" &&
+                         (tagName == "input" || tagName == "button"))
                 {
                     if (!string.IsNullOrEmpty(onClickAlias))
                     {
@@ -276,28 +283,45 @@ namespace FractalPlatform.CreateLayout
 
                     isValueExists = true;
                 }
+                else if(attr == "href" &&
+                        tagName == "a")
+                {
+                    if (!string.IsNullOrEmpty(onClickUrlAlias))
+                    {
+                        text = text.Replace(val, onClickUrlAlias);
+                    }
+
+                    isOnClickUrlExists = true;
+                }
             }
 
             var idx = text.IndexOf('>');
 
             if (!isNameExists && !string.IsNullOrEmpty(nameAlias))
             {
-                text = text.Insert(idx, $" name='{nameAlias}'");
+                text = text.Insert(idx, $" name=\"{nameAlias}\"");
             }
 
-            if (!isOnClickExists && !string.IsNullOrEmpty(onClickAlias))
+            if (!isOnClickExists && !string.IsNullOrEmpty(onClickAlias) &&
+                (tagName == "input" || tagName == "button"))
             {
-                text = text.Insert(idx, $" onclick='{onClickAlias}'");
+                text = text.Insert(idx, $" onclick=\"{onClickAlias}\"");
+            }
+
+            if (!isOnClickUrlExists && !string.IsNullOrEmpty(onClickUrlAlias) &&
+                tagName == "a")
+            {
+                text = text.Insert(idx, $" href=\"{onClickUrlAlias}\"");
             }
 
             if (!isOnChangeExists && !string.IsNullOrEmpty(onChangeAlias))
             {
-                text = text.Insert(idx, $" onchange='{onChangeAlias}'");
+                text = text.Insert(idx, $" onchange=\"{onChangeAlias}\"");
             }
 
             if (!isValueExists && !string.IsNullOrEmpty(valueAlias))
             {
-                text = text.Insert(idx, $" value='{valueAlias}'");
+                text = text.Insert(idx, $" value=\"{valueAlias}\"");
             }
 
             if (removeWords != null)
@@ -922,6 +946,7 @@ namespace FractalPlatform.CreateLayout
                         "@Name",
                         null,
                         null,
+                        null,
                         "@Value",
                         new[] { "disabled", "readonly" },
                         new[] { "@Disabled", "@ReadOnly" });
@@ -930,9 +955,10 @@ namespace FractalPlatform.CreateLayout
         private void bindButtonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //input type=button or <button>
-            BindControl(new[] { "input", "button" },
+            BindControl(new[] { "input", "button", "a" },
                         "@Name",
                         "@ClickSubmit",
+                        "@ClickUrl",
                         null,
                         "@Value",
                         new[] { "disabled", "readonly" },
@@ -944,6 +970,7 @@ namespace FractalPlatform.CreateLayout
             //input type=checkbox
             BindControl(new[] { "input" },
                         "@Name",
+                        null,
                         null,
                         "checkedChanged(this,'@Name')",
                         "@Value",
@@ -957,6 +984,7 @@ namespace FractalPlatform.CreateLayout
             //select
             BindControl(new[] { "select" },
                         "@Name",
+                        null,
                         null,
                         null,
                         null,
@@ -982,6 +1010,7 @@ namespace FractalPlatform.CreateLayout
                         "btnSave",
                         "@SavePageScript",
                         null,
+                        null,
                         "@SavePageText");
         }
 
@@ -992,6 +1021,7 @@ namespace FractalPlatform.CreateLayout
                         "btnCancel",
                         "@CancelPageScript",
                         null,
+                        null,
                         "@CancelPageText");
         }
 
@@ -1001,6 +1031,7 @@ namespace FractalPlatform.CreateLayout
             BindControl(new[] { "input", "button" },
                         "btnPrevPage",
                         "@PrevPageScript",
+                        null,
                         null,
                         "Prev",
                         new[] { "disabled" },
@@ -1013,6 +1044,7 @@ namespace FractalPlatform.CreateLayout
             BindControl(new[] { "input", "button" },
                         "btnNextPage",
                         "@NextPageScript",
+                        null,
                         null,
                         "Next",
                         new[] { "disabled" },
