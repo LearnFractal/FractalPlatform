@@ -17,7 +17,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
         private class PostInfo
         {
-            public int Number { get; set; }
+            public uint Number { get; set; }
 
             public string Avatar { get; set; }
 
@@ -54,9 +54,9 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
 
                 sb.Append("<table border=1>");
 
-                for (int i = 0; i < posts.Root.Count; i++)
+                for (uint i = 0; i < posts.Root.Count; i++)
                 {
-                    posts.Root[i].Number = i;
+                    posts.Root[(int)i].Number = i;
                 }
 
                 //test change

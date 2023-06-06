@@ -1,10 +1,13 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace FractalPlatform.CreateLayouts
 {
     public static class HtmlHelpers
     {
+        private readonly static List<string> _emptyTags = new List<string> { "input", "img", "br" };
+
         private static void AddSpaces(StringBuilder sb, int spaces)
         {
             for (int i = 0; i < spaces; i++)
@@ -259,8 +262,7 @@ namespace FractalPlatform.CreateLayouts
 
                                     ourTag = currTag;
                                     
-                                    if(ourTag == "input" ||
-                                       ourTag == "img") //tag that not closed
+                                    if(_emptyTags.Contains(ourTag))
                                     {
                                         return "<" + tagStr + html[i];
                                     }
@@ -313,57 +315,90 @@ namespace FractalPlatform.CreateLayouts
 
             var spaces = 0;
 
-            char openedTag = ' ';
-
-            int i = 0;
-
-            for (; i < html.Length - 2; i++)
+            for (int i = 0; i < html.Length; i++)
             {
-                if (html[i] == '\n' || html[i] == '\r')
-                    continue;
-
-                if (html[i] == '<')
+                if (html[i] == '<' && html[i + 1] != '!')
                 {
-                    if (i != 0)
-                    {
-                        sb.Append('\n');
-                    }
+                    var tag = new StringBuilder();
 
                     if (html[i + 1] != '/')
                     {
-                        AddSpaces(sb, spaces);
+                        for (++i; i < html.Length; i++)
+                        {
+                            if (html[i] != '>')
+                            {
+                                tag.Append(html[i]);
+                            }
+                            else
+                            {
+                                var tagStr = tag.ToString();
 
-                        spaces += 3;
+                                sb.Append('\n');
+                                AddSpaces(sb, spaces);
 
-                        openedTag = html[i + 1];
+                                sb.Append('<');
+                                sb.Append(tagStr);
+
+                                var currTag = tagStr.Split(' ')[0];
+
+                                if(!_emptyTags.Contains(currTag))
+                                {
+                                    spaces += 3;
+                                }
+
+                                break;
+                            }
+                        }
                     }
                     else
                     {
-                        if (html[i + 2] != openedTag)
+                        for (i += 2; i < html.Length; i++)
                         {
-                            spaces -= 3;
+                            if (char.IsLetter(html[i]) || char.IsNumber(html[i]))
+                            {
+                                tag.Append(html[i]);
+                            }
+                            else
+                            {
+                                var tagStr = tag.ToString();
+
+                                spaces -= 3;
+
+                                sb.Append('\n');
+                                AddSpaces(sb, spaces);
+
+                                sb.Append("</");
+                                sb.Append(tagStr);
+
+                                break;
+                            }
                         }
-
-                        spaces -= 3;
-
-                        AddSpaces(sb, spaces);
                     }
                 }
 
                 sb.Append(html[i]);
 
-                if (html[i] == '>' && html[i + 1] != '<')
+                if (html[i] == '>')
                 {
+                    while (i < html.Length - 1 &&
+                           (html[i + 1] == ' ' ||
+                            html[i + 1] == '\n' ||
+                            html[i + 1] == '\t'))
+                    {
+                        i++;
+                    }
+
                     sb.Append('\n');
 
                     AddSpaces(sb, spaces);
                 }
+                else if (html[i] == '\n')
+                {
+                    AddSpaces(sb, spaces);
+                }
             }
 
-            sb.Append(html[i]);
-            sb.Append(html[i + 1]);
-
-            return sb.ToString();
+            return sb.ToString().Trim();
         }
         
         public static string RemoveTagIds(string html)
