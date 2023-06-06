@@ -104,11 +104,11 @@
     <Compile Include="EditJsonForm.Designer.cs">
       <DependentUpon>EditJsonForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChooseAttriForm.cs">
+    <Compile Include="ChooseAttrForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChooseAttriForm.Designer.cs">
-      <DependentUpon>ChooseAttriForm.cs</DependentUpon>
+    <Compile Include="ChooseAttrForm.Designer.cs">
+      <DependentUpon>ChooseAttrForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FileHelpers.cs" />
     <Compile Include="HtmlHelpers.cs" />
@@ -124,8 +124,8 @@
     <EmbeddedResource Include="EditJsonForm.resx">
       <DependentUpon>EditJsonForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseAttriForm.resx">
-      <DependentUpon>ChooseAttriForm.cs</DependentUpon>
+    <EmbeddedResource Include="ChooseAttrForm.resx">
+      <DependentUpon>ChooseAttrForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

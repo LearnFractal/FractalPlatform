@@ -1,6 +1,6 @@
 ﻿namespace FractalPlatform.CreateLayouts
 {
-    partial class ChooseAttriForm
+    partial class ChooseAttrForm
     {
         /// <summary>
         /// Required designer variable.

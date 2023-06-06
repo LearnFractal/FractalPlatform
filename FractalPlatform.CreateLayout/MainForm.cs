@@ -17,6 +17,8 @@ namespace FractalPlatform.CreateLayout
         public class TagInfo
         {
             public string Id { get; set; }
+
+            public string ParentId { get; set; }
         }
 
         #endregion
@@ -155,21 +157,21 @@ namespace FractalPlatform.CreateLayout
 
             var json = File.ReadAllText(_documentFileName);
 
-            var dlgChooseAttribute = new ChooseAttriForm(json);
+            var dlgChooseAttribute = new ChooseAttrForm(json);
 
             if (dlgChooseAttribute.ShowDialog() == DialogResult.OK)
             {
-                var attr = dlgChooseAttribute.Attribute.Replace("\\", "\\\\");
+                var attr = dlgChooseAttribute.Attribute;
 
                 string html;
 
                 if (!isStandardType)
                 {
-                    html = $"<control attr=\"{attr}\">" + rtbOuterHtml.Text + "</control>";
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>";
                 }
                 else
                 {
-                    html = $"<control attr=\"{attr}\" type=\"standard\"></control>";
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
                 }
 
                 rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
@@ -445,7 +447,7 @@ namespace FractalPlatform.CreateLayout
             }
         }
 
-        private void EditDimension(string dimension)
+        private string GetDimensionPath(string dimension)
         {
             var path = _documentFileName;
 
@@ -453,6 +455,63 @@ namespace FractalPlatform.CreateLayout
             {
                 path = path.Replace("Document", dimension + "\\Document").Replace("0000000001.json", "0000000000.json");
             }
+
+            return path;
+        }
+
+        private void ChangeUILayout(string layout)
+        {
+            var path = GetDimensionPath("UI");
+
+            if (!File.Exists(path))
+            {
+                var fileInfo = new FileInfo(path);
+
+                if (!Directory.Exists(fileInfo.DirectoryName))
+                {
+                    Directory.CreateDirectory(fileInfo.DirectoryName);
+                }
+
+                File.WriteAllText(path, "{}");
+            }
+
+            var json = File.ReadAllText(path);
+
+            var pattern = "[\"']Layout[\"'][\\s]*:[\\s]*[\"\'].*?[\"\']";
+
+            if (!string.IsNullOrEmpty(layout))
+            {
+                var attr = $"\"Layout\": \"{layout}\"";
+
+                if (json.Contains("\"Layout\""))
+                {
+                    json = Regex.Replace(json, pattern, attr);
+                }
+                else
+                {
+                    if (json.Length > 2)
+                    {
+                        json = json.Insert(1, attr + ",");
+                    }
+                    else
+                    {
+                        json = json.Insert(1, attr);
+                    }
+                }
+            }
+            else
+            {
+                json = Regex.Replace(json, pattern, string.Empty);
+            }
+
+            json = JsonHelpers.FormatJson(json);
+
+            File.WriteAllText(path, json);
+        }
+
+        private void EditDimension(string dimension)
+        {
+            var path = GetDimensionPath(dimension);
 
             if (!File.Exists(path))
             {
@@ -529,7 +588,8 @@ namespace FractalPlatform.CreateLayout
 
                             let jsonObject =
                             {
-                                Id: currElem.id
+                                Id: currElem.id,
+                                ParentId: currElem.parentElement.id
                             };
 
                             window.chrome.webview.postMessage(jsonObject);
@@ -595,7 +655,8 @@ namespace FractalPlatform.CreateLayout
 
                             let jsonObject =
                             {
-                                Id: currElem.id
+                                Id: currElem.id,
+                                ParentId: currElem.parentElement.id
                             };
                             
                             window.chrome.webview.postMessage(jsonObject);}";
@@ -628,7 +689,8 @@ namespace FractalPlatform.CreateLayout
 
                             let jsonObject =
                             {
-                                Id: currElem.id
+                                Id: currElem.id,
+                                ParentId: currElem.parentElement.id
                             };
                             
                             window.chrome.webview.postMessage(jsonObject);}";
@@ -1027,7 +1089,7 @@ namespace FractalPlatform.CreateLayout
                 {
                     dirInfo = new DirectoryInfo(dirName);
 
-                    var dirPath = $"{path}\\Files\\{_dbName}\\{dirInfo.Name}";
+                    var dirPath = $"{path}\\files\\{_dbName}\\{_collName}";
 
                     FileHelpers.CopyFilesRecursively(dirName, dirPath);
                 }
@@ -1039,7 +1101,7 @@ namespace FractalPlatform.CreateLayout
 
                 if (dirInfo != null)
                 {
-                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"/files/{_dbName}/{dirInfo.Name}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"/files/{_dbName}/{_collName}/");
                 }
 
                 dirName = $"{path}\\Layouts\\{_dbName}";
@@ -1052,6 +1114,8 @@ namespace FractalPlatform.CreateLayout
                 var htmlPath = $"{dirName}\\{_collName}.html";
 
                 File.WriteAllText(htmlPath, html);
+
+                ChangeUILayout(_collName);
 
                 Navigate(htmlPath);
             }
@@ -1066,6 +1130,37 @@ namespace FractalPlatform.CreateLayout
             File.Copy(tbLayout.Text, htmlPath);
 
             Navigate(htmlPath);
+        }
+
+        private void btnRemoveLayout_Click(object sender, EventArgs e)
+        {
+            if (!EnsureLayout())
+            {
+                return;
+            }
+
+            if (!EnsureDocument())
+            {
+                return;
+            }
+
+            ChangeUILayout(null);
+
+            if (File.Exists(tbLayout.Text))
+            {
+                File.Delete(tbLayout.Text);
+            }
+
+            var path = _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
+
+            var dirPath = $"{path}\\files\\{_dbName}\\{_collName}";
+
+            if (Directory.Exists(dirPath))
+            {
+                Directory.Delete(dirPath, true);
+            }
+
+            tbLayout.Text = string.Empty;
         }
 
         #endregion

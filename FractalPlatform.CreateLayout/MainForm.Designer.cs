@@ -86,6 +86,7 @@
             this.createCancelPageButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createPrevPageButtonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.createNextPageButtonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.createStandardComponentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openHtmlFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.openJsonFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pnlHtml = new System.Windows.Forms.Panel();
@@ -108,7 +109,7 @@
             this.cbDatabase = new System.Windows.Forms.ComboBox();
             this.tbLayout = new System.Windows.Forms.TextBox();
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.createStandardComponentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRemoveLayout = new System.Windows.Forms.Button();
             this.menuHtml.SuspendLayout();
             this.pnlHtml.SuspendLayout();
             this.pnlHeader.SuspendLayout();
@@ -129,7 +130,7 @@
             this.createPageControlToolStripMenuItem,
             this.createStandardComponentToolStripMenuItem});
             this.menuHtml.Name = "menuHtml";
-            this.menuHtml.Size = new System.Drawing.Size(226, 192);
+            this.menuHtml.Size = new System.Drawing.Size(226, 170);
             // 
             // bindControlToolStripMenuItem
             // 
@@ -567,6 +568,13 @@
             this.createNextPageButtonToolStripMenuItem1.Text = "Next Page Button";
             this.createNextPageButtonToolStripMenuItem1.Click += new System.EventHandler(this.createNextPageButtonToolStripMenuItem1_Click);
             // 
+            // createStandardComponentToolStripMenuItem
+            // 
+            this.createStandardComponentToolStripMenuItem.Name = "createStandardComponentToolStripMenuItem";
+            this.createStandardComponentToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.createStandardComponentToolStripMenuItem.Text = "Create Standard Component";
+            this.createStandardComponentToolStripMenuItem.Click += new System.EventHandler(this.createStandardComponentToolStripMenuItem_Click);
+            // 
             // openHtmlFileDialog
             // 
             this.openHtmlFileDialog.Filter = "Html File (*.html)|*.html";
@@ -584,7 +592,7 @@
             this.pnlHtml.Controls.Add(this.rtbOuterHtml);
             this.pnlHtml.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlHtml.Location = new System.Drawing.Point(815, 0);
-            this.pnlHtml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHtml.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHtml.Name = "pnlHtml";
             this.pnlHtml.Size = new System.Drawing.Size(545, 740);
             this.pnlHtml.TabIndex = 1;
@@ -647,6 +655,7 @@
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.btnRemoveLayout);
             this.pnlHeader.Controls.Add(this.lblDatabase);
             this.pnlHeader.Controls.Add(this.btnSave);
             this.pnlHeader.Controls.Add(this.btnImport);
@@ -661,7 +670,7 @@
             this.pnlHeader.Controls.Add(this.tbLayout);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(815, 73);
             this.pnlHeader.TabIndex = 2;
@@ -677,9 +686,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(638, 12);
+            this.btnSave.Location = new System.Drawing.Point(718, 11);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(86, 23);
             this.btnSave.TabIndex = 38;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -697,9 +706,9 @@
             // 
             // btnDeployApp
             // 
-            this.btnDeployApp.Location = new System.Drawing.Point(718, 12);
+            this.btnDeployApp.Location = new System.Drawing.Point(718, 37);
             this.btnDeployApp.Name = "btnDeployApp";
-            this.btnDeployApp.Size = new System.Drawing.Size(86, 50);
+            this.btnDeployApp.Size = new System.Drawing.Size(86, 25);
             this.btnDeployApp.TabIndex = 36;
             this.btnDeployApp.Text = "Deploy App";
             this.btnDeployApp.UseVisualStyleBackColor = true;
@@ -789,7 +798,7 @@
             this.webView.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView.Location = new System.Drawing.Point(0, 73);
-            this.webView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webView.Margin = new System.Windows.Forms.Padding(2);
             this.webView.Name = "webView";
             this.webView.Size = new System.Drawing.Size(815, 667);
             this.webView.TabIndex = 3;
@@ -798,12 +807,15 @@
             this.webView.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView_NavigationCompleted);
             this.webView.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView_WebMessageReceived);
             // 
-            // createStandardComponentToolStripMenuItem
+            // btnRemoveLayout
             // 
-            this.createStandardComponentToolStripMenuItem.Name = "createStandardComponentToolStripMenuItem";
-            this.createStandardComponentToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.createStandardComponentToolStripMenuItem.Text = "Create Standard Component";
-            this.createStandardComponentToolStripMenuItem.Click += new System.EventHandler(this.createStandardComponentToolStripMenuItem_Click);
+            this.btnRemoveLayout.Location = new System.Drawing.Point(637, 12);
+            this.btnRemoveLayout.Name = "btnRemoveLayout";
+            this.btnRemoveLayout.Size = new System.Drawing.Size(76, 23);
+            this.btnRemoveLayout.TabIndex = 40;
+            this.btnRemoveLayout.Text = "Remove";
+            this.btnRemoveLayout.UseVisualStyleBackColor = true;
+            this.btnRemoveLayout.Click += new System.EventHandler(this.btnRemoveLayout_Click);
             // 
             // MainForm
             // 
@@ -908,6 +920,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem createStandardComponentToolStripMenuItem;
+        private System.Windows.Forms.Button btnRemoveLayout;
     }
 }
 
