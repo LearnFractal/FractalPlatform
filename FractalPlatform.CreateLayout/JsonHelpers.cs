@@ -1031,32 +1031,52 @@ namespace FractalPlatform.CreateLayouts
             {
                 char c = json[i];
 
-                if (c == '\\')
+                if(c == '\n' || c == '\r')
                 {
-                    sb.Append(json[++i]);
-
                     continue;
                 }
 
-                if (c == '}' || c == ']')
+                if (c == '"' || c == '\'')
                 {
-                    indent -= 3;
-                    sb.Append("\r\n");
-                    AddSpaces(sb, indent);
-                }
+                    sb.Append(c);
 
-                sb.Append(c);
+                    for (i++; i < json.Length; i++)
+                    {
+                        sb.Append(json[i]);
 
-                if (c == '{' || c == '[')
-                {
-                    indent += 3;
-                    sb.Append("\r\n");
-                    AddSpaces(sb, indent);
+                        if (json[i] == '\\')
+                        {
+                            sb.Append(json[++i]);
+
+                            continue;
+                        }
+
+                        if (json[i] == '"' || json[i] == '\'')
+                            break;
+                    }
                 }
-                else if (c == ',')
+                else
                 {
-                    sb.Append("\r\n");
-                    AddSpaces(sb, indent);
+                    if (c == '}' || c == ']')
+                    {
+                        indent -= 3;
+                        sb.Append("\r\n");
+                        AddSpaces(sb, indent);
+                    }
+
+                    sb.Append(c);
+
+                    if (c == '{' || c == '[')
+                    {
+                        indent += 3;
+                        sb.Append("\r\n");
+                        AddSpaces(sb, indent);
+                    }
+                    else if (c == ',')
+                    {
+                        sb.Append("\r\n");
+                        AddSpaces(sb, indent);
+                    }
                 }
             }
 

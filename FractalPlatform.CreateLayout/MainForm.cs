@@ -37,6 +37,10 @@ namespace FractalPlatform.CreateLayout
 
         private bool _isProcessingComboBoxes = false;
 
+        private string _attr;
+
+        private string _attrPrefix;
+
         #endregion
 
         #region Constructors
