@@ -200,54 +200,6 @@ namespace FractalPlatform.CreateLayouts
             return sb.ToString();
         }
 
-        //public static string ReplaceTagHtml(string tagId, string html, string newTag)
-        //{
-        //    var sb = new StringBuilder();
-
-        //    for (int i = 0; i < html.Length; i++)
-        //    {
-        //        if (html[i] == '<')
-        //        {
-        //            var tag = new StringBuilder();
-
-        //            if (html[i + 1] != '/')
-        //            {
-        //                for (++i; i < html.Length; i++)
-        //                {
-        //                    if (html[i] != '>')
-        //                    {
-        //                        tag.Append(html[i]);
-        //                    }
-        //                    else
-        //                    {
-        //                        var tagStr = tag.ToString();
-
-        //                        //no Id attribute
-        //                        var reg = new Regex($"[\\s]+[iI][dD][\\s]*=[\\s]*\"{tagId}\"");
-
-        //                        if (!reg.IsMatch(tagStr))
-        //                        {
-        //                            sb.Append('<');
-        //                            sb.Append(tagStr);
-        //                        }
-        //                        else
-        //                        {
-        //                            sb.Append(newTag);
-        //                            i++;
-        //                        }
-
-        //                        break;
-        //                    }
-        //                }
-        //            }
-        //        }
-
-        //        sb.Append(html[i]);
-        //    }
-
-        //    return sb.ToString();
-        //}
-
         public static string ReplaceTagHtml(string html, string tagId, string tagHtml)
         {
             var currStart = 0;
@@ -268,6 +220,8 @@ namespace FractalPlatform.CreateLayouts
         public static string GetTagHtml(string html, string tagId, ref int start)
         {
             string ourTag = null;
+
+            var level = 0;
             
             for (int i = 0; i < html.Length; i++)
             {
@@ -289,6 +243,13 @@ namespace FractalPlatform.CreateLayouts
                             {
                                 var tagStr = tag.ToString();
 
+                                var currTag = tagStr.Split(' ')[0];
+
+                                if (currTag == ourTag)
+                                {
+                                    level++;
+                                }
+
                                 //no Id attribute
                                 var reg = new Regex($"[\\s]+[iI][dD][\\s]*=[\\s]*\"{tagId}\"");
 
@@ -296,8 +257,8 @@ namespace FractalPlatform.CreateLayouts
                                 {
                                     start = currStart;
 
-                                    ourTag = tagStr.Split(' ')[0];
-
+                                    ourTag = currTag;
+                                    
                                     if(ourTag == "input" ||
                                        ourTag == "img") //tag that not closed
                                     {
@@ -323,7 +284,14 @@ namespace FractalPlatform.CreateLayouts
 
                                 if (tagStr == ourTag)
                                 {
-                                    return html.Substring(start, i - start + 1);
+                                    if (level == 0)
+                                    {
+                                        return html.Substring(start, i - start + 1);
+                                    }
+                                    else
+                                    {
+                                        level--;
+                                    }
                                 }
 
                                 break;
