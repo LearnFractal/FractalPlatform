@@ -1031,7 +1031,10 @@ namespace FractalPlatform.CreateLayouts
             {
                 char c = json[i];
 
-                if(c == '\n' || c == '\r')
+                if (c == '\n' ||
+                    c == '\r' ||
+                    c == '\t' ||
+                    c == ' ')
                 {
                     continue;
                 }
@@ -1076,6 +1079,10 @@ namespace FractalPlatform.CreateLayouts
                     {
                         sb.Append("\r\n");
                         AddSpaces(sb, indent);
+                    }
+                    else if(c == ':')
+                    {
+                        AddSpaces(sb, 1);
                     }
                 }
             }
