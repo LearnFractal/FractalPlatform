@@ -152,7 +152,7 @@ namespace FractalPlatform.CreateLayout
 
             if (needSelection && len == 0)
             {
-                MessageBox.Show("Need selection of text to change");
+                MessageBoxInfo("Need selection of text to change");
 
                 return;
             }
@@ -296,14 +296,14 @@ namespace FractalPlatform.CreateLayout
 
             if (!bFind)
             {
-                MessageBox.Show($"Text should be started from {string.Join(",", tagNames)} tags");
+                MessageBoxInfo($"Text should be started from {string.Join(",", tagNames)} tags");
 
                 return;
             }
 
             if (!text.EndsWith(">"))
             {
-                MessageBox.Show("Text should be ended with </input> tag");
+                MessageBoxInfo("Text should be ended with </input> tag");
 
                 return;
             }
@@ -482,7 +482,7 @@ namespace FractalPlatform.CreateLayout
                 return true;
             }
 
-            MessageBox.Show("Choose a 0000000001.json document in a database collection");
+            MessageBoxInfo("Choose a 0000000001.json document in a database collection");
 
             if (openJsonFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -490,7 +490,7 @@ namespace FractalPlatform.CreateLayout
 
                 if (!fileName.Contains("Databases") || !fileName.Contains("Document"))
                 {
-                    MessageBox.Show("Choose a 0000000001.json document in a database collection");
+                    MessageBoxInfo("Choose a 0000000001.json document in a database collection");
 
                     return false;
                 }
@@ -516,7 +516,7 @@ namespace FractalPlatform.CreateLayout
 
             if (isShowInfo)
             {
-                MessageBox.Show("You should choose a layout to navigate.");
+                MessageBoxInfo("You should choose a layout to navigate.");
             }
 
             if (openHtmlFileDialog.ShowDialog() == DialogResult.OK)
@@ -525,7 +525,7 @@ namespace FractalPlatform.CreateLayout
 
                 if (!fileName.Contains("Layouts"))
                 {
-                    MessageBox.Show("Choose a layout html file");
+                    MessageBoxInfo("Choose a layout html file");
 
                     return false;
                 }
@@ -614,7 +614,7 @@ namespace FractalPlatform.CreateLayout
 
             if (!File.Exists(path))
             {
-                MessageBox.Show($"'{path}' file is not exists");
+                MessageBoxInfo($"'{path}' file is not exists");
 
                 return;
             }
@@ -627,6 +627,11 @@ namespace FractalPlatform.CreateLayout
             {
                 File.WriteAllText(path, dlgEditJson.Json);
             }
+        }
+
+        private void MessageBoxInfo(string message)
+        {
+            MessageBox.Show(message, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         #endregion
