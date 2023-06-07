@@ -1100,7 +1100,9 @@ namespace FractalPlatform.CreateLayout
                         "@SavePageScript",
                         null,
                         null,
-                        "@SavePageText");
+                        "@SavePageText",
+                        null,
+                        new[] { "@SavePageVisible" });
         }
 
         private void bindCancelButtonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1111,7 +1113,9 @@ namespace FractalPlatform.CreateLayout
                         "@CancelPageScript",
                         null,
                         null,
-                        "@CancelPageText");
+                        "@CancelPageText",
+                        null,
+                        new[] { "@CancelPageVisible" });
         }
 
         private void bindPrevPageButtonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1124,7 +1128,7 @@ namespace FractalPlatform.CreateLayout
                         null,
                         "Prev",
                         new[] { "disabled" },
-                        new[] { "@PrevPageDisabled" });
+                        new[] { "@PrevPageDisabled", "@PrevPageVisible" });
         }
 
         private void bindNextPageButtonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1137,7 +1141,7 @@ namespace FractalPlatform.CreateLayout
                         null,
                         "Next",
                         new[] { "disabled" },
-                        new[] { "@NextPageDisabled" });
+                        new[] { "@NextPageDisabled", "@NextPageVisible" });
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
