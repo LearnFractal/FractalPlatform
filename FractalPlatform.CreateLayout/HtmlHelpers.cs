@@ -149,6 +149,25 @@ namespace FractalPlatform.CreateLayouts
             return html.Replace(oldLink, newLink);
         }
 
+        //private static int GetLastTagId(string html)
+        //{
+        //    var reg = new Regex("\"fr(?<Id>[0-9]+)\"");
+
+        //    var lastID = 0;
+
+        //    foreach (Match match in reg.Matches(html))
+        //    {
+        //        var id = int.Parse(match.Groups["Id"].Value);
+
+        //        if (id > lastID)
+        //        {
+        //            lastID = id;
+        //        }
+        //    }
+
+        //    return lastID;
+        //}
+
         public static string AddTagIdsToHtml(string html)
         {
             var lastID = 0;
@@ -225,7 +244,7 @@ namespace FractalPlatform.CreateLayouts
             string ourTag = null;
 
             var level = 0;
-            
+
             for (int i = 0; i < html.Length; i++)
             {
                 if (html[i] == '<' && html[i + 1] != '!')
@@ -261,8 +280,8 @@ namespace FractalPlatform.CreateLayouts
                                     start = currStart;
 
                                     ourTag = currTag;
-                                    
-                                    if(_emptyTags.Contains(ourTag))
+
+                                    if (_emptyTags.Contains(ourTag))
                                     {
                                         return "<" + tagStr + html[i];
                                     }
@@ -341,7 +360,7 @@ namespace FractalPlatform.CreateLayouts
 
                                 var currTag = tagStr.Split(' ')[0];
 
-                                if(!_emptyTags.Contains(currTag))
+                                if (!_emptyTags.Contains(currTag))
                                 {
                                     spaces += 3;
                                 }
@@ -400,7 +419,7 @@ namespace FractalPlatform.CreateLayouts
 
             return sb.ToString().Trim();
         }
-        
+
         public static string RemoveTagIds(string html)
         {
             return Regex.Replace(html, "\\sid=\"fr[0-9]+\"", string.Empty);

@@ -41,6 +41,8 @@ namespace FractalPlatform.CreateLayout
 
         private string _attrPrefix;
 
+        private bool _isArray;
+
         #endregion
 
         #region Constructors
@@ -84,6 +86,12 @@ namespace FractalPlatform.CreateLayout
 
         private void RemoveOuterHtml()
         {
+            _attr = string.Empty;
+
+            _attrPrefix = string.Empty;
+
+            _isArray = false;
+
             rtbOuterHtml.Text = string.Empty;
         }
 
@@ -110,7 +118,24 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceTagHtml(html, _currentTagInfo.Id, rtbOuterHtml.Text);
+            if (!_isArray)
+            {
+                html = HtmlHelpers.ReplaceTagHtml(html, _currentTagInfo.Id, rtbOuterHtml.Text);
+            }
+            else //remove all items, but one
+            {
+                var parentHtml = HtmlHelpers.GetTagHtml(html, _currentTagInfo.ParentId);
+
+                var leftParentHtml = parentHtml.Substring(0, parentHtml.IndexOf(">") + 1);
+
+                var rightParentHtml = parentHtml.Substring(parentHtml.LastIndexOf("<"));
+
+                html = HtmlHelpers.ReplaceTagHtml(html,
+                                                 _currentTagInfo.ParentId,
+                                                 leftParentHtml + rtbOuterHtml.Text + rightParentHtml);
+            }
+
+            html = HtmlHelpers.RemoveTagIds(html);
 
             WriteHtml(html);
 
@@ -147,10 +172,34 @@ namespace FractalPlatform.CreateLayout
             Apply();
         }
 
+        private void AddAttrPrefixes()
+        {
+            if (!string.IsNullOrEmpty(_attrPrefix))
+            {
+                var reg = new Regex("@[a-zA-Z\\.]+");
+
+                var matches = reg.Matches(rtbOuterHtml.Text);
+
+                foreach (var match in matches)
+                {
+                    var str = match.ToString();
+
+                    if (!str.Contains("."))
+                    {
+                        var replacement = str.Replace("@", "@" + _attrPrefix.Replace("\\", ".") + ".");
+
+                        rtbOuterHtml.Text = rtbOuterHtml.Text.Replace(str, replacement);
+                    }
+                }
+            }
+        }
+
         private bool CreateControlTag(bool isStandardType = false)
         {
             if (HasControlTag)
             {
+                AddAttrPrefixes();
+
                 return true;
             }
 
@@ -161,24 +210,46 @@ namespace FractalPlatform.CreateLayout
 
             var json = File.ReadAllText(_documentFileName);
 
-            var dlgChooseAttribute = new ChooseAttrForm(json);
+            var dlgChooseAttribute = new ChooseAttrForm(json, _attr);
 
             if (dlgChooseAttribute.ShowDialog() == DialogResult.OK)
             {
                 var attr = dlgChooseAttribute.Attribute;
 
+                if (attr.Contains("[0]"))
+                {
+                    var idx = attr.IndexOf("\\[0]");
+
+                    _attr = attr.Substring(0, idx);
+
+                    _attrPrefix = attr.Substring(idx + 4);
+
+                    if (_attrPrefix.StartsWith("\\"))
+                    {
+                        _attrPrefix = _attrPrefix.Substring(1);
+                    }
+
+                    _isArray = true;
+                }
+                else
+                {
+                    _attr = attr;
+                }
+
                 string html;
 
                 if (!isStandardType)
                 {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>";
+                    html = $"<control attr=\"{_attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>";
                 }
                 else
                 {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
+                    html = $"<control attr=\"{_attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
                 }
 
                 rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
+
+                AddAttrPrefixes();
 
                 return true;
             }
@@ -211,7 +282,7 @@ namespace FractalPlatform.CreateLayout
 
             var tagName = string.Empty;
 
-            for(int i=0; i<tagNames.Length;i++)
+            for (int i = 0; i < tagNames.Length; i++)
             {
                 if (text.StartsWith("<" + tagNames[i]))
                 {
@@ -287,7 +358,7 @@ namespace FractalPlatform.CreateLayout
 
                     isValueExists = true;
                 }
-                else if(attr == "href" &&
+                else if (attr == "href" &&
                         tagName == "a")
                 {
                     if (!string.IsNullOrEmpty(onClickUrlAlias))
@@ -573,6 +644,8 @@ namespace FractalPlatform.CreateLayout
             html = HtmlHelpers.GetTagHtml(html, _currentTagInfo.Id);
 
             html = HtmlHelpers.RemoveTagIds(html);
+
+            RemoveOuterHtml();
 
             rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
 

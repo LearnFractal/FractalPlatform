@@ -9,15 +9,19 @@ namespace FractalPlatform.CreateLayouts
     {
         private string _json;
 
+        private string _parent;
+
         private Dictionary<string, string> _values;
 
         public string Attribute => cbAttribute.Text;
 
-        public ChooseAttrForm(string json)
+        public ChooseAttrForm(string json, string parent)
         {
             InitializeComponent();
 
             _json = json;
+
+            _parent = parent;
 
             _values = new Dictionary<string, string>();
         }
@@ -39,7 +43,8 @@ namespace FractalPlatform.CreateLayouts
 
                 var attr = string.Join("\\", subTokens);
 
-                if (!cbAttribute.Items.Contains(attr))
+                if (!cbAttribute.Items.Contains(attr) && 
+                    (string.IsNullOrEmpty(_parent) || attr.StartsWith(_parent)))
                 {
                     cbAttribute.Items.Add(attr);
                 }
