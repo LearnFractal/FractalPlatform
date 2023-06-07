@@ -664,7 +664,8 @@ namespace FractalPlatform.CreateLayout
         private void webView_CoreWebView2InitializationCompleted(object sender, CoreWebView2InitializationCompletedEventArgs e)
         {
             var script = @"let currElems = []; 
-                        let prevColorElem = null; 
+                        let prevElem = null; 
+                        let prevColor = null;
                         
                         document.addEventListener('contextmenu', function (event) {
                             let currElem = event.target;
@@ -679,19 +680,21 @@ namespace FractalPlatform.CreateLayout
                             if(currElem.style.backgroundColor != 'lightGreen' &&
                                currElem.tagName != 'CONTROL')
                             {
+                                prevColor = currElem.style.backgroundColor;
+
                                 currElem.style.backgroundColor = 'yellow';
                             }
 
-                            if(prevColorElem != null)
+                            if(prevElem != null)
                             {
-                                if(prevColorElem.style.backgroundColor != 'lightGreen')
+                                if(prevElem.style.backgroundColor != 'lightGreen')
                                 {
-                                    prevColorElem.style.backgroundColor = 'initial';    
+                                    prevElem.style.backgroundColor = prevColor;    
                                 }
                             }
 
-                            prevColorElem = currElem;
-
+                            prevElem = currElem;
+                            
                             let jsonObject =
                             {
                                 Id: currElem.id,
@@ -746,18 +749,20 @@ namespace FractalPlatform.CreateLayout
                             if(currElem.style.backgroundColor != 'lightGreen' &&
                                currElem.tagName != 'CONTROL')
                             {
+                                prevColor = currElem.style.backgroundColor;
+
                                 currElem.style.backgroundColor = 'yellow';
                             }
 
-                            if(prevColorElem != null)
+                            if(prevElem != null)
                             {
-                                if(prevColorElem.style.backgroundColor != 'lightGreen')
+                                if(prevElem.style.backgroundColor != 'lightGreen')
                                 {
-                                    prevColorElem.style.backgroundColor = 'initial';    
+                                    prevElem.style.backgroundColor = prevColor;    
                                 }
                             }
 
-                            prevColorElem = currElem;
+                            prevElem = currElem;
 
                             let jsonObject =
                             {
@@ -780,18 +785,20 @@ namespace FractalPlatform.CreateLayout
                             if(currElem.style.backgroundColor != 'lightGreen' &&
                                currElem.tagName != 'CONTROL')
                             {
+                                prevColor = currElem.style.backgroundColor;
+
                                 currElem.style.backgroundColor = 'yellow';
                             }
 
-                            if(prevColorElem != null)
+                            if(prevElem != null)
                             {
-                                if(prevColorElem.style.backgroundColor != 'lightGreen')
+                                if(prevElem.style.backgroundColor != 'lightGreen')
                                 {
-                                    prevColorElem.style.backgroundColor = 'initial';    
+                                    prevElem.style.backgroundColor = prevColor;    
                                 }
                             }
 
-                            prevColorElem = currElem;
+                            prevElem = currElem;
 
                             let jsonObject =
                             {
