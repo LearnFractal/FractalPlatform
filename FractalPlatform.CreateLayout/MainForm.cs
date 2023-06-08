@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Helpers;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace FractalPlatform.CreateLayout
 {
@@ -43,6 +44,8 @@ namespace FractalPlatform.CreateLayout
 
         private bool _isArray;
 
+        private Options _options;
+
         #endregion
 
         #region Constructors
@@ -50,11 +53,27 @@ namespace FractalPlatform.CreateLayout
         public MainForm()
         {
             InitializeComponent();
+
+            _options = ReadOptions();
         }
 
         #endregion
 
         #region Methods
+
+        private Options ReadOptions()
+        {
+            var appSettings = File.ReadAllText("../../appsettings.json");
+
+            return JsonConvert.DeserializeObject<Options>(appSettings);
+        }
+
+        private void SaveOptions()
+        {
+            var appSettings = JsonConvert.SerializeObject(_options);
+
+            File.WriteAllText("../../appsettings.json", appSettings);
+        }
 
         private void Navigate(string path)
         {
@@ -64,7 +83,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"/files/{_dbName}/", $"../../files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_dbName}/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -77,7 +96,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"/files/{_dbName}/", $"../../files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_dbName}/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -638,6 +657,20 @@ namespace FractalPlatform.CreateLayout
 
         #region Events
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(_options.LayoutPath))
+            {
+                _documentFileName = _options.LayoutPath
+                                        .Replace("Layouts", "Databases")
+                                        .Replace(".html", @"\Document\0000000001.json");
+
+                RefreshComboBoxes();
+
+                Navigate(_options.LayoutPath);
+            }
+        }
+
         private void webView_WebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs e)
         {
             _currentTagInfo = JsonConvert.DeserializeObject<TagInfo>(e.WebMessageAsJson);
@@ -728,7 +761,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.RemoveTagIds(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"/files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"{_options.BaseUrl}/files/{_dbName}/");
 
             WriteHtml(html);
         }
@@ -1222,11 +1255,11 @@ namespace FractalPlatform.CreateLayout
                 //import html
                 var html = File.ReadAllText(fileName);
 
-                html = HtmlHelpers.AddScriptsToHtml(html);
+                html = HtmlHelpers.AddScriptsToHtml(html, _options.BaseUrl);
 
                 if (dirInfo != null)
                 {
-                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"/files/{_dbName}/{_collName}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"{_options.BaseUrl}/files/{_dbName}/{_collName}/");
                 }
 
                 dirName = $"{path}\\Layouts\\{_dbName}";
@@ -1237,6 +1270,10 @@ namespace FractalPlatform.CreateLayout
                 }
 
                 var htmlPath = $"{dirName}\\{_collName}.html";
+
+                _options.LayoutPath = htmlPath;
+
+                SaveOptions();
 
                 File.WriteAllText(htmlPath, html);
 

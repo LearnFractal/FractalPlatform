@@ -96,6 +96,7 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.rtbOuterHtml = new System.Windows.Forms.RichTextBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnRemoveLayout = new System.Windows.Forms.Button();
             this.lblDatabase = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
@@ -109,7 +110,6 @@
             this.cbDatabase = new System.Windows.Forms.ComboBox();
             this.tbLayout = new System.Windows.Forms.TextBox();
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.btnRemoveLayout = new System.Windows.Forms.Button();
             this.menuHtml.SuspendLayout();
             this.pnlHtml.SuspendLayout();
             this.pnlHeader.SuspendLayout();
@@ -675,6 +675,16 @@
             this.pnlHeader.Size = new System.Drawing.Size(815, 73);
             this.pnlHeader.TabIndex = 2;
             // 
+            // btnRemoveLayout
+            // 
+            this.btnRemoveLayout.Location = new System.Drawing.Point(637, 12);
+            this.btnRemoveLayout.Name = "btnRemoveLayout";
+            this.btnRemoveLayout.Size = new System.Drawing.Size(76, 23);
+            this.btnRemoveLayout.TabIndex = 40;
+            this.btnRemoveLayout.Text = "Remove";
+            this.btnRemoveLayout.UseVisualStyleBackColor = true;
+            this.btnRemoveLayout.Click += new System.EventHandler(this.btnRemoveLayout_Click);
+            // 
             // lblDatabase
             // 
             this.lblDatabase.AutoSize = true;
@@ -807,16 +817,6 @@
             this.webView.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView_NavigationCompleted);
             this.webView.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView_WebMessageReceived);
             // 
-            // btnRemoveLayout
-            // 
-            this.btnRemoveLayout.Location = new System.Drawing.Point(637, 12);
-            this.btnRemoveLayout.Name = "btnRemoveLayout";
-            this.btnRemoveLayout.Size = new System.Drawing.Size(76, 23);
-            this.btnRemoveLayout.TabIndex = 40;
-            this.btnRemoveLayout.Text = "Remove";
-            this.btnRemoveLayout.UseVisualStyleBackColor = true;
-            this.btnRemoveLayout.Click += new System.EventHandler(this.btnRemoveLayout_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -830,6 +830,7 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuHtml.ResumeLayout(false);
             this.pnlHtml.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
