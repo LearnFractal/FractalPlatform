@@ -16,11 +16,6 @@ namespace FractalPlatform.Examples.Applications.Forum
 
         public override string Layout => null; //do not use form layout
 
-        public override string RenderStyles(DOMForm form)
-        {
-            return @"";
-        }
-
         public class GridInfo
         {
             public string Title { get; set; }
