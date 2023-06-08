@@ -2,6 +2,7 @@
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -71,6 +72,8 @@ namespace FractalPlatform.CreateLayout
         private void SaveOptions()
         {
             var appSettings = JsonConvert.SerializeObject(_options);
+
+            appSettings = JsonHelpers.FormatJson(appSettings);
 
             File.WriteAllText("../../appsettings.json", appSettings);
         }
@@ -1327,6 +1330,26 @@ namespace FractalPlatform.CreateLayout
             }
 
             tbLayout.Text = string.Empty;
+        }
+
+        private void btnDeployApp_Click(object sender, EventArgs e)
+        {
+            var process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = "dotnet",
+                    Arguments = _options.DeploymentToolPath,
+                    WorkingDirectory = new FileInfo(_options.DeploymentToolPath).DirectoryName,
+                    UseShellExecute = true,
+                    RedirectStandardOutput = false,
+                    RedirectStandardError = false,
+                    CreateNoWindow = true
+                }
+
+            };
+
+            process.Start();
         }
 
         #endregion

@@ -722,6 +722,7 @@
             this.btnDeployApp.TabIndex = 36;
             this.btnDeployApp.Text = "Deploy App";
             this.btnDeployApp.UseVisualStyleBackColor = true;
+            this.btnDeployApp.Click += new System.EventHandler(this.btnDeployApp_Click);
             // 
             // btnBrowse
             // 
