@@ -553,6 +553,10 @@ namespace FractalPlatform.CreateLayout
                                             .Replace("Layouts", "Databases")
                                             .Replace(".html", @"\Document\0000000001.json");
 
+                _options.LayoutPath = _documentFileName;
+
+                SaveOptions();
+
                 RefreshComboBoxes();
 
                 Navigate(openHtmlFileDialog.FileName);
