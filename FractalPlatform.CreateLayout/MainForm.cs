@@ -5,11 +5,15 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Helpers;
+using System.Web.UI;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace FractalPlatform.CreateLayout
 {
@@ -22,6 +26,21 @@ namespace FractalPlatform.CreateLayout
             public string Id { get; set; }
 
             public string ParentId { get; set; }
+        }
+
+        private class ControlInfo
+        {
+            public string Attr { get; set; }
+
+            public int StartIndex { get; set; }
+
+            public int EndIndex { get; set; }
+
+            public bool IsMyIndex(int index) => StartIndex <= index && index <= EndIndex;
+
+            public bool IsRepeatable { get; set; }
+
+            public int Length => EndIndex - StartIndex;
         }
 
         #endregion
@@ -39,10 +58,6 @@ namespace FractalPlatform.CreateLayout
         private string _collName;
 
         private bool _isProcessingComboBoxes = false;
-
-        private string _attr;
-
-        private string _attrPrefix;
 
         private bool _isArray;
 
@@ -113,10 +128,6 @@ namespace FractalPlatform.CreateLayout
 
         private void RemoveOuterHtml()
         {
-            _attr = string.Empty;
-
-            _attrPrefix = string.Empty;
-
             _isArray = false;
 
             rtbOuterHtml.Text = string.Empty;
@@ -188,7 +199,7 @@ namespace FractalPlatform.CreateLayout
             WriteHtml(html);
 
             AddUpdate(html);
-            
+
             RefreshPage();
         }
 
@@ -220,9 +231,9 @@ namespace FractalPlatform.CreateLayout
             Apply();
         }
 
-        private void AddAttrPrefixes()
+        private void AddAttrPrefixes(string attrPrefix)
         {
-            if (!string.IsNullOrEmpty(_attrPrefix))
+            if (!string.IsNullOrEmpty(attrPrefix))
             {
                 var reg = new Regex("@[a-zA-Z\\.]+");
 
@@ -234,7 +245,7 @@ namespace FractalPlatform.CreateLayout
 
                     if (!str.Contains("."))
                     {
-                        var replacement = str.Replace("@", "@" + _attrPrefix.Replace("\\", ".") + ".");
+                        var replacement = str.Replace("@", "@" + attrPrefix.Replace("\\", ".") + ".");
 
                         rtbOuterHtml.Text = rtbOuterHtml.Text.Replace(str, replacement);
                     }
@@ -242,15 +253,89 @@ namespace FractalPlatform.CreateLayout
             }
         }
 
-        private bool CreateControlTag(bool isStandardType = false)
+        private List<ControlInfo> GetControlInfos()
         {
-            if (HasControlTag)
-            {
-                AddAttrPrefixes();
+            var controlInfos = new List<ControlInfo>();
 
-                return true;
+            var reg = new Regex("\\<control\\s(?<Value>.*?)\\>");
+
+            foreach (Match match in reg.Matches(rtbOuterHtml.Text))
+            {
+                var attr = string.Empty;
+                var isRepeatable = false;
+
+                foreach (Match item in GetMatchedAttrs(match.Groups["Value"].Value))
+                {
+                    var attrName = item.Groups["AttrName"];
+                    var value = item.Groups["Value"].Value;
+
+                    if (attrName.Value == "attr")
+                    {
+                        attr = value;
+                    }
+                    else if (attrName.Value == "repeatable")
+                    {
+                        isRepeatable = bool.Parse(value);
+                    }
+                }
+
+                var controlInfo = new ControlInfo
+                {
+                    Attr = match.Groups["Value"].Value,
+
+                    IsRepeatable = isRepeatable,
+
+                    StartIndex = match.Index
+                };
+
+                controlInfos.Add(controlInfo);
             }
 
+            reg = new Regex("\\</control\\>");
+
+            var matches = reg.Matches(rtbOuterHtml.Text);
+
+            for (int i = 0; i < controlInfos.Count; i++)
+            {
+                controlInfos[i].EndIndex = matches[controlInfos.Count - i - 1].Index;
+            }
+
+            var subControlInfos = new List<ControlInfo>();
+
+            var index = rtbOuterHtml.SelectionStart;
+
+            foreach (var controlInfo in controlInfos)
+            {
+                if (controlInfo.IsMyIndex(index))
+                {
+                    subControlInfos.Add(controlInfo);
+                }
+            }
+
+            return subControlInfos.OrderByDescending(x => x.Length).ToList();
+        }
+
+        private string GetCurrAttr()
+        {
+            var controlInfos = GetControlInfos();
+
+            var sb = new StringBuilder();
+
+            foreach (var controlInfo in controlInfos)
+            {
+                sb.Append(controlInfo.Attr);
+
+                if (controlInfo.IsRepeatable)
+                {
+                    sb.Append("\\[0]");
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        private bool CreateControlTag(bool isStandardType = false)
+        {
             if (!EnsureLayout())
             {
                 return false;
@@ -258,7 +343,7 @@ namespace FractalPlatform.CreateLayout
 
             var json = File.ReadAllText(_documentFileName);
 
-            var dlgChooseAttribute = new ChooseAttrForm(json, _attr);
+            var dlgChooseAttribute = new ChooseAttrForm(json, GetCurrAttr());
 
             if (dlgChooseAttribute.ShowDialog() == DialogResult.OK)
             {
@@ -266,6 +351,21 @@ namespace FractalPlatform.CreateLayout
 
                 if (attr.Contains("[0]"))
                 {
+                    var controlInfos = GetControlInfos();
+
+                    var attrParts = attr.Split('\\');
+
+                    for (int i = 0, j=0; i < attrParts.Length; i++, j++)
+                    {
+                        if (attrParts[i] == "[0]")
+                            continue;
+
+                        if (attrParts[j] != controlInfos[i].Attr)
+                        {
+
+                        }
+                    }
+
                     var idx = attr.IndexOf("\\[0]");
 
                     _attr = attr.Substring(0, idx);
@@ -307,9 +407,9 @@ namespace FractalPlatform.CreateLayout
             }
         }
 
-        private MatchCollection GetAttrMatches(string html)
+        private MatchCollection GetMatchedAttrs(string html)
         {
-            var reg = new Regex("(?<AttrName>[a-zA-Z]+[\\s]*)=[\\s]*[\"\'](?<Value>.*?)[\"\']");
+            var reg = new Regex("(?<AttrName>[a-zA-Z]+)[\\s]*=[\\s]*[\"\'](?<Value>.*?)[\"\']");
 
             return reg.Matches(html);
         }
@@ -362,9 +462,7 @@ namespace FractalPlatform.CreateLayout
             var isOnChangeExists = false;
             var isValueExists = false;
 
-            var matches = GetAttrMatches(text);
-
-            foreach (Match item in matches)
+            foreach (Match item in GetMatchedAttrs(text))
             {
                 var attr = item.Groups["AttrName"].Value;
                 var val = item.Groups["Value"].Value;
