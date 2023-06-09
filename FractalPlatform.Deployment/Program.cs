@@ -187,6 +187,19 @@ namespace FractalPlatform.Deployment
             }
         }
 
+        static void Test()
+        {
+            var set1 = "";
+
+            var set2 = "";
+
+            var s1 = set1.Split('\n').Select(x => x.Replace("\t"," ").Trim());
+            var s2 = set2.Split('\n').Select(x => x.Replace("\t", " ").Trim());
+
+            var intersect = s1.Except(s2).ToList();
+
+        }
+
         static void Main(string[] args)
         {
             var appSettings = File.ReadAllText("appsettings.json");
