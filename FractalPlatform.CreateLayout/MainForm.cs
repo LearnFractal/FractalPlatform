@@ -2,6 +2,7 @@
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -46,6 +47,10 @@ namespace FractalPlatform.CreateLayout
         private bool _isArray;
 
         private Options _options;
+
+        private List<string> _updates = new List<string>();
+
+        private int _currUpdateIndex = -1;
 
         #endregion
 
@@ -134,6 +139,27 @@ namespace FractalPlatform.CreateLayout
             File.WriteAllText(tbLayout.Text, html);
         }
 
+        private void AddUpdate(string html)
+        {
+            if (_currUpdateIndex >= 0 &&
+               _currUpdateIndex < _updates.Count - 1)
+            {
+                _updates.RemoveRange(_currUpdateIndex, _updates.Count - _currUpdateIndex);
+            }
+
+            _updates.Add(html);
+
+            _currUpdateIndex = _updates.Count - 1;
+
+            RefreshUndoRedoButtons();
+        }
+
+        private void RefreshUndoRedoButtons()
+        {
+            btnUndo.Enabled = _currUpdateIndex > 0;
+            btnRedo.Enabled = _currUpdateIndex < _updates.Count - 1;
+        }
+
         private void Apply()
         {
             var html = ReadHtml();
@@ -161,9 +187,9 @@ namespace FractalPlatform.CreateLayout
 
             WriteHtml(html);
 
+            AddUpdate(html);
+            
             RefreshPage();
-
-            RemoveOuterHtml();
         }
 
         private void SetControlText(string text, bool needSelection = false)
@@ -675,6 +701,10 @@ namespace FractalPlatform.CreateLayout
                 RefreshComboBoxes();
 
                 Navigate(_options.LayoutPath);
+
+                var html = ReadHtml();
+
+                AddUpdate(html);
             }
         }
 
@@ -771,6 +801,8 @@ namespace FractalPlatform.CreateLayout
             html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"{_options.BaseUrl}/files/{_dbName}/");
 
             WriteHtml(html);
+
+            RemoveOuterHtml();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -1290,17 +1322,6 @@ namespace FractalPlatform.CreateLayout
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            var path = _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
-
-            var htmlPath = $"{path}\\Layouts\\{_dbName}\\{_collName}.html";
-
-            File.Copy(tbLayout.Text, htmlPath);
-
-            Navigate(htmlPath);
-        }
-
         private void btnRemoveLayout_Click(object sender, EventArgs e)
         {
             if (!EnsureLayout())
@@ -1350,6 +1371,34 @@ namespace FractalPlatform.CreateLayout
             };
 
             process.Start();
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            if (_currUpdateIndex > 0)
+            {
+                var html = _updates[--_currUpdateIndex];
+
+                WriteHtml(html);
+
+                RefreshPage();
+
+                RefreshUndoRedoButtons();
+            }
+        }
+
+        private void btnRedo_Click(object sender, EventArgs e)
+        {
+            if (_currUpdateIndex < _updates.Count - 1)
+            {
+                var html = _updates[++_currUpdateIndex];
+
+                WriteHtml(html);
+
+                RefreshPage();
+
+                RefreshUndoRedoButtons();
+            }
         }
 
         #endregion
