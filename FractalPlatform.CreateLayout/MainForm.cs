@@ -355,10 +355,16 @@ namespace FractalPlatform.CreateLayout
 
                     var attrParts = attr.Split('\\');
 
+                    var countIndexes = attrParts.Count(x => x == "[0]");
+
                     for (int i = 0, j=0; i < attrParts.Length; i++, j++)
                     {
                         if (attrParts[i] == "[0]")
+                        {
+                            countIndexes--;
+
                             continue;
+                        }
 
                         if (attrParts[j] != controlInfos[i].Attr)
                         {
@@ -368,36 +374,32 @@ namespace FractalPlatform.CreateLayout
 
                     var idx = attr.IndexOf("\\[0]");
 
-                    _attr = attr.Substring(0, idx);
+                    //_attr = attr.Substring(0, idx);
 
-                    _attrPrefix = attr.Substring(idx + 4);
+                    //_attrPrefix = attr.Substring(idx + 4);
 
-                    if (_attrPrefix.StartsWith("\\"))
-                    {
-                        _attrPrefix = _attrPrefix.Substring(1);
-                    }
+                    //if (_attrPrefix.StartsWith("\\"))
+                    //{
+                    //    _attrPrefix = _attrPrefix.Substring(1);
+                    //}
 
                     _isArray = true;
-                }
-                else
-                {
-                    _attr = attr;
                 }
 
                 string html;
 
                 if (!isStandardType)
                 {
-                    html = $"<control attr=\"{_attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>";
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>";
                 }
                 else
                 {
-                    html = $"<control attr=\"{_attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
                 }
 
                 rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
 
-                AddAttrPrefixes();
+                //AddAttrPrefixes();
 
                 return true;
             }
