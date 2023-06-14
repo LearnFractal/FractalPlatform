@@ -401,39 +401,27 @@ namespace FractalPlatform.CreateLayout
 
                 if (attrParts.Length > 1)
                 {
-                    if (controlInfos.Count == 0) //no control tag, create controls one by one
+                    for (int i = 0; i < attrParts.Length - 1; i++) //no control tag, create controls one by one
                     {
-                        for (int i = 0; i < attrParts.Length - 1; i++)
+                        if (i < controlInfos.Count &&
+                            attrParts[i] == controlInfos[i].Attr)
                         {
-                            AddControlTag(isStandardType, attrParts[i]);
+                            continue;
                         }
 
-                        currPrefix = attrParts[attrParts.Length - 1];
+                        AddControlTag(isStandardType, attrParts[i]);
                     }
-                    else //add not existing controls
-                    {
-                        for (int i = 0; i < attrParts.Length - 1; i++)
-                        {
-                            if (i < controlInfos.Count &&
-                                attrParts[i] == controlInfos[i].Attr)
-                            {
-                                continue;
-                            }
 
-                            AddControlTag(isStandardType, attrParts[i]);
-                        }
-
-                        currPrefix = attrParts[attrParts.Length - 1];
-                    }
+                    currPrefix = attrParts[attrParts.Length - 1];
                 }
                 else
                 {
-                    currPrefix = string.Empty;
-
                     if (controlInfos.Count == 0) //no control tag
                     {
                         AddControlTag(isStandardType, attrParts[0]);
                     }
+
+                    currPrefix = string.Empty;
                 }
 
                 rtbOuterHtml.Text = AddAttrPrefixes(rtbOuterHtml.Text, currPrefix);
