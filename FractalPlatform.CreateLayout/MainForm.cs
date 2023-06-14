@@ -231,7 +231,7 @@ namespace FractalPlatform.CreateLayout
             Apply();
         }
 
-        private void AddAttrPrefixes(string attrPrefix)
+        private string AddAttrPrefixes(string html, string attrPrefix)
         {
             if (!string.IsNullOrEmpty(attrPrefix))
             {
@@ -247,10 +247,12 @@ namespace FractalPlatform.CreateLayout
                     {
                         var replacement = str.Replace("@", "@" + attrPrefix.Replace("\\", ".") + ".");
 
-                        rtbOuterHtml.Text = rtbOuterHtml.Text.Replace(str, replacement);
+                        html = html.Replace(str, replacement);
                     }
                 }
             }
+
+            return html;
         }
 
         private List<ControlInfo> GetControlInfos()
@@ -334,6 +336,48 @@ namespace FractalPlatform.CreateLayout
             return sb.ToString();
         }
 
+        private void AddControlTag(bool isStandardType, string attr)
+        {
+            var html = rtbOuterHtml.Text;
+
+            var selectedText = rtbOuterHtml.SelectedText;
+
+            if (rtbOuterHtml.SelectionLength > 0)
+            {
+                html = html.Remove(rtbOuterHtml.SelectionStart, rtbOuterHtml.SelectionLength);
+
+                if (!isStandardType)
+                {
+                    html = html.Insert(rtbOuterHtml.SelectionStart,
+                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + selectedText + "</control>");
+                }
+                else
+                {
+                    html = html.Insert(rtbOuterHtml.SelectionStart,
+                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>");
+                }
+            }
+            else
+            {
+                if (!isStandardType)
+                {
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>");
+                }
+                else
+                {
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
+                }
+            }
+
+            rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
+
+            if (!string.IsNullOrEmpty(selectedText))
+            {
+                rtbOuterHtml.SelectionStart = rtbOuterHtml.Text.IndexOf(selectedText);
+                rtbOuterHtml.SelectionLength = selectedText.Length;
+            }
+        }
+
         private bool CreateControlTag(bool isStandardType = false)
         {
             if (!EnsureLayout())
@@ -349,57 +393,50 @@ namespace FractalPlatform.CreateLayout
             {
                 var attr = dlgChooseAttribute.Attribute;
 
-                if (attr.Contains("[0]"))
+                var currPrefix = string.Empty;
+
+                var controlInfos = GetControlInfos();
+
+                var attrParts = attr.Split(new string[] { "\\[0]" }, StringSplitOptions.None);
+
+                if (attrParts.Length > 1)
                 {
-                    var controlInfos = GetControlInfos();
-
-                    var attrParts = attr.Split('\\');
-
-                    var countIndexes = attrParts.Count(x => x == "[0]");
-
-                    for (int i = 0, j=0; i < attrParts.Length; i++, j++)
+                    if (controlInfos.Count == 0) //no control tag, create controls one by one
                     {
-                        if (attrParts[i] == "[0]")
+                        for (int i = 0; i < attrParts.Length - 1; i++)
                         {
-                            countIndexes--;
-
-                            continue;
+                            AddControlTag(isStandardType, attrParts[i]);
                         }
 
-                        if (attrParts[j] != controlInfos[i].Attr)
-                        {
-
-                        }
+                        currPrefix = attrParts[attrParts.Length - 1];
                     }
+                    else //add not existing controls
+                    {
+                        for (int i = 0; i < attrParts.Length - 1; i++)
+                        {
+                            if (i < controlInfos.Count &&
+                                attrParts[i] == controlInfos[i].Attr)
+                            {
+                                continue;
+                            }
 
-                    var idx = attr.IndexOf("\\[0]");
+                            AddControlTag(isStandardType, attrParts[i]);
+                        }
 
-                    //_attr = attr.Substring(0, idx);
-
-                    //_attrPrefix = attr.Substring(idx + 4);
-
-                    //if (_attrPrefix.StartsWith("\\"))
-                    //{
-                    //    _attrPrefix = _attrPrefix.Substring(1);
-                    //}
-
-                    _isArray = true;
-                }
-
-                string html;
-
-                if (!isStandardType)
-                {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>";
+                        currPrefix = attrParts[attrParts.Length - 1];
+                    }
                 }
                 else
                 {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
+                    currPrefix = string.Empty;
+
+                    if (controlInfos.Count == 0) //no control tag
+                    {
+                        AddControlTag(isStandardType, attrParts[0]);
+                    }
                 }
 
-                rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
-
-                //AddAttrPrefixes();
+                rtbOuterHtml.Text = AddAttrPrefixes(rtbOuterHtml.Text, currPrefix);
 
                 return true;
             }
