@@ -5,7 +5,9 @@
         public string BaseUrl { get; set; }
 
         public string AppName { get; set; }
-        
+
+        public string CollName { get; set; }
+
         public string LayoutPath { get; set; }
 
         public string FilesPath { get; set; }

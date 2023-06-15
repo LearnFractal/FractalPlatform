@@ -78,6 +78,8 @@ namespace FractalPlatform.CreateLayout
         {
             _options.AppName = AppName;
 
+            _options.CollName = CollName;
+
             _options.LayoutPath = LayoutHtmlPath;
 
             _options.FilesPath = FilesPath;
@@ -1319,6 +1321,8 @@ namespace FractalPlatform.CreateLayout
 
         private string AppName => _dbName;
 
+        private string CollName => _collName;
+
         private string RootPath => _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
 
         private string FilesPath => $"{RootPath}\\files\\{_dbName}\\{_collName}";
@@ -1354,7 +1358,7 @@ namespace FractalPlatform.CreateLayout
 
                     var html = File.ReadAllText(_options.LayoutPath);
 
-                    html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_options.AppName}/", $"{_options.BaseUrl}/files/{AppName}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_options.AppName}/{_options.CollName}/", $"{_options.BaseUrl}/files/{AppName}/{CollName}/");
 
                     File.WriteAllText(LayoutHtmlPath, html);
 
