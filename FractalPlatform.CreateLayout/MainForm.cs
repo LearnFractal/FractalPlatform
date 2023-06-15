@@ -1332,6 +1332,8 @@ namespace FractalPlatform.CreateLayout
         {
             var oldFilesPath = FilesPath;
 
+            var oldLayoutHtmlPath = LayoutHtmlPath;
+
             _documentFileName = _documentFileName.Replace($"\\{_collName}\\", $"\\{cbCollection.SelectedItem}\\");
 
             RefreshComboBoxes();
@@ -1346,12 +1348,9 @@ namespace FractalPlatform.CreateLayout
                         Directory.CreateDirectory(LayoutsPath);
                     }
 
-                    if (!Directory.Exists(FilesPath))
-                    {
-                        FileHelpers.CopyFilesRecursively(oldFilesPath, FilesPath);
-                    }
-
-                    File.Copy(_options.LayoutPath, LayoutHtmlPath, true);
+                    FileHelpers.CopyFilesRecursively(oldFilesPath, FilesPath);
+                    
+                    File.Copy(oldLayoutHtmlPath, LayoutHtmlPath, true);
 
                     _options.LayoutPath = LayoutHtmlPath;
 
