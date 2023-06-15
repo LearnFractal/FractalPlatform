@@ -76,6 +76,12 @@ namespace FractalPlatform.CreateLayout
 
         private void SaveOptions()
         {
+            _options.AppName = AppName;
+
+            _options.LayoutPath = LayoutHtmlPath;
+
+            _options.FilesPath = FilesPath;
+
             var appSettings = JsonConvert.SerializeObject(_options);
 
             appSettings = JsonHelpers.FormatJson(appSettings);
@@ -619,8 +625,6 @@ namespace FractalPlatform.CreateLayout
                 _documentFileName = openHtmlFileDialog.FileName
                                             .Replace("Layouts", "Databases")
                                             .Replace(".html", @"\Document\0000000001.json");
-
-                _options.LayoutPath = openHtmlFileDialog.FileName;
 
                 SaveOptions();
 
@@ -1313,6 +1317,8 @@ namespace FractalPlatform.CreateLayout
             EnsureLayout(false);
         }
 
+        private string AppName => _dbName;
+
         private string RootPath => _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
 
         private string FilesPath => $"{RootPath}\\files\\{_dbName}\\{_collName}";
@@ -1330,10 +1336,6 @@ namespace FractalPlatform.CreateLayout
 
         private void cbCollection_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var oldFilesPath = FilesPath;
-
-            var oldLayoutHtmlPath = LayoutHtmlPath;
-
             _documentFileName = _documentFileName.Replace($"\\{_collName}\\", $"\\{cbCollection.SelectedItem}\\");
 
             RefreshComboBoxes();
@@ -1348,11 +1350,13 @@ namespace FractalPlatform.CreateLayout
                         Directory.CreateDirectory(LayoutsPath);
                     }
 
-                    FileHelpers.CopyFilesRecursively(oldFilesPath, FilesPath);
-                    
-                    File.Copy(oldLayoutHtmlPath, LayoutHtmlPath, true);
+                    FileHelpers.CopyFilesRecursively(_options.FilesPath, FilesPath);
 
-                    _options.LayoutPath = LayoutHtmlPath;
+                    var html = File.ReadAllText(_options.LayoutPath);
+
+                    html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_options.AppName}/", $"{_options.BaseUrl}/files/{AppName}/");
+
+                    File.WriteAllText(LayoutHtmlPath, html);
 
                     SaveOptions();
 
@@ -1429,8 +1433,6 @@ namespace FractalPlatform.CreateLayout
                 {
                     Directory.CreateDirectory(dirName);
                 }
-
-                _options.LayoutPath = LayoutHtmlPath;
 
                 SaveOptions();
 
