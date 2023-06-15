@@ -48,9 +48,21 @@ namespace FractalPlatform.CreateLayout
 
         private Options _options;
 
-        private List<string> _updates = new List<string>();
+        private List<string> _undoUpdates = new List<string>();
 
-        private int _currUpdateIndex = -1;
+        private int _currUndoUpdateIndex = -1;
+
+        private string AppName => _dbName;
+
+        private string CollName => _collName;
+
+        private string RootPath => _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
+
+        private string FilesPath => $"{RootPath}\\files\\{_dbName}\\{_collName}";
+
+        private string LayoutsPath => $"{RootPath}\\Layouts\\{_dbName}";
+
+        private string LayoutHtmlPath => $"{LayoutsPath}\\{_collName}.html";
 
         #endregion
 
@@ -145,23 +157,23 @@ namespace FractalPlatform.CreateLayout
 
         private void AddUpdate(string html)
         {
-            if (_currUpdateIndex >= 0 &&
-               _currUpdateIndex < _updates.Count - 1)
+            if (_currUndoUpdateIndex >= 0 &&
+               _currUndoUpdateIndex < _undoUpdates.Count - 1)
             {
-                _updates.RemoveRange(_currUpdateIndex, _updates.Count - _currUpdateIndex);
+                _undoUpdates.RemoveRange(_currUndoUpdateIndex, _undoUpdates.Count - _currUndoUpdateIndex);
             }
 
-            _updates.Add(html);
+            _undoUpdates.Add(html);
 
-            _currUpdateIndex = _updates.Count - 1;
+            _currUndoUpdateIndex = _undoUpdates.Count - 1;
 
             RefreshUndoRedoButtons();
         }
 
         private void RefreshUndoRedoButtons()
         {
-            btnUndo.Enabled = _currUpdateIndex > 0;
-            btnRedo.Enabled = _currUpdateIndex < _updates.Count - 1;
+            btnUndo.Enabled = _currUndoUpdateIndex > 0;
+            btnRedo.Enabled = _currUndoUpdateIndex < _undoUpdates.Count - 1;
         }
 
         private void Apply()
@@ -1319,18 +1331,6 @@ namespace FractalPlatform.CreateLayout
             EnsureLayout(false);
         }
 
-        private string AppName => _dbName;
-
-        private string CollName => _collName;
-
-        private string RootPath => _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
-
-        private string FilesPath => $"{RootPath}\\files\\{_dbName}\\{_collName}";
-
-        private string LayoutsPath => $"{RootPath}\\Layouts\\{_dbName}";
-
-        private string LayoutHtmlPath => $"{LayoutsPath}\\{_collName}.html";
-
         private void cbDatabase_SelectedIndexChanged(object sender, EventArgs e)
         {
             _documentFileName = _documentFileName.Replace($"\\{_dbName}\\", $"\\{cbDatabase.SelectedItem}\\");
@@ -1501,9 +1501,9 @@ namespace FractalPlatform.CreateLayout
 
         private void btnUndo_Click(object sender, EventArgs e)
         {
-            if (_currUpdateIndex > 0)
+            if (_currUndoUpdateIndex > 0)
             {
-                var html = _updates[--_currUpdateIndex];
+                var html = _undoUpdates[--_currUndoUpdateIndex];
 
                 WriteHtml(html);
 
@@ -1515,9 +1515,9 @@ namespace FractalPlatform.CreateLayout
 
         private void btnRedo_Click(object sender, EventArgs e)
         {
-            if (_currUpdateIndex < _updates.Count - 1)
+            if (_currUndoUpdateIndex < _undoUpdates.Count - 1)
             {
-                var html = _updates[++_currUpdateIndex];
+                var html = _undoUpdates[++_currUndoUpdateIndex];
 
                 WriteHtml(html);
 
