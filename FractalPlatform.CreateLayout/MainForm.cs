@@ -336,11 +336,20 @@ namespace FractalPlatform.CreateLayout
             return sb.ToString();
         }
 
-        private void AddControlTag(bool isStandardType, string attr)
+        private void AddControlTag(string attr,
+                                   bool isStandardType,
+                                   bool isRepeatable)
         {
             var html = rtbOuterHtml.Text;
 
             var selectedText = rtbOuterHtml.SelectedText;
+
+            var repeatable = string.Empty;
+
+            if (isRepeatable)
+            {
+                repeatable = $" repeatable=\"true\"";
+            }
 
             if (rtbOuterHtml.SelectionLength > 0)
             {
@@ -349,23 +358,23 @@ namespace FractalPlatform.CreateLayout
                 if (!isStandardType)
                 {
                     html = html.Insert(rtbOuterHtml.SelectionStart,
-                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + selectedText + "</control>");
+                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\"{repeatable}>" + selectedText + "</control>");
                 }
                 else
                 {
                     html = html.Insert(rtbOuterHtml.SelectionStart,
-                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>");
+                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"{repeatable}></control>");
                 }
             }
             else
             {
                 if (!isStandardType)
                 {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\">" + rtbOuterHtml.Text + "</control>");
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\"{repeatable}>" + rtbOuterHtml.Text + "</control>";
                 }
                 else
                 {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"></control>";
+                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"{repeatable}></control>";
                 }
             }
 
@@ -409,7 +418,7 @@ namespace FractalPlatform.CreateLayout
                             continue;
                         }
 
-                        AddControlTag(isStandardType, attrParts[i]);
+                        AddControlTag(attrParts[i], isStandardType, true);
                     }
 
                     currPrefix = attrParts[attrParts.Length - 1];
@@ -418,7 +427,7 @@ namespace FractalPlatform.CreateLayout
                 {
                     if (controlInfos.Count == 0) //no control tag
                     {
-                        AddControlTag(isStandardType, attrParts[0]);
+                        AddControlTag(attrParts[0], isStandardType, false);
                     }
 
                     currPrefix = string.Empty;
