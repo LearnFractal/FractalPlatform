@@ -870,6 +870,32 @@ namespace FractalPlatform.CreateLayout
             var script = @"let currElems = []; 
                         let prevElem = null; 
                         let prevColor = null;
+
+                        function getControlAttr(elem)
+                        {
+                            var controlAttr = '';
+
+                            var parentElement = elem.parentElement;
+
+                            while(parentElement != null)
+                            {
+                                if(parentElement.tagName == 'CONTROL')
+                                {
+                                   if(parentElement.repeatable == 'true')
+                                   {
+                                       controlAttr = parentElement.attr + '\\[0]\\' + controlAttr;
+                                   }
+                                   else
+                                   {
+                                       controlAttr = parentElement.attr + '\\' + controlAttr;
+                                   }
+                                }
+
+                                parentElement = parentElement.parentElement;
+                            }
+
+                            return controlAttr;
+                        }
                         
                         document.addEventListener('contextmenu', function (event) {
                             let currElem = event.target;
@@ -902,6 +928,7 @@ namespace FractalPlatform.CreateLayout
                             let jsonObject =
                             {
                                 Id: currElem.id,
+                                ControlAttr: getControlAttr(currElem),
                                 ParentId: currElem.parentElement.id
                             };
 
@@ -973,6 +1000,7 @@ namespace FractalPlatform.CreateLayout
                             let jsonObject =
                             {
                                 Id: currElem.id,
+                                ControlAttr: getControlAttr(currElem),
                                 ParentId: currElem.parentElement.id
                             };
                             
@@ -1009,6 +1037,7 @@ namespace FractalPlatform.CreateLayout
                             let jsonObject =
                             {
                                 Id: currElem.id,
+                                ControlAttr: getControlAttr(currElem),
                                 ParentId: currElem.parentElement.id
                             };
                             
