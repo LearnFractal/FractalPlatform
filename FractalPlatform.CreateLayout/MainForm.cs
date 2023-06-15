@@ -620,7 +620,7 @@ namespace FractalPlatform.CreateLayout
                                             .Replace("Layouts", "Databases")
                                             .Replace(".html", @"\Document\0000000001.json");
 
-                _options.LayoutPath = _documentFileName;
+                _options.LayoutPath = openHtmlFileDialog.FileName;
 
                 SaveOptions();
 
@@ -722,6 +722,14 @@ namespace FractalPlatform.CreateLayout
         private void MessageBoxInfo(string message)
         {
             MessageBox.Show(message, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private bool MessageBoxQuestion(string message)
+        {
+            return MessageBox.Show(message,
+                                   "Question",
+                                   MessageBoxButtons.OKCancel,
+                                   MessageBoxIcon.Question) == DialogResult.OK;
         }
 
         #endregion
@@ -1305,6 +1313,14 @@ namespace FractalPlatform.CreateLayout
             EnsureLayout(false);
         }
 
+        private string RootPath => _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
+
+        private string FilesPath => $"{RootPath}\\files\\{_dbName}\\{_collName}";
+
+        private string LayoutsPath => $"{RootPath}\\Layouts\\{_dbName}";
+
+        private string LayoutHtmlPath => $"{LayoutsPath}\\{_collName}.html";
+
         private void cbDatabase_SelectedIndexChanged(object sender, EventArgs e)
         {
             _documentFileName = _documentFileName.Replace($"\\{_dbName}\\", $"\\{cbDatabase.SelectedItem}\\");
@@ -1314,9 +1330,38 @@ namespace FractalPlatform.CreateLayout
 
         private void cbCollection_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var oldFilesPath = FilesPath;
+
             _documentFileName = _documentFileName.Replace($"\\{_collName}\\", $"\\{cbCollection.SelectedItem}\\");
 
             RefreshComboBoxes();
+
+            if (cbCollection.SelectedItem != null)
+            {
+                if (!File.Exists(LayoutHtmlPath) &&
+                    MessageBoxQuestion($"Do you want to copy layout for '{cbCollection.SelectedItem}' collection ?"))
+                {
+                    if (!Directory.Exists(LayoutsPath))
+                    {
+                        Directory.CreateDirectory(LayoutsPath);
+                    }
+
+                    if (!Directory.Exists(FilesPath))
+                    {
+                        FileHelpers.CopyFilesRecursively(oldFilesPath, FilesPath);
+                    }
+
+                    File.Copy(_options.LayoutPath, LayoutHtmlPath, true);
+
+                    _options.LayoutPath = LayoutHtmlPath;
+
+                    SaveOptions();
+
+                    ChangeUILayout(_collName);
+
+                    Navigate(_options.LayoutPath);
+                }
+            }
         }
 
         private void btnDocument_Click(object sender, EventArgs e)
@@ -1362,17 +1407,13 @@ namespace FractalPlatform.CreateLayout
                 //import directory
                 var dirName = fileName.Replace(".html", "_files");
 
-                var path = _documentFileName.Substring(0, _documentFileName.IndexOf("\\Databases"));
-
                 DirectoryInfo dirInfo = null;
 
                 if (Directory.Exists(dirName))
                 {
                     dirInfo = new DirectoryInfo(dirName);
 
-                    var dirPath = $"{path}\\files\\{_dbName}\\{_collName}";
-
-                    FileHelpers.CopyFilesRecursively(dirName, dirPath);
+                    FileHelpers.CopyFilesRecursively(dirName, FilesPath);
                 }
 
                 //import html
@@ -1385,24 +1426,20 @@ namespace FractalPlatform.CreateLayout
                     html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"{_options.BaseUrl}/files/{_dbName}/{_collName}/");
                 }
 
-                dirName = $"{path}\\Layouts\\{_dbName}";
-
-                if (!Directory.Exists(dirName))
+                if (!Directory.Exists(LayoutsPath))
                 {
                     Directory.CreateDirectory(dirName);
                 }
 
-                var htmlPath = $"{dirName}\\{_collName}.html";
-
-                _options.LayoutPath = htmlPath;
+                _options.LayoutPath = LayoutHtmlPath;
 
                 SaveOptions();
 
-                File.WriteAllText(htmlPath, html);
+                File.WriteAllText(LayoutHtmlPath, html);
 
                 ChangeUILayout(_collName);
 
-                Navigate(htmlPath);
+                Navigate(LayoutHtmlPath);
             }
         }
 
