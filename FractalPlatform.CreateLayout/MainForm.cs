@@ -875,19 +875,36 @@ namespace FractalPlatform.CreateLayout
                         {
                             var controlAttr = '';
 
-                            var parentElement = elem.parentElement;
+                            var parentElement = elem;
 
                             while(parentElement != null)
                             {
                                 if(parentElement.tagName == 'CONTROL')
                                 {
-                                   if(parentElement.repeatable == 'true')
+                                   var attr = parentElement.getAttribute('attr');
+                                   var repeatable = parentElement.getAttribute('repeatable');
+
+                                   if(repeatable == 'true')
                                    {
-                                       controlAttr = parentElement.attr + '\\[0]\\' + controlAttr;
+                                       if(controlAttr != '')
+                                       {
+                                           controlAttr = attr + '\\[0]\\' + controlAttr;
+                                       }
+                                       else
+                                       {
+                                           controlAttr = attr + '\\[0]';
+                                       }
                                    }
                                    else
                                    {
-                                       controlAttr = parentElement.attr + '\\' + controlAttr;
+                                       if(controlAttr != '')
+                                       {
+                                            controlAttr = attr + '\\' + controlAttr;
+                                       }
+                                       else
+                                       {
+                                            controlAttr = attr;
+                                       }
                                    }
                                 }
 
