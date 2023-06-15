@@ -30,21 +30,6 @@ namespace FractalPlatform.CreateLayout
             public string ControlAttr { get; set; }
         }
 
-        //private class ControlInfo
-        //{
-        //    public string Attr { get; set; }
-
-        //    public int StartIndex { get; set; }
-
-        //    public int EndIndex { get; set; }
-
-        //    public bool IsMyIndex(int index) => StartIndex <= index && index <= EndIndex;
-
-        //    public bool IsRepeatable { get; set; }
-
-        //    public int Length => EndIndex - StartIndex;
-        //}
-
         #endregion
 
         #region Members
@@ -254,87 +239,6 @@ namespace FractalPlatform.CreateLayout
 
             return html;
         }
-
-        //private List<ControlInfo> GetControlInfos()
-        //{
-        //    var controlInfos = new List<ControlInfo>();
-
-        //    var reg = new Regex("\\<control\\s(?<Value>.*?)\\>");
-
-        //    foreach (Match match in reg.Matches(rtbOuterHtml.Text))
-        //    {
-        //        var attr = string.Empty;
-        //        var isRepeatable = false;
-
-        //        foreach (Match item in GetMatchedAttrs(match.Groups["Value"].Value))
-        //        {
-        //            var attrName = item.Groups["AttrName"];
-        //            var value = item.Groups["Value"].Value;
-
-        //            if (attrName.Value == "attr")
-        //            {
-        //                attr = value;
-        //            }
-        //            else if (attrName.Value == "repeatable")
-        //            {
-        //                isRepeatable = bool.Parse(value);
-        //            }
-        //        }
-
-        //        var controlInfo = new ControlInfo
-        //        {
-        //            Attr = match.Groups["Value"].Value,
-
-        //            IsRepeatable = isRepeatable,
-
-        //            StartIndex = match.Index
-        //        };
-
-        //        controlInfos.Add(controlInfo);
-        //    }
-
-        //    reg = new Regex("\\</control\\>");
-
-        //    var matches = reg.Matches(rtbOuterHtml.Text);
-
-        //    for (int i = 0; i < controlInfos.Count; i++)
-        //    {
-        //        controlInfos[i].EndIndex = matches[controlInfos.Count - i - 1].Index;
-        //    }
-
-        //    var subControlInfos = new List<ControlInfo>();
-
-        //    var index = rtbOuterHtml.SelectionStart;
-
-        //    foreach (var controlInfo in controlInfos)
-        //    {
-        //        if (controlInfo.IsMyIndex(index))
-        //        {
-        //            subControlInfos.Add(controlInfo);
-        //        }
-        //    }
-
-        //    return subControlInfos.OrderByDescending(x => x.Length).ToList();
-        //}
-
-        //private string GetCurrAttr()
-        //{
-        //    var controlInfos = GetControlInfos();
-
-        //    var sb = new StringBuilder();
-
-        //    foreach (var controlInfo in controlInfos)
-        //    {
-        //        sb.Append(controlInfo.Attr);
-
-        //        if (controlInfo.IsRepeatable)
-        //        {
-        //            sb.Append("\\[0]");
-        //        }
-        //    }
-
-        //    return sb.ToString();
-        //}
 
         private void AddControlTag(string attr,
                                    bool isStandardType,
