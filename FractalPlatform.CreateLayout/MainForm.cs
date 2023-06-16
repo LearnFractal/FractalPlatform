@@ -344,9 +344,9 @@ namespace FractalPlatform.CreateLayout
                 }
                 else
                 {
-                    AddControlTag(TrimSlashes(attrParts[0]), isStandardType, false); //no control tag
+                    AddControlTag(string.Empty, isStandardType, false); //no control tag
 
-                    currPrefix = string.Empty;
+                    currPrefix = TrimSlashes(attrParts[0]);
                 }
 
                 rtbOuterHtml.Text = AddAttrPrefixes(rtbOuterHtml.Text, currPrefix);
@@ -819,7 +819,7 @@ namespace FractalPlatform.CreateLayout
                                    }
                                    else
                                    {
-                                       if(controlAttr != '')
+                                       if(controlAttr != '' && attr != '')
                                        {
                                             controlAttr = attr + '\\' + controlAttr;
                                        }
