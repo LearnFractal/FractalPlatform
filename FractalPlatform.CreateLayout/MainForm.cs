@@ -88,13 +88,7 @@ namespace FractalPlatform.CreateLayout
 
         private void SaveOptions()
         {
-            _options.AppName = AppName;
-
-            _options.CollName = CollName;
-
             _options.LayoutPath = LayoutHtmlPath;
-
-            _options.FilesPath = FilesPath;
 
             var appSettings = JsonConvert.SerializeObject(_options);
 
@@ -1358,7 +1352,7 @@ namespace FractalPlatform.CreateLayout
 
                     var html = File.ReadAllText(_options.LayoutPath);
 
-                    html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_options.AppName}/{_options.CollName}/", $"{_options.BaseUrl}/files/{AppName}/{CollName}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_options.DBName}/{_options.CollName}/", $"{_options.BaseUrl}/files/{AppName}/{CollName}/");
 
                     File.WriteAllText(LayoutHtmlPath, html);
 
