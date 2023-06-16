@@ -334,31 +334,17 @@ namespace FractalPlatform.CreateLayout
 
                 string currPrefix;
 
-                var controlInfos = _currentTagInfo.ControlAttr.Split(new string[] { "\\[0]" }, StringSplitOptions.None);
-
                 var attrParts = attr.Split(new string[] { "\\[0]" }, StringSplitOptions.None);
 
                 if (attrParts.Length > 1)
                 {
-                    for (int i = 0; i < attrParts.Length - 1; i++) //no control tag, create controls one by one
-                    {
-                        if (i < controlInfos.Length &&
-                            attrParts[i] == controlInfos[i])
-                        {
-                            continue;
-                        }
+                    AddControlTag(TrimSlashes(attrParts[attrParts.Length - 2]), isStandardType, true); //no control tag, create controls one by one
 
-                        AddControlTag(TrimSlashes(attrParts[i]), isStandardType, true);
-                    }
-
-                    currPrefix = attrParts[attrParts.Length - 1];
+                    currPrefix = TrimSlashes(attrParts[attrParts.Length - 1]);
                 }
                 else
                 {
-                    if (controlInfos.Length == 0) //no control tag
-                    {
-                        AddControlTag(TrimSlashes(attrParts[0]), isStandardType, false);
-                    }
+                    AddControlTag(TrimSlashes(attrParts[0]), isStandardType, false); //no control tag
 
                     currPrefix = string.Empty;
                 }
