@@ -1,124 +1,16 @@
-<!DOCTYPE html>
-<!-- saved from url=(0020)https://naps.com.ua/ -->
-<html lang="uk"><head>
-<script src="http://booben.com/jupiter/js/frmain.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="NAPS - Соціальна мережа">
-    <meta property="og:description" content="Створіть свій унікальний список уподобань!">
-    <meta property="og:image" content="https://naps.com.ua/img/fb_images.jpg">
-    <link rel="stylesheet" href="http://booben.com/jupiter/files/Login/Users/styles2.css">
-    <link rel="icon" type="image/png" href="https://naps.com.ua/img/logo_favicon.png">
-    <title>NAPS - Створіть свій унікальний список уподобань</title>
+<html>
+<head>
+
 </head>
 <body>
-<form action="/" enctype="multipart/form-data" method="post"> 
-                                                <input type="hidden" name="EditKey" value="" />
-                                                <input type="hidden" name="MenuAction" value="" />
-                                                <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
-                                                <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
-                                                <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
-                                                <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
-                                                <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
-                                                <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
-                                                <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
-                                                <input type="submit" id="btnSave" name="btn" value="Save" style="display:none"/>
-                                                <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
-                                                <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none"/>
-                                                <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none"/>
-                                                
-<header>
-    <img src="http://booben.com/jupiter/files/Login/Users/logo_naps_white.png" alt="Naps - соціальна мережа">
-</header>
-<div class="message" id="message"></div>
-
-<main>
-    <div class="content">
-        <div class="left-block">
-            <h1>
-   Створіть hello список уподобань!
-            
-         
-      
-   
-</h1>
-            <img src="http://booben.com/jupiter/files/Login/Users/charakters.svg" alt="Картинка">
-            <p>Наша соціальна мережа допоможе вам знайти нових друзів, краще познайомитися зі старими, та дізнатися більше про свій світ! Створюйте свої списки уподобань та неуподобань, зберігайте їх на нашому сайті, і діліться ними з друзями в будь-який зручний для вас момент!</p>
-</div>
-    <div class="right-block">
-        <div class="login-form">
-            
-                <input type="text" name="login" placeholder="Логін" required="">
-                <input type="password" name="password" placeholder="Пароль" required="">
-                <input type="hidden" name="login_form" value="1">
-                <button type="submit">Увійти</button>
-            
-        </div>
-        <button class="register-btn">Новий користувач</button>
-<div class="registration-form">
-    
-        <input type="text" name="reg_login" placeholder="Логін" required="">
-        <input type="password" name="reg_password" placeholder="Пароль" required="">
-        <input type="password" name="password_confirm" placeholder="Підтвердіть пароль" required="">
-        <input type="email" name="reg_email" id="reg_email" placeholder="Email" required="">
-        <input type="hidden" name="register_form" value="1">
-        
-        <div class="privacy-policy">
-            <input type="checkbox" name="agree_privacy_policy" required="">
-            <label for="agree_privacy_policy">Я прочитав та згоден з <a href="https://naps.com.ua/privacy-policy.html" target="_blank">Політикою конфіденційності</a></label>
-        </div>
-        
-        <button type="submit">Зареєструватись</button>
-    
-    <button class="cancel-btn">Відміна</button>
-</div>
-
-    </div>
-</div>
-
-<div class="new-block">
-   <control attr="hello1" repeatable="true">
-   <control attr="hello2" repeatable="true">
-   <control attr="hello3" repeatable="false">
-   <h2>
-   Дізнайтеся ееее про своїх друзів!
-   </control>
-   </control>
-   </control>
-</h2>
-    <img src="http://booben.com/jupiter/files/Login/Users/home-images.png" alt="Дізнайтеся більше про своїх друзів!">
-    <p>На нашій соціальній мережі ви зможете переглянути списки того, що подобається і не подобається вашим друзям, а також дізнатися більше про їх інтереси та уподобання. Ви можете поділитися своїми списками з друзями і дізнатися більше про спільні інтереси.</p>
-    <p>Користувачів: <b>16</b></p>
-</div>
-</main>
-
-
-
-<script>
-    const registerBtn = document.querySelector('.register-btn');
-    const cancelBtn = document.querySelector('.cancel-btn');
-    const registrationForm = document.querySelector('.registration-form');
-
-    registerBtn.addEventListener('click', () => {
-        registrationForm.style.display = 'flex';
-    });
-
-    cancelBtn.addEventListener('click', () => {
-        registrationForm.style.display = 'none';
-    });
-</script>
-
-<link rel="stylesheet" href="http://booben.com/jupiter/files/Login/Users/footerstyle.css">
-<footer>
-    <div class="footer-container">
-        <img src="http://booben.com/jupiter/files/Login/Users/logo_naps_white.png" alt="Logo" class="footer-logo">
-        <div class="footer-text">
-            <p>© 2023 naps.com.ua - Всі права захищені</p>
-            <p>Соціальну мережу створив <a href="https://soloniy.com/" target="_blank">Солоний Денис</a></p>
-        </div>
-    </div>
-</footer>
-
-
-
-</form></body></html>
+    <h1>Bob</h1>
+    <hr />
+    <h2>Jane</h2>
+    <h3>Tom</h3>
+    <h3>Bill</h3>
+    <hr />
+    <h2>Hank</h2>
+    <h3>Tom</h3>
+    <h3>Bill</h3>
+</body>
+</html>
