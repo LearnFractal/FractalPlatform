@@ -806,27 +806,30 @@ namespace FractalPlatform.CreateLayout
                                    var attr = parentElement.getAttribute('attr');
                                    var repeatable = parentElement.getAttribute('repeatable');
 
-                                   if(repeatable == 'true')
+                                   if(attr != '')
                                    {
-                                       if(controlAttr != '')
-                                       {
-                                           controlAttr = attr + '\\[0]\\' + controlAttr;
-                                       }
-                                       else
-                                       {
-                                           controlAttr = attr + '\\[0]';
-                                       }
-                                   }
-                                   else
-                                   {
-                                       if(controlAttr != '' && attr != '')
-                                       {
-                                            controlAttr = attr + '\\' + controlAttr;
-                                       }
-                                       else
-                                       {
-                                            controlAttr = attr;
-                                       }
+                                        if(repeatable == 'true')
+                                        {
+                                            if(controlAttr != '')
+                                            {
+                                                controlAttr = attr + '\\[0]\\' + controlAttr;
+                                            }
+                                            else
+                                            {
+                                                controlAttr = attr + '\\[0]';
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if(controlAttr != '')
+                                            {
+                                                controlAttr = attr + '\\' + controlAttr;
+                                            }
+                                            else
+                                            {
+                                                controlAttr = attr;
+                                            }
+                                        }
                                    }
                                 }
 
