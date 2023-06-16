@@ -44,7 +44,7 @@ namespace FractalPlatform.CreateLayout
 
         private bool _isProcessingComboBoxes = false;
 
-        private bool _isArray;
+        private bool _isRepeatableControl;
 
         private Options _options;
 
@@ -127,7 +127,7 @@ namespace FractalPlatform.CreateLayout
 
         private void RemoveOuterHtml()
         {
-            _isArray = false;
+            _isRepeatableControl = false;
 
             rtbOuterHtml.Text = string.Empty;
         }
@@ -176,7 +176,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            if (!_isArray)
+            if (!_isRepeatableControl)
             {
                 html = HtmlHelpers.ReplaceTagHtml(html, _currentTagInfo.Id, rtbOuterHtml.Text);
             }
@@ -258,8 +258,6 @@ namespace FractalPlatform.CreateLayout
                                    bool isStandardType,
                                    bool isRepeatable)
         {
-            var html = rtbOuterHtml.Text;
-
             var selectedText = rtbOuterHtml.SelectedText;
 
             var repeatable = string.Empty;
@@ -269,31 +267,15 @@ namespace FractalPlatform.CreateLayout
                 repeatable = $" repeatable=\"true\"";
             }
 
-            if (rtbOuterHtml.SelectionLength > 0)
-            {
-                html = html.Remove(rtbOuterHtml.SelectionStart, rtbOuterHtml.SelectionLength);
+            var html = rtbOuterHtml.Text;
 
-                if (!isStandardType)
-                {
-                    html = html.Insert(rtbOuterHtml.SelectionStart,
-                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\"{repeatable}>" + selectedText + "</control>");
-                }
-                else
-                {
-                    html = html.Insert(rtbOuterHtml.SelectionStart,
-                                       $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"{repeatable}></control>");
-                }
+            if (!isStandardType)
+            {
+                html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\"{repeatable}>" + rtbOuterHtml.Text + "</control>";
             }
             else
             {
-                if (!isStandardType)
-                {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\"{repeatable}>" + rtbOuterHtml.Text + "</control>";
-                }
-                else
-                {
-                    html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"{repeatable}></control>";
-                }
+                html = $"<control attr=\"{attr.Replace("\\", "\\\\")}\" type=\"standard\"{repeatable}></control>";
             }
 
             rtbOuterHtml.Text = HtmlHelpers.FormatHtml(html);
@@ -307,7 +289,7 @@ namespace FractalPlatform.CreateLayout
 
         private string TrimSlashes(string str)
         {
-            if(str.StartsWith("\\"))
+            if (str.StartsWith("\\"))
             {
                 return str.Substring(1);
             }
@@ -341,6 +323,8 @@ namespace FractalPlatform.CreateLayout
                     AddControlTag(TrimSlashes(attrParts[attrParts.Length - 2]), isStandardType, true); //no control tag, create controls one by one
 
                     currPrefix = TrimSlashes(attrParts[attrParts.Length - 1]);
+
+                    _isRepeatableControl = true;
                 }
                 else
                 {
@@ -906,6 +890,8 @@ namespace FractalPlatform.CreateLayout
             WriteHtml(html);
 
             RemoveOuterHtml();
+
+            _isRepeatableControl = false;
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
