@@ -305,6 +305,18 @@ namespace FractalPlatform.CreateLayout
             }
         }
 
+        private string TrimSlashes(string str)
+        {
+            if(str.StartsWith("\\"))
+            {
+                return str.Substring(1);
+            }
+            else
+            {
+                return str;
+            }
+        }
+
         private bool CreateControlTag(bool isStandardType = false)
         {
             if (!EnsureLayout())
@@ -336,7 +348,7 @@ namespace FractalPlatform.CreateLayout
                             continue;
                         }
 
-                        AddControlTag(attrParts[i], isStandardType, true);
+                        AddControlTag(TrimSlashes(attrParts[i]), isStandardType, true);
                     }
 
                     currPrefix = attrParts[attrParts.Length - 1];
@@ -345,7 +357,7 @@ namespace FractalPlatform.CreateLayout
                 {
                     if (controlInfos.Length == 0) //no control tag
                     {
-                        AddControlTag(attrParts[0], isStandardType, false);
+                        AddControlTag(TrimSlashes(attrParts[0]), isStandardType, false);
                     }
 
                     currPrefix = string.Empty;
