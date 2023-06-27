@@ -3,26 +3,50 @@
 
 </head>
 <body>
-    <div>
-        <h1>Bob</h1>
-        <div>
-            <div>
-                <hr />
-                <h2>Jane</h2>
-                <div>
-                    <h3>Tom</h3>
-                    <h3>Bill</h3>
-                </div>
-            </div>
-            <div>
-                <hr />
-                <h2>Hank</h2>
-                <div>
-                    <h3>Tom</h3>
-                    <h3>Bill</h3>
-                </div>
-            </div>
-        </div>
-    </div>
+    <control attr="">
+   
+   <div>
+      
+      <h1>
+         
+         <span>
+            @Name.Value
+         </span>
+         
+      </h1>
+      
+      <div><control attr="Childs" repeatable="true">
+   
+   <div>
+      
+      <hr />
+         
+         <h2>
+            
+            <span>
+               @Name.Value
+            </span>
+            
+         </h2>
+         
+         <div><control attr="Friends" repeatable="true">
+   
+   <h3>
+      
+      <span>
+         @Value
+      </span>
+      
+   </h3>
+   
+</control></div>
+         
+      </div>
+      
+   </control></div>
+            
+         </div>
+         
+      </control>
 </body>
 </html>
