@@ -94,8 +94,8 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                         eventInfo.Collection
                                  .DeleteByParent("Filters")
                                  .DeleteByParent("Products")
-                                 .MergeAsArray(categories, "Filters")
-                                 .MergeAsArray(products, "Products")
+                                 .MergeToArrayPath(categories, "Filters")
+                                 .MergeToArrayPath(products, "Products")
                                  .OpenForm();
 
                         return true;
@@ -157,7 +157,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 
                 result.Collection
                       .DeleteByParent("Products")
-                      .MergeAsArray(products, "Products")
+                      .MergeToArrayPath(products, "Products")
                       .OpenForm(Filter);
             }
         }
@@ -175,7 +175,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                                .GetWhere("{'Name':@Category}", category)
                                .ToStorage("{'Filters':[$]}");
 
-            collection.MergeAsDoc(filter)
+            collection.MergeToPath(filter)
                       .OpenForm(Filter);
         }
 
