@@ -44,7 +44,9 @@ namespace FractalPlatform.CreateLayouts
                 var attr = string.Join("\\", subTokens);
 
                 if (!cbAttribute.Items.Contains(attr) && 
-                    (string.IsNullOrEmpty(_parent) || attr.StartsWith(_parent)))
+                    (string.IsNullOrEmpty(_parent) ||
+                     attr.StartsWith(_parent) || //descending items
+                     _parent.StartsWith(attr)))  //ascending items
                 {
                     cbAttribute.Items.Add(attr);
                 }
