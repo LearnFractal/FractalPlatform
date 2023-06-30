@@ -61,7 +61,7 @@ namespace FractalPlatform.Deployment
                 {
                     content.Add(new StreamContent(new MemoryStream(fileBytes)), "upload", fileName);
 
-                    var url = $"{baseUrl}/Home/UploadFile?app={appName}&fileType={fileType}&deploymentKey={deploymentKey}&deploymentParams={deploymentParams}";
+                    var url = $"{baseUrl}/{appName}/UploadFile/?fileType={fileType}&deploymentKey={deploymentKey}&deploymentParams={deploymentParams}";
 
                     var response = await client.PostAsync(url, content);
 
@@ -181,7 +181,7 @@ namespace FractalPlatform.Deployment
 
             if (options.IsRunBrowser)
             {
-                var url = string.Format($"{options.BaseUrl}?app={appName}");
+                var url = string.Format($"{options.BaseUrl}/{appName}");
 
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
             }
