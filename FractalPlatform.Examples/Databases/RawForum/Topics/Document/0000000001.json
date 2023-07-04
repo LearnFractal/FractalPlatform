@@ -1,7 +1,12 @@
 {
   "Title": "My First Topic",
   "Who": "Bob",
+  "OnDate": "",
   "CountMessages": 0,
   "CountViews": 0,
+  "LastMessage": {
+    "OnDate": "",
+    "Who": "Bob"
+  },
   "Message": "Put your message here"
 }

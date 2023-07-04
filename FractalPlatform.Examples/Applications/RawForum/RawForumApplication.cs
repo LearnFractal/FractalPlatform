@@ -1,6 +1,7 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.RawForum
 {
@@ -8,7 +9,14 @@ namespace FractalPlatform.Examples.Applications.RawForum
     {
         private void Dashboard()
         {
+            var topics = Client.SetDefaultCollection("Topics")
+                               .GetAll()
+                               .ToStorage();
+
             Client.SetDefaultCollection("Dashboard")
+                  .GetFirstDoc()
+                  .ToCollection()
+                  .MergeToArrayPath(topics, new AttrPath("Topics"))
                   .OpenForm();
         }
 
