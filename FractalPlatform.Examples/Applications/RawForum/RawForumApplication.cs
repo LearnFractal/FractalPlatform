@@ -9,14 +9,14 @@ namespace FractalPlatform.Examples.Applications.RawForum
     {
         private void Dashboard()
         {
-            var topics = Client.SetDefaultCollection("Topics")
-                               .GetAll()
-                               .ToStorage();
+            //var topics = Client.SetDefaultCollection("Topics")
+            //                   .GetAll()
+            //                   .ToStorage();
 
             Client.SetDefaultCollection("Dashboard")
                   .GetFirstDoc()
-                  .ToCollection()
-                  .MergeToArrayPath(topics, new AttrPath("Topics"))
+                  //.ToCollection()
+                  //.MergeToArrayPath(topics, new AttrPath("Topics"))
                   .OpenForm();
         }
 
