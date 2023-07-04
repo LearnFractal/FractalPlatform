@@ -1,0 +1,9 @@
+{
+  "Message": {
+    "Disallow": {
+      "Write": [
+        "Guest"
+      ]
+    }
+  }
+}

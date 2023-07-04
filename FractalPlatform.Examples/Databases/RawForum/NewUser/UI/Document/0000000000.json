@@ -1,0 +1,9 @@
+{
+  "Style": "Save:Register",
+  "Password": {
+    "Style": "Type:Password"
+  },
+  "Avatar": {
+    "ControlType": "UploadFile"
+  }
+}

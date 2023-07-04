@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace FractalPlatform.CreateLayout
 {
@@ -10,26 +11,56 @@ namespace FractalPlatform.CreateLayout
 
         public string DeploymentToolPath { get; set; }
 
-        public string FilesPath => LayoutPath.Replace("\\layouts\\", "\\files\\")
-                                             .Replace(".html", "");
+        [JsonIgnore]
+        public string FilesPath 
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(LayoutPath))
+                {
+                    return LayoutPath.Replace("\\layouts\\", "\\files\\")
+                                     .Replace(".html", "");
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
 
+        [JsonIgnore]
         public string DBName
         {
             get
             {
-                var parts = LayoutPath.Split(new string[] { "\\" }, StringSplitOptions.None);
+                if (!string.IsNullOrEmpty(LayoutPath))
+                {
+                    var parts = LayoutPath.Split(new string[] { "\\" }, StringSplitOptions.None);
 
-                return parts[parts.Length - 2];
+                    return parts[parts.Length - 2];
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 
+        [JsonIgnore]
         public string CollName
         {
             get
             {
-                var parts = LayoutPath.Split(new string[] { "\\" }, StringSplitOptions.None);
+                if (!string.IsNullOrEmpty(LayoutPath))
+                {
+                    var parts = LayoutPath.Split(new string[] { "\\" }, StringSplitOptions.None);
 
-                return parts[parts.Length - 1].Replace(".html", ""); ;
+                    return parts[parts.Length - 1].Replace(".html", "");
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
     }

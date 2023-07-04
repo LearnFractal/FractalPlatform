@@ -7,10 +7,13 @@
   <ItemGroup>
     <Compile Remove="Databases\OnlineShop\Orders\**" />
     <Compile Remove="Databases\SocialNetwork\NewFolder\**" />
+    <Compile Remove="Files\PhotoAlbum\**" />
     <EmbeddedResource Remove="Databases\OnlineShop\Orders\**" />
     <EmbeddedResource Remove="Databases\SocialNetwork\NewFolder\**" />
+    <EmbeddedResource Remove="Files\PhotoAlbum\**" />
     <None Remove="Databases\OnlineShop\Orders\**" />
     <None Remove="Databases\SocialNetwork\NewFolder\**" />
+    <None Remove="Files\PhotoAlbum\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +25,6 @@
     <Folder Include="Databases\FreelanceResponse\" />
     <Folder Include="Databases\SocialNetwork\" />
     <Folder Include="Databases\VideoLibrary\" />
-    <Folder Include="Files\PhotoAlbum\" />
   </ItemGroup>
 
   <ItemGroup>

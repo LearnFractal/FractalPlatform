@@ -86,9 +86,17 @@ namespace FractalPlatform.CreateLayout
             return JsonConvert.DeserializeObject<Options>(appSettings);
         }
 
-        private void SaveOptions()
+        private void ValidateOptions()
         {
-            _options.LayoutPath = LayoutHtmlPath;
+            if(!File.Exists(_options.LayoutPath))
+            {
+                SaveOptions(string.Empty);
+            }
+        }
+
+        private void SaveOptions(string layoutPath)
+        {
+            _options.LayoutPath = layoutPath;
 
             var appSettings = JsonConvert.SerializeObject(_options);
 
@@ -616,7 +624,7 @@ namespace FractalPlatform.CreateLayout
                                             .Replace("Layouts", "Databases")
                                             .Replace(".html", @"\Document\0000000001.json");
 
-                SaveOptions();
+                SaveOptions(LayoutHtmlPath);
 
                 RefreshComboBoxes();
 
@@ -732,6 +740,8 @@ namespace FractalPlatform.CreateLayout
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            ValidateOptions();
+
             if (!string.IsNullOrEmpty(_options.LayoutPath))
             {
                 _documentFileName = _options.LayoutPath
@@ -1343,7 +1353,7 @@ namespace FractalPlatform.CreateLayout
 
                     File.WriteAllText(LayoutHtmlPath, html);
 
-                    SaveOptions();
+                    SaveOptions(LayoutHtmlPath);
 
                     ChangeUILayout(_collName);
 
@@ -1419,7 +1429,7 @@ namespace FractalPlatform.CreateLayout
                     Directory.CreateDirectory(dirName);
                 }
 
-                SaveOptions();
+                SaveOptions(LayoutHtmlPath);
 
                 File.WriteAllText(LayoutHtmlPath, html);
 
