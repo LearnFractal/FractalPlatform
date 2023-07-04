@@ -39,8 +39,35 @@
 <div id="UserControlPanel">
 <ul>
 					 <li><a href="https://sqlru.net/index.php/s/" title="Поиск"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_search.png" alt="" width="16" height="16"> Поиск</a></li>	<li></li>
-	<li><a href="https://sqlru.net/index.php/ml/" title="Участники"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_members.png" alt="" width="16" height="16"> Участники</a></li>	<li><a href="https://sqlru.net/index.php/re/" title="Регистрация"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_register.png" alt="" width="16" height="18"> Регистрация</a></li>
-	<li><a href="https://sqlru.net/index.php/l/" title="Вход"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16"> Вход</a></li>	<li></li>
+	<li><control attr="">
+   
+   <a href="@Users.ClickUrl" title="Участники" @Users.ReadOnly @Users.Disabled value="@Users.Value" name="@Users.Name">
+      
+      <img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_members.png" alt="" width="16" height="16">
+      Участники
+      
+   </a>
+   
+</control></li>	<li><control attr="">
+   
+   <a href="@Register.ClickUrl" title="Регистрация" @Register.ReadOnly @Register.Disabled value="@Register.Value" name="@Register.Name">
+      
+      <img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_register.png" alt="" width="16" height="18">
+      Регистрация
+      
+   </a>
+   
+</control></li>
+	<li><control attr="">
+   
+   <a href="@Login.ClickUrl" title="Вход" @Login.ReadOnly @Login.Disabled value="@Login.Value" name="@Login.Name">
+      
+      <img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
+      Вход
+      
+   </a>
+   
+</control></li>	<li></li>
 	</ul>
 </div>
 
