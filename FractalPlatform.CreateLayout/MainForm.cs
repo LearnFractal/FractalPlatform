@@ -113,7 +113,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_dbName}/", $"../../files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"@BaseUrl/files/{_dbName}/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -126,7 +126,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_dbName}/", $"../../files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"@BaseUrl/files/{_dbName}/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -895,7 +895,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.RemoveTagIds(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"{_options.BaseUrl}/files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"@BaseUrl/files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -1349,7 +1349,7 @@ namespace FractalPlatform.CreateLayout
 
                     var html = File.ReadAllText(_options.LayoutPath);
 
-                    html = HtmlHelpers.ReplaceLinks(html, $"{_options.BaseUrl}/files/{_options.DBName}/{_options.CollName}/", $"{_options.BaseUrl}/files/{AppName}/{CollName}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"@BaseUrl/files/{_options.DBName}/{_options.CollName}/", $"@BaseUrl/files/{AppName}/{CollName}/");
 
                     File.WriteAllText(LayoutHtmlPath, html);
 
@@ -1417,11 +1417,11 @@ namespace FractalPlatform.CreateLayout
                 //import html
                 var html = File.ReadAllText(fileName);
 
-                html = HtmlHelpers.AddScriptsToHtml(html, _options.BaseUrl);
+                html = HtmlHelpers.AddScriptsToHtml(html, "@BaseUrl");
 
                 if (dirInfo != null)
                 {
-                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"{_options.BaseUrl}/files/{_dbName}/{_collName}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"@BaseUrl/files/{_dbName}/{_collName}/");
                 }
 
                 if (!Directory.Exists(LayoutsPath))

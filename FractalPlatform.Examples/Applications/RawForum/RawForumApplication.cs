@@ -1,7 +1,6 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM;
-using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.RawForum
 {
@@ -24,7 +23,5 @@ namespace FractalPlatform.Examples.Applications.RawForum
         {
             Dashboard();
         }
-
-        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this, form);
     }
 }
