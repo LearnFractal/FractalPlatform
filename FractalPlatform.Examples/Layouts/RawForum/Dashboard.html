@@ -1,495 +1,571 @@
 <!DOCTYPE html>
 <!-- saved from url=(0018)https://sqlru.net/ -->
-<html lang="ru" dir="ltr"><head>
-<script src="http://booben.com/jupiter/js/frmain.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Разработка приложений баз данных">
-	<title>SQLRU.net: форум о разработке приложений баз данных</title>
-	<link rel="search" type="application/opensearchdescription+xml" title="SQLRU.net Search" href="https://sqlru.net/open_search.php">
-	<link rel="alternate" type="application/rss+xml" title="Сформировать XML" href="https://sqlru.net/feed.php?mode=m&amp;l=1&amp;basic=1">
-	<link rel="stylesheet" href="http://booben.com/jupiter/files/RawForum/Dashboard/forum.css" media="screen" title="Default Forum Theme">
-	<link rel="stylesheet" href="http://booben.com/jupiter/files/RawForum/Dashboard/jquery-ui.css" media="screen">
-	<script src="http://booben.com/jupiter/files/RawForum/Dashboard/jquery.js.download"></script>
-	<script async="" src="http://booben.com/jupiter/files/RawForum/Dashboard/jquery-ui.js.download"></script>
-	<script src="http://booben.com/jupiter/files/RawForum/Dashboard/lib.js.download"></script>
+<html lang="ru" dir="ltr">
+<head>
+    <script src="@BaseUrl/js/frmain.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Разработка приложений баз данных">
+    <title>SQLRU.net: форум о разработке приложений баз данных</title>
+    <link rel="search" type="application/opensearchdescription+xml" title="SQLRU.net Search" href="https://sqlru.net/open_search.php">
+    <link rel="alternate" type="application/rss+xml" title="Сформировать XML" href="https://sqlru.net/feed.php?mode=m&amp;l=1&amp;basic=1">
+    <link rel="stylesheet" href="@BaseUrl/files/RawForum/Dashboard/forum.css" media="screen" title="Default Forum Theme">
+    <link rel="stylesheet" href="@BaseUrl/files/RawForum/Dashboard/jquery-ui.css" media="screen">
+    <script src="@BaseUrl/files/RawForum/Dashboard/jquery.js.download"></script>
+    <script async="" src="@BaseUrl/files/RawForum/Dashboard/jquery-ui.js.download"></script>
+    <script src="@BaseUrl/files/RawForum/Dashboard/lib.js.download"></script>
 </head>
 <body>
-<form action="/" enctype="multipart/form-data" method="post"> 
-                                                <input type="hidden" name="EditKey" value="" />
-                                                <input type="hidden" name="MenuAction" value="" />
-                                                <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
-                                                <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
-                                                <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
-                                                <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
-                                                <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
-                                                <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
-                                                <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
-                                                <input type="submit" id="btnSave" name="btn" value="Save" style="display:none"/>
-                                                <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
-                                                <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none"/>
-                                                <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none"/>
-                                                
-<!--  -->
+    <form action="/" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="EditKey" value="" />
+        <input type="hidden" name="MenuAction" value="" />
+        <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
+        <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
+        <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
+        <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
+        <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
+        <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
+        <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
+        <input type="submit" id="btnSave" name="btn" value="Save" style="display:none" />
+        <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
+        <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none" />
+        <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none" />
 
-<div class="content">
+        <!--  -->
 
-<!-- Table for sidebars. -->
-<table width="100%"><tbody><tr><td>
-<div id="UserControlPanel">
-<ul>
-					 <li><a href="https://sqlru.net/index.php/s/" title="Поиск"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_search.png" alt="" width="16" height="16"> Поиск</a></li>	<li></li>
-	<li><control attr="">
-   
-   <a href="@Users.ClickUrl" title="Участники" @Users.ReadOnly @Users.Disabled value="@Users.Value" name="@Users.Name">
-      
-      <img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_members.png" alt="" width="16" height="16">
-      Участники
-      
-   </a>
-   
-</control></li>	<li><control attr="">
-   
-   <a href="@Register.ClickUrl" title="Регистрация" @Register.ReadOnly @Register.Disabled value="@Register.Value" name="@Register.Name">
-      
-      <img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_register.png" alt="" width="16" height="18">
-      Регистрация
-      
-   </a>
-   
-</control></li>
-	<li><control attr="">
-   
-   <a href="@Login.ClickUrl" title="Вход" @Login.ReadOnly @Login.Disabled value="@Login.Value" name="@Login.Name">
-      
-      <img src="http://booben.com/jupiter/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
-      Вход
-      
-   </a>
-   
-</control></li>	<li></li>
-	</ul>
-</div>
+        <div class="content">
 
+            <!-- Table for sidebars. -->
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="UserControlPanel">
+                                <ul>
+                                    <li><a href="https://sqlru.net/index.php/s/" title="Поиск"><img src="@BaseUrl/files/RawForum/Dashboard/top_search.png" alt="" width="16" height="16"> Поиск</a></li>
+                                    <li></li>
+                                    <li>
+                                        <control attr="">
 
-<table cellspacing="1" cellpadding="2" class="ContentTable">
-<tbody><tr>
-	<th colspan="3" class="wa">Форум</th>
-	<th class="nw hide1">Сообщений</th>
-	<th class="nw hide1">Тем</th>
-	<th class="nw ac hide2">Последнее сообщение</th>
-</tr>
-	<tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/4/" class="big">Microsoft SQL Server</a><br>Обсуждение вопросов, связанных с MS SQL Server 6.5,7,2000,2005,2008, Express, Compact, Azure&nbsp;</td>
-	<td class="RowStyleB ac hide1">245</td>
-	<td class="RowStyleB ac hide1">65</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 21 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2616/#msg_2616"><img title="Re: Помогите с запросом в MS SQL" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Помогите с запросом в MS SQL" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/5/" class="big">Firebird, HQbird, InterBase</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">1671</td>
-	<td class="RowStyleB ac hide1">127</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 28 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/21/">sim_84</a> <a href="https://sqlru.net/index.php/m/2647/#msg_2647"><img title="Re: Точность TIMESTAMP" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Точность TIMESTAMP" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/6/" class="big">Oracle</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">12</td>
-	<td class="RowStyleB ac hide1">5</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 19 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2590/#msg_2590"><img title="Re: OCILIB для Lazarus" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: OCILIB для Lazarus" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/7/" class="big">Microsoft Access</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">6</td>
-	<td class="RowStyleB ac hide1">3</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 11 April 2023</span><br>От: <a href="https://sqlru.net/index.php/u/277/">shigor</a> <a href="https://sqlru.net/index.php/m/2049/#msg_2049"><img title="Re: Проект Access 2010 на Win7 открыть на Access 2019 на Win10" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Проект Access 2010 на Win7 открыть на Access 2019 на Win10" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/8/" class="big">IBM DB2, WebSphere, IMS, U2, etc</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 15 March 2023</span><br>От: <a href="https://sqlru.net/index.php/u/283/">AVRomanenko</a> <a href="https://sqlru.net/index.php/m/1838/#msg_1838"><img title="Распределение общего количества строк по группа" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Распределение общего количества строк по группа" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/9/" class="big">MySQL, MariaDB</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">15</td>
-	<td class="RowStyleB ac hide1">4</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 12 April 2023</span><br>От: <a href="https://sqlru.net/index.php/u/308/">maksdev</a> <a href="https://sqlru.net/index.php/m/2053/#msg_2053"><img title="Re: Парсирование адреса средствами mysql" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Парсирование адреса средствами mysql" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/10/" class="big">PostgreSQL</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">62</td>
-	<td class="RowStyleB ac hide1">18</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Fri, 16 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2573/#msg_2573"><img title="Re: Применение поля JSONB как хранилища свойств" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Применение поля JSONB как хранилища свойств" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/11/" class="big">OLAP и DWH</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">3</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 07 September 2022</span><br>От: <a href="https://sqlru.net/index.php/u/133/">RedRose</a> <a href="https://sqlru.net/index.php/m/528/#msg_528"><img title="Re: OBIEE" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: OBIEE" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/12/" class="big">Sybase ASA, ASE, IQ</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/13/" class="big">Informix</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/14/" class="big">Другие СУБД</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">5</td>
-	<td class="RowStyleB ac hide1">3</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 21 December 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/1162/#msg_1162"><img title="[Elasticsearch] Как мы обновили старый кластер Elasticsearch на 3 ПБ без простоев" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="[Elasticsearch] Как мы обновили старый кластер Elasticsearch на 3 ПБ без простоев" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/15/" class="big">FoxPro, Visual FoxPro</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">4</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 20 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2609/#msg_2609"><img title="Re: Есть кто?" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Есть кто?" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/16/" class="big">Caché, Ensemble, DeepSee, MiniM, IRIS, GT.M</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/17/" class="big">SQLite</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/18/" class="big">NoSQL, Big Data</a><br>MongoDb, HP Vertica, Hadoop, Cassandra, key-value, document, tuple, graph, object, tabular databases&nbsp;</td>
-	<td class="RowStyleB ac hide1">3</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Thu, 11 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2214/#msg_2214"><img title="Re: мода прошла" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: мода прошла" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c3">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/55/" class="big">ClickHouse</a><br>СУБД с открытым кодом, разрабатываемая компанией Яндекс&nbsp;</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 15 November 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/990/#msg_990"><img title="Что такое ClickHouse" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Что такое ClickHouse" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/19/" class="big">Сравнение СУБД</a><br>Дискуссии о преимуществах и недостатках различных СУБД. Спросите здесь, какую СУБД лучше выбрать для вашего проекта.&nbsp;</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Sat, 03 September 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/448/#msg_448"><img title="Как работает реляционная БД" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Как работает реляционная БД" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/20/" class="big">Проектирование БД</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">6</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 06 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2481/#msg_2481"><img title="Re: Модели БД" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Модели БД" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2">&nbsp;</td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/21/" class="big">Работа</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">69</td>
-	<td class="RowStyleB ac hide1">14</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Thu, 22 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/266/">Бумбараш</a> <a href="https://sqlru.net/index.php/m/2631/#msg_2631"><img title="Re: Что сейчас происходит в IT Сбера" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Что сейчас происходит в IT Сбера" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2">&nbsp;</td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/56/" class="big">Вакансии</a><br>Здесь публикуйте только конкретные Вакансии&nbsp;</td>
-	<td class="RowStyleB ac hide1">7</td>
-	<td class="RowStyleB ac hide1">4</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Thu, 25 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/343/">Chaykovsky</a> <a href="https://sqlru.net/index.php/m/2385/#msg_2385"><img title="Re: Разработчика Full-Stack C#, Москва КА" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Разработчика Full-Stack C#, Москва КА" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2">&nbsp;</td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/22/" class="big">ERP и учетные системы</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/23/" class="big">Разработка информационных систем</a><br>Аспекты проектирования, разработки, внедрения и развития информационных систем на предприятиях&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2">&nbsp;</td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/24/" class="big">Тестирование и QA</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/25/" class="big">Отчетные системы</a><br>Crystal Reports, MS Reporting Services, Active Reports, JasperReports JReport и т.д.&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/26/" class="big">Наши за рубежом</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/27/" class="big">Сертификация и обучение</a><br>Вопросы по сертификации. Обсуждение преимуществ сертификации, методов подготовки к экзаменам и т.д.&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/28/" class="big">Hardware</a><br>Обсуждение технического обеспечения (процессоры,память,накопители,периферия...)&nbsp;</td>
-	<td class="RowStyleB ac hide1">31</td>
-	<td class="RowStyleB ac hide1">5</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 29 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2419/#msg_2419"><img title="Re: Цветной лазерник для дома" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Цветной лазерник для дома" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2">&nbsp;</td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/29/" class="big">Управление процессом разработки ИС</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c4">
-	<td class="RowStyleA wo hide2">&nbsp;</td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/30/" class="big">Юридические вопросы в ИТ</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c5">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/32/" class="big">WinForms, .Net Framework</a><br>Объединенный форум по C# и VB.NET, посвященный вопросам, в основном, связанным с WinForms&nbsp;</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 07 November 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/947/#msg_947"><img title="Re: Асинхронные вызовы, подтверждение завершения" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Асинхронные вызовы, подтверждение завершения" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c5">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/33/" class="big">ASP.NET</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">10</td>
-	<td class="RowStyleB ac hide1">3</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Sat, 27 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2405/#msg_2405"><img title="Re: Интересные статьи по DotNet" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Интересные статьи по DotNet" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c5">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/34/" class="big">ADO.NET, LINQ, Entity Framework, NHibernate, DAL, ORM</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">4</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Fri, 02 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/346/">tuturik</a> <a href="https://sqlru.net/index.php/m/2474/#msg_2474"><img title="Re: SQLCommand.CommandTimeout и транзакция" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: SQLCommand.CommandTimeout и транзакция" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c5">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/35/" class="big">WPF, Silverlight</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c5">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/36/" class="big">	WCF, Web Services, Remoting</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/37/" class="big">Delphi</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">349</td>
-	<td class="RowStyleB ac hide1">46</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 27 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/310/">GrigoryFomin</a> <a href="https://sqlru.net/index.php/m/2644/#msg_2644"><img title="FireDac+PostgreSQL+bytea (blob)" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="FireDac+PostgreSQL+bytea (blob)" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/38/" class="big">C++</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleB ac hide1">1</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 13 March 2023</span><br>От: <a href="https://sqlru.net/index.php/u/105/">DarkMaster</a> <a href="https://sqlru.net/index.php/m/1829/#msg_1829"><img title="Re: Проект CMake (MSVS 2022), задать precompiled header" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Проект CMake (MSVS 2022), задать precompiled header" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/39/" class="big">Visual Basic</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/40/" class="big">Java</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">11</td>
-	<td class="RowStyleB ac hide1">4</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Sat, 17 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/148/">mirudom</a> <a href="https://sqlru.net/index.php/m/2578/#msg_2578"><img title="Перевод код с Java на Golang автоматически. " src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Перевод код с Java на Golang автоматически. " width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/41/" class="big">Разработка под мобильные платформы</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/42/" class="big">PowerBuilder</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">3</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 15 November 2022</span><br>От: <a href="https://sqlru.net/index.php/u/154/">ChV</a> <a href="https://sqlru.net/index.php/m/984/#msg_984"><img title="Re: Материалы по  PowerBuilder" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Материалы по  PowerBuilder" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/43/" class="big">Microsoft Office</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/44/" class="big">SharePoint</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/45/" class="big">XML, XSL, XPath, XQuery</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2">&nbsp;</td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/46/" class="big">Программирование</a><br>Обо всем, что относится к программированию, но не вошло в предыдущие разделы&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/47/" class="big">PHP, Perl, Python</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">4</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Fri, 09 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2498/#msg_2498"><img title="Re: 301 и 200" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: 301 и 200" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c6">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/48/" class="big">HTML, JavaScript, VBScript, CSS</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c8">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/49/" class="big">Windows</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c8">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/50/" class="big">Unix-системы</a><br>Unix, Linux, Solaris, FreeBSD идр.&nbsp;</td>
-	<td class="RowStyleB ac hide1">4</td>
-	<td class="RowStyleB ac hide1">2</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 23 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/9/">basid</a> <a href="https://sqlru.net/index.php/m/2330/#msg_2330"><img title="Re: unzip.zip, но для TLS" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: unzip.zip, но для TLS" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c8">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/51/" class="big">Другие: Mac OS, PalmOS, BeOS, PocketPC</a>&nbsp;</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleB ac hide1">0</td>
-	<td class="RowStyleA ac nw hide2">н/д</td>
-</tr><tr style="display: table-row" class="row child-c9">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/52/" class="big">Обсуждение нашего сайта</a><br>Обсуждение вопросов, связанных с функционированием форума и всего сайта в целом&nbsp;</td>
-	<td class="RowStyleB ac hide1">56</td>
-	<td class="RowStyleB ac hide1">13</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 25 April 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2145/#msg_2145"><img title="Re: Буквица в цитатах" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: Буквица в цитатах" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c9">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/53/" class="big">Вопрос-Ответ</a><br>Непонятно о чем, но достаточно популярный :)&nbsp;</td>
-	<td class="RowStyleB ac hide1">16</td>
-	<td class="RowStyleB ac hide1">5</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 16 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2240/#msg_2240"><img title="Re: две тошнотворных темы" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: две тошнотворных темы" width="9" height="9"></a></td>
-</tr><tr style="display: table-row" class="row child-c9">
-	<td class="RowStyleA wo hide2"><img src="http://booben.com/jupiter/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
-	<td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="http://booben.com/jupiter/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
-	<td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/54/" class="big">Test</a><br>Для испытания возможностей форума и nntp клиента&nbsp;</td>
-	<td class="RowStyleB ac hide1">9</td>
-	<td class="RowStyleB ac hide1">3</td>
-	<td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 10 October 2022</span><br>От: <a href="https://sqlru.net/index.php/u/2/">mitrich</a> <a href="https://sqlru.net/index.php/m/800/#msg_800"><img title="Re: тест емэйл уведомлений" src="http://booben.com/jupiter/files/RawForum/Dashboard/goto.gif" alt="Re: тест емэйл уведомлений" width="9" height="9"></a></td>
-</tr>
-</tbody></table>
-<div class="fr">
+                                            <a href="@Users.ClickUrl" title="Участники" @Users.ReadOnly @Users.Disabled value="@Users.Value" name="@Users.Name">
 
-<input type="hidden" name="SQ" value="0">
-<table border="0" cellspacing="0" cellpadding="3">
-<tbody><tr class="SmallText">
-	<td>
-		<label>Имя:<br>
-		<input class="SmallText" type="text" name="quick_login" size="18"></label>
-	</td>
-	<td>
-		<label>Пароль:<br>
-		<input class="SmallText" type="password" name="quick_password" size="18"></label>
-	</td>
-	
-	<td>
-		&nbsp;<br>
-		<input type="submit" class="button" name="quick_login_submit" value="Войти">
-	</td>
-</tr>
-</tbody></table>
+                                                <img src="@BaseUrl/files/RawForum/Dashboard/top_members.png" alt="" width="16" height="16">
+                                                Участники
 
-</div><br>
-<table cellspacing="1" cellpadding="2" class="ContentTable">
-	<tbody><tr>
-	<th class="wa">Сейчас на форуме [  ]
-[  ]</th>
-</tr>
-<tr>
-	
-</tr>
-	<tr>
-	
-</tr>
-</tbody></table><br>
-<div><br></div>
-<br><div class="ac"></div>
-<br><script>
-	min_max_cats("/theme/default/images", "Свернуть категорию", "Развернуть категорию", "", "");
-</script>
-</td></tr></tbody></table>
+                                            </a>
 
-</div>
+                                        </control>
+                                    </li>
+                                    <li>
+                                        <control attr="">
+
+                                            <a href="@Register.ClickUrl" title="Регистрация" @Register.ReadOnly @Register.Disabled value="@Register.Value" name="@Register.Name">
+
+                                                <img src="@BaseUrl/files/RawForum/Dashboard/top_register.png" alt="" width="16" height="18">
+                                                Регистрация
+
+                                            </a>
+
+                                        </control>
+                                    </li>
+                                    <li>
+                                        <control attr="">
+
+                                            <a href="@Login.ClickUrl" title="Вход" @Login.ReadOnly @Login.Disabled value="@Login.Value" name="@Login.Name">
+
+                                                <img src="@BaseUrl/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
+                                                Вход
+
+                                            </a>
+
+                                        </control>
+                                    </li>
+                                    <li></li>
+                                </ul>
+                            </div>
 
 
+                            <table cellspacing="1" cellpadding="2" class="ContentTable">
+                                <tbody>
+                                    <tr>
+                                        <th colspan="3" class="wa">Форум</th>
+                                        <th class="nw hide1">Сообщений</th>
+                                        <th class="nw hide1">Тем</th>
+                                        <th class="nw ac hide2">Последнее сообщение</th>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/4/" class="big">Microsoft SQL Server</a><br>Обсуждение вопросов, связанных с MS SQL Server 6.5,7,2000,2005,2008, Express, Compact, Azure&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">245</td>
+                                        <td class="RowStyleB ac hide1">65</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 21 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2616/#msg_2616"><img title="Re: Помогите с запросом в MS SQL" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Помогите с запросом в MS SQL" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/5/" class="big">Firebird, HQbird, InterBase</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">1671</td>
+                                        <td class="RowStyleB ac hide1">127</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 28 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/21/">sim_84</a> <a href="https://sqlru.net/index.php/m/2647/#msg_2647"><img title="Re: Точность TIMESTAMP" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Точность TIMESTAMP" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/6/" class="big">Oracle</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">12</td>
+                                        <td class="RowStyleB ac hide1">5</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 19 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2590/#msg_2590"><img title="Re: OCILIB для Lazarus" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: OCILIB для Lazarus" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/7/" class="big">Microsoft Access</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">6</td>
+                                        <td class="RowStyleB ac hide1">3</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 11 April 2023</span><br>От: <a href="https://sqlru.net/index.php/u/277/">shigor</a> <a href="https://sqlru.net/index.php/m/2049/#msg_2049"><img title="Re: Проект Access 2010 на Win7 открыть на Access 2019 на Win10" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Проект Access 2010 на Win7 открыть на Access 2019 на Win10" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/8/" class="big">IBM DB2, WebSphere, IMS, U2, etc</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 15 March 2023</span><br>От: <a href="https://sqlru.net/index.php/u/283/">AVRomanenko</a> <a href="https://sqlru.net/index.php/m/1838/#msg_1838"><img title="Распределение общего количества строк по группа" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Распределение общего количества строк по группа" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/9/" class="big">MySQL, MariaDB</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">15</td>
+                                        <td class="RowStyleB ac hide1">4</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 12 April 2023</span><br>От: <a href="https://sqlru.net/index.php/u/308/">maksdev</a> <a href="https://sqlru.net/index.php/m/2053/#msg_2053"><img title="Re: Парсирование адреса средствами mysql" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Парсирование адреса средствами mysql" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/10/" class="big">PostgreSQL</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">62</td>
+                                        <td class="RowStyleB ac hide1">18</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Fri, 16 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2573/#msg_2573"><img title="Re: Применение поля JSONB как хранилища свойств" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Применение поля JSONB как хранилища свойств" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/11/" class="big">OLAP и DWH</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">3</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 07 September 2022</span><br>От: <a href="https://sqlru.net/index.php/u/133/">RedRose</a> <a href="https://sqlru.net/index.php/m/528/#msg_528"><img title="Re: OBIEE" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: OBIEE" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/12/" class="big">Sybase ASA, ASE, IQ</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/13/" class="big">Informix</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/14/" class="big">Другие СУБД</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">5</td>
+                                        <td class="RowStyleB ac hide1">3</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Wed, 21 December 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/1162/#msg_1162"><img title="[Elasticsearch] Как мы обновили старый кластер Elasticsearch на 3 ПБ без простоев" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="[Elasticsearch] Как мы обновили старый кластер Elasticsearch на 3 ПБ без простоев" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/15/" class="big">FoxPro, Visual FoxPro</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">4</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 20 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2609/#msg_2609"><img title="Re: Есть кто?" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Есть кто?" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/16/" class="big">Caché, Ensemble, DeepSee, MiniM, IRIS, GT.M</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/17/" class="big">SQLite</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/18/" class="big">NoSQL, Big Data</a><br>MongoDb, HP Vertica, Hadoop, Cassandra, key-value, document, tuple, graph, object, tabular databases&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">3</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Thu, 11 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2214/#msg_2214"><img title="Re: мода прошла" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: мода прошла" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c3">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/55/" class="big">ClickHouse</a><br>СУБД с открытым кодом, разрабатываемая компанией Яндекс&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 15 November 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/990/#msg_990"><img title="Что такое ClickHouse" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Что такое ClickHouse" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/19/" class="big">Сравнение СУБД</a><br>Дискуссии о преимуществах и недостатках различных СУБД. Спросите здесь, какую СУБД лучше выбрать для вашего проекта.&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Sat, 03 September 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/448/#msg_448"><img title="Как работает реляционная БД" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Как работает реляционная БД" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/20/" class="big">Проектирование БД</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">6</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 06 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2481/#msg_2481"><img title="Re: Модели БД" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Модели БД" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2">&nbsp;</td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/21/" class="big">Работа</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">69</td>
+                                        <td class="RowStyleB ac hide1">14</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Thu, 22 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/266/">Бумбараш</a> <a href="https://sqlru.net/index.php/m/2631/#msg_2631"><img title="Re: Что сейчас происходит в IT Сбера" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Что сейчас происходит в IT Сбера" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2">&nbsp;</td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/56/" class="big">Вакансии</a><br>Здесь публикуйте только конкретные Вакансии&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">7</td>
+                                        <td class="RowStyleB ac hide1">4</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Thu, 25 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/343/">Chaykovsky</a> <a href="https://sqlru.net/index.php/m/2385/#msg_2385"><img title="Re: Разработчика Full-Stack C#, Москва КА" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Разработчика Full-Stack C#, Москва КА" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2">&nbsp;</td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/22/" class="big">ERP и учетные системы</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/23/" class="big">Разработка информационных систем</a><br>Аспекты проектирования, разработки, внедрения и развития информационных систем на предприятиях&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2">&nbsp;</td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/24/" class="big">Тестирование и QA</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/25/" class="big">Отчетные системы</a><br>Crystal Reports, MS Reporting Services, Active Reports, JasperReports JReport и т.д.&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/26/" class="big">Наши за рубежом</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/27/" class="big">Сертификация и обучение</a><br>Вопросы по сертификации. Обсуждение преимуществ сертификации, методов подготовки к экзаменам и т.д.&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/28/" class="big">Hardware</a><br>Обсуждение технического обеспечения (процессоры,память,накопители,периферия...)&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">31</td>
+                                        <td class="RowStyleB ac hide1">5</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 29 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2419/#msg_2419"><img title="Re: Цветной лазерник для дома" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Цветной лазерник для дома" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2">&nbsp;</td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/29/" class="big">Управление процессом разработки ИС</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c4">
+                                        <td class="RowStyleA wo hide2">&nbsp;</td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/30/" class="big">Юридические вопросы в ИТ</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c5">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/32/" class="big">WinForms, .Net Framework</a><br>Объединенный форум по C# и VB.NET, посвященный вопросам, в основном, связанным с WinForms&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 07 November 2022</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/947/#msg_947"><img title="Re: Асинхронные вызовы, подтверждение завершения" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Асинхронные вызовы, подтверждение завершения" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c5">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/33/" class="big">ASP.NET</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">10</td>
+                                        <td class="RowStyleB ac hide1">3</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Sat, 27 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2405/#msg_2405"><img title="Re: Интересные статьи по DotNet" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Интересные статьи по DotNet" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c5">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/34/" class="big">ADO.NET, LINQ, Entity Framework, NHibernate, DAL, ORM</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">4</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Fri, 02 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/346/">tuturik</a> <a href="https://sqlru.net/index.php/m/2474/#msg_2474"><img title="Re: SQLCommand.CommandTimeout и транзакция" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: SQLCommand.CommandTimeout и транзакция" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c5">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/35/" class="big">WPF, Silverlight</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c5">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/36/" class="big">	WCF, Web Services, Remoting</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/37/" class="big">Delphi</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">349</td>
+                                        <td class="RowStyleB ac hide1">46</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 27 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/310/">GrigoryFomin</a> <a href="https://sqlru.net/index.php/m/2644/#msg_2644"><img title="FireDac+PostgreSQL+bytea (blob)" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="FireDac+PostgreSQL+bytea (blob)" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/38/" class="big">C++</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleB ac hide1">1</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 13 March 2023</span><br>От: <a href="https://sqlru.net/index.php/u/105/">DarkMaster</a> <a href="https://sqlru.net/index.php/m/1829/#msg_1829"><img title="Re: Проект CMake (MSVS 2022), задать precompiled header" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Проект CMake (MSVS 2022), задать precompiled header" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/39/" class="big">Visual Basic</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/40/" class="big">Java</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">11</td>
+                                        <td class="RowStyleB ac hide1">4</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Sat, 17 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/148/">mirudom</a> <a href="https://sqlru.net/index.php/m/2578/#msg_2578"><img title="Перевод код с Java на Golang автоматически. " src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Перевод код с Java на Golang автоматически. " width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/41/" class="big">Разработка под мобильные платформы</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/42/" class="big">PowerBuilder</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">3</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 15 November 2022</span><br>От: <a href="https://sqlru.net/index.php/u/154/">ChV</a> <a href="https://sqlru.net/index.php/m/984/#msg_984"><img title="Re: Материалы по  PowerBuilder" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Материалы по  PowerBuilder" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/43/" class="big">Microsoft Office</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/44/" class="big">SharePoint</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/45/" class="big">XML, XSL, XPath, XQuery</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2">&nbsp;</td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/46/" class="big">Программирование</a><br>Обо всем, что относится к программированию, но не вошло в предыдущие разделы&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/47/" class="big">PHP, Perl, Python</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">4</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Fri, 09 June 2023</span><br>От: <a href="https://sqlru.net/index.php/u/53/">BlackEric</a> <a href="https://sqlru.net/index.php/m/2498/#msg_2498"><img title="Re: 301 и 200" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: 301 и 200" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c6">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/48/" class="big">HTML, JavaScript, VBScript, CSS</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c8">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/49/" class="big">Windows</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c8">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/50/" class="big">Unix-системы</a><br>Unix, Linux, Solaris, FreeBSD идр.&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">4</td>
+                                        <td class="RowStyleB ac hide1">2</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 23 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/9/">basid</a> <a href="https://sqlru.net/index.php/m/2330/#msg_2330"><img title="Re: unzip.zip, но для TLS" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: unzip.zip, но для TLS" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c8">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/51/" class="big">Другие: Mac OS, PalmOS, BeOS, PocketPC</a>&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleB ac hide1">0</td>
+                                        <td class="RowStyleA ac nw hide2">н/д</td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c9">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/52/" class="big">Обсуждение нашего сайта</a><br>Обсуждение вопросов, связанных с функционированием форума и всего сайта в целом&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">56</td>
+                                        <td class="RowStyleB ac hide1">13</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 25 April 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2145/#msg_2145"><img title="Re: Буквица в цитатах" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Буквица в цитатах" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c9">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/53/" class="big">Вопрос-Ответ</a><br>Непонятно о чем, но достаточно популярный :)&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">16</td>
+                                        <td class="RowStyleB ac hide1">5</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Tue, 16 May 2023</span><br>От: <a href="https://sqlru.net/index.php/u/108/">МП</a> <a href="https://sqlru.net/index.php/m/2240/#msg_2240"><img title="Re: две тошнотворных темы" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: две тошнотворных темы" width="9" height="9"></a></td>
+                                    </tr>
+                                    <tr style="display: table-row" class="row child-c9">
+                                        <td class="RowStyleA wo hide2"><img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума"></td>
+                                        <td class="RowStyleB ac wo hide2"><img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30"></td>
+                                        <td class="RowStyleA wa"><a href="https://sqlru.net/index.php/f/54/" class="big">Test</a><br>Для испытания возможностей форума и nntp клиента&nbsp;</td>
+                                        <td class="RowStyleB ac hide1">9</td>
+                                        <td class="RowStyleB ac hide1">3</td>
+                                        <td class="RowStyleA ac nw hide2"><span class="DateText">Mon, 10 October 2022</span><br>От: <a href="https://sqlru.net/index.php/u/2/">mitrich</a> <a href="https://sqlru.net/index.php/m/800/#msg_800"><img title="Re: тест емэйл уведомлений" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: тест емэйл уведомлений" width="9" height="9"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="fr">
 
+                                <input type="hidden" name="SQ" value="0">
+                                <table border="0" cellspacing="0" cellpadding="3">
+                                    <tbody>
+                                        <tr class="SmallText">
+                                            <td>
+                                                <label>
+                                                    Имя:<br>
+                                                    <input class="SmallText" type="text" name="quick_login" size="18">
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    Пароль:<br>
+                                                    <input class="SmallText" type="password" name="quick_password" size="18">
+                                                </label>
+                                            </td>
 
+                                            <td>
+                                                &nbsp;<br>
+                                                <input type="submit" class="button" name="quick_login_submit" value="Войти">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-</form></body></html>
+                            </div><br>
+                            <table cellspacing="1" cellpadding="2" class="ContentTable">
+                                <tbody>
+                                    <tr>
+                                        <th class="wa">
+                                            Сейчас на форуме [  ]
+                                            [  ]
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table><br>
+                            <div><br></div>
+                            <br><div class="ac"></div>
+                            <br>
+                            <script>
+                                min_max_cats("/theme/default/images", "Свернуть категорию", "Развернуть категорию", "", "");
+                            </script>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>

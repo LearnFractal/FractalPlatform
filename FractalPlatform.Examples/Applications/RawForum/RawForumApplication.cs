@@ -1,6 +1,6 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
-using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Database.Engine.Info;
 
 namespace FractalPlatform.Examples.Applications.RawForum
 {
@@ -17,6 +17,25 @@ namespace FractalPlatform.Examples.Applications.RawForum
                   //.ToCollection()
                   //.MergeToArrayPath(topics, new AttrPath("Topics"))
                   .OpenForm();
+        }
+
+        private void Users()
+        {
+            Client.SetDefaultCollection("Users")
+                  .GetAll()
+                  .OpenForm();
+        }
+
+        public override bool OnEventDimension(EventInfo eventInfo)
+        {
+            switch (eventInfo.Action)
+            {
+                case "Users":
+                    Users();
+                    return true;
+                default:
+                    return base.OnEventDimension(eventInfo);
+            }
         }
 
         public override void OnStart()
