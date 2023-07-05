@@ -70,8 +70,8 @@
                                         </control>
                                     </li>
                                     <li>
-                                              <img src="@BaseUrl/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
-@UserName
+                                        <img src="@BaseUrl/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
+                                        @UserName
                                     </li>
                                     <li></li>
                                 </ul>
@@ -511,33 +511,26 @@
                                     <tbody>
                                         <tr class="SmallText">
                                             <td>
-                                                <label>
-                                                    Имя:<br>
-                                                    <control attr="">
-   
-   <input class="SmallText" type="text" name="@Login.Name" size="18" @Login.ReadOnly @Login.Disabled value="@Login.Value">
-   
-</control>
-                                                </label>
+                                                <control attr="Login">
+                                                    <label>
+                                                        Имя:<br>
+                                                        <input class="SmallText" type="text" name="@Name" size="18" @ReadOnly @Disabled value="@Value">
+                                                    </label>
+                                                </control>
                                             </td>
                                             <td>
-                                                <label>
-                                                    Пароль:<br>
-                                                    <control attr="">
-   
-   <input class="SmallText" type="password" name="@Password.Name" size="18" @Password.ReadOnly @Password.Disabled value="@Password.Value">
-   
-</control>
-                                                </label>
+                                                <control attr="Password">
+                                                    <label>
+                                                        Пароль:<br>
+                                                        <input class="SmallText" type="password" name="@Name" size="18" @ReadOnly @Disabled value="@Value">
+                                                    </label>
+                                                </control>
                                             </td>
-
                                             <td>
                                                 &nbsp;<br>
-                                                <control attr="">
-   
-   <input type="submit" class="button" name="@LoginButton.Name" value="@LoginButton.Value" @LoginButton.ReadOnly @LoginButton.Disabled onclick="@LoginButton.ClickSubmit">
-   
-</control>
+                                                <control attr="LoginButton">
+                                                    <input type="submit" class="button" name="@Name" value="@Value" @ReadOnly @Disabled onclick="@ClickSubmit">
+                                                </control>
                                             </td>
                                         </tr>
                                     </tbody>
