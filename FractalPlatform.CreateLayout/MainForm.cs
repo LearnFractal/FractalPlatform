@@ -113,7 +113,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"@BaseUrl/files/{_dbName}/", $"../../files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"@BaseFilesUrl/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -126,7 +126,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.AddTagIdsToHtml(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"@BaseUrl/files/{_dbName}/", $"../../files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"@BaseFilesUrl/", $"../../files/{_dbName}/");
 
             WriteHtml(html);
 
@@ -898,7 +898,7 @@ namespace FractalPlatform.CreateLayout
 
             html = HtmlHelpers.RemoveTagIds(html);
 
-            html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"@BaseUrl/files/{_dbName}/");
+            html = HtmlHelpers.ReplaceLinks(html, $"../../files/{_dbName}/", $"@BaseFilesUrl/");
 
             WriteHtml(html);
 
@@ -1357,7 +1357,7 @@ namespace FractalPlatform.CreateLayout
 
                     var html = File.ReadAllText(_options.LayoutPath);
 
-                    html = HtmlHelpers.ReplaceLinks(html, $"@BaseUrl/files/{_options.DBName}/{_options.CollName}/", $"@BaseUrl/files/{AppName}/{CollName}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"@BaseFilesUrl/{_options.CollName}/", $"@BaseFilesUrl/{CollName}/");
 
                     File.WriteAllText(LayoutHtmlPath, html);
 
@@ -1429,7 +1429,7 @@ namespace FractalPlatform.CreateLayout
 
                 if (dirInfo != null)
                 {
-                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"@BaseUrl/files/{_dbName}/{_collName}/");
+                    html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"@BaseFilesUrl/{_collName}/");
                 }
 
                 if (!Directory.Exists(LayoutsPath))
