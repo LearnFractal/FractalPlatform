@@ -88,7 +88,7 @@ namespace FractalPlatform.CreateLayout
 
         private void ValidateOptions()
         {
-            if(!File.Exists(_options.LayoutPath))
+            if (!File.Exists(_options.LayoutPath))
             {
                 SaveOptions(string.Empty);
             }
@@ -250,7 +250,10 @@ namespace FractalPlatform.CreateLayout
                 {
                     var str = match.ToString();
 
-                    if (!str.Contains("."))
+                    if (!str.Contains(".") &&
+                         str != "@UserName" &&
+                         str != "@BaseUrl" &&
+                         str != "@EditRowUrl")
                     {
                         var replacement = str.Replace("@", "@" + attrPrefix.Replace("\\", ".") + ".");
 
