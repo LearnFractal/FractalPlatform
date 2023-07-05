@@ -1129,6 +1129,11 @@ namespace FractalPlatform.CreateLayout
             SetControlText("@PrevPageDisabled");
         }
 
+        private void userNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetControlText("@UserName");
+        }
+
         private void createLabelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetControlText(@"<span>@Value</span>");

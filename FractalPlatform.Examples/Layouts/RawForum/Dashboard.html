@@ -70,16 +70,8 @@
                                         </control>
                                     </li>
                                     <li>
-                                        <control attr="">
-
-                                            <a href="@Login.ClickUrl" title="Вход" @Login.ReadOnly @Login.Disabled value="@Login.Value" name="@Login.Name">
-
-                                                <img src="@BaseUrl/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
-                                                Вход
-
-                                            </a>
-
-                                        </control>
+                                              <img src="@BaseUrl/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
+@UserName
                                     </li>
                                     <li></li>
                                 </ul>
@@ -521,19 +513,31 @@
                                             <td>
                                                 <label>
                                                     Имя:<br>
-                                                    <input class="SmallText" type="text" name="quick_login" size="18">
+                                                    <control attr="">
+   
+   <input class="SmallText" type="text" name="@Login.Name" size="18" @Login.ReadOnly @Login.Disabled value="@Login.Value">
+   
+</control>
                                                 </label>
                                             </td>
                                             <td>
                                                 <label>
                                                     Пароль:<br>
-                                                    <input class="SmallText" type="password" name="quick_password" size="18">
+                                                    <control attr="">
+   
+   <input class="SmallText" type="password" name="@Password.Name" size="18" @Password.ReadOnly @Password.Disabled value="@Password.Value">
+   
+</control>
                                                 </label>
                                             </td>
 
                                             <td>
                                                 &nbsp;<br>
-                                                <input type="submit" class="button" name="quick_login_submit" value="Войти">
+                                                <control attr="">
+   
+   <input type="submit" class="button" name="@LoginButton.Name" value="@LoginButton.Value" @LoginButton.ReadOnly @LoginButton.Disabled onclick="@LoginButton.ClickSubmit">
+   
+</control>
                                             </td>
                                         </tr>
                                     </tbody>

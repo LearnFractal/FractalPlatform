@@ -33,6 +33,17 @@ namespace FractalPlatform.Examples.Applications.RawForum
                 case "Users":
                     Users();
                     return true;
+                case "LoginButton":
+                    var login = eventInfo.Collection
+                                         .GetFirstDoc()
+                                         .Value("{'Login':$}");
+
+                    var password = eventInfo.Collection
+                                            .GetFirstDoc()
+                                            .Value("{'Password':$}");
+
+                    Login(login, password);
+                    return true;
                 default:
                     return base.OnEventDimension(eventInfo);
             }

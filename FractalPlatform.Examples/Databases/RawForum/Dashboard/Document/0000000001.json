@@ -1,5 +1,7 @@
 {
-  "Login": "Log In",
+  "Login": "",
+  "Password": "",
+  "LoginButton": "Login",
   "Logout": "Log Out",
   "Register": "Register",
   "Users": "Users",
