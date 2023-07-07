@@ -60,13 +60,9 @@ namespace FractalPlatform.Examples.Applications.Forum
             if (formInfo.Collection.Name == "Topics" &&
                formInfo.DocID != Constants.ANY_DOC_ID)
             {
-                var countViews = Client.SetDefaultCollection("Topics")
-                                       .GetDoc(formInfo.DocID)
-                                       .IntValue("{'CountViews':$}");
-
                 Client.SetDefaultCollection("Topics")
                       .GetDoc(formInfo.DocID)
-                      .UpdateByObject(new { CountViews = countViews + 1 });
+                      .Update("{'CountViews':Add(1)}");
 
                 formInfo.Collection.ReloadData();
             }
