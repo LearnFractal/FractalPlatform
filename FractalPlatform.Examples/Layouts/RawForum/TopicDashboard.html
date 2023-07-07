@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://sqlru.net/index.php/t/349/ -->
+<html lang="ru" dir="ltr"><head>
+<script src="@BaseUrl/js/frmain.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Как &quot;зацепить&quot; базу?  ">
+	<title>SQLRU.net: Microsoft SQL Server » Как "зацепить" базу? </title>
+	<link rel="search" type="application/opensearchdescription+xml" title="SQLRU.net Search" href="https://sqlru.net/open_search.php">
+	<link rel="alternate" type="application/rss+xml" title="Сформировать XML" href="https://sqlru.net/feed.php?mode=m&amp;th=349&amp;basic=1">
+	<link rel="stylesheet" href="@BaseFilesUrl/TopicDashboard/forum.css" media="screen" title="Default Forum Theme">
+	<link rel="stylesheet" href="@BaseFilesUrl/TopicDashboard/jquery-ui.css" media="screen">
+	<script src="@BaseFilesUrl/TopicDashboard/jquery.js.download"></script>
+	<script async="" src="@BaseFilesUrl/TopicDashboard/jquery-ui.js.download"></script>
+	<script src="@BaseFilesUrl/TopicDashboard/lib.js.download"></script>
+</head>
+<body>
+<form action="/" enctype="multipart/form-data" method="post"> 
+                                                <input type="hidden" name="EditKey" value="" />
+                                                <input type="hidden" name="MenuAction" value="" />
+                                                <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
+                                                <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
+                                                <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
+                                                <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
+                                                <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
+                                                <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
+                                                <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
+                                                <input type="submit" id="btnSave" name="btn" value="Save" style="display:none"/>
+                                                <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
+                                                <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none"/>
+                                                <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none"/>
+                                                
+<!--  -->
+
+<div class="content">
+
+<!-- Table for sidebars. -->
+<table width="100%"><tbody><tr><td>
+<div id="UserControlPanel">
+<ul>
+					 <li><a href="https://sqlru.net/index.php/s/" title="Поиск"><img src="@BaseFilesUrl/TopicDashboard/top_search.png" alt="" width="16" height="16"> Поиск</a></li>	<li></li>
+	<li><control attr="">
+   
+   <a href="@Users.ClickUrl" title="Участники" @Users.ReadOnly @Users.Disabled value="@Users.Value" name="@Users.Name">
+      
+      <img src="@Users.BaseFilesUrl/TopicDashboard/top_members.png" alt="" width="16" height="16">
+      Участники
+      
+   </a>
+   
+</control></li>	<li><control attr="">
+   
+   <a href="@Register.ClickUrl" title="Регистрация" @Register.ReadOnly @Register.Disabled value="@Register.Value" name="@Register.Name">
+      
+      <img src="@Register.BaseFilesUrl/TopicDashboard/top_register.png" alt="" width="16" height="18">
+      Регистрация
+      
+   </a>
+   
+</control></li>
+	<li></li>	<li></li>
+	</ul>
+</div>
+<a name="page_top"> </a>
+&nbsp;» &nbsp;» &nbsp;»  
+<span id="threadRating"></span>
+
+
+<table cellspacing="0" cellpadding="0" class="ContentTable"><tbody><tr>
+	<td class="MsgSpacer">
+		<table cellspacing="0" cellpadding="0" class="MsgTable">
+		<tbody><tr>
+			<td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/TopicDashboard/min.png" alt="-" title="Свернуть сообщение" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_1"></a><a name="msg_2540"></a><span class="MsgSubText"><a href="https://sqlru.net/index.php/mv/msg/349/2540/#msg_2540" class="MsgSubText">Как "зацепить" базу? </a></span> </td>
+			<td class="MsgR1 vt ar"><span class="DateText">Tue, 13 June 2023 13:25</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_2&#39;);"><img alt="Переход к следующему сообщению" title="Переход к следующему сообщению" src="@BaseFilesUrl/TopicDashboard/down.png" width="16" height="11"></a></td>
+		</tr>
+		<tr class="MsgR2">
+			<td class="MsgR2" colspan="2">
+				<table cellspacing="0" cellpadding="0" class="ContentTable">
+				<tbody><tr class="MsgR2">
+				
+					<td class="msgud">
+						<img src="@BaseFilesUrl/TopicDashboard/offline.png" alt="Aspram в настоящее время не в онлайне" title="Aspram в настоящее время не в онлайне" width="16" height="16">&nbsp;
+						<a href="https://sqlru.net/index.php/u/355/">Aspram</a>
+						<br><b>Сообщений:</b> 1<br><b>Зарегистрирован:</b> June 2023 
+						
+					</td>
+					<td class="msgud"></td>
+					<td class="msgot"></td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" class="MsgR3">
+		<span class="MsgBodyText">Есть 2 файла: trade.mdf и trade_log.ldf, которых копировал с MS SQL 2016 сервера. <br>
+Переустановил сервер, создал базу "trade" в MSSQL, но не знаю как эту базу зацепить к mssql. <br>
+Кто подскажет, пожалуйста? <br>
+<br>
+</span>
+		
+		
+		<div class="SmallText clear"><p class="fr"></p></div>
+</td></tr>
+<tr>
+	<td colspan="2" class="MsgToolBar">
+		<table border="0" cellspacing="0" cellpadding="0" class="wa">
+		<tbody><tr>
+			<td class="al nw">
+				<a href="https://sqlru.net/index.php/u/355/"><img alt="" src="@BaseFilesUrl/TopicDashboard/msg_about.gif"></a>&nbsp;<a href="https://sqlru.net/index.php/pmm/toi/355/2540/"><img alt="Отправить личное сообщение этому участнику" title="Отправить личное сообщение этому участнику" src="@BaseFilesUrl/TopicDashboard/msg_pm.gif" width="71" height="18"></a>
+				
+			</td>
+			<td class="GenText wa ac">&nbsp;</td>
+			<td class="nw ar">
+				
+				
+				<a href="https://sqlru.net/index.php/r/reply_to/2540/"></a>&nbsp;
+				<a href="https://sqlru.net/index.php/r/quote/true/2540/"></a>
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+</td></tr><tr>
+	<td class="MsgSpacer">
+		<table cellspacing="0" cellpadding="0" class="MsgTable">
+		<tbody><tr>
+			<td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/TopicDashboard/min.png" alt="-" title="Свернуть сообщение" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_2"></a><a name="msg_2542"></a><span class="MsgSubText"><a href="https://sqlru.net/index.php/mv/msg/349/2542/#msg_2542" class="MsgSubText">Re: Как "зацепить" базу? </a></span> </td>
+			<td class="MsgR1 vt ar"><span class="DateText">Tue, 13 June 2023 13:49</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_1&#39;);"><img alt="Переход к предыдущему сообщению" title="Переход к предыдущему сообщению" src="@BaseFilesUrl/TopicDashboard/up.png" width="16" height="11"></a></td>
+		</tr>
+		<tr class="MsgR2">
+			<td class="MsgR2" colspan="2">
+				<table cellspacing="0" cellpadding="0" class="ContentTable">
+				<tbody><tr class="MsgR2">
+				
+					<td class="msgud">
+						<img src="@BaseFilesUrl/TopicDashboard/offline.png" alt="BlackEric в настоящее время не в онлайне" title="BlackEric в настоящее время не в онлайне" width="16" height="16">&nbsp;
+						<a href="https://sqlru.net/index.php/u/53/">BlackEric</a>
+						<br><b>Сообщений:</b> 199<br><b>Зарегистрирован:</b> June 2022 
+						
+					</td>
+					<td class="msgud"></td>
+					<td class="msgot"></td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" class="MsgR3">
+		<span class="MsgBodyText"><a href="https://www.mssqltips.com/sqlservertip/6222/sql-server-attach-and-detach-database-examples/" target="_blank" title="Opens in a new window">SQL Server Attach and Detach Database Examples</a></span>
+		
+		
+		<div class="SmallText clear"><p class="fr"></p></div>
+</td></tr>
+<tr>
+	<td colspan="2" class="MsgToolBar">
+		<table border="0" cellspacing="0" cellpadding="0" class="wa">
+		<tbody><tr>
+			<td class="al nw">
+				<a href="https://sqlru.net/index.php/u/53/"></a>&nbsp;<a href="https://sqlru.net/index.php/pmm/toi/53/2542/"></a>
+				
+			</td>
+			<td class="GenText wa ac">&nbsp;</td>
+			<td class="nw ar">
+				
+				
+				<a href="https://sqlru.net/index.php/r/reply_to/2542/"></a>&nbsp;
+				<a href="https://sqlru.net/index.php/r/quote/true/2542/"></a>
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+
+<table border="0" cellspacing="0" cellpadding="0" class="wa">
+<tbody><tr>
+	<td class="vt">&nbsp;</td>
+	<td class="GenText ar vb nw"><a href="https://sqlru.net/index.php/mv/tree/349/"></a>&nbsp;<control attr="">
+   
+   <a href="@NewTopic.ClickUrl" @NewTopic.ReadOnly @NewTopic.Disabled value="@NewTopic.Value" name="@NewTopic.Name">
+      
+      <img alt="Создать новую тему" src="@NewTopic.BaseFilesUrl/TopicDashboard/new_thread.gif" width="100" height="25">
+      
+   </a>
+   
+</control>&nbsp;<control attr="">
+   
+   <a href="@NewMessage.ClickUrl" @NewMessage.ReadOnly @NewMessage.Disabled value="@NewMessage.Value" name="@NewMessage.Name">
+      
+      <img src="@NewMessage.BaseFilesUrl/TopicDashboard/post_reply.gif" alt="Отправить ответ" width="100" height="25">
+      
+   </a>
+   
+</control></td>
+</tr>
+</tbody></table>
+
+
+<table border="0" cellspacing="1" cellpadding="1" align="right">
+	<tbody><tr>
+	
+	<td class="GenText al"></td>
+</tr>
+	<tr>
+	
+	<td class="GenText al"></td>
+</tr>
+</tbody></table>
+
+
+
+	<input type="hidden" name="t" value="thread">
+	<input type="hidden" name="SQ" value="0">
+	&nbsp;&nbsp;
+	
+
+<br>
+
+<br><div class="ac"></div>
+<br><script>
+	min_max_posts('/theme/default/images', 'Свернуть сообщение', 'Максимизировать сообщение');
+	format_code('CODE:', 'Выделить все', 'Показать / скрыть');
+</script>
+</td></tr></tbody></table>
+
+</div>
+
+
+
+</form></body></html>

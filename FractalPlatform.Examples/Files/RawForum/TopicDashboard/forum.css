@@ -1,0 +1,831 @@
+/* Hide some info on small screens that are 992px or less. */
+@media screen and (max-width: 992px) {
+  .hide1 {
+    display:none;
+  }
+}
+/* Hide even more on smaller screens that are 768px or less. */
+@media screen and (max-width: 768px) {
+  .hide1, .hide2 {
+    display:none;
+  }
+}
+
+body {
+	background: #e5e5e5;
+	color: #000;
+	margin: 0px;
+	font-family: Verdana,Geneva,Lucida,'Lucida Grande',Arial,Helvetica,Sans-serif;
+	font-size: 100%;
+}
+
+.header, .content, .footer {
+	display:block;
+	clear: both;
+	background: #fff;
+	border: 1px solid #aebdc4;
+	padding: 5px;
+	margin: 5px;
+
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+	border-radius: 0.75em;
+
+/* Uncomment for fixed width layout:
+	margin: 0 auto;
+	width: 800px;
+*/
+}
+
+text,	a:link, a:visited, a:active, a.CatLink, .CatDesc, .CatLockedName, .GenText,
+	.GenTextRed, .ErrorText, .SmallText, .DateText, .TopBy, th, a.thLnk:link, a.thLnk:active, a.thLnk:visited,
+	a.thLnk:active, .RowStyleA, .RowStyleB, .RowStyleC, .MsgToolBar, .PollTable, .MsgIg, td.miniMH,
+	.ContentTable, .MsgTable, .DialogTable, .PreviewTable, .AnnonTable, .AnnText, td.NoAvatar, td.Av1, td.Av2, td.tabA,
+	.AnnSubjText, a.PagerLink, .LevelText, .MsgSubText, .MsgBodyText, th.SelTS, th.SelFS, legend, td.tabH, div.tabT,
+	.MiniTable, .quote, .dashed, .adminColor, .modsColor, td.tabI, td.tabA:hover,
+	.brdrNormal, .brdrSelected, input.button, form, img, .StClr, .AnClr, td.msgot, td.msgud, div.ctags, td.mvTc, td.pmNav,
+	.ModOpt, .MsgR1, .MsgR2, .MsgR3, .mnavMsg, .mnavWarnTbl, .mnavNoRes, font.lg, td.tt, table.tt, tr.tab, table.tab,
+	a.big:link, a.big:active, a.big:visited, .small, a.small:link, a.small:active, a.small:visited, .curtime,
+	font.anon, font.reg, td.permYES, td.permNO, td.repI, font.selmsgInd, fieldset
+{
+	font-family: Verdana,Geneva,Lucida,'Lucida Grande',Arial,Helvetica,Sans-serif;
+	font-size: 10pt;
+	line-height: 1.6;
+}
+
+a:link, a:visited, a:active, a.PagerLink {
+	color: #069;
+	text-decoration: underline;
+}
+
+a.CatLink {
+	font-size: 10pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+}
+
+.CatDesc {
+	color: #000;
+	height: 23px;
+	background: url('/theme/default/images/tableHeaderbg2.png');
+}
+
+.CatLockedName {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.CatLockPad {
+	padding-left: 20px;
+}
+
+text, .GenText, .MsgIg, td.repI {
+	color: #000;
+}
+
+.GenTextRed {
+	color: red;
+}
+
+.ErrorText {
+	color: red;
+	font-weight: bold;
+}
+
+.SmallText, .DateText, .TopBy, td.permYES, td.permNO, .SmallText a {
+	color: #202020;
+	font-size: x-small;
+}
+
+th {
+	font-size: 10pt;
+	text-align: left;
+	color: #fff;
+	font-weight: bold;
+	height: 23px;
+	vertical-align: middle;
+	background: url('/theme/default/images/tableHeaderbg.png');
+}
+
+a.thLnk:link, a.thLnk:active, a.thLnk:visited {
+	font-size: 10pt;
+	text-decoration: underline;
+	color: #eee;
+}
+
+a.thLnk:visited {
+	color: #c2cdd6;
+}
+
+.RowStyleA, td.tt {
+	background: #eee;
+}
+
+.RowStyleB, .curtime, fieldset {
+	background: #dee2e6;
+}
+
+.RowStyleC {
+	background: #c2cdd6;
+}
+
+.row:hover td {
+	opacity: 0.8;
+}
+
+.MsgToolBar {
+	background: #dee2e6;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.MsgSpacer {
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.PollTable, .ContentTable, .MsgTable, .DialogTable, .PreviewTable, .AnnonTable {
+	background: #fff;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+font.ptp { /* space between poll title & number of votes */
+	font-size: smaller;
+	padding-left: 10px;
+}
+
+.ContentTable, .AnnonTable, .MsgTable, table.pad {
+	width: 100%;
+}
+
+.MsgTable {
+	margin-top: 0;
+	margin-bottom: 0;
+	border: 1px solid #888;
+}
+
+.DialogTable {
+	width: 66%;
+}
+
+.PreviewTable {
+	width: 75%;
+}
+
+.AnnText {
+	color: #000;
+	background: #f5d300;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.AnnSubjText {
+	font-weight: bold;
+}
+
+.MsgSubText {
+	font-weight: bold;
+}
+
+a.MsgSubText, a.MsgSubText:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.MsgBodyText {
+	font-size: 10pt;
+	display: block;
+	line-height: 1.7;
+}
+
+.FormattingToolsBG {
+	padding-left: 5px;
+	vertical-align: bottom;
+	background: transparent;
+}
+
+.FormattingToolsCLR {
+	-moz-border-radius: 0.15em;
+	-webkit-border-radius: 0.15em;
+	border-radius: 0.15em;
+
+	padding: 1px;
+	background: #fff;
+}
+.FormattingToolsCLR:hover {
+	border: 1px; 
+	background: #dee;
+}
+
+.MiniTable {
+	background: #fff;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+cite {
+	/* quote titles */
+	color: #202020;
+	font-size: 9pt;
+	font-weight: bold;
+	margin-left: 20px;
+	display: block;
+	background: transparent url('/theme/default/images/quote.gif') left top no-repeat;
+	padding-left: 25px;
+}
+
+blockquote {
+	/* quote tags */
+	color: #444;
+	background: #fafafa;
+	border-left: 1px dashed #c2cdd6;
+	margin: 8px 1px 0 20px;
+	overflow: hidden;
+	padding: 5px;
+	font-style: italic;
+}
+blockquote:first-letter {
+	margin: 0 .1em 0 -0.12em;
+	font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+	font-size: 160%;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+blockquote blockquote {
+	/* nested quote tags */
+	background-color: #f0f0f0;
+	margin: 8px 1px 0 10px;
+}
+
+blockquote blockquote blockquote {
+	/* double nested quote tags */
+	background-color: #e0e0e0;
+}
+
+.quote {
+	/* old pre v3 quotes */
+	color: #444444;
+	background: #FAFAFA;
+	border: 1px solid #c2cdd6;
+}
+
+.indent {
+	/* [indent] & [tab] tags */
+	margin-left: 35px;
+}
+
+.dashed {
+	border: 1px dashed #1b7cad;
+}
+
+.adminColor {
+	font-weight: bold;
+	color: #f00;
+}
+
+.modsColor {
+	color: #0b0;
+	font-weight: bold;
+}
+
+.brdrNormal, td.tabItop, td.tabImid, td.tabIbot {
+	border: #000;
+	border-style: solid;
+	border-left-width: 0;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 1px;
+	background-repeat: repeat;
+	background-position: top;
+}
+
+.brdrSelected, td.tabAmid, td.tabAmid, td.tabAbot {
+	border: #000;
+	border-style: solid;
+	border-left-width: 0;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	background-repeat: repeat;
+	background-position: top;
+}
+
+form {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+        border: 0;
+        max-width: 800px;
+        transition:all 0.5s ease-out;
+}
+img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+        font-style: italic;
+        font-variant: small-caps;
+        font-size: smaller;
+}
+
+a[href^="mailto:"] {
+	background: url(/theme/default/images/email.png) no-repeat right center;
+	padding-right:17px;
+}
+
+.StClr {
+	font-weight: bold;
+	color: green;
+}
+
+.AnClr {
+	font-weight: bold;
+	color: red;
+}
+
+.ModOpt, .ModOpt a {
+	color: #a8b1b8;
+	font-size: x-small;
+	text-align: right;
+}
+
+.TopBy {
+	margin-bottom: 0;
+	padding-right: 2px;
+	text-align: right;
+}
+
+.MsgR2, .MsgR1, .MsgR3, .MsgIg {
+	background: #dee2e6;
+	border-bottom: 1px solid #aaa;
+	padding: 2px;
+}
+
+.MsgIg {
+	border: 0;
+}
+
+.MsgR1 {
+	background: #ccd4dc;
+}
+
+.MsgR3 {
+	background: #f4f4f4;
+	padding: 1ex;
+	padding-top: 2ex;
+}
+
+.mnavMsg {
+	border-bottom: 1px dashed #eee;
+	width: 100%;
+}
+
+.mnavWarnTbl {
+	border: 1px dashed red;
+}
+
+.mnavNoRes {
+	border: 1px dashed blue;
+}
+
+font.lg {
+	font-size: 10pt;
+}
+
+td.tt {
+	text-align: left;
+	width: 100%;
+	border-bottom: 1px solid #fff;
+}
+
+table.tt {
+	width: 100%;
+	padding: 1px;
+	margin: 0;
+	text-align: center;
+	border: 1px solid #000;
+}
+
+a.big:link, a.big:active, a.big:visited {
+	color: #069;
+	font-size: 11pt;
+}
+
+.small, a.small:link, a.small:active, a.small:visited {
+	font-size: 9pt;
+	font-weight: normal;
+}
+
+a.small:link, a.small:active, a.small:visited {
+	color: #069;
+}
+
+a:hover, a.big:hover, td.msgud a:hover, td.msgot a:hover {
+	color: #dc143c;
+}
+
+td.msgud, td.msgot, td.msgot a, div.ctags {
+	color: #202020;
+	font-size: 8pt;
+	vertical-align: top;
+	width: 33%;
+	white-space: nowrap;
+}
+
+td.msgud {
+	padding-right: 10px;
+	text-align: left;
+}
+
+td.msgot {
+	text-align: right;
+}
+
+div.ctags {
+	padding: 2px;
+	width: 100%;
+}
+
+legend {
+	font-size: 11pt;
+	font-weight: bold;
+	background-color: #fff;
+	border: 1px solid #aebdc4;
+}
+
+fieldset {
+	border: 1px solid #aebdc4;
+}
+
+th.SelTS, th.SelFS {
+	padding: 2px;
+	color: #fff;
+}
+
+th.SelFS {
+	 border-bottom: 1px solid #fff;
+	 color: #fff;
+}
+
+td.NoAvatar {
+	background: #f4f4f4;
+	text-align: center;
+}
+
+td.Av1, td.Av2 {
+	text-align: center;
+	background: #f4f4f4;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+td.Av2 {
+	background: #fefefe;
+}
+
+td.tabI, td.tabA, td.tabI:hover, td.tabOVER, td.tabON {
+	border: 1px solid black;
+	background: #dee7f7;
+        padding: 2px;
+}
+
+td.tabOVER, td.tabI:hover, td.tabI:active {
+	background: #fff;
+}
+
+td.tabON {
+	background: #5279bd;
+}
+
+a.tabON:link, a.tabON:active, a.tabON:visited, a.tabON:hover {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div.tabT {
+	padding: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+}
+
+table.tab {
+	border-bottom: 1px solid #000;
+}
+
+.curtime {
+	border: 1px solid #aebdc4;
+	vertical-align: middle;
+	padding: 1px 3px 1px 3px;
+}
+
+td.pmSn {
+	background: #fff;
+}
+
+td.pmSa {
+	background: #fffa00;
+}
+
+td.pmSf {
+	background: red;
+}
+
+table.pmDu {
+	width: 175px;
+	background-color: #fff;
+	border: 1px #c2cdd6 solid;
+}
+
+td.mvTc {
+	background: #e5ffe7;
+}
+
+td.pmNav {
+	background: #fff;
+	text-align: right;
+}
+
+td.miniMH {
+	text-align: center;
+}
+
+tr.mnavH {
+	background: #eee;
+}
+
+tr.mnavM {
+	background: #dee2e6;
+}
+
+table.regConf {
+	width: 80%;
+	border: 1px dashed #f00;
+}
+
+font.anon, font.reg {
+	color: #0a0;
+}
+
+td.permYES, td.permNO {
+	text-align: center;
+	color: red;
+	white-space: nowrap;
+}
+
+td.permNO {
+	color: blue;
+}
+
+font.regEW {
+	font-size: xx-small;
+	color: #050;
+	font-weight: bold;
+}
+
+td.repI {
+	padding: 5px;
+	padding-left: 20px;
+}
+
+table.pad {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+font.selmsgInd {
+	font-size: xx-small;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+td.avatarPad {
+	padding-right: 3px;
+	vertical-align: top;
+}
+
+div.pre {
+	font-family: monospace;
+	padding: 5px;
+	border: 1px blue dashed;
+	font-size: 10pt;
+	white-space: pre;
+	background: #fafafa;
+	overflow: auto;
+	margin: 5px;
+}
+
+/* Code formatting. */
+pre { white-space: pre-wrap; }
+.codehead, .codehead a { color: #202020; background: #e9e9e9; font-size: xx-small; font-weight:bold; }
+html pre.prettyprint { border:none; padding: 0; margin: 5px;} 
+
+a.big:active, a:active, a.CatLink:active, a.UserControlPanel:active, a.thLnk:active, 
+a.small:active, a.PagerLink:active, a.MsgSubText:active {
+	color: #dc143c;
+}
+
+/* BBcode [imgl] & [imgr] tags. */
+img.l {
+	float: left;
+	clear: right;
+	margin: 3px;
+}
+
+img.r {
+	float: right;
+	clear: left;
+	margin: 3px;
+}
+
+.AttachmentsList {
+	margin-left: 0;
+	list-style: none;
+	margin-top: 10px;
+	padding: 0;
+}
+
+.signature {
+	border-top: 1px dotted #a0a0a0;
+	color: #202020;
+	font-size: 8pt;
+}
+
+.header {color:#fff; background:#5478a4;}
+.header a {color:#fff; text-decoration:none;}
+.headtitle {padding: 10px; font-size:xx-large; font-weight:bold; text-decoration:none;}
+.headdescr {padding: 20px 10px 0px 20px; color:#eee; font-size:small;}
+.headsearch {padding: 0 0 10px 20px; font-size: small; font-weight:bold; float:right; white-space: nowrap;}
+
+/* Make textareas's resizable (jQuery UI). */
+.ui-resizable-s {
+	height: 9px;
+	background: #eee url("/theme/default/images/grippie.gif") no-repeat center 2px;
+ 	border: 1px solid #ddd;
+	border-top-width: 0;
+	overflow: hidden;
+}
+.ui-resizable-resizing textarea {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	zoom: 1;
+}
+
+/* The following are partial elements that are used to save space. */
+.wo { width:		1px; }
+.wa { width:		100%; }
+.ac { text-align:	center; }
+.al { text-align:	left; }
+.ar { text-align:	right; }
+.fl { float: 		left; }
+.fr { float: 		right; }
+.vb { vertical-align:	bottom; }
+.vt { vertical-align:	top; }
+.vm { vertical-align:	middle; }
+.nw { white-space: 	nowrap; }
+.fb { font-weight:	bold; }
+.dn { display: none; visibility:hidden;}
+.clear { clear: both; }
+
+img.at { float: left; clear: left; }
+
+div.sr { float: left; padding: 5px; }
+
+div.ctb {text-align: center; clear: both;}
+div.ctb table {margin: 0 auto; text-align: left;}
+div.ip { overflow: auto; margin: 0; padding: 2px; width: 600px; height: 400px; }
+span.vt { padding-left: 20px; }
+table.icqCP { font-family: arial, sans-serif; font-size: smaller; border: 0; }
+div.pmL { padding-top: 2px; }
+table.ucPW { width: 175px; }
+
+/* Colors for highlighting search terms. */
+.st0 { background-color: #ffff66; }
+.st1 { background-color: #a0ffff; }
+.st2 { background-color: #99ff99; }
+.st3 { background-color: #ffd7a8; }
+.st4 { background-color: #ff9999; }
+.st5 { background-color: #aba8ff; }
+.st6 { background-color: #b3ff66; }
+.st7 { background-color: #fff2a8; }
+.st8 { background-color: #a8d1ff; }
+.st9 { background-color: #ffb7b7; }
+
+/* User Control Panel / Top Level Menu. */
+#UserControlPanel {
+	float: right;
+	width: 100%;
+	margin: 5px 0 10px 10px;
+}
+#UserControlPanel ul {
+	list-style: none;
+	float: right;
+	padding: 0;
+	margin: 0;
+	text-align:right;
+}
+#UserControlPanel li {
+	margin: 0 7px 0 0;
+	position:relative;
+	display: inline;
+	white-space: nowrap;
+}
+#UserControlPanel li a {
+	color: #069;
+	text-decoration: none;
+}
+
+/* Calendar. */
+table.calendar {border-left:1px solid #999; }
+tr.calendar-row {}
+td.calendar-day {min-height:80px; font-size:11px; position:relative; } * html div.calendar-day { height:80px; }
+td.calendar-day:hover {background:#eceff5; }
+td.calendar-day-np {background:#eee; min-height:80px; } * html div.calendar-day-np { height:80px; }
+td.calendar-day-head {background:#ccc; font-weight:bold; text-align:center; width:120px; padding:5px; border-bottom:1px solid #999; border-top:1px solid #999; border-right:1px solid #999; }
+div.day-number {background:#999; position:absolute; z-index:2; top:-5px; right:-25px; padding:5px; color:#fff; font-weight:bold; width:20px; text-align:center; }
+td.calendar-day, td.calendar-day-np { width:120px; padding:5px 25px 5px 5px; border-bottom:1px solid #999; border-right:1px solid #999; }
+
+/* Buttons. */
+input.button:link, input.button:visited, input.button {
+	background:#ddd url(/theme/default/images/button.png) repeat-x scroll left top;
+	border-color:#ccc #b4b2b4 #ccc #b4b2b4;
+	position: relative;
+	cursor: pointer;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+input.button:hover, input.button:hover {
+	background:#e2e2e2 url(/theme/default/images/button.png) repeat-x scroll left -115px;
+	color:#000;
+}
+.small.button, .small.button:visited   { font-size: 11px; }
+
+/* Karma voting */
+a.karma {
+    text-decoration: none;
+}
+a.up {
+    color: green;
+    font-weight: bold;
+}
+a.down {
+    color: red;
+    font-weight: bold;
+}
+
+/* Blog page - two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 74%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 24%;
+    padding-left: 10px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: #f4f4f4;
+    padding: 0 10px 10px 10px;
+    margin-top: 10px;
+    font-size: 10pt;
+    line-height: 1.7;
+    box-shadow: inset 0 0 10px #ccc;
+}
+.rightcolumn .card {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - hide the sidebar when the screen is less than 768px wide. */
+@media screen and (max-width: 768px) {
+  .rightcolumn {
+    display:none;
+    width: 0%;
+  }
+  .leftcolumn {
+    width: 98%;
+    padding: 0;
+  }
+}
+

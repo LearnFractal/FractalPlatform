@@ -1,0 +1,12 @@
+{
+  "Messages": [
+    {
+      "CountMessages": {
+        "Formula": "@CountMessages"
+      },
+      "Registered": {
+        "Formula": "@Registered"
+      }
+    }
+  ]
+}

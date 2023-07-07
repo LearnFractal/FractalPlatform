@@ -253,6 +253,7 @@ namespace FractalPlatform.CreateLayout
                     if (!str.Contains(".") &&
                          str != "@UserName" &&
                          str != "@BaseUrl" &&
+                         str != "@BaseFilesUrl" &&
                          str != "@EditRowUrl")
                     {
                         var replacement = str.Replace("@", "@" + attrPrefix.Replace("\\", ".") + ".");
