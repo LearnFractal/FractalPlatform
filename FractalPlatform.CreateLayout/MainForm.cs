@@ -683,7 +683,7 @@ namespace FractalPlatform.CreateLayout
                 }
                 else
                 {
-                    if (json.Length > 2)
+                    if (json.Length > 2) //not empty {} json, insert with quote
                     {
                         json = json.Insert(1, attr + ",");
                     }
