@@ -31,46 +31,58 @@
                                                 <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none"/>
                                                 
 <!--  -->
-
+<div class="header">
+  
+  <div class="headsearch">
+    <input type="hidden" name="SQ" value="0">
+      <input type="hidden" name="t" value="search">
+      <br><label accesskey="f" title="Поиск в форумах">Поиск в форумах:<br>
+      <input type="search" name="srch" value="" size="20" placeholder="Поиск в форумах"></label>
+      <input type="image" src="@BaseFilesUrl/TopicDashboard/search.png" title="Поиск" name="btn_submit">&nbsp;
+    
+  </div>
+    <a href="https://sqlru.net/" title="Начало">
+    <img class="headimg" src="@BaseFilesUrl/TopicDashboard/header.gif" alt="" align="left" height="80">
+    <span class="headtitle">SQLRU.net</span>
+  </a><br>
+  <span class="headdescr">Разработка приложений баз данных<br><br></span>
+</div>
 <div class="content">
 
 <!-- Table for sidebars. -->
 <table width="100%"><tbody><tr><td>
 <div id="UserControlPanel">
 <ul>
-					 <li><a href="https://sqlru.net/index.php/s/" title="Поиск"><img src="@BaseFilesUrl/TopicDashboard/top_search.png" alt="" width="16" height="16"> Поиск</a></li>	<li></li>
-	<li><control attr="">
-   
-   <a href="@Users.ClickUrl" title="Участники" @Users.ReadOnly @Users.Disabled value="@Users.Value" name="@Users.Name">
-      
-      <img src="@Users.BaseFilesUrl/TopicDashboard/top_members.png" alt="" width="16" height="16">
-      Участники
-      
-   </a>
-   
-</control></li>	<li><control attr="">
-   
-   <a href="@Register.ClickUrl" title="Регистрация" @Register.ReadOnly @Register.Disabled value="@Register.Value" name="@Register.Name">
-      
-      <img src="@Register.BaseFilesUrl/TopicDashboard/top_register.png" alt="" width="16" height="18">
-      Регистрация
-      
-   </a>
-   
-</control></li>
-	<li></li>	<li></li>
+					 <li><a href="https://sqlru.net/index.php/s/" title="Поиск"><img src="@BaseFilesUrl/TopicDashboard/top_search.png" alt="" width="16" height="16"> Поиск</a></li>	<li><a accesskey="h" href="https://sqlru.net/index.php/h/" title="Помощь"><img src="@BaseFilesUrl/TopicDashboard/top_help.png" alt="" width="16" height="16"> Помощь</a></li>
+	<li><a href="https://sqlru.net/index.php/ml/" title="Участники"><img src="@BaseFilesUrl/TopicDashboard/top_members.png" alt="" width="16" height="16"> Участники</a></li>	<li><a href="https://sqlru.net/index.php/re/" title="Регистрация"><img src="@BaseFilesUrl/TopicDashboard/top_register.png" alt="" width="16" height="18"> Регистрация</a></li>
+	<li><a href="https://sqlru.net/index.php/l/" title="Вход"><img src="@BaseFilesUrl/TopicDashboard/top_login.png" alt="" width="16" height="16"> Вход</a></li>	<li><a href="https://sqlru.net/index.php/i/" title="Начало"><img src="@BaseFilesUrl/TopicDashboard/top_home.png" alt="" width="16" height="16"> Начало</a></li>
 	</ul>
 </div>
 <a name="page_top"> </a>
-&nbsp;» &nbsp;» &nbsp;»  
+<a href="https://sqlru.net/index.php/i/">Начало</a>&nbsp;» <a href="https://sqlru.net/index.php/i/3/">Использование СУБД</a>&nbsp;» <a href="https://sqlru.net/index.php/f/4/">Microsoft SQL Server</a>&nbsp;» <strong>Как "зацепить" базу? </strong> 
 <span id="threadRating"></span>
-
+<table cellspacing="0" cellpadding="0" border="0" class="wa">
+<tbody><tr>
+<td class="GenText al">
+	<span id="ShowLinks">
+<span class="GenText fb">Показать:</span>
+<a href="https://sqlru.net/index.php/sel/date/today/frm_id/4/th/349/" title="Показать все отправленные сегодня сообщения" rel="nofollow">Сегодняшние сообщения</a>
+<b>::</b> <a href="https://sqlru.net/index.php/pl/" rel="nofollow">Голосования</a>
+<b>::</b> <a href="https://sqlru.net/index.php/ma/" rel="nofollow">Навигатор по сообщениям</a>
+</span>
+	<br>
+				
+	<a href="https://sqlru.net/index.php/ef/349/" title="Отправить URL-ссылку на это сообщение по e-mail" rel="nofollow">Отправить по e-mail</a>&nbsp;	</td>
+<td class="vb ar">
+	<a href="https://sqlru.net/index.php/mv/tree/349/"><img title="Переключение в режим просмотра в виде древовидного списка сообщений и ответов" alt="Переключение в режим просмотра в виде древовидного списка сообщений и ответов" src="@BaseFilesUrl/TopicDashboard/tree_view.gif" width="100" height="25"></a>&nbsp;<a href="https://sqlru.net/index.php/r/frm_id/4/"><img alt="Создать новую тему" src="@BaseFilesUrl/TopicDashboard/new_thread.gif" width="100" height="25"></a>&nbsp;<a href="https://sqlru.net/index.php/r/th_id/349/2540/0/0/"><img src="@BaseFilesUrl/TopicDashboard/post_reply.gif" alt="Отправить ответ" width="100" height="25"></a></td>
+</tr>
+</tbody></table>
 
 <table cellspacing="0" cellpadding="0" class="ContentTable"><tbody><tr>
 	<td class="MsgSpacer">
 		<table cellspacing="0" cellpadding="0" class="MsgTable">
 		<tbody><tr>
-			<td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/TopicDashboard/min.png" alt="-" title="Свернуть сообщение" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_1"></a><a name="msg_2540"></a><span class="MsgSubText"><a href="https://sqlru.net/index.php/mv/msg/349/2540/#msg_2540" class="MsgSubText">Как "зацепить" базу? </a></span> </td>
+			<td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/TopicDashboard/min.png" alt="-" title="Свернуть сообщение" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_1"></a><a name="msg_2540"></a><span class="MsgSubText"><a href="https://sqlru.net/index.php/mv/msg/349/2540/#msg_2540" class="MsgSubText">Как "зацепить" базу? </a></span> <span class="SmallText">[<a href="https://sqlru.net/index.php/mv/msg/349/2540/#msg_2540">сообщение #2540</a>]</span></td>
 			<td class="MsgR1 vt ar"><span class="DateText">Tue, 13 June 2023 13:25</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_2&#39;);"><img alt="Переход к следующему сообщению" title="Переход к следующему сообщению" src="@BaseFilesUrl/TopicDashboard/down.png" width="16" height="11"></a></td>
 		</tr>
 		<tr class="MsgR2">
@@ -84,7 +96,7 @@
 						<br><b>Сообщений:</b> 1<br><b>Зарегистрирован:</b> June 2023 
 						
 					</td>
-					<td class="msgud"></td>
+					<td class="msgud"><div class="ctags">Junior Member</div></td>
 					<td class="msgot"></td>
 		</tr>
 		</tbody></table>
@@ -99,7 +111,7 @@
 </span>
 		
 		
-		<div class="SmallText clear"><p class="fr"></p></div>
+		<div class="SmallText clear"><p class="fr"><a href="https://sqlru.net/index.php/rm/2540/" rel="nofollow">Известить модератора</a></p></div>
 </td></tr>
 <tr>
 	<td colspan="2" class="MsgToolBar">
@@ -113,8 +125,8 @@
 			<td class="nw ar">
 				
 				
-				<a href="https://sqlru.net/index.php/r/reply_to/2540/"></a>&nbsp;
-				<a href="https://sqlru.net/index.php/r/quote/true/2540/"></a>
+				<a href="https://sqlru.net/index.php/r/reply_to/2540/"><img alt="" src="@BaseFilesUrl/TopicDashboard/msg_reply.gif" width="71" height="18"></a>&nbsp;
+				<a href="https://sqlru.net/index.php/r/quote/true/2540/"><img alt="" src="@BaseFilesUrl/TopicDashboard/msg_quote.gif" width="71" height="18"></a>
 			</td>
 		</tr>
 		</tbody></table>
@@ -125,7 +137,7 @@
 	<td class="MsgSpacer">
 		<table cellspacing="0" cellpadding="0" class="MsgTable">
 		<tbody><tr>
-			<td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/TopicDashboard/min.png" alt="-" title="Свернуть сообщение" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_2"></a><a name="msg_2542"></a><span class="MsgSubText"><a href="https://sqlru.net/index.php/mv/msg/349/2542/#msg_2542" class="MsgSubText">Re: Как "зацепить" базу? </a></span> </td>
+			<td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/TopicDashboard/min.png" alt="-" title="Свернуть сообщение" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_2"></a><a name="msg_2542"></a><span class="MsgSubText"><a href="https://sqlru.net/index.php/mv/msg/349/2542/#msg_2542" class="MsgSubText">Re: Как "зацепить" базу? </a></span> <span class="SmallText">[<a href="https://sqlru.net/index.php/mv/msg/349/2542/#msg_2542">сообщение #2542</a> является ответом на <a href="https://sqlru.net/index.php/mv/msg/349/2540/#msg_2540">сообщение #2540</a>]</span></td>
 			<td class="MsgR1 vt ar"><span class="DateText">Tue, 13 June 2023 13:49</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_1&#39;);"><img alt="Переход к предыдущему сообщению" title="Переход к предыдущему сообщению" src="@BaseFilesUrl/TopicDashboard/up.png" width="16" height="11"></a></td>
 		</tr>
 		<tr class="MsgR2">
@@ -139,7 +151,7 @@
 						<br><b>Сообщений:</b> 199<br><b>Зарегистрирован:</b> June 2022 
 						
 					</td>
-					<td class="msgud"></td>
+					<td class="msgud"><div class="ctags">Senior Member</div></td>
 					<td class="msgot"></td>
 		</tr>
 		</tbody></table>
@@ -150,22 +162,22 @@
 		<span class="MsgBodyText"><a href="https://www.mssqltips.com/sqlservertip/6222/sql-server-attach-and-detach-database-examples/" target="_blank" title="Opens in a new window">SQL Server Attach and Detach Database Examples</a></span>
 		
 		
-		<div class="SmallText clear"><p class="fr"></p></div>
+		<div class="SmallText clear"><p class="fr"><a href="https://sqlru.net/index.php/rm/2542/" rel="nofollow">Известить модератора</a></p></div>
 </td></tr>
 <tr>
 	<td colspan="2" class="MsgToolBar">
 		<table border="0" cellspacing="0" cellpadding="0" class="wa">
 		<tbody><tr>
 			<td class="al nw">
-				<a href="https://sqlru.net/index.php/u/53/"></a>&nbsp;<a href="https://sqlru.net/index.php/pmm/toi/53/2542/"></a>
+				<a href="https://sqlru.net/index.php/u/53/"><img alt="" src="@BaseFilesUrl/TopicDashboard/msg_about.gif"></a>&nbsp;<a href="https://sqlru.net/index.php/pmm/toi/53/2542/"><img alt="Отправить личное сообщение этому участнику" title="Отправить личное сообщение этому участнику" src="@BaseFilesUrl/TopicDashboard/msg_pm.gif" width="71" height="18"></a>
 				
 			</td>
 			<td class="GenText wa ac">&nbsp;</td>
 			<td class="nw ar">
 				
 				
-				<a href="https://sqlru.net/index.php/r/reply_to/2542/"></a>&nbsp;
-				<a href="https://sqlru.net/index.php/r/quote/true/2542/"></a>
+				<a href="https://sqlru.net/index.php/r/reply_to/2542/"><img alt="" src="@BaseFilesUrl/TopicDashboard/msg_reply.gif" width="71" height="18"></a>&nbsp;
+				<a href="https://sqlru.net/index.php/r/quote/true/2542/"><img alt="" src="@BaseFilesUrl/TopicDashboard/msg_quote.gif" width="71" height="18"></a>
 			</td>
 		</tr>
 		</tbody></table>
@@ -177,19 +189,11 @@
 <table border="0" cellspacing="0" cellpadding="0" class="wa">
 <tbody><tr>
 	<td class="vt">&nbsp;</td>
-	<td class="GenText ar vb nw"><a href="https://sqlru.net/index.php/mv/tree/349/"></a>&nbsp;<control attr="">
-   
-   <a href="@NewTopic.ClickUrl" @NewTopic.ReadOnly @NewTopic.Disabled value="@NewTopic.Value" name="@NewTopic.Name">
-      
-      <img alt="Создать новую тему" src="@NewTopic.BaseFilesUrl/TopicDashboard/new_thread.gif" width="100" height="25">
-      
-   </a>
-   
-</control>&nbsp;<control attr="">
+	<td class="GenText ar vb nw"><a href="https://sqlru.net/index.php/mv/tree/349/"><img title="Переключение в режим просмотра в виде древовидного списка сообщений и ответов" alt="Переключение в режим просмотра в виде древовидного списка сообщений и ответов" src="@BaseFilesUrl/TopicDashboard/tree_view.gif" width="100" height="25"></a>&nbsp;<a href="https://sqlru.net/index.php/r/frm_id/4/"><img alt="Создать новую тему" src="@BaseFilesUrl/TopicDashboard/new_thread.gif" width="100" height="25"></a>&nbsp;<control attr="">
    
    <a href="@NewMessage.ClickUrl" @NewMessage.ReadOnly @NewMessage.Disabled value="@NewMessage.Value" name="@NewMessage.Name">
       
-      <img src="@NewMessage.BaseFilesUrl/TopicDashboard/post_reply.gif" alt="Отправить ответ" width="100" height="25">
+      <img src="@BaseFilesUrl/TopicDashboard/post_reply.gif" alt="Отправить ответ" width="100" height="25">
       
    </a>
    
@@ -200,33 +204,42 @@
 
 <table border="0" cellspacing="1" cellpadding="1" align="right">
 	<tbody><tr>
-	
-	<td class="GenText al"></td>
+	<td class="ar GenText">Предыдущая тема:</td>
+	<td class="GenText al"><a href="https://sqlru.net/index.php/m/2425/#msg_2425">Интересные статьи и полезные ссылки</a></td>
 </tr>
 	<tr>
-	
-	<td class="GenText al"></td>
+	<td class="GenText ar">Следующая тема:</td>
+	<td class="GenText al"><a href="https://sqlru.net/index.php/m/2612/#msg_2612">Помогите с запросом в MS SQL</a></td>
 </tr>
 </tbody></table>
 
-
+<span class="SmallText fb">Переход к форуму:</span>
 
 	<input type="hidden" name="t" value="thread">
 	<input type="hidden" name="SQ" value="0">
-	&nbsp;&nbsp;
-	
+	<select class="SmallText" name="frm_id">
+		<option disabled="disabled">- Использование СУБД</option><option value="4" selected="selected">&nbsp;&nbsp;Microsoft SQL Server</option><option value="5">&nbsp;&nbsp;Firebird, HQbird, InterBase</option><option value="6">&nbsp;&nbsp;Oracle</option><option value="7">&nbsp;&nbsp;Microsoft Access</option><option value="8">&nbsp;&nbsp;IBM DB2, WebSphere, IMS, U2, etc</option><option value="9">&nbsp;&nbsp;MySQL, MariaDB</option><option value="10">&nbsp;&nbsp;PostgreSQL</option><option value="11">&nbsp;&nbsp;OLAP и DWH</option><option value="12">&nbsp;&nbsp;Sybase ASA, ASE, IQ</option><option value="13">&nbsp;&nbsp;Informix</option><option value="14">&nbsp;&nbsp;Другие СУБД</option><option value="15">&nbsp;&nbsp;FoxPro, Visual FoxPro</option><option value="16">&nbsp;&nbsp;Caché, Ensemble, DeepSee, MiniM, IRIS, GT.M</option><option value="17">&nbsp;&nbsp;SQLite</option><option value="18">&nbsp;&nbsp;NoSQL, Big Data</option><option value="55">&nbsp;&nbsp;ClickHouse</option><option disabled="disabled">- Дискуcсии</option><option value="19">&nbsp;&nbsp;Сравнение СУБД</option><option value="20">&nbsp;&nbsp;Проектирование БД</option><option value="21">&nbsp;&nbsp;Работа</option><option value="56">&nbsp;&nbsp;Вакансии</option><option value="22">&nbsp;&nbsp;ERP и учетные системы</option><option value="23">&nbsp;&nbsp;Разработка информационных систем</option><option value="24">&nbsp;&nbsp;Тестирование и QA</option><option value="25">&nbsp;&nbsp;Отчетные системы</option><option value="26">&nbsp;&nbsp;Наши за рубежом</option><option value="27">&nbsp;&nbsp;Сертификация и обучение</option><option value="28">&nbsp;&nbsp;Hardware</option><option value="29">&nbsp;&nbsp;Управление процессом разработки ИС</option><option value="30">&nbsp;&nbsp;Юридические вопросы в ИТ</option><option disabled="disabled">- Microsoft.NET</option><option value="32">&nbsp;&nbsp;WinForms, .Net Framework</option><option value="33">&nbsp;&nbsp;ASP.NET</option><option value="34">&nbsp;&nbsp;ADO.NET, LINQ, Entity Framework, NHibernate, DAL, ORM</option><option value="35">&nbsp;&nbsp;WPF, Silverlight</option><option value="36">&nbsp;&nbsp;	WCF, Web Services, Remoting</option><option disabled="disabled">- Программирование</option><option value="37">&nbsp;&nbsp;Delphi</option><option value="38">&nbsp;&nbsp;C++</option><option value="39">&nbsp;&nbsp;Visual Basic</option><option value="40">&nbsp;&nbsp;Java</option><option value="41">&nbsp;&nbsp;Разработка под мобильные платформы</option><option value="42">&nbsp;&nbsp;PowerBuilder</option><option value="43">&nbsp;&nbsp;Microsoft Office</option><option value="44">&nbsp;&nbsp;SharePoint</option><option value="45">&nbsp;&nbsp;XML, XSL, XPath, XQuery</option><option value="46">&nbsp;&nbsp;Программирование</option><option value="47">&nbsp;&nbsp;PHP, Perl, Python</option><option value="48">&nbsp;&nbsp;HTML, JavaScript, VBScript, CSS</option><option disabled="disabled">- Администрирование ОС</option><option value="49">&nbsp;&nbsp;Windows</option><option value="50">&nbsp;&nbsp;Unix-системы</option><option value="51">&nbsp;&nbsp;Другие: Mac OS, PalmOS, BeOS, PocketPC</option><option disabled="disabled">- SQL.RU</option><option value="52">&nbsp;&nbsp;Обсуждение нашего сайта</option><option value="53">&nbsp;&nbsp;Вопрос-Ответ</option><option value="54">&nbsp;&nbsp;Test</option>
+	</select>&nbsp;&nbsp;
+	<input type="submit" class="button small" name="frm_goto" value="Переход">
 
-<br>
-
-<br><div class="ac"></div>
-<br><script>
+<br><div class="wa ac">-=] <a href="javascript://" onclick="chng_focus(&#39;page_top&#39;);">Вернуться вверх</a> [=-</div>
+<div class="ar SmallText">[ <a href="https://sqlru.net/index.php/h/boardusage/#syndicate">Сформировать XML</a> ] [ <a href="https://sqlru.net/feed.php?mode=m&amp;th=349&amp;basic=1"><img src="@BaseFilesUrl/TopicDashboard/rss.gif" title="Сформировать XML" alt="RSS" width="16" height="16"></a> ] [ <a href="https://sqlru.net/pdf.php?th=349&amp;"><img src="@BaseFilesUrl/TopicDashboard/pdf.gif" title="Сформировать PDF для печати" alt="PDF"></a> ]</div>
+<br><div class="ac"><span class="curtime"><b>Текущее время:</b> Thu Jul 06 11:09:59 MSK 2023</span></div>
+<br><div class="SmallText al">Общее время, затраченное на создание страницы: 0.04385 секунд</div><script>
 	min_max_posts('/theme/default/images', 'Свернуть сообщение', 'Максимизировать сообщение');
 	format_code('CODE:', 'Выделить все', 'Показать / скрыть');
 </script>
 </td></tr></tbody></table>
 
 </div>
-
+<div class="footer ac">
+	<b>.::</b>
+	<a href="mailto:noreply@sqlru.net">Обратная связь</a>
+	<b>::</b>
+	<a href="https://sqlru.net/index.php/i/">Начало</a>
+	<b>::.</b>
+	<p class="SmallText">При поддержке: FUDforum 3.1.2.<br>© 2001-2021 <a href="http://fudforum.org/" target="_blank" title="Opens in a new window">FUDforum Bulletin Board Software</a></p>
+</div>
 
 
 </form></body></html>
