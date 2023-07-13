@@ -9,5 +9,9 @@
   },
   "Category": {
     "Formula": "@Category"
+  },
+  "LastMessage": {
+    "Who": "@UserName",
+    "OnDate": "@Now"
   }
 }
