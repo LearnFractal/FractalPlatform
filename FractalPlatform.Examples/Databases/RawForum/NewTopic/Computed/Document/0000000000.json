@@ -11,7 +11,11 @@
     "Formula": "@Category"
   },
   "LastMessage": {
-    "Who": "@UserName",
-    "OnDate": "@Now"
+    "Who": {
+      "Formula": "@UserName"
+    },
+    "OnDate": {
+      "Formula": "@Now"
+    }
   }
 }
