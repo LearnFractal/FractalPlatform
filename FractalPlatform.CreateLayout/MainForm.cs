@@ -1083,6 +1083,11 @@ namespace FractalPlatform.CreateLayout
             SetControlText("@CancelPageScript");
         }
 
+        private void filterPageScriptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetControlText("@FilterPageScript");
+        }
+
         private void savePageVisibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetControlText("@SavePageVisible");
@@ -1202,6 +1207,11 @@ namespace FractalPlatform.CreateLayout
         private void createNextPageButtonToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             SetControlText(@"<input type=""button"" name=""btnNextPage"" value=""Next"" @NextPageDisabled onclick=""@NextPageScript""/>");
+        }
+
+        private void filterPageButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetControlText(@"<input type=""button"" name=""btnFilter"" value=""Filter"" onclick=""@FilterPageScript""/>");
         }
 
         private void bindLabelToolStripMenuItem_Click(object sender, EventArgs e)
