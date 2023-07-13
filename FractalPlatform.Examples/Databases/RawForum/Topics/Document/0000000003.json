@@ -1,36 +1,27 @@
 ﻿{
-   "Category": "Work",
-   "CountMessages": 2,
-   "CountViews": 24,
-   "Description": "tema horosha",
-   "OnDate": "07/08/2023 19:03:40",
-   "Title": "New Tema",
+   "Category": "Home",
+   "CountMessages": 1,
+   "CountViews": 3,
+   "Description": "test",
+   "OnDate": "07/13/2023 16:25:40",
+   "Title": "Test",
    "LastMessage": {
-      "OnDate": "07/12/2023 22:48:33",
+      "OnDate": "07/13/2023 16:29:26",
       "Who": "Bazist"
    },
    "Messages": [
       {
-         "CountMessages": "29",
-         "Message": "Da nu nah",
-         "MessageHtml": "Da nu nah",
+         "CountMessages": "12",
+         "Message": "Kruto",
+         "MessageHtml": "Kruto",
          "NewQuoteMessage": "",
-         "OnDate": "07/08/2023 19:03:49",
+         "OnDate": "07/13/2023 16:29:26",
          "Registered": "07/07/2023 14:02:56",
-         "Who": "Bazist"
-      },
-      {
-         "CountMessages": 0,
-         "Message": "Ooopssss",
-         "MessageHtml": "",
-         "NewQuoteMessage": "",
-         "OnDate": "07/12/2023 22:48:33",
-         "Registered": "",
          "Who": "Bazist"
       }
    ],
    "Who": {
-      "CountMessages": "30",
+      "CountMessages": "12",
       "Name": "Bazist",
       "Registered": "07/07/2023 14:02:56"
    }
