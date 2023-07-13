@@ -89,6 +89,7 @@
             this.createCancelPageButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createPrevPageButtonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.createNextPageButtonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.createFilterPageButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createStandardComponentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openHtmlFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.openJsonFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -114,7 +115,6 @@
             this.cbDatabase = new System.Windows.Forms.ComboBox();
             this.tbLayout = new System.Windows.Forms.TextBox();
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.createFilterPageButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHtml.SuspendLayout();
             this.pnlHtml.SuspendLayout();
             this.pnlHeader.SuspendLayout();
@@ -135,7 +135,7 @@
             this.createPageControlToolStripMenuItem,
             this.createStandardComponentToolStripMenuItem});
             this.menuHtml.Name = "menuHtml";
-            this.menuHtml.Size = new System.Drawing.Size(226, 192);
+            this.menuHtml.Size = new System.Drawing.Size(226, 170);
             // 
             // bindControlToolStripMenuItem
             // 
@@ -396,105 +396,105 @@
             // savePageScriptToolStripMenuItem
             // 
             this.savePageScriptToolStripMenuItem.Name = "savePageScriptToolStripMenuItem";
-            this.savePageScriptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.savePageScriptToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.savePageScriptToolStripMenuItem.Text = "Save Page Script";
             this.savePageScriptToolStripMenuItem.Click += new System.EventHandler(this.savePageScriptToolStripMenuItem_Click);
             // 
             // updatePageScriptToolStripMenuItem
             // 
             this.updatePageScriptToolStripMenuItem.Name = "updatePageScriptToolStripMenuItem";
-            this.updatePageScriptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updatePageScriptToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.updatePageScriptToolStripMenuItem.Text = "Update Page Script";
             this.updatePageScriptToolStripMenuItem.Click += new System.EventHandler(this.updatePageScriptToolStripMenuItem_Click);
             // 
             // cancelPageScriptToolStripMenuItem
             // 
             this.cancelPageScriptToolStripMenuItem.Name = "cancelPageScriptToolStripMenuItem";
-            this.cancelPageScriptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelPageScriptToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.cancelPageScriptToolStripMenuItem.Text = "Cancel Page Script";
             this.cancelPageScriptToolStripMenuItem.Click += new System.EventHandler(this.cancelPageScriptToolStripMenuItem_Click);
             // 
             // filterPageScriptToolStripMenuItem
             // 
             this.filterPageScriptToolStripMenuItem.Name = "filterPageScriptToolStripMenuItem";
-            this.filterPageScriptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filterPageScriptToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.filterPageScriptToolStripMenuItem.Text = "Filter Page Script";
             this.filterPageScriptToolStripMenuItem.Click += new System.EventHandler(this.filterPageScriptToolStripMenuItem_Click);
             // 
             // savePageVisibleToolStripMenuItem
             // 
             this.savePageVisibleToolStripMenuItem.Name = "savePageVisibleToolStripMenuItem";
-            this.savePageVisibleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.savePageVisibleToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.savePageVisibleToolStripMenuItem.Text = "Save Page Visible";
             this.savePageVisibleToolStripMenuItem.Click += new System.EventHandler(this.savePageVisibleToolStripMenuItem_Click);
             // 
             // cancelPageVisibleToolStripMenuItem
             // 
             this.cancelPageVisibleToolStripMenuItem.Name = "cancelPageVisibleToolStripMenuItem";
-            this.cancelPageVisibleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelPageVisibleToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.cancelPageVisibleToolStripMenuItem.Text = "Cancel Page Visible";
             this.cancelPageVisibleToolStripMenuItem.Click += new System.EventHandler(this.cancelPageVisibleToolStripMenuItem_Click);
             // 
             // savePageTextToolStripMenuItem
             // 
             this.savePageTextToolStripMenuItem.Name = "savePageTextToolStripMenuItem";
-            this.savePageTextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.savePageTextToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.savePageTextToolStripMenuItem.Text = "Save Page Text";
             this.savePageTextToolStripMenuItem.Click += new System.EventHandler(this.savePageTextToolStripMenuItem_Click);
             // 
             // cancelPageTextToolStripMenuItem
             // 
             this.cancelPageTextToolStripMenuItem.Name = "cancelPageTextToolStripMenuItem";
-            this.cancelPageTextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelPageTextToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.cancelPageTextToolStripMenuItem.Text = "Cancel Page Text";
             this.cancelPageTextToolStripMenuItem.Click += new System.EventHandler(this.cancelPageTextToolStripMenuItem_Click);
             // 
             // nextPageVisibleToolStripMenuItem
             // 
             this.nextPageVisibleToolStripMenuItem.Name = "nextPageVisibleToolStripMenuItem";
-            this.nextPageVisibleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nextPageVisibleToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.nextPageVisibleToolStripMenuItem.Text = "Next Page Visible";
             this.nextPageVisibleToolStripMenuItem.Click += new System.EventHandler(this.nextPageVisibleToolStripMenuItem_Click);
             // 
             // prevPageVisibleToolStripMenuItem
             // 
             this.prevPageVisibleToolStripMenuItem.Name = "prevPageVisibleToolStripMenuItem";
-            this.prevPageVisibleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prevPageVisibleToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.prevPageVisibleToolStripMenuItem.Text = "Prev Page Visible";
             this.prevPageVisibleToolStripMenuItem.Click += new System.EventHandler(this.prevPageVisibleToolStripMenuItem_Click);
             // 
             // nextPageEnabledToolStripMenuItem
             // 
             this.nextPageEnabledToolStripMenuItem.Name = "nextPageEnabledToolStripMenuItem";
-            this.nextPageEnabledToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nextPageEnabledToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.nextPageEnabledToolStripMenuItem.Text = "Next Page Enabled";
             this.nextPageEnabledToolStripMenuItem.Click += new System.EventHandler(this.nextPageEnabledToolStripMenuItem_Click);
             // 
             // prevPageEnabledToolStripMenuItem
             // 
             this.prevPageEnabledToolStripMenuItem.Name = "prevPageEnabledToolStripMenuItem";
-            this.prevPageEnabledToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prevPageEnabledToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.prevPageEnabledToolStripMenuItem.Text = "Prev Page Enabled";
             this.prevPageEnabledToolStripMenuItem.Click += new System.EventHandler(this.prevPageEnabledToolStripMenuItem_Click);
             // 
             // nextPageDisabledToolStripMenuItem
             // 
             this.nextPageDisabledToolStripMenuItem.Name = "nextPageDisabledToolStripMenuItem";
-            this.nextPageDisabledToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nextPageDisabledToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.nextPageDisabledToolStripMenuItem.Text = "Next Page Disabled";
             this.nextPageDisabledToolStripMenuItem.Click += new System.EventHandler(this.nextPageDisabledToolStripMenuItem_Click);
             // 
             // prevPageDisabledToolStripMenuItem
             // 
             this.prevPageDisabledToolStripMenuItem.Name = "prevPageDisabledToolStripMenuItem";
-            this.prevPageDisabledToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prevPageDisabledToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.prevPageDisabledToolStripMenuItem.Text = "Prev Page Disabled";
             this.prevPageDisabledToolStripMenuItem.Click += new System.EventHandler(this.prevPageDisabledToolStripMenuItem_Click);
             // 
             // userNameToolStripMenuItem
             // 
             this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.userNameToolStripMenuItem.Text = "User Name";
             this.userNameToolStripMenuItem.Click += new System.EventHandler(this.userNameToolStripMenuItem_Click);
             // 
@@ -519,42 +519,42 @@
             // createLabelToolStripMenuItem
             // 
             this.createLabelToolStripMenuItem.Name = "createLabelToolStripMenuItem";
-            this.createLabelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createLabelToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.createLabelToolStripMenuItem.Text = "Label";
             this.createLabelToolStripMenuItem.Click += new System.EventHandler(this.createLabelToolStripMenuItem_Click);
             // 
             // createTextBoxToolStripMenuItem
             // 
             this.createTextBoxToolStripMenuItem.Name = "createTextBoxToolStripMenuItem";
-            this.createTextBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createTextBoxToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.createTextBoxToolStripMenuItem.Text = "TextBox";
             this.createTextBoxToolStripMenuItem.Click += new System.EventHandler(this.createTextBoxToolStripMenuItem_Click);
             // 
             // createButtonToolStripMenuItem
             // 
             this.createButtonToolStripMenuItem.Name = "createButtonToolStripMenuItem";
-            this.createButtonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createButtonToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.createButtonToolStripMenuItem.Text = "Button";
             this.createButtonToolStripMenuItem.Click += new System.EventHandler(this.createButtonToolStripMenuItem_Click);
             // 
             // createCheckBoxToolStripMenuItem
             // 
             this.createCheckBoxToolStripMenuItem.Name = "createCheckBoxToolStripMenuItem";
-            this.createCheckBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createCheckBoxToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.createCheckBoxToolStripMenuItem.Text = "CheckBox";
             this.createCheckBoxToolStripMenuItem.Click += new System.EventHandler(this.createCheckBoxToolStripMenuItem_Click);
             // 
             // createComboBoxToolStripMenuItem
             // 
             this.createComboBoxToolStripMenuItem.Name = "createComboBoxToolStripMenuItem";
-            this.createComboBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createComboBoxToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.createComboBoxToolStripMenuItem.Text = "ComboBox";
             this.createComboBoxToolStripMenuItem.Click += new System.EventHandler(this.createComboBoxToolStripMenuItem_Click);
             // 
             // createComponentToolStripMenuItem
             // 
             this.createComponentToolStripMenuItem.Name = "createComponentToolStripMenuItem";
-            this.createComponentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createComponentToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.createComponentToolStripMenuItem.Text = "Component";
             this.createComponentToolStripMenuItem.Click += new System.EventHandler(this.createComponentToolStripMenuItem_Click);
             // 
@@ -597,6 +597,13 @@
             this.createNextPageButtonToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.createNextPageButtonToolStripMenuItem1.Text = "Next Page Button";
             this.createNextPageButtonToolStripMenuItem1.Click += new System.EventHandler(this.createNextPageButtonToolStripMenuItem1_Click);
+            // 
+            // createFilterPageButtonToolStripMenuItem
+            // 
+            this.createFilterPageButtonToolStripMenuItem.Name = "createFilterPageButtonToolStripMenuItem";
+            this.createFilterPageButtonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createFilterPageButtonToolStripMenuItem.Text = "Filter Page Button";
+            this.createFilterPageButtonToolStripMenuItem.Click += new System.EventHandler(this.createFilterPageButtonToolStripMenuItem_Click);
             // 
             // createStandardComponentToolStripMenuItem
             // 
@@ -858,12 +865,6 @@
             this.webView.CoreWebView2InitializationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs>(this.webView_CoreWebView2InitializationCompleted);
             this.webView.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView_NavigationCompleted);
             this.webView.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView_WebMessageReceived);
-            // 
-            // createFilterPageButtonToolStripMenuItem
-            // 
-            this.createFilterPageButtonToolStripMenuItem.Name = "createFilterPageButtonToolStripMenuItem";
-            this.createFilterPageButtonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.createFilterPageButtonToolStripMenuItem.Text = "Filter Page Button";
             // 
             // MainForm
             // 
