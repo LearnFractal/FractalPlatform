@@ -1209,7 +1209,7 @@ namespace FractalPlatform.CreateLayout
             SetControlText(@"<input type=""button"" name=""btnNextPage"" value=""Next"" @NextPageDisabled onclick=""@NextPageScript""/>");
         }
 
-        private void filterPageButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void createFilterPageButtonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetControlText(@"<input type=""button"" name=""btnFilter"" value=""Filter"" onclick=""@FilterPageScript""/>");
         }
@@ -1334,6 +1334,17 @@ namespace FractalPlatform.CreateLayout
                         "Next",
                         new[] { "disabled" },
                         new[] { "@NextPageDisabled", "@NextPageVisible" });
+        }
+
+        private void bindFilterPageButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //input type=button or <button>
+            BindControl(new[] { "input", "button" },
+                        "btnFilter",
+                        "@FilterPageScript",
+                        null,
+                        null,
+                        "Filter");
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
