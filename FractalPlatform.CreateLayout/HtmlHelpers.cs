@@ -80,6 +80,7 @@ namespace FractalPlatform.CreateLayouts
                                                 <input type=""submit"" id=""btnRefresh"" name=""btn"" value=""Refresh"" style=""display:none;"" />
                                                 <input type=""submit"" id=""btnUpdate"" name=""btn"" value=""Update"" style=""display:none""/>
                                                 <input type=""submit"" id=""btnCancel"" name=""btn"" value=""Cancel"" style=""display:none""/>
+                                                <input type=""submit"" id=""btnFilter"" name=""btn"" value=""Filter"" style=""display:none"" />
                                                 ");
                                 }
                                 else  //not layout location
