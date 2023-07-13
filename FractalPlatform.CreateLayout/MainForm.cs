@@ -1569,7 +1569,6 @@ namespace FractalPlatform.CreateLayout
             }
         }
 
-
         #endregion
     }
 }
