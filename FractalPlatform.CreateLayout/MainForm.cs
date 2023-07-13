@@ -1058,6 +1058,11 @@ namespace FractalPlatform.CreateLayout
             SetControlText("@ClickSubmit");
         }
 
+        private void filterTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetControlText("@FilterText");
+        }
+
         private void editRowUrlToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetControlText("@EditRowUrl");
@@ -1290,7 +1295,7 @@ namespace FractalPlatform.CreateLayout
             BindControl(new[] { "input", "button" },
                         "btnSave",
                         "@SavePageScript",
-                        null,
+                        "@SavePageUrl",
                         null,
                         "@SavePageText",
                         null,
@@ -1303,7 +1308,7 @@ namespace FractalPlatform.CreateLayout
             BindControl(new[] { "input", "button" },
                         "btnCancel",
                         "@CancelPageScript",
-                        null,
+                        "@CancelPageUrl",
                         null,
                         "@CancelPageText",
                         null,
@@ -1316,7 +1321,7 @@ namespace FractalPlatform.CreateLayout
             BindControl(new[] { "input", "button" },
                         "btnPrevPage",
                         "@PrevPageScript",
-                        null,
+                        "@PrevPageUrl",
                         null,
                         "Prev",
                         new[] { "disabled" },
@@ -1329,7 +1334,7 @@ namespace FractalPlatform.CreateLayout
             BindControl(new[] { "input", "button" },
                         "btnNextPage",
                         "@NextPageScript",
-                        null,
+                        "@NextPageUrl",
                         null,
                         "Next",
                         new[] { "disabled" },
@@ -1342,9 +1347,20 @@ namespace FractalPlatform.CreateLayout
             BindControl(new[] { "input", "button" },
                         "btnFilter",
                         "@FilterPageScript",
-                        null,
+                        "@FilterPageUrl",
                         null,
                         "Filter");
+        }
+
+        private void bindFilterTextBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //input type=button or <button>
+            BindControl(new[] { "input", "button" },
+                        "FilterText",
+                        null,
+                        null,
+                        null,
+                        "@FilterText");
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -1547,6 +1563,7 @@ namespace FractalPlatform.CreateLayout
                 RefreshUndoRedoButtons();
             }
         }
+
 
         #endregion
     }
