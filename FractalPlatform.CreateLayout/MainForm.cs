@@ -1219,6 +1219,11 @@ namespace FractalPlatform.CreateLayout
             SetControlText(@"<input type=""button"" name=""btnFilter"" value=""Filter"" onclick=""@FilterPageScript""/>");
         }
 
+        private void createFilterTextBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetControlText(@"<input type=""text"" name=""FilterText"" value=""@FilterText""/>");
+        }
+
         private void bindLabelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //any text
