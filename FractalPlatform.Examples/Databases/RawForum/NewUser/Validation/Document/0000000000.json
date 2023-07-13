@@ -5,9 +5,20 @@
     "MinLen": 3,
     "MaxLen": 16
   },
+  "Age": {
+    "MinValue": 7,
+    "MaxValue": 100
+  },
   "Password": {
-    "IsRequired": true,
-    "MinLen": 3,
-    "MaxLen": 16
+    "IsRequired": "true",
+    "MinLen": "3",
+    "MaxLen": "16",
+    "Formula": "Document.RepeatPassword = @Value"
+  },
+  "RepeatPassword": {
+    "IsRequired": "true",
+    "MinLen": "3",
+    "MaxLen": "16",
+    "Formula": "Document.Password = @Value"
   }
 }

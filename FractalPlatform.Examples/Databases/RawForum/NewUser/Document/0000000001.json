@@ -1,6 +1,11 @@
 {
   "Name": "",
   "Password": "",
-  "Age": 0,
-  "Avatar": ""
+  "RepeatPassword": "",
+  "Age": 20,
+  "Capcha": "",
+  "Gender": "",
+  "Avatar": "",
+  "CountMessages": 0,
+  "Registered": ""
 }

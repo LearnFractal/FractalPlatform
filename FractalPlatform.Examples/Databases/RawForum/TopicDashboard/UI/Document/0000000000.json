@@ -1,4 +1,7 @@
 {
-   "Layout": "TopicDashboard",
-   
+  "Layout": "TopicDashboard",
+  "IsRawPage": true,
+  "PageNumbers": {
+    "ControlType": "PageNumbers"
+  }
 }

@@ -1,5 +1,13 @@
 {
-   "Who": {
+  "Who": {
+    "Name": {
       "Formula": "@UserName"
-   }
+    }
+  },
+  "OnDate": {
+    "Formula": "@Now"
+  },
+  "Category": {
+    "Formula": "@Category"
+  }
 }

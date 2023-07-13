@@ -7,19 +7,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Разработка приложений баз данных">
-    <title>SQLRU.net: форум о разработке приложений баз данных</title>
-    <link rel="search" type="application/opensearchdescription+xml" title="SQLRU.net Search" href="https://sqlru.net/open_search.php">
-    <link rel="alternate" type="application/rss+xml" title="Сформировать XML" href="https://sqlru.net/feed.php?mode=m&amp;l=1&amp;basic=1">
-    <link rel="stylesheet" href="@BaseUrl/files/RawForum/Dashboard/forum.css" media="screen" title="Default Forum Theme">
-    <link rel="stylesheet" href="@BaseUrl/files/RawForum/Dashboard/jquery-ui.css" media="screen">
-    <script src="@BaseUrl/files/RawForum/Dashboard/jquery.js.download"></script>
-    <script async="" src="@BaseUrl/files/RawForum/Dashboard/jquery-ui.js.download"></script>
-    <script src="@BaseUrl/files/RawForum/Dashboard/lib.js.download"></script>
+    <title>Форум о разработке приложений на Fractal Platform</title>
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/forum.css" media="screen" title="Default Forum Theme">
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/jquery-ui.css" media="screen">
+    <script src="@BaseFilesUrl/Dashboard/jquery.js.download"></script>
+    <script async="" src="@BaseFilesUrl/Dashboard/jquery-ui.js.download"></script>
+    <script src="@BaseFilesUrl/Dashboard/lib.js.download"></script>
 </head>
 <body>
     <form action="/" enctype="multipart/form-data" method="post">
         <input type="hidden" name="EditKey" value="" />
         <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" name="FormName" value="@FormName" />
         <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
         <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
         <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
@@ -31,8 +30,7 @@
         <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
         <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none" />
         <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none" />
-
-        <!--  -->
+        <input type="submit" id="btnFilter" name="btn" value="Filter" style="display:none" />
 
         <div class="content">
 
@@ -43,41 +41,35 @@
                         <td>
                             <div id="UserControlPanel">
                                 <ul>
-                                    <li><a href="https://sqlru.net/index.php/s/" title="Поиск"><img src="@BaseUrl/files/RawForum/Dashboard/top_search.png" alt="" width="16" height="16"> Поиск</a></li>
-                                    <li></li>
                                     <li>
-                                        <control attr="">
-
-                                            <a href="@Users.ClickUrl" title="Участники" @Users.ReadOnly @Users.Disabled value="@Users.Value" name="@Users.Name">
-
-                                                <img src="@BaseUrl/files/RawForum/Dashboard/top_members.png" alt="" width="16" height="16">
+                                        <control attr="Users">
+                                            <a href="@ClickUrl" title="Участники" @ReadOnly @Disabled value="@Value" name="@Name">
+                                                <img src="@BaseFilesUrl/Dashboard/top_members.png" alt="" width="16" height="16">
                                                 Участники
-
                                             </a>
-
                                         </control>
                                     </li>
                                     <li>
-                                        <control attr="">
-
-                                            <a href="@Register.ClickUrl" title="Регистрация" @Register.ReadOnly @Register.Disabled value="@Register.Value" name="@Register.Name">
-
-                                                <img src="@BaseUrl/files/RawForum/Dashboard/top_register.png" alt="" width="16" height="18">
+                                        <control attr="Register">
+                                            <a href="@ClickUrl" title="Регистрация" @ReadOnly @Disabled value="@Value" name="@Name">
+                                                <img src="@BaseFilesUrl/Dashboard/top_register.png" alt="" width="16" height="18">
                                                 Регистрация
-
                                             </a>
-
                                         </control>
                                     </li>
                                     <li>
-                                        <img src="@BaseUrl/files/RawForum/Dashboard/top_login.png" alt="" width="16" height="16">
+                                        <control attr="EditCategories">
+                                            <a href="@ClickUrl" title="Категории" @ReadOnly @Disabled value="@Value" name="@Name">
+                                                Категории
+                                            </a>
+                                        </control>
+                                    </li>
+                                    <li>
+                                        <img src="@BaseFilesUrl/Dashboard/top_login.png" alt="" width="16" height="16">
                                         @UserName
                                     </li>
-                                    <li></li>
                                 </ul>
                             </div>
-
-
                             <table cellspacing="1" cellpadding="2" class="ContentTable">
                                 <tbody>
                                     <tr>
@@ -86,131 +78,54 @@
                                         <th class="nw hide1">Тем</th>
                                         <th class="nw ac hide2">Последнее сообщение</th>
                                     </tr>
-                                    <control attr="Topics" repeatable="true">
+                                    <control attr="Categories" repeatable="true">
                                         <tr style="display: table-row" class="row child-c3">
-
                                             <td class="RowStyleA wo hide2">
-
-                                                <img src="@BaseUrl/files/RawForum/Dashboard/icon1.gif" alt="Иконка форума">
-
+                                                <img src="@BaseFilesUrl/Dashboard/icon1.gif" alt="Иконка форума">
                                             </td>
-
                                             <td class="RowStyleB ac wo hide2">
-
-                                                <img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseUrl/files/RawForum/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30">
-
+                                                <img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseFilesUrl/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30">
                                             </td>
-
                                             <td class="RowStyleA wa">
-
-                                                <a href="https://sqlru.net/index.php/f/4/" class="big">
-
+                                                <a href="@EditRowUrl" class="big">
                                                     <span>
                                                         @Title.Value
-
-
-
-
-
-
-
-
-
-
                                                     </span>
-
                                                 </a>
-
                                                 <br>
-
                                                 <span>
                                                     @Description.Value
-
-
-
-
-
-
-
-
                                                 </span>
-
                                             </td>
-
                                             <td class="RowStyleB ac hide1">
-
-                                                <span>
-                                                    @CountViews.Value
-
-
-
-
-
-
-                                                </span>
-
-                                            </td>
-
-                                            <td class="RowStyleB ac hide1">
-
                                                 <span>
                                                     @CountMessages.Value
-
-
-
-
                                                 </span>
-
                                             </td>
-
-                                            <td class="RowStyleA ac nw hide2">
-
-                                                <span class="DateText">
-
-                                                    <span>
-                                                        @OnDate.Value
-
-
-                                                    </span>
-
+                                            <td class="RowStyleB ac hide1">
+                                                <span>
+                                                    @CountTopics.Value
                                                 </span>
-
+                                            </td>
+                                            <td class="RowStyleA ac nw hide2">
+                                                <span class="DateText">
+                                                    <span>
+                                                        @LastMessage.OnDate.Value
+                                                    </span>
+                                                </span>
                                                 <br>
                                                 От:
-
-
-
-
-
-
-
-
-
-
-
-                                                <a href="https://sqlru.net/index.php/u/108/">
-
+                                                <a href="@LastMessage.Who.ClickUrl">
                                                     <span>
-                                                        @Who.Value
+                                                        @LastMessage.Who.Value
                                                     </span>
-
                                                 </a>
-
-                                                <a href="https://sqlru.net/index.php/m/2616/#msg_2616">
-
-                                                    <img title="Re: Помогите с запросом в MS SQL" src="@BaseUrl/files/RawForum/Dashboard/goto.gif" alt="Re: Помогите с запросом в MS SQL" width="9" height="9">
-
-                                                </a>
-
                                             </td>
-
                                         </tr>
-
                                     </control>
                                 </tbody>
                             </table>
                             <div class="fr">
-
                                 <input type="hidden" name="SQ" value="0">
                                 <table border="0" cellspacing="0" cellpadding="3">
                                     <tbody>
@@ -240,33 +155,13 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
-                            </div><br>
-                            <table cellspacing="1" cellpadding="2" class="ContentTable">
-                                <tbody>
-                                    <tr>
-                                        <th class="wa">
-                                            Сейчас на форуме [  ]
-                                            [  ]
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                </tbody>
-                            </table><br>
-                            <div><br></div>
-                            <br><div class="ac"></div>
-                            <br>
-                            <script>
-                                min_max_cats("/theme/default/images", "Свернуть категорию", "Развернуть категорию", "", "");
-                            </script>
+                            </div>
+                            <control attr="PageNumbers" type="standard">
+                            </control>
                         </td>
                     </tr>
                 </tbody>
             </table>
-
         </div>
     </form>
 </body>

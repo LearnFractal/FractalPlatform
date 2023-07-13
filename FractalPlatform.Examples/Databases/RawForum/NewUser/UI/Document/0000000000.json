@@ -3,7 +3,22 @@
   "Password": {
     "Style": "Type:Password"
   },
+  "RepeatPassword": {
+    "Style": "Type:Password"
+  },
+  "Gender": {
+    "ControlType": "ComboBox"
+  },
+  "Capcha": {
+    "Style": "Type:Capcha"
+  },
   "Avatar": {
     "ControlType": "UploadFile"
+  },
+  "CountMessages": {
+    "Visible": false
+  },
+  "Registered": {
+    "Visible": false
   }
 }

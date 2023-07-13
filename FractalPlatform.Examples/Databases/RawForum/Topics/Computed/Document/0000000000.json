@@ -1,0 +1,23 @@
+{
+  "Who": {
+    "CountMessages": {
+      "Formula": "@WhoCountMessages"
+    },
+    "Registered": {
+      "Formula": "@WhoRegistered"
+    }
+  },
+  "Messages": [
+    {
+      "CountMessages": {
+        "Formula": "@UserMessageCountMessages"
+      },
+      "Registered": {
+        "Formula": "@UserMessageRegistered"
+      },
+      "MessageHtml": {
+        "Formula": "@MessageHtml"
+      }
+    }
+  ]
+}

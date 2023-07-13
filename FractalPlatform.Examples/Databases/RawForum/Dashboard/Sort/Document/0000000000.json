@@ -1,0 +1,12 @@
+{
+  "Categories": [
+    {
+      "Title": {
+        "Sort": {
+          "Enabled": true,
+          "IsAscending": true
+        }
+      }
+    }
+  ]
+}

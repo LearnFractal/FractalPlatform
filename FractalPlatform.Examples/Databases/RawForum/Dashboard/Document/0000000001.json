@@ -5,33 +5,11 @@
   "Logout": "Log Out",
   "Register": "Register",
   "Users": "Users",
-  "NewTopic": "New Topic",
-  "Topics": [
+  "EditCategories": "Edit Categories",
+  "PageNumbers": "Page Numbers",
+  "Categories": [
     {
-      "Title": "My First Topic",
-      "Description": "Desc1",
-      "Who": "Bob",
-      "OnDate": "",
-      "CountMessages": 0,
-      "CountViews": 0,
-      "LastMessage": {
-        "OnDate": "",
-        "Who": "Bob"
-      },
-      "Message": "Put your message here"
-    },
-    {
-      "Title": "My Second Topic",
-      "Description": "Desc2",
-      "Who": "Bob",
-      "OnDate": "",
-      "CountMessages": 0,
-      "CountViews": 0,
-      "LastMessage": {
-        "OnDate": "",
-        "Who": "Bob"
-      },
-      "Message": "Put your message here"
+      "Title": ""
     }
   ]
 }

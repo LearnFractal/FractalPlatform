@@ -1,6 +1,12 @@
-{
-  "Name": "Bob",
-  "Password": "6A20D08E3A43AF3C3523A747986632AB",
-  "Age": 21,
-  "Avatar": "bob.png"
+﻿{
+   "Age": 21,
+   "Avatar": "bob.png",
+   "CountMessages": "30",
+   "Name": "Bazist",
+   "Password": "7DA55F449235BDC18953A4F8221CFDA8",
+   "Registered": "07/07/2023 14:02:56",
+   "Theme": "LightBlue",
+   "Roles": [
+      "Admin"
+   ]
 }

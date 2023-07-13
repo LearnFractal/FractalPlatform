@@ -1,4 +1,7 @@
 {
-   "Layout": "Dashboard",
-   "IsRawPage": true
+  "Layout": "Dashboard",
+  "IsRawPage": true,
+  "PageNumbers": {
+    "ControlType": "PageNumbers"
+  }
 }

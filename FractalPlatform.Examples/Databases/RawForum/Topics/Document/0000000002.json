@@ -1,13 +1,46 @@
-{
-  "Title": "My Second Topic",
-  "Description": "Desc2",
-  "Who": "Bob",
-  "OnDate": "",
-  "CountMessages": 0,
-  "CountViews": 0,
-  "LastMessage": {
-    "OnDate": "",
-    "Who": "Bob"
-  },
-  "Message": "Put your message here"
+﻿{
+   "Category": "Work",
+   "CountMessages": 3,
+   "CountViews": 29,
+   "Description": "Desc2",
+   "OnDate": "07/07/2023 14:02:56",
+   "Title": "My Second Topic",
+   "LastMessage": {
+      "OnDate": "",
+      "Who": ""
+   },
+   "Messages": [
+      {
+         "CountMessages": 0,
+         "Message": "net pizdecu",
+         "MessageHtml": "",
+         "NewQuoteMessage": "",
+         "OnDate": "07/08/2023 12:22:16",
+         "Registered": "",
+         "Who": "Bazist"
+      },
+      {
+         "CountMessages": 0,
+         "Message": "Net pizdecu !",
+         "MessageHtml": "",
+         "NewQuoteMessage": "",
+         "OnDate": "07/08/2023 12:24:13",
+         "Registered": "",
+         "Who": "Bazist"
+      },
+      {
+         "CountMessages": 0,
+         "Message": "Test",
+         "MessageHtml": "",
+         "NewQuoteMessage": "",
+         "OnDate": "07/08/2023 14:10:51",
+         "Registered": "",
+         "Who": "Bazist"
+      }
+   ],
+   "Who": {
+      "CountMessages": "29",
+      "Name": "Bazist",
+      "Registered": "07/07/2023 14:02:56"
+   }
 }

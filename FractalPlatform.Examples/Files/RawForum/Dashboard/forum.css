@@ -68,7 +68,7 @@ a.CatLink {
 .CatDesc {
 	color: #000;
 	height: 23px;
-	background: url('/theme/default/images/tableHeaderbg2.png');
+	background: url('https://sqlru.net/theme/default/images/tableHeaderbg2.png');
 }
 
 .CatLockedName {
@@ -105,7 +105,7 @@ th {
 	font-weight: bold;
 	height: 23px;
 	vertical-align: middle;
-	background: url('/theme/default/images/tableHeaderbg.png');
+	background: url('https://sqlru.net/theme/default/images/tableHeaderbg.png');
 }
 
 a.thLnk:link, a.thLnk:active, a.thLnk:visited {
@@ -235,7 +235,7 @@ cite {
 	font-weight: bold;
 	margin-left: 20px;
 	display: block;
-	background: transparent url('/theme/default/images/quote.gif') left top no-repeat;
+	background: transparent url('https://sqlru.net/theme/default/images/quote.gif') left top no-repeat;
 	padding-left: 25px;
 }
 
@@ -337,8 +337,8 @@ figcaption {
 }
 
 a[href^="mailto:"] {
-	background: url(/theme/default/images/email.png) no-repeat right center;
-	padding-right:17px;
+	background: url(https://sqlru.net/theme/default/images/email.png) no-repeat right center;
+	padding-right: 17px;
 }
 
 .StClr {
@@ -668,8 +668,8 @@ img.r {
 /* Make textareas's resizable (jQuery UI). */
 .ui-resizable-s {
 	height: 9px;
-	background: #eee url("/theme/default/images/grippie.gif") no-repeat center 2px;
- 	border: 1px solid #ddd;
+	background: #eee url("https://sqlru.net/theme/default/images/grippie.gif") no-repeat center 2px;
+	border: 1px solid #ddd;
 	border-top-width: 0;
 	overflow: hidden;
 }
@@ -764,10 +764,10 @@ input.button:link, input.button:visited, input.button {
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
-input.button:hover, input.button:hover {
-	background:#e2e2e2 url(/theme/default/images/button.png) repeat-x scroll left -115px;
-	color:#000;
-}
+	input.button:hover, input.button:hover {
+		background: #e2e2e2 url(https://sqlru.net/theme/default/images/button.png) repeat-x scroll left -115px;
+		color: #000;
+	}
 .small.button, .small.button:visited   { font-size: 11px; }
 
 /* Karma voting */

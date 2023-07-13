@@ -1,7 +1,17 @@
 {
   "Title": "",
-  "Who": "",
-  "CountMessages": 1,
+  "Description": "",
+  "Category": "",
+  "Who": {
+    "Name": "Bazist",
+    "CountMessages": 0,
+    "Registered": ""
+  },
+  "OnDate": "",
+  "CountMessages": 0,
   "CountViews": 1,
-  "Message": "Put your message here"
+  "LastMessage": {
+    "Who": "",
+    "OnDate": ""
+  }
 }

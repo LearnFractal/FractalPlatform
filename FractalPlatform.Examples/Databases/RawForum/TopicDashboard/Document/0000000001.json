@@ -1,31 +1,14 @@
 {
+  "Login": "Login",
+  "Password": "Password",
+  "LoginButton": "Login",
   "Register": "Register",
   "Users": "Users",
-  "NewTopic": "New Topic",
   "NewMessage": "New Message",
-  "Title": "Hello",
-  "Description": "",
+  "PageNumbers": "Page Numbers",
   "Messages": [
     {
-      "Message": "Hello1",
-      "OnDate": "",
-      "Who": "Bazist",
-      "CountMessages": 1,
-      "Registered": "07/07/2023 14:02:56"
-    },
-    {
-      "Message": "Hello2",
-      "OnDate": "",
-      "Who": "Bazist",
-      "CountMessages": 1,
-      "Registered": "07/07/2023 14:02:56"
-    },
-    {
-      "Message": "Hello3",
-      "OnDate": "",
-      "Who": "Bazist",
-      "CountMessages": 1,
-      "Registered": "07/07/2023 14:02:56"
+      "NewQuoteMessage": "New Quote Message"
     }
   ]
 }

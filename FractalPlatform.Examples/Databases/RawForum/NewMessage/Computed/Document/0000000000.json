@@ -1,0 +1,8 @@
+{
+  "Who": {
+    "Formula": "@UserName"
+  },
+  "OnDate": {
+    "Formula": "@Now"
+  }
+}
