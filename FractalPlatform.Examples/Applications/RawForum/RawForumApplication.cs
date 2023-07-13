@@ -209,13 +209,11 @@ namespace FractalPlatform.Examples.Applications.RawForum
                         if (TryLogin(loginAndPass[0], loginAndPass[1]))
                         {
                             if (eventInfo.Collection.Name == "CategoryDashboard")
-                            {
                                 CategoryDashboard();
-                            }
-                            else
-                            {
+                            else if (eventInfo.Collection.Name == "TopicDashboard")
                                 TopicDashboard();
-                            }
+                            else
+                                Dashboard();
                         }
                         else
                         {
