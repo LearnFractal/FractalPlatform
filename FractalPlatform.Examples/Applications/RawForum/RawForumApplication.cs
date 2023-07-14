@@ -151,7 +151,7 @@ namespace FractalPlatform.Examples.Applications.RawForum
                     {
                         var message = computedInfo.Collection
                                                   .GetWhere(computedInfo.AttrPath)
-                                                  .Value("{'Messages':[{'Message':$}]}");
+                                                  .Value("{'Messages':[{'Message':$}]}") ?? string.Empty;
 
                         message = message.Replace("<", "&lt;").Replace(">", "&gt;");
 
@@ -188,9 +188,18 @@ namespace FractalPlatform.Examples.Applications.RawForum
                 case "EditTopics":
                     {
                         Client.SetDefaultCollection("Topics")
-                              .GetAll()
+                              .GetWhere("{'Category':@Category}", _category)
                               .WantModifyExistingDocuments()
                               .OpenForm(result => CategoryDashboard());
+
+                        return true;
+                    }
+                case "EditTopic":
+                    {
+                        Client.SetDefaultCollection("Topics")
+                              .GetDoc(_topicID)
+                              .WantModifyExistingDocuments()
+                              .OpenForm(result => TopicDashboard());
 
                         return true;
                     }
