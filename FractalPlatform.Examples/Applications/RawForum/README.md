@@ -2,8 +2,8 @@
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Forum/ForumApplication.cs)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Forum)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/RawForum/RawForumApplication.cs)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/RawForum)
 
 ## Functionality
 
@@ -11,8 +11,12 @@ Application moderates simple web forum with topics
 
 - Login user
 - Registration user
-- Create a topic
-- Leave message in topic
+- List of categories
+- Create a topic in a category
+- Leave message in a topic
+- Quote message in a topic
+- Edit/Moderate categories
+- Edit/Moderate topics
 - Show amount of views and amount of answers in each topic
 
 ## How it implemented
@@ -21,5 +25,5 @@ Application moderates simple web forum with topics
 
 ## Web Link
 
-[Forum](http://booben.com/jupiter/?app=Forum)
+[Forum](http://booben.com/jupiter/RawForum)
 
