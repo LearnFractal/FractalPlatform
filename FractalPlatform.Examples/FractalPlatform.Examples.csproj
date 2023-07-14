@@ -26,7 +26,6 @@
     <Folder Include="Databases\RawForum\" />
     <Folder Include="Databases\SocialNetwork\" />
     <Folder Include="Databases\VideoLibrary\" />
-    <Folder Include="Files\RawForum\" />
   </ItemGroup>
 
   <ItemGroup>
