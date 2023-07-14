@@ -2,7 +2,13 @@
   "Password": {
     "Visible": false
   },
+  "RepeatPassword": {
+    "Visible": false
+  },
   "Avatar": {
     "ControlType": "Picture"
+  },
+  "Capcha": {
+    "Visible": false
   }
 }

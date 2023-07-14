@@ -1,8 +1,9 @@
 {
   "Name": { "Index": 1 },
   "Password": { "Index": 2 },
-  "Age": { "Index": 3 },
-  "CountMessages": { "Index": 4 },
-  "Registered": { "Index": 5 },
-  "Avatar": { "Index": 6 }
+  "Gender": { "Index": 3 },
+  "Age": { "Index": 4 },
+  "CountMessages": { "Index": 5 },
+  "Registered": { "Index": 6 },
+  "Avatar": { "Index": 7 }
 }

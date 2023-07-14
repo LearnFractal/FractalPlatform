@@ -27,6 +27,20 @@
       ]
     }
   },
+  "Register": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Users": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
   "Messages": [
     {
       "NewQuoteMessage": {
