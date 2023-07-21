@@ -17,15 +17,15 @@ namespace FractalPlatform.Examples.Applications.RawForum
         {
             CloseIfOpenedForm("Dashboard");
 
-            var topics = Client.SetDefaultCollection("Categories")
-                               .GetAll()
-                               .ToStorage("{'Title':$,'Description':$,'CountMessages':$,'CountTopics':$,'LastMessage':{'Who':$,'OnDate':$}}");
+            var categories = Client.SetDefaultCollection("Categories")
+                                   .GetAll()
+                                   .ToStorage("{'Title':$,'Description':$,'CountMessages':$,'CountTopics':$,'LastMessage':{'Who':$,'OnDate':$}}");
 
             Client.SetDefaultCollection("Dashboard")
                   .GetFirstDoc()
                   .ToCollection()
                   .RemovePartDocument("{'Categories':$}")
-                  .MergeToArrayPath(topics, "Categories")
+                  .MergeToArrayPath(categories, "Categories")
                   .OpenForm();
         }
 
