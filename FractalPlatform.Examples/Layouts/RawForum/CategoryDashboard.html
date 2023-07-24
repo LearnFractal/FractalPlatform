@@ -3,9 +3,8 @@
 <head>
     <script src="@BaseUrl/js/frmain.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <title>Форум про розробку на Fractal Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Разработка приложений баз данных">
     <control attr="Category">
         <title>@Value</title>
     </control>
@@ -47,7 +46,7 @@
                                     <li>
                                         <input type="text" name="FilterText" value="@FilterText" />
                                         <a href="@FilterPageUrl" title="Поиск">
-                                            <img src="@BaseFilesUrl/Dashboard/top_search.png" alt="" width="16" height="16"> Поиск
+                                            <img src="@BaseFilesUrl/Dashboard/top_search.png" alt="" width="16" height="16"> Пошук
                                         </a>
                                     </li>
                                     <li></li>
@@ -55,7 +54,7 @@
                                         <control attr="Users">
                                             <a href="@ClickUrl" title="Участники" @ReadOnly @Disabled value="@Value" name="@Name">
                                                 <img src="@BaseFilesUrl/Dashboard/top_members.png" alt="" width="16" height="16">
-                                                Участники
+                                                Учасники
                                             </a>
                                         </control>
                                     </li>
@@ -63,14 +62,14 @@
                                         <control attr="Register">
                                             <a href="@ClickUrl" title="Регистрация" @ReadOnly @Disabled value="@Value" name="@Name">
                                                 <img src="@BaseFilesUrl/Dashboard/top_register.png" alt="" width="16" height="18">
-                                                Регистрация
+                                                Реєстрація
                                             </a>
                                         </control>
                                     </li>
                                     <li>
                                         <control attr="EditTopics">
                                             <a href="@ClickUrl" title="Топики" @ReadOnly @Disabled value="@Value" name="@Name">
-                                                Редактировать топики
+                                                Редагувати топіки
                                             </a>
                                         </control>
                                     </li>
@@ -86,9 +85,9 @@
                                         <th class="hide2">&nbsp;</th>
                                         <th class="hide2">&nbsp;</th>
                                         <th class="wa">Тема</th>
-                                        <th class="wo hide1">Ответы</th>
-                                        <th class="wo hide1">Просмотров</th>
-                                        <th class="nw hide2">Последнее сообщение</th>
+                                        <th class="wo hide1">Відповіді</th>
+                                        <th class="wo hide1">Переглядів</th>
+                                        <th class="nw hide2">Останнє повідомлення</th>
                                     </tr>
                                     <control attr="Topics" repeatable="true">
                                         <tr style="display: table-row" class="row child-c3">
@@ -96,7 +95,7 @@
                                                 <img src="@BaseFilesUrl/Dashboard/icon1.gif" alt="Иконка форума">
                                             </td>
                                             <td class="RowStyleB ac wo hide2">
-                                                <img title="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" src="@BaseFilesUrl/Dashboard/existing_content.png" alt="Только зарегистрированные участники форума могут отслеживать и читать &amp; новые сообщений" width="30" height="30">
+                                                <img src="@BaseFilesUrl/Dashboard/existing_content.png" width="30" height="30">
                                             </td>
                                             <td class="RowStyleA wa">
                                                 <a href="@EditRowUrl" class="big">
@@ -108,7 +107,7 @@
                                                 <span>
                                                     @Description.Value
                                                 </span>
-                                                <div class="TopBy">От: <a href="@Who.Name.ClickUrl">@Who.Name.Value</a> - <span class="DateText">@OnDate.Value</span></div>
+                                                <div class="TopBy">Від: <a href="@Who.Name.ClickUrl">@Who.Name.Value</a> - <span class="DateText">@OnDate.Value</span></div>
                                             </td>
                                             <td class="RowStyleB ac hide1">
                                                 <span>
@@ -141,7 +140,7 @@
                             <control attr="NewTopic">
                                 <br />
                                 <div class="rel GenText nw vt fr" style="right:0;">
-                                    <a href="@ClickUrl"><img src="@BaseFilesUrl/Dashboard/new_thread.gif" alt="Создать новую тему"></a>
+                                    <a href="@ClickUrl"><img src="@BaseFilesUrl/Dashboard/new_thread.gif" alt="Створити нову тему"></a>
                                 </div>
                             </control>
                             <div class="fr">
@@ -152,7 +151,7 @@
                                             <td>
                                                 <control attr="Login">
                                                     <label>
-                                                        Имя:<br>
+                                                        Логін:<br>
                                                         <input class="SmallText" type="text" name="@Name" size="18" @ReadOnly @Disabled value="@Value">
                                                     </label>
                                                 </control>
