@@ -254,7 +254,9 @@ namespace FractalPlatform.CreateLayout
                          str != "@UserName" &&
                          str != "@BaseUrl" &&
                          str != "@BaseFilesUrl" &&
-                         str != "@EditRowUrl")
+                         str != "@AddRowUrl" &&
+                         str != "@EditRowUrl" &&
+                         str != "@DeleteRowUrl")
                     {
                         var replacement = str.Replace("@", "@" + attrPrefix.Replace("\\", ".") + ".");
 
@@ -1063,9 +1065,19 @@ namespace FractalPlatform.CreateLayout
             SetControlText("@FilterText");
         }
 
+        private void addRowUrlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetControlText("@AddRowUrl");
+        }
+
         private void editRowUrlToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetControlText("@EditRowUrl");
+        }
+
+        private void deleteRowUrlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetControlText("@DeleteRowUrl");
         }
 
         private void comboBoxItemsToolStripMenuItem_Click(object sender, EventArgs e)
