@@ -82,8 +82,12 @@
   "Feedback": {
     "Title": { "Index": 801 },
     "Stars": { "Index": 802 },
-    "Name": { "Index": 803 },
-    "Contacts": { "Index": 804 },
-    "Feedback": { "Index": 805 }
+    "Position": { "Index": 803 },
+    "Expirience": { "Index": 804 },
+    "Gender": { "Index": 805 },
+    "Age": { "Index": 806 },
+    "Name": { "Index": 807 },
+    "Contacts": { "Index": 808 },
+    "Feedback": { "Index": 809 }
   }
 }
