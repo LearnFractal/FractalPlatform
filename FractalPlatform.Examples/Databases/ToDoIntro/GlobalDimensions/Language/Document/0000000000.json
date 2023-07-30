@@ -31,7 +31,7 @@
       "UA": "Вивчаємо JSON формат"
     },
     {
-      "EN": "Let\'s start from JSON",
+      "EN": "Let\\'s start from JSON",
       "UA": "Давайте почнемо з JSON"
     },
     {
@@ -43,7 +43,7 @@
       "UA": "Попередня сторінка"
     },
     {
-      "EN": "That\'s it. We can describe almost all objects in the real word in JSON",
+      "EN": "That\\'s it. We can describe almost all objects in the real word in JSON",
       "UA": "Це все. Ми можеме описати майже всі обєкти в реальному світі за допомогою JSON"
     },
     {
@@ -51,20 +51,20 @@
       "UA": "Крок 1 з 4"
     },
     {
-      "EN": "Let\'s make you first application - ToDo list",
+      "EN": "Let\\'s make you first application - ToDo list",
       "UA": "Давайте створимо перший наш додаток - ToDo list"
     },
     {
-      "EN": "First of all let\'s create JSON that describes our ToDo list.",
+      "EN": "First of all let\\'s create JSON that describes our ToDo list.",
       "UA": "Перш за все давайте створимо JSON що описує наш ToDo list."
     },
     {
-      "EN": "That\'s it ! You have created your first application.",
+      "EN": "That\\'s it ! You have created your first application.",
       "UA": "Це все ! Ви щойно створили ваш перший веб додаток."
     },
     {
-      "EN": "Click \'Test Me!\' button to check your app !",
-      "UA": "Натисніть \'Test Me!\' посилання щоб перевірити Ваш перший додаток !"
+      "EN": "Click \\'Test Me!\\' button to check your app !",
+      "UA": "Натисніть \\'Test Me!\\' посилання щоб перевірити Ваш перший додаток !"
     },
     {
       "EN": "Test Me!",
@@ -83,7 +83,7 @@
       "UA": "Хм. Це було просто, але що якщо я хочу додати категорії в мій ToDo list ?"
     },
     {
-      "EN": "Let\'s split our tasks by Home, Work, School categories",
+      "EN": "Let\\'s split our tasks by Home, Work, School categories",
       "UA": "Давайте розділимо задачі на Home, Work, School категорії"
     },
     {
@@ -123,7 +123,7 @@
       "UA": "Кожна колода має що найменьше одну карту. Ми називаємо це основний Document"
     },
     {
-      "EN": "Let\'s add Validation dimension, that describes how to validate attributes in Document",
+      "EN": "Let\\'s add Validation dimension, that describes how to validate attributes in Document",
       "UA": "Давайте додамо Validation вимір, що описує як потрібно валідувати атрибут в документі"
     },
     {
@@ -147,7 +147,7 @@
       "UA": "Давайте спробуємо додати більш серйозну функіональність для нашого ToDo list. Нам потрібен Report !"
     },
     {
-      "EN": "Let\'s start from button. We need to add button attribute in our Document",
+      "EN": "Let\\'s start from button. We need to add button attribute in our Document",
       "UA": "Давайте почнемо з кнопки. Додамо новий атрибут в наш Document"
     },
     {
@@ -244,7 +244,7 @@
     },
     {
       "EN": "Name",
-      "UA": "Ім\'я"
+      "UA": "Ім\\'я"
     },
     {
       "EN": "Contacts",
@@ -373,6 +373,14 @@
     {
       "EN": "Full Stack Developer",
       "UA": "Full Stack Розробник"
+    },
+    {
+      "EN": "Tech Lead/Architect",
+      "UA": "Технічний Лідер/Архітектор"
+    },
+    {
+      "EN": "Sales",
+      "UA": "Продажі"
     },
     {
       "EN": "Manager",
