@@ -78,7 +78,7 @@
     "Desc1a": { "ControlType": "Label" },
     "Desc1b": { "ControlType": "Label" },
     "Promo": { "ControlType": "Label" },
-    "Register": { "ControlType": "Link" },
+    "Register": { "ControlType": "Label" },
     "Picture1": {"ControlType": "Picture"}
   },
   "Feedback": {
