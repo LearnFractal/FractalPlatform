@@ -81,7 +81,7 @@ namespace FractalPlatform.Examples.Applications.SocialNetwork
                                     </td>
                                  </tr>";
 
-                    html = html.Replace("@OnClickScript", this.OnEditComponentRowScript(domControl, post.Number));
+                    html = html.Replace("@OnClickScript", this.OnEditRowScript(domControl, post.Number));
                     html = html.Replace("@Number", post.Number.ToString());
                     html = html.Replace("@Message", post.Message);
                     html = html.Replace("@Who", post.Who);

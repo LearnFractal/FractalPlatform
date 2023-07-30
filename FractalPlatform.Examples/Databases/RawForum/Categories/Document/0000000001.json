@@ -1,10 +1,10 @@
 ﻿{
-   "CountMessages": 11,
-   "CountTopics": 0,
-   "Description": "Desc1",
-   "Title": "Work",
-   "LastMessage": {
-      "OnDate": "07/12/2023 22:48:33",
-      "Who": "Bazist"
-   }
+  "CountMessages": 0,
+  "CountTopics": 0,
+  "Description": "Будь які питання від новачків на платформі",
+  "Title": "Загальні питання",
+  "LastMessage": {
+    "OnDate": "07/12/2023 22:48:33",
+    "Who": "Bazist"
+  }
 }
