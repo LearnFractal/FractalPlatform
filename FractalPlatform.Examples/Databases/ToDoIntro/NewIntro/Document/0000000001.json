@@ -75,19 +75,19 @@
     "Desc1": "Please register on Fractal Platform by promo code",
     "Desc1a": "Fractal Platform provides full lifecycle for developers and customers from learning",
     "Desc1b": "to participate in real projects as part of team",
-    "Promo": "GloryToUkraine",
-    "Register": "https://booben.com",
+    "Promo": "Promo codes temporary not available. Please use Feedback form on the next page.",
+    "Register": "https://fraplat.com",
     "Picture1": "Projects.jpg"
   },
   "Feedback": {
     "Title": "If you enjoy this tutorial, please leave feedback",
     "Stars": 5,
-    "Position": "Frontend Developer",
-    "Expirience": "<1 years",
+    "Position": "Student",
+    "Expirience": "No Expirience",
     "Gender": "Male",
     "Age": "15-20",
     "Name": "",
-    "Contacts": "",
+    "Contacts": "your@gmail.com",
     "Feedback": ""
   }
 }
