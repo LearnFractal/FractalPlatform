@@ -31,7 +31,7 @@
       "UA": "Вивчаємо JSON формат"
     },
     {
-      "EN": "Let\\'s start from JSON",
+      "EN": "Let\'s start from JSON",
       "UA": "Давайте почнемо з JSON"
     },
     {
@@ -123,7 +123,7 @@
       "UA": "Кожна колода має що найменьше одну карту. Ми називаємо це основний Document"
     },
     {
-      "EN": "Let\\'s add Validation dimension, that describes how to validate attributes in Document",
+      "EN": "Let\'s add Validation dimension, that describes how to validate attributes in Document",
       "UA": "Давайте додамо Validation вимір, що описує як потрібно валідувати атрибут в документі"
     },
     {
@@ -147,7 +147,7 @@
       "UA": "Давайте спробуємо додати більш серйозну функіональність для нашого ToDo list. Нам потрібен Report !"
     },
     {
-      "EN": "Let\\'s start from button. We need to add button attribute in our Document",
+      "EN": "Let\'s start from button. We need to add button attribute in our Document",
       "UA": "Давайте почнемо з кнопки. Додамо новий атрибут в наш Document"
     },
     {
@@ -453,6 +453,10 @@
     {
       "EN": "50-60",
       "UA": "50-60"
+    },
+    {
+      "EN": "Promo codes temporary not available. Please use Feedback form on the next page.",
+      "UA": "Промокоди тимчасово недоступні. Будь-ласка, заповніть форму на наступній сторінці для реєстрації."
     }
   ]
 }
