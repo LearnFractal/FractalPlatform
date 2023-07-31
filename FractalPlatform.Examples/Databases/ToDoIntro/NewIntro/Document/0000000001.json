@@ -23,7 +23,7 @@
   },
   "Step 2 of 4": {
     "Tilte": "Yep. It was easy, but what about categories in ToDo list ?",
-    "Desc1": "Let's split our tasks by Home, Work, School categories",
+    "Desc1": "Let's split our tasks by Education and Home categories",
     "Picture1": "home_work_school.jpg",
     "Desc2": "Here we modified JSON to add categories.",
     "Picture2": "ToDoListV2.png",
