@@ -18,12 +18,12 @@
     "Desc2": "That's it ! You have created your first application.",
     "Desc2a": "Click 'Test Me!' button to check your app !",
     "ToDoListV1": "Test Me!",
-    "Desc3": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD (Create/Read/Update/Delete operations), Delete application. It is so easy !",
+    "Desc3": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD (Create/Read/Update/Delete operations). It is so easy !",
     "Picture3": "Web_Fractal_Developers.gif"
   },
   "Step 2 of 4": {
     "Tilte": "Yep. It was easy, but what about categories in ToDo list ?",
-    "Desc1": "Let's split our tasks by Home, Work, School categories",
+    "Desc1": "Let's split our tasks by Education and Home categories",
     "Picture1": "home_work_school.jpg",
     "Desc2": "Here we modified JSON to add categories.",
     "Picture2": "ToDoListV2.png",
