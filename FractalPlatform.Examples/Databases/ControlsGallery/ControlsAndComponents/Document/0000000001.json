@@ -273,7 +273,7 @@
       }
     },
     {
-      "Description": "Receive web browser parameters, such as GPS coordinates.",
+      "Description": "Receive web browser parameters on client side, such as GPS coordinates.",
       "Name": "BrowserParams",
       "Dimensions": {
         "Document": "{'Control':{'Lat':'','Lng':''}}",
