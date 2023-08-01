@@ -57,7 +57,7 @@ namespace FractalPlatform.CreateLayouts
                                     sb.AppendLine();
 
                                     sb.Append(@"<script src=""@BaseUrl/js/frmain.js""></script> 
-                                               <link rel=""stylesheet"" href=""@BaseUrl/css/@Theme.css"">
+                                               <link rel=""stylesheet"" href=""@BaseUrl/css/@UserTheme.css"">
                                                <link rel=""stylesheet"" href=""@BaseUrl/css/calendar.css"">
                                                @Styles");
 
