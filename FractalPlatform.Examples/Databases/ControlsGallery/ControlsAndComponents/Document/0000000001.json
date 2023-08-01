@@ -271,6 +271,20 @@
           "Appartment": "1"
         }
       }
+    },
+    {
+      "Description": "Receive web browser parameters, such as GPS coordinates.",
+      "Name": "BrowserParams",
+      "Dimensions": {
+        "Document": "{'Control':{'Lat':'','Lng':''}}",
+        "UI": "{'ControlType':'BrowserParams'}"
+      },
+      "Example": {
+        "Control": {
+          "Lat": "",
+          "Lng": ""
+        }
+      }
     }
   ],
   "Controls": [
