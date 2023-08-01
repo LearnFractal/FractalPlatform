@@ -1480,7 +1480,7 @@ namespace FractalPlatform.CreateLayout
                 //import html
                 var html = File.ReadAllText(fileName);
 
-                html = HtmlHelpers.AddScriptsToHtml(html, "@BaseUrl");
+                html = HtmlHelpers.AddScriptsToHtml(html);
 
                 if (dirInfo != null)
                 {

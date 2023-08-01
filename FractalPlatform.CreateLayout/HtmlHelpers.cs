@@ -16,7 +16,7 @@ namespace FractalPlatform.CreateLayouts
             }
         }
 
-        public static string AddScriptsToHtml(string html, string baseUrl)
+        public static string AddScriptsToHtml(string html)
         {
             var hasScript = html.Contains("frmain.js");
             var hasForm = html.Contains("btnSaveOnEnter");
@@ -56,7 +56,11 @@ namespace FractalPlatform.CreateLayouts
                                     sb.Append(html[i]);
                                     sb.AppendLine();
 
-                                    sb.Append(@"<script src=""" + baseUrl + @"/js/frmain.js""></script>");
+                                    sb.Append(@"<script src=""@BaseUrl/js/frmain.js""></script> 
+                                               <link rel=""stylesheet"" href=""@BaseUrl/css/@UserTheme.css"">
+                                               <link rel=""stylesheet"" href=""@BaseUrl/css/calendar.css"">
+                                               @Styles");
+
                                 }
                                 else if (tagStr == "body" && !hasForm)
                                 {
