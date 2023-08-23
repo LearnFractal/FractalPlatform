@@ -19,5 +19,5 @@ Application makes simple sport result tracker with progression results report:
 
 ## Web Link
 
-[WorkOutTracker](http://booben.com/jupiter/?app=WorkOutTracker)
+[WorkOutTracker](https://fraplat.com/jupiter/?app=WorkOutTracker)
 

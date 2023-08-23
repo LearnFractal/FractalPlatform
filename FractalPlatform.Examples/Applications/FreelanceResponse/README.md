@@ -25,5 +25,5 @@ Application implements freelance exchange market with next functionality:
 
 ## Web Link
 
-[FreelanceResponse](http://booben.com/jupiter/?app=FreelanceResponse)
+[FreelanceResponse](https://fraplat.com/jupiter/?app=FreelanceResponse)
 

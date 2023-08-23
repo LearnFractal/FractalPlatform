@@ -15,5 +15,5 @@ In current case application shows BTC price in USD/EUR currencies from Coindesk.
 
 ## Web Link
 
-[BTCRate](http://booben.com/jupiter/?app=BTCRate)
+[BTCRate](https://fraplat.com/jupiter/?app=BTCRate)
 

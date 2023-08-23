@@ -25,5 +25,5 @@ Application moderates simple web forum with topics
 
 ## Web Link
 
-[Forum](http://booben.com/jupiter/RawForum)
+[Forum](https://fraplat.com/jupiter/RawForum)
 

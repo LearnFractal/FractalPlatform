@@ -21,5 +21,5 @@ On third stage if all answers are right
 
 ## Web Link
 
-[MultTable](http://booben.com/jupiter/?app=MultTable)
+[MultTable](https://fraplat.com/jupiter/?app=MultTable)
 

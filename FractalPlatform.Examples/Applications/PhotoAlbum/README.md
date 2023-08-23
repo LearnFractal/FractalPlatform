@@ -17,5 +17,5 @@ Application demonstrates how to create photo album with:
 
 ## Web Link
 
-[PhotoAlbum](http://booben.com/jupiter/?app=PhotoAlbum)
+[PhotoAlbum](https://fraplat.com/jupiter/?app=PhotoAlbum)
 

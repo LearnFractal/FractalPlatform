@@ -30,5 +30,5 @@ Application moderates a simple social network with next functionality:
 
 ## Web Link
 
-[SocialNetwork](http://booben.com/jupiter/?app=SocialNetwork)
+[SocialNetwork](https://fraplat.com/jupiter/?app=SocialNetwork)
 

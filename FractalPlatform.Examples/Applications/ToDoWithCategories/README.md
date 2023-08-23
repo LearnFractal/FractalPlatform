@@ -22,4 +22,4 @@ Application demonstrates ToDo list with categories with next functionality:
 
 ## Web Link
 
-[ToDoWithCategories](http://booben.com/jupiter/?app=ToDoWithCategories)
+[ToDoWithCategories](https://fraplat.com/jupiter/?app=ToDoWithCategories)
