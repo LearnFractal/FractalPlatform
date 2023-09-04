@@ -10,30 +10,44 @@ namespace FractalPlatform.Examples.Applications.Seasons
     {
         public override void OnStart()
         {
-            var obj = new
+            InputBox("Password", "Enter password", result =>
             {
-                Title = "Watch all seasons",
-                Seasons = Directory.GetDirectories(@"d:\Seasons")
-                                   .Select(x => new 
-                                   {
-                                      Series = Directory.GetFileName(x),
-                                      Episodes = Directory.GetFiles(x, "*.avi")
-                                                          .Select(x => new
-                                                          {
-                                                            Title = Directory.GetFileName(x),
-                                                            Size = $"{Directory.GetFileInfo(x).Length / 1024 / 1024} mb",
-                                                            Episode = Directory.GetFileName(x)
-                                                          })
-                                   })
-                
-                
-            };
+                if (result.Result)
+                {
+                    var password = result.Collection
+                                         .GetFirstDoc()
+                                         .Value("{'Password':$}");
 
-            Client.SetDefaultCollection("Series")
-                  .GetFirstDoc()
-                  .ExtendDocument(obj.ToJson())
-                  .OpenForm();
-            
+                    if (password == "ps")
+                    {
+                        var obj = new
+                        {
+                            Title = "Watch all seasons",
+                            Seasons = Directory.GetDirectories(@"d:\Seasons")
+                                   .Select(x => new
+                                   {
+                                       Series = Directory.GetFileName(x),
+                                       Episodes = Directory.GetFiles(x, "*.mp4")
+                                                           .Select(x => new
+                                                           {
+                                                              Title = Directory.GetFileName(x),
+                                                              Size = $"{Directory.GetFileInfo(x).Length / 1024 / 1024} mb",
+                                                              Episode = Directory.GetFileName(x)
+                                                           })
+                                   })
+                        };
+
+                        Client.SetDefaultCollection("Series")
+                              .GetFirstDoc()
+                              .ExtendDocument(obj.ToJson())
+                              .OpenForm();
+                    }
+                    else
+                    {
+                        MessageBox("Wrong password.");
+                    }
+                }
+            });
         }
     }
 }

@@ -3,13 +3,13 @@
   "Title": {
     "ControlType": "Label"
   },
+  "Style": "Type:Link;Hide:Episodes,Episode",
   "Seasons": [
     {
-      "Style": "Type:Link;Hide:Episodes",
       "Episodes": [
         {
           "Style": "Type:Link;Hide:Size,Episode;HasLabel:true",
-          "Ëpisode": {
+          "Episode": {
             "ControlType": "Media",
             "Style": "Type:Video"
           }
