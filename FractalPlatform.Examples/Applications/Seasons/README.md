@@ -1,4 +1,4 @@
-# Seosons
+# Seasons
 
 ## Sources
 
