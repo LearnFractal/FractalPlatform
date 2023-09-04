@@ -14,11 +14,9 @@ namespace FractalPlatform.Examples.Applications.Seasons
             {
                 if (result.Result)
                 {
-                    var password = result.Collection
-                                         .GetFirstDoc()
-                                         .Value("{'Password':$}");
-
-                    if (password == "ps")
+                    if (result.Collection
+                              .GetFirstDoc()
+                              .IsEquals("{'Password':$}", "ps"))
                     {
                         var obj = new
                         {
