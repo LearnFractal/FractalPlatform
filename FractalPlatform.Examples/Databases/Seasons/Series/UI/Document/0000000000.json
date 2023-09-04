@@ -8,7 +8,7 @@
       "Style": "Type:Link;Hide:Episodes",
       "Episodes": [
         {
-          "Style": "Type:Link;Hide:Size,Episode,Download;HasLabel:true",
+          "Style": "Type:Link;Hide:Size,Episode;HasLabel:true",
           "Ëpisode": {
             "ControlType": "Media",
             "Style": "Type:Video"
