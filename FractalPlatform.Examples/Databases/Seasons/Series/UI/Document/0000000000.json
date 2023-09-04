@@ -1,0 +1,19 @@
+﻿{
+  "Enabled": false,
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Seasons": [
+    {
+      "Episodes": [
+        {
+          "Style": "Type:Link;Hide:Video,Download;HasLabel:true",
+          "Video": {
+            "ControlType": "Media",
+            "Style": "Type:Video"
+          }
+        }
+      ]
+    }
+  ]
+}
