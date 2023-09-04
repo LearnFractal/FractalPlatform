@@ -23,3 +23,5 @@
 - [Vote](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Vote)
 - [WorkOutTracker](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/WorkOutTracker)
 - [FreelanceResponse](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FreelanceResponse)
+- [RawForum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/RawForum)
+- [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Seasons)
