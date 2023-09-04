@@ -24,15 +24,15 @@ namespace FractalPlatform.Examples.Applications.Seasons
                         {
                             Title = "Watch all seasons",
                             Seasons = Directory.GetDirectories(@"d:\Seasons")
-                                   .Select(x => new
+                                   .Select(d => new
                                    {
-                                       Series = Directory.GetFileName(x),
-                                       Episodes = Directory.GetFiles(x, "*.mp4")
-                                                           .Select(x => new
+                                       Series = Directory.GetFileName(d),
+                                       Episodes = Directory.GetFiles(d, "*.mp4")
+                                                           .Select(f => new
                                                            {
-                                                              Title = Directory.GetFileName(x),
-                                                              Size = $"{Directory.GetFileInfo(x).Length / 1024 / 1024} mb",
-                                                              Episode = Directory.GetFileName(x)
+                                                              Title = Directory.GetFileName(f),
+                                                              Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
+                                                              Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
                                                            })
                                    })
                         };
