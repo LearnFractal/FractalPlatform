@@ -4,7 +4,7 @@ using FractalPlatform.Client.UI;
 using FractalPlatform.Common;
 using FractalPlatform.Database.Engine;
 
-namespace FractalPlatform.Examples.Applications.VideoLibrary
+namespace FractalPlatform.Examples.Applications.Seasons
 {
     public class SeasonsApplication : BaseApplication
     {
@@ -12,17 +12,17 @@ namespace FractalPlatform.Examples.Applications.VideoLibrary
         {
             var obj = new
             {
-                Title = "Seasons",
+                Title = "Watch all seasons",
                 Seasons = Directory.GetDirectories(@"d:\Seasons")
                                    .Select(x => new 
                                    {
-                                      Series = x,
-                                      Episodes = Directory.GetFiles(x, "*.mp4")
+                                      Series = Directory.GetFileName(x),
+                                      Episodes = Directory.GetFiles(x, "*.avi")
                                                           .Select(x => new
                                                           {
                                                             Title = Directory.GetFileName(x),
                                                             Size = $"{Directory.GetFileInfo(x).Length / 1024 / 1024} mb",
-                                                            Video = Directory.GetFileName(x)
+                                                            Episode = Directory.GetFileName(x)
                                                           })
                                    })
                 

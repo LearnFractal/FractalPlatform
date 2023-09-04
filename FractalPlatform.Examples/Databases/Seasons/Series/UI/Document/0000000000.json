@@ -1,14 +1,15 @@
 ﻿{
-  "Enabled": false,
+  "ReadOnly": true,
   "Title": {
     "ControlType": "Label"
   },
   "Seasons": [
     {
+      "Style": "Type:Link;Hide:Episodes",
       "Episodes": [
         {
-          "Style": "Type:Link;Hide:Video,Download;HasLabel:true",
-          "Video": {
+          "Style": "Type:Link;Hide:Size,Episode,Download;HasLabel:true",
+          "Ëpisode": {
             "ControlType": "Media",
             "Style": "Type:Video"
           }
