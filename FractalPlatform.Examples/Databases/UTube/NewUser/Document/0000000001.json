@@ -5,5 +5,5 @@
   "Age": 0,
   "Gender": "",
   "Photo": "",
-  "RequestFriend": "Request Friend"
+  "Subscriptions": [ "Test" ]
 }

@@ -1,10 +1,15 @@
 {
-  "UID": "",
-  "Who": "",
+  "Name": "",
+  "Video": "",
   "OnDate": "",
-  "Message": "",
-  "Avatar": "",
-  "Photo": "",
-  "Likes": [ "Test" ],
-  "NewComment": "New Comment"
+  "Likes": [ "Guest" ],
+  "Comments": [
+    {
+      "Avatar": "Guest.png",
+      "OnDate": "2023-01-01",
+      "Picture": "Message.jpg",
+      "Text": "Hello World !",
+      "Who": "Guest"
+    }
+  ]
 }

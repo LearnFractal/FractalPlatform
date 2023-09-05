@@ -1,10 +1,28 @@
 {
-  "UID": "",
-  "Who": "",
+  "Name": "",
+  "Description": "",
+  "Owner": "",
   "OnDate": "",
-  "Message": "",
-  "Avatar": "",
   "Photo": "",
-  "Likes": [ "Test" ],
-  "NewComment": "New Comment"
+  "Enabled": true,
+  "Tags": [ "Bike" ],
+  "Videos": [
+    {
+      "Name": "",
+      "Video": "",
+      "OnDate": "",
+      "Likes": [ "Guest" ],
+      "Comments": [
+        {
+          "Avatar": "Guest.png",
+          "OnDate": "2023-01-01",
+          "Picture": "Message.jpg",
+          "Text": "Hello World !",
+          "Who": "Guest"
+        }
+      ]
+    }
+  ],
+  "NewComment": "New Comment",
+  "UploadVideo": "Upload Video"
 }
