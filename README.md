@@ -25,3 +25,4 @@
 - [FreelanceResponse](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FreelanceResponse)
 - [RawForum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/RawForum)
 - [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Seasons)
+- [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
