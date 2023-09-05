@@ -3,7 +3,7 @@
   "Title": {
     "ControlType": "Label"
   },
-  "Style": "Type:Link;Hide:Episodes,Episode",
+  "Style": "Type:Link;Hide:Episodes",
   "Seasons": [
     {
       "Episodes": [
