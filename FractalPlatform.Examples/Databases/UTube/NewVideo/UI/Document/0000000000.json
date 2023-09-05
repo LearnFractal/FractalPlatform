@@ -1,0 +1,28 @@
+{
+  "Style": "HasLabel:true",
+  "UID": {
+    "Visible": false
+  },
+  "Avatar": {
+    "Visible": false
+  },
+  "Who": {
+    "Visible": false
+  },
+  "OnDate": {
+    "ControlType": "Calendar",
+    "Enabled": false
+  },
+  "Message": {
+    "ControlType": "RichTextBox"
+  },
+  "Photo": {
+    "ControlType": "UploadFile"
+  },
+  "Likes": {
+    "Visible": false
+  },
+  "NewComment": {
+    "Visible": false
+  }
+}
