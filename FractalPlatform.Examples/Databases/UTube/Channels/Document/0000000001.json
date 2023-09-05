@@ -10,6 +10,7 @@
       "Name": "",
       "Video": "",
       "OnDate": "",
+      "Views": 0,
       "Likes": [ "Guest" ],
       "Comments": [
         {
@@ -23,5 +24,5 @@
     }
   ],
   "NewComment": "New Comment",
-  "UploadVideo": "Upload Video"
+  "NewVideo": "New Video"
 }

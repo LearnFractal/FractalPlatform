@@ -12,6 +12,7 @@
       "Video": "",
       "OnDate": "",
       "Likes": [ "Guest" ],
+      "Views": 0,
       "Comments": [
         {
           "Avatar": "Guest.png",
@@ -24,5 +25,5 @@
     }
   ],
   "NewComment": "New Comment",
-  "UploadVideo": "Upload Video"
+  "NewVideo": "New Video"
 }

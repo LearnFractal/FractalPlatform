@@ -5,11 +5,11 @@
   "Name": "Bob",
   "Password": "6A20D08E3A43AF3C3523A747986632AB",
   "Photo": "bob.png",
-  "RequestFriend": "Request Friend",
-  "Friends": [
+  "History": [
     {
-      "Approved": true,
-      "Name": "Rebeca"
+      "Channel": "",
+      "Video": "",
+      "OnDate": ""
     }
   ]
 }
