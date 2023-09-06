@@ -1,28 +1,43 @@
 {
-  "Style": "HasLabel:true",
-  "UID": {
-    "Visible": false
-  },
-  "Avatar": {
-    "Visible": false
-  },
-  "Who": {
-    "Visible": false
-  },
-  "OnDate": {
-    "ControlType": "Calendar",
+  "Name": {
     "Enabled": false
   },
-  "Message": {
-    "ControlType": "RichTextBox"
+  "Owner": {
+    "Enabled": false
+  },
+  "OnDate": {
+    "Enabled": false
   },
   "Photo": {
-    "ControlType": "UploadFile"
+    "ControlType": "Picture"
   },
-  "Likes": {
-    "Visible": false
+  "Tags": {
+    "ControlType": "Tags"
   },
-  "NewComment": {
-    "Visible": false
+  "Videos": [
+    {
+      "Video": {
+        "ControlType": "Media",
+        "Style": "Type:Video"
+      },
+      "OnDate": {
+        "Enabled": false
+      },
+      "Views": {
+        "Enabled": false
+      },
+      "Likes": {
+        "Visible": false
+      },
+      "Comments": {
+        "Visible": false
+      },
+      "NewComment": {
+        "Visible": false
+      }
+    }
+  ],
+  "NewVideo": {
+    "ControlType": "Button"
   }
 }

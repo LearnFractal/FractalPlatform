@@ -1,5 +1,6 @@
 {
   "Name": "",
+  "Description": "",
   "Video": "",
   "OnDate": "",
   "Likes": [ "Guest" ],
@@ -12,5 +13,6 @@
       "Text": "Hello World !",
       "Who": "Guest"
     }
-  ]
+  ],
+  "NewComment": "New Comment"
 }

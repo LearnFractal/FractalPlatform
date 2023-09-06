@@ -1,28 +1,17 @@
 {
-  "Style": "HasLabel:true",
-  "UID": {
-    "Visible": false
-  },
-  "Avatar": {
-    "Visible": false
-  },
-  "Who": {
-    "Visible": false
-  },
-  "OnDate": {
-    "ControlType": "Calendar",
+  "Owner": {
     "Enabled": false
   },
-  "Message": {
-    "ControlType": "RichTextBox"
+  "OnDate": {
+    "Enabled": false
   },
   "Photo": {
     "ControlType": "UploadFile"
   },
-  "Likes": {
-    "Visible": false
+  "Tags": {
+    "ControlType": "Tags"
   },
-  "NewComment": {
+  "NewVideo": {
     "Visible": false
   }
 }

@@ -1,5 +1,10 @@
 {
-  "Message": {
+  "Name": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Description": {
     "IsRequired": true,
     "MinLen": 3,
     "MaxLen": 1024

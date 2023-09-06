@@ -1,28 +1,9 @@
 {
-  "Name": "",
-  "Description": "",
-  "Owner": "",
-  "OnDate": "",
+  "Name": "MyChannel",
+  "Description": "Some",
+  "Owner": "Bob",
+  "OnDate": "20230101",
   "Photo": "",
   "Tags": [ "Bike" ],
-  "Videos": [
-    {
-      "Name": "",
-      "Video": "",
-      "OnDate": "",
-      "Views": 0,
-      "Likes": [ "Guest" ],
-      "Comments": [
-        {
-          "Avatar": "Guest.png",
-          "OnDate": "2023-01-01",
-          "Picture": "Message.jpg",
-          "Text": "Hello World !",
-          "Who": "Guest"
-        }
-      ]
-    }
-  ],
-  "NewComment": "New Comment",
   "NewVideo": "New Video"
 }

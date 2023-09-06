@@ -6,24 +6,5 @@
   "Photo": "",
   "Enabled": true,
   "Tags": [ "Bike" ],
-  "Videos": [
-    {
-      "Name": "",
-      "Video": "",
-      "OnDate": "",
-      "Likes": [ "Guest" ],
-      "Views": 0,
-      "Comments": [
-        {
-          "Avatar": "Guest.png",
-          "OnDate": "2023-01-01",
-          "Picture": "Message.jpg",
-          "Text": "Hello World !",
-          "Who": "Guest"
-        }
-      ]
-    }
-  ],
-  "NewComment": "New Comment",
   "NewVideo": "New Video"
 }

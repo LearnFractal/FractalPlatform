@@ -1,12 +1,6 @@
 {
-  "UID": {
-    "Formula": "@NewGuid"
-  },
-  "Who": {
+  "Owner": {
     "Formula": "@UserName"
-  },
-  "Avatar": {
-    "Formula": "@Avatar"
   },
   "OnDate": {
     "Formula": "@Now"
