@@ -7,7 +7,7 @@ using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI.DOM.Controls.Component;
 using System.Globalization;
 
-namespace FractalPlatform.Examples.Applications.SocialNetwork
+namespace FractalPlatform.Examples.Applications.UTube
 {
     public class RenderForm : ExtendedRenderForm
     {
