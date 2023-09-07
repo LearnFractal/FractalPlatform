@@ -6,5 +6,7 @@
   "Photo": "",
   "Enabled": true,
   "Tags": [ "Bike" ],
-  "NewVideo": "New Video"
+  "NewVideo": "New Video",
+  "Subscribe": "Subscribe",
+  "Unsubscribe": "Unsubscribe"
 }

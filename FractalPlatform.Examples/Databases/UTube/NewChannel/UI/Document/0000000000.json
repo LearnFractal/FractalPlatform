@@ -13,5 +13,11 @@
   },
   "NewVideo": {
     "Visible": false
+  },
+  "Subscribe": {
+    "Visible": false
+  },
+  "Unsubscribe": {
+    "Visible": false
   }
 }

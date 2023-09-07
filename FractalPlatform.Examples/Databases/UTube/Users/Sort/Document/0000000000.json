@@ -5,19 +5,6 @@
   "Gender": { "Index": 4 },
   "Language": { "Index": 5 },
   "Photo": { "Index": 6 },
-  "Friends": { "Index": 7 },
-  "Posts": [
-    {
-      "UID": { "Index": 8 },
-      "Avatar": { "Index": 9 },
-      "Who": { "Index": 10 },
-      "OnDate": { "Index": 11 },
-      "Message": { "Index": 12 },
-      "Photo": { "Index": 13 },
-      "Likes": { "Index": 14 },
-      "Comments": { "Index": 15 },
-      "NewComment": { "Index": 16 }
-    }
-  ],
-  "RequestFriend": { "Index": 17 }
+  "History": { "Index": 8 },
+  "Subscriptions": { "Index": 9 }
 }

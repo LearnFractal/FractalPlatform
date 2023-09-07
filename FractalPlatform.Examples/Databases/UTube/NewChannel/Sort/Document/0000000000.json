@@ -20,10 +20,13 @@
   "Videos": {
     "Index": 7
   },
-  "NewComment": {
+  "NewVideo": {
     "Index": 8
   },
-  "NewVideo": {
+  "Subscribe": {
     "Index": 9
+  },
+  "Unsubscribe": {
+    "Index": 10
   }
 }

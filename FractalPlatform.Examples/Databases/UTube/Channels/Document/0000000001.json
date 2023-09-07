@@ -5,5 +5,7 @@
   "OnDate": "20230101",
   "Photo": "",
   "Tags": [ "Bike" ],
-  "NewVideo": "New Video"
+  "NewVideo": "New Video",
+  "Subscribe": "Subscribe",
+  "Unsubscribe": "Unsubscribe"
 }

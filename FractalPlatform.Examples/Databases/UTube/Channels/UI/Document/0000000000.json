@@ -39,5 +39,11 @@
   ],
   "NewVideo": {
     "ControlType": "Button"
+  },
+  "Subscribe": {
+    "ControlType": "Button"
+  },
+  "Unsubscribe": {
+    "ControlType": "Button"
   }
 }
