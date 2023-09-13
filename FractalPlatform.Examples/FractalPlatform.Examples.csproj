@@ -25,6 +25,7 @@
     <Folder Include="Databases\FreelanceResponse\" />
     <Folder Include="Databases\RawForum\" />
     <Folder Include="Databases\SocialNetwork\" />
+    <Folder Include="Databases\Uezjunyka\Uezjunyka\Document\" />
     <Folder Include="Databases\VideoLibrary\" />
   </ItemGroup>
 
