@@ -39,7 +39,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .Append("<a href=\"").Append(this.OnEditRowUrl(domControl, i)).Append("\">")
                       .Append("Views:").Append(video.CountViews)
                       .Append("&nbsp;")
-                      .Append("Likes:").Append(video.Likes.Count)
+                      .Append("Likes:").Append(video.Likes?.Count)
                       .Append("</a>")
                       .Append("</td>");
                 }

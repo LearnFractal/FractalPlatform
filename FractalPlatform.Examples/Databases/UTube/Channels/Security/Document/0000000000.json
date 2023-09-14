@@ -1,3 +1,21 @@
 {
-  "Formula": "MyChannel"
+  "Formula": "MyChannel",
+  "Videos": [
+    {
+      "Likes": {
+        "Disallow": {
+          "Read": [
+            "Guest"
+          ]
+        }
+      },
+      "Comments": {
+        "Disallow": {
+          "Read": [
+            "Guest"
+          ]
+        }
+      }
+    }
+  ]
 }
