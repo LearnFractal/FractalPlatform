@@ -8,13 +8,6 @@
             "Guest"
           ]
         }
-      },
-      "Comments": {
-        "Disallow": {
-          "Read": [
-            "Guest"
-          ]
-        }
       }
     }
   ]
