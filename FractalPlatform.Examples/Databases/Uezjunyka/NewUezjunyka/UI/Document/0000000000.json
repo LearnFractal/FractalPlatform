@@ -5,8 +5,5 @@
   },
   "Picture": {
     "ControlType": "Picture"
-  },
-  "Комментарий": {
-    "ControlType": "RichTextBox"
   }
 }
