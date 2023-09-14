@@ -4,7 +4,7 @@
   "Owner": "",
   "OnDate": "",
   "Photo": "",
-  "Enabled": true,
+  "IsLocked": false,
   "Tags": [ "Bike" ],
   "NewVideo": "New Video",
   "Subscribe": "Subscribe",

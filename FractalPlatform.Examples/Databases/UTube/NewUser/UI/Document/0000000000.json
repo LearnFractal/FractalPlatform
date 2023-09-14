@@ -12,7 +12,7 @@
   "Photo": {
     "ControlType": "UploadFile"
   },
-  "RequestFriend": {
+  "Subscriptions": {
     "Visible": false
   }
 }

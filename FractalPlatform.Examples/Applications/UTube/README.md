@@ -11,7 +11,6 @@
 
 Application clones basic functionality of youtube:
 
-- Localization UI on few languages
 - Login user
 - Register user
 - Create video channels
@@ -19,6 +18,7 @@ Application clones basic functionality of youtube:
 - Upload short video files
 - Leave like under video
 - Leave comment under video
+- and so on.
 
 ## How it implemented
 

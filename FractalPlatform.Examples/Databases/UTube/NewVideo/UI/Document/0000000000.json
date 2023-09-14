@@ -3,23 +3,19 @@
   "UID": {
     "Visible": false
   },
-  "Avatar": {
-    "Visible": false
-  },
-  "Who": {
-    "Visible": false
-  },
-  "OnDate": {
-    "ControlType": "Calendar",
-    "Enabled": false
-  },
-  "Message": {
-    "ControlType": "RichTextBox"
-  },
-  "Photo": {
+  "Video": {
     "ControlType": "UploadFile"
   },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "OnDate": {
+    "Visible": false
+  },
   "Likes": {
+    "Visible": false
+  },
+  "CountViews": {
     "Visible": false
   },
   "NewComment": {

@@ -5,24 +5,61 @@
     "ControlType": "Label",
     "LayoutLocation": "UserName"
   },
-  "LogOut": {
-    "ControlType": "Link",
+  "Login": {
+    "ControlType": "Button",
+    "Style": "Type:Link",
+    "LayoutLocation": "Login"
+  },
+  "Logout": {
+    "ControlType": "Button",
+    "Style": "Type:Link",
     "LayoutLocation": "Logout"
+  },
+  "Register": {
+    "ControlType": "Button",
+    "Style": "Type:Link",
+    "LayoutLocation": "Register"
   },
   "MyUser": {
     "ControlType": "Button",
+    "Style": "Type:Link",
     "LayoutLocation": "MyUser"
   },
   "Users": {
     "ControlType": "Button",
+    "Style": "Type:Link",
     "LayoutLocation": "Users"
   },
-  "ViewPosts": {
-    "ControlType": "ViewPosts",
-    "LayoutLocation": "ViewPosts"
-  },
-  "NewPost": {
+  "NewChannel": {
     "ControlType": "Button",
-    "LayoutLocation": "NewPost"
+    "Style": "Type:Link",
+    "LayoutLocation": "NewChannel"
+  },
+  "MyChannels": {
+    "ControlType": "Button",
+    "Style": "Type:Link",
+    "LayoutLocation": "MyChannels"
+  },
+  "Channels": {
+    "ControlType": "Button",
+    "Style": "Type:Link",
+    "LayoutLocation": "Channels"
+  },
+  "History": {
+    "ControlType": "Button",
+    "Style": "Type:Link",
+    "LayoutLocation": "History"
+  },
+  "NewVideos": {
+    "ControlType": "Videos",
+    "LayoutLocation": "NewVideos"
+  },
+  "Subscribes": {
+    "ControlType": "Videos",
+    "LayoutLocation": "Subscribes"
+  },
+  "Recommendations": {
+    "ControlType": "Videos",
+    "LayoutLocation": "Recommendations"
   }
 }

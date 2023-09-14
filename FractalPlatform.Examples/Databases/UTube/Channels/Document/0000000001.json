@@ -1,11 +1,38 @@
-{
-  "Name": "MyChannel",
-  "Description": "Some",
-  "Owner": "Bob",
-  "OnDate": "20230101",
-  "Photo": "",
-  "Tags": [ "Bike" ],
-  "NewVideo": "New Video",
-  "Subscribe": "Subscribe",
-  "Unsubscribe": "Unsubscribe"
+﻿{
+   "Description": "Fractal Platform channel",
+   "IsLocked": false,
+   "Name": "Fractal",
+   "NewVideo": "New Video",
+   "OnDate": "09/14/2023 08:11:34",
+   "Owner": "Rebeca",
+   "Photo": "fractal.png",
+   "Subscribe": "Subscribe",
+   "Unsubscribe": "Unsubscribe",
+   "Tags": [
+      "Bike"
+   ],
+   "Videos": [
+      {
+         "CountViews": 26,
+         "Description": "Intro video",
+         "Name": "Intro",
+         "NewComment": "New Comment",
+         "OnDate": "2023/09/14",
+         "UID": "111",
+         "Video": "FractalPlatformIntroRU.mp4",
+         "Comments": [
+            {
+               "Avatar": "avatar.png",
+               "OnDate": "09/14/2023 08:11:44",
+               "Text": "First test comment under Rebeca",
+               "Who": "Rebeca"
+            }
+         ],
+         "Likes": [
+            "Guest",
+            "Bazist",
+            "Rebeca"
+         ]
+      }
+   ]
 }

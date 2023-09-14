@@ -1,7 +1,39 @@
 {
   "UserName": "",
-  "LogOut": "",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Register": "Register",
   "MyUser": "My User",
   "Users": "Users",
-  "NewPost": "New Post"
+  "NewChannel": "New Channel",
+  "MyChannels": "My Channels",
+  "Channels": "Channels",
+  "History": "History",
+  "NewVideos": [
+    {
+      "Name": "My First Video",
+      "Video": "",
+      "OnDate": "",
+      "CountLikes": 1,
+      "CountViews": 1
+    }
+  ],
+  "Subscribes": [
+    {
+      "Name": "My Second Video",
+      "Video": "",
+      "OnDate": "",
+      "CountLikes": 1,
+      "CountViews": 1
+    }
+  ],
+  "Recommendations": [
+    {
+      "Name": "My Third Video",
+      "Video": "",
+      "OnDate": "",
+      "CountLikes": 1,
+      "CountViews": 1
+    }
+  ]
 }

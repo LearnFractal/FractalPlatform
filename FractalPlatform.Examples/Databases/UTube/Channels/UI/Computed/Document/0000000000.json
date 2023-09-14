@@ -1,0 +1,17 @@
+{
+  "NewVideo": {
+    "Visible": {
+      "Formula": "@NewVideo"
+    }
+  },
+  "Subscribe": {
+    "Visible": {
+      "Formula": "@Subscribe"
+    }
+  },
+  "Unsubscribe": {
+    "Visible": {
+      "Formula": "@Unsubscribe"
+    }
+  }
+}

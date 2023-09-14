@@ -1,13 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Text;
-using System;
-using System.Linq;
 using FractalPlatform.Client.UI.DOM;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI.DOM.Controls.Component;
-using System.Globalization;
+using System.Text;
 
-namespace FractalPlatform.Examples.Applications.UTube
+namespace FractalPlatform.Client.WebApp.Applications.Test
 {
     public class RenderForm : ExtendedRenderForm
     {
@@ -15,85 +11,40 @@ namespace FractalPlatform.Examples.Applications.UTube
         {
         }
 
-        private class PostInfo
-        {
-            public uint Number { get; set; }
-
-            public string Avatar { get; set; }
-
-            public string Who { get; set; }
-
-            public string OnDate { get; set; }
-
-            public string Message { get; set; }
-
-            public string Photo { get; set; }
-
-            public List<string> Likes { get; set; }
-        }
-
-        private class PostsInfo
-        {
-            public List<PostInfo> Root { get; set; }
-        }
-
         public override string RenderComponent(ComponentDOMControl domControl)
         {
-            if (domControl.ControlType == "ViewPosts")
+            var sb = new StringBuilder();
+
+            if (domControl.ControlType == "Videos")
             {
-                var posts = domControl.Storage
-                                     .GetAll(Application.Context)
-                                     .SelectOne<PostsInfo>();
+                var videos = domControl.Storage
+                                       .GetAll(Application.Context)
+                                       .Select<VideoInfo>("{'Root':[!$]}");
 
-                var sb = new StringBuilder();
+                sb.Append("<td><table><tr>");
 
-                sb.Append("<table border=1>");
-
-                for (uint i = 0; i < posts.Root.Count; i++)
+                for (uint i = 0; i < videos.Length; i++)
                 {
-                    posts.Root[(int)i].Number = i;
+                    var video = videos[i];
+
+                    sb.Append("<td>")
+                      .Append("<a href=\"").Append(this.OnEditRowUrl(domControl, i)).Append("\">")
+                      .Append(video.Name)
+                      .Append("<br><i>")
+                      .Append(video.Description)
+                      .Append("</i>")
+                      .Append("</a>")
+                      .Append("<br><video width=320 height=215 controls><source src=\"").Append(GetFileUrl(video.Video)).Append("\" type=\"video/mp4\"></video>")
+                      .Append("<br>")
+                      .Append("<a href=\"").Append(this.OnEditRowUrl(domControl, i)).Append("\">")
+                      .Append("Views:").Append(video.CountViews)
+                      .Append("&nbsp;")
+                      .Append("Likes:").Append(video.Likes.Count)
+                      .Append("</a>")
+                      .Append("</td>");
                 }
 
-                //test change
-
-                foreach (var post in posts.Root.OrderByDescending(x => DateTime.Parse(x.OnDate, CultureInfo.InvariantCulture)))
-                {
-                    var html = @"<tr style='cursor:pointer' onclick=""@OnClickScript"">
-                                    <td>
-                                        <img style='max-width:50px;max-height:50px' src='@Avatar'>
-                                    </td>
-                                    <td align='left' style='width:100%' nowrap>
-                                       <div>@Message</div>
-                                    </td>
-                                    <td nowrap>
-                                       <div>@Who</div>
-                                    </td>
-                                    <td nowrap>
-                                       <div>@OnDate</div>
-                                    </td>
-                                    <td nowrap>
-                                       Likes: @Likes 
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td colspan=5>
-                                       <img style='max-width:560px;max-height:560px' src='@Photo'>
-                                    </td>
-                                 </tr>";
-
-                    html = html.Replace("@OnClickScript", this.OnEditRowScript(domControl, post.Number));
-                    html = html.Replace("@Number", post.Number.ToString());
-                    html = html.Replace("@Message", post.Message);
-                    html = html.Replace("@Who", post.Who);
-                    html = html.Replace("@OnDate", post.OnDate);
-                    html = html.Replace("@Photo", GetFileUrl(post.Photo));
-                    html = html.Replace("@Avatar", GetFileUrl(post.Avatar));
-                    html = html.Replace("@Likes", (post.Likes.Count - 1).ToString());
-
-                    sb.AppendLine(html);
-                }
-
-                sb.Append("</table>");
+                sb.Append("</tr></table></td>");
 
                 return sb.ToString();
             }

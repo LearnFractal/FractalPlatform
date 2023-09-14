@@ -28,5 +28,8 @@
   },
   "Unsubscribe": {
     "Index": 10
+  },
+  "IsLocked": {
+    "Index": 11
   }
 }

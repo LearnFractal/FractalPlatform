@@ -1,7 +1,0 @@
-{
-  "RequestFriend": {
-    "Visible": {
-      "Formula": "Document.Name <> @UserName"
-    }
-  }
-}

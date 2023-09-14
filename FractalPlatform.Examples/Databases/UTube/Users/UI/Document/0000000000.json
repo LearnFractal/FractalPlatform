@@ -1,6 +1,8 @@
 {
-  "ReadOnly": true,
-  "Style": "Save:false;Hide:UID,Avatar,Who,Photo,Value,Password,History,Subscriptions;Add:false;HasLabel:true",
+  "Style": "Hide:Photo,Value,Password,History,Subscriptions,Capcha,RepeatPassword;Add:false;HasLabel:true;Type:Link",
+  "Name": {
+    "ReadOnly": true
+  },
   "Photo": {
     "ControlType": "Picture"
   },
@@ -12,5 +14,17 @@
   },
   "Subscriptions": {
     "ControlType": "Tags"
+  },
+  "History": {
+    "Visible": false
+  },
+  "Roles": {
+    "Visible": false
+  },
+  "Capcha": {
+    "Visible": false
+  },
+  "RepeatPassword": {
+    "Visible": false
   }
 }

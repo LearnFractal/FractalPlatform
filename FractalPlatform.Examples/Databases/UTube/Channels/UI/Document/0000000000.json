@@ -1,4 +1,5 @@
 {
+  "Style": "Add:false;Hide:Photo,Tags,Videos,Likes,NewVideo,IsLocked,Video,Comments,NewComment;Type:Link",
   "Name": {
     "Enabled": false
   },
@@ -16,6 +17,16 @@
   },
   "Videos": [
     {
+      "Style": "Save:false",
+      "Name": {
+        "ReadOnly": true
+      },
+      "Description": {
+        "ReadOnly": true
+      },
+      "UID": {
+        "Visible": false
+      },
       "Video": {
         "ControlType": "Media",
         "Style": "Type:Video"
@@ -23,27 +34,30 @@
       "OnDate": {
         "Enabled": false
       },
-      "Views": {
+      "CountViews": {
         "Enabled": false
       },
       "Likes": {
-        "Visible": false
+        "ControlType": "Likes"
       },
       "Comments": {
-        "Visible": false
+        "ControlType": "Comments"
       },
       "NewComment": {
-        "Visible": false
+        "ControlType": "Button"
       }
     }
   ],
   "NewVideo": {
-    "ControlType": "Button"
+    "ControlType": "Button",
+    "Visible": true
   },
   "Subscribe": {
-    "ControlType": "Button"
+    "ControlType": "Button",
+    "Visible": true
   },
   "Unsubscribe": {
-    "ControlType": "Button"
+    "ControlType": "Button",
+    "Visible": true
   }
 }

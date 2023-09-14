@@ -19,5 +19,8 @@
   },
   "Unsubscribe": {
     "Visible": false
+  },
+  "IsLocked": {
+    "Visible": false
   }
 }

@@ -1,0 +1,38 @@
+﻿{
+   "Description": "Rebeca music channel",
+   "IsLocked": false,
+   "Name": "Music",
+   "NewVideo": "New Video",
+   "OnDate": "09/14/2023 08:40:19",
+   "Owner": "Rebeca",
+   "Photo": "music.png",
+   "Subscribe": "Subscribe",
+   "Unsubscribe": "Unsubscribe",
+   "Tags": [
+      "Bike"
+   ],
+   "Videos": [
+      {
+         "CountViews": 34,
+         "Description": "DJ Vengerov",
+         "Name": "Kazantip",
+         "NewComment": "New Comment",
+         "OnDate": "2023/09/14",
+         "UID": "333",
+         "Video": "kazantip.mp4",
+         "Comments": [
+            {
+               "Avatar": "avatar.png",
+               "OnDate": "09/14/2023 08:37:37",
+               "Text": "test",
+               "Who": "Rebeca"
+            }
+         ],
+         "Likes": [
+            "Guest",
+            "Bazist",
+            "Rebeca"
+         ]
+      }
+   ]
+}
