@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FractalPlatform.Client.WebApp.Applications.UTube
+namespace FractalPlatform.Examples.Applications.UTube
 {
     public class ChannelInfo
     {

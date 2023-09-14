@@ -5,7 +5,7 @@ using FractalPlatform.Client.UI.DOM;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 
-namespace FractalPlatform.Client.WebApp.Applications.UTube
+namespace FractalPlatform.Examples.Applications.UTube
 {
     public class UTubeApplication : DashboardApplication
     {

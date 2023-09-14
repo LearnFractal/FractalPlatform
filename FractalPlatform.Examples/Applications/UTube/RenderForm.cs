@@ -3,7 +3,7 @@ using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI.DOM.Controls.Component;
 using System.Text;
 
-namespace FractalPlatform.Client.WebApp.Applications.UTube
+namespace FractalPlatform.Examples.Applications.UTube
 {
     public class RenderForm : ExtendedRenderForm
     {
