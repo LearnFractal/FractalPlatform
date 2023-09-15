@@ -9,8 +9,6 @@ namespace FractalPlatform.Examples.Applications.BTCRate
     {
         public override void OnStart()
         {
-            Context.User.Theme = ThemeType.White;
-
             var query = REST.Get("https://api.coindesk.com/v1/bpi/currentprice.json")
                             .ToCollection()
                             .GetFirstDoc();
@@ -22,7 +20,7 @@ namespace FractalPlatform.Examples.Applications.BTCRate
             }
             .ToCollection(Constants.FIRST_DOC_ID)
             .SetUIDimension("{'ReadOnly':true,'Style':'Cancel:Refresh'}")
-            .SetDimension(DimensionType.Theme)
+            .SetDimension(DimensionType.Theme, "{'DefaultTheme':'White'}")
             .OpenForm();
         }
     }
