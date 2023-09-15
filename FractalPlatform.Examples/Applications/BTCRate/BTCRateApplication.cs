@@ -20,6 +20,7 @@ namespace FractalPlatform.Examples.Applications.BTCRate
             }
             .ToCollection(Constants.FIRST_DOC_ID)
             .SetUIDimension("{'ReadOnly':true,'Style':'Cancel:Refresh'}")
+            .SetDimension(DimensionType.Theme)
             .OpenForm();
         }
     }
