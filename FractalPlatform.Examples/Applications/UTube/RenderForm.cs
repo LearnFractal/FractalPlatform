@@ -40,6 +40,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .Append("Views:").Append(video.CountViews)
                       .Append("&nbsp;")
                       .Append("Likes:").Append(video.Likes?.Count)
+                      .Append("&nbsp;")
+                      .Append("Comments:").Append(video.Comments?.Count)
                       .Append("</a>")
                       .Append("</td>");
                 }

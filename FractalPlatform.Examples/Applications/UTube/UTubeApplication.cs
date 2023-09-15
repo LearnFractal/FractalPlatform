@@ -11,7 +11,7 @@ namespace FractalPlatform.Examples.Applications.UTube
     {
         private void Dashboard()
         {
-            const int topVideos = 5;
+            const int topVideos = 4;
 
             var allChannels = Client.SetDefaultCollection("Channels")
                                         .GetWhere("{'IsLocked':false}")

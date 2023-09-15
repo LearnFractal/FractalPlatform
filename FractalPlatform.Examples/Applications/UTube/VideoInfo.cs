@@ -18,5 +18,7 @@ namespace FractalPlatform.Examples.Applications.UTube
         public uint CountViews { get; set; }
 
         public List<string> Likes { get; set; }
+
+        public List<CommentInfo> Comments { get; set; }
     }
 }
