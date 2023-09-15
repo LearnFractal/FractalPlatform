@@ -9,6 +9,8 @@ namespace FractalPlatform.Examples.Applications.BTCRate
     {
         public override void OnStart()
         {
+            Context.User.Theme = ThemeType.White;
+
             var query = REST.Get("https://api.coindesk.com/v1/bpi/currentprice.json")
                             .ToCollection()
                             .GetFirstDoc();
