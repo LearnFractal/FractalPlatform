@@ -68,12 +68,5 @@
         "Guest"
       ]
     }
-  },
-  "Recommendations": {
-    "Disallow": {
-      "Read": [
-        "Guest"
-      ]
-    }
   }
 }
