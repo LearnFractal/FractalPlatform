@@ -69,14 +69,14 @@ namespace FractalPlatform.Examples.Applications.UTube
             else
             {
                 var newVideos = allChannels.SelectMany(x => x.Videos)
-                                           .OrderByDescending(x => x.OnDate)      //only fresh videos
-                                           .Take(10)                              //first 10 fresh videos
+                                           .OrderByDescending(x => x.OnDate) //only fresh videos
+                                           .Take(topVideos)                  //first 10 fresh videos
                                            .ToList()
                                            .ToStorage();
 
                 var recommendations = allChannels.SelectMany(x => x.Videos)
                                                  .OrderByDescending(x => x.CountViews) //rate by views
-                                                 .Take(topVideos) //only first 5 videos
+                                                 .Take(topVideos)                      //only first 5 videos
                                                  .ToList()
                                                  .ToStorage();
 
