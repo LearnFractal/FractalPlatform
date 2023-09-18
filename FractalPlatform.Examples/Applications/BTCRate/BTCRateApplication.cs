@@ -7,7 +7,7 @@ namespace FractalPlatform.Examples.Applications.BTCRate
 {
     public class BTCRateApplication : BaseApplication
     {
-        public override void OnStart()
+        private void Rate()
         {
             var query = REST.Get("https://api.coindesk.com/v1/bpi/currentprice.json")
                             .ToCollection()
@@ -19,9 +19,14 @@ namespace FractalPlatform.Examples.Applications.BTCRate
                 EUR = query.Value("{'bpi':{'EUR':{'rate':$}}}")
             }
             .ToCollection(Constants.FIRST_DOC_ID)
-            .SetUIDimension("{'ReadOnly':true,'Style':'Cancel:Refresh'}")
+            .SetUIDimension("{'Style':'Save:Refresh;Cancel:false'}")
             .SetDimension(DimensionType.Theme, "{'DefaultTheme':'White'}")
-            .OpenForm();
+            .OpenForm(result => Rate());
+        }
+
+        public override void OnStart()
+        {
+            Rate();
         }
     }
 }
