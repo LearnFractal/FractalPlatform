@@ -3,7 +3,7 @@ using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 
-namespace FractalPlatform.Examples.Applications.BTCRate
+namespace FractalPlatform.Examples.Applications.BTCRateStopLoss
 {
     public class BTCRateStopLossApplication : BaseApplication
     {
