@@ -1,0 +1,14 @@
+﻿{
+   "IsSendMessages": false,
+   "MaxValue": 30000,
+   "Minvalue": 20000,
+   "Receiver": "5018512422",
+   "TextMessages": [
+      {
+         "IsSent": true,
+         "Message": "Current 27208.7891 BTC rate.",
+         "Provider": "Telegram",
+         "Receiver": "5018512422"
+      }
+   ]
+}

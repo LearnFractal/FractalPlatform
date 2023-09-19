@@ -19,6 +19,7 @@
     <form action="/@InstanceName" enctype="multipart/form-data" method="post">
         <input type="hidden" name="EditKey" value="" />
         <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" name="App" value="@AppName" />
         <input type="hidden" name="FormName" value="@FormName" />
         <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
         <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
@@ -130,8 +131,11 @@
                                                     <tbody>
                                                         <tr>
                                                             <td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/Dashboard/min.png" alt="-" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_2"></a><a name="msg_2542"></a><span class="MsgSubText"><a href="" class="MsgSubText">Re: @Top.Title.Value </a></span> </td>
-                                                            <td class="MsgR1 vt ar"><span class="DateText">@OnDate.Value</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_1&#39;);">
-                                                                <img src="@BaseFilesUrl/Dashboard/up.png" width="16" height="11"></a></td>
+                                                            <td class="MsgR1 vt ar">
+                                                                <span class="DateText">@OnDate.Value</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_1&#39;);">
+                                                                    <img src="@BaseFilesUrl/Dashboard/up.png" width="16" height="11">
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                         <tr class="MsgR2">
                                                             <td class="MsgR2" colspan="2">

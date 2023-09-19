@@ -11,6 +11,8 @@ namespace FractalPlatform.Examples.Applications.UTube
     {
         private void Dashboard()
         {
+            const int topVideos = 4;
+
             var allChannels = Client.SetDefaultCollection("Channels")
                                         .GetWhere("{'IsLocked':false}")
                                         .Select<ChannelInfo>();
@@ -35,7 +37,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                                            .SelectMany(x => x.Videos)
                                            .Where(x => !history.Contains(x.UID))  //not in my history
                                            .OrderByDescending(x => x.OnDate)      //only fresh videos
-                                           .Take(10)                              //first 10 fresh videos
+                                           .Take(topVideos)                       //first 5 fresh videos
                                            .ToList()
                                            .ToStorage();
 
@@ -43,7 +45,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                                                  .SelectMany(x => x.Videos)
                                                  .Where(x => !history.Contains(x.UID)) //not in my history
                                                  .OrderByDescending(x => x.CountViews) //rate by views
-                                                 .Take(10) //only first 10 videos
+                                                 .Take(topVideos) //only first 5 videos
                                                  .ToList()
                                                  .ToStorage();
 
@@ -67,10 +69,16 @@ namespace FractalPlatform.Examples.Applications.UTube
             else
             {
                 var newVideos = allChannels.SelectMany(x => x.Videos)
-                                           .OrderByDescending(x => x.OnDate)      //only fresh videos
-                                           .Take(10)                              //first 10 fresh videos
+                                           .OrderByDescending(x => x.OnDate) //only fresh videos
+                                           .Take(topVideos)                  //first 10 fresh videos
                                            .ToList()
                                            .ToStorage();
+
+                var recommendations = allChannels.SelectMany(x => x.Videos)
+                                                 .OrderByDescending(x => x.CountViews) //rate by views
+                                                 .Take(topVideos)                      //only first 5 videos
+                                                 .ToList()
+                                                 .ToStorage();
 
                 Client.SetDefaultCollection("Dashboard")
                       .GetFirstDoc()
@@ -79,6 +87,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .DeleteByParent("Subscribes")
                       .DeleteByParent("Recommendations")
                       .MergeToArrayPath(newVideos, "NewVideos")
+                      .MergeToArrayPath(recommendations, "Recommendations")
                       .OpenForm(result =>
                       {
                           if (result.Result)
