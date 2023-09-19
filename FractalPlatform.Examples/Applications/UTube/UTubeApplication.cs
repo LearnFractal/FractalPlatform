@@ -203,11 +203,9 @@ namespace FractalPlatform.Examples.Applications.UTube
                     }
                 case "Avatar": 
                     {
-                        //return Client.SetDefaultCollection("Users")
-                        //             .GetWhere("{'Name':@UserName}")
-                        //             .Value("{'Photo':$}");
-                        //TODO: Temporary fix
-                        return "avatar.png";
+                        return Client.SetDefaultCollection("Users")
+                                     .GetWhere("{'Name':@UserName}")
+                                     .Value("{'Photo':$}");
                     }
                 default:
                     {
