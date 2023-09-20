@@ -378,7 +378,7 @@ namespace FractalPlatform.Examples.Applications.UTube
 
                         Client.SetDefaultCollection("Users")
                               .GetWhere("{'Name':@UserName}")
-                              .Update("{'Subscribes':[Del,@Channel]}", channel);
+                              .Delete("{'Subscribes':[@Channel]}", channel);
 
                         return true;
                     }
