@@ -18,6 +18,12 @@
   "Description": {
     "ControlType": "RichTextBox"
   },
+  "DescriptionShort": {
+    "Visible": false
+  },
+  "DescriptionHtml": {
+    "Visible": false
+  },
   "Category": {
     "Visible": false
   }

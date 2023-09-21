@@ -3,6 +3,8 @@
   "CountMessages": 1,
   "CountViews": 3,
   "Description": "test",
+  "DescriptionShort": "test",
+  "DescriptionHtml": "test",
   "OnDate": "07/13/2023 16:25:40",
   "Title": "Test",
   "LastMessage": {

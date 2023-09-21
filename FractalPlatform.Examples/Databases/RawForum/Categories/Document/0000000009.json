@@ -1,10 +1,10 @@
 ﻿{
-  "CountMessages": 0,
-  "CountTopics": 0,
-  "Description": "Про все по трошки",
-  "Title": "Теревеньки",
-  "LastMessage": {
-    "OnDate": "07/13/2023 17:28:45",
-    "Who": "Bazist"
-  }
+   "CountMessages": 1,
+   "CountTopics": 6,
+   "Description": "Про все по трошки",
+   "Title": "Теревеньки",
+   "LastMessage": {
+      "OnDate": "09/21/2023 16:52:37",
+      "Who": "Bazist"
+   }
 }

@@ -93,6 +93,18 @@ namespace FractalPlatform.Examples.Applications.RawForum
             }
         }
 
+        private string ReplaceUrls(string message)
+        {
+            var matches = Regex.Matches(message, "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)");
+
+            foreach (Match match in matches)
+            {
+                message = message.Replace(match.Value, $"<a href=\"{match.Value}\">{match.Value}</a>");
+            }
+
+            return message;
+        }
+
         public override object OnComputedDimension(ComputedInfo computedInfo)
         {
             switch (computedInfo.Variable)
@@ -147,13 +159,35 @@ namespace FractalPlatform.Examples.Applications.RawForum
                                            .GetWhere(computedInfo.AttrPath)
                                            .Value("{'Title':$}");
                     }
+                case "DescriptionShort":
+                    {
+                        var description = computedInfo.Collection
+                                                      .GetWhere(computedInfo.AttrPath)
+                                                      .Value("{'Description':$}") ?? string.Empty;
+
+                        return description.Substring(0, description.IndexOf("\n"));
+                    }
+                case "DescriptionHtml":
+                    {
+                        var description = computedInfo.Collection
+                                                      .GetWhere(computedInfo.AttrPath)
+                                                      .Value("{'Description':$}") ?? string.Empty;
+
+                        description = description.Replace("\n", "<br>");
+
+                        description = ReplaceUrls(description);
+
+                        return description;
+                    }
                 case "MessageHtml":
                     {
                         var message = computedInfo.Collection
                                                   .GetWhere(computedInfo.AttrPath)
                                                   .Value("{'Messages':[{'Message':$}]}") ?? string.Empty;
 
-                        message = message.Replace("<", "&lt;").Replace(">", "&gt;");
+                        message = message.Replace("<", "&lt;").Replace(">", "&gt;").Replace("\n", "<br>");
+
+                        message = ReplaceUrls(message);
 
                         return Regex.Replace(message, "\\[QUOTE=(?<Name>[a-zA-Z0-9]+)\\]", m => $"<div style='border-style:ridge;'>{m.Groups["Name"].Value} writes:<br/>")
                                     .Replace("[/QUOTE]", "</div>");

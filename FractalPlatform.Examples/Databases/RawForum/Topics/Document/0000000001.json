@@ -3,6 +3,8 @@
   "CountMessages": 8,
   "CountViews": 105,
   "Description": "Desc1",
+  "DescriptionShort": "Desc1",
+  "DescriptionHtml": "Desc1",
   "OnDate": "07/07/2023 14:02:56",
   "Title": "My First Topic",
   "LastMessage": {
@@ -67,7 +69,7 @@
     {
       "CountMessages": "29",
       "Message": "[QUOTE=Bazist]Fuck this message again !!!![/QUOTE]\\\n\\\nFuck you !",
-      "MessageHtml": "<div style=\'border-style:ridge;\'>Bazist writes:<br/>Fuck this message again !!!!</div>\\\n\\\nFuck you !",
+      "MessageHtml": "<div style=\\'border-style:ridge;\\'>Bazist writes:<br/>Fuck this message again !!!!</div>\\\\\\n\\\\\\nFuck you !",
       "NewQuoteMessage": "",
       "OnDate": "07/10/2023 11:37:39",
       "Registered": "07/07/2023 14:02:56",
@@ -76,7 +78,7 @@
     {
       "CountMessages": "29",
       "Message": "[QUOTE=Bazist]My new test[/QUOTE]\\\n\\\nYour test is Ok",
-      "MessageHtml": "<div style=\'border-style:ridge;\'>Bazist writes:<br/>My new test</div>\\\n\\\nYour test is Ok",
+      "MessageHtml": "<div style=\\'border-style:ridge;\\'>Bazist writes:<br/>My new test</div>\\\\\\n\\\\\\nYour test is Ok",
       "NewQuoteMessage": "",
       "OnDate": "07/10/2023 11:39:04",
       "Registered": "07/07/2023 14:02:56",

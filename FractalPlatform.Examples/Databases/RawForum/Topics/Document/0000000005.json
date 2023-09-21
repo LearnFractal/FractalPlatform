@@ -1,0 +1,19 @@
+﻿{
+   "Category": "Теревеньки",
+   "CountMessages": 0,
+   "CountViews": 3,
+   "Description": "test\nhttps://fraplat.com",
+   "DescriptionHtml": "test<br><a href=https://fraplat.com>https://fraplat.com</a>",
+   "DescriptionShort": "test",
+   "OnDate": "09/21/2023 16:52:37",
+   "Title": "Test",
+   "LastMessage": {
+      "OnDate": "09/21/2023 16:52:37",
+      "Who": "Bazist"
+   },
+   "Who": {
+      "CountMessages": "13",
+      "Name": "Bazist",
+      "Registered": "07/07/2023 14:02:56"
+   }
+}
