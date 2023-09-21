@@ -41,9 +41,9 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .Append("&nbsp;")
                       .Append("Likes:").Append(video.Likes?.Count)
                       .Append("&nbsp;")
-                      .Append("Date:").Append(video.OnDate.ToShortDateString())
-                      .Append("&nbsp;")
                       .Append("Comments:").Append(video.Comments?.Count)
+                      .Append("&nbsp;")
+                      .Append("Date:").Append(video.OnDate.ToShortDateString())
                       .Append("</a>")
                       .Append("</td>");
                 }
