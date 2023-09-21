@@ -348,9 +348,14 @@ namespace FractalPlatform.Examples.Applications.UTube
                     }
                 case "ClearHistory":
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere("{'Name':@UserName}")
-                              .Delete("{'History':[$]}");
+                        MessageBox("Are you sure to clear history?",
+                                   "Clear history",
+                                   MessageBoxButtonType.YesNo,
+                                   result => {
+                                       Client.SetDefaultCollection("Users")
+                                             .GetWhere("{'Name':@UserName}")
+                                             .Delete("{'History':[$]}");
+                                   });
 
                         return true;
                     }
