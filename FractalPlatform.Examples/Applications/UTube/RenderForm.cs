@@ -21,7 +21,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                                        .GetAll(Application.Context)
                                        .Select<VideoInfo>("{'Root':[!$]}");
 
-                sb.Append("<td><table><tr>");
+                sb.Append("<td><table border=1><tr>");
 
                 for (uint i = 0; i < videos.Length; i++)
                 {
@@ -39,7 +39,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .Append("<a href=\"").Append(this.OnEditRowUrl(domControl, i)).Append("\">")
                       .Append("Views:").Append(video.CountViews)
                       .Append("&nbsp;")
-                      .Append("Likes:").Append(video.Likes?.Count)
+                      .Append("Likes:").Append(video.Likes?.Count - 1)
                       .Append("&nbsp;")
                       .Append("Comments:").Append(video.Comments?.Count)
                       .Append("&nbsp;")
