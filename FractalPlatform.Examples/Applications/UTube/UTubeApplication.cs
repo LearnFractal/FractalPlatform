@@ -372,7 +372,13 @@ namespace FractalPlatform.Examples.Applications.UTube
                     }
                 case "Unsubscribe":
                     {
-                        MessageBox("Not implemented");
+                        var channel = Client.SetDefaultCollection("Channels")
+                                            .GetWhere(eventInfo.AttrPath)
+                                            .Value("{'Name':$}");
+
+                        Client.SetDefaultCollection("Users")
+                              .GetWhere("{'Name':@UserName}")
+                              .Delete("{'Subscribes':[@Channel]}", channel);
 
                         return true;
                     }
