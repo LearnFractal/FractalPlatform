@@ -1,5 +1,5 @@
 {
-  "Style": "Add:false;Hide:Photo,Tags,Videos,Likes,NewVideo,IsLocked,Video,Comments,NewComment;Type:Link",
+  "Style": "Add:false;Hide:Photo,Tags,Videos,Likes,NewVideo,IsLocked,Video,Comments,NewComment,Subscribe,Unsubscribe;Type:Link",
   "Name": {
     "Enabled": false
   },
