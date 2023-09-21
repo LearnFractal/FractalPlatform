@@ -62,6 +62,13 @@
       ]
     }
   },
+  "ClearHistory": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
   "Subscribes": {
     "Disallow": {
       "Read": [

@@ -5,6 +5,20 @@
   "Gender": { "Index": 4 },
   "Language": { "Index": 5 },
   "Photo": { "Index": 6 },
-  "History": { "Index": 8 },
-  "Subscriptions": { "Index": 9 }
+  "History": [
+    {
+      "Name": {
+        "Index": 7 
+      },
+      "Description": {
+        "Index": 8
+      },
+      "OnDate": {
+        "Index": 9
+      }
+    }
+  ],
+  "Subscriptions": {
+    "Index": 10
+  }
 }

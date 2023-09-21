@@ -50,6 +50,11 @@
     "Style": "Type:Link",
     "LayoutLocation": "History"
   },
+  "ClearHistory": {
+    "ControlType": "Button",
+    "Style": "Type:Link",
+    "LayoutLocation": "ClearHistory"
+  },
   "NewVideos": {
     "ControlType": "Videos",
     "LayoutLocation": "NewVideos"

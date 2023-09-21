@@ -346,6 +346,14 @@ namespace FractalPlatform.Examples.Applications.UTube
 
                         return true;
                     }
+                case "ClearHistory":
+                    {
+                        Client.SetDefaultCollection("Users")
+                              .GetWhere("{'Name':@UserName}")
+                              .Delete("{'History':[$]}");
+
+                        return true;
+                    }
                 case "NewVideo":
                     {
                         var docID = Client.SetDefaultCollection("Channels")
