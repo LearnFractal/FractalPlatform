@@ -381,7 +381,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                               .GetWhere("{'Name':@UserName}")
                               .Update("{'Subscribes':[Add,@Channel]}", channel);
 
-                        MessageBox("Thank you. You are subscribed on the channel.");
+                        MessageBox("Thank you. You are subscribed on the channel.", MessageBoxButtonType.Ok);
 
                         return true;
                     }
@@ -395,7 +395,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                               .GetWhere("{'Name':@UserName}")
                               .Delete("{'Subscribes':[@Channel]}", channel);
 
-                        MessageBox("You are unsubscribed from the channel.");
+                        MessageBox("You are unsubscribed from the channel.", MessageBoxButtonType.Ok);
 
                         return true;
                     }
