@@ -44,6 +44,7 @@ namespace FractalPlatform.Examples.Applications.Weather
                                    .Select(x => new
                                    {
                                        Date = info.daily.time[i].ToShortDateString(),
+                                       Day = info.daily.time[i].DayOfWeek,
                                        MinTemp = info.daily.temperature_2m_min[i],
                                        MaxTemp = info.daily.temperature_2m_max[i],
                                        Precipitation = info.daily.precipitation_sum[i++]
@@ -51,6 +52,7 @@ namespace FractalPlatform.Examples.Applications.Weather
             }
             .ToCollection(Constants.FIRST_DOC_ID)
             .SetUIDimension("{'Forecast':{'ReadOnly':true},'Title':{'ControlType':'Label'},'Style':'Save:Refresh;Cancel:false'}")
+            .SetDimension(DimensionType.Validation, "{'Latitude':{'IsRequired':true,'Type':'float'},'Longitude':{'IsRequired':true,'Type':'float'}}")
             .SetDimension(DimensionType.Theme, "{'DefaultTheme':'LightBlue'}")
             .OpenForm(result =>
             {
