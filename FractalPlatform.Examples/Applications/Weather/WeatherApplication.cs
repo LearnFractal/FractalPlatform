@@ -51,7 +51,7 @@ namespace FractalPlatform.Examples.Applications.Weather
                                    })
             }
             .ToCollection(Constants.FIRST_DOC_ID)
-            .SetUIDimension("{'Forecast':{'ReadOnly':true},'Title':{'ControlType':'Label'},'Style':'Save:Refresh;Cancel:false'}")
+            .SetUIDimension("{'Forecast':{'ReadOnly':true},'Title':{'ControlType':'Label'},'Style':'Save:Refresh'}")
             .SetDimension(DimensionType.Validation, "{'Latitude':{'IsRequired':true,'Type':'float'},'Longitude':{'IsRequired':true,'Type':'float'}}")
             .SetDimension(DimensionType.Theme, "{'DefaultTheme':'LightBlue'}")
             .OpenForm(result =>
