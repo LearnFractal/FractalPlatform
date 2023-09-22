@@ -93,6 +93,11 @@ namespace FractalPlatform.Examples.Applications.UTube
             Dashboard();
         }
 
+        public override void OnRegister(FormResult result)
+        {
+            Dashboard();
+        }
+
         private void OpenVideo(string uid)
         {
             if (!Context.User.IsGuest)
