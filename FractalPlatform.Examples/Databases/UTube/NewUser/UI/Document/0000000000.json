@@ -14,5 +14,8 @@
   },
   "Subscriptions": {
     "Visible": false
+  },
+  "Roles": {
+    "Visible": false
   }
 }
