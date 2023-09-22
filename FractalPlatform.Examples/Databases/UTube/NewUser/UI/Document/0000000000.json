@@ -12,7 +12,7 @@
   "Photo": {
     "ControlType": "UploadFile"
   },
-  "Subscriptions": {
+  "Subscribes": {
     "Visible": false
   },
   "Roles": {

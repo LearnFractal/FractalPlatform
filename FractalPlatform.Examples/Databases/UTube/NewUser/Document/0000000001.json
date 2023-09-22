@@ -5,6 +5,6 @@
   "Age": 0,
   "Gender": "",
   "Photo": "",
-  "Subscriptions": [ "Test" ],
+  "Subscribes": [ "Test" ],
   "Roles": [ "User" ]
 }

@@ -23,19 +23,19 @@ namespace FractalPlatform.Examples.Applications.UTube
             {
                 var subNames = Client.SetDefaultCollection("Users")
                                      .GetWhere("{'Name':@UserName}")
-                                     .Values("{'Subscriptions':[$]}");
+                                     .Values("{'Subscribes':[$]}");
 
                 var history = Client.SetDefaultCollection("Users")
                                     .GetWhere("{'Name':@UserName}")
                                     .Values("{'History':[{'UID':$}]}");
 
-                var subscribes = allChannels.Where(x => subNames.Contains(x.Name)) //only my subscriptions
+                var subscribes = allChannels.Where(x => subNames.Contains(x.Name)) //only my subscribes
                                             .SelectMany(x => x.Videos)
                                             .Where(x => !history.Contains(x.UID)) //not in my history
                                             .OrderByDescending(x => x.CountViews) //rate by views
                                             .ToStorage();
 
-                var newVideos = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscriptions
+                var newVideos = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscribes
                                            .SelectMany(x => x.Videos)
                                            .Where(x => !history.Contains(x.UID))  //not in my history
                                            .OrderByDescending(x => x.OnDate)      //only fresh videos
@@ -43,7 +43,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                                            .ToList()
                                            .ToStorage();
 
-                var recommendations = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscriptions
+                var recommendations = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscribes
                                                  .SelectMany(x => x.Videos)
                                                  .Where(x => !history.Contains(x.UID)) //not in my history
                                                  .OrderByDescending(x => x.CountViews) //rate by views
@@ -177,7 +177,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                                 .Value("{'Name':$}");
 
             return Client.SetDefaultCollection("Users")
-                         .GetWhere("{'Name':@UserName,'Subscriptions':[Any,@Channel]}", channel)
+                         .GetWhere("{'Name':@UserName,'Subscribes':[Any,@Channel]}", channel)
                          .Exists();
         }
 

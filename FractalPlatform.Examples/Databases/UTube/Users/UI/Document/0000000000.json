@@ -1,5 +1,5 @@
 {
-  "Style": "Hide:Photo,Value,Password,History,Subscriptions,Capcha,RepeatPassword,UID;Add:false;HasLabel:true;Type:Link",
+  "Style": "Hide:Photo,Value,Password,History,Subscribes,Capcha,RepeatPassword,UID;Add:false;HasLabel:true;Type:Link",
   "Name": {
     "ReadOnly": true
   },
@@ -12,7 +12,7 @@
   "Language": {
     "ReadOnly": true
   },
-  "Subscriptions": {
+  "Subscribes": {
     "ControlType": "Tags"
   },
   "History": {
