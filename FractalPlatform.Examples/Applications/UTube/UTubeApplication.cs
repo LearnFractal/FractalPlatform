@@ -11,6 +11,8 @@ namespace FractalPlatform.Examples.Applications.UTube
     {
         private void Dashboard()
         {
+            CloseIfOpenedForm("Dashboard");
+
             const int topVideos = 4;
 
             var allChannels = Client.SetDefaultCollection("Channels")
@@ -58,13 +60,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .MergeToArrayPath(newVideos, "NewVideos")
                       .MergeToArrayPath(subscribes, "Subscribes")
                       .MergeToArrayPath(recommendations, "Recommendations")
-                      .OpenForm(result => 
-                      {
-                          if (result.Result)
-                          {
-                              Dashboard();
-                          }
-                      });
+                      .OpenForm();
             }
             else
             {
@@ -88,13 +84,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .DeleteByParent("Recommendations")
                       .MergeToArrayPath(newVideos, "NewVideos")
                       .MergeToArrayPath(recommendations, "Recommendations")
-                      .OpenForm(result =>
-                      {
-                          if (result.Result)
-                          {
-                              Dashboard();
-                          }
-                      });
+                      .OpenForm();
             }
         }
 
@@ -121,13 +111,17 @@ namespace FractalPlatform.Examples.Applications.UTube
                 }
             }
 
+            var count = Client.SetDefaultCollection("Channels")
+                              .GetWhere("{'Videos':[{'UID':@UID}]}", uid)
+                              .Count();
+
             Client.SetDefaultCollection("Channels")
                   .GetWhere("{'Videos':[{'UID':@UID}]}", uid)
                   .Update("{'Videos':[{'CountViews':Add(1)}]}");
 
             Client.SetDefaultCollection("Channels")
                   .GetWhere("{'Videos':[{'UID':@UID}]}", uid)
-                  .OpenForm("{'Videos':[$]}");
+                  .OpenForm("{'Videos':[$]}", result => Dashboard());
         }
 
         public override bool OnOpenForm(FormInfo formInfo)
@@ -142,12 +136,10 @@ namespace FractalPlatform.Examples.Applications.UTube
                                   .Value("{'" + formInfo.AttrPath.FirstPath + "':[{'UID':$}]}");
 
                 OpenVideo(uid);
-                
-                formInfo.Collection.ReloadData();
 
                 return false;
             }
-            else if(formInfo.Collection.Name == "Channels" &&
+            else if (formInfo.Collection.Name == "Channels" &&
                     formInfo.AttrPath.FirstPath == "Videos")
             {
                 var uid = Client.SetDefaultCollection("Channels")
@@ -156,7 +148,7 @@ namespace FractalPlatform.Examples.Applications.UTube
 
                 OpenVideo(uid);
 
-                formInfo.Collection.ReloadData();
+                return false;
             }
             else if (formInfo.Collection.Name == "Users" &&
                      formInfo.AttrPath.FirstPath == "History")
@@ -166,8 +158,6 @@ namespace FractalPlatform.Examples.Applications.UTube
                                   .Value("{'History':[{'UID':$}]}");
 
                 OpenVideo(uid);
-
-                formInfo.Collection.ReloadData();
 
                 return false;
             }
@@ -210,7 +200,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                     {
                         return owner == Context.User.Name;
                     }
-                case "Avatar": 
+                case "Avatar":
                     {
                         if (!Context.User.IsGuest)
                         {
@@ -232,7 +222,7 @@ namespace FractalPlatform.Examples.Applications.UTube
 
         public override bool OnSecurityDimension(SecurityInfo securityInfo)
         {
-            if(securityInfo.Variable == "MyUser" &&
+            if (securityInfo.Variable == "MyUser" &&
                (securityInfo.OperationType == OperationType.Create ||
                 securityInfo.OperationType == OperationType.Update ||
                 securityInfo.OperationType == OperationType.Delete))
@@ -254,7 +244,7 @@ namespace FractalPlatform.Examples.Applications.UTube
 
                 return name == Context.User.Name || Context.User.HasRole("Admin");
             }
-            else if(securityInfo.OperationType == OperationType.Read)
+            else if (securityInfo.OperationType == OperationType.Read)
             {
                 return true;
             }
@@ -357,6 +347,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                                            Client.SetDefaultCollection("Users")
                                                  .GetWhere("{'Name':@UserName}")
                                                  .Delete("{'History':[$]}");
+
+                                           Dashboard();
                                        }
                                    });
 
@@ -384,6 +376,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                               .GetWhere("{'Name':@UserName}")
                               .Update("{'Subscribes':[Add,@Channel]}", channel);
 
+                        MessageBox("Thank you. You are subscribed on the channel.");
+
                         return true;
                     }
                 case "Unsubscribe":
@@ -395,6 +389,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                         Client.SetDefaultCollection("Users")
                               .GetWhere("{'Name':@UserName}")
                               .Delete("{'Subscribes':[@Channel]}", channel);
+
+                        MessageBox("You are unsubscribed from the channel.");
 
                         return true;
                     }
@@ -426,7 +422,7 @@ namespace FractalPlatform.Examples.Applications.UTube
         public override void OnStart()
         {
             TryAutoLogin();
-            
+
             Dashboard();
         }
 

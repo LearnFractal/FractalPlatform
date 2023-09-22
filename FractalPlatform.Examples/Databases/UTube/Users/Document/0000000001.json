@@ -6,6 +6,7 @@
   "Password": "7DA55F449235BDC18953A4F8221CFDA8",
   "Photo": "bazist.png",
   "Roles": [
+    "User",
     "Admin"
   ],
   "Subscriptions": [
