@@ -2,6 +2,7 @@
 
 - [Hello World](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld)
 - [BTC Rate](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRate)
+- [BTC Rate Stop Loss](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRateStopLoss)
 - [Chat](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Chat)
 - [Controls Gallery](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ControlsGallery)
 - [Dating Game](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/DatingGame)
@@ -26,3 +27,4 @@
 - [RawForum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/RawForum)
 - [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Seasons)
 - [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
+- [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Weather)
