@@ -1,0 +1,192 @@
+if (typeof m == 'undefined') {
+    var m = function () {};
+    m.fn = m.prototype = {};
+}
+
+m.fn.modal_auth = function(form) {
+
+    form.on('submit', function(e) {
+
+        e.preventDefault();
+
+        form.class({loading: true});
+
+        let
+            data = form.form_collect(),
+            headers = {'X-Requested-With': 'XMLHttpRequest', 'Get-Templates': 'true'};
+
+        const
+            prepare_view = function (obj) {
+
+                if (typeof obj.template === 'undefined' || typeof obj.data === 'undefined') {
+                    return '';
+                }
+
+                let view = obj.template.replace(/\\\'/mg, "'").replace(/\\\"/mg, '"');
+
+                if (obj.data !== []) {
+                    for (let [item_key, item_data_object] of Object.entries(obj.data)) {
+
+                        /** Simple array with String values */
+                        if (item_data_object instanceof Array && typeof item_data_object['0'] === 'string') {
+                            item_data_object = item_data_object.join('');
+                        }
+                        /** Array of views */
+                        else if (item_data_object instanceof Array &&
+                            typeof item_data_object['0'] === 'object' &&
+                            typeof item_data_object['0'].data !== 'undefined' &&
+                            typeof item_data_object['0'].template !== 'undefined'
+                        ) {
+                            item_data_object.forEach(function(array_object, aid){
+                                item_data_object[aid] = prepare_view(array_object);
+                            });
+                            item_data_object = item_data_object.join('');
+                        }
+                        /** A one view in parameter */
+                        else if (typeof item_data_object === 'object' && typeof item_data_object.data !== 'undefined' &&
+                            typeof item_data_object.template !== 'undefined') {
+
+                            item_data_object = prepare_view(item_data_object);
+
+                            console.log(item_data_object);
+                        }
+
+                        view = view.replace(new RegExp('\~' + item_key + '\~', 'gi'), item_data_object || '');
+                    }
+                }
+
+                return view
+                    .replace(/~.*~/g, '')
+                    .replace(/[\n]+/g, ' ')
+                    .replace(/[\s]{2,}/g, ' ')
+                    .replace(/\>[\s]+\</g, '><')
+                    .trim();
+            };
+
+        m.ajax({
+            url: form.attr('action') || window.location.href,
+            data: data,
+            headers: headers,
+            success: function (response) {
+
+                form.class({loading: null});
+
+                form.find('div.alert').remove();
+                form.find('.is-invalid').class({'is-invalid': null});
+
+                if (typeof response.errors !== 'undefined' && response.errors instanceof Array) {
+                    response.errors.forEach(function(error){
+
+                        if (typeof error.field !== 'undefined' && form.find('[name="' + error.field + '"]').length > 0) {
+                            form.find('[name="' + error.field + '"]').class({'is-invalid': true});
+                        }
+
+                        if (typeof error.text !== 'undefined') {
+                            form.prepend('<div class="alert alert-danger">' + error.text + '</div>');
+                        }
+                    });
+                }
+                else if (typeof response.success_text !== 'undefined') {
+                    form.prepend('<div class="alert alert-success">' + response.success_text + '</div>');
+                }
+                else if (typeof response.error_text !== 'undefined') {
+                    form.prepend('<div class="alert alert-danger">' + response.error_text + '</div>');
+                }
+                else if (typeof response.notice_text !== 'undefined') {
+                    form.prepend('<div class="alert alert-warning">' + response.notice_text + '</div>');
+                }
+                else if (typeof response.success_replace !== 'undefined') {
+                    form.replace('<div class="alert alert-success">' + response.success_replace + '</div>');
+                }
+                else if (typeof response.error_replace !== 'undefined') {
+                    form.replace('<div class="alert alert-danger">' + response.error_replace + '</div>');
+                }
+                else if (typeof response.notice_replace !== 'undefined') {
+                    form.replace('<div class="alert alert-warning">' + response.notice_replace + '</div>');
+                }
+
+                if (typeof response.personal_link !== 'undefined' &&
+                    typeof response.personal_link.template !== 'undefined' &&
+                    typeof response.personal_link.data !== 'undefined') {
+
+                    m('nav .authorisation_link').replace(prepare_view(response.personal_link));
+                    m('.modal .close').event_fire('click');
+                    m('nav .personal_link [data-m-action]').init();
+                }
+                else if (typeof response.authorisation_link !== 'undefined' &&
+                    typeof response.authorisation_link.template !== 'undefined' &&
+                    typeof response.authorisation_link.data !== 'undefined') {
+
+                    m('nav .personal_link').replace(prepare_view(response.authorisation_link));
+                    m('nav .authorisation_link [data-m-action]').init();
+
+                    m.cookies('authorize', null);
+                    m.cookies('weua_token', null);
+                }
+
+                if (typeof response.remove_sidebar !== 'undefined' && m('#sidebar').length > 0 && m('#__sidebar_toggle .wrapper-menu').length > 0) {
+                    m('#sidebar').remove();
+                    m('#__sidebar_toggle .wrapper-menu').remove();
+                }
+
+                if (typeof response.token !== 'undefined') {
+
+                    m.cookies('authorize', response.token);
+                    m.cookies('weua_token', response.token);
+
+                    if (typeof form.first.data !== 'undefined' && typeof form.first.data.onsuccess === 'function') {
+                        form.first.data.onsuccess.apply(form, [response.token]);
+                    }
+                }
+
+                if (typeof response.modal_close !== 'undefined' && m('.modal.active .close').length > 0) {
+                    m('.modal.active .close').event_fire('click');
+                }
+
+                if (typeof response.clear_form !== 'undefined') {
+                    form.first.reset();
+                }
+                if (typeof response.reset_form !== 'undefined') {
+                    form.first.reset();
+                }
+
+                if (typeof response.redirect !== 'undefined') {
+                    window.location.href = response.redirect;
+                    return true;
+                }
+
+                if (typeof response.sidebar !== 'undefined' && typeof response.sidebar_toggle !== 'undefined') {
+
+                    console.log(prepare_view(response.sidebar));
+                    console.log(prepare_view(response.sidebar_toggle));
+
+                    m('#content-page').before(prepare_view(response.sidebar));
+                    m('#__sidebar_toggle').append(prepare_view(response.sidebar_toggle));
+                }
+            }
+        });
+    });
+
+    if (['modal-registration', 'modal-reset'].indexOf(form.attr('id')) > -1) {
+        form.on('modal_opened', function(){
+
+            let modal_reg = m(this);
+
+            m.ajax({
+                url: '/auth',
+                data: {
+                    action: '_ajax_get_captcha'
+                },
+                success: function (response) {
+                    if (typeof response.captcha_image !== 'undefined') {
+                        modal_reg.find('img.captcha-image').attr('src', 'data:image/png;base64,' + response.captcha_image);
+                    }
+                    if (typeof response.captcha_unique_id !== 'undefined') {
+                        modal_reg.find('input[name="captcha_unique_id"]').val(response.captcha_unique_id);
+                    }
+                }
+            });
+        });
+    }
+
+};

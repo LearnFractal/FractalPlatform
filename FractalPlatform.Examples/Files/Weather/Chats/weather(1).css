@@ -1,0 +1,62 @@
+i.humidity,
+i.pressure,
+i.temperature,
+i.umbrella,
+i.wind
+{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+i.humidity {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/humidity.black.svg');
+}
+i.pressure {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/pressure.black.svg');
+}
+i.temperature {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/temperature.black.svg');
+}
+i.umbrella {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/umbrella.black.svg');
+}
+i.wind {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/wind.black.svg');
+}
+i.humidity.white {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/humidity.white.svg');
+}
+i.pressure.white {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/pressure.white.svg');
+}
+i.temperature.white {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/temperature.white.svg');
+}
+i.umbrella.white {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/umbrella.white.svg');
+}
+i.wind.white {
+    background-image: url('/application/we/modules/weather/widgets/img/weather-icons/wind.white.svg');
+}
+.card.weather-block img.absolute {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 0.25;
+}
+.card.weather-block h2.degrees {
+    font-size: 6rem;
+    color: #fff;
+}
+.card.weather-widget {
+    background-color: #b36dec;
+}
+
+.card.weather-widget ul.hourly-items {
+    font-size: 0.9em;
+}

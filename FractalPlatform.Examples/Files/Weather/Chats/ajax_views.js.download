@@ -1,0 +1,349 @@
+if (typeof m === 'undefined') {
+    var m = function () {};
+    m.fn = m.prototype = {};
+}
+
+if (typeof window.views === 'undefined') {
+    window.views = {};
+}
+
+m.fn.ajax_views = function(content) {
+    
+    let links, get_templates,
+        parts = {},
+        path_base = (window.location.pathname.substr(1).split('/'))['0'];
+
+    const
+        u = 'undefined',
+        stateObj = history.state || {},
+        layouts = {},
+        head = m('#head'),
+        link_click = function(e)
+        {
+            e.preventDefault();
+
+            m('body').class({loading: true});
+
+            /** Making current link in menu active */
+
+            let link = m(this);
+
+            if (m('ul.navbar-nav a.nav-link.active').length > 0) {
+                m('ul.navbar-nav a.nav-link.active').class('active', null);
+            }
+
+            if (m('ul.iq-menu li.active').length > 0) {
+                m('ul.iq-menu li.active').class('active', null);
+            }
+
+            if (m('div#main-menu.collapse.show').length > 0) {
+                m('div#main-menu.collapse.show').class('show', null);
+            }
+
+            if (link.class('nav-link')) {
+                link.class('active', true);
+            }
+            else if (link.closest('ul.iq-submenu').length > 0) {
+                link.closest('ul').parent().class('active', true);
+            }
+
+            if (link.closest('ul.iq-menu').length > 0) {
+                link.closest('li').class('active', true);
+            }
+
+            if (window.innerWidth <= 768 && m('body').class('sidebar-main')) {
+                m('body').class('sidebar-main', null);
+            }
+
+            /** Initiate AJAX loading */
+            load_ajax_data(this.pathname);
+        },
+        _init = function(container)
+        {
+            links = container.find('a[href^="/"]:not(a[target="_blank"]):not(a[href^="//"]):not(a.language-link):not([data-prevent="ajax_views"])');
+            get_templates = true;
+
+            if (links.length > 0) {
+                links.off('click').on('click', link_click);
+            }
+        },
+        prepare_view = function (view, item_data) {
+
+            view = view
+                .replace(/\\\'/mg, "'")
+                .replace(/\\\"/mg, '"');
+
+            /*
+            .replace(/[\n]+/g, ' ')
+             */
+
+            for (let [item_key, item_data_object] of Object.entries(item_data)) {
+
+                if (item_data_object instanceof Array) {
+                    item_data_object = item_data_object.join('');
+                }
+
+                view = view.replace(new RegExp('\~' + item_key + '\~', 'gi'), item_data_object || '');
+            }
+
+            return view
+                .replace(/~.*~/g, '')
+                /*
+                .replace(/[\s]{2,}/g, ' ')
+                .replace(/\>[\s]+\</g, '><')
+                */
+                .trim();
+        },
+        process_view = function(view_name, data)
+        {
+            if (typeof data === 'string' && data.length > 0) {
+                return data;
+            }
+
+            /* If `template` was sent in server response we store it in `views` object for future usage */
+            if (typeof data.template !== u) {
+                window.views[view_name] = data.template;
+            }
+            /* Otherwise we trying to find a template in `views` object */
+            else if (typeof views[view_name] !== u) {
+                data.template = window.views[view_name];
+            }
+
+            if (typeof data.template === u) {
+                return '';
+            }
+
+            /* Getting a global template from `layouts` object */
+            if (view_name === 'content' && typeof layouts[path_base] !== u) {
+                data.template = layouts[path_base];
+            }
+
+            /* Continue executing if `data` is missed */
+            if (typeof data.data !== 'object' || data.data === null) {
+                return '';
+            }
+
+            /* Processing data */
+            for (const [data_name, data_object] of Object.entries(data.data)) {
+
+                /* Repeatable view items inside array */
+                if (data_object instanceof Array && data_object.length > 0) {
+
+                    let tmp_items = [];
+
+                    data_object.forEach(function(data_item){
+
+                        if (typeof data_item.view_name === u && typeof data_item.data === u) {
+                            return true;
+                        }
+
+                        tmp_items.push(process_view(data_item.view_name, data_item));
+                    });
+
+                    if (tmp_items.length > 0) {
+                        data.data[data_name] = tmp_items;
+                    }
+                }
+                /* Single child item like view object has own `view_name` and `data` */
+                else if (data_object instanceof Object && typeof data_object.view_name !== u &&
+                    typeof data_object.data !== u) {
+
+                    data.data[data_name] = process_view(data_object.view_name, data_object);
+                }
+
+                /*
+                if (data_object instanceof Array) {
+                    data.data[data_name] = data_object.join('');
+                }
+                else if (['string', 'number', 'double', 'float'].indexOf(typeof data_object) > -1) {
+                    delete data.data[data_name];
+                }
+                */
+            }
+
+            return prepare_view(data.template, data.data);
+        },
+        process_parts = function(object)
+        {
+            for (const [view_name, view_data] of Object.entries(object)) {
+                parts[view_name] = process_view(view_name, view_data);
+            }
+        },
+        append_css = function(path)
+        {
+            let link = document.createElement('link');
+            link.setAttribute('href', path);
+            link.setAttribute('rel', 'stylesheet');
+            link.setAttribute('type', 'text/css');
+            link.setAttribute('media', 'all');
+            document.head.appendChild(link);
+        },
+        append_js = function(path)
+        {
+            let script = document.createElement('script');
+            script.setAttribute('src', path);
+            script.setAttribute('async', true);
+            document.body.appendChild(script);
+        },
+        load_ajax_data = function(path)
+        {
+            path_base = path;
+            if (path_base.match(/^\/[a-z]{2}\//g)) {
+                path_base = path_base.replace(/^(\/[a-z]{2})/g, '');
+            }
+
+            path_base = path_base.substr(1).split('/').slice(0, 2).join('.');
+
+            let headers = {'X-Requested-With': 'XMLHttpRequest'};
+
+            get_templates = typeof layouts[path_base] === u;
+
+            if (get_templates === true) {
+                headers['Get-Templates'] = 'true';
+            }
+
+            m.ajax({
+                url: path,
+                type: 'GET',
+                headers: headers,
+                error: function (error) {
+                    console.log(error);
+                    window.location.href = path;
+                },
+                success: function (response) {
+
+                    m('body').class({loading: null});
+
+                    if (typeof response.redirect !== u && response.redirect.substr(0, 1) === '/') {
+                        load_ajax_data(response.redirect);
+                        return true;
+                    }
+
+                    if (typeof response.title !== u) {
+                        window.history.pushState(stateObj, response.title, path);
+                        m('head title').text(response.title);
+                    }
+
+                    if (typeof response.ajax_views !== 'object' || typeof response.ajax_views.content !== 'object') {
+                        window.location.href = path;
+                        return false;
+                    }
+
+                    if (typeof response.ajax_views.content.template === 'string') {
+                        layouts[path_base] = response.ajax_views.content.template;
+                    }
+
+                    /* Add new CSS to HEAD */
+                    if (typeof response.css === 'object' && response.css instanceof Array) {
+                        response.css.forEach(function(css_path){
+                            if (m('head > link[rel="stylesheet"][href="'+css_path+'"]').length === 0) {
+                                append_css(css_path);
+                            }
+                        });
+                    }
+
+                    /* Add new JS to BODY */
+                    if (typeof response.js === 'object' && response.js instanceof Array) {
+                        response.js.forEach(function(js_path){
+                            if (m('body > script[src="'+js_path+'"]').length === 0) {
+                                append_js(js_path);
+                            }
+                        });
+                    }
+
+                    parts = {};
+
+                    /* Prepare global views like template parts */
+                    process_parts(response.ajax_views);
+
+                    if (typeof parts.content === u) {
+                        return false;
+                    }
+
+                    content.replace_with(m.to_element(parts.content));
+
+                    for (const [part_name, part_html] of Object.entries(parts)) {
+
+                        if (part_name === 'content' || part_html.length === 0) {
+                            continue;
+                        }
+
+                        let part_dom_item = content.find('#__' + part_name);
+
+                        if (part_dom_item.length > 0) {
+
+                            part_dom_item.replace_with(m.to_element(part_html));
+                            if (part_html.indexOf('class="adsbygoogle"') > -1 && typeof adsbygoogle !== u) {
+                                adsbygoogle.push({});
+                            }
+                        }
+                    }
+
+                    /* Crutches with sidebar */
+                    if (typeof parts.sidebar === u && content.prev('#sidebar') !== false && content.prev('#sidebar').attr('id') === 'sidebar') {
+                        content.prev('#sidebar').remove();
+                        if (m('.wrapper-menu').length > 0) {
+                            m('.wrapper-menu').hide();
+                        }
+                    }
+                    else if (typeof parts.sidebar !== u && content.prev('#sidebar') !== false && content.prev('#sidebar').attr('id') !== 'sidebar'){
+                        content.before(parts.sidebar);
+                        _init(m('#sidebar'));
+
+                        if (typeof parts.sidebar_toggle !== u && m('.wrapper-menu').length === 0) {
+                            m('#__sidebar_toggle').append(m.to_element(parts.sidebar_toggle));
+                            m('.wrapper-menu a').init();
+                        }
+
+                        if (m('.wrapper-menu').length > 0) {
+                            m('.wrapper-menu').show();
+                        }
+                    }
+
+                    /* Force replace Personal link */
+                    if (typeof parts.personal_link !== u && m('#__personal_link').length > 0) {
+                        m('#__personal_link').replace_with(m.to_element(parts.personal_link));
+                    }
+                    /*
+                    if (typeof parts.im_notifications !== u && m('#__im_notifications').length > 0) {
+                        m('#__im_notifications').replace_with(m.to_element(parts.im_notifications));
+                    }
+                    if (typeof parts.notifications !== u && m('#__notifications').length > 0) {
+                        m('#__notifications').replace_with(m.to_element(parts.notifications));
+                    }
+                    */
+
+                    content.scroll_to(-1 * (head.first.clientHeight || head.first.offsetHeight));
+
+                    if (content.find('[data-m-action]').length > 0) {
+                        content.find('[data-m-action]').each(function(){
+                            m(this).init()
+                        });
+                    }
+
+                    _init(content);
+
+                    content.on('load_path', function(){
+                        load_ajax_data(document.location.pathname);
+                    });
+                }
+            });
+        };
+
+    _init(m('body'));
+
+
+    window.addEventListener('popstate', (event) => {
+        if (document.location.pathname.match(/\/photo\//g)) {
+            return true;
+        }
+        load_ajax_data(document.location.pathname);
+    });
+
+    content.on('load_path', function(){
+
+        m('body').class({loading: true});
+
+        load_ajax_data(document.location.pathname);
+    });
+};

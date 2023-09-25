@@ -1,0 +1,66 @@
+if (typeof m == 'undefined') {
+    var m = function () {};
+    m.fn = m.prototype = {};
+}
+
+m.fn.weather = function(context) {
+
+    var
+        marker = context.find('a.map-marker'),
+        city_name = context.find('[data-param="city_name"]'),
+        weather_text = context.find('[data-param="weather-text"]'),
+        degrees = context.find('[data-param="degrees"]'),
+        weather_icon = context.find('.flex-shrink-0 .weather-icon'),
+        forecast_items = context.find('ul.forecast-items'),
+        hourly_items = context.find('ul.hourly-items'),
+        weather_position = function(position) {
+
+            if (typeof position.coords === 'undefined') {
+                return false;
+            }
+
+            context.css('loading', true);
+
+            m.ajax({
+                data: {
+                    lat: position.coords.latitude,
+                    lon: position.coords.longitude
+                },
+                success: function(response){
+
+                    context.css('loading', null);
+
+                    if (typeof response.city_name !== 'undefined') {
+                        city_name.text(response.city_name);
+                    }
+                    if (typeof response.weather_text !== 'undefined') {
+                        weather_text.text(response.weather_text);
+                    }
+                    if (typeof response.degrees !== 'undefined') {
+                        degrees.text(response.degrees);
+                    }
+                    if (typeof response.weather_icon !== 'undefined') {
+                        weather_icon.attr('src', response.weather_icon);
+                    }
+                    if (typeof response.forecast_items !== 'undefined') {
+                        forecast_items.html(response.forecast_items);
+                    }
+                    if (typeof response.hourly_items !== 'undefined') {
+                        hourly_items.html(response.hourly_items);
+                    }
+                }
+            });
+        };
+
+    marker.on('click', function(e){
+        e.preventDefault();
+
+        if (navigator.geolocation) {
+
+            console.log(navigator.geolocation);
+
+            navigator.geolocation.getCurrentPosition(weather_position);
+            return true;
+        }
+    });
+};
