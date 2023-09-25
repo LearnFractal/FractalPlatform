@@ -34,36 +34,48 @@ namespace FractalPlatform.Examples.Applications.Weather
 
             int i = 0;
 
+            //Forecast page
             new
             {
-                Title = "Weather",
                 Latitude = lat,
                 Longitude = lng,
-                Forecast = info.daily
-                                   .time
+                Forecast = info.daily.time
+                                   .Take(6)
                                    .Select(x => new
                                    {
                                        Date = info.daily.time[i].ToShortDateString(),
-                                       Day = info.daily.time[i].DayOfWeek,
+                                       Day = info.daily.time[i].DayOfWeek.ToString().Substring(0, 3),
                                        MinTemp = info.daily.temperature_2m_min[i],
                                        MaxTemp = info.daily.temperature_2m_max[i],
-                                       Precipitation = info.daily.precipitation_sum[i++]
+                                       Picture = info.daily.precipitation_sum[i] == 0 ? "01d.svg" : "04d.svg",
+                                       Precipitation = info.daily.precipitation_sum[i++],
+
                                    })
             }
-            .ToCollection(Constants.FIRST_DOC_ID)
-            .SetUIDimension("{'Forecast':{'ReadOnly':true},'Title':{'ControlType':'Label'},'Style':'Save:Refresh'}")
-            .SetDimension(DimensionType.Validation, "{'Latitude':{'IsRequired':true,'Type':'float'},'Longitude':{'IsRequired':true,'Type':'float'}}")
-            .SetDimension(DimensionType.Theme, "{'DefaultTheme':'LightBlue'}")
+            .ToCollection(Constants.FIRST_DOC_ID, "Forecast")
+            .SetUIDimension("{'Layout':'Forecast','IsRawPage':true}")
             .OpenForm(result =>
             {
-                if (result.Result)
+                //Set GPS coordinates page
+                new
                 {
-                    var gps = result.Collection
-                                    .GetFirstDoc()
-                                    .Values("{'Latitude':$,'Longitude':$}");
-
-                    Weather(gps[0], gps[1]);
+                    Latitude = lat,
+                    Longitude = lng
                 }
+                .ToCollection(Constants.FIRST_DOC_ID)
+                .SetDimension(DimensionType.Validation, "{'Latitude':{'IsRequired':true,'Type':'float'},'Longitude':{'IsRequired':true,'Type':'float'}}")
+                .SetDimension(DimensionType.Theme, "{'DefaultTheme':'White','ChooseThemeOnAllPages':false}")
+                .OpenForm(result =>
+                {
+                    if (result.Result)
+                    {
+                        var gps = result.Collection
+                                        .GetFirstDoc()
+                                        .Values("{'Latitude':$,'Longitude':$}");
+
+                        Weather(gps[0], gps[1]);
+                    }
+                });
             });
         }
 
