@@ -1,5 +1,6 @@
 ﻿{
   "Address": "Kyiv",
+  "IPAddress": "127.0.0.1",
   "Lat": "50.4329658690059",
   "Lng": "30.57958332067064",
   "TelegramUserID": "",
