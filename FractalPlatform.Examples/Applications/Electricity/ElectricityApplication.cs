@@ -10,11 +10,18 @@ namespace FractalPlatform.Examples.Applications.Electricity
     {
         private bool PingHost(string host)
         {
-            var ping = new Ping();
+            try
+            {
+                var ping = new Ping();
 
-            var pingreply = ping.Send(host, 1000);
+                var pingreply = ping.Send(host, 1000);
 
-            return pingreply.Status == IPStatus.Success;
+                return pingreply.Status == IPStatus.Success;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public override bool OnTimerDimension(TimerInfo timerInfo)
