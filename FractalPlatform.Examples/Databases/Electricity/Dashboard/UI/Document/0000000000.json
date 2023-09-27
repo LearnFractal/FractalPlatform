@@ -4,5 +4,8 @@
   },
   "NewLocation": {
     "ControlType": "Button"
+  },
+  "Locations": {
+    "ControlType": "Button"
   }
 }

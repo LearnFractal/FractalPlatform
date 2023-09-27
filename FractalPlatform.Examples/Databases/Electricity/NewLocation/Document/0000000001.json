@@ -1,8 +1,11 @@
 ﻿{
-  "Address": "Kiev",
-  "Lat": "50.4329658690059",
-  "Lng": "30.57958332067064",
+  "Style": "Save:Create",
+  "Address": "",
+  "IPAddress": "",
+  "Lat": "",
+  "Lng": "",
   "TelegramUserID": "",
   "Description": "",
-  "HasElectricity": false
+  "HasElectricity": false,
+  "LastPingTime": ""
 }

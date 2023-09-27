@@ -1,8 +1,10 @@
 {
   "Address": { "Index": 1 },
-  "Lat": { "Index": 2 },
-  "Lng": { "Index": 3 },
-  "TelegramUserID": { "Index": 4 },
-  "Description": { "Index": 5 },
-  "HasElectricity": { "Index": 6 }
+  "IPAddress": { "Index": 2 },
+  "Lat": { "Index": 3 },
+  "Lng": { "Index": 4 },
+  "TelegramUserID": { "Index": 5 },
+  "Description": { "Index": 6 },
+  "HasElectricity": { "Index": 7 },
+  "LastPingTime": { "Index": 8 }
 }

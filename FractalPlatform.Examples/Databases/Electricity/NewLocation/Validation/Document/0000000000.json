@@ -4,6 +4,11 @@
     "MinLen": 3,
     "MaxLen": 256
   },
+  "IPAddress": {
+    "IsRequired": true,
+    "MinLen": 7,
+    "MaxLen": 12
+  },
   "Lat": {
     "IsRequired": true,
     "Type": "float"
