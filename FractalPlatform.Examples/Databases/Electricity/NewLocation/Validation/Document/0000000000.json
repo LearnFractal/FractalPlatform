@@ -16,5 +16,8 @@
   "Lng": {
     "IsRequired": true,
     "Type": "float"
+  },
+  "TelegramUserID": {
+    "Type": "number"
   }
 }

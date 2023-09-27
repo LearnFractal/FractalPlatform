@@ -1,11 +1,10 @@
 ﻿{
-  "Style": "Save:Create",
   "Address": "",
   "IPAddress": "",
   "Lat": "",
   "Lng": "",
-  "TelegramUserID": "",
+  "TelegramUserID": 0,
   "Description": "",
-  "HasElectricity": false,
+  "HasElectricity": true,
   "LastPingTime": ""
 }
