@@ -1,0 +1,8 @@
+{
+  "Description": {
+    "ControlType": "RichTextBox" 
+  },
+  "HasElectricity": {
+    "Visible": false 
+  }
+}

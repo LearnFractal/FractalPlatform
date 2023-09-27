@@ -1,0 +1,8 @@
+{
+  "Map": {
+    "ControlType": "Map"
+  },
+  "NewLocation": {
+    "ControlType": "Button"
+  }
+}

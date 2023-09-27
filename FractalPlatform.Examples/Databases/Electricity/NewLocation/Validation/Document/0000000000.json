@@ -1,0 +1,15 @@
+{
+  "Address": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Lat": {
+    "IsRequired": true,
+    "Type": "float"
+  },
+  "Lng": {
+    "IsRequired": true,
+    "Type": "float"
+  }
+}

@@ -1,0 +1,18 @@
+﻿{
+  "Map": {
+    "Title": "Electricity points",
+    "Key": "",
+    "Zoom": 15,
+    "Center": {
+      "Lat": "50.4329658690059",
+      "Lng": "30.57958332067064"
+    },
+    "Points": [
+      {
+        "Lat": "50.4329658690059",
+        "Lng": "30.57958332067064"
+      }
+    ]
+  },
+  "NewLocation": "New Location"
+}
