@@ -59,7 +59,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
             foreach (Match match in matches)
             {
-                var url = "https://dou.ua/forums/" + match.Groups["Topic"].Value;
+                var url = "https://dou.ua/forums" + match.Groups["Topic"].Value;
 
                 text = GetFromCache(url);
 
