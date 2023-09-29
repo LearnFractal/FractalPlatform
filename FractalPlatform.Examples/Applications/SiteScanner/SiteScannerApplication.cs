@@ -61,7 +61,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
             {
                 var url = "https://dou.ua/forums/" + match.Groups["Topic"].Value;
 
-                var page = GetFromCache(url);
+                text = GetFromCache(url);
 
                 foreach (var tag in userInfo.Tags)
                 {
@@ -69,7 +69,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
                     if (count > 0)
                     {
-                        var site = tag.Sites.FirstOrDefault(x => x.URL == page);
+                        var site = tag.Sites.FirstOrDefault(x => x.URL == url);
 
                         if (site != null)
                         {
