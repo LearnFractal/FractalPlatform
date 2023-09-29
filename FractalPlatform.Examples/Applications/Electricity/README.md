@@ -3,12 +3,11 @@
 ## Sources
 
 - [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Electricity/ElectricityApplication.cs)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Layouts/Electricity)
 - [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Electricity)
 
 ## Functionality
 
-Application show locations with electricity and notify if electricity has gone
+Application shows locations with electricity and notify if electricity has gone by telegram
 
 ## How it implemented
 

@@ -28,3 +28,4 @@
 - [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Seasons)
 - [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
 - [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Weather)
+- [Electricity](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Electricity)
