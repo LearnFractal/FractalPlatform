@@ -7,7 +7,7 @@
 
 ## Functionality
 
-Application show locations with electricity and notify if electricity has gone by telegram
+Application shows locations with electricity and notify if electricity has gone by telegram
 
 ## How it implemented
 
