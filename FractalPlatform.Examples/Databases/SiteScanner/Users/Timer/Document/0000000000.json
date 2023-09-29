@@ -1,0 +1,4 @@
+{
+  "OnCall": "CheckSites",
+  "CallEveryInSec": 36000
+}

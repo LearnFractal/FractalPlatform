@@ -1,0 +1,10 @@
+{
+  "Name": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "TelegramUserID": {
+    "Type": "number"
+  }
+}

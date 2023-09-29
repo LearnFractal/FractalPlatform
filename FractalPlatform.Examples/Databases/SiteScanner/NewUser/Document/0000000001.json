@@ -1,0 +1,15 @@
+﻿{
+  "Name": "",
+  "TelegramUserID": 0,
+  "Tags": [
+    {
+      "Tag": "Tag1"
+    },
+    {
+      "Tag": "Tag2"
+    },
+    {
+      "Tag": "Tag3"
+    }
+  ]
+}

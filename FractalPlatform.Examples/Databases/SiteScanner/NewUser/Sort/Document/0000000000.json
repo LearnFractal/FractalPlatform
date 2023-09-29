@@ -1,0 +1,5 @@
+{
+  "Name": { "Index": 1 },
+  "TelegramUserID": { "Index": 2 },
+  "Tags": { "Index": 3 }
+}

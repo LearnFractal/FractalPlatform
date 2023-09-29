@@ -1,0 +1,83 @@
+﻿{
+   "Name": "Bazist",
+   "TelegramUserID": 5018512422,
+   "Tags": [
+      {
+         "Tag": "fractal"
+      },
+      {
+         "Tag": "фрактал"
+      },
+      {
+         "Tag": "бубен",
+         "Sites": [
+            {
+               "Count": 10,
+               "URL": "https://dou.ua/forums//topic/41399"
+            },
+            {
+               "Count": 64,
+               "URL": "https://dou.ua/forums//topic/32253"
+            },
+            {
+               "Count": 1,
+               "URL": "https://dou.ua/forums//topic/44905"
+            }
+         ]
+      },
+      {
+         "Tag": "бубн",
+         "Sites": [
+            {
+               "Count": 15,
+               "URL": "https://dou.ua/forums//topic/41399"
+            },
+            {
+               "Count": 44,
+               "URL": "https://dou.ua/forums//topic/32253"
+            },
+            {
+               "Count": 3,
+               "URL": "https://dou.ua/forums//topic/44905"
+            }
+         ]
+      },
+      {
+         "Tag": "стартап",
+         "Sites": [
+            {
+               "Count": 57,
+               "URL": "https://dou.ua/forums//topic/41399"
+            },
+            {
+               "Count": 14,
+               "URL": "https://dou.ua/forums//topic/32253"
+            },
+            {
+               "Count": 3,
+               "URL": "https://dou.ua/forums//topic/45352"
+            },
+            {
+               "Count": 1,
+               "URL": "https://dou.ua/forums//topic/44209"
+            },
+            {
+               "Count": 8,
+               "URL": "https://dou.ua/forums//topic/44905"
+            },
+            {
+               "Count": 5,
+               "URL": "https://dou.ua/forums//topic/23173"
+            },
+            {
+               "Count": 3,
+               "URL": "https://dou.ua/forums//topic/45482"
+            },
+            {
+               "Count": 17,
+               "URL": "https://dou.ua/forums//topic/45439"
+            }
+         ]
+      }
+   ]
+}
