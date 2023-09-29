@@ -123,30 +123,10 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
             return true;
         }
 
-        public override bool OnEventDimension(EventInfo eventInfo)
-        {
-            switch (eventInfo.Action)
-            {
-                case "NewUser":
-                    Client.SetDefaultCollection("NewUser")
-                          .WantCreateNewDocumentFor("Users")
-                          .OpenForm();
-                    return true;
-                case "Users":
-                    Client.SetDefaultCollection("Users")
-                          .GetAll()
-                          .WantModifyExistingDocuments()
-                          .OpenForm();
-                    return true;
-                default:
-                    return base.OnEventDimension(eventInfo);
-            }
-        }
-
         public override void OnStart()
         {
-            Client.SetDefaultCollection("Dashboard")
-                  .GetFirstDoc()
+            Client.SetDefaultCollection("Users")
+                  .GetAll()
                   .OpenForm();
         }
     }

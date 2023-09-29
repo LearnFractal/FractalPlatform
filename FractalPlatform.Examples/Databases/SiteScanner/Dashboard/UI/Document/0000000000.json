@@ -1,9 +1,0 @@
-{
-  "Style": "Save:false;Cancel:false",
-  "NewUser": {
-    "ControlType": "Button"
-  },
-  "Users": {
-    "ControlType": "Button"
-  }
-}
