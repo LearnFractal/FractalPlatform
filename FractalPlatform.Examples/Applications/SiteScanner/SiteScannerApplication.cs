@@ -105,6 +105,8 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
         public override bool OnTimerDimension(TimerInfo timerInfo)
         {
+            return false;
+
             var users = Client.SetDefaultCollection("Users")
                               .GetAll()
                               .Select<UserInfo>();
