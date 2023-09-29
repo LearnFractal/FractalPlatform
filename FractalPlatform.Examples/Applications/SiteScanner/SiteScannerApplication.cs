@@ -88,7 +88,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                         {
                             tag.Sites.Add(new SiteInfo
                             {
-                                URL = page,
+                                URL = url,
                                 Count = count,
                                 LastUpdate = DateTime.Now
                             });
