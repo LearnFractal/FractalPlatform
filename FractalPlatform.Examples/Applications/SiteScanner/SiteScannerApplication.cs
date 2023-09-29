@@ -59,7 +59,9 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
             foreach (Match match in matches)
             {
-                var page = GetFromCache("https://dou.ua/forums/" + match.Groups["Topic"].Value);
+                var url = "https://dou.ua/forums/" + match.Groups["Topic"].Value;
+
+                var page = GetFromCache(url);
 
                 foreach (var tag in userInfo.Tags)
                 {
@@ -78,14 +80,14 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
                                 if (!isFirst)
                                 {
-                                    Notificate(userInfo, page, tag.Tag);
+                                    Notificate(userInfo, url, tag.Tag);
                                 }
                             }
                         }
                         else
                         {
-                            tag.Sites.Add(new SiteInfo 
-                            { 
+                            tag.Sites.Add(new SiteInfo
+                            {
                                 URL = page,
                                 Count = count,
                                 LastUpdate = DateTime.Now
@@ -93,7 +95,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
                             if (!isFirst)
                             {
-                                Notificate(userInfo, page, tag.Tag);
+                                Notificate(userInfo, url, tag.Tag);
                             }
                         }
                     }
