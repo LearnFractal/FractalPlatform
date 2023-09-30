@@ -28,7 +28,7 @@ namespace FractalPlatform.Examples.Applications.Weather
 
         private void Weather(string lat, string lng)
         {
-            var json = REST.Get($"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_sum");
+            var json = REST.Get($"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT");
 
             var info = JsonConvert.DeserializeObject<WeatherInfo>(json);
 
