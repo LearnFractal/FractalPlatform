@@ -125,9 +125,20 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
         public override void OnStart()
         {
-            Client.SetDefaultCollection("Users")
-                  .GetAll()
-                  .OpenForm();
+            InputBox("Password", "Enter password", result =>
+            {
+                if (result.Result)
+                {
+                    if (result.Collection
+                              .GetFirstDoc()
+                              .IsEquals("{'Password':$}", "sc"))
+                    {
+                        Client.SetDefaultCollection("Users")
+                              .GetAll()
+                              .OpenForm();
+                    }
+                }
+            });
         }
     }
 }
