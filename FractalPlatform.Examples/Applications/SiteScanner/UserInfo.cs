@@ -7,7 +7,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
     {
         public string URL { get; set; }
 
-        public int Count { get; set; }
+        public List<string> Phrases { get; set; }
 
         public DateTime LastUpdate { get; set; }
     }

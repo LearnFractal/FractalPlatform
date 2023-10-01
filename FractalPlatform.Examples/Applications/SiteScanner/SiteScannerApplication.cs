@@ -65,22 +65,40 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
                 foreach (var tag in userInfo.Tags)
                 {
-                    var count = Regex.Matches(text, tag.Tag, RegexOptions.IgnoreCase).Count;
+                    var matchTags = Regex.Matches(text,
+                                                  tag.Tag,
+                                                  RegexOptions.IgnoreCase);
 
-                    if (count > 0)
+                    if (matchTags.Count > 0)
                     {
+                        var phrases = new List<string>();
+
+                        foreach (Match matchTag in matchTags)
+                        {
+                            var phrase = text.Substring(matchTag.Index - 100, 200);
+
+                            phrase = Regex.Match(phrase,
+                                                 "[^><]{0,100}" + tag.Tag + "[^><]{0,100}",
+                                                 RegexOptions.IgnoreCase).Value;
+
+                            phrases.Add(phrase);
+                        }
+
                         var site = tag.Sites.FirstOrDefault(x => x.URL == url);
 
                         if (site != null)
                         {
-                            if (site.Count != count)
+                            if (site.Phrases.Count != matchTags.Count)
                             {
-                                site.Count = count;
                                 site.LastUpdate = DateTime.Now;
+
+                                var newPhrases = phrases.Except(site.Phrases).ToList();
+
+                                site.Phrases.AddRange(newPhrases);
 
                                 if (!isFirst)
                                 {
-                                    Notificate(userInfo, url, tag.Tag);
+                                    Notificate(userInfo, url, newPhrases[0]);
                                 }
                             }
                         }
@@ -89,13 +107,13 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                             tag.Sites.Add(new SiteInfo
                             {
                                 URL = url,
-                                Count = count,
-                                LastUpdate = DateTime.Now
+                                LastUpdate = DateTime.Now,
+                                Phrases = phrases
                             });
 
                             if (!isFirst)
                             {
-                                Notificate(userInfo, url, tag.Tag);
+                                Notificate(userInfo, url, phrases.First());
                             }
                         }
                     }
@@ -109,10 +127,10 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                               .GetAll()
                               .Select<UserInfo>();
 
+            _cache.Clear();
+
             foreach (var user in users)
             {
-                _cache.Clear();
-
                 ScanPages(user);
 
                 Client.SetDefaultCollection("Users")

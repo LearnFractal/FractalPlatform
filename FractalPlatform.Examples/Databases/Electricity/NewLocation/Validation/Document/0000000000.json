@@ -18,6 +18,6 @@
     "Type": "float"
   },
   "TelegramUserID": {
-    "Type": "number"
+    "Type": "int"
   }
 }
