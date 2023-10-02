@@ -66,7 +66,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                 foreach (var tag in userInfo.Tags)
                 {
                     var matchTags = Regex.Matches(text,
-                                                  tag.Tag,
+                                                  "[^a-zA-Zа-яА-ЯiI]" + tag.Tag,
                                                   RegexOptions.IgnoreCase);
 
                     if (matchTags.Count > 0)
