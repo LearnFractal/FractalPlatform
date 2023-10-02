@@ -66,7 +66,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                 foreach (var tag in userInfo.Tags)
                 {
                     var matchTags = Regex.Matches(text,
-                                                  "[^a-zA-Zа-яА-ЯiI]" + tag.Tag,
+                                                  "\\b" + tag.Tag,
                                                   RegexOptions.IgnoreCase);
 
                     if (matchTags.Count > 0)
@@ -88,17 +88,22 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
                         if (site != null)
                         {
-                            if (site.Phrases.Count != matchTags.Count)
+                            if (site.Phrases.Count < phrases.Count)
                             {
                                 site.LastUpdate = DateTime.Now;
 
-                                var newPhrases = phrases.Except(site.Phrases).ToList();
+                                var newPhrases = phrases.Distinct()
+                                                        .Except(site.Phrases)
+                                                        .ToList();
 
-                                site.Phrases.AddRange(newPhrases);
-
-                                if (!isFirst)
+                                if (newPhrases.Count > 0)
                                 {
-                                    Notificate(userInfo, url, newPhrases[0]);
+                                    site.Phrases.AddRange(newPhrases);
+
+                                    if (!isFirst)
+                                    {
+                                        Notificate(userInfo, url, newPhrases[0]);
+                                    }
                                 }
                             }
                         }
@@ -132,6 +137,8 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
             foreach (var user in users)
             {
                 ScanPages(user);
+
+                user.LastScanTime = DateTime.Now;
 
                 Client.SetDefaultCollection("Users")
                       .GetWhere("{'Name':@Name}", user.Name)

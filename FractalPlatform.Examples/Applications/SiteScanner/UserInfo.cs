@@ -23,6 +23,8 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
     {
         public string Name { get; set; }
 
+        public DateTime LastScanTime { get; set; }
+
         public long TelegramUserID { get; set; }
 
         public List<TagInfo> Tags { get; set; } = new List<TagInfo>();
