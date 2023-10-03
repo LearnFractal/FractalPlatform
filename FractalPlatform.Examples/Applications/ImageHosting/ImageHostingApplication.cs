@@ -1,5 +1,6 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
+using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.ImageHosting
@@ -23,10 +24,12 @@ namespace FractalPlatform.Examples.Applications.ImageHosting
                 new
                 {
                     Title = "Upload your image",
-                    Image = ""
+                    Image = "",
+                    Captcha = ""
                 }
                 .ToCollection(Constants.FIRST_DOC_ID, string.Empty)
-                .SetUIDimension("{'Style':'Save:Upload;Cancel:false','Title':{'ControlType':'Label'},'Image':{'ControlType':'UploadFile'}}")
+                .SetUIDimension("{'Style':'Save:Upload;Cancel:false','Title':{'ControlType':'Label'},'Image':{'ControlType':'UploadFile'},'Captcha':{'Style':'Type:Capcha'}}")
+                .SetDimension(DimensionType.Validation, "{'Image':{'IsRequired':true}}")
                 .OpenForm(result =>
                 {
                     Context.UrlTag = result.Collection
