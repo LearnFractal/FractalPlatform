@@ -14,7 +14,7 @@ namespace FractalPlatform.Examples.Applications.ImageHosting
                 {
                     Image = Context.UrlTag
                 }
-                .ToCollection(Constants.FIRST_DOC_ID)
+                .ToCollection(Constants.FIRST_DOC_ID, string.Empty)
                 .SetUIDimension("{'Style':'Save:false;Cancel:false','Image':{'ControlType':'Picture'}}")
                 .OpenForm();
             }
@@ -25,7 +25,7 @@ namespace FractalPlatform.Examples.Applications.ImageHosting
                     Title = "Upload your image",
                     Image = ""
                 }
-                .ToCollection(Constants.FIRST_DOC_ID)
+                .ToCollection(Constants.FIRST_DOC_ID, string.Empty)
                 .SetUIDimension("{'Style':'Save:Upload;Cancel:false','Title':{'ControlType':'Label'},'Image':{'ControlType':'UploadFile'}}")
                 .OpenForm(result =>
                 {
@@ -39,8 +39,8 @@ namespace FractalPlatform.Examples.Applications.ImageHosting
                         URL = $"https://fraplat.com/jupiter/tag={Context.UrlTag}",
                         Image = Context.UrlTag
                     }
-                    .ToCollection(Constants.FIRST_DOC_ID)
-                    .SetUIDimension("{'Style':'Save:false;Cancel:false','Title':{'ControlType':'Label'},'URL':{'ReadOnly':true},'Image':{'ControlType':'Picture'}}")
+                    .ToCollection(Constants.FIRST_DOC_ID, string.Empty)
+                    .SetUIDimension("{'Style':'Save:false;Cancel:View','Title':{'ControlType':'Label'},'URL':{'ReadOnly':true},'Image':{'ControlType':'Picture'}}")
                     .OpenForm();
                 });
             }
