@@ -1,4 +1,4 @@
 {
   "OnCall": "CheckSites",
-  "CallEveryInSec": 36000
+  "CallEveryDayAt": "13:00"
 }
