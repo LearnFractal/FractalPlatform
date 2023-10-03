@@ -81,29 +81,29 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                                                  "[^><]{0,100}" + tag.Tag + "[^><]{0,100}",
                                                  RegexOptions.IgnoreCase).Value;
 
-                            phrases.Add(phrase);
+                            if (Regex.IsMatch(phrase, "[а-яА-Я]+"))
+                            {
+                                phrases.Add(phrase);
+                            }
                         }
 
                         var site = tag.Sites.FirstOrDefault(x => x.URL == url);
 
                         if (site != null)
                         {
-                            if (site.Phrases.Count < phrases.Count)
+                            site.LastUpdate = DateTime.Now;
+
+                            var newPhrases = phrases.Distinct()
+                                                    .Except(site.Phrases)
+                                                    .ToList();
+
+                            if (newPhrases.Count > 0)
                             {
-                                site.LastUpdate = DateTime.Now;
+                                site.Phrases.AddRange(newPhrases);
 
-                                var newPhrases = phrases.Distinct()
-                                                        .Except(site.Phrases)
-                                                        .ToList();
-
-                                if (newPhrases.Count > 0)
+                                if (!isFirst)
                                 {
-                                    site.Phrases.AddRange(newPhrases);
-
-                                    if (!isFirst)
-                                    {
-                                        Notificate(userInfo, url, newPhrases[0]);
-                                    }
+                                    Notificate(userInfo, url, newPhrases[0]);
                                 }
                             }
                         }
