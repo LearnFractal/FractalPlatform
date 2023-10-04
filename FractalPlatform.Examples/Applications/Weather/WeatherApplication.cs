@@ -40,7 +40,6 @@ namespace FractalPlatform.Examples.Applications.Weather
                 Latitude = lat,
                 Longitude = lng,
                 Forecast = info.daily.time
-                                   .Take(6)
                                    .Select(x => new
                                    {
                                        Date = info.daily.time[i].ToShortDateString(),

@@ -1,0 +1,190 @@
+﻿function setEditKey(keyName, index) {
+    if (index != null) {
+        document.getElementsByName("EditKey")[0].value = keyName + ";" + index;
+    }
+    else {
+        document.getElementsByName("EditKey")[0].value = keyName;
+    }
+}
+
+function setUploadFile(fileName, hidName) {
+    document.getElementsByName(hidName)[0].value = fileName.replace("C:\\fakepath\\", "");
+}
+
+function sortGridColumn(keyName, columnName) {
+    setEditKey(keyName, columnName);
+
+    document.getElementById('btnSortGridColumn').click();
+}
+
+var oldTr = null;
+
+function selectGridRow(keyName, index, tr) {
+
+    setEditKey(keyName, index);
+
+    if (oldTr != null) {
+        for (var i = 1, row; row = oldTr.parentNode.rows[i]; i++) {
+            row.className = "gridUnselectedRow";
+        }
+    }
+
+    if (tr != null) {
+        oldTr = tr;
+
+        tr.className = "gridSelectedRow";
+    }
+}
+
+function selectTreeViewNode(keyName, index, tr) {
+
+    setEditKey(keyName, index);
+
+    if (oldTr != null) {
+        oldTr.className = "gridUnselectedRow";
+    }
+
+    if (tr != null) {
+        oldTr = tr;
+
+        tr.className = "gridSelectedRow";
+    }
+}
+
+function checkedChanged(chk, hid, isSubmit) {
+    if (chk.checked) {
+        document.getElementsByName(hid)[0].value = "true";
+    }
+    else {
+        document.getElementsByName(hid)[0].value = "false";
+    }
+}
+
+function calendarChanged(cal, type, hid) {
+
+    var oldVal = document.getElementsByName(hid)[0].value;
+    var newVal = "";
+
+    if (oldVal == "") {
+        oldVal = "1970-01-01";
+    }
+
+    var parts = oldVal.split('-');
+
+    if (type == "year") {
+        newVal = cal.value + "-" + parts[1] + "-" + parts[2];
+    }
+    else if (type == "month") {
+        newVal = parts[0] + "-" + cal.value + "-" + parts[2];
+    }
+    else {
+        newVal = parts[0] + "-" + parts[1] + "-" + cal.value;
+    }
+
+    document.getElementsByName(hid)[0].value = newVal;
+}
+
+function timeChanged(tm, type, hid) {
+
+    var oldVal = document.getElementsByName(hid)[0].value;
+    var newVal = "";
+
+    var parts = oldVal.split(':');
+
+    if (type == "hour") {
+        newVal = tm.value + ":" + parts[1];
+    }
+    else {
+        newVal = parts[0] + ":" + tm.value;
+    }
+
+    document.getElementsByName(hid)[0].value = newVal;
+}
+
+function phoneChanged(hid) {
+
+    var countryCode = document.getElementsByName(hid + '_code')[0].value;
+    var number = document.getElementsByName(hid + '_num')[0].value;
+
+    document.getElementsByName(hid)[0].value = countryCode + number;
+}
+
+function languageChanged(lang) {
+    document.getElementById('btnEditLanguage').click();
+}
+
+function themeChanged(theme) {
+    document.getElementById('btnEditTheme').click();
+}
+
+function eventClick(keyName) {
+    setEditKey(keyName, null);
+
+    document.getElementById('btnEventClick').click();
+}
+
+function eventChange(keyName) {
+    setEditKey(keyName, null);
+
+    document.getElementById('btnEventChange').click();
+}
+
+function menuClick(keyName, action, isGrid) {
+
+    if (!isGrid)
+        setEditKey(keyName, null);
+
+    document.getElementsByName("MenuAction")[0].value = action;
+
+    document.getElementById('btnMenuClick').click();
+}
+
+function showTools() {
+    var style = document.getElementById('tdTools').style;
+    if (style.display == "block")
+        style.display = "none";
+    else
+        style.display = "block";
+}
+
+function onMenu(e, keyName, items, isGrid) {
+
+    if (items == "")
+        return;
+
+    var menuItems = items.split(';');
+
+    e.preventDefault();
+
+    let menu = document.createElement("div");
+
+    menu.id = "ctxmenu";
+
+    menu.style = `top:${e.clientY - 10}px;left:${e.clientX - 40}px`;
+    menu.onmouseleave = () => ctxmenu.outerHTML = '';
+
+    var html = "";
+
+    menuItems.forEach(element => {
+        var textAndAction = element.split(',');
+
+        html += "<p onclick=\"menuClick('" + keyName + "','" + textAndAction[1] + "'," + isGrid + ");\">" + textAndAction[0] + "</p>"
+    });
+
+    menu.innerHTML = html;
+    document.body.appendChild(menu)
+}
+
+function updateForm() {
+    document.getElementById('btnUpdate').click();
+}
+
+function saveForm() {
+    document.getElementById('btnSave').click();
+}
+
+function cancelForm() {
+    document.getElementById('btnCancel').click();
+}
+
+var isPreventSaveOnEnter = false;
