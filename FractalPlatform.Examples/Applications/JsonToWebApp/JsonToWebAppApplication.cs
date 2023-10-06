@@ -28,9 +28,18 @@ namespace FractalPlatform.Examples.Applications.JsonToWebApp
                                        .GetFirstDoc()
                                        .Value("{'JSON':$}");
 
-                      json.ToCollection(Constants.FIRST_DOC_ID)
-                          .SetDimension(DimensionType.Theme, "{'DefaultTheme':'LightBlue'}")
-                          .OpenForm(result => OnStart());
+                      new
+                      {
+                          Image = "https://media.tenor.com/rsB66bq2gIgAAAAd/magic.gif"
+                      }
+                      .ToCollection(Constants.FIRST_DOC_ID)
+                      .GetFirstDoc()
+                      .SetUIDimension("{'Image':{'ControlType':'Picture','Style':'Save:Do Magic !;Cancel:false'}}")
+                      .OpenForm(result => {
+                          json.ToCollection(Constants.FIRST_DOC_ID)
+                              .SetDimension(DimensionType.Theme, "{'DefaultTheme':'LightBlue'}")
+                              .OpenForm(result => OnStart());
+                      });
                   });
         }
     }
