@@ -32,7 +32,7 @@ namespace FractalPlatform.Examples.Applications.JsonToWebApp
                       {
                           Image = "https://media.tenor.com/rsB66bq2gIgAAAAd/magic.gif"
                       }
-                      .ToCollection(Constants.FIRST_DOC_ID)
+                      .ToCollection(Constants.FIRST_DOC_ID, string.Empty)
                       .GetFirstDoc()
                       .SetUIDimension("{'Image':{'ControlType':'Picture','Style':'Save:Do Magic !;Cancel:false'}}")
                       .OpenForm(result => {
