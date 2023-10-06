@@ -4,9 +4,9 @@ using FractalPlatform.Common;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 
-namespace FractalPlatform.Examples.Applications.Sandbox1
+namespace FractalPlatform.Examples.Applications.JsonToWebApp
 {
-    public class Sandbox1Application : BaseApplication
+    public class JsonToWebAppApplication : BaseApplication
     {
         public override object OnComputedDimension(ComputedInfo computedInfo)
         {
