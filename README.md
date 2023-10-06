@@ -29,3 +29,5 @@
 - [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
 - [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Weather)
 - [Electricity](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Electricity)
+- [SiteScanner](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SiteScanner)
+- [ImageHosting](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ImageHosting)
