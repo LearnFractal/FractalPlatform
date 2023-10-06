@@ -1,5 +1,6 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
+using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.Sandbox1
 {
@@ -7,10 +8,17 @@ namespace FractalPlatform.Examples.Applications.Sandbox1
     {
         public override void OnStart()
         {
-            Client.SetDefaultCollection("ToDoList")
+            Client.SetDefaultCollection("Dashboard")
                   .GetFirstDoc()
-                  .WantModifyExistingDocuments()
-                  .OpenForm();
+                  .OpenForm(result =>
+                  {
+                      var json = result.Collection
+                                       .GetFirstDoc()
+                                       .Value("{'JSON':$}");
+
+                      json.ToCollection(Constants.FIRST_DOC_ID)
+                          .OpenForm(result => OnStart());
+                  });
         }
     }
 }
