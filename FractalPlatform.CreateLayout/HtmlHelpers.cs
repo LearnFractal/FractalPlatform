@@ -72,8 +72,6 @@ namespace FractalPlatform.CreateLayouts
                                     sb.Append(@"<form action=""/@InstanceName"" enctype=""multipart/form-data"" method=""post""> 
                                                 <input type=""hidden"" name=""EditKey"" value="""" />
                                                 <input type=""hidden"" name=""MenuAction"" value="""" />
-                                                <input type=""hidden"" name=""App"" value=""@AppName"" />
-                                                <input type=""hidden"" name=""FormName"" value=""@FormName"" />
                                                 <input type=""submit"" id=""btnSaveOnEnter"" name=""btn"" value=""Save"" onclick=""return !isPreventSaveOnEnter;"" style=""display:none;"" />
                                                 <input type=""submit"" id=""btnSortGridColumn"" name=""btn"" value=""SortGridColumn"" style=""display:none;"" />
                                                 <input type=""submit"" id=""btnEditLanguage"" name=""btn"" value=""EditLanguage"" style=""display:none;"" />
