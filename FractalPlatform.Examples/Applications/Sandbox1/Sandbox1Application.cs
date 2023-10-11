@@ -23,9 +23,7 @@ namespace FractalPlatform.Examples.Applications.Sandbox1
                   .GetFirstDoc()
                   .OpenForm(result =>
                   {
-                      var json = result.Collection
-                                       .GetFirstDoc()
-                                       .Value("{'JSON':$}");
+                      var json = result.Collection.FindFirstValue("JSON");
 
                       json.ToCollection(Constants.FIRST_DOC_ID)
                           .OpenForm(result => OnStart());
