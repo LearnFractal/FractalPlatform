@@ -26,12 +26,12 @@ namespace FractalPlatform.Examples.Applications.Forum
                 Client.SetDefaultCollection("Topics")
                       .GetDoc(result.DocID)
                       .Update(@"{'Messages':[Add,{'OnDate':@Now,
-                                                      'Who':@UserName,
-                                                      'Avatar':@Avatar,
-                                                      'Message':@Message}],
-                                     'Message':'Put your message here'}",
-                                  avatar,
-                                  message);
+                                                  'Who':@UserName,
+                                                  'Avatar':@Avatar,
+                                                  'Message':@Message}],
+                                 'Message':'Put your message here'}",
+                                 avatar,
+                                 message);
 
                 //show topic form
                 Client.SetDefaultCollection("Topics")
