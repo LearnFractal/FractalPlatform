@@ -69,7 +69,7 @@ namespace FractalPlatform.CreateLayouts
                                     sb.Append(html[i]);
                                     sb.AppendLine();
 
-                                    sb.Append(@"<form action=""/@InstanceName"" enctype=""multipart/form-data"" method=""post""> 
+                                    sb.Append(@"<form action=""/@InstanceName/@AppName/@FormName"" enctype=""multipart/form-data"" method=""post""> 
                                                 <input type=""hidden"" name=""EditKey"" value="""" />
                                                 <input type=""hidden"" name=""MenuAction"" value="""" />
                                                 <input type=""submit"" id=""btnSaveOnEnter"" name=""btn"" value=""Save"" onclick=""return !isPreventSaveOnEnter;"" style=""display:none;"" />
