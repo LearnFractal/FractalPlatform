@@ -28,7 +28,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                     var video = videos[i];
 
                     sb.Append("<td>")
-                      .Append("<a href=\"").Append(this.OnEditRowUrl(domControl, i)).Append("\">")
+                      .Append("<a href=\"").Append(this.OnEditRowUrl(domControl.Name, i)).Append("\">")
                       .Append(video.Name)
                       .Append("<br><i>")
                       .Append(video.Description)
@@ -36,7 +36,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                       .Append("</a>")
                       .Append("<br><video width=320 height=215 controls><source src=\"").Append(GetFileUrl(video.Video)).Append("\" type=\"video/mp4\"></video>")
                       .Append("<br>")
-                      .Append("<a href=\"").Append(this.OnEditRowUrl(domControl, i)).Append("\">")
+                      .Append("<a href=\"").Append(this.OnEditRowUrl(domControl.Name, i)).Append("\">")
                       .Append("Views:").Append(video.CountViews)
                       .Append("&nbsp;")
                       .Append("Likes:").Append(video.Likes?.Count - 1)
