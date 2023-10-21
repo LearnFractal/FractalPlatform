@@ -12,7 +12,7 @@ namespace FractalPlatform.Examples.Applications.Sandbox5
                   .OpenForm(result => {
 
                       Client.SetDefaultCollection("NewElectricityScore")
-                            .WantCreateNewDocumentFor("ElectricityScore")
+                            .WantCreateNewDocumentForArray("ElectricityScore", "{'Apps':[$]}")
                             .OpenForm(result => OnStart());
                   });
         }
