@@ -1,0 +1,23 @@
+{
+  "Send messages by Telegram": {
+    "Items": [ "yes", "no" ]
+  },
+  "Send messages by Viber": {
+    "Items": [ "yes", "no" ]
+  },
+  "Web interface": {
+    "Items": [ "yes", "no" ]
+  },
+  "Map of electricity points": {
+    "Items": [ "yes", "no" ]
+  },
+  "Add new electricity point": {
+    "Items": [ "in bot", "in web", "no" ]
+  },
+  "CRUD existing electricity points": {
+    "Items": [ "yes", "no" ]
+  },
+  "Configure ping time": {
+    "Items": [ "yes", "no" ]
+  }
+}

@@ -7,10 +7,14 @@ namespace FractalPlatform.Examples.Applications.Sandbox5
     {
         public override void OnStart()
         {
-            Client.SetDefaultCollection("ToDoList")
+            Client.SetDefaultCollection("ElectricityScore")
                   .GetFirstDoc()
-                  .WantModifyExistingDocuments()
-                  .OpenForm();
+                  .OpenForm(result => {
+
+                      Client.SetDefaultCollection("NewElectricityScore")
+                            .WantCreateNewDocumentFor("ElectricityScore")
+                            .OpenForm(result => OnStart());
+                  });
         }
     }
 }

@@ -1,0 +1,29 @@
+{
+  "Title": "Electricity Score",
+  "Apps": [
+    {
+      "AppName": "eSvitlo",
+      "Technologies": "AWS/Lambda/Python",
+      "Lines of code": 1000,
+      "Send messages by Telegram": "yes",
+      "Send messages by Viber": "yes",
+      "Web interface": "no",
+      "Map of electricity points": "no",
+      "Add new electricity point": "in bot",
+      "CRUD existing electricity points": "no",
+      "Configure ping time": "no"
+    },
+    {
+      "AppName": "Electricity",
+      "Technologies": "Fractal",
+      "Lines of code": 100,
+      "Send messages by Telegram": "yes",
+      "Send messages by Viber": "no",
+      "Web interface": "yes",
+      "Map of electricity points": "yes",
+      "Add new electricity point": "in web",
+      "CRUD existing electricity points": "yes",
+      "Configure ping time": "yes"
+    }
+  ]
+}

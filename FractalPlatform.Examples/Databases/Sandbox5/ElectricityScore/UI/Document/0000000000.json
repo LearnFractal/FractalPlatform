@@ -1,0 +1,7 @@
+{
+  "Style": "Save:false;Cancel:Add My App",
+  "ReadOnly": true,
+  "Title": {
+    "ControlType": "Label"
+  }
+}
