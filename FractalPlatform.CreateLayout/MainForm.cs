@@ -1485,7 +1485,9 @@ namespace FractalPlatform.CreateLayout
                 if (dirInfo != null)
                 {
                     html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"@BaseFilesUrl/{_collName}/");
-                }
+                    html = Regex.Replace(html, "(src=\")([a-zA-Z0-9])", m => m.Groups[0].Value + "./" + m.Groups[1].Value);
+					html = Regex.Replace(html, "(href=\")([a-zA-Z0-9])", m => m.Groups[0].Value + "./" + m.Groups[1].Value);
+				}
 
                 if (!Directory.Exists(LayoutsPath))
                 {

@@ -1,0 +1,21 @@
+{
+   "Layout": "Dashboard",
+   "ReadOnly": true,
+   "Title": {
+      "ControlType": "Label"
+   },
+   "Style": "Type:Link;Hide:Episodes",
+   "Seasons": [
+      {
+         "Episodes": [
+            {
+               "Style": "Type:Link;Hide:Size,Episode;HasLabel:true",
+               "Episode": {
+                  "ControlType": "Media",
+                  "Style": "Type:Video"
+               }
+            }
+         ]
+      }
+   ]
+}
