@@ -1,13 +1,13 @@
-# Json To Web App
+# Excel table to Json app
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/JsonToWebApp/JsonToWebAppApplication.cs)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/JsonToWebApp)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/TableToJson/TableToJsonAppApplication.cs)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/TableToJson)
 
 ## Functionality
 
-Build CRUD Web Application based on any json text
+Convert excel table to json
 
 ## How it implemented
 
@@ -15,5 +15,5 @@ Build CRUD Web Application based on any json text
 
 ## Web Link
 
-[JsonToWebApp](https://fraplat.com/mars/JsonToWebApp)
+[TableToJson](https://fraplat.com/mars/TableToJson)
 
