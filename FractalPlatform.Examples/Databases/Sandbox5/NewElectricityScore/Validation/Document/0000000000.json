@@ -1,0 +1,12 @@
+{
+  "AppName": {
+    "IsRequired": true
+  },
+  "Technologies": {
+    "IsRequired": true
+  },
+  "Lines of code": {
+    "IsRequired": true,
+    "Type": "int"
+  }
+}
