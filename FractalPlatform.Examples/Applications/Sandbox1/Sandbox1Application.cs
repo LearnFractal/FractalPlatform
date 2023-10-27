@@ -15,9 +15,7 @@ namespace FractalPlatform.Examples.Applications.Sandbox1
 
         public override void OnStart()
         {
-            Client.SetDefaultCollection("Products")
-                  .GetFirstDoc()
-                  .WantModifyExistingDocuments()
+            Client.ModifyFirstDocOf("Products")
                   .OpenForm(result => {
                         var price = result.Collection.GetFirstDoc().Select<Product>("{'Products':[!$]}").Sum(x => x.Quantity * x.Price);
                         MessageBox($"Рахунок: {price} грн.");
