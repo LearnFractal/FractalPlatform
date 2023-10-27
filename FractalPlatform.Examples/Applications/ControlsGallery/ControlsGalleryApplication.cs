@@ -37,9 +37,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
 
         public override void OnStart()
         {
-            Client.SetDefaultCollection("ControlsAndComponents")
-                  .GetFirstDoc()
-                  .OpenForm();
+            FirstDocOf("ControlsAndComponents").OpenForm();
         }
 
         public override BaseRenderForm CreateRenderForm(DOMForm form)
