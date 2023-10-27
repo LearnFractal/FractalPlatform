@@ -1,8 +1,5 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
-using FractalPlatform.Common;
-using FractalPlatform.Database.Engine;
-using FractalPlatform.Database.Engine.Info;
 using System.Linq;
 
 namespace FractalPlatform.Examples.Applications.Sandbox1
