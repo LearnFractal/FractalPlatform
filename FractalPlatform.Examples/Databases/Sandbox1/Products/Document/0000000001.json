@@ -1,0 +1,14 @@
+﻿{
+  "Products": [
+    {
+      "Name": "Хліб",
+      "Quantity": 1,
+      "Price": 1
+    },
+    {
+      "Name": "Молоко",
+      "Quantity": 5,
+      "Price": 1
+    }
+  ]
+}
