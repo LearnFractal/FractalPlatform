@@ -8,12 +8,15 @@
     <Compile Remove="Databases\OnlineShop\Orders\**" />
     <Compile Remove="Databases\SocialNetwork\NewFolder\**" />
     <Compile Remove="Files\PhotoAlbum\**" />
+    <Compile Remove="Files\Seasons\**" />
     <EmbeddedResource Remove="Databases\OnlineShop\Orders\**" />
     <EmbeddedResource Remove="Databases\SocialNetwork\NewFolder\**" />
     <EmbeddedResource Remove="Files\PhotoAlbum\**" />
+    <EmbeddedResource Remove="Files\Seasons\**" />
     <None Remove="Databases\OnlineShop\Orders\**" />
     <None Remove="Databases\SocialNetwork\NewFolder\**" />
     <None Remove="Files\PhotoAlbum\**" />
+    <None Remove="Files\Seasons\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,8 +30,6 @@
     <Folder Include="Databases\SocialNetwork\" />
     <Folder Include="Databases\Uezjunyka\Uezjunyka\Document\" />
     <Folder Include="Databases\VideoLibrary\" />
-    <Folder Include="Files\Seasons\" />
-    <Folder Include="Layouts\Seasons\" />
   </ItemGroup>
 
   <ItemGroup>

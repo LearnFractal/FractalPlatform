@@ -13,26 +13,206 @@ namespace FractalPlatform.Deployment
 {
     class Program
     {
+        public enum ResourceType
+        {
+            Assembly,
+            Applications,
+            Databases,
+            Files,
+            Layouts
+        }
+
         const string _deploymentPath = @"..\..\..\..";
 
         static string GetAssemblyName(string assemblyFile) => assemblyFile.Replace(".dll", "");
+
+        static string FindAssemblyPath(string assemblyName)
+        {
+            var path = @$"{_deploymentPath}\{assemblyName}";
+
+            if (Directory.Exists(path))
+            {
+                return path;
+            }
+
+            path = @$"..\{_deploymentPath}\{assemblyName}";
+
+            if (Directory.Exists(path))
+            {
+                return path;
+            }
+
+            return null;
+        }
+
+        static string FindResourcePath(ResourceType resourceType, string assemblyName, string appName)
+        {
+            if (assemblyName.Contains(appName))
+            {
+                if (resourceType == ResourceType.Applications)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+                else if (resourceType == ResourceType.Databases)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}\Database";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}\Database";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+                else if (resourceType == ResourceType.Files)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}\Files";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}\Files";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+                else //if (resourceType == ResourceType.Layouts)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}\Layouts";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}\Layouts";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+            }
+            else //Examples format dll
+            {
+                if (resourceType == ResourceType.Applications)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}\Applications\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}\Applications\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+                else if (resourceType == ResourceType.Databases)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}\Databases\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}\Databases\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+                else if (resourceType == ResourceType.Files)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}\Files\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}\Files\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+                else //if (resourceType == ResourceType.Layouts)
+                {
+                    var path = @$"{_deploymentPath}\{assemblyName}\Layouts\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    path = @$"..\{_deploymentPath}\{assemblyName}\Layouts\{appName}";
+
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+
+                    return null;
+                }
+            }
+        }
 
         static bool IsAssemblyHasApp(string assemblyFile, string appName)
         {
             var assemblyName = GetAssemblyName(assemblyFile);
 
-            string startPath = @$"{_deploymentPath}\{assemblyName}\Applications\{appName}";
-
-            return Directory.Exists(startPath);
+            return FindResourcePath(ResourceType.Applications, assemblyName, appName) != null;
         }
 
-        static string ZipDirectory(string directoryName, string assemblyName, string appName)
+        static string ZipDirectory(ResourceType resourceType, string assemblyName, string appName)
         {
-            string startPath = @$"{_deploymentPath}\{assemblyName}\{directoryName}\{appName}";
+            string startPath = FindResourcePath(resourceType, assemblyName, appName);
 
-            if (Directory.Exists(startPath))
+            if (startPath != null)
             {
-                string zipPath = @$"{_deploymentPath}\{Assembly.GetExecutingAssembly().GetName().Name}\{directoryName}_{appName}.zip";
+                string zipPath = @$"{_deploymentPath}\{Assembly.GetExecutingAssembly().GetName().Name}\{resourceType}_{appName}.zip";
 
                 if (File.Exists(zipPath))
                 {
@@ -89,7 +269,7 @@ namespace FractalPlatform.Deployment
             if (isDeployDatabase)
             {
                 //upload database
-                var zipPath = ZipDirectory("Databases", assemblyName, appName);
+                var zipPath = ZipDirectory(ResourceType.Databases, assemblyName, appName);
 
                 if (zipPath != null)
                 {
@@ -110,7 +290,7 @@ namespace FractalPlatform.Deployment
             if (isDeployFiles)
             {
                 //upload database
-                var zipPath = ZipDirectory("Files", assemblyName, appName);
+                var zipPath = ZipDirectory(ResourceType.Files, assemblyName, appName);
 
                 if (zipPath != null)
                 {
@@ -130,22 +310,27 @@ namespace FractalPlatform.Deployment
             if (isDeployApplication)
             {
                 //upload layouts
-                var zipPath = ZipDirectory("Layouts", assemblyName, appName);
+                var zipPath = ZipDirectory(ResourceType.Layouts, assemblyName, appName);
 
                 if (zipPath != null)
                 {
                     var fileBytes = await File.ReadAllBytesAsync(zipPath);
 
-                    await UploadAsync(baseUrl, appName, "Layouts", $"{appName}.zip", fileBytes, deploymentKey);
+                    await UploadAsync(baseUrl,
+                                      appName,
+                                      "Layouts",
+                                      $"{appName}.zip",
+                                      fileBytes,
+                                      deploymentKey);
 
                     File.Delete(zipPath);
                 }
 
                 //upload assembly
 #if DEBUG
-                var filePath = @$"{_deploymentPath}\{assemblyName}\bin\Debug\netcoreapp3.1\{assemblyFile}";
+                var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\netcoreapp3.1\{assemblyFile}";
 #else
-            var filePath = @$"{_deploymentPath}\FractalPlatform.App\bin\Release\netcoreapp3.1\{assemblyName}";
+            var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Release\netcoreapp3.1\{assemblyFile}";
 #endif
 
                 if (File.Exists(filePath))
@@ -197,7 +382,7 @@ namespace FractalPlatform.Deployment
             {
                 var assemblyName = GetAssemblyName(options.Assemblies[0]);
 
-                var filePath = @$"{_deploymentPath}\{assemblyName}\bin\Debug\netcoreapp3.1\{options.Assemblies[0]}";
+                var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\netcoreapp3.1\{options.Assemblies[0]}";
 
                 var bytes = File.ReadAllBytes(filePath);
 
