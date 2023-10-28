@@ -369,9 +369,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                                   {
                                       var json = result.Collection.ToJson();
 
-                                      Client.SetDefaultCollection("Channels")
-                                            .GetWhere(eventInfo.AttrPath)
-                                            .Update("{'Videos':[{'Comments':[Add,@Comment]}]}", json);
+                                      DocsWhere("Channels", eventInfo.AttrPath)
+                                      .Update("{'Videos':[{'Comments':[Add,@Comment]}]}", json);
 
                                       result.NeedReloadData = true;
                                   }
