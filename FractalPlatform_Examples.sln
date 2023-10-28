@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Examples", "FractalPlatform.Examples\FractalPlatform.Examples.csproj", "{497B9A69-5582-4312-BBA7-7C8F7A132FFA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Deployment", "FractalPlatform.Deployment\FractalPlatform.Deployment.csproj", "{EB3C4466-306F-429B-BFB7-05CB3165435B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalPlatform.CreateLayout", "FractalPlatform.CreateLayout\FractalPlatform.CreateLayout.csproj", "{6348296E-CD5C-424D-B652-ABA88A61F314}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Seasons", "FractalPlatform.Seasons\FractalPlatform.Seasons.csproj", "{BC7FF16E-0115-4128-8E24-E76BB60EE478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{6348296E-CD5C-424D-B652-ABA88A61F314}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6348296E-CD5C-424D-B652-ABA88A61F314}.Release|x86.ActiveCfg = Release|Win32
 		{6348296E-CD5C-424D-B652-ABA88A61F314}.Release|x86.Build.0 = Release|Win32
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Debug|x86.Build.0 = Debug|Any CPU
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
