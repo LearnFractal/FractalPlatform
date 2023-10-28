@@ -26,7 +26,7 @@ namespace FractalPlatform.Examples.Applications.Electricity
 
         public override bool OnTimerDimension(TimerInfo timerInfo)
         {
-            var locations = AllDocsOf("Locations").Select<Location>();
+            var locations = DocsOf("Locations").Select<Location>();
 
             foreach (var location in locations)
             {
@@ -34,7 +34,7 @@ namespace FractalPlatform.Examples.Applications.Electricity
                 {
                     location.HasElectricity = !location.HasElectricity;
 
-                    AllDocsWhere("Locations", "{'Address':@Address}", location.Address)
+                    DocsWhere("Locations", "{'Address':@Address}", location.Address)
                     .Update(@"{'HasElectricity':@HasElectricity,
                               'TextMessages':[Add,{'Provider':'Telegram',
                                                    'Receiver':@Receiver,
@@ -45,7 +45,7 @@ namespace FractalPlatform.Examples.Applications.Electricity
                              location.HasElectricity ? $"{location.Address} HAS electricity" : $"{location.Address} HAS NO electricity");
                 }
 
-                AllDocsWhere("Locations", "{'Address':@Address}", location.Address)
+                DocsWhere("Locations", "{'Address':@Address}", location.Address)
                 .Update("{'LastPingTime':@Now}");
             }
 
@@ -72,7 +72,7 @@ namespace FractalPlatform.Examples.Applications.Electricity
                     });
                     return true;
                 case "Locations":
-                    AllDocsOf("Locations").OpenForm();
+                    DocsOf("Locations").OpenForm();
                     return true;
                 default:
                     return base.OnEventDimension(eventInfo);

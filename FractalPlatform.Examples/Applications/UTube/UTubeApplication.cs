@@ -15,19 +15,13 @@ namespace FractalPlatform.Examples.Applications.UTube
 
             const int topVideos = 4;
 
-            var allChannels = Client.SetDefaultCollection("Channels")
-                                        .GetWhere("{'IsLocked':false}")
-                                        .Select<ChannelInfo>();
+            var allChannels = DocsWhere("Channels", "{'IsLocked':false}").Select<ChannelInfo>();
 
             if (!Context.User.IsGuest)
             {
-                var subNames = Client.SetDefaultCollection("Users")
-                                     .GetWhere("{'Name':@UserName}")
-                                     .Values("{'Subscribes':[$]}");
+                var subNames = DocsWhere("Users", "{'Name':@UserName}").Values("{'Subscribes':[$]}");
 
-                var history = Client.SetDefaultCollection("Users")
-                                    .GetWhere("{'Name':@UserName}")
-                                    .Values("{'History':[{'UID':$}]}");
+                var history = DocsWhere("Users", "{'Name':@UserName}").Values("{'History':[{'UID':$}]}");
 
                 var subscribes = allChannels.Where(x => subNames.Contains(x.Name)) //only my subscribes
                                             .SelectMany(x => x.Videos)
@@ -51,8 +45,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                                                  .ToList()
                                                  .ToStorage();
 
-                Client.SetDefaultCollection("Dashboard")
-                      .GetFirstDoc()
+                FirstDocOf("Dashboard")
                       .ToCollection()
                       .DeleteByParent("NewVideos")
                       .DeleteByParent("Subscribes")
@@ -76,8 +69,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                                                  .ToList()
                                                  .ToStorage();
 
-                Client.SetDefaultCollection("Dashboard")
-                      .GetFirstDoc()
+                FirstDocOf("Dashboard")
                       .ToCollection()
                       .DeleteByParent("NewVideos")
                       .DeleteByParent("Subscribes")
@@ -102,31 +94,24 @@ namespace FractalPlatform.Examples.Applications.UTube
         {
             if (!Context.User.IsGuest)
             {
-                if (!Client.SetDefaultCollection("Users")
-                           .GetWhere("{'Name':@UserName,'History':[Any,{'UID':@UID}]}", uid)
-                           .Exists())
+                if (!DocsWhere("Users", "{'Name':@UserName,'History':[Any,{'UID':@UID}]}", uid)
+                     .Exists())
                 {
-                    var storage = Client.SetDefaultCollection("Channels")
-                                        .GetWhere("{'Videos':[{'UID':@UID}]}", uid)
-                                        .ToStorage("{'Videos':[!{'Name':$,'Description':$,'UID':$,'OnDate':$}]}");
+                    var storage = DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
+                                  .ToStorage("{'Videos':[!{'Name':$,'Description':$,'UID':$,'OnDate':$}]}");
 
-                    Client.SetDefaultCollection("Users")
-                          .GetWhere("{'Name':@UserName}")
-                          .Update("{'History':[Add,@Video]}", storage.ToJson(Context, storage.GetFirstDocID(Context)));
+                    DocsWhere("Users", "{'Name':@UserName}")
+                    .Update("{'History':[Add,@Video]}", storage.ToJson(Context, storage.GetFirstDocID(Context)));
                 }
             }
 
-            var count = Client.SetDefaultCollection("Channels")
-                              .GetWhere("{'Videos':[{'UID':@UID}]}", uid)
-                              .Count();
+            var count = DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid).Count();
 
-            Client.SetDefaultCollection("Channels")
-                  .GetWhere("{'Videos':[{'UID':@UID}]}", uid)
-                  .Update("{'Videos':[{'CountViews':Add(1)}]}");
+            DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
+            .Update("{'Videos':[{'CountViews':Add(1)}]}");
 
-            Client.SetDefaultCollection("Channels")
-                  .GetWhere("{'Videos':[{'UID':@UID}]}", uid)
-                  .OpenForm("{'Videos':[$]}", result => Dashboard());
+            DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
+            .OpenForm("{'Videos':[$]}", result => Dashboard());
         }
 
         public override bool OnOpenForm(FormInfo formInfo)
@@ -147,9 +132,8 @@ namespace FractalPlatform.Examples.Applications.UTube
             else if (formInfo.Collection.Name == "Channels" &&
                     formInfo.AttrPath.FirstPath == "Videos")
             {
-                var uid = Client.SetDefaultCollection("Channels")
-                                .GetWhere(formInfo.AttrPath)
-                                .Value("{'Videos':[{'UID':$}]}");
+                var uid = DocsWhere("Channels", formInfo.AttrPath)
+                          .Value("{'Videos':[{'UID':$}]}");
 
                 OpenVideo(uid);
 
@@ -172,20 +156,17 @@ namespace FractalPlatform.Examples.Applications.UTube
 
         public bool HasSubscription(uint docID)
         {
-            var channel = Client.SetDefaultCollection("Channels")
-                                .GetDoc(docID)
-                                .Value("{'Name':$}");
+            var channel = DocsWhere("Channels", docID)
+                          .Value("{'Name':$}");
 
-            return Client.SetDefaultCollection("Users")
-                         .GetWhere("{'Name':@UserName,'Subscribes':[Any,@Channel]}", channel)
-                         .Exists();
+            return DocsWhere("Users", "{'Name':@UserName,'Subscribes':[Any,@Channel]}", channel)
+                   .Exists();
         }
 
         public override object OnComputedDimension(ComputedInfo computedInfo)
         {
-            var owner = Client.SetDefaultCollection("Channels")
-                                          .GetDoc(computedInfo.GrandDocID)
-                                          .Value("{'Owner':$}");
+            var owner = DocsWhere("Channels", computedInfo.GrandDocID)
+                        .Value("{'Owner':$}");
 
             switch (computedInfo.Variable)
             {
@@ -209,9 +190,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                     {
                         if (!Context.User.IsGuest)
                         {
-                            return Client.SetDefaultCollection("Users")
-                                         .GetWhere("{'Name':@UserName}")
-                                         .Value("{'Photo':$}");
+                            return DocsWhere("Users", "{'Name':@UserName}")
+                                   .Value("{'Photo':$}");
                         }
                         else
                         {
@@ -232,9 +212,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                 securityInfo.OperationType == OperationType.Update ||
                 securityInfo.OperationType == OperationType.Delete))
             {
-                var name = Client.SetDefaultCollection("Users")
-                                 .GetWhere(securityInfo.AttrPath)
-                                 .Value("{'Name':$}");
+                var name = DocsWhere("Users", securityInfo.AttrPath)
+                           .Value("{'Name':$}");
 
                 return name == Context.User.Name || Context.User.HasRole("Admin");
             }
@@ -243,9 +222,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                      securityInfo.OperationType == OperationType.Update ||
                      securityInfo.OperationType == OperationType.Delete))
             {
-                var name = Client.SetDefaultCollection("Channels")
-                                 .GetWhere(securityInfo.AttrPath)
-                                 .Value("{'Owner':$}");
+                var name = DocsWhere("Channels", securityInfo.AttrPath)
+                           .Value("{'Owner':$}");
 
                 return name == Context.User.Name || Context.User.HasRole("Admin");
             }
@@ -283,61 +261,51 @@ namespace FractalPlatform.Examples.Applications.UTube
                     }
                 case "MyUser":
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere("{'Name':@UserName}")
-                              .WantModifyExistingDocuments()
-                              .OpenForm();
+                        ModifyDocsWhere("Users", "{'Name':@UserName}")
+                        .OpenForm();
 
                         return true;
                     }
 
                 case "Users":
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetAll()
-                              .WantModifyExistingDocuments()
-                              .OpenForm();
+                        ModifyDocsOf("Users")
+                        .OpenForm();
 
                         return true;
                     }
                 case "NewChannel":
                     {
-                        Client.SetDefaultCollection("NewChannel")
-                              .WantCreateNewDocumentFor("Channels")
-                              .OpenForm(result =>
-                              {
-                                  if (result.Result)
-                                  {
-                                      MessageBox("Thank you ! New channel created.");
-                                  }
-                              });
+                        CreateNewDocFor("NewChannel", "Channels")
+                        .OpenForm(result =>
+                        {
+                            if (result.Result)
+                            {
+                                MessageBox("Thank you ! New channel created.");
+                            }
+                        });
 
                         return true;
                     }
                 case "MyChannels":
                     {
-                        Client.SetDefaultCollection("Channels")
-                              .GetWhere("{'Owner':@UserName,'IsLocked':false}")
-                              .WantModifyExistingDocuments()
-                              .OpenForm();
+                        ModifyDocsWhere("Channels", "{'Owner':@UserName,'IsLocked':false}")
+                        .OpenForm();
 
                         return true;
                     }
                 case "Channels":
                     {
-                        Client.SetDefaultCollection("Channels")
-                              .GetWhere("{'IsLocked':false}")
-                              .WantModifyExistingDocuments()
-                              .OpenForm();
+                        ModifyDocsWhere("Channels", "{'IsLocked':false}")
+                        .OpenForm();
 
                         return true;
                     }
                 case "History":
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere("{'Name':@UserName}")
-                              .ExtendUIDimension("{'ReadOnly':true,'History':{'Visible':true,'UID':{'Visible':false}}}")
-                              .OpenForm("{'History':[$]}");
+                        DocsWhere("Users", "{'Name':@UserName}")
+                        .ExtendUIDimension("{'ReadOnly':true,'History':{'Visible':true,'UID':{'Visible':false}}}")
+                        .OpenForm("{'History':[$]}");
 
                         return true;
                     }
@@ -349,9 +317,8 @@ namespace FractalPlatform.Examples.Applications.UTube
                                    result => {
                                        if (result.Result)
                                        {
-                                           Client.SetDefaultCollection("Users")
-                                                 .GetWhere("{'Name':@UserName}")
-                                                 .Delete("{'History':[$]}");
+                                           DocsWhere("Users", "{'Name':@UserName}")
+                                           .Delete("{'History':[$]}");
 
                                            Dashboard();
                                        }
@@ -361,25 +328,21 @@ namespace FractalPlatform.Examples.Applications.UTube
                     }
                 case "NewVideo":
                     {
-                        var docID = Client.SetDefaultCollection("Channels")
-                                          .GetWhere(eventInfo.AttrPath)
-                                          .GetFirstID();
+                        var docID = DocsWhere("Channels", eventInfo.AttrPath)
+                                    .GetFirstID();
 
-                        Client.SetDefaultCollection("NewVideo")
-                              .WantCreateNewDocumentForArray("Channels", "{'Videos':[$]}", docID)
-                              .OpenForm();
+                        CreateNewDocForArray("NewVideo", "Channels", "{'Videos':[$]}", docID)
+                        .OpenForm();
 
                         return true;
                     }
                 case "Subscribe":
                     {
-                        var channel = Client.SetDefaultCollection("Channels")
-                                            .GetWhere(eventInfo.AttrPath)
-                                            .Value("{'Name':$}");
+                        var channel = DocsWhere("Channels", eventInfo.AttrPath)
+                                      .Value("{'Name':$}");
 
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere("{'Name':@UserName}")
-                              .Update("{'Subscribes':[Add,@Channel]}", channel);
+                        DocsWhere("Users", "{'Name':@UserName}")
+                        .Update("{'Subscribes':[Add,@Channel]}", channel);
 
                         MessageBox("Thank you. You are subscribed on the channel.", MessageBoxButtonType.Ok);
 
@@ -387,13 +350,11 @@ namespace FractalPlatform.Examples.Applications.UTube
                     }
                 case "Unsubscribe":
                     {
-                        var channel = Client.SetDefaultCollection("Channels")
-                                            .GetWhere(eventInfo.AttrPath)
-                                            .Value("{'Name':$}");
+                        var channel = DocsWhere("Channels", eventInfo.AttrPath)
+                                      .Value("{'Name':$}");
 
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere("{'Name':@UserName}")
-                              .Delete("{'Subscribes':[@Channel]}", channel);
+                        DocsWhere("Users", "{'Name':@UserName}")
+                        .Delete("{'Subscribes':[@Channel]}", channel);
 
                         MessageBox("You are unsubscribed from the channel.", MessageBoxButtonType.Ok);
 
@@ -401,8 +362,7 @@ namespace FractalPlatform.Examples.Applications.UTube
                     }
                 case "NewComment":
                     {
-                        Client.SetDefaultCollection("NewComment")
-                              .GetFirstDoc()
+                        FirstDocOf("NewComment")
                               .OpenForm(result =>
                               {
                                   if (result.Result)
