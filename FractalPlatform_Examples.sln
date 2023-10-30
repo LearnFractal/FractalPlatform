@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Forum", "Fr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.UTube", "FractalPlatform.UTube\FractalPlatform.UTube.csproj", "{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Weather", "FractalPlatform.Weather\FractalPlatform.Weather.csproj", "{5FD82574-950A-4304-BBE8-E2379ACA225A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,14 @@ Global
 		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Release|x86.ActiveCfg = Release|Any CPU
 		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Release|x86.Build.0 = Release|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Debug|x86.Build.0 = Debug|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5FD82574-950A-4304-BBE8-E2379ACA225A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +91,7 @@ Global
 		{BC7FF16E-0115-4128-8E24-E76BB60EE478} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 		{5AD30192-163A-4745-962A-CEE79BEBFE99} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
+		{5FD82574-950A-4304-BBE8-E2379ACA225A} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {842F3684-70EF-46AF-AA77-E2F6307580EF}

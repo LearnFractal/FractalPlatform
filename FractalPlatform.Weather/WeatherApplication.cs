@@ -6,7 +6,7 @@ using FractalPlatform.Client.UI;
 using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
 
-namespace FractalPlatform.Examples.Applications.Weather
+namespace FractalPlatform.Weather
 {
     public class WeatherApplication : BaseApplication
     {
