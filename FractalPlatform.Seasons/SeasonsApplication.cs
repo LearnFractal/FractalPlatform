@@ -1,24 +1,441 @@
 ﻿using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI;
+using FractalPlatform.Common.Enums;
+using FractalPlatform.Database.Engine.Info;
+using FractalPlatform.Database.Engine;
+using System.Collections.Generic;
+using System;
 
 namespace FractalPlatform.Seasons
 {
-    public class SeasonsApplication : BaseApplication
+    public class SeasonsApplication : DashboardApplication
     {
-        private class Product
+        private void Dashboard(Collection collection = null)
         {
-            public string Name { get; set; }
-            public int Quantity { get; set; }
-            public decimal Price { get; set; }
+            CloseIfOpenedForm("Dashboard");
+
+            var query = DocsOf("Movies");
+
+            if (Context.HasUrlTag)
+            {
+                query = query.AndWhere("{'Type':@Type}", Context.UrlTag);
+            }
+
+            List<string> filters = null;
+
+            if (collection != null)
+            {
+                filters = collection.GetFirstDoc()
+                                    .Values("{'Genre':$,'Year':$,'Country':$}");
+
+                if (filters[0] != "Жанр") query = query.AndWhere("{'Genre':@Genre}", filters[0]);
+                if (filters[1] != "Рік") query = query.AndWhere("{'Year':@Year}", filters[1]);
+                if (filters[2] != "Країна") query = query.AndWhere("{'Country':@Country}", filters[2]);
+            }
+
+            var movies = query.OrderByDesc("{'Rating':$}")
+                              .ToStorage();
+
+            FirstDocOf("Dashboard").ToCollection()
+                                   .IfTrue(collection != null, c => c.ExtendDocument(DQL("{'Genre':@Genre,'Year':@Year,'Country':@Country}", filters[0], filters[1], filters[2])))
+                                   .MergeToArrayPath(movies, "Movies")
+                                   .OpenForm();
         }
+
+        private void UsersDashboard(string movie = null)
+        {
+            CloseIfOpenedForm("UsersDashboard");
+
+            Storage users;
+
+            if (movie != null)
+            {
+                users = DocsWhere("Users", "{'PlayList':[Any,{'Name':@Name}]}", movie)
+                        .OrWhere("{'BestMovies':[Any,{'Name':@Name}]}", movie)
+                        .ToStorage();
+            }
+            else
+            {
+                users = DocsOf("Users").ToStorage();
+            }
+
+            FirstDocOf("UsersDashboard")
+            .ToCollection()
+            .MergeToArrayPath(users, "Users")
+            .OpenForm();
+        }
+
+        private void MovieDashboard(string name)
+        {
+            CloseIfOpenedForm("MovieDashboard");
+
+            DocsWhere("Movies", "{'Name':@Name}", name).Update("{'Views':Add(1)}");
+
+            var movie = DocsWhere("Movies", "{'Name':@Name}", name).ToStorage();
+
+            var recommends = DocsOf("Movies")
+                             .OrderByDesc("{'Rating':$}")
+                             .Take(6)
+                             .ToStorage();
+
+            FirstDocOf("MovieDashboard")
+            .ToCollection()
+            .MergeToPath(movie)
+            .MergeToArrayPath(recommends, "Recommends")
+            .OpenForm();
+        }
+
+        private void ViewUser(AttrPath attrPath)
+        {
+            var name = DocsWhere("Users", attrPath).Value("{'Name':$}");
+
+            ViewUser(name);
+        }
+
+        private void ViewUser(string name)
+        {
+            CloseIfOpenedForm("User");
+
+            DocsWhere("Users", "{'Name':@Name}", name)
+            .SetDimension(DimensionType.UI, "{'Layout':'User','IsRawPage':true}")
+            .OpenForm();
+        }
+
+        public override bool OnOpenForm(FormInfo formInfo)
+        {
+            if (formInfo.Collection.Name == "Dashboard" &&
+                formInfo.AttrPath.FirstPath == "Movies")
+            {
+                var name = formInfo.Collection
+                                  .GetWhere(formInfo.AttrPath)
+                                  .Value("{'Movies':[{'Name':$}]}");
+
+                MovieDashboard(name);
+
+                return false;
+            }
+            else if (formInfo.Collection.Name == "MovieDashboard" &&
+                     formInfo.AttrPath.FirstPath == "Recommends")
+            {
+                var name = formInfo.Collection
+                                  .GetWhere(formInfo.AttrPath)
+                                  .Value("{'Recommends':[{'Name':$}]}");
+
+                MovieDashboard(name);
+
+                return false;
+            }
+            else if (formInfo.Collection.Name == "Users" &&
+                     formInfo.AttrPath.FirstPath == "PlayList")
+            {
+                var name = formInfo.Collection
+                                  .GetWhere(formInfo.AttrPath)
+                                  .Value("{'PlayList':[{'Name':$}]}");
+
+                MovieDashboard(name);
+
+                return false;
+            }
+            else if (formInfo.Collection.Name == "Users" &&
+                     formInfo.AttrPath.FirstPath == "BestMovies")
+            {
+                var name = formInfo.Collection
+                                  .GetWhere(formInfo.AttrPath)
+                                  .Value("{'BestMovies':[{'Name':$}]}");
+
+                MovieDashboard(name);
+
+                return false;
+            }
+            else if (formInfo.Collection.Name == "Users" &&
+                     formInfo.AttrPath.FirstPath == "GoodMovies")
+            {
+                var name = formInfo.Collection
+                                  .GetWhere(formInfo.AttrPath)
+                                  .Value("{'GoodMovies':[{'Name':$}]}");
+
+                MovieDashboard(name);
+
+                return false;
+            }
+            else if (formInfo.Collection.Name == "UsersDashboard" &&
+                     formInfo.AttrPath.FirstPath == "Users")
+            {
+                var name = formInfo.Collection
+                                   .GetWhere(formInfo.AttrPath)
+                                   .Value("{'Users':[{'Name':$}]}");
+
+                ViewUser(name);
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public override object OnComputedDimension(ComputedInfo computedInfo)
+        {
+            switch (computedInfo.Variable)
+            {
+                case "CountUsers":
+                    return DocsOf("Users").Count();
+                case "CountMovies":
+                    return DocsOf("Movies").Count();
+                case "CurrentFilms":
+                    return !Context.HasUrlTag || Context.UrlTag == "films" ? "current" : "";
+                case "CurrentSeries":
+                    return Context.UrlTag == "series" ? "current" : "";
+                case "CurrentCartoons":
+                    return Context.UrlTag == "cartoons" ? "current" : "";
+                case "PlayListCount":
+                    return DocsWhere("Users", computedInfo.AttrPath).Count("{'PlayList':[{'Name':$}]}");
+                case "BestMoviesCount":
+                    return DocsWhere("Users", computedInfo.AttrPath).Count("{'BestMovies':[{'Name':$}]}");
+                case "CommentsCount":
+                    var user = DocsWhere("Users", computedInfo.AttrPath).Value("{'Name':$}");
+
+                    return DocsWhere("Movies", "{'Comments':[{'Name':@User}]}", user)
+                           .Count("{'Comments':[{'Name':$}]}");
+                case "OnDateLabel":
+                    var dateAgo = DateTime.Now.Subtract(computedInfo.Collection
+                                                                    .GetWhere(computedInfo.AttrPath)
+                                                                    .DateTimeValue("{'PlayList':[{'OnDate':$}]}"));
+
+                    if (dateAgo.Days > 0) return $"{dateAgo.Days} днів тому";
+                    if (dateAgo.Hours > 0) return $"{dateAgo.Hours} годин тому";
+                    if (dateAgo.Minutes > 0) return $"{dateAgo.Minutes} хвилин тому";
+                    else return $"{dateAgo.Seconds} секунд тому";
+                default:
+                    return base.OnComputedDimension(computedInfo);
+            }
+        }
+
+        public override bool OnEventDimension(EventInfo eventInfo)
+        {
+            switch (eventInfo.Action)
+            {
+                case "Genre":
+                case "Country":
+                case "Year":
+                case "ChangeType":
+                    {
+                        Dashboard(eventInfo.Collection);
+
+                        return true;
+                    }
+                case "LoginButton":
+                    {
+                        var loginAndPass = eventInfo.Collection
+                                                    .GetFirstDoc()
+                                                    .Values("{'Login':$,'Password':$}");
+
+                        if (TryLogin(loginAndPass[0], loginAndPass[1]))
+                        {
+                            Dashboard();
+                        }
+                        else
+                        {
+                            MessageBox("Wrong credentials");
+                        }
+
+                        return true;
+                    }
+                case "RegisterButton":
+                    {
+                        Register();
+
+                        return true;
+                    }
+                case "MyUser":
+                    {
+                        ViewUser(Context.User.Name);
+
+                        return true;
+                    }
+                case "ViewUser":
+                    {
+                        var name = eventInfo.Collection
+                                            .GetWhere(eventInfo.AttrPath)
+                                            .Value("{'Comments':[{'Name':$}]}");
+
+                        ViewUser(name);
+
+                        return true;
+                    }
+                case "NewMovie":
+                    {
+                        CreateNewDocFor("NewMovie", "Movies").OpenForm();
+
+                        return true;
+                    }
+                case "AddComment":
+                    {
+                        var movie = eventInfo.Collection.FindFirstValue("Name");
+
+                        var text = eventInfo.Collection.FindFirstValue("Comment");
+
+                        DocsWhere("Movies", "{'Name':@Name}", movie)
+                        .Update("{'Comments':[Add,{'Name':@Name,'Avatar':@Avatar,'Text':@Text, 'ViewUser':'View User'}]}", Context.User.Name, Context.User.Avatar, text);
+
+                        MovieDashboard(movie); //reload movie dashboard
+
+                        return true;
+                    }
+                case "EditMovies":
+                    {
+                        ModifyDocsOf("Movies")
+                        .ExtendUIDimension("{'Layout':'','IsRawPage':false}")
+                        .OpenForm();
+
+                        return true;
+                    }
+                case "EditActors":
+                    {
+                        ModifyDocsOf("Actors").OpenForm();
+
+                        return true;
+                    }
+                case "EditUsers":
+                    {
+                        ModifyDocsOf("Users")
+                        .ExtendUIDimension("{'Layout':'','IsRawPage':false}")
+                        .OpenForm();
+
+                        return true;
+                    }
+                case "EditUser":
+                    {
+                        ModifyDocsWhere("Users", "{'Name':@Name}", Context.User.Name)
+                        .ExtendUIDimension("{'Layout':'','IsRawPage':false,'PlayList':{'Visible':false},'BestMovies':{'Visible':false},'GoodMovies':{'Visible':false}}")
+                        .OpenForm(result => result.NeedReloadData = true);
+
+                        return true;
+                    }
+                case "AllUsers":
+                    {
+                        UsersDashboard();
+
+                        return true;
+                    }
+                case "AddToPlayList":
+                case "ViewUsers":
+                    {
+                        string name;
+
+                        if (eventInfo.Collection.Name == "MovieDashboard")
+                        {
+                            if (eventInfo.AttrPath.FirstPath == "Recommends")
+                            {
+                                name = eventInfo.Collection
+                                                .GetWhere(eventInfo.AttrPath)
+                                                .Value("{'Recommends':[{'Name':$}]}");
+                            }
+                            else
+                            {
+                                name = eventInfo.Collection
+                                                .GetWhere(eventInfo.AttrPath)
+                                                .Value("{'Name':$}");
+                            }
+                        }
+                        else
+                        {
+                            name = eventInfo.Collection
+                                            .GetWhere(eventInfo.AttrPath)
+                                            .Value("{'Movies':[{'Name':$}]}");
+                        }
+
+                        if (eventInfo.Action == "AddToPlayList")
+                        {
+                            if (Client.SetDefaultCollection("Users")
+                                       .GetWhere("{'Name':@UserName,'PlayList':[Any,{'Name':@Name}]}", name)
+                                       .Any() ||
+                                Client.SetDefaultCollection("Users")
+                                       .GetWhere("{'Name':@UserName,'BestMovies':[Any,{'Name':@Name}]}", name)
+                                       .Any() ||
+                                Client.SetDefaultCollection("Users")
+                                       .GetWhere("{'Name':@UserName,'GoodMovies':[Any,{'Name':@Name}]}", name)
+                                       .Any())
+                            {
+                                MessageBox($"Фільм {name} вже є в вашому списку перегляду.", MessageBoxButtonType.Ok);
+                            }
+                            else
+                            {
+                                DocsWhere("Users", "{'Name':@UserName}")
+                                .Update("{'PlayList':[Add,{'Name':@Name,'OnDate':@Now,'BestMovie':'Best Movie','GoodMovie':'Good Movie','Remove':'Remove','OnDateLabel':''}]}", name);
+
+                                MessageBox($"Фільм {name} додано до вашого списку перегляду.", MessageBoxButtonType.Ok);
+                            }
+                        }
+                        else //ViewUsers
+                        {
+                            UsersDashboard(name);
+                        }
+
+                        return true;
+                    }
+                case "Remove":
+                    {
+                        if (eventInfo.AttrPath.FirstPath == "PlayList")
+                        {
+                            DocsWhere("Users", eventInfo.AttrPath)
+                            .Delete("{'PlayList':[{'Name':$,'OnDate':$,'BestMovie':$,'GoodMovie':$,'Remove':$}]}");
+                        }
+                        else if (eventInfo.AttrPath.FirstPath == "BestMovies")
+                        {
+                            DocsWhere("Users", eventInfo.AttrPath)
+                            .Delete("{'BestMovies':[{'Name':$,'OnDate':$,'Share':$,'Remove':$}]}");
+                        }
+                        else if (eventInfo.AttrPath.FirstPath == "GoodMovies")
+                        {
+                            DocsWhere("Users", eventInfo.AttrPath)
+                            .Delete("{'GoodMovies':[{'Name':$,'OnDate':$,'Share':$,'Remove':$}]}");
+                        }
+
+                        ViewUser(eventInfo.AttrPath);
+
+                        return true;
+                    }
+                case "BestMovie":
+                case "GoodMovie":
+                    {
+                        var movie = DocsWhere("Users", eventInfo.AttrPath)
+                                    .Value("{'PlayList':[{'Name':$}]}");
+
+                        if (eventInfo.Action == "BestMovie")
+                        {
+                            DocsWhere("Users", eventInfo.AttrPath)
+                            .Update("{'BestMovies':[Add,{'Name':@Movie,'OnDate':@Now,'Share':'Share','Remove':'Remove'}]}", movie);
+                        }
+                        else //GoodMovie
+                        {
+                            DocsWhere("Users", eventInfo.AttrPath)
+                            .Update("{'GoodMovies':[Add,{'Name':@Movie,'OnDate':@Now,'Share':'Share','Remove':'Remove'}]}", movie);
+                        }
+
+                        DocsWhere("Users", eventInfo.AttrPath)
+                        .Delete("{'PlayList':[{'Name':$,'OnDate':$,'BestMovie':$,'GoodMovie':$,'Remove':$}]}");
+
+                        ViewUser(eventInfo.AttrPath);
+
+                        return true;
+                    }
+                default:
+                    return base.OnEventDimension(eventInfo);
+            }
+        }
+
+        public override bool OnSecurityDimension(SecurityInfo securityInfo) => securityInfo.Storage.FindFirstValue("Name") == Context.User.Name; //@MyProfile variable
 
         public override void OnStart()
         {
-            //ModifyFirstDocOf("Products").OpenForm(result => {
-            //    var price = result.Collection.GetFirstDoc().Select<Product>("{'Products':[!$]}").Sum(x => x.Quantity * x.Price);
-            //    MessageBox($"Рахунок: {price} грн.");
-            //});
-
-            MessageBox("Hello World !");
+            if (!TryAutoLogin())
+            {
+                FirstDocOf("Intro").OpenForm();
+            }
+            else
+            {
+                Dashboard();
+            }
         }
     }
 }
