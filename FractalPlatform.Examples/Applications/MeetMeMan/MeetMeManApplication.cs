@@ -2,6 +2,7 @@
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM;
 using FractalPlatform.Database.Engine;
+using FractalPlatform.Database.Engine.Info;
 using System.Linq;
 
 namespace FractalPlatform.Examples.Applications.Sandbox5
