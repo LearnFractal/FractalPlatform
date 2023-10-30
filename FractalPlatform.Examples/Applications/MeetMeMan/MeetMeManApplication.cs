@@ -45,6 +45,7 @@ namespace FractalPlatform.Examples.Applications.MeetMeMan
 
             FirstDocOf("Dashboard")
             .ToCollection()
+            .DeleteByParent("Friends")
             .MergeToArrayPath(points, new AttrPath("Map", "Points"))
             .IfTrue(filter != null, x => x.MergeToArrayPath(friends, "Friends"), x => x)
             .OpenForm();
