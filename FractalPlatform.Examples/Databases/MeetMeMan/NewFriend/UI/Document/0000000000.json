@@ -1,0 +1,6 @@
+{
+  "Style": "Save:Propose;Cancel:false",
+  "Map": {
+    "ControlType": "ChooseMap"
+  }
+}

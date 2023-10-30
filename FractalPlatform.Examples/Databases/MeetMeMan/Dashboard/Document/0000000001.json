@@ -1,0 +1,14 @@
+﻿{
+   "Find": "Find",
+   "Propose": "Propose",
+   "Map": {
+      "Key": "",
+      "Title": "Friends",
+      "Zoom": 5,
+      "Center": {
+         "Lat": "50.4329658690059",
+         "Lng": "30.57958332067064"
+      },
+      "Points": []
+   }
+}

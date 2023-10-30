@@ -1,0 +1,13 @@
+{
+  "Style": "Save:false;Cancel:false",
+  "ReadOnly": true,
+  "Map": {
+    "ControlType": "Map"
+  },
+  "Find": {
+    "ControlType": "Button"
+  },
+  "Propose": {
+    "ControlType": "Button"
+  }
+}

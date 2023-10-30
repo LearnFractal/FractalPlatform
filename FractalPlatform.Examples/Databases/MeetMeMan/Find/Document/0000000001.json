@@ -1,0 +1,21 @@
+﻿{
+  "Goal": {
+    "Drink": false,
+    "Eat": false,
+    "Talk": false
+  },
+  "Day": {
+    "Monday": false,
+    "Tuesday": false,
+    "Wednesday": false,
+    "Thursday": false,
+    "Friday": false,
+    "Saturday": false,
+    "Sunday": false
+  },
+  "Time": {
+    "Morning": false,
+    "Afternoon": false,
+    "Evening": false
+  }
+}

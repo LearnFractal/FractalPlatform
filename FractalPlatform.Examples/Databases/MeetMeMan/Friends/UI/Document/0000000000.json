@@ -1,0 +1,9 @@
+{
+  "ReadOnly": true,
+  "TextMessages": {
+    "Visible": false
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  }
+}

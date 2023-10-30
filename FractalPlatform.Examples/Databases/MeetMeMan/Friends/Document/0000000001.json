@@ -1,0 +1,40 @@
+﻿{
+   "Contacts": {
+      "Messanger": "test",
+      "Name": "testt",
+      "Photo": "test"
+   },
+   "Day": {
+      "Friday": false,
+      "Monday": true,
+      "Saturday": false,
+      "Sunday": false,
+      "Thursday": false,
+      "Tuesday": false,
+      "Wednesday": false
+   },
+   "Goal": {
+      "Drink": true,
+      "Eat": true,
+      "Talk": false,
+      "TalkAbout": ""
+   },
+   "Map": {
+      "Key": "",
+      "Title": "Choose a location",
+      "Zoom": 15,
+      "Center": {
+         "Lat": "50.4329658690059",
+         "Lng": "30.57958332067064"
+      },
+      "Point": {
+         "Lat": "50.43501057610151",
+         "Lng": "30.58470741251077"
+      }
+   },
+   "Time": {
+      "Afternoon": false,
+      "Evening": false,
+      "Morning": true
+   }
+}

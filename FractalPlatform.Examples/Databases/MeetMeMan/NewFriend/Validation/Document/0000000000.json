@@ -1,0 +1,20 @@
+{
+  "Contacts": {
+    "Name": {
+      "IsRequired": true
+    },
+    "Messanger": {
+      "IsRequired": true
+    }
+  },
+  "Map": {
+    "Point": {
+      "Lat": {
+        "IsRequired": true
+      },
+      "Lng": {
+        "IsRequired": true
+      }
+    }
+  }
+}
