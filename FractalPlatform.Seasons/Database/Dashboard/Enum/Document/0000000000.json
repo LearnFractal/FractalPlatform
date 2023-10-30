@@ -1,0 +1,35 @@
+{
+  "Genre": {
+    "Items": [
+      "Жанр",
+      "Films",
+      "Series",
+      "Cartoons"
+    ]
+  },
+  "Year": {
+    "Items": [
+      "Рік",
+      "2023",
+      "2022",
+      "2021",
+      "2020"
+    ]
+  },
+  "Country": {
+    "Items": [
+      "Країна",
+      "USA",
+      "France",
+      "Denmark",
+      "Ukraine",
+      "Germany"
+    ]
+  },
+  "Portion": {
+    "Items": [
+      "24",
+      "48"
+    ]
+  }
+}

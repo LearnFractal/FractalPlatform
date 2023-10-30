@@ -1,0 +1,8 @@
+{
+  "CountUsers": {
+    "Formula": "@CountUsers"
+  },
+  "CountMovies": {
+    "Formula": "@CountMovies"
+  }
+}

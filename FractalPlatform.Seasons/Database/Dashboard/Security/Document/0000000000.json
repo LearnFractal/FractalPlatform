@@ -1,0 +1,30 @@
+{
+  "NewMovie": {
+    "Allow": {
+      "Read": [
+        "Admin"
+      ]
+    }
+  },
+  "EditMovies": {
+    "Allow": {
+      "Read": [
+        "Admin"
+      ]
+    }
+  },
+  "EditActors": {
+    "Allow": {
+      "Read": [
+        "Admin"
+      ]
+    }
+  },
+  "EditUsers": {
+    "Allow": {
+      "Read": [
+        "Admin"
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+﻿{
+  "Age": 21,
+  "Avatar": "ti.png",
+  "BestMoviesCount": "3",
+  "Capcha": "",
+  "CommentsCount": "12",
+  "EditUser": "Edit Profile",
+  "Gender": "Female",
+  "Name": "Ti",
+  "Password": "3295C247AB1658A7D9327C604663008F",
+  "PlayListCount": "2",
+  "Registered": "07/07/2023 14:02:56",
+  "RepeatPassword": "",
+  "Theme": "Dark",
+  "BestMovies": [
+    {
+      "Name": "Арнольд",
+      "OnDate": "10/24/2023 21:36:07",
+      "Remove": "Remove",
+      "Share": "Share"
+    },
+    {
+      "Name": "Втеча сімох",
+      "OnDate": "10/25/2023 14:37:57",
+      "Remove": "Remove",
+      "Share": "Share"
+    },
+    {
+      "Name": "Нова спроба Кейт МакКолл",
+      "OnDate": "10/25/2023 15:05:25",
+      "Remove": "Remove",
+      "Share": "Share"
+    },
+    {
+      "Name": "Фрейзер",
+      "OnDate": "10/25/2023 15:05:27",
+      "Remove": "Remove",
+      "Share": "Share"
+    }
+  ],
+  "GoodMovies": [
+    {
+      "Name": "Спецназ: левиця",
+      "OnDate": "10/24/2023 21:36:55",
+      "Remove": "Remove",
+      "Share": "Share"
+    }
+  ],
+  "PlayList": [
+    {
+      "BestMovie": "Best Movie",
+      "GoodMovie": "Good Movie",
+      "Name": "Чесна гра",
+      "OnDate": "10/24/2023 21:29:37",
+      "OnDateLabel": "",
+      "Remove": "Remove"
+    }
+  ]
+}

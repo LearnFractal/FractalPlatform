@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34114.132
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Examples", "FractalPlatform.Examples\FractalPlatform.Examples.csproj", "{497B9A69-5582-4312-BBA7-7C8F7A132FFA}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalPlatform.CreateLayout", "FractalPlatform.CreateLayout\FractalPlatform.CreateLayout.csproj", "{6348296E-CD5C-424D-B652-ABA88A61F314}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Seasons", "FractalPlatform.Seasons\FractalPlatform.Seasons.csproj", "{BC7FF16E-0115-4128-8E24-E76BB60EE478}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{E7B45258-050C-41DB-891D-B76DCBA8628E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Forum", "FractalPlatform.Forum\FractalPlatform.Forum.csproj", "{5AD30192-163A-4745-962A-CEE79BEBFE99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.UTube", "FractalPlatform.UTube\FractalPlatform.UTube.csproj", "{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +57,30 @@ Global
 		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Release|x86.ActiveCfg = Release|Any CPU
 		{BC7FF16E-0115-4128-8E24-E76BB60EE478}.Release|x86.Build.0 = Release|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Debug|x86.Build.0 = Debug|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Release|x86.ActiveCfg = Release|Any CPU
+		{5AD30192-163A-4745-962A-CEE79BEBFE99}.Release|x86.Build.0 = Release|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Debug|x86.Build.0 = Debug|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Release|x86.ActiveCfg = Release|Any CPU
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC7FF16E-0115-4128-8E24-E76BB60EE478} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
+		{5AD30192-163A-4745-962A-CEE79BEBFE99} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
+		{C93CC022-71E3-4DD9-B8ED-7362D4C9F722} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {842F3684-70EF-46AF-AA77-E2F6307580EF}

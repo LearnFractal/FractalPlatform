@@ -1,0 +1,39 @@
+{
+  "Style": "Save:Register",
+  "Password": {
+    "Style": "Type:Password"
+  },
+  "RepeatPassword": {
+    "Style": "Type:Password"
+  },
+  "Gender": {
+    "ControlType": "ComboBox"
+  },
+  "Capcha": {
+    "Style": "Type:Capcha"
+  },
+  "Avatar": {
+    "ControlType": "UploadFile"
+  },
+  "CountMessages": {
+    "Visible": false
+  },
+  "Registered": {
+    "Visible": false
+  },
+  "BestMoviesCount": {
+    "Visible": false
+  },
+  "CommentsCount": {
+    "Visible": false
+  },
+  "EditUser": {
+    "Visible": false
+  },
+  "PlayListCount": {
+    "Visible": false
+  },
+  "Theme": {
+    "Visible": false
+  }
+}

@@ -1,0 +1,47 @@
+﻿{
+  "AddToPlayList": "Add To Play List",
+  "CommentsCount": "",
+  "Country": "USA",
+  "Description": "Пригодницький фільм",
+  "Duration": "90 хв/01:40",
+  "Genre": "Films",
+  "IMDB": "7.3",
+  "Name": "Фрейзер",
+  "Picture": "7.ab77ae1f.png",
+  "Quality": "BDRip",
+  "Rating": "8.1",
+  "RecommendAge": "16+",
+  "Translation": "Професійний (багатоголосий)",
+  "Type": "films",
+  "Video": "Openngamer.mp4",
+  "Views": 2,
+  "ViewUsers": "View Users",
+  "Year": 2023,
+  "Actors": [
+    {
+      "Name": "Гелен Міррен",
+      "Role": "Голда"
+    },
+    {
+      "Name": "Камілль Коттен",
+      "Role": "Лу Каддар"
+    },
+    {
+      "Name": "Лієв Шрайбер",
+      "Role": "Генрі Кіссенджер"
+    },
+    {
+      "Name": "Ліор Ашкеназі",
+      "Role": "Давід"
+    }
+  ],
+  "Comments": [
+    {
+      "Avatar": "Ti.png",
+      "Name": "Ti",
+      "Text": "Test comment",
+      "ViewUser": "View User"
+    }
+  ],
+  "Series": [ "Serie1.mp4" ]
+}

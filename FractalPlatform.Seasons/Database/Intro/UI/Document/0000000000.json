@@ -1,0 +1,10 @@
+﻿{
+  "Layout": "Intro",
+  "IsRawPage": true,
+  "LoginButton": {
+    "ControlType": "Button"
+  },
+  "RegisterButton": {
+    "ControlType": "Button"
+  }
+}
