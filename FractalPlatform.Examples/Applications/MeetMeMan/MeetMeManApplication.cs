@@ -53,7 +53,7 @@ namespace FractalPlatform.Examples.Applications.MeetMeMan
 
         public override void OnStart()
         {
-            Dashboard(null);
+            Dashboard();
         }
 
         public override BaseRenderForm CreateRenderForm(DOMForm form) => new ExtendedRenderForm(this, form);
