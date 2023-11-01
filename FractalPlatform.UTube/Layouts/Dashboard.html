@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="@BaseUrl/js/frmain.js"></script>
+    <link rel="stylesheet" href="@BaseUrl/css/White.css">
+    <link rel="stylesheet" href="@BaseUrl/css/calendar.css">
+    @Styles
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>UTube</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/index.e19541fc.css">
+</head>
+<body class="isLoading">
+    <form action="@BaseUrl/@AppName/@FormName" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="EditKey" value="" />
+        <input type="hidden" name="MenuAction" value="" />
+        <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
+        <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
+        <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
+        <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
+        <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
+        <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
+        <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
+        <input type="submit" id="btnSave" name="btn" value="Save" style="display:none" />
+        <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
+        <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none" />
+        <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none" />
+        <input type="submit" id="btnFilter" name="btn" value="Filter" style="display:none" />
+        <input type="submit" id="btnAdd" name="btn" value="Add" style="display:none" />
+        <input type="submit" id="btnDel" name="btn" value="Del" style="display:none" />
+        <header class="header">
+            <div class="container">
+                <a lang="en" href="/" class="link logo">UTube</a>
+                <label class="header__search">
+                    <control attr="">
+                        <input @FilterText.TextBox type="search" placeholder="Search">
+                        <button @Filter.Button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 25" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.76 13.77L20.49 19.5L19 20.99L13.27 15.26C12.2 16.03 10.91 16.5 9.5 16.5C5.91 16.5 3 13.59 3 10C3 6.41 5.91 3.5 9.5 3.5C13.09 3.5 16 6.41 16 10C16 11.41 15.53 12.7 14.76 13.77ZM9.5 5.5C7.01 5.5 5 7.51 5 10C5 12.49 7.01 14.5 9.5 14.5C11.99 14.5 14 12.49 14 10C14 7.51 11.99 5.5 9.5 5.5Z" fill="#9F9EA1"></path>
+                            </svg>
+                        </button>
+                    </control>
+                </label>
+                <control attr="MyUser">
+                    <button @Button class="header__btn">MU</button>
+                </control>
+            </div>
+        </header>
+        <div class="container main__container">
+            <aside class="sidebar">
+                <nav class="sidebar__nav sidebar-nav">
+                    <ul class="sidebar-nav__list">
+                        <control attr="Login">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_529" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_529)">
+                                            <path d="M12 12.5C10.9 12.5 9.95833 12.1083 9.175 11.325C8.39167 10.5417 8 9.6 8 8.5C8 7.4 8.39167 6.45833 9.175 5.675C9.95833 4.89167 10.9 4.5 12 4.5C13.1 4.5 14.0417 4.89167 14.825 5.675C15.6083 6.45833 16 7.4 16 8.5C16 9.6 15.6083 10.5417 14.825 11.325C14.0417 12.1083 13.1 12.5 12 12.5ZM4 20.5V17.7C4 17.1333 4.14583 16.6125 4.4375 16.1375C4.72917 15.6625 5.11667 15.3 5.6 15.05C6.63333 14.5333 7.68333 14.1458 8.75 13.8875C9.81667 13.6292 10.9 13.5 12 13.5C13.1 13.5 14.1833 13.6292 15.25 13.8875C16.3167 14.1458 17.3667 14.5333 18.4 15.05C18.8833 15.3 19.2708 15.6625 19.5625 16.1375C19.8542 16.6125 20 17.1333 20 17.7V20.5H4ZM6 18.5H18V17.7C18 17.5167 17.9542 17.35 17.8625 17.2C17.7708 17.05 17.65 16.9333 17.5 16.85C16.6 16.4 15.6917 16.0625 14.775 15.8375C13.8583 15.6125 12.9333 15.5 12 15.5C11.0667 15.5 10.1417 15.6125 9.225 15.8375C8.30833 16.0625 7.4 16.4 6.5 16.85C6.35 16.9333 6.22917 17.05 6.1375 17.2C6.04583 17.35 6 17.5167 6 17.7V18.5ZM12 10.5C12.55 10.5 13.0208 10.3042 13.4125 9.9125C13.8042 9.52083 14 9.05 14 8.5C14 7.95 13.8042 7.47917 13.4125 7.0875C13.0208 6.69583 12.55 6.5 12 6.5C11.45 6.5 10.9792 6.69583 10.5875 7.0875C10.1958 7.47917 10 7.95 10 8.5C10 9.05 10.1958 9.52083 10.5875 9.9125C10.9792 10.3042 11.45 10.5 12 10.5Z" fill="#656466"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="Logout">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_1046" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_1046)">
+                                            <path d="M5 21.5C4.45 21.5 3.97917 21.3042 3.5875 20.9125C3.19583 20.5208 3 20.05 3 19.5V5.5C3 4.95 3.19583 4.47917 3.5875 4.0875C3.97917 3.69583 4.45 3.5 5 3.5H12V5.5H5V19.5H12V21.5H5ZM16 17.5L14.625 16.05L17.175 13.5H9V11.5H17.175L14.625 8.95L16 7.5L21 12.5L16 17.5Z" fill="#9F9EA1"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="Register">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_655" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_655)">
+                                            <path d="M1 20.5V17.7C1 17.1333 1.14583 16.6125 1.4375 16.1375C1.72917 15.6625 2.11667 15.3 2.6 15.05C3.63333 14.5333 4.68333 14.1458 5.75 13.8875C6.81667 13.6292 7.9 13.5 9 13.5C10.1 13.5 11.1833 13.6292 12.25 13.8875C13.3167 14.1458 14.3667 14.5333 15.4 15.05C15.8833 15.3 16.2708 15.6625 16.5625 16.1375C16.8542 16.6125 17 17.1333 17 17.7V20.5H1ZM19 20.5V17.5C19 16.7667 18.7958 16.0625 18.3875 15.3875C17.9792 14.7125 17.4 14.1333 16.65 13.65C17.5 13.75 18.3 13.9208 19.05 14.1625C19.8 14.4042 20.5 14.7 21.15 15.05C21.75 15.3833 22.2083 15.7542 22.525 16.1625C22.8417 16.5708 23 17.0167 23 17.5V20.5H19ZM9 12.5C7.9 12.5 6.95833 12.1083 6.175 11.325C5.39167 10.5417 5 9.6 5 8.5C5 7.4 5.39167 6.45833 6.175 5.675C6.95833 4.89167 7.9 4.5 9 4.5C10.1 4.5 11.0417 4.89167 11.825 5.675C12.6083 6.45833 13 7.4 13 8.5C13 9.6 12.6083 10.5417 11.825 11.325C11.0417 12.1083 10.1 12.5 9 12.5ZM19 8.5C19 9.6 18.6083 10.5417 17.825 11.325C17.0417 12.1083 16.1 12.5 15 12.5C14.8167 12.5 14.5833 12.4792 14.3 12.4375C14.0167 12.3958 13.7833 12.35 13.6 12.3C14.05 11.7667 14.3958 11.175 14.6375 10.525C14.8792 9.875 15 9.2 15 8.5C15 7.8 14.8792 7.125 14.6375 6.475C14.3958 5.825 14.05 5.23333 13.6 4.7C13.8333 4.61667 14.0667 4.5625 14.3 4.5375C14.5333 4.5125 14.7667 4.5 15 4.5C16.1 4.5 17.0417 4.89167 17.825 5.675C18.6083 6.45833 19 7.4 19 8.5ZM3 18.5H15V17.7C15 17.5167 14.9542 17.35 14.8625 17.2C14.7708 17.05 14.65 16.9333 14.5 16.85C13.6 16.4 12.6917 16.0625 11.775 15.8375C10.8583 15.6125 9.93333 15.5 9 15.5C8.06667 15.5 7.14167 15.6125 6.225 15.8375C5.30833 16.0625 4.4 16.4 3.5 16.85C3.35 16.9333 3.22917 17.05 3.1375 17.2C3.04583 17.35 3 17.5167 3 17.7V18.5ZM9 10.5C9.55 10.5 10.0208 10.3042 10.4125 9.9125C10.8042 9.52083 11 9.05 11 8.5C11 7.95 10.8042 7.47917 10.4125 7.0875C10.0208 6.69583 9.55 6.5 9 6.5C8.45 6.5 7.97917 6.69583 7.5875 7.0875C7.19583 7.47917 7 7.95 7 8.5C7 9.05 7.19583 9.52083 7.5875 9.9125C7.97917 10.3042 8.45 10.5 9 10.5Z" fill="#9F9EA1"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="MyUser">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_529" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_529)">
+                                            <path d="M12 12.5C10.9 12.5 9.95833 12.1083 9.175 11.325C8.39167 10.5417 8 9.6 8 8.5C8 7.4 8.39167 6.45833 9.175 5.675C9.95833 4.89167 10.9 4.5 12 4.5C13.1 4.5 14.0417 4.89167 14.825 5.675C15.6083 6.45833 16 7.4 16 8.5C16 9.6 15.6083 10.5417 14.825 11.325C14.0417 12.1083 13.1 12.5 12 12.5ZM4 20.5V17.7C4 17.1333 4.14583 16.6125 4.4375 16.1375C4.72917 15.6625 5.11667 15.3 5.6 15.05C6.63333 14.5333 7.68333 14.1458 8.75 13.8875C9.81667 13.6292 10.9 13.5 12 13.5C13.1 13.5 14.1833 13.6292 15.25 13.8875C16.3167 14.1458 17.3667 14.5333 18.4 15.05C18.8833 15.3 19.2708 15.6625 19.5625 16.1375C19.8542 16.6125 20 17.1333 20 17.7V20.5H4ZM6 18.5H18V17.7C18 17.5167 17.9542 17.35 17.8625 17.2C17.7708 17.05 17.65 16.9333 17.5 16.85C16.6 16.4 15.6917 16.0625 14.775 15.8375C13.8583 15.6125 12.9333 15.5 12 15.5C11.0667 15.5 10.1417 15.6125 9.225 15.8375C8.30833 16.0625 7.4 16.4 6.5 16.85C6.35 16.9333 6.22917 17.05 6.1375 17.2C6.04583 17.35 6 17.5167 6 17.7V18.5ZM12 10.5C12.55 10.5 13.0208 10.3042 13.4125 9.9125C13.8042 9.52083 14 9.05 14 8.5C14 7.95 13.8042 7.47917 13.4125 7.0875C13.0208 6.69583 12.55 6.5 12 6.5C11.45 6.5 10.9792 6.69583 10.5875 7.0875C10.1958 7.47917 10 7.95 10 8.5C10 9.05 10.1958 9.52083 10.5875 9.9125C10.9792 10.3042 11.45 10.5 12 10.5Z" fill="#656466"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="Users">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_655" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_655)">
+                                            <path d="M1 20.5V17.7C1 17.1333 1.14583 16.6125 1.4375 16.1375C1.72917 15.6625 2.11667 15.3 2.6 15.05C3.63333 14.5333 4.68333 14.1458 5.75 13.8875C6.81667 13.6292 7.9 13.5 9 13.5C10.1 13.5 11.1833 13.6292 12.25 13.8875C13.3167 14.1458 14.3667 14.5333 15.4 15.05C15.8833 15.3 16.2708 15.6625 16.5625 16.1375C16.8542 16.6125 17 17.1333 17 17.7V20.5H1ZM19 20.5V17.5C19 16.7667 18.7958 16.0625 18.3875 15.3875C17.9792 14.7125 17.4 14.1333 16.65 13.65C17.5 13.75 18.3 13.9208 19.05 14.1625C19.8 14.4042 20.5 14.7 21.15 15.05C21.75 15.3833 22.2083 15.7542 22.525 16.1625C22.8417 16.5708 23 17.0167 23 17.5V20.5H19ZM9 12.5C7.9 12.5 6.95833 12.1083 6.175 11.325C5.39167 10.5417 5 9.6 5 8.5C5 7.4 5.39167 6.45833 6.175 5.675C6.95833 4.89167 7.9 4.5 9 4.5C10.1 4.5 11.0417 4.89167 11.825 5.675C12.6083 6.45833 13 7.4 13 8.5C13 9.6 12.6083 10.5417 11.825 11.325C11.0417 12.1083 10.1 12.5 9 12.5ZM19 8.5C19 9.6 18.6083 10.5417 17.825 11.325C17.0417 12.1083 16.1 12.5 15 12.5C14.8167 12.5 14.5833 12.4792 14.3 12.4375C14.0167 12.3958 13.7833 12.35 13.6 12.3C14.05 11.7667 14.3958 11.175 14.6375 10.525C14.8792 9.875 15 9.2 15 8.5C15 7.8 14.8792 7.125 14.6375 6.475C14.3958 5.825 14.05 5.23333 13.6 4.7C13.8333 4.61667 14.0667 4.5625 14.3 4.5375C14.5333 4.5125 14.7667 4.5 15 4.5C16.1 4.5 17.0417 4.89167 17.825 5.675C18.6083 6.45833 19 7.4 19 8.5ZM3 18.5H15V17.7C15 17.5167 14.9542 17.35 14.8625 17.2C14.7708 17.05 14.65 16.9333 14.5 16.85C13.6 16.4 12.6917 16.0625 11.775 15.8375C10.8583 15.6125 9.93333 15.5 9 15.5C8.06667 15.5 7.14167 15.6125 6.225 15.8375C5.30833 16.0625 4.4 16.4 3.5 16.85C3.35 16.9333 3.22917 17.05 3.1375 17.2C3.04583 17.35 3 17.5167 3 17.7V18.5ZM9 10.5C9.55 10.5 10.0208 10.3042 10.4125 9.9125C10.8042 9.52083 11 9.05 11 8.5C11 7.95 10.8042 7.47917 10.4125 7.0875C10.0208 6.69583 9.55 6.5 9 6.5C8.45 6.5 7.97917 6.69583 7.5875 7.0875C7.19583 7.47917 7 7.95 7 8.5C7 9.05 7.19583 9.52083 7.5875 9.9125C7.97917 10.3042 8.45 10.5 9 10.5Z" fill="#9F9EA1"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="NewChannel">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_709" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_709)">
+                                            <path d="M8 21.5V19.5H4C3.45 19.5 2.97917 19.3042 2.5875 18.9125C2.19583 18.5208 2 18.05 2 17.5V5.5C2 4.95 2.19583 4.47917 2.5875 4.0875C2.97917 3.69583 3.45 3.5 4 3.5H20C20.55 3.5 21.0208 3.69583 21.4125 4.0875C21.8042 4.47917 22 4.95 22 5.5V8.5H20V5.5H4V17.5H20V12.5H12.8L14.65 14.35L13.25 15.75L9 11.5L13.25 7.25L14.65 8.65L12.8 10.5H20C20.55 10.5 21.0208 10.6958 21.4125 11.0875C21.8042 11.4792 22 11.95 22 12.5V17.5C22 18.05 21.8042 18.5208 21.4125 18.9125C21.0208 19.3042 20.55 19.5 20 19.5H16V21.5H8Z" fill="#9F9EA1"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="MyChannels">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_765" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_765)">
+                                            <path d="M8 15.5H16V14.95C16 14.2 15.6333 13.6042 14.9 13.1625C14.1667 12.7208 13.2 12.5 12 12.5C10.8 12.5 9.83333 12.7208 9.1 13.1625C8.36667 13.6042 8 14.2 8 14.95V15.5ZM12 11.5C12.55 11.5 13.0208 11.3042 13.4125 10.9125C13.8042 10.5208 14 10.05 14 9.5C14 8.95 13.8042 8.47917 13.4125 8.0875C13.0208 7.69583 12.55 7.5 12 7.5C11.45 7.5 10.9792 7.69583 10.5875 8.0875C10.1958 8.47917 10 8.95 10 9.5C10 10.05 10.1958 10.5208 10.5875 10.9125C10.9792 11.3042 11.45 11.5 12 11.5ZM8 21.5V19.5H4C3.45 19.5 2.97917 19.3042 2.5875 18.9125C2.19583 18.5208 2 18.05 2 17.5V5.5C2 4.95 2.19583 4.47917 2.5875 4.0875C2.97917 3.69583 3.45 3.5 4 3.5H20C20.55 3.5 21.0208 3.69583 21.4125 4.0875C21.8042 4.47917 22 4.95 22 5.5V17.5C22 18.05 21.8042 18.5208 21.4125 18.9125C21.0208 19.3042 20.55 19.5 20 19.5H16V21.5H8ZM4 17.5H20V5.5H4V17.5Z" fill="#9F9EA1"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="Channels">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_754" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_754)">
+                                            <path d="M9.5 16L16.5 11.5L9.5 7V16ZM8 21.5V19.5H4C3.45 19.5 2.97917 19.3042 2.5875 18.9125C2.19583 18.5208 2 18.05 2 17.5V5.5C2 4.95 2.19583 4.47917 2.5875 4.0875C2.97917 3.69583 3.45 3.5 4 3.5H20C20.55 3.5 21.0208 3.69583 21.4125 4.0875C21.8042 4.47917 22 4.95 22 5.5V17.5C22 18.05 21.8042 18.5208 21.4125 18.9125C21.0208 19.3042 20.55 19.5 20 19.5H16V21.5H8ZM4 17.5H20V5.5H4V17.5Z" fill="#9F9EA1"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="History">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <mask id="mask0_79_88" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                            <rect y="0.5" width="24" height="24" fill="#D9D9D9"></rect>
+                                        </mask>
+                                        <g mask="url(#mask0_79_88)">
+                                            <path d="M12 21.5C9.7 21.5 7.69583 20.7375 5.9875 19.2125C4.27917 17.6875 3.3 15.7833 3.05 13.5H5.1C5.33333 15.2333 6.10417 16.6667 7.4125 17.8C8.72083 18.9333 10.25 19.5 12 19.5C13.95 19.5 15.6042 18.8208 16.9625 17.4625C18.3208 16.1042 19 14.45 19 12.5C19 10.55 18.3208 8.89583 16.9625 7.5375C15.6042 6.17917 13.95 5.5 12 5.5C10.85 5.5 9.775 5.76667 8.775 6.3C7.775 6.83333 6.93333 7.56667 6.25 8.5H9V10.5H3V4.5H5V6.85C5.85 5.78333 6.8875 4.95833 8.1125 4.375C9.3375 3.79167 10.6333 3.5 12 3.5C13.25 3.5 14.4208 3.7375 15.5125 4.2125C16.6042 4.6875 17.5542 5.32917 18.3625 6.1375C19.1708 6.94583 19.8125 7.89583 20.2875 8.9875C20.7625 10.0792 21 11.25 21 12.5C21 13.75 20.7625 14.9208 20.2875 16.0125C19.8125 17.1042 19.1708 18.0542 18.3625 18.8625C17.5542 19.6708 16.6042 20.3125 15.5125 20.7875C14.4208 21.2625 13.25 21.5 12 21.5ZM14.8 16.7L11 12.9V7.5H13V12.1L16.2 15.3L14.8 16.7Z" fill="#9F9EA1"></path>
+                                        </g>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                        <control attr="ClearHistory">
+                            <li class="sidebar-nav__item">
+                                <a href="@ClickUrl" class="sidebar-nav__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewbox="0 0 24 25" fill="none">
+                                        <g clip-path="url(#clip0_79_162)">
+                                            <path d="M6 19.5C6 20.6 6.9 21.5 8 21.5H16C17.1 21.5 18 20.6 18 19.5V7.5H6V19.5ZM8 9.5H16V19.5H8V9.5ZM15.5 4.5L14.5 3.5H9.5L8.5 4.5H5V6.5H19V4.5H15.5Z" fill="#9F9EA1"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_79_162">
+                                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    @Value
+                                </a>
+                            </li>
+                        </control>
+                    </ul>
+                </nav>
+            </aside>
+            <main>
+                <section class="videos">
+                    <div class="new videos__container">
+                        <h2 class="videos__title">New Videos</h2>
+                        <div class="swiper swiper-new videos__list-wrap">
+                            <ul class="swiper-wrapper videos__list">
+                                <control attr="NewVideos" repeatable="true">
+                                    <li class="swiper-slide video videos-item">
+                                        <div class="video__img-wrap">
+                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                <source src="@BaseFilesUrl/@Video.Value" />
+                                            </video>
+                                        </div>
+                                        <div class="video__desc">
+                                            <a href="@EditRowUrl"><h3 class="video__title">@Name.Value</h3></a>
+                                            <div class="video__data">
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                                        <path d="M8 3.5C4.36364 3.5 1.25818 5.40197 0 8.08674C1.25818 10.7715 4.36364 12.6735 8 12.6735C11.6364 12.6735 14.7418 10.7715 16 8.08674C14.7418 5.40197 11.6364 3.5 8 3.5ZM8 11.1446C5.99273 11.1446 4.36364 9.77465 4.36364 8.08674C4.36364 6.39882 5.99273 5.02891 8 5.02891C10.0073 5.02891 11.6364 6.39882 11.6364 8.08674C11.6364 9.77465 10.0073 11.1446 8 11.1446ZM8 6.25204C6.79273 6.25204 5.81818 7.07154 5.81818 8.08674C5.81818 9.10193 6.79273 9.92143 8 9.92143C9.20727 9.92143 10.1818 9.10193 10.1818 8.08674C10.1818 7.07154 9.20727 6.25204 8 6.25204Z" fill="#9F9EA1"></path>
+                                                    </svg>
+                                                    @CountViews.Value
+                                                </p>
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                                        <g clip-path="url(#clip0_79_42)">
+                                                            <path d="M1.33325 13.8334H2.66659C3.03325 13.8334 3.33325 13.5334 3.33325 13.1667V7.16671C3.33325 6.80004 3.03325 6.50004 2.66659 6.50004H1.33325V13.8334ZM14.5533 9.08671C14.6266 8.92004 14.6666 8.74004 14.6666 8.55337V7.83337C14.6666 7.10004 14.0666 6.50004 13.3333 6.50004H9.66658L10.2799 3.40004C10.3133 3.25337 10.2933 3.09337 10.2266 2.96004C10.0733 2.66004 9.87992 2.38671 9.63992 2.14671L9.33325 1.83337L5.05992 6.10671C4.80659 6.36004 4.66658 6.70004 4.66658 7.05337V12.28C4.66658 13.1334 5.36659 13.8334 6.22658 13.8334H11.6333C12.0999 13.8334 12.5399 13.5867 12.7799 13.1867L14.5533 9.08671Z" fill="#9F9EA1"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_79_42">
+                                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    @CountLikes.Value
+                                                </p>
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewbox="0 0 13 13" fill="none">
+                                                        <path d="M11.7 0H1.3C0.585 0 0 0.585 0 1.3V9.1C0 9.815 0.585 10.4 1.3 10.4H10.4L13 13V1.3C13 0.585 12.415 0 11.7 0ZM10.4 7.8H2.6V6.5H10.4V7.8ZM10.4 5.85H2.6V4.55H10.4V5.85ZM10.4 3.9H2.6V2.6H10.4V3.9Z" fill="#9F9EA1"></path>
+                                                    </svg>
+                                                    @CountComments.Value
+                                                </p>
+                                            </div>
+                                            <p class="video__date">
+                                                @OnDateLabel.Value
+                                            </p>
+                                        </div>
+                                    </li>
+                                </control>
+                            </ul>
+                        </div>
+                        <button class="swiper__btn swiper-btn-prev" type="button" data-action="prev" aria-label="To prev slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 40 40" fill="none">
+                                <g opacity="0.8">
+                                    <path d="M19.9999 36.6667C29.2047 36.6667 36.6666 29.2048 36.6666 20C36.6666 10.7953 29.2047 3.33337 19.9999 3.33337C10.7952 3.33337 3.33325 10.7953 3.33325 20C3.33325 29.2048 10.7952 36.6667 19.9999 36.6667Z" fill="#E8E2F4"></path>
+                                    <path d="M19.9999 13.3334L13.3333 20L19.9999 26.6667" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M26.6666 20H13.3333" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="swiper__btn swiper-btn-next" type="button" data-action="next" aria-label="To next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 40 40" fill="none">
+                                <g opacity="0.8">
+                                    <path d="M19.9999 36.6667C29.2047 36.6667 36.6666 29.2048 36.6666 20C36.6666 10.7953 29.2047 3.33337 19.9999 3.33337C10.7952 3.33337 3.33325 10.7953 3.33325 20C3.33325 29.2048 10.7952 36.6667 19.9999 36.6667Z" fill="#E8E2F4"></path>
+                                    <path d="M20 26.6667L26.6667 20L20 13.3334" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M13.3333 20H26.6666" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="subscription videos__container">
+                        <h2 class="videos__title">Subscriptions</h2>
+                        <div class="swiper swiper-subscription videos__list-wrap">
+                            <ul class="swiper-wrapper videos__list">
+                                <control attr="Subscribes" repeatable="true">
+                                    <li class="swiper-slide video videos-item">
+                                        <div class="video__img-wrap">
+                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                <source src="@BaseFilesUrl/Dashboard/@Video.Value" />
+                                            </video>
+                                        </div>
+                                        <div class="video__desc">
+                                            <a href="@EditRowUrl"><h3 class="video__title">@Name.Value</h3></a>
+                                            <div class="video__data">
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                                        <path d="M8 3.5C4.36364 3.5 1.25818 5.40197 0 8.08674C1.25818 10.7715 4.36364 12.6735 8 12.6735C11.6364 12.6735 14.7418 10.7715 16 8.08674C14.7418 5.40197 11.6364 3.5 8 3.5ZM8 11.1446C5.99273 11.1446 4.36364 9.77465 4.36364 8.08674C4.36364 6.39882 5.99273 5.02891 8 5.02891C10.0073 5.02891 11.6364 6.39882 11.6364 8.08674C11.6364 9.77465 10.0073 11.1446 8 11.1446ZM8 6.25204C6.79273 6.25204 5.81818 7.07154 5.81818 8.08674C5.81818 9.10193 6.79273 9.92143 8 9.92143C9.20727 9.92143 10.1818 9.10193 10.1818 8.08674C10.1818 7.07154 9.20727 6.25204 8 6.25204Z" fill="#9F9EA1"></path>
+                                                    </svg>
+                                                    @CountViews.Value
+                                                </p>
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                                        <g clip-path="url(#clip0_79_42)">
+                                                            <path d="M1.33325 13.8334H2.66659C3.03325 13.8334 3.33325 13.5334 3.33325 13.1667V7.16671C3.33325 6.80004 3.03325 6.50004 2.66659 6.50004H1.33325V13.8334ZM14.5533 9.08671C14.6266 8.92004 14.6666 8.74004 14.6666 8.55337V7.83337C14.6666 7.10004 14.0666 6.50004 13.3333 6.50004H9.66658L10.2799 3.40004C10.3133 3.25337 10.2933 3.09337 10.2266 2.96004C10.0733 2.66004 9.87992 2.38671 9.63992 2.14671L9.33325 1.83337L5.05992 6.10671C4.80659 6.36004 4.66658 6.70004 4.66658 7.05337V12.28C4.66658 13.1334 5.36659 13.8334 6.22658 13.8334H11.6333C12.0999 13.8334 12.5399 13.5867 12.7799 13.1867L14.5533 9.08671Z" fill="#9F9EA1"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_79_42">
+                                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    @CountLikes.Value
+                                                </p>
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewbox="0 0 13 13" fill="none">
+                                                        <path d="M11.7 0H1.3C0.585 0 0 0.585 0 1.3V9.1C0 9.815 0.585 10.4 1.3 10.4H10.4L13 13V1.3C13 0.585 12.415 0 11.7 0ZM10.4 7.8H2.6V6.5H10.4V7.8ZM10.4 5.85H2.6V4.55H10.4V5.85ZM10.4 3.9H2.6V2.6H10.4V3.9Z" fill="#9F9EA1"></path>
+                                                    </svg>
+                                                    @CountComments.Value
+                                                </p>
+                                            </div>
+                                            <p class="video__date">@OnDateLabel.Value</p>
+                                        </div>
+                                    </li>
+                                </control>
+                            </ul>
+                        </div>
+                        <button class="swiper__btn swiper-btn-prev" type="button" data-action="prev" aria-label="To prev slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 40 40" fill="none">
+                                <g opacity="0.8">
+                                    <path d="M19.9999 36.6667C29.2047 36.6667 36.6666 29.2048 36.6666 20C36.6666 10.7953 29.2047 3.33337 19.9999 3.33337C10.7952 3.33337 3.33325 10.7953 3.33325 20C3.33325 29.2048 10.7952 36.6667 19.9999 36.6667Z" fill="#E8E2F4"></path>
+                                    <path d="M19.9999 13.3334L13.3333 20L19.9999 26.6667" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M26.6666 20H13.3333" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="swiper__btn swiper-btn-next" type="button" data-action="next" aria-label="To next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 40 40" fill="none">
+                                <g opacity="0.8">
+                                    <path d="M19.9999 36.6667C29.2047 36.6667 36.6666 29.2048 36.6666 20C36.6666 10.7953 29.2047 3.33337 19.9999 3.33337C10.7952 3.33337 3.33325 10.7953 3.33325 20C3.33325 29.2048 10.7952 36.6667 19.9999 36.6667Z" fill="#E8E2F4"></path>
+                                    <path d="M20 26.6667L26.6667 20L20 13.3334" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M13.3333 20H26.6666" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="recommendation videos__container">
+                        <h2 class="videos__title">Recommendations</h2>
+                        <div class="swiper swiper-recommendation videos__list-wrap">
+                            <ul class="swiper-wrapper videos__list">
+                                <control attr="Recommendations" repeatable="true">
+                                    <li class="swiper-slide video videos-item">
+                                        <div class="video__img-wrap">
+                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                <source src="@BaseFilesUrl/Dashboard/@Video.Value" />
+                                            </video>
+                                        </div>
+                                        <div class="video__desc">
+                                            <a href="@EditRowUrl"><h3 class="video__title">@Name.Value</h3></a>
+                                            <div class="video__data">
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                                        <path d="M8 3.5C4.36364 3.5 1.25818 5.40197 0 8.08674C1.25818 10.7715 4.36364 12.6735 8 12.6735C11.6364 12.6735 14.7418 10.7715 16 8.08674C14.7418 5.40197 11.6364 3.5 8 3.5ZM8 11.1446C5.99273 11.1446 4.36364 9.77465 4.36364 8.08674C4.36364 6.39882 5.99273 5.02891 8 5.02891C10.0073 5.02891 11.6364 6.39882 11.6364 8.08674C11.6364 9.77465 10.0073 11.1446 8 11.1446ZM8 6.25204C6.79273 6.25204 5.81818 7.07154 5.81818 8.08674C5.81818 9.10193 6.79273 9.92143 8 9.92143C9.20727 9.92143 10.1818 9.10193 10.1818 8.08674C10.1818 7.07154 9.20727 6.25204 8 6.25204Z" fill="#9F9EA1"></path>
+                                                    </svg>
+                                                    @CountViews.Value
+                                                </p>
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                                        <g clip-path="url(#clip0_79_42)">
+                                                            <path d="M1.33325 13.8334H2.66659C3.03325 13.8334 3.33325 13.5334 3.33325 13.1667V7.16671C3.33325 6.80004 3.03325 6.50004 2.66659 6.50004H1.33325V13.8334ZM14.5533 9.08671C14.6266 8.92004 14.6666 8.74004 14.6666 8.55337V7.83337C14.6666 7.10004 14.0666 6.50004 13.3333 6.50004H9.66658L10.2799 3.40004C10.3133 3.25337 10.2933 3.09337 10.2266 2.96004C10.0733 2.66004 9.87992 2.38671 9.63992 2.14671L9.33325 1.83337L5.05992 6.10671C4.80659 6.36004 4.66658 6.70004 4.66658 7.05337V12.28C4.66658 13.1334 5.36659 13.8334 6.22658 13.8334H11.6333C12.0999 13.8334 12.5399 13.5867 12.7799 13.1867L14.5533 9.08671Z" fill="#9F9EA1"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_79_42">
+                                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    @CountLikes.Value
+                                                </p>
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewbox="0 0 13 13" fill="none">
+                                                        <path d="M11.7 0H1.3C0.585 0 0 0.585 0 1.3V9.1C0 9.815 0.585 10.4 1.3 10.4H10.4L13 13V1.3C13 0.585 12.415 0 11.7 0ZM10.4 7.8H2.6V6.5H10.4V7.8ZM10.4 5.85H2.6V4.55H10.4V5.85ZM10.4 3.9H2.6V2.6H10.4V3.9Z" fill="#9F9EA1"></path>
+                                                    </svg>
+                                                    @CountComments.Value
+                                                </p>
+                                            </div>
+                                            <p class="video__date">@OnDateLabel.Value</p>
+                                        </div>
+                                    </li>
+                                </control>
+                            </ul>
+                        </div>
+                        <button class="swiper__btn swiper-btn-prev" type="button" data-action="prev" aria-label="To prev slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 40 40" fill="none">
+                                <g opacity="0.8">
+                                    <path d="M19.9999 36.6667C29.2047 36.6667 36.6666 29.2048 36.6666 20C36.6666 10.7953 29.2047 3.33337 19.9999 3.33337C10.7952 3.33337 3.33325 10.7953 3.33325 20C3.33325 29.2048 10.7952 36.6667 19.9999 36.6667Z" fill="#E8E2F4"></path>
+                                    <path d="M19.9999 13.3334L13.3333 20L19.9999 26.6667" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M26.6666 20H13.3333" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="swiper__btn swiper-btn-next" type="button" data-action="next" aria-label="To next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 40 40" fill="none">
+                                <g opacity="0.8">
+                                    <path d="M19.9999 36.6667C29.2047 36.6667 36.6666 29.2048 36.6666 20C36.6666 10.7953 29.2047 3.33337 19.9999 3.33337C10.7952 3.33337 3.33325 10.7953 3.33325 20C3.33325 29.2048 10.7952 36.6667 19.9999 36.6667Z" fill="#E8E2F4"></path>
+                                    <path d="M20 26.6667L26.6667 20L20 13.3334" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M13.3333 20H26.6666" stroke="#5417D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="loader">
+            <div class="backdrop loader__backdrop">
+                <div class="lds-roller loader__content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="@BaseFilesUrl/Dashboard/index.b2fc6878.js"></script>
+    </form>
+</body>
+</html>
