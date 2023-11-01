@@ -1,5 +1,5 @@
 {
-  "Style": "Hide:Photo,Value,Password,History,Subscribes,Capcha,RepeatPassword,UID;Add:false;HasLabel:true;Type:Link",
+  "Style": "Hide:Photo,Avatar,Value,Password,History,Subscribes,Capcha,RepeatPassword,UID;Add:false;HasLabel:true;Type:Link",
   "Name": {
     "ReadOnly": true
   },
