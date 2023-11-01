@@ -208,15 +208,11 @@ namespace FractalPlatform.UTube
                     }
                 case "Avatar":
                     {
-                        if (!Context.User.IsGuest)
-                        {
-                            return DocsWhere("Users", "{'Name':@UserName}")
-                                   .Value("{'Photo':$}");
-                        }
-                        else
-                        {
-                            return "avatar.png";
-                        }
+                        return Context.User.Avatar;
+                    }
+                case "MyUserLabel":
+                    {
+                        return Context.User.Name.ToUpper().Substring(0, 2);
                     }
                 case "CountLikes": 
                     {

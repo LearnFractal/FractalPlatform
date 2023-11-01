@@ -35,7 +35,7 @@
         <input type="submit" id="btnDel" name="btn" value="Del" style="display:none" />
         <header class="header">
             <div class="container">
-                <a lang="en" href="/" class="link logo">UTube</a>
+                <a lang="en" href="@BaseUrl/@AppName" class="link logo">UTube</a>
                 <label class="header__search">
                     <control attr="">
                         <input @FilterText.TextBox type="search" placeholder="Search">
@@ -46,8 +46,8 @@
                         </button>
                     </control>
                 </label>
-                <control attr="MyUser">
-                    <button @Button class="header__btn">US</button>
+                <control attr="">
+                    <button @MyUser.Button alt="@UserName" class="header__btn">@MyUserLabel</button>
                 </control>
             </div>
         </header>
