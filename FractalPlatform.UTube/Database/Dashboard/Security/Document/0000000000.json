@@ -27,6 +27,13 @@
       ]
     }
   },
+  "MyUser": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
   "NewChannel": {
     "Disallow": {
       "Read": [

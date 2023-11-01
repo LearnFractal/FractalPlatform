@@ -46,7 +46,7 @@
                     </control>
                 </label>
                 <control attr="MyUser">
-                    <button @Button class="header__btn">MU</button>
+                    <button @Button class="header__btn">US</button>
                 </control>
             </div>
         </header>
@@ -110,7 +110,7 @@
                         <ul class="comments__list">
                             <control attr="Comments" repeatable="true">
                                 <li class="comments__item">
-                                    <img src="@BaseFilesUrl/@Avatar.Value" alt="@ector" width="48" height="48">
+                                    <img src="@BaseFilesUrl/@Avatar.Value" style="border-radius: 50%" alt="@ector" width="48" height="48">
                                     <div class="comments__desc">
                                         <span class="comments__user">@Who.Value</span> <span class="comments__date">@OnDate.Value</span>
                                         <p class="comments__text">@Text.Value</p>
