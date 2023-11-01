@@ -65,7 +65,12 @@ namespace FractalPlatform.UTube
                                        .ToList()
                                        .ToStorage();
 
-                subscribes = newVideos;
+                subscribes = allChannels.SelectMany(x => x.Videos)
+                                             .OrderByDescending(x => x.CountViews) //rate by views
+                                             .Skip(topVideos)
+                                             .Take(topVideos)                      //only first 5 videos
+                                             .ToList()
+                                             .ToStorage();
 
                 recommendations = allChannels.SelectMany(x => x.Videos)
                                              .OrderByDescending(x => x.CountViews) //rate by views
