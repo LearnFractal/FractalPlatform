@@ -35,7 +35,7 @@ namespace FractalPlatform.Deployment
                 return path;
             }
 
-            path = @$"..\{_deploymentPath}\{assemblyName}";
+            path = @$"..\{_deploymentPath}\Projects\{assemblyName}";
 
             if (Directory.Exists(path))
             {
@@ -58,7 +58,7 @@ namespace FractalPlatform.Deployment
                         return path;
                     }
 
-                    path = @$"..\{_deploymentPath}\{assemblyName}";
+                    path = @$"{_deploymentPath}\Projects\{assemblyName}";
 
                     if (Directory.Exists(path))
                     {
@@ -76,7 +76,7 @@ namespace FractalPlatform.Deployment
                         return path;
                     }
 
-                    path = @$"..\{_deploymentPath}\{assemblyName}\Database";
+                    path = @$"{_deploymentPath}\Projects\{assemblyName}\Database";
 
                     if (Directory.Exists(path))
                     {
@@ -94,7 +94,7 @@ namespace FractalPlatform.Deployment
                         return path;
                     }
 
-                    path = @$"..\{_deploymentPath}\{assemblyName}\Files";
+                    path = @$"{_deploymentPath}\Projects\{assemblyName}\Files";
 
                     if (Directory.Exists(path))
                     {
@@ -112,7 +112,7 @@ namespace FractalPlatform.Deployment
                         return path;
                     }
 
-                    path = @$"..\{_deploymentPath}\{assemblyName}\Layouts";
+                    path = @$"{_deploymentPath}\Projects\{assemblyName}\Layouts";
 
                     if (Directory.Exists(path))
                     {
