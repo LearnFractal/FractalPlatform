@@ -20,13 +20,6 @@
       ]
     }
   },
-  "MyUser": {
-    "Disallow": {
-      "Read": [
-        "Guest"
-      ]
-    }
-  },
   "Users": {
     "Disallow": {
       "Read": [

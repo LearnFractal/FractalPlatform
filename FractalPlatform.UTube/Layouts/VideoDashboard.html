@@ -55,7 +55,7 @@
                 <div class="container">
                     <control attr="">
                         <div>
-                            <video id="video" name="Video" class="movie-details__img" width="100%" height="100%" controls>
+                            <video id="video" name="Video" class="movie-details__img" width="100%" height="600" controls>
                                 <source src="@BaseFilesUrl/@Video.Value" />
                             </video>
                         </div>
@@ -98,12 +98,14 @@
                     </control>
                     <div class="comments__wrap">
                         <div class="comments__new">
-                            <a class="user__link" href="#">SN</a>
-                            <label>
-                                <control attr="">
+                            <control attr="">
+                                <a class="user__link" @MyUser.Link>
+                                    <img src="@BaseFilesUrl/@UserAvatar" style="border-radius: 50%" alt="user" width="48" height="48">
+                                </a>
+                                <label>
                                     <input type="text" @Comment.TextBox placeholder="Add a comment"> <button @NewComment.Button type="submit">Leave a comment</button>
-                                </control>
-                            </label>
+                                </label>
+                            </control>
                         </div>
                         <ul class="comments__list">
                             <control attr="Comments" repeatable="true">
