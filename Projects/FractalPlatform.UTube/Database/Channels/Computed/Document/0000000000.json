@@ -1,7 +1,4 @@
 {
-  "OnDate": {
-    "Formula": "@Now"
-  },
   "Videos": [
     {
       "CountLikes": {
