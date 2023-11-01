@@ -3,21 +3,25 @@
    "IsLocked": false,
    "Name": "Fractal",
    "NewVideo": "New Video",
-   "OnDate": "09/14/2023 08:11:34",
+   "OnDate": "10/31/2023 19:39:34",
    "Owner": "Bazist",
    "Photo": "fractal.png",
    "Subscribe": "Subscribe",
    "Unsubscribe": "Unsubscribe",
    "Tags": [
-      "Bike"
+      "Fractal",
+      "LowCode"
    ],
    "Videos": [
       {
-         "CountViews": 26,
+         "CountComments": "2",
+         "CountLikes": "2",
+         "CountViews": 41,
          "Description": "Intro video",
          "Name": "Intro",
          "NewComment": "New Comment",
          "OnDate": "2023/09/14",
+         "OnDateLabel": "1 months ago",
          "UID": "111",
          "Video": "FractalPlatformIntroRU.mp4",
          "Comments": [
@@ -26,6 +30,12 @@
                "OnDate": "09/14/2023 08:11:44",
                "Text": "First test comment under Rebeca",
                "Who": "Rebeca"
+            },
+            {
+               "Avatar": "avatar.png",
+               "OnDate": "10/21/2023 11:16:53",
+               "Text": "Second long comment",
+               "Who": "Guest"
             }
          ],
          "Likes": [

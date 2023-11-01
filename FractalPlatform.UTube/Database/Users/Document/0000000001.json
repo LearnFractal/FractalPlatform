@@ -1,15 +1,23 @@
 ﻿{
-  "Age": 21,
-  "Gender": "Male",
-  "Language": "EN",
-  "Name": "Bazist",
-  "Password": "7DA55F449235BDC18953A4F8221CFDA8",
-  "Photo": "bazist.png",
-  "Roles": [
-    "User",
-    "Admin"
-  ],
-  "Subscribes": [
-    "Music"
-  ]
+   "Age": 21,
+   "Avatar": "bazist.png",
+   "Gender": "Male",
+   "Language": "EN",
+   "Name": "Bazist",
+   "Password": "7DA55F449235BDC18953A4F8221CFDA8",
+   "History": [
+      {
+         "Description": "Darnitsky bridge route",
+         "Name": "Bridge",
+         "OnDate": "09/17/2023 10:38:09",
+         "UID": "DEE223D2-5C49-42C6-A819-5C7E5F20A21B"
+      }
+   ],
+   "Roles": [
+      "Admin",
+      "User"
+   ],
+   "Subscribes": [
+      "Music"
+   ]
 }

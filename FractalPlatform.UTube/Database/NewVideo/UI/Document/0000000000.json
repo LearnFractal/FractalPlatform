@@ -18,6 +18,15 @@
   "CountViews": {
     "Visible": false
   },
+  "CountLikes": {
+    "Visible": false
+  },
+  "CountComments": {
+    "Visible": false
+  },
+  "OnDateLabel": {
+    "Visible": false
+  },
   "NewComment": {
     "Visible": false
   }

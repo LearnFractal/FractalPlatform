@@ -4,7 +4,7 @@
   "Age": { "Index": 3 },
   "Gender": { "Index": 4 },
   "Language": { "Index": 5 },
-  "Photo": { "Index": 6 },
+  "Avatar": { "Index": 6 },
   "History": [
     {
       "Name": {

@@ -1,7 +1,10 @@
+using System;
 using System.Linq;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Common.Enums;
+using FractalPlatform.Database.Dimensions.Filter;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 
@@ -9,13 +12,22 @@ namespace FractalPlatform.UTube
 {
     public class UTubeApplication : DashboardApplication
     {
-        private void Dashboard()
+        private void Dashboard(string filter = "")
         {
             CloseIfOpenedForm("Dashboard");
 
-            const int topVideos = 4;
+            const int topVideos = 8;
 
-            var allChannels = DocsWhere("Channels", "{'IsLocked':false}").Select<ChannelInfo>();
+            var collection = DocsWhere("Channels", "{'IsLocked':false}").ToCollection();
+
+            var dimension = (FilterDimension)collection.GetDimension(DimensionType.Filter);
+            dimension.SetFilter(Context, filter);
+
+            var allChannels = collection.GetAll().Select<ChannelInfo>();
+
+            Storage newVideos;
+            Storage subscribes;
+            Storage recommendations;
 
             if (!Context.User.IsGuest)
             {
@@ -23,61 +35,60 @@ namespace FractalPlatform.UTube
 
                 var history = DocsWhere("Users", "{'Name':@UserName}").Values("{'History':[{'UID':$}]}");
 
-                var subscribes = allChannels.Where(x => subNames.Contains(x.Name)) //only my subscribes
-                                            .SelectMany(x => x.Videos)
-                                            .Where(x => !history.Contains(x.UID)) //not in my history
-                                            .OrderByDescending(x => x.CountViews) //rate by views
-                                            .ToStorage();
+                newVideos = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscribes
+                                       .SelectMany(x => x.Videos)
+                                       .Where(x => !history.Contains(x.UID))  //not in my history
+                                       .OrderByDescending(x => x.OnDate)      //only fresh videos
+                                       .Take(topVideos)                       //first 5 fresh videos
+                                       .ToList()
+                                       .ToStorage();
 
-                var newVideos = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscribes
-                                           .SelectMany(x => x.Videos)
-                                           .Where(x => !history.Contains(x.UID))  //not in my history
-                                           .OrderByDescending(x => x.OnDate)      //only fresh videos
-                                           .Take(topVideos)                       //first 5 fresh videos
-                                           .ToList()
-                                           .ToStorage();
+                subscribes = allChannels.Where(x => subNames.Contains(x.Name)) //only my subscribes
+                                        .SelectMany(x => x.Videos)
+                                        .Where(x => !history.Contains(x.UID)) //not in my history
+                                        .OrderByDescending(x => x.CountViews) //rate by views
+                                        .ToStorage();
 
-                var recommendations = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscribes
-                                                 .SelectMany(x => x.Videos)
-                                                 .Where(x => !history.Contains(x.UID)) //not in my history
-                                                 .OrderByDescending(x => x.CountViews) //rate by views
-                                                 .Take(topVideos) //only first 5 videos
-                                                 .ToList()
-                                                 .ToStorage();
+                recommendations = allChannels.Where(x => !subNames.Contains(x.Name)) //not in my subscribes
+                                             .SelectMany(x => x.Videos)
+                                             .Where(x => !history.Contains(x.UID)) //not in my history
+                                             .OrderByDescending(x => x.CountViews) //rate by views
+                                             .Take(topVideos) //only first 5 videos
+                                             .ToList()
+                                             .ToStorage();
+            }
+            else
+            {
+                newVideos = allChannels.SelectMany(x => x.Videos)
+                                       .OrderByDescending(x => x.OnDate) //only fresh videos
+                                       .Take(topVideos)                  //first 10 fresh videos
+                                       .ToList()
+                                       .ToStorage();
 
-                FirstDocOf("Dashboard")
+                subscribes = allChannels.SelectMany(x => x.Videos)
+                                        .OrderByDescending(x => x.CountViews) //rate by views
+                                        .Skip(topVideos)                      //only first 5 videos
+                                        .Take(topVideos)
+                                        .ToList()
+                                        .ToStorage();
+
+                recommendations = allChannels.SelectMany(x => x.Videos)
+                                             .OrderByDescending(x => x.CountViews) //rate by views
+                                             .Take(topVideos)                      //only first 5 videos
+                                             .ToList()
+                                             .ToStorage();
+            }
+
+            FirstDocOf("Dashboard")
                       .ToCollection()
                       .DeleteByParent("NewVideos")
                       .DeleteByParent("Subscribes")
                       .DeleteByParent("Recommendations")
+                      .ExtendDocument(DQL("{'FilterText':@Filter}", filter))
                       .MergeToArrayPath(newVideos, "NewVideos")
                       .MergeToArrayPath(subscribes, "Subscribes")
                       .MergeToArrayPath(recommendations, "Recommendations")
                       .OpenForm();
-            }
-            else
-            {
-                var newVideos = allChannels.SelectMany(x => x.Videos)
-                                           .OrderByDescending(x => x.OnDate) //only fresh videos
-                                           .Take(topVideos)                  //first 10 fresh videos
-                                           .ToList()
-                                           .ToStorage();
-
-                var recommendations = allChannels.SelectMany(x => x.Videos)
-                                                 .OrderByDescending(x => x.CountViews) //rate by views
-                                                 .Take(topVideos)                      //only first 5 videos
-                                                 .ToList()
-                                                 .ToStorage();
-
-                FirstDocOf("Dashboard")
-                      .ToCollection()
-                      .DeleteByParent("NewVideos")
-                      .DeleteByParent("Subscribes")
-                      .DeleteByParent("Recommendations")
-                      .MergeToArrayPath(newVideos, "NewVideos")
-                      .MergeToArrayPath(recommendations, "Recommendations")
-                      .OpenForm();
-            }
         }
 
         public override void OnLogin(FormResult result)
@@ -92,6 +103,8 @@ namespace FractalPlatform.UTube
 
         private void OpenVideo(string uid)
         {
+            CloseIfOpenedForm("VideoDashboard");
+
             if (!Context.User.IsGuest)
             {
                 if (!DocsWhere("Users", "{'Name':@UserName,'History':[Any,{'UID':@UID}]}", uid)
@@ -110,8 +123,15 @@ namespace FractalPlatform.UTube
             DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
             .Update("{'Videos':[{'CountViews':Add(1)}]}");
 
-            DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
-            .OpenForm("{'Videos':[$]}", result => Dashboard());
+            var query = DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid);
+            var channel = query.ToStorage("{'Name':$,'Photo':$}");
+            var video = query.ToStorage("{'Videos':[!$]}");
+            
+            FirstDocOf("VideoDashboard")
+                .ToCollection()
+                .MergeToPath(video)
+                .MergeToPath(channel, "Channel")
+                .OpenForm(result => Dashboard());
         }
 
         public override bool OnOpenForm(FormInfo formInfo)
@@ -198,6 +218,25 @@ namespace FractalPlatform.UTube
                             return "avatar.png";
                         }
                     }
+                case "CountLikes": 
+                    {
+                        return DocsWhere("Channels", computedInfo.AttrPath).Count("{'Videos':[{'Likes':[$]}]}") - 1;
+                    }
+                case "CountComments":
+                    {
+                        return DocsWhere("Channels", computedInfo.AttrPath).Count("{'Videos':[{'Comments':[{'Who':$}]}]}");
+                    }
+                case "OnDateLabel":
+                    var dateAgo = DateTime.Now.Subtract(computedInfo.Collection
+                                                                    .GetWhere(computedInfo.AttrPath)
+                                                                    .DateTimeValue("{'Videos':[{'OnDate':$}]}"));
+
+                    if (dateAgo.Days / 365 > 0) return $"{dateAgo.Days / 365} years ago";
+                    if (dateAgo.Days / 30 > 0) return $"{dateAgo.Days / 30} months ago";
+                    if (dateAgo.Days > 0) return $"{dateAgo.Days} days ago";
+                    if (dateAgo.Hours > 0) return $"{dateAgo.Hours} hours ago";
+                    if (dateAgo.Minutes > 0) return $"{dateAgo.Minutes} minutes ago";
+                    else return $"{dateAgo.Seconds} seconds ago";
                 default:
                     {
                         return base.OnComputedDimension(computedInfo);
@@ -362,19 +401,36 @@ namespace FractalPlatform.UTube
                     }
                 case "NewComment":
                     {
-                        FirstDocOf("NewComment")
-                              .OpenForm(result =>
-                              {
-                                  if (result.Result)
-                                  {
-                                      var json = result.Collection.ToJson();
+                        var uid = eventInfo.Collection.FindFirstValue("UID");
+                        var comment = eventInfo.Collection.FindFirstValue("Comment");
 
-                                      DocsWhere("Channels", eventInfo.AttrPath)
-                                      .Update("{'Videos':[{'Comments':[Add,@Comment]}]}", json);
+                        DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
+                            .Update("{'Videos':[{'Comments':[Add,{'Who':@UserName,'OnDate':@Now,'Avatar':@Avatar,'Text':@Comment}]}]}",
+                                     Context.User.GetDefaultAvatar("Guest.png"), comment);
 
-                                      result.NeedReloadData = true;
-                                  }
-                              });
+                        OpenVideo(uid);
+
+                        return true;
+                    }
+                case "NewLike":
+                    {
+                        var uid = eventInfo.Collection.FindFirstValue("UID");
+
+                        if(!DocsWhere("Channels", "{'Videos':[{'UID':@UID,'Likes':[Any,@UserName]}]}", uid).Any())
+                        {
+                            DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
+                                .Update("{'Videos':[{'Likes':[Add,@UserName]}]}");
+                        }
+
+                        OpenVideo(uid);
+
+                        return true;
+                    }
+                case "Filter":
+                    {
+                        var filter = eventInfo.Collection.FindFirstValue("FilterText");
+
+                        Dashboard(filter);
 
                         return true;
                     }
@@ -390,6 +446,6 @@ namespace FractalPlatform.UTube
             Dashboard();
         }
 
-        public override BaseRenderForm CreateRenderForm(DOMForm form) => new RenderForm(this, form);
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new ExtendedRenderForm(this, form);
     }
 }

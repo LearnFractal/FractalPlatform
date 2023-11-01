@@ -34,7 +34,16 @@
       "OnDate": {
         "Enabled": false
       },
+      "OnDateLabel": {
+        "Enabled": false
+      },
       "CountViews": {
+        "Enabled": false
+      },
+      "CountLikes": {
+        "Enabled": false
+      },
+      "CountComments": {
         "Enabled": false
       },
       "Likes": {

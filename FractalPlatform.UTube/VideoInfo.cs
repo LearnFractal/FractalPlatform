@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace FractalPlatform.UTube
@@ -15,10 +15,12 @@ namespace FractalPlatform.UTube
 
         public DateTime OnDate { get; set; }
 
+        public string OnDateLabel { get; set; }
+
         public uint CountViews { get; set; }
 
-        public List<string> Likes { get; set; }
+        public uint CountLikes { get; set; }
 
-        public List<CommentInfo> Comments { get; set; }
+        public uint CountComments { get; set; }
     }
 }

@@ -1,0 +1,21 @@
+{
+  "Owner": {
+    "Formula": "@UserName"
+  },
+  "OnDate": {
+    "Formula": "@Now"
+  },
+  "Videos": [
+    {
+      "CountLikes": {
+        "Formula": "@CountLikes"
+      },
+      "CountComments": {
+        "Formula": "@CountComments"
+      },
+      "OnDateLabel": {
+        "Formula": "@OnDateLabel"
+      }
+    }
+  ]
+}

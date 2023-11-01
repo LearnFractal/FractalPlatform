@@ -1,10 +1,8 @@
 {
-  "Name": "",
-  "Password": "",
-  "Capcha": "",
-  "Age": 0,
-  "Gender": "",
-  "Photo": "",
-  "Subscribes": [ "Test" ],
-  "Roles": [ "User" ]
+   "Age": 0,
+   "Capcha": "",
+   "Gender": "",
+   "Name": "",
+   "Password": "",
+   "Photo": ""
 }
