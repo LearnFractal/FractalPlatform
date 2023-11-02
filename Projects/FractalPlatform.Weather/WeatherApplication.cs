@@ -86,7 +86,9 @@ namespace FractalPlatform.Weather
 
         public override void OnStart()
         {
-            Weather("50.4547", "30.5238"); //Kyiv        
+            MessageBox("Test");
+
+            //Weather("50.4547", "30.5238"); //Kyiv        
         }
     }
 }
