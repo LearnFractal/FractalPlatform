@@ -26,6 +26,13 @@ namespace FractalPlatform.Weather
             public DailyInfo daily { get; set; }
         }
 
+        private string GetPicture(decimal prec)
+        {
+            if (prec == 0) return "Sun.svg";
+            if (prec < 5) return "Clouds.svg";
+            return "Rain.svg";
+        }
+
         private void Weather(string lat, string lng)
         {
             var json = REST.Get($"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT");
@@ -46,9 +53,8 @@ namespace FractalPlatform.Weather
                                        Day = info.daily.time[i].DayOfWeek.ToString().Substring(0, 3),
                                        MinTemp = info.daily.temperature_2m_min[i],
                                        MaxTemp = info.daily.temperature_2m_max[i],
-                                       Picture = info.daily.precipitation_sum[i] == 0 ? "01d.svg" : "04d.svg",
-                                       Precipitation = info.daily.precipitation_sum[i++],
-
+                                       Picture = GetPicture(info.daily.precipitation_sum[i]),
+                                       Precipitation = info.daily.precipitation_sum[i++]
                                    })
             }
             .ToCollection(Constants.FIRST_DOC_ID, "Forecast")
