@@ -35,20 +35,6 @@
          "Role": "Давід"
       }
    ],
-   "Comments": [
-      {
-         "Avatar": "Ti.png",
-         "Name": "Ti",
-         "Text": "Test comment",
-         "ViewUser": "View User"
-      },
-      {
-         "Avatar": "bazist.png",
-         "Name": "Bazist",
-         "Text": "cool",
-         "ViewUser": "View User"
-      }
-   ],
    "Series": [
       "Serie1.mp4"
    ]
