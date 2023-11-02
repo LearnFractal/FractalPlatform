@@ -413,7 +413,7 @@ namespace FractalPlatform.Seasons
                         }
 
                         DocsWhere("Users", eventInfo.AttrPath)
-                        .Delete("{'PlayList':[{'Name':$,'OnDate':$,'BestMovie':$,'GoodMovie':$,'Remove':$}]}");
+                        .Delete("{'PlayList':[$]}");
 
                         ViewUser(eventInfo.AttrPath);
 
