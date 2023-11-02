@@ -378,17 +378,17 @@ namespace FractalPlatform.Seasons
                         if (eventInfo.AttrPath.FirstPath == "PlayList")
                         {
                             DocsWhere("Users", eventInfo.AttrPath)
-                            .Delete("{'PlayList':[{'Name':$,'OnDate':$,'BestMovie':$,'GoodMovie':$,'Remove':$}]}");
+                            .Delete("{'PlayList':[{'Name':$,'OnDate':$,'OnDateLabel':$,'BestMovie':$,'GoodMovie':$,'Remove':$}]}");
                         }
                         else if (eventInfo.AttrPath.FirstPath == "BestMovies")
                         {
                             DocsWhere("Users", eventInfo.AttrPath)
-                            .Delete("{'BestMovies':[{'Name':$,'OnDate':$,'Share':$,'Remove':$}]}");
+                            .Delete("{'BestMovies':[{'Name':$,'OnDate':$,'OnDateLabel':$,'Share':$,'Remove':$}]}");
                         }
                         else if (eventInfo.AttrPath.FirstPath == "GoodMovies")
                         {
                             DocsWhere("Users", eventInfo.AttrPath)
-                            .Delete("{'GoodMovies':[{'Name':$,'OnDate':$,'Share':$,'Remove':$}]}");
+                            .Delete("{'GoodMovies':[{'Name':$,'OnDate':$,'OnDateLabel':$,'Share':$,'Remove':$}]}");
                         }
 
                         ViewUser(eventInfo.AttrPath);
