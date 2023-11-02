@@ -35,7 +35,7 @@ namespace FractalPlatform.Deployment
                 return path;
             }
 
-            path = @$"..\{_deploymentPath}\Projects\{assemblyName}";
+            path = @$"{_deploymentPath}\Projects\{assemblyName}";
 
             if (Directory.Exists(path))
             {
