@@ -4,9 +4,9 @@ using FractalPlatform.Client.UI;
 using FractalPlatform.Common;
 using FractalPlatform.Database.Engine;
 
-namespace FractalPlatform.Examples.Applications.Seasons
+namespace FractalPlatform.Examples.Applications.Movies
 {
-    public class SeasonsApplication : BaseApplication
+    public class MoviesApplication : BaseApplication
     {
         public override void OnStart()
         {
