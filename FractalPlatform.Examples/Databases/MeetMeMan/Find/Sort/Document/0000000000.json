@@ -18,5 +18,13 @@
     "Morning": { "Index": 12 },
     "Afternoon": { "Index": 13 },
     "Evening": { "Index": 14 }
+  },
+  "Gender": {
+    "Male": { "Index": 15 },
+    "Female": { "Index": 16 }
+  },
+  "Age": {
+    "Min": { "Index": 17 },
+    "Max": { "Index": 18 }
   }
 }
