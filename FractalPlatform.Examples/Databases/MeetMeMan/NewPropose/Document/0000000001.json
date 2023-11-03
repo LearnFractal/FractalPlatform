@@ -22,6 +22,8 @@
   "Contacts": {
     "Name": "",
     "Photo": "",
+    "Gender": "Male",
+    "Age": 20,
     "Messanger": ""
   },
   "Map": {

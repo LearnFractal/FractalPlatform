@@ -14,10 +14,20 @@ namespace FractalPlatform.Examples.Applications.MeetMeMan
             switch (eventInfo.Action)
             {
                 case "Find":
-                    FirstDocOf("Find").OpenForm(result => Dashboard(result.Collection.DocumentStorage));
+                    FirstDocOf("Find").OpenForm(result =>
+                    {
+                        if (result.Result)
+                        {
+                            Dashboard(result.Collection.DocumentStorage);
+                        }
+                    });
                     return true;
                 case "Propose":
-                    CreateNewDocFor("NewFriend", "Friends").OpenForm(result => Dashboard());
+                    CreateNewDocFor("NewPropose", "Proposes")
+                        .OpenForm(result => 
+                        { 
+                            Dashboard();
+                        });
                     return true;
                 default:
                     return base.OnEventDimension(eventInfo);
@@ -34,20 +44,20 @@ namespace FractalPlatform.Examples.Applications.MeetMeMan
             if (filter != null)
             {
                 var where = filter.ToAttrList().Where(x => x.Value.GetBoolValue()).ToJson();
-                friends = DocsWhereFacet("Friends", where).ToStorage();
-                points = DocsWhereFacet("Friends", where).ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
+                friends = DocsWhereFacet("Proposes", where).ToStorage();
+                points = DocsWhereFacet("Proposes", where).ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
             }
             else
             {
-                friends = DocsOf("Friends").ToStorage();
-                points = DocsOf("Friends").ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
+                friends = DocsOf("Proposes").ToStorage();
+                points = DocsOf("Proposes").ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
             }
 
             FirstDocOf("Dashboard")
             .ToCollection()
-            .DeleteByParent("Friends")
+            .DeleteByParent("Proposes")
             .MergeToArrayPath(points, new AttrPath("Map", "Points"))
-            .IfTrue(filter != null, x => x.MergeToArrayPath(friends, "Friends"), x => x)
+            .IfTrue(filter != null, x => x.MergeToArrayPath(friends, "Proposes"), x => x)
             .OpenForm();
         }
 
