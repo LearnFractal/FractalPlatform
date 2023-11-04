@@ -17,5 +17,13 @@
     "Morning": false,
     "Afternoon": false,
     "Evening": false
+  },
+  "Gender": {
+    "Male": false,
+    "Female": false
+  },
+  "Age": {
+    "Min": 18,
+    "Max": 60
   }
 }

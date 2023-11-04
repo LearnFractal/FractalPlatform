@@ -6,7 +6,7 @@
    },
    "Day": {
       "Friday": false,
-      "Monday": true,
+      "Monday": false,
       "Saturday": false,
       "Sunday": false,
       "Thursday": false,
@@ -14,8 +14,8 @@
       "Wednesday": false
    },
    "Goal": {
-      "Drink": true,
-      "Eat": true,
+      "Drink": false,
+      "Eat": false,
       "Talk": false,
       "TalkAbout": ""
    },

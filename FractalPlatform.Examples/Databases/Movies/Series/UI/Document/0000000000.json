@@ -1,5 +1,4 @@
 {
-   "Layout": "Dashboard",
    "ReadOnly": true,
    "Title": {
       "ControlType": "Label"

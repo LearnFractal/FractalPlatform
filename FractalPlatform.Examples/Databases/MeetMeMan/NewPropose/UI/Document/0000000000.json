@@ -1,0 +1,11 @@
+{
+  "Style": "Save:Propose",
+  "Contacts": {
+    "Photo": {
+      "ControlType": "UploadFile"
+    }
+  },
+  "Map": {
+    "ControlType": "ChooseMap"
+  }
+}

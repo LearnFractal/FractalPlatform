@@ -35,26 +35,6 @@
          "Role": "Давід"
       }
    ],
-   "Comments": [
-      {
-         "Avatar": "Ti.png",
-         "Name": "Ti",
-         "Text": "Test comment",
-         "ViewUser": "View User"
-      },
-      {
-         "Avatar": "bazist.png",
-         "Name": "Bazist",
-         "Text": "testt",
-         "ViewUser": "View User"
-      },
-      {
-         "Avatar": "bazist.png",
-         "Name": "Bazist",
-         "Text": "test",
-         "ViewUser": "View User"
-      }
-   ],
    "Series": [
       "Arnold_s1.mp4",
       "Arnold_s2.mp4",
