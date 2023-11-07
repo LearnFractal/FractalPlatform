@@ -1,7 +1,9 @@
 ﻿{
+  "OnDate": "",
   "Goal": {
     "Drink": false,
     "Eat": false,
+    "Coffee": false,
     "Talk": false,
     "TalkAbout": ""
   },

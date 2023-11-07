@@ -1,13 +1,15 @@
-﻿using FractalPlatform.Client.App;
+﻿using FractalPlatform.Client;
+using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
+using FractalPlatform.Database.Engine.Query;
 using System.Linq;
 
-namespace FractalPlatform.Examples.Applications.MeetMeMan
+namespace FractalPlatform.Examples.Applications.CoffeePoint
 {
-    public class MeetMeManApplication : BaseApplication
+    public class CoffeePointsApplication : BaseApplication
     {
         public override bool OnEventDimension(EventInfo eventInfo)
         {
@@ -41,17 +43,22 @@ namespace FractalPlatform.Examples.Applications.MeetMeMan
             Storage friends;
             Storage points;
 
+            BaseQuery query;
+            
             if (filter != null)
             {
                 var where = filter.ToAttrList().Where(x => x.Value.GetBoolValue()).ToJson();
-                friends = DocsWhereFacet("Proposes", where).ToStorage();
-                points = DocsWhereFacet("Proposes", where).ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
+                query = DocsWhereFacet("Proposes", where);
             }
             else
             {
-                friends = DocsOf("Proposes").ToStorage();
-                points = DocsOf("Proposes").ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
+                query = DocsOf("Proposes");
             }
+
+            query = query.AndWhere("{'OnDate':Range(@StartDate,@EndDate)}", GetNowDate(), GetNowDate().AddDays(7));
+
+            friends = query.ToStorage();
+            points = query.ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
 
             FirstDocOf("Dashboard")
             .ToCollection()

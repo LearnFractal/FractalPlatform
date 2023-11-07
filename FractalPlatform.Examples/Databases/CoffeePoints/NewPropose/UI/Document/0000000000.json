@@ -7,5 +7,8 @@
   },
   "Map": {
     "ControlType": "ChooseMap"
+  },
+  "OnDate": {
+    "Visible": false
   }
 }
