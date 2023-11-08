@@ -1,38 +1,38 @@
 ﻿{
   "AddToPlayList": "Add To Play List",
   "CommentsCount": "",
-  "Country": "Denmark",
-  "Description": "Комедія про дітей",
+  "Country": "США",
+  "Description": "Тьмяне світло сліпих ліхтарів, скелети фабричних труб, що задихаються у власному диму. Вавилонські вежі хмарочосів, все це пекло Нового часу, Нью-Йорк.",
   "Duration": "90 хв/01:40",
   "Genre": "Films",
-  "IMDB": "7.3",
-  "Name": "Обмін дітьми",
-  "Picture": "11.c73e6dd6.png",
+  "IMDB": "8.40",
+  "Name": "Таксист",
+  "Picture": "Taxi Driver.jpg",
   "Quality": "BDRip",
-  "Rating": "8.1",
+  "Rating": "7.974",
   "RecommendAge": "16+",
   "Translation": "Професійний (багатоголосий)",
   "Type": "films",
   "Video": "Openngamer.mp4",
   "Views": 1,
   "ViewUsers": "View Users",
-  "Year": 2023,
+  "Year": 1976,
   "Actors": [
     {
-      "Name": "Гелен Міррен",
-      "Role": "Голда"
+      "Name": "Роберт де Ніро",
+      "Role": "Трэвис Бикл"
     },
     {
-      "Name": "Камілль Коттен",
-      "Role": "Лу Каддар"
+      "Name": "Джоді Фостер",
+      "Role": "Айрис «Изи» Стинсма"
     },
     {
-      "Name": "Лієв Шрайбер",
-      "Role": "Генрі Кіссенджер"
+      "Name": "Пітер Бойл",
+      "Role": "таксист «Колдун»"
     },
     {
-      "Name": "Ліор Ашкеназі",
-      "Role": "Давід"
+      "Name": "Сібіл Шепард",
+      "Role": "Бетси"
     }
   ],
   "Series": [ "Serie1.mp4" ]
