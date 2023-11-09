@@ -1,0 +1,18 @@
+{
+  "PricePerLitter": {
+    "MinValue": 1,
+    "MaxValue": 1000
+  },
+  "ConsumptionPer100Km": {
+    "MinValue": 1,
+    "MaxValue": 1000
+  },
+  "DistanceInKm": {
+    "MinValue": 1,
+    "MaxValue": 1000
+  },
+  "NumberOfPeopeles": {
+    "MinValue": 1,
+    "MaxValue": 10
+  }
+}
