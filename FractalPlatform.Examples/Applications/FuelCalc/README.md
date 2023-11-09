@@ -15,5 +15,5 @@ Sandbox application for test purposes
 
 ## Web Link
 
-[Sandbox2](https://fraplat.com/jupiter/FuelCalc)
+[FuelCalc](https://fraplat.com/jupiter/FuelCalc)
 
