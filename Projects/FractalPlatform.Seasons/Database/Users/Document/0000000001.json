@@ -1,60 +1,60 @@
 ﻿{
-   "Age": 21,
-   "Avatar": "bazist.png",
-   "BestMoviesCount": "1",
-   "Capcha": "",
-   "CommentsCount": "7",
-   "EditUser": "Edit Profile",
-   "Gender": "Male",
-   "Name": "Bazist",
-   "Password": "7DA55F449235BDC18953A4F8221CFDA8",
-   "PlayListCount": "1",
-   "Registered": "07/07/2023 14:02:56",
-   "RepeatPassword": "7DA55F449235BDC18953A4F8221CFDA8",
-   "Theme": "Dark",
-   "BestMovies": [
-      {
-         "Name": "Чесна гра",
-         "OnDate": "10/25/2023 22:02:33",
-         "Remove": "Remove",
-         "Share": "Share"
-      }
-   ],
-   "GoodMovies": [
-      {
-         "Name": "Обмін дітьми",
-         "OnDate": "10/25/2023 22:02:38",
-         "Remove": "Remove",
-         "Share": "Share"
-      }
-   ],
-   "PlayList": [
-      {
-         "BestMovie": "Best Movie",
-         "GoodMovie": "Good Movie",
-         "Name": "Втеча сімох",
-         "OnDate": "10/25/2023 14:19:23",
-         "OnDateLabel": "",
-         "Remove": "Remove"
-      },
-      {
-         "BestMovie": "Best Movie",
-         "GoodMovie": "Good Movie",
-         "Name": "Нова спроба Кейт МакКолл",
-         "OnDate": "10/25/2023 22:32:13",
-         "OnDateLabel": "",
-         "Remove": "Remove"
-      },
-      {
-         "BestMovie": "Best Movie",
-         "GoodMovie": "Good Movie",
-         "Name": "Асока",
-         "OnDate": "10/27/2023 01:05:32",
-         "OnDateLabel": "",
-         "Remove": "Remove"
-      }
-   ],
-   "Roles": [
-      "Admin"
-   ]
+  "Age": 21,
+  "Avatar": "bazist.png",
+  "BestMoviesCount": "1",
+  "Capcha": "",
+  "CommentsCount": "7",
+  "EditUser": "Edit Profile",
+  "Gender": "Male",
+  "Name": "Bazist",
+  "Password": "7DA55F449235BDC18953A4F8221CFDA8",
+  "PlayListCount": "1",
+  "Registered": "07/07/2023 14:02:56",
+  "RepeatPassword": "7DA55F449235BDC18953A4F8221CFDA8",
+  "Theme": "Dark",
+  "BestMovies": [
+    {
+      "Name": "Краса по-американськи",
+      "OnDate": "10/25/2023 22:02:33",
+      "Remove": "Remove",
+      "Share": "Share"
+    }
+  ],
+  "GoodMovies": [
+    {
+      "Name": "Інтерстеллар",
+      "OnDate": "10/25/2023 22:02:38",
+      "Remove": "Remove",
+      "Share": "Share"
+    }
+  ],
+  "PlayList": [
+    {
+      "BestMovie": "Best Movie",
+      "GoodMovie": "Good Movie",
+      "Name": "Арнольд",
+      "OnDate": "10/25/2023 14:19:23",
+      "OnDateLabel": "",
+      "Remove": "Remove"
+    },
+    {
+      "BestMovie": "Best Movie",
+      "GoodMovie": "Good Movie",
+      "Name": "Аватар",
+      "OnDate": "10/25/2023 22:32:13",
+      "OnDateLabel": "",
+      "Remove": "Remove"
+    },
+    {
+      "BestMovie": "Best Movie",
+      "GoodMovie": "Good Movie",
+      "Name": "Втеча з Шоушенка",
+      "OnDate": "10/27/2023 01:05:32",
+      "OnDateLabel": "",
+      "Remove": "Remove"
+    }
+  ],
+  "Roles": [
+    "Admin"
+  ]
 }
