@@ -13,7 +13,7 @@
   "RecommendAge": "16+",
   "Translation": "Професійний (багатоголосий)",
   "Type": "films",
-  "Video": "Testtest.mp4",
+  "Video": "Arnold_s1.mp4",
   "Views": 5,
   "ViewUsers": "View Users",
   "Year": 2023,
@@ -49,5 +49,5 @@
       "ViewUser": "View User"
     }
   ],
-  "Series": [ "Serie1.mp4" ]
+  "Series": [ "Arnold_s1.mp4", "Arnold_s2.mp4", "Arnold_s3.mp4" ]
 }
