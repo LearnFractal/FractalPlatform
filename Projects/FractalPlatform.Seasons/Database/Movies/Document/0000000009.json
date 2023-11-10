@@ -13,7 +13,7 @@
    "RecommendAge": "16+",
    "Translation": "Професійний (багатоголосий)",
    "Type": "films",
-   "Video": "Platforma.mp4",
+  "Video": "ThePlatform.mp4",
    "Views": 43,
    "ViewUsers": "View Users",
    "Year": 2019,
@@ -35,9 +35,7 @@
          "Role": "Давід"
       }
    ],
-   "Series": [
-      "Arnold_s1.mp4",
-      "Arnold_s2.mp4",
-      "Arnold_s3.mp4"
-   ]
+  "Series": [
+    "ThePlatform.mp4"
+  ]
 }
