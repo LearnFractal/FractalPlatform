@@ -395,6 +395,31 @@ namespace FractalPlatform.Seasons
 
                         return true;
                     }
+                case "Share":
+                    {
+                        string movie;
+
+                        if (eventInfo.AttrPath.FirstPath == "BestMovies")
+                        {
+                            movie = DocsWhere("Users", eventInfo.AttrPath)
+                                       .Value("{'BestMovies':[{'Name':$}]}");
+                        }
+                        else //if (eventInfo.AttrPath.FirstPath == "GoodMovies")
+                        {
+                            movie = DocsWhere("Users", eventInfo.AttrPath)
+                                       .Value("{'GoodMovies':[{'Name':$}]}");
+                        }
+
+                        new
+                        {
+                            Link = "https://fraplat.com/jupiter/Seasons/?tag=" + movie
+                        }
+                        .ToCollection(Constants.FIRST_DOC_ID)
+                        .SetUIDimension("{'ControlType':'Link','ReadOnly':true}")
+                        .OpenForm();
+                                                
+                        return true;
+                    }
                 case "BestMovie":
                 case "GoodMovie":
                     {
