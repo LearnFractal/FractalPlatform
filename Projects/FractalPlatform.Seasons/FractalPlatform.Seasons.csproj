@@ -20,8 +20,4 @@
     </Reference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Database\Actors\Document\" />
-  </ItemGroup>
-
 </Project>
