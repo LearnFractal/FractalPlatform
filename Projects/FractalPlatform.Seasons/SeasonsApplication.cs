@@ -18,7 +18,14 @@ namespace FractalPlatform.Seasons
 
             if (Context.HasUrlTag)
             {
-                query = query.AndWhere("{'Type':@Type}", Context.UrlTag);
+                if (Context.UrlTag.Contains(':'))
+                {
+                    query = query.AndWhere("{'Name':@Name}", Context.UrlTag.Split(':')[1]);
+                }
+                else
+                {
+                    query = query.AndWhere("{'Type':@Type}", Context.UrlTag);
+                }
             }
 
             List<string> filters = null;
@@ -412,12 +419,12 @@ namespace FractalPlatform.Seasons
 
                         new
                         {
-                            Link = "https://fraplat.com/jupiter/Seasons/?tag=" + movie
+                            Link = "https://fraplat.com/jupiter/Seasons/?tag=Movie:" + movie
                         }
-                        .ToCollection(Constants.FIRST_DOC_ID)
+                        .ToCollection(Constants.FIRST_DOC_ID, "Share link")
                         .SetUIDimension("{'ControlType':'Link','ReadOnly':true}")
                         .OpenForm();
-                                                
+
                         return true;
                     }
                 case "BestMovie":
