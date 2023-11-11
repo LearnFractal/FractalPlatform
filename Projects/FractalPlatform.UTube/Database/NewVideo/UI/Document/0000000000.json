@@ -6,6 +6,9 @@
   "Video": {
     "ControlType": "UploadFile"
   },
+  "Preview": {
+    "Visible": false
+  },
   "Description": {
     "ControlType": "RichTextBox"
   },

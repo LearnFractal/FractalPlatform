@@ -210,6 +210,14 @@ namespace FractalPlatform.UTube
                     {
                         return Context.User.Avatar;
                     }
+                case "Preview":
+                    {
+                        var video = computedInfo.Collection
+                                                .GetWhere(computedInfo.AttrPath)
+                                                .Value("{'Videos':[{'Video':$}]}");
+
+                        return video.Replace(".mp4", ".jpg");
+                    }
                 case "MyUserLabel":
                     {
                         return Context.User.Name.ToUpper().Substring(0, 2);

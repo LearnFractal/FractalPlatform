@@ -13,6 +13,8 @@ namespace FractalPlatform.UTube
 
         public string Video { get; set; }
 
+        public string Preview { get; set; }
+
         public DateTime OnDate { get; set; }
 
         public string OnDateLabel { get; set; }

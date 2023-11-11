@@ -9,6 +9,9 @@
       },
       "OnDateLabel": {
         "Formula": "@OnDateLabel"
+      },
+      "Preview": {
+        "Formula": "@Preview"
       }
     }
   ]

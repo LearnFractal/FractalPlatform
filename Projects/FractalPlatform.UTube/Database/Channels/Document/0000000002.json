@@ -15,12 +15,13 @@
       {
          "CountComments": "1",
          "CountLikes": "1",
-         "CountViews": 9,
+         "CountViews": 10,
          "Description": "Trees video",
          "Name": "Trees",
          "NewComment": "New Comment",
          "OnDate": "09/14/2023 15:22:54",
          "OnDateLabel": "1 months ago",
+         "Preview": "trees.jpg",
          "UID": "3647AA5E-37C4-404A-B0BB-77ECA774DC3B",
          "Video": "trees.mp4",
          "Comments": [
@@ -45,6 +46,7 @@
          "NewComment": "New Comment",
          "OnDate": "09/14/2023 15:45:58",
          "OnDateLabel": "1 months ago",
+         "Preview": "me_at_gamak.jpg",
          "UID": "E1D08CED-8DDD-4958-84A0-4104BC69E7EB",
          "Video": "me_at_gamak.mp4",
          "Comments": [
@@ -62,12 +64,13 @@
       {
          "CountComments": "4",
          "CountLikes": "1",
-         "CountViews": 31,
+         "CountViews": 32,
          "Description": "Stugna River",
          "Name": "Stugna ",
          "NewComment": "New Comment",
          "OnDate": "09/14/2023 19:16:06",
          "OnDateLabel": "1 months ago",
+         "Preview": "ce4bedf0bfea4e42b8d109806757e6ff.jpg",
          "UID": "574151BD-7819-480C-9EEC-BC8A1AEB25CF",
          "Video": "ce4bedf0bfea4e42b8d109806757e6ff.mp4",
          "Comments": [
@@ -104,12 +107,13 @@
       {
          "CountComments": "2",
          "CountLikes": "1",
-         "CountViews": 19,
+         "CountViews": 20,
          "Description": "Вид на Дніпро з зумом",
          "Name": "Enej",
          "NewComment": "New Comment",
          "OnDate": "09/15/2023 13:28:50",
          "OnDateLabel": "1 months ago",
+         "Preview": "e8dce4b79b1c46eaa0251f1abcfe3937.jpg",
          "UID": "7CFC3D40-1763-4E80-9BEC-7D8E1CFAC528",
          "Video": "e8dce4b79b1c46eaa0251f1abcfe3937.mp4",
          "Comments": [
@@ -140,6 +144,7 @@
          "NewComment": "New Comment",
          "OnDate": "09/17/2023 10:38:09",
          "OnDateLabel": "1 months ago",
+         "Preview": "221055edc9c344cc8e231fbc758a4a7f.jpg",
          "UID": "DEE223D2-5C49-42C6-A819-5C7E5F20A21B",
          "Video": "221055edc9c344cc8e231fbc758a4a7f.mp4",
          "Comments": [
@@ -188,12 +193,13 @@
       {
          "CountComments": "2",
          "CountLikes": "1",
-         "CountViews": 25,
+         "CountViews": 26,
          "Description": "Білки розпочали сезон збору горіхів в моєму саду",
          "Name": "Білка та горіхи",
          "NewComment": "New Comment",
          "OnDate": "09/30/2023 13:04:22",
          "OnDateLabel": "1 months ago",
+         "Preview": "89d19cb58fac41a997f8cc1031e8c656.jpg",
          "UID": "6817AD41-7585-4BAC-A9A5-B416453EEB53",
          "Video": "89d19cb58fac41a997f8cc1031e8c656.mp4",
          "Comments": [
@@ -223,7 +229,8 @@
          "Name": "Dnipro river",
          "NewComment": "New Comment",
          "OnDate": "10/05/2023 16:47:30",
-         "OnDateLabel": "26 days ago",
+         "OnDateLabel": "1 months ago",
+         "Preview": "663e1edfa70f40b2b3561d1b2a0cd333.jpg",
          "UID": "0429A015-DF11-48A6-AA92-56D424DA3005",
          "Video": "663e1edfa70f40b2b3561d1b2a0cd333.mp4",
          "Comments": [
