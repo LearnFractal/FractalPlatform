@@ -30,7 +30,7 @@ namespace FractalPlatform.Seasons
 
                 if (filters[0] != "Жанр") query = query.AndWhere("{'Genre':@Genre}", filters[0]);
                 if (filters[1] != "Рік") query = query.AndWhere("{'Year':@Year}", filters[1]);
-                if (filters[2] != "Країна") query = query.AndWhere("{'Country':@Country}", filters[2]);
+                if (filters[2] != "Країна") query = query.AndWhere("{'Countries':[Any,@Country]}", filters[2]);
             }
 
             var movies = query.OrderByDesc("{'Rating':$}")
