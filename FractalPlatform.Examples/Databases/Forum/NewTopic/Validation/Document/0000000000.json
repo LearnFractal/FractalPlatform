@@ -1,7 +1,0 @@
-{
-  "Title": {
-    "IsRequired": true,
-    "MinLen": 3,
-    "MaxLen": 256
-  }
-}

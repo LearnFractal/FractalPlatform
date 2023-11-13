@@ -1,5 +1,0 @@
-{
-   "UserName": {
-      "Formula": "\"User: \" + @UserName"
-   }
-}
