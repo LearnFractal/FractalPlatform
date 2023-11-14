@@ -7,7 +7,7 @@ using FractalPlatform.Database.Engine.Info;
 using FractalPlatform.Database.Engine.Query;
 using System.Linq;
 
-namespace FractalPlatform.Examples.Applications.CoffeePoint
+namespace FractalPlatform.Examples.Applications.CoffeePoints
 {
     public class CoffeePointsApplication : BaseApplication
     {
