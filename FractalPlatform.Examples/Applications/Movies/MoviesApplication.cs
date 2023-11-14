@@ -21,7 +21,7 @@ namespace FractalPlatform.Examples.Applications.Movies
                         var obj = new
                         {
                             Title = "Watch all seasons",
-                            Seasons = Directory.GetDirectories(@"d:\Seasons")
+                            Seasons = Directory.GetDirectories(@"d:\Movies")
                                    .Select(d => new
                                    {
                                        Series = Directory.GetFileName(d),
