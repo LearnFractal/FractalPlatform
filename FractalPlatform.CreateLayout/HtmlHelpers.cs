@@ -16,6 +16,25 @@ namespace FractalPlatform.CreateLayouts
             }
         }
 
+        private static string GetTagAttrs(string html, ref int i)
+        {
+            var str = string.Empty;
+
+            while (true)
+            {
+                str += html[i];
+
+                if (html[i] == '>')
+                    break;
+
+                i++;
+            }
+
+            str = Regex.Replace(str, "id=\"fr[0-9]+\"", string.Empty);
+
+            return str;
+        }
+
         public static string AddScriptsToHtml(string html)
         {
             var hasScript = html.Contains("frmain.js");
@@ -53,7 +72,8 @@ namespace FractalPlatform.CreateLayouts
                                 {
                                     sb.Append('<');
                                     sb.Append(tagStr);
-                                    sb.Append(html[i]);
+                                    sb.Append(GetTagAttrs(html, ref i));
+                                    
                                     sb.AppendLine();
 
                                     sb.Append(@"<script src=""@BaseUrl/js/frmain.js""></script> 
@@ -66,7 +86,8 @@ namespace FractalPlatform.CreateLayouts
                                 {
                                     sb.Append('<');
                                     sb.Append(tagStr);
-                                    sb.Append(html[i]);
+                                    sb.Append(GetTagAttrs(html, ref i));
+
                                     sb.AppendLine();
 
                                     sb.Append(@"<form action=""@BaseUrl/@AppName/@FormName"" enctype=""multipart/form-data"" method=""post""> 
