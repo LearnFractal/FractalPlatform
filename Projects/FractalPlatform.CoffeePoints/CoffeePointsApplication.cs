@@ -105,16 +105,18 @@ namespace FractalPlatform.CoffeePoints
                 {
                     query = query.AndWhere(@"{'Contacts':{'Gender':'Female'}}");
                 }
+
+                query = query.AndWhere(@"{'Contacts':{'Age':Range(@MinAge,@MaxAge)}}",
+                                         minAge, maxAge);
+
             }
             else
             {
                 query = DocsOf("Proposes");
             }
 
-            query = query.AndWhere(@"{'OnDate':Range(@StartDate,@EndDate),
-                                      'Contacts':{'Age':Range(@MinAge,@MaxAge)}}",
-                                        GetNowDate().AddDays(-7), GetNowDate(),
-                                        minAge, maxAge);
+            query = query.AndWhere(@"{'OnDate':Range(@StartDate,@EndDate)}",
+                                      GetNowDate().AddDays(-7), GetNowDate());
 
             friends = query.ToStorage();
             points = query.ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
