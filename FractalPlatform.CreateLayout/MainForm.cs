@@ -580,6 +580,8 @@ namespace FractalPlatform.CreateLayout
 
             MessageBoxInfo("Choose a 0000000001.json document in a database collection");
 
+            openJsonFileDialog.InitialDirectory = @"C:\FractalPlatform\FractalPlatform.Examples\Databases";
+
             if (openJsonFileDialog.ShowDialog() == DialogResult.OK)
             {
                 var fileName = openJsonFileDialog.FileName;
@@ -1459,6 +1461,8 @@ namespace FractalPlatform.CreateLayout
         {
             MessageBox.Show("Choose a html file");
 
+            openHtmlFileDialog.InitialDirectory = @"C:\BigDoc\Design";
+
             if (openHtmlFileDialog.ShowDialog() == DialogResult.OK)
             {
                 EnsureDocument(true);
@@ -1485,9 +1489,35 @@ namespace FractalPlatform.CreateLayout
                 if (dirInfo != null)
                 {
                     html = HtmlHelpers.ReplaceLinks(html, $"./{dirInfo.Name}/", $"@BaseFilesUrl/{_collName}/");
-                    html = Regex.Replace(html, "(src=\")([a-zA-Z0-9])", m => m.Groups[0].Value + "./" + m.Groups[1].Value);
-					html = Regex.Replace(html, "(href=\")([a-zA-Z0-9])", m => m.Groups[0].Value + "./" + m.Groups[1].Value);
-				}
+
+                    html = Regex.Replace(html, "(?<Tag>src=\")(?<Path>[a-zA-Z0-9]+)", m =>
+                    {
+                        var path = m.Groups["Path"].Value;
+
+                        if (path != "http" && path != "https")
+                        {
+                            return m.Groups["Tag"].Value + $"@BaseFilesUrl/{_collName}/" + path;
+                        }
+                        else
+                        {
+                            return m.Groups["Tag"].Value + path;
+                        }
+                    });
+
+                    html = Regex.Replace(html, "(?<Tag>href=\")(?<Path>[a-zA-Z0-9]+)", m =>
+                    {
+                        var path = m.Groups["Path"].Value;
+
+                        if (path != "http" && path != "https")
+                        {
+                            return m.Groups["Tag"].Value + $"@BaseFilesUrl/{_collName}/" + path;
+                        }
+                        else
+                        {
+                            return m.Groups["Tag"].Value + path;
+                        }
+                    });
+                }
 
                 if (!Directory.Exists(LayoutsPath))
                 {
@@ -1495,6 +1525,13 @@ namespace FractalPlatform.CreateLayout
                 }
 
                 SaveOptions(LayoutHtmlPath);
+
+                var layoutDirName = new FileInfo(LayoutHtmlPath).DirectoryName;
+
+                if(!Directory.Exists(layoutDirName))
+                {
+                    Directory.CreateDirectory(layoutDirName);
+                }
 
                 File.WriteAllText(LayoutHtmlPath, html);
 
