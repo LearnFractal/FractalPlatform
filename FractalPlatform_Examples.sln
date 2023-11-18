@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.7.34009.444
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Examples", "FractalPlatform.Examples\FractalPlatform.Examples.csproj", "{497B9A69-5582-4312-BBA7-7C8F7A132FFA}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.UTube", "Projects\FractalPlatform.UTube\FractalPlatform.UTube.csproj", "{C93B3149-B83E-4390-9611-426DD1105B8B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Weather", "Projects\FractalPlatform.Weather\FractalPlatform.Weather.csproj", "{83061C0C-D18A-4BF0-BDA1-CF5BA3738BA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.CoffeePoints", "Projects\FractalPlatform.CoffeePoints\FractalPlatform.CoffeePoints.csproj", "{5ACC3314-B223-48B1-904C-159DCBFA224A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,14 @@ Global
 		{83061C0C-D18A-4BF0-BDA1-CF5BA3738BA0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83061C0C-D18A-4BF0-BDA1-CF5BA3738BA0}.Release|x86.ActiveCfg = Release|Any CPU
 		{83061C0C-D18A-4BF0-BDA1-CF5BA3738BA0}.Release|x86.Build.0 = Release|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Debug|x86.Build.0 = Debug|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +102,7 @@ Global
 		{066A78A4-425C-43E7-AE0E-A8E0E7BEBDCA} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 		{C93B3149-B83E-4390-9611-426DD1105B8B} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 		{83061C0C-D18A-4BF0-BDA1-CF5BA3738BA0} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
+		{5ACC3314-B223-48B1-904C-159DCBFA224A} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {842F3684-70EF-46AF-AA77-E2F6307580EF}
