@@ -27,10 +27,13 @@ namespace FractalPlatform.CoffeePoints
                     CreateNewDocFor("NewPropose", "Proposes")
                         .OpenForm(result =>
                         {
-                            MessageBox("Thank you, we added your proposition.",
+                            if (result.Result)
+                            {
+                                MessageBox("Thank you, we added your proposition.",
                                        "Information",
                                        MessageBoxButtonType.Ok,
                                        result => Dashboard());
+                            }
                         });
                     return true;
                 default:
