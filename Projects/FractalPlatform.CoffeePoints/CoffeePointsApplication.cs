@@ -1,92 +1,134 @@
-﻿using System;
-using System.Linq;
-using Newtonsoft.Json;
+﻿using System.Linq;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
-using FractalPlatform.Common.Enums;
+using FractalPlatform.Client.UI.DOM;
 using FractalPlatform.Database.Engine;
+using FractalPlatform.Database.Engine.Info;
+using FractalPlatform.Database.Engine.Query;
 
-namespace FractalPlatform.Weather
+namespace FractalPlatform.CoffeePoints
 {
-    public class WeatherApplication : BaseApplication
+    public class CoffeePointsApplication : BaseApplication
     {
-        private class DailyInfo
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
-            public DateTime[] time { get; set; }
-
-            public decimal[] temperature_2m_min { get; set; }
-
-            public decimal[] temperature_2m_max { get; set; }
-
-            public decimal[] precipitation_sum { get; set; }
-        }
-
-        private class WeatherInfo
-        {
-            public DailyInfo daily { get; set; }
-        }
-
-        private string GetPicture(decimal prec)
-        {
-            if (prec == 0) return "Sun.svg";
-            if (prec < 5) return "Clouds.svg";
-            return "Rain.svg";
-        }
-
-        private void Weather(string lat, string lng)
-        {
-            var json = REST.Get($"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT");
-
-            var info = JsonConvert.DeserializeObject<WeatherInfo>(json);
-
-            int i = 0;
-
-            //Forecast page
-            new
+            switch (eventInfo.Action)
             {
-                Latitude = lat,
-                Longitude = lng,
-                Forecast = info.daily.time
-                                   .Select(x => new
-                                   {
-                                       Date = info.daily.time[i].ToShortDateString(),
-                                       Day = info.daily.time[i].DayOfWeek.ToString().Substring(0, 3),
-                                       MinTemp = info.daily.temperature_2m_min[i],
-                                       MaxTemp = info.daily.temperature_2m_max[i],
-                                       Picture = GetPicture(info.daily.precipitation_sum[i]),
-                                       Precipitation = info.daily.precipitation_sum[i++]
-                                   })
-            }
-            .ToCollection(Constants.FIRST_DOC_ID, "Forecast")
-            .SetUIDimension("{'Layout':'Forecast','IsRawPage':true}")
-            .OpenForm(result =>
-            {
-                //Set GPS coordinates page
-                new
-                {
-                    Latitude = lat,
-                    Longitude = lng
-                }
-                .ToCollection(Constants.FIRST_DOC_ID)
-                .SetDimension(DimensionType.Validation, "{'Latitude':{'IsRequired':true,'Type':'float'},'Longitude':{'IsRequired':true,'Type':'float'}}")
-                .SetDimension(DimensionType.Theme, "{'DefaultTheme':'White','ChooseThemeOnAllPages':false}")
-                .OpenForm(result =>
-                {
-                    if (result.Result)
+                case "Find":
+                    FirstDocOf("Find").OpenForm(result =>
                     {
-                        var gps = result.Collection
-                                        .GetFirstDoc()
-                                        .Values("{'Latitude':$,'Longitude':$}");
+                        if (result.Result)
+                        {
+                            Dashboard(result.Collection.DocumentStorage);
+                        }
+                    });
+                    return true;
+                case "Propose":
+                    CreateNewDocFor("NewPropose", "Proposes")
+                        .OpenForm(result =>
+                        {
+                            MessageBox("Thank you, we added your proposition.",
+                                       "Information",
+                                       MessageBoxButtonType.Ok,
+                                       result => Dashboard());
+                        });
+                    return true;
+                default:
+                    return base.OnEventDimension(eventInfo);
+            }
+        }
 
-                        Weather(gps[0], gps[1]);
-                    }
-                });
-            });
+        public override bool OnOpenForm(FormInfo formInfo)
+        {
+            if (formInfo.AttrPath.FirstPath == "Proposes")
+            {
+                var dateAndLatAndLng = formInfo.Collection
+                                             .GetWhere(formInfo.AttrPath)
+                                             .Values("{'Proposes':[{'OnDate':$,'Map':{'Point':{'Lat':$,'Lng':$}}}]}");
+
+                DocsWhere("Proposes", "{'OnDate':@OnDate}", dateAndLatAndLng[0])
+                    .ExtendDocument(DQL("{'Map':{'Center':{'Lat':@Lat,'Lng':@Lng},'Points':[{'Lat':@Lat,'Lng':@Lng}]}}", dateAndLatAndLng[1], dateAndLatAndLng[2]))
+                    .OpenForm();
+
+                return false;
+            }
+
+            return base.OnOpenForm(formInfo);
+        }
+
+        public override object OnComputedDimension(ComputedInfo computedInfo)
+        {
+            if (computedInfo.AttrPath.LastPath == "Gender")
+            {
+                return computedInfo.AttrValue.ToString() == "Male" ? "men" : "women";
+            }
+            else if (computedInfo.AttrValue.IsBoolean)
+            {
+                return computedInfo.AttrValue.GetBoolValue() ? "" : "style='display:none'";
+            }
+
+            return base.OnComputedDimension(computedInfo);
+        }
+
+        private void Dashboard(Storage filter = null)
+        {
+            CloseIfOpenedForm("Dashboard");
+
+            Storage friends;
+            Storage points;
+
+            BaseQuery query;
+
+            var minAge = 0;
+            var maxAge = 100;
+
+            if (filter != null)
+            {
+                var where = filter.ToAttrList().Where(x => x.Key.FirstPath != "Gender" &&
+                                                           x.Value.GetBoolValue()).ToJson();
+                query = DocsWhereFacet("Proposes", where);
+
+                minAge = filter.GetFirstDoc(Context).IntValue("{'Age':{'Min':$}}");
+                maxAge = filter.GetFirstDoc(Context).IntValue("{'Age':{'Max':$}}");
+
+                var isMale = filter.GetFirstDoc(Context).BoolValue("{'Gender':{'Male':$}}");
+                var isFemale = filter.GetFirstDoc(Context).BoolValue("{'Gender':{'Female':$}}");
+
+                if (isMale && !isFemale)
+                {
+                    query = query.AndWhere(@"{'Contacts':{'Gender':'Male'}}");
+                }
+                else if (!isMale && isFemale)
+                {
+                    query = query.AndWhere(@"{'Contacts':{'Gender':'Female'}}");
+                }
+            }
+            else
+            {
+                query = DocsOf("Proposes");
+            }
+
+            query = query.AndWhere(@"{'OnDate':Range(@StartDate,@EndDate),
+                                      'Contacts':{'Age':Range(@MinAge,@MaxAge)}}",
+                                        GetNowDate().AddDays(-7), GetNowDate(),
+                                        minAge, maxAge);
+
+            friends = query.ToStorage();
+            points = query.ToStorage("{'Map':{'Point':!{'Lng':$,'Lat':$}}}");
+
+            FirstDocOf("Dashboard")
+            .ToCollection()
+            .DeleteByParent("Proposes")
+            .MergeToArrayPath(points, new AttrPath("Map", "Points"))
+            .IfTrue(filter != null, x => x.MergeToArrayPath(friends, "Proposes"), x => x)
+            .OpenForm();
         }
 
         public override void OnStart()
         {
-            Weather("50.4547", "30.5238"); //Kyiv        
+            Dashboard();
         }
+
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new ExtendedRenderForm(this, form);
     }
 }

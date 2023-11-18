@@ -1,0 +1,27 @@
+{
+  "Contacts": {
+    "Name": {
+      "Index": 1
+    },
+    "Gender": {
+      "Index": 2
+    },
+    "Age": {
+      "Index": 3
+    },
+    "Messanger": {
+      "Index": 4
+    },
+    "Photo": {
+      "Index": 5
+    }
+  },
+  "Goal": {
+    "TalkAbout": {
+      "Index": 6
+    }
+  },
+  "Map": {
+    "Index": 7
+  }
+}

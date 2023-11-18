@@ -1,0 +1,21 @@
+{
+  "ReadOnly": true,
+  "Visible": false,
+  "Contacts": {
+    "Name": {
+      "Visible": true
+    },
+    "Messanger": {
+      "Visible": true
+    }
+  },
+  "Goal": {
+    "TalkAbout": {
+      "Visible": true
+    }
+  },
+  "Map": {
+    "Visible": true,
+    "ControlType": "Map"
+  }
+}

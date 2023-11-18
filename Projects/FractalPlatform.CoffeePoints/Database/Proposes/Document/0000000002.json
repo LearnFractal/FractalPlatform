@@ -1,0 +1,45 @@
+﻿{
+  "Id": "2",
+  "OnDate": "11/18/2023 00:41:21",
+  "Contacts": {
+    "Age": 20,
+    "Gender": "Female",
+    "Messanger": "@Rebeca",
+    "Name": "Rebeca",
+    "Photo": "Woomen.png"
+  },
+  "Day": {
+    "Friday": false,
+    "Monday": true,
+    "Saturday": false,
+    "Sunday": false,
+    "Thursday": false,
+    "Tuesday": true,
+    "Wednesday": true
+  },
+  "Goal": {
+    "Coffee": false,
+    "Drink": true,
+    "Eat": true,
+    "Talk": false,
+    "TalkAbout": "dfdfsfsfsfsfdsfsfdsfsfsfsfsf"
+  },
+  "Map": {
+    "Key": "AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8z",
+    "Title": "",
+    "Zoom": 15,
+    "Center": {
+      "Lat": "50.4329658690059",
+      "Lng": "30.57958332067064"
+    },
+    "Point": {
+      "Lat": "50.43444200295209",
+      "Lng": "30.58322254166561"
+    }
+  },
+  "Time": {
+    "Afternoon": false,
+    "Evening": false,
+    "Morning": true
+  }
+}

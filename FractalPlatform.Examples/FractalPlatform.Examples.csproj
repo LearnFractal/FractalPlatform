@@ -29,7 +29,6 @@
     <Folder Include="Databases\SocialNetwork\" />
     <Folder Include="Databases\Uezjunyka\Uezjunyka\Document\" />
     <Folder Include="Databases\VideoLibrary\" />
-    <Folder Include="Layouts\CoffeePoints\" />
   </ItemGroup>
 
   <ItemGroup>
