@@ -46,6 +46,33 @@
             <control attr="">
                 <section class="section-1">
                     <div class="container">
+                        <div class="settings-box__wrap">
+                            <div class="settings-box settings-box--contacts">
+                                <h2 class="settings-box__title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32" fill="none">
+                                        <g clip-path="url(#clip0_1326_11166)">
+                                            <path d="M31.9867 4H0V28H32L31.9867 4ZM10.6667 8C12.88 8 14.6667 9.78667 14.6667 12C14.6667 14.2133 12.88 16 10.6667 16C8.45333 16 6.66667 14.2133 6.66667 12C6.66667 9.78667 8.45333 8 10.6667 8ZM18.6667 24H2.66667V22.6667C2.66667 20 8 18.5333 10.6667 18.5333C13.3333 18.5333 18.6667 20 18.6667 22.6667V24ZM23.8 18.6667H25.9867L28 21.3333L25.3467 23.9867C23.6 22.68 22.3067 20.8133 21.7067 18.6667C21.4667 17.8133 21.3333 16.92 21.3333 16C21.3333 15.08 21.4667 14.1867 21.7067 13.3333C22.3067 11.1733 23.6 9.32 25.3467 8.01333L28 10.6667L25.9867 13.3333H23.8C23.5067 14.1733 23.3333 15.0667 23.3333 16C23.3333 16.9333 23.5067 17.8267 23.8 18.6667Z" fill="#657BDF"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1326_11166">
+                                                <rect width="32" height="32" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    Contacts
+                                </h2>
+                                <ul class="contacts-form__list">
+                                    <li class="contacts-form__item">
+                                        <p class="contacts-form__input-name">Name</p>
+                                        <input class="contacts-form__input" type="text" @Contacts.Name.TextBox>
+                                    </li>
+                                    <li class="contacts-form__item">
+                                        <p class="contacts-form__input-name">Messanger</p>
+                                        <input class="contacts-form__input" type="text" @Contacts.Messanger.TextBox>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="settings-box__wrap settings-box__wrap--2">
                             <div class="settings-box">
                                 <h2 class="settings-box__title">
@@ -207,33 +234,6 @@
                                     <li class="settings__item">
                                         <input class="settings__input" type="checkbox" name="day" id="day-7" @Day.Sunday.CheckBox>
                                         <label class="settings__label" for="day-7">Sunday</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="settings-box__wrap">
-                            <div class="settings-box settings-box--contacts">
-                                <h2 class="settings-box__title">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32" fill="none">
-                                        <g clip-path="url(#clip0_1326_11166)">
-                                            <path d="M31.9867 4H0V28H32L31.9867 4ZM10.6667 8C12.88 8 14.6667 9.78667 14.6667 12C14.6667 14.2133 12.88 16 10.6667 16C8.45333 16 6.66667 14.2133 6.66667 12C6.66667 9.78667 8.45333 8 10.6667 8ZM18.6667 24H2.66667V22.6667C2.66667 20 8 18.5333 10.6667 18.5333C13.3333 18.5333 18.6667 20 18.6667 22.6667V24ZM23.8 18.6667H25.9867L28 21.3333L25.3467 23.9867C23.6 22.68 22.3067 20.8133 21.7067 18.6667C21.4667 17.8133 21.3333 16.92 21.3333 16C21.3333 15.08 21.4667 14.1867 21.7067 13.3333C22.3067 11.1733 23.6 9.32 25.3467 8.01333L28 10.6667L25.9867 13.3333H23.8C23.5067 14.1733 23.3333 15.0667 23.3333 16C23.3333 16.9333 23.5067 17.8267 23.8 18.6667Z" fill="#657BDF"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_1326_11166">
-                                                <rect width="32" height="32" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    Contacts
-                                </h2>
-                                <ul class="contacts-form__list">
-                                    <li class="contacts-form__item">
-                                        <p class="contacts-form__input-name">Name</p>
-                                        <input class="contacts-form__input" type="text" @Contacts.Name.TextBox>
-                                    </li>
-                                    <li class="contacts-form__item">
-                                        <p class="contacts-form__input-name">Messanger</p>
-                                        <input class="contacts-form__input" type="text" @Contacts.Messanger.TextBox>
                                     </li>
                                 </ul>
                             </div>
