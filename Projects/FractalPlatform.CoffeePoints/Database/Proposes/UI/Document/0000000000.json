@@ -1,21 +1,10 @@
 {
+  "Layout": "Propose",
+  "IsRawPage": true,
   "ReadOnly": true,
-  "Visible": false,
-  "Contacts": {
-    "Name": {
-      "Visible": true
-    },
-    "Messanger": {
-      "Visible": true
-    }
-  },
-  "Goal": {
-    "TalkAbout": {
-      "Visible": true
-    }
-  },
   "Map": {
-    "Visible": true,
-    "ControlType": "Map"
+    "ControlType": "Map",
+    "Width": 1280,
+    "Height": 600
   }
 }
