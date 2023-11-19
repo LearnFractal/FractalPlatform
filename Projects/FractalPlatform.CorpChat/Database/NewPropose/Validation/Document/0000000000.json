@@ -1,0 +1,31 @@
+{
+  "Contacts": {
+    "Name": {
+      "IsRequired": true
+    },
+    "Messanger": {
+      "IsRequired": true
+    },
+    "Gender": {
+      "IsRequired": true
+    },
+    "Age": {
+      "MinValue": 18,
+      "MaxValue": 100,
+      "Type": "int"
+    },
+    "Photo": {
+      "IsRequired": true
+    }
+  },
+  "Map": {
+    "Point": {
+      "Lat": {
+        "IsRequired": true
+      },
+      "Lng": {
+        "IsRequired": true
+      }
+    }
+  }
+}

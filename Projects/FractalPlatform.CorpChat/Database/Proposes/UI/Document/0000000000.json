@@ -1,0 +1,10 @@
+{
+  "Layout": "Propose",
+  "IsRawPage": true,
+  "ReadOnly": true,
+  "Map": {
+    "ControlType": "Map",
+    "Width": 1280,
+    "Height": 600
+  }
+}

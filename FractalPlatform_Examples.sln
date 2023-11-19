@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Weather", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.CoffeePoints", "Projects\FractalPlatform.CoffeePoints\FractalPlatform.CoffeePoints.csproj", "{5ACC3314-B223-48B1-904C-159DCBFA224A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.CorpChat", "Projects\FractalPlatform.CorpChat\FractalPlatform.CorpChat.csproj", "{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,14 @@ Global
 		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Release|x86.ActiveCfg = Release|Any CPU
 		{5ACC3314-B223-48B1-904C-159DCBFA224A}.Release|x86.Build.0 = Release|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Debug|x86.Build.0 = Debug|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Release|x86.ActiveCfg = Release|Any CPU
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +113,7 @@ Global
 		{C93B3149-B83E-4390-9611-426DD1105B8B} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 		{83061C0C-D18A-4BF0-BDA1-CF5BA3738BA0} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 		{5ACC3314-B223-48B1-904C-159DCBFA224A} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
+		{6934F64A-C2AC-43F5-A1E1-0B1DB5264C8A} = {E7B45258-050C-41DB-891D-B76DCBA8628E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {842F3684-70EF-46AF-AA77-E2F6307580EF}
