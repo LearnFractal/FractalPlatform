@@ -1,6 +1,5 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
-using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 
@@ -36,17 +35,13 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
             {
                 //we need local collection.
                 //users shouldn't share database between each other
-                _collection = Client.SetDefaultCollection(eventInfo.Action)
-                                    .GetFirstDoc()
-                                    .ToCollection();
+                _collection = FirstDocOf(eventInfo.Action).ToCollection();
 
                 _collection.OpenForm();
             }
             else
             {
-                Client.SetDefaultCollection(eventInfo.Action)
-                      .GetFirstDoc()
-                      .OpenForm();
+                FirstDocOf(eventInfo.Action).OpenForm();
             }
 
             return base.OnEventDimension(eventInfo);
@@ -54,13 +49,8 @@ namespace FractalPlatform.Examples.Applications.ToDoIntro
 
         public override void OnStart()
         {
-            Client.SetDefaultCollection("NewIntro")
-                  .GetFirstDoc()
-                  .WantCreateNewDocumentFor("Intro")
-                  .OpenForm(null, "Intro course", result =>
-                  {
-                      MessageBox("Thank you, Have a nice day !");
-                  });
+            CreateNewDocFor("NewIntro", "Intro")
+                .OpenForm(null, "Intro course", result => MessageBox("Thank you, Have a nice day !"));
         }
     }
 }

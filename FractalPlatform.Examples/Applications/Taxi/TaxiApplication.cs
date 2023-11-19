@@ -10,23 +10,20 @@ namespace FractalPlatform.Examples.Applications.Taxi
     {
         public void MyUser()
         {
-            Client.SetDefaultCollection("Users")
-                  .GetWhere("{'Name':@UserName}")
+            DocsWhere("Users", "{'Name':@UserName}")
                   .OpenForm();
         }
 
         public void MyDashboard()
         {
-            Client.SetDefaultCollection("Users")
-                  .GetWhere("{'Name':@UserName}")
+            DocsWhere("Users", "{'Name':@UserName}")
                   .ExtendUIDimension(@"{'Style':'Save:false','ReadOnly':true,'Password':{'Visible':false},'NewOrders':{'Visible':true}}")
                   .OpenForm();
         }
 
         public void NewOrder()
         {
-            Client.SetDefaultCollection("NewOrder")
-                  .WantCreateNewDocumentForArray("Orders", "{'Orders':[$]}")
+            CreateNewDocForArray("NewOrder", "Orders", "{'Orders':[$]}")
                   .OpenForm();
         }
 
@@ -54,16 +51,14 @@ namespace FractalPlatform.Examples.Applications.Taxi
             {
                 case "Take":
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere(menuInfo.AttrPath)
+                        DocsWhere("Users", menuInfo.AttrPath)
                               .Update("{'NewOrders':[{'Who':@UserName}]}");
 
                         break;
                     }
                 case "Complete":
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere(menuInfo.AttrPath)
+                        DocsWhere("Users", menuInfo.AttrPath)
                               .Update("{'ActiveOrders':[{'IsCompleted':true}]}");
 
                         break;
@@ -82,8 +77,7 @@ namespace FractalPlatform.Examples.Applications.Taxi
 
         public override void OnLogin(FormResult result)
         {
-            Client.SetDefaultCollection("Dashboard")
-                  .OpenForm();
+            FirstDocOf("Dashboard").OpenForm();
         }
     }
 }

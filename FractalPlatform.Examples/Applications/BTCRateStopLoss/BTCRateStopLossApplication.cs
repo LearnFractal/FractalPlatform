@@ -37,8 +37,7 @@ namespace FractalPlatform.Examples.Applications.BTCRateStopLoss
             if ((rate < config.MinValue || rate > config.MaxValue) &&
                 config.IsSendMessages)
             {
-                Client.SetDefaultCollection("Config")
-                      .GetFirstDoc()
+                FirstDocOf("Config")
                       .Update(@"{'IsSendMessages':false,
                                  'TextMessages':[Add,
                                             {'Provider':'Telegram',
@@ -64,9 +63,7 @@ namespace FractalPlatform.Examples.Applications.BTCRateStopLoss
             {
                 if (result.Result)
                 {
-                    Client.SetDefaultCollection("Config")
-                          .GetFirstDoc()
-                          .WantModifyExistingDocuments()
+                    ModifyFirstDocOf("Config")
                           .OpenForm(result => Rate());
                 }
                 else

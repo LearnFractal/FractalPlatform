@@ -20,8 +20,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
 
         private void ShowMatch(Game game)
         {
-            Client.SetDefaultCollection("Games")
-                  .GetWhere("{'ID':@ID}", _gameID)
+            DocsWhere("Games", "{'ID':@ID}", _gameID)
                   .Update("{'Status':'Finished'}");
 
             var participants = _myParticipant.Gender == GenderType.Boy ? game.Girls : game.Boys;
@@ -39,8 +38,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                            {
                                if (result.Result)
                                {
-                                   Client.SetDefaultCollection("Games")
-                                         .GetWhere("{'ID':@ID,@Gender:[{'Name':@Name}]}",
+                                   DocsWhere("Games", "{'ID':@ID,@Gender:[{'Name':@Name}]}",
                                                        _gameID,
                                                        choosedParticipant.GenderGroup,
                                                        choosedParticipant.Name)
@@ -62,8 +60,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
         {
             if (formResult == null || formResult.Result)
             {
-                var game = Client.SetDefaultCollection("Games")
-                                 .GetWhere("{'ID':@ID}", _gameID)
+                var game = DocsWhere("Games", "{'ID':@ID}", _gameID)
                                  .Select<Game>()[0];
 
                 var countChooses = 0;
@@ -99,8 +96,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
             var chooseParticipants = participants.Select(x => x.Name).ToList();
             chooseParticipants.Insert(0, "NoBody");
 
-            Client.SetDefaultCollection("Games")
-                  .GetWhere("{'ID':@ID,'AnswerQuestions':[{'From':@Name}]}", _gameID, _myParticipant.Name)
+            DocsWhere("Games", "{'ID':@ID,'AnswerQuestions':[{'From':@Name}]}", _gameID, _myParticipant.Name)
                   .SetUIDimension("{'Style':'Add:false;Del:false','AnswerQuestion':{'Enabled':false},'Choose':{'ControlType':'ComboBox'}}")
                   .SetDimension(DimensionType.Enum, DQL("{'Choose':{'Items':[@Participants]}}", chooseParticipants))
                   .ExtendDocument("{'Choose':'NoBody'}", _gameID)
@@ -113,8 +109,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                                                                  .GetDoc(_gameID)
                                                                  .Value("{'Choose':$}");
 
-                                   Client.SetDefaultCollection("Games")
-                                         .GetWhere("{'ID':@ID,@Gender:[{'Name':@Name}]}", _gameID, _myParticipant.GenderGroup, _myParticipant.Name)
+                                   DocsWhere("Games", "{'ID':@ID,@Gender:[{'Name':@Name}]}", _gameID, _myParticipant.GenderGroup, _myParticipant.Name)
                                          .Update("{@Gender:[{'Choose':@Choose}]}", _myParticipant.GenderGroup, _myParticipant.Choose);
 
                                    //8. Update choose
@@ -127,8 +122,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
         {
             if (formResult == null || formResult.Result)
             {
-                var game = Client.SetDefaultCollection("Games")
-                                 .GetWhere("{'ID':@ID}", _gameID)
+                var game = DocsWhere("Games", "{'ID':@ID}", _gameID)
                                  .Select<Game>()[0];
 
                 if (game.AnswerQuestions.All(x => !string.IsNullOrEmpty(x.Answer)) ||
@@ -148,9 +142,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
 
         private void ShowQuestions()
         {
-            Client.SetDefaultCollection("Games")
-                  .GetWhere("{'ID':@ID,'AnswerQuestions':[{'To':@Name}]}", _gameID, _myParticipant.Name)
-                  .WantModifyExistingDocuments()
+            ModifyDocsWhere("Games", "{'ID':@ID,'AnswerQuestions':[{'To':@Name}]}", _gameID, _myParticipant.Name)
                   .SetUIDimension("{'Style':'Add:false;Del:false','AnswerQuestions':[{'From':{'Enabled':false},'Question':{'Enabled':false}}]}")
                   .SetDimension(DimensionType.Validation, "{'AnswerQuestions':[{'Answer':{'IsRequired':true}}]}")
                   .OpenForm("{'AnswerQuestions':[{'From':$,'Question':$,'Answer':$}]}",
@@ -165,18 +157,16 @@ namespace FractalPlatform.Examples.Applications.DatingGame
 
         private void AddQuestion(Participant from, string question, Participant to)
         {
-            Client.SetDefaultCollection("Games")
-                                      .GetWhere("{'ID':@ID}", _gameID)
-                                      .Update("{'AnswerQuestions':[Add,{'From':@From,'Question':@Question,'To':@To,'Answer':''}]}",
-                                                  from.Name, question, to.Name);
+            DocsWhere("Games", "{'ID':@ID}", _gameID)
+                .Update("{'AnswerQuestions':[Add,{'From':@From,'Question':@Question,'To':@To,'Answer':''}]}",
+                        from.Name, question, to.Name);
         }
 
         private void StartGame(FormResult formResult)
         {
             if (formResult.Result)
             {
-                var game = Client.SetDefaultCollection("Games")
-                                 .GetWhere("{'ID':@ID}", _gameID)
+                var game = DocsWhere("Games", "{'ID':@ID}", _gameID)
                                  .SelectOne<Game>();
 
                 if ((game.Boys.Count >= MAX_GENDER_PARTICIPANTS &&
@@ -211,8 +201,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                             }
                         }
 
-                        Client.SetDefaultCollection("Games")
-                          .GetWhere("{'ID':@ID}", _gameID)
+                        DocsWhere("Games", "{'ID':@ID}", _gameID)
                           .Update("{'Status':@Status}", GameStatus.Started);
                     }
 
@@ -239,8 +228,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
         public override void OnStart()
         {
             //1. Register participant
-            Client.SetDefaultCollection("NewParticipant")
-                  .GetFirstDoc()
+            FirstDocOf("NewParticipant")
                   .OpenForm(result =>
                   {
                       if (result.Result)
@@ -262,16 +250,14 @@ namespace FractalPlatform.Examples.Applications.DatingGame
 
                           while (true)
                           {
-                              games = Client.SetDefaultCollection("Games")
-                                            .GetWhere("{'Status':@Status}", GameStatus.Pending)
+                              games = DocsWhere("Games", "{'Status':@Status}", GameStatus.Pending)
                                             .Select<Game>();
 
                               foreach (var game in games)
                               {
                                   if (game.ExpiredParticipants < DateTime.Now)
                                   {
-                                      Client.SetDefaultCollection("Games")
-                                            .GetWhere("{'ID':@ID}", _gameID)
+                                      DocsWhere("Games", "{'ID':@ID}", _gameID)
                                             .Update("{'Status':'Finished'}");
 
                                       continue;
@@ -291,8 +277,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                               if (_gameID > 0)
                                   break;
 
-                              var newDocID = Client.SetDefaultCollection("Games")
-                                                .GetAll()
+                              var newDocID = DocsOf("Games")
                                                 .Count() + 1;
 
                               //3. Create new game
@@ -309,8 +294,7 @@ namespace FractalPlatform.Examples.Applications.DatingGame
                           }
 
                           //4. Add participant to game
-                          Client.SetDefaultCollection("Games")
-                                .GetWhere("{'ID':@ID}", _gameID)
+                          DocsWhere("Games", "{'ID':@ID}", _gameID)
                                 .Update("{@Gender:[Add,@Participant]}",
                                             _myParticipant.GenderGroup,
                                             _myParticipant);

@@ -67,10 +67,7 @@ namespace FractalPlatform.Examples.Applications.WorkOutTracker
 
         public override void OnStart()
         {
-            Client.SetDefaultCollection("WorkOut")
-                  .GetAll()
-                  .WantModifyExistingDocuments()
-                  .OpenForm();
+            ModifyDocsOf("WorkOut").OpenForm();
         }
 
         public override BaseRenderForm CreateRenderForm(DOMForm form) => new ExtendedRenderForm(this, form);

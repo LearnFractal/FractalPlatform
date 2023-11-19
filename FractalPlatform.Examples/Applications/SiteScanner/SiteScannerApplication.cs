@@ -37,8 +37,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                                 string url,
                                 string tag)
         {
-            Client.SetDefaultCollection("Users")
-                  .GetWhere("{'Name':@Name}", userInfo.Name)
+            DocsWhere("Users", "{'Name':@Name}", userInfo.Name)
                   .Update(@"{'TextMessages':[Add,{'Provider':'Telegram',
                                                   'Receiver':@Receiver,
                                                   'Message':@Message,
@@ -130,9 +129,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
         {
             return false;
 
-            var users = Client.SetDefaultCollection("Users")
-                              .GetAll()
-                              .Select<UserInfo>();
+            var users = DocsOf("Users").Select<UserInfo>();
 
             _cache.Clear();
 
@@ -142,8 +139,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
                 user.LastScanTime = DateTime.Now;
 
-                Client.SetDefaultCollection("Users")
-                      .GetWhere("{'Name':@Name}", user.Name)
+                DocsWhere("Users", "{'Name':@Name}", user.Name)
                       .UpdateByObject(user);
             }
 
@@ -160,9 +156,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
                               .GetFirstDoc()
                               .IsEquals("{'Password':$}", "sc"))
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetAll()
-                              .OpenForm();
+                        DocsOf("Users").OpenForm();
                     }
                 }
             });

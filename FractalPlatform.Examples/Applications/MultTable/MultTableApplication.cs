@@ -44,8 +44,7 @@ namespace FractalPlatform.Examples.Applications.MultTable
 
         public override void OnStart()
         {
-            Client.SetDefaultCollection("Setting")
-                  .GetFirstDoc()
+            FirstDocOf("Setting")
                   .OpenForm(null, null, result =>
                   {
                       if (result.Result)

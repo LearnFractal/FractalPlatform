@@ -7,10 +7,7 @@ namespace FractalPlatform.Examples.Applications.ToDo
     {
         public override void OnStart()
         {
-            Client.SetDefaultCollection("ToDoList")
-                  .GetFirstDoc()
-                  .WantModifyExistingDocuments()
-                  .OpenForm();
+            ModifyFirstDocOf("ToDoList").OpenForm();
         }
     }
 }

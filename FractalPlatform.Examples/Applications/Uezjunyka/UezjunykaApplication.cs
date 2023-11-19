@@ -7,17 +7,11 @@ namespace FractalPlatform.Examples.Applications.Uezjunyka
     {
         public override void OnStart()
         {
-            Client.SetDefaultCollection("NewUezjunyka")
-                  .WantCreateNewDocumentFor("Uezjunyka")
+            CreateNewDocFor("NewUezjunyka", "Uezjunyka")
                   .OpenForm(result => {
-                      MessageBox("Спасибо, Вы зарегестрированы !", "Регистрация",
-                                 MessageBoxButtonType.Ok,
-                                 result =>
-                      {
-                          Client.SetDefaultCollection("Uezjunyka")
-                                .GetAll()
-                                .OpenForm();
-                      });
+                        MessageBox("Спасибо, Вы зарегестрированы !", "Регистрация",
+                                   MessageBoxButtonType.Ok,
+                                   result => DocsOf("Uezjunyka").OpenForm());
                   });
         }
     }

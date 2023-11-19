@@ -11,8 +11,7 @@ namespace FractalPlatform.Examples.Applications.TableToJson
     {
         public override void OnStart()
         {
-            Client.SetDefaultCollection("Dashboard")
-                  .GetFirstDoc()
+            FirstDocOf("Dashboard")
                   .OpenForm(result =>
                   {
                       var table = result.Collection

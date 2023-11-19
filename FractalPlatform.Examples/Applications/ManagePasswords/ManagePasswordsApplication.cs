@@ -27,9 +27,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
                                             .GetBaseDoc()
                                             .Update("{'EncryptPassword':@Password}", password);
 
-                                      Client.SetDefaultCollection("Passwords")
-                                            .GetFirstDoc()
-                                            .WantModifyExistingDocuments()
+                                      ModifyFirstDocOf("Passwords")
                                             .OpenForm();
                                   }
                                   else
@@ -51,8 +49,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
             switch (menuInfo.Action)
             {
                 case "CopyPassword":
-                    var password = Client.SetDefaultCollection("Passwords")
-                                         .GetWhere(menuInfo.AttrPath)
+                    var password = DocsWhere("Passwords", menuInfo.AttrPath)
                                          .Value("{'Passwords':[{'Password':$}]}");
 
                     //Clipboard.SetText(password);

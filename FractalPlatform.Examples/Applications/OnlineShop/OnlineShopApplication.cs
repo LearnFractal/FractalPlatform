@@ -17,34 +17,28 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
             {
                 case "Categories":
                     {
-                        Client.SetDefaultCollection("Categories")
-                              .GetAll()
+                        DocsOf("Categories")
                               .OpenForm();
 
                         return true;
                     }
                 case "Products":
                     {
-                        Client.SetDefaultCollection("Products")
-                              .GetAll()
+                        DocsOf("Products")
                               .OpenForm();
 
                         return true;
                     }
                 case "NewCategory":
                     {
-                        Client.SetDefaultCollection("NewCategory")
-                              .GetFirstDoc()
-                              .WantCreateNewDocumentFor("Categories")
+                        CreateNewDocFor("NewCategory", "Categories")
                               .OpenForm();
 
                         return true;
                     }
                 case "NewProduct":
                     {
-                        Client.SetDefaultCollection("NewProduct")
-                              .GetFirstDoc()
-                              .WantCreateNewDocumentFor("Products")
+                        CreateNewDocFor("NewProduct", "Products")
                               .OpenForm();
 
                         return true;
@@ -65,8 +59,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                                             .GetWhere(eventInfo.AttrPath.Parent)
                                             .Values("{'Products':[{'Categories':[$]}]}");
 
-                        Client.SetDefaultCollection("Products")
-                              .GetWhere("{'Name':@Name,'Categories':[In,@Categories]}", name, categories)
+                        DocsWhere("Products", "{'Name':@Name,'Categories':[In,@Categories]}", name, categories)
                               .ExtendUIDimension("{'ReadOnly':true}")
                               .OpenForm();
 
@@ -78,8 +71,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                                                   .GetFirstDoc()
                                                   .Value("{'Header':{'SearchText':$}}");
 
-                        var categories = Client.SetDefaultCollection("Products")
-                                               .GetWhere("{'Name':@SearchText}", searchText)
+                        var categories = DocsWhere("Products", "{'Name':@SearchText}", searchText)
                                                .ToStorage("{'Categories':[$]}")
                                                .ToAttrList()
                                                .Select(x => x.Value.ToString())
@@ -87,8 +79,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
                                                .Select(x => new { Category = x })
                                                .ToStorage();
 
-                        var products = Client.SetDefaultCollection("Products")
-                                             .GetWhere("{'Name':@Name}", searchText)
+                        var products = DocsWhere("Products", "{'Name':@Name}", searchText)
                                              .ToStorage();
 
                         eventInfo.Collection
@@ -109,8 +100,7 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
         {
             if (enumInfo.Variable == "Categories")
             {
-                return Client.SetDefaultCollection("Categories")
-                             .GetAll()
+                return DocsOf("Categories")
                              .Values("{'Name':$}");
             }
             else
@@ -135,23 +125,20 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 
                 if (filters.Count > 0)
                 {
-                    var orQuery = Client.SetDefaultCollection("Products")
-                                        .GetWhere(filters[0]);
+                    var orQuery = DocsWhere("Products", filters[0]);
 
                     for (int i = 1; i < filters.Count; i++)
                     {
                         orQuery.OrWhere(filters[i]);
                     }
 
-                    products = Client.SetDefaultCollection("Products")
-                                     .GetWhere("{'Categories':[Any,@Category]}", category)
+                    products = DocsWhere("Products", "{'Categories':[Any,@Category]}", category)
                                      .AndWhere(orQuery)
                                      .ToStorage();
                 }
                 else
                 {
-                    products = Client.SetDefaultCollection("Products")
-                                     .GetWhere("{'Categories':[Any,@Category]}", category)
+                    products = DocsWhere("Products", "{'Categories':[Any,@Category]}", category)
                                      .ToStorage();
                 }
 
@@ -164,15 +151,13 @@ namespace FractalPlatform.Examples.Applications.OnlineShop
 
         public void OpenCategory(string category)
         {
-            var collection = Client.SetDefaultCollection("Dashboard")
-                                   .GetFirstDoc()
+            var collection = FirstDocOf("Dashboard")
                                    .ToCollection();
 
             collection.GetFirstDoc()
                       .Update("{'Header':{'Category':@Category}}", category);
 
-            var filter = Client.SetDefaultCollection("Categories")
-                               .GetWhere("{'Name':@Category}", category)
+            var filter = DocsWhere("Categories", "{'Name':@Category}", category)
                                .ToStorage("{'Filters':[$]}");
 
             collection.MergeToPath(filter)

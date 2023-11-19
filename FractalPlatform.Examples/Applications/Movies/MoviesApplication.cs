@@ -35,8 +35,7 @@ namespace FractalPlatform.Examples.Applications.Movies
                                    })
                         };
 
-                        Client.SetDefaultCollection("Series")
-                              .GetFirstDoc()
+                        FirstDocOf("Series")
                               .ExtendDocument(obj.ToJson())
                               .OpenForm();
                     }

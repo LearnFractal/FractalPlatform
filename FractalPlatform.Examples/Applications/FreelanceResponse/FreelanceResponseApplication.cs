@@ -12,33 +12,26 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
     {
         public TaskInfo GetTask(uint docID)
         {
-            return Client.SetDefaultCollection("Tasks")
-                         .GetDoc(docID)
-                         .SelectOne<TaskInfo>();
+            return DocsWhere("Tasks", docID).SelectOne<TaskInfo>();
         }
 
         private string GetDemoWho(AttrPath attrPath)
         {
-            return Client.SetDefaultCollection("Tasks")
-                         .GetWhere(attrPath)
-                         .Value("{'Demos':[{'Who':$}]}");
+            return DocsWhere("Tasks", attrPath).Value("{'Demos':[{'Who':$}]}");
         }
 
         private uint GetCustomerUserID(uint docID)
         {
             var task = GetTask(docID);
 
-            return Client.SetDefaultCollection("Users")
-                         .GetWhere("{'Name':@Who}", task.Who)
-                         .GetFirstID();
+            return DocsWhere("Users", "{'Name':@Who}", task.Who).GetFirstID();
         }
 
         private uint GetDemoUserID(AttrPath attrPath)
         {
             var who = GetDemoWho(attrPath);
 
-            return Client.SetDefaultCollection("Users")
-                         .GetWhere("{'Name':@Who}", who)
+            return DocsWhere("Users", "{'Name':@Who}", who)
                          .GetFirstID();
         }
 
@@ -46,12 +39,10 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
         {
             var userID = GetCustomerUserID(docID);
 
-            Client.SetDefaultCollection("Users")
-                  .GetDoc(userID)
+            DocsWhere("Users", userID)
                   .Update("{'Rates':[Add,{'Who':'Bot','OnDate':@Now,'Comment':'Task rejected','Stars':1}]}");
 
-            Client.SetDefaultCollection("Tasks")
-                  .GetDoc(docID)
+            DocsWhere("Tasks", docID)
                   .Update("{'Status':'Rejected'}");
         }
 
@@ -61,9 +52,8 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
             {
                 var expired = DateTime.Now.AddDays(-3);
 
-                var docIDs = Client.SetDefaultCollection("Tasks")
-                                   .GetWhere("{'Status':Any('New','InProgress'),'EndDate':Less(@Expired)}",
-                                             expired)
+                var docIDs = DocsWhere("Tasks", "{'Status':Any('New','InProgress'),'EndDate':Less(@Expired)}",
+                                                expired)
                                    .GetDocIDs();
 
                 foreach (var docID in docIDs)
@@ -81,18 +71,15 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
             {
                 case "NewTaskNumber":
                     {
-                        return "T-" + (Client.SetDefaultCollection("Tasks")
-                                             .GetAll()
+                        return "T-" + (DocsOf("Tasks")
                                              .Count() + 1).ToString("00000");
                     }
                 case "Rating":
                     {
-                        var count = Client.SetDefaultCollection("Users")
-                                          .GetWhere(computedInfo.AttrPath)
+                        var count = DocsWhere("Users", computedInfo.AttrPath)
                                           .Count("{'Rates':[{'Stars':$}]}");
 
-                        var sum = Client.SetDefaultCollection("Users")
-                                        .GetWhere(computedInfo.AttrPath)
+                        var sum = DocsWhere("Users", computedInfo.AttrPath)
                                         .Sum("{'Rates':[{'Stars':$}]}");
 
                         return count > 0 ? sum / count : 0;
@@ -130,16 +117,14 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
             {
                 case "Users":
                     {
-                        Client.SetDefaultCollection("Users")
-                              .GetAll()
+                        DocsOf("Users")
                               .OpenForm();
 
                         break;
                     }
                 case "Tasks":
                     {
-                        var query = Client.SetDefaultCollection("Tasks")
-                                          .GetWhere("{'Status':'New'}");
+                        var query = DocsWhere("Tasks", "{'Status':'New'}");
 
                         if (query.Any())
                         {
@@ -154,8 +139,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "MyTasks":
                     {
-                        var query = Client.SetDefaultCollection("Tasks")
-                                          .GetWhere("{'Who':@UserName}")
+                        var query = DocsWhere("Tasks", "{'Who':@UserName}")
                                           .OrWhere("{'Accepts':[{'Who':@UserName}]}");
 
                         if (query.Any())
@@ -171,12 +155,10 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "UserTasks":
                     {
-                        var user = Client.SetDefaultCollection("Users")
-                                         .GetWhere(eventInfo.AttrPath)
+                        var user = DocsWhere("Users", eventInfo.AttrPath)
                                          .Value("{'Name':$}");
 
-                        var query = Client.SetDefaultCollection("Tasks")
-                                          .GetWhere("{'Who':@UserName}")
+                        var query = DocsWhere("Tasks", "{'Who':@UserName}")
                                           .OrWhere("{'Accepts':[{'Who':@User}]}", user);
 
                         if (query.Any())
@@ -192,8 +174,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "CompletedTasks":
                     {
-                        var query = Client.SetDefaultCollection("Tasks")
-                                          .GetWhere("{'Status':'Completed'}");
+                        var query = DocsWhere("Tasks", "{'Status':'Completed'}");
 
                         if (query.Any())
                         {
@@ -208,8 +189,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "NewTask":
                     {
-                        Client.SetDefaultCollection("NewTask")
-                              .WantCreateNewDocumentFor("Tasks")
+                        CreateNewDocFor("NewTask", "Tasks")
                               .OpenForm(result =>
                               {
                                   if (result.Result)
@@ -226,8 +206,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
 
                         var task = GetTask(eventInfo.DocID);
 
-                        if (Client.SetDefaultCollection("Users")
-                                  .GetDoc(userID)
+                        if (DocsWhere("Users", userID)
                                   .AndWhere("{'Rates':[{'TaskNumber':@TaskNumber,'Who':@UserName}]}", task.TaskNumber)
                                   .Any())
                         {
@@ -235,10 +214,10 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                         }
                         else
                         {
-                            Client.SetDefaultCollection("NewRate")
-                                  .WantCreateNewDocumentForArray("Users",
-                                                                 "{'Rates':[$]}",
-                                                                 userID)
+                            CreateNewDocForArray("NewRate",
+                                                 "Users",
+                                                 "{'Rates':[$]}",
+                                                 userID)
                                   .ExtendDocument(DQL("{'TaskNumber':@TaskNumber}", task.TaskNumber))
                                   .OpenForm(result =>
                                   {
@@ -257,8 +236,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
 
                         var task = GetTask(eventInfo.DocID);
 
-                        if (Client.SetDefaultCollection("Users")
-                                 .GetDoc(userID)
+                        if (DocsWhere("Users", userID)
                                  .AndWhere("{'Rates':[{'TaskNumber':@TaskNumber}]}", task.TaskNumber)
                                  .Any())
                         {
@@ -266,10 +244,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                         }
                         else
                         {
-                            Client.SetDefaultCollection("NewRate")
-                                  .WantCreateNewDocumentForArray("Users",
-                                                                 "{'Rates':[$]}",
-                                                                 userID)
+                            CreateNewDocForArray("NewRate", "Users", "{'Rates':[$]}", userID)
                                   .ExtendDocument(DQL("{'TaskNumber':@TaskNumber}", task.TaskNumber))
                                   .OpenForm(result =>
                                   {
@@ -286,8 +261,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     {
                         var task = GetTask(eventInfo.DocID);
 
-                        Client.SetDefaultCollection("NewAccept")
-                              .WantCreateNewDocumentForArray("Tasks", "{'Accepts':[$]}", eventInfo.DocID)
+                        CreateNewDocForArray("NewAccept", "Tasks", "{'Accepts':[$]}", eventInfo.DocID)
                               .ExtendDocument(DQL("{'MinPrice':@MinPrice}", task.MinPrice))
                               .OpenForm(result =>
                               {
@@ -303,8 +277,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "NewDemo":
                     {
-                        Client.SetDefaultCollection("NewDemo")
-                              .WantCreateNewDocumentForArray("Tasks", "{'Demos':[$]}", eventInfo.DocID)
+                        CreateNewDocForArray("NewDemo", "Tasks", "{'Demos':[$]}", eventInfo.DocID)
                               .OpenForm(result =>
                               {
                                   if (result.Result)
@@ -337,16 +310,13 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "AcceptDeveloper":
                     {
-                        var developer = Client.SetDefaultCollection("Tasks")
-                                              .GetWhere(eventInfo.AttrPath)
+                        var developer = DocsWhere("Tasks", eventInfo.AttrPath)
                                               .Value("{'Accepts':[{'Who':$}]}");
 
-                        Client.SetDefaultCollection("Tasks")
-                              .GetWhere(eventInfo.AttrPath)
+                        DocsWhere("Tasks", eventInfo.AttrPath)
                               .Update("{'Developer':@Developer,'Status':'InProgress'}", developer);
 
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere("{'Name':@Developer}", developer)
+                        DocsWhere("Users", "{'Name':@Developer}", developer)
                               .Update("{'Accepted':Add(1)}");
 
                         MessageBox("Developer was accepted.", MessageBoxButtonType.Ok);
@@ -357,16 +327,13 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "AcceptDemo":
                     {
-                        var developer = Client.SetDefaultCollection("Tasks")
-                                              .GetWhere(eventInfo.AttrPath)
+                        var developer = DocsWhere("Tasks", eventInfo.AttrPath)
                                               .Value("{'Demos':[{'Who':$}]}");
 
-                        Client.SetDefaultCollection("Tasks")
-                              .GetWhere(eventInfo.AttrPath)
+                        DocsWhere("Tasks", eventInfo.AttrPath)
                               .Update("{'Developer':@Developer,'Status':'Completed'}", developer);
 
-                        Client.SetDefaultCollection("Users")
-                              .GetWhere("{'Name':@Developer}", developer)
+                        DocsWhere("Users", "{'Name':@Developer}", developer)
                               .Update("{'Completed':Add(1)}");
 
                         MessageBox("Demo was accepted.", MessageBoxButtonType.Ok);
@@ -381,14 +348,12 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                                                .GetWhere(eventInfo.AttrPath)
                                                .Value("{'Demos':[{'Message':$}]}");
 
-                        var avatar = Client.SetDefaultCollection("Users")
-                                           .GetWhere("{'Name':@UserName}")
+                        var avatar = DocsWhere("Users", "{'Name':@UserName}")
                                            .Value("{'Photo':$}");
 
                         if (!string.IsNullOrEmpty(message))
                         {
-                            Client.SetDefaultCollection("Tasks")
-                                  .GetWhere(eventInfo.AttrPath)
+                            DocsWhere("Tasks", eventInfo.AttrPath)
                                   .Update("{'Demos':[{'Chat':[Add,{'Avatar':@Avatar,'OnDate':@Now,'Who':@UserName,'Text':@Message}]}]}",
                                           avatar,
                                           message);
@@ -417,8 +382,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
 
         public override void OnLogin(FormResult result)
         {
-            Client.SetDefaultCollection("Dashboard")
-                  .GetFirstDoc()
+            FirstDocOf("Dashboard")
                   .OpenForm();
         }
 

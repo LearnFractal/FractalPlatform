@@ -32,22 +32,17 @@ namespace FractalPlatform.Examples.Applications.Supermarket
 
         public void ViewStock()
         {
-            Client.SetDefaultCollection("Stock")
-                  .GetAll()
-                  .OpenForm();
+            DocsOf("Stock").OpenForm();
         }
 
         public void ViewOrders()
         {
-            Client.SetDefaultCollection("Orders")
-                  .GetAll()
-                  .OpenForm();
+            DocsOf("Orders").OpenForm();
         }
 
         public void NewOrder()
         {
-            Client.SetDefaultCollection("NewOrder")
-                  .WantCreateNewDocumentFor("Orders")
+            CreateNewDocFor("NewOrder", "Orders")
                   .OpenForm(result => 
                   {
                       if (result.Result)
@@ -60,10 +55,8 @@ namespace FractalPlatform.Examples.Applications.Supermarket
 
                           foreach(var product in cart.Products)
                           {
-                              Client.SetDefaultCollection("Stock")
-                                                .GetFirstDoc()
-                                                .AndWhere("{'Products':[{'Product':@Product}]}", product.Product)
-                                                .Update("{'Products':[{'Count':Sub(@Count)}]}", product.Count);
+                              FirstDocOf("Stock").AndWhere("{'Products':[{'Product':@Product}]}", product.Product)
+                                                 .Update("{'Products':[{'Count':Sub(@Count)}]}", product.Count);
 
                           }
 
@@ -139,8 +132,7 @@ namespace FractalPlatform.Examples.Applications.Supermarket
 
         public override void OnLogin(FormResult result)
         {
-            Client.SetDefaultCollection("Dashboard")
-                  .OpenForm();
+            FirstDocOf("Dashboard").OpenForm();
         }
     }
 }

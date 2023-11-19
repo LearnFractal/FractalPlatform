@@ -20,8 +20,7 @@ namespace FractalPlatform.Examples.Applications.JsonToWebApp
 
         public override void OnStart()
         {
-            Client.SetDefaultCollection("Dashboard")
-                  .GetFirstDoc()
+            FirstDocOf("Dashboard")
                   .OpenForm(result =>
                   {
                       var json = result.Collection
