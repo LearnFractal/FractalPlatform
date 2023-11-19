@@ -1,7 +1,4 @@
 {
-  "OnDate": {
-    "Formula": "@Now"
-  },
   "Map": {
     "Key": {
       "Formula": "@Key"

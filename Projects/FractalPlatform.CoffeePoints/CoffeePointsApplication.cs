@@ -61,7 +61,11 @@ namespace FractalPlatform.CoffeePoints
 
         public override object OnComputedDimension(ComputedInfo computedInfo)
         {
-            if (computedInfo.AttrPath.LastPath == "Gender")
+            if (computedInfo.Variable == "Key")
+            {
+                return "AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8z";
+            }
+            else if (computedInfo.AttrPath.LastPath == "Gender")
             {
                 return computedInfo.AttrValue.ToString() == "Male" ? "men" : "women";
             }
