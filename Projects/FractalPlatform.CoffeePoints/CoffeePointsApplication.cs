@@ -63,7 +63,7 @@ namespace FractalPlatform.CoffeePoints
         {
             if (computedInfo.Variable == "Key")
             {
-                return "AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8zzY";
+                return "AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8z";
             }
             else if (computedInfo.AttrPath.LastPath == "Gender")
             {

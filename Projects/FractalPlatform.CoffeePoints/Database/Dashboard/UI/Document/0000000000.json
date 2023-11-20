@@ -3,8 +3,8 @@
   "IsRawPage": true,
   "Map": {
     "ControlType": "Map",
-    "Width": 1500,
-    "Height": 800
+    "Width": "100%",
+    "Height": "800px"
   },
   "Find": {
     "ControlType": "Button"

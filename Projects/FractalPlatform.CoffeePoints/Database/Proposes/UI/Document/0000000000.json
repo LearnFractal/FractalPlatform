@@ -4,7 +4,7 @@
   "ReadOnly": true,
   "Map": {
     "ControlType": "Map",
-    "Width": 1280,
-    "Height": 600
+    "Width": "100%",
+    "Height": "600px"
   }
 }
