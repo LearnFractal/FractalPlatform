@@ -19,6 +19,7 @@
     <form action="@BaseUrl/@AppName/@FormName" enctype="multipart/form-data" method="post">
         <input type="hidden" name="EditKey" value="" />
         <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" id="Scroll" name="Scroll" value="" />
         <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
         <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
         <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
@@ -221,10 +222,10 @@
                                         <a href="@EditRowUrl">
                                             <div class="video__img-wrap">
                                                 <!--
-                                                <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
-                                                    <source src="@BaseFilesUrl/@Video.Value" />
-                                                </video>
-                                                -->
+                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                <source src="@BaseFilesUrl/@Video.Value" />
+                                            </video>
+                                            -->
                                                 <img class="video__img" src="@BaseFilesUrl/@Preview.Value" alt="@Name.Value">
                                                 <div class="btn--settings">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -326,10 +327,10 @@
                                         <a href="@EditRowUrl">
                                             <div class="video__img-wrap">
                                                 <!--
-                                                <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
-                                                    <source src="@BaseFilesUrl/@Video.Value" />
-                                                </video>
-                                                -->
+                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                <source src="@BaseFilesUrl/@Video.Value" />
+                                            </video>
+                                            -->
                                                 <img class="video__img" src="@BaseFilesUrl/@Preview.Value" alt="@Name.Value">
                                                 <div class="btn--settings">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -429,10 +430,10 @@
                                         <a href="@EditRowUrl">
                                             <div class="video__img-wrap">
                                                 <!--
-                                                <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
-                                                    <source src="@BaseFilesUrl/@Video.Value" />
-                                                </video>
-                                                -->
+                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                <source src="@BaseFilesUrl/@Video.Value" />
+                                            </video>
+                                            -->
                                                 <img class="video__img" src="@BaseFilesUrl/@Preview.Value" alt="@Name.Value">
                                                 <div class="btn--settings">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -541,5 +542,6 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="@BaseFilesUrl/Dashboard/index.b2fc6878.js"></script>
     </form>
+    @ScrollScript
 </body>
 </html>

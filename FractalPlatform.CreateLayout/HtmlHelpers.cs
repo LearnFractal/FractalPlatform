@@ -93,6 +93,7 @@ namespace FractalPlatform.CreateLayouts
                                     sb.Append(@"<form action=""@BaseUrl/@AppName/@FormName"" enctype=""multipart/form-data"" method=""post""> 
                                                 <input type=""hidden"" name=""EditKey"" value="""" />
                                                 <input type=""hidden"" name=""MenuAction"" value="""" />
+                                                <input type=""hidden"" name=""Scroll"" value="""" />
                                                 <input type=""submit"" id=""btnSaveOnEnter"" name=""btn"" value=""Save"" onclick=""return !isPreventSaveOnEnter;"" style=""display:none;"" />
                                                 <input type=""submit"" id=""btnSortGridColumn"" name=""btn"" value=""SortGridColumn"" style=""display:none;"" />
                                                 <input type=""submit"" id=""btnEditLanguage"" name=""btn"" value=""EditLanguage"" style=""display:none;"" />
@@ -140,10 +141,11 @@ namespace FractalPlatform.CreateLayouts
                                         if (html[i] == '>')
                                             break;
                                     }
-                                }
+								}
                                 else if (tagStr == "body" && !hasForm)
                                 {
                                     sb.Append("</form>");
+                                    sb.Append("@ScrollScript");
                                     sb.Append('<');
                                     sb.Append('/');
                                     sb.Append(tagStr);
