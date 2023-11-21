@@ -23,6 +23,7 @@
     <form action="@BaseUrl/@AppName/@FormName" enctype="multipart/form-data" method="post">
         <input type="hidden" name="EditKey" value="" />
         <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" id="Scroll" name="Scroll" value="" />
         <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
         <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
         <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
@@ -130,38 +131,38 @@
                             <control attr="Country" type="standard">
                             </control>
                             <!--
-                               <div class="filters-dropdown filters-genre">
-                                   <ul class="filters-dropdown__list filters-genre__list">
-                                       <li class="filters-dropdown__item filters-genre__item">Жанр</li>
-                                       <li class="filters-dropdown__item filters-genre__item isHidden">Вестерн</li>
-                                       <li class="filters-dropdown__item filters-genre__item isHidden">Фентезі</li>
-                                       <li class="filters-dropdown__item filters-genre__item isHidden">Драма</li>
-                                   </ul>
-                               </div>
-                               <div class="filters-dropdown filters-year">
-                                   <ul class="filters-dropdown__list filters-year__list">
-                                       <li class="filters-dropdown__item filters-year__item">Рік</li>
-                                       <li class="filters-dropdown__item filters-year__item isHidden">2023</li>
-                                       <li class="filters-dropdown__item filters-year__item isHidden">2022</li>
-                                       <li class="filters-dropdown__item filters-year__item isHidden">2021</li>
-                                   </ul>
-                               </div>
-                               <div class="filters-country filters-dropdown">
-                                   <ul class="filters-country__list filters-dropdown__list">
-                                       <li class="filters-country__item filters-dropdown__item">Країна</li>
-                                       <li class="filters-country__item filters-dropdown__item isHidden">Австралія</li>
-                                       <li class="filters-country__item filters-dropdown__item isHidden">Італія</li>
-                                       <li class="filters-country__item filters-dropdown__item isHidden">Франція</li>
-                                   </ul>
-                               </div>
-                               <div class="filters-dropdown filters-perpage">
-                                   <ul class="filters-dropdown__list filters-perpage__list">
-                                       <li class="filters-dropdown__item filters-perpage__item">42</li>
-                                       <li class="filters-dropdown__item filters-perpage__item isHidden">24</li>
-                                       <li class="filters-dropdown__item filters-perpage__item isHidden">84</li>
-                                   </ul>
-                               </div>
-                            -->
+                           <div class="filters-dropdown filters-genre">
+                               <ul class="filters-dropdown__list filters-genre__list">
+                                   <li class="filters-dropdown__item filters-genre__item">Жанр</li>
+                                   <li class="filters-dropdown__item filters-genre__item isHidden">Вестерн</li>
+                                   <li class="filters-dropdown__item filters-genre__item isHidden">Фентезі</li>
+                                   <li class="filters-dropdown__item filters-genre__item isHidden">Драма</li>
+                               </ul>
+                           </div>
+                           <div class="filters-dropdown filters-year">
+                               <ul class="filters-dropdown__list filters-year__list">
+                                   <li class="filters-dropdown__item filters-year__item">Рік</li>
+                                   <li class="filters-dropdown__item filters-year__item isHidden">2023</li>
+                                   <li class="filters-dropdown__item filters-year__item isHidden">2022</li>
+                                   <li class="filters-dropdown__item filters-year__item isHidden">2021</li>
+                               </ul>
+                           </div>
+                           <div class="filters-country filters-dropdown">
+                               <ul class="filters-country__list filters-dropdown__list">
+                                   <li class="filters-country__item filters-dropdown__item">Країна</li>
+                                   <li class="filters-country__item filters-dropdown__item isHidden">Австралія</li>
+                                   <li class="filters-country__item filters-dropdown__item isHidden">Італія</li>
+                                   <li class="filters-country__item filters-dropdown__item isHidden">Франція</li>
+                               </ul>
+                           </div>
+                           <div class="filters-dropdown filters-perpage">
+                               <ul class="filters-dropdown__list filters-perpage__list">
+                                   <li class="filters-dropdown__item filters-perpage__item">42</li>
+                                   <li class="filters-dropdown__item filters-perpage__item isHidden">24</li>
+                                   <li class="filters-dropdown__item filters-perpage__item isHidden">84</li>
+                               </ul>
+                           </div>
+                        -->
                         </div>
                     </div>
                     <ul class="movies__list">
@@ -198,36 +199,37 @@
                         </control>
                     </ul>
                     <!--
-                    <div class="pagination">
-                        <ul class="pagination__list">
-                            <li class="pagination__item">
-                                <button class="pagination__btn">1</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">2</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">3</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">...</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">10</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">Назад</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">Вперед</button>
-                            </li>
-                        </ul>
-                    </div>
-                    -->
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                            <button class="pagination__btn">1</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">2</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">3</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">...</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">10</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Назад</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Вперед</button>
+                        </li>
+                    </ul>
+                </div>
+                -->
                 </div>
             </section>
         </main>
         <script src="@BaseFilesUrl/Dashboard/index.d7ca0669.js"></script>
     </form>
+    @ScrollScript
 </body>
 </html>

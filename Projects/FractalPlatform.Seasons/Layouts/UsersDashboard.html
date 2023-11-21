@@ -19,6 +19,7 @@
     <form action="@BaseUrl/@AppName/@FormName" enctype="multipart/form-data" method="post">
         <input type="hidden" name="EditKey" value="" />
         <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" id="Scroll" name="Scroll" value="" />
         <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
         <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
         <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
@@ -87,14 +88,14 @@
                             Користувачі Seasons
                         </h2>
                         <!--
-                        <div class="filters-dropdown filters-perpage">
-                            <ul class="filters-dropdown__list filters-perpage__list">
-                                <li class="filters-dropdown__item filters-perpage__item">20</li>
-                                <li class="filters-dropdown__item filters-perpage__item isHidden">40</li>
-                                <li class="filters-dropdown__item filters-perpage__item isHidden">80</li>
-                            </ul>
-                        </div>
-                        -->
+                    <div class="filters-dropdown filters-perpage">
+                        <ul class="filters-dropdown__list filters-perpage__list">
+                            <li class="filters-dropdown__item filters-perpage__item">20</li>
+                            <li class="filters-dropdown__item filters-perpage__item isHidden">40</li>
+                            <li class="filters-dropdown__item filters-perpage__item isHidden">80</li>
+                        </ul>
+                    </div>
+                    -->
                     </div>
                     <div class="users">
                         <ul class="users__list">
@@ -130,37 +131,38 @@
                         </ul>
                     </div>
                     <!--
-                    <div class="pagination">
-                        <ul class="pagination__list">
-                            <li class="pagination__item">
-                                <button class="pagination__btn">1</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">2</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">3</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">...</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">10</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">Назад</button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__btn">Вперед</button>
-                            </li>
-                        </ul>
-                    </div>
-                    -->
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                            <button class="pagination__btn">1</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">2</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">3</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">...</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">10</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Назад</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Вперед</button>
+                        </li>
+                    </ul>
+                </div>
+                -->
                 </div>
             </section>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="@BaseFilesUrl/UsersDashboard/index.d7ca0669.js"></script>
     </form>
+    @ScrollScript
 </body>
 </html>

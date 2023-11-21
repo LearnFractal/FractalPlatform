@@ -18,6 +18,7 @@
     <form action="@BaseUrl/@AppName/@FormName" enctype="multipart/form-data" method="post">
         <input type="hidden" name="EditKey" value="" />
         <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" id="Scroll" name="Scroll" value="" />
         <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
         <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
         <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
@@ -277,39 +278,39 @@
                                             <p class="comment__name">@Name.Value</p>
                                             <p class="comment__text">@Text.Value</p>
                                             <!--
-                                            <ul class="comment-like__list">
-                                                <li class="comment-like__item">
-                                                    <button class="like__btn" type="button">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 32 32" fill="none">
-                                                            <g clip-path="url(#clip0_814_5569)">
-                                                                <path d="M2.66602 26.6667H5.33268C6.06602 26.6667 6.66602 26.0667 6.66602 25.3334V13.3334C6.66602 12.6 6.06602 12 5.33268 12H2.66602V26.6667ZM29.106 17.1734C29.2527 16.84 29.3327 16.48 29.3327 16.1067V14.6667C29.3327 13.2 28.1327 12 26.666 12H19.3327L20.5593 5.80002C20.626 5.50669 20.586 5.18669 20.4527 4.92002C20.146 4.32002 19.7593 3.77335 19.2794 3.29335L18.666 2.66669L10.1193 11.2134C9.61268 11.72 9.33268 12.4 9.33268 13.1067V23.56C9.33268 25.2667 10.7327 26.6667 12.4527 26.6667H23.266C24.1994 26.6667 25.0793 26.1734 25.5593 25.3734L29.106 17.1734Z" fill="white"></path>
-                                                            </g>
-                                                            <defs>
-                                                                <clipPath id="clip0_814_5569">
-                                                                    <rect width="32" height="32" fill="white"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                        </svg>
-                                                    </button>
-                                                    <span>15</span>
-                                                </li>
-                                                <li class="comment-like__item">
-                                                    <button class="like__btn" type="button">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 32 32" fill="none">
-                                                            <g clip-path="url(#clip0_1003_109)">
-                                                                <path d="M29.334 5.33331H26.6673C25.934 5.33331 25.334 5.93331 25.334 6.66665V18.6666C25.334 19.4 25.934 20 26.6673 20H29.334V5.33331ZM2.89398 14.8266C2.74732 15.16 2.66732 15.52 2.66732 15.8933V17.3333C2.66732 18.8 3.86732 20 5.33398 20H12.6673L11.4407 26.2C11.374 26.4933 11.414 26.8133 11.5473 27.08C11.854 27.68 12.2407 28.2266 12.7206 28.7066L13.334 29.3333L21.8807 20.7866C22.3873 20.28 22.6673 19.6 22.6673 18.8933V8.43998C22.6673 6.73331 21.2673 5.33331 19.5473 5.33331H8.73398C7.80065 5.33331 6.92065 5.82664 6.44065 6.62664L2.89398 14.8266Z" fill="white"></path>
-                                                            </g>
-                                                            <defs>
-                                                                <clipPath id="clip0_1003_109">
-                                                                    <rect width="32" height="32" fill="white" transform="matrix(-1 0 0 -1 32 32)"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                        </svg>
-                                                    </button>
-                                                    <span>0</span>
-                                                </li>
-                                            </ul>
-                                            -->
+                                        <ul class="comment-like__list">
+                                            <li class="comment-like__item">
+                                                <button class="like__btn" type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 32 32" fill="none">
+                                                        <g clip-path="url(#clip0_814_5569)">
+                                                            <path d="M2.66602 26.6667H5.33268C6.06602 26.6667 6.66602 26.0667 6.66602 25.3334V13.3334C6.66602 12.6 6.06602 12 5.33268 12H2.66602V26.6667ZM29.106 17.1734C29.2527 16.84 29.3327 16.48 29.3327 16.1067V14.6667C29.3327 13.2 28.1327 12 26.666 12H19.3327L20.5593 5.80002C20.626 5.50669 20.586 5.18669 20.4527 4.92002C20.146 4.32002 19.7593 3.77335 19.2794 3.29335L18.666 2.66669L10.1193 11.2134C9.61268 11.72 9.33268 12.4 9.33268 13.1067V23.56C9.33268 25.2667 10.7327 26.6667 12.4527 26.6667H23.266C24.1994 26.6667 25.0793 26.1734 25.5593 25.3734L29.106 17.1734Z" fill="white"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_814_5569">
+                                                                <rect width="32" height="32" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                                <span>15</span>
+                                            </li>
+                                            <li class="comment-like__item">
+                                                <button class="like__btn" type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 32 32" fill="none">
+                                                        <g clip-path="url(#clip0_1003_109)">
+                                                            <path d="M29.334 5.33331H26.6673C25.934 5.33331 25.334 5.93331 25.334 6.66665V18.6666C25.334 19.4 25.934 20 26.6673 20H29.334V5.33331ZM2.89398 14.8266C2.74732 15.16 2.66732 15.52 2.66732 15.8933V17.3333C2.66732 18.8 3.86732 20 5.33398 20H12.6673L11.4407 26.2C11.374 26.4933 11.414 26.8133 11.5473 27.08C11.854 27.68 12.2407 28.2266 12.7206 28.7066L13.334 29.3333L21.8807 20.7866C22.3873 20.28 22.6673 19.6 22.6673 18.8933V8.43998C22.6673 6.73331 21.2673 5.33331 19.5473 5.33331H8.73398C7.80065 5.33331 6.92065 5.82664 6.44065 6.62664L2.89398 14.8266Z" fill="white"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1003_109">
+                                                                <rect width="32" height="32" fill="white" transform="matrix(-1 0 0 -1 32 32)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                                <span>0</span>
+                                            </li>
+                                        </ul>
+                                        -->
                                         </div>
                                     </li>
                                 </control>
@@ -360,5 +361,6 @@
         </main>
         <script type="module" src="@BaseFilesUrl/MovieDashboard/index.d7ca0669.js"></script>
     </form>
+    @ScrollScript
 </body>
 </html>

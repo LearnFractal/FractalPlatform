@@ -18,6 +18,7 @@
     <form action="@BaseUrl/@AppName/@FormName" enctype="multipart/form-data" method="post">
         <input type="hidden" name="EditKey" value="" />
         <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" id="Scroll" name="Scroll" value="" />
         <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
         <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
         <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
@@ -283,7 +284,7 @@
                                     <div class="range_container">
                                         <div class="sliders_control">
                                             <input id="fromSlider" type="range" value="10" min="0" max="100" @Age.Min.TextBox>
-                                            <input id="toSlider" type="range" value="40" min="0" max="100"  @Age.Max.TextBox>
+                                            <input id="toSlider" type="range" value="40" min="0" max="100" @Age.Max.TextBox>
                                         </div>
                                         <div class="form_control">
                                             <div class="form_control_container">
@@ -308,5 +309,6 @@
         </main>
         <script src="@BaseFilesUrl/Find/index.31349499.js"></script>
     </form>
+    @ScrollScript
 </body>
 </html>
