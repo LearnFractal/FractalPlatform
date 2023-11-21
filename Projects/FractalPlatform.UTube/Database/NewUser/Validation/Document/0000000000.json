@@ -9,5 +9,9 @@
     "IsRequired": true,
     "MinLen": 3,
     "MaxLen": 16
+  },
+  "Age": {
+    "MinValue": 5,
+    "MaxValue": 120
   }
 }
