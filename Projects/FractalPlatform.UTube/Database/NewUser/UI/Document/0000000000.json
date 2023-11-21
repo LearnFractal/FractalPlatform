@@ -9,7 +9,7 @@
   "Capcha": {
     "Style": "Type:Capcha"
   },
-  "Photo": {
+  "Avatar": {
     "ControlType": "UploadFile"
   },
   "Subscribes": {
