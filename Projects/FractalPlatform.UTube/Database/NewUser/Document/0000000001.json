@@ -1,8 +1,11 @@
 {
-   "Age": 20,
-   "Capcha": "",
-   "Gender": "",
-   "Name": "",
-   "Password": "",
-   "Avatar": ""
+  "Age": 20,
+  "Capcha": "",
+  "Gender": "",
+  "Name": "",
+  "Password": "",
+  "Avatar": "",
+  "Roles": [
+    "User"
+  ]
 }
