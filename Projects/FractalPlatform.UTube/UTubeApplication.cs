@@ -200,7 +200,7 @@ namespace FractalPlatform.UTube
                     }
                 case "Avatar":
                     {
-                        return Context.User.Avatar;
+                        return Context.User.GetDefaultAvatar("Guest.png");
                     }
                 case "Preview":
                     {
