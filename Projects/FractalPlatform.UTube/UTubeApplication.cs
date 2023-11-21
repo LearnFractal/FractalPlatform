@@ -91,16 +91,10 @@ namespace FractalPlatform.UTube
                       .OpenForm();
         }
 
-        public override void OnLogin(FormResult result)
-        {
-            Dashboard();
-        }
-
-        public override void OnRegister(FormResult result)
-        {
-            Dashboard();
-        }
-
+        public override void OnLogin(FormResult result) => Dashboard();
+        
+        public override void OnRegister(FormResult result) => Dashboard();
+        
         private void OpenVideo(string uid)
         {
             CloseIfOpenedForm("VideoDashboard");
@@ -117,8 +111,6 @@ namespace FractalPlatform.UTube
                     .Update("{'History':[Add,@Video]}", storage.ToJson(Context, storage.GetFirstDocID(Context)));
                 }
             }
-
-            var count = DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid).Count();
 
             DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
             .Update("{'Videos':[{'CountViews':Add(1)}]}");
