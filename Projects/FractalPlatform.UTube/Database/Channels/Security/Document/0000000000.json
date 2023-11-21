@@ -19,6 +19,11 @@
         }
       },
       "Likes": {
+        "Allow": {
+          "Write": [
+            "User"
+          ]
+        },
         "Disallow": {
           "Write": [
             "Guest"
