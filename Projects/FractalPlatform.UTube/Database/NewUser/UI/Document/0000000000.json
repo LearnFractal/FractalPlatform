@@ -15,6 +15,9 @@
   "Subscribes": {
     "Visible": false
   },
+  "Language": {
+    "Visible": false
+  },
   "Roles": {
     "Visible": false
   }
