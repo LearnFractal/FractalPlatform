@@ -3,7 +3,6 @@ using System.Linq;
 using Newtonsoft.Json;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
-using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Client.UI.DOM;
 
