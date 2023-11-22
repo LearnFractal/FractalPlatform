@@ -5,6 +5,7 @@ using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Database.Engine.Info;
 
 namespace FractalPlatform.Weather
 {
@@ -33,9 +34,12 @@ namespace FractalPlatform.Weather
             return "Rain.svg";
         }
 
-        private void Weather(string lat, string lng)
+        private string _lat = "50.4547"; //Kiev
+        private string _lng = "30.5238";
+
+        private void Weather()
         {
-            var json = REST.Get($"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT");
+            var json = REST.Get($"https://api.open-meteo.com/v1/forecast?latitude={_lat}&longitude={_lng}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT");
 
             var info = JsonConvert.DeserializeObject<WeatherInfo>(json);
 
@@ -44,8 +48,8 @@ namespace FractalPlatform.Weather
             //Forecast page
             new
             {
-                Latitude = lat,
-                Longitude = lng,
+                Latitude = _lat,
+                Longitude = _lng,
                 Forecast = info.daily.time
                                    .Select(x => new
                                    {
@@ -62,7 +66,7 @@ namespace FractalPlatform.Weather
             .OpenForm(result =>
             {
                 FirstDocOf("ChooseLocation")
-                .ExtendDocument(DQL("{'Map':{'Point':{'Lat':@Lat,'Lng':@Lng}}}", lat, lng))
+                .ExtendDocument(DQL("{'Map':{'Point':{'Lat':@Lat,'Lng':@Lng}}}", _lat, _lng))
                 .OpenForm(result => {
                     if (result.Result)
                     {
@@ -70,15 +74,26 @@ namespace FractalPlatform.Weather
                                         .GetFirstDoc()
                                         .Values("{'Map':{'Point':{'Lat':$,'Lng':$}}}");
 
-                        Weather(gps[0], gps[1]);
+                        _lat = gps[0];
+                        _lng = gps[1];
+
+                        Weather();
                     }
                 });
             });
         }
 
-        public override void OnStart()
+        public override object OnComputedDimension(ComputedInfo computedInfo) 
         {
-            Weather("50.4547", "30.5238"); //Kyiv        
+		    return REST.Get($"https://maps.googleapis.com/maps/api/geocode/json?latlng={_lat},{_lng}&sensor=true&key=AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8z")
+					   .ToCollection()
+					   .GetFirstDoc()
+                       .Value("{'plus_code':{'compound_code':$}}");
+		}
+		
+		public override void OnStart()
+        {
+            Weather();
         }
 
         public override BaseRenderForm CreateRenderForm(DOMForm form) => new ExtendedRenderForm(this, form);
