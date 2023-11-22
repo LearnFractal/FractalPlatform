@@ -63,6 +63,7 @@ namespace FractalPlatform.Weather
             .OpenForm(result =>
             {
                 FirstDocOf("ChooseLocation")
+                .ExtendDocument(DQL("{'Map':{'Point':{'Lat':@Lat,'Lng':@Lng}}}", lat, lng))
                 .OpenForm(result => {
                     if (result.Result)
                     {
