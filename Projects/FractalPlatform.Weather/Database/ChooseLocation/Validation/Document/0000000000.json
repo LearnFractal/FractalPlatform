@@ -1,0 +1,12 @@
+{
+  "Map": {
+    "Point": {
+      "Lat": {
+        "IsRequired": true
+      },
+      "Lng": {
+        "IsRequired": true
+      }
+    }
+  }
+}

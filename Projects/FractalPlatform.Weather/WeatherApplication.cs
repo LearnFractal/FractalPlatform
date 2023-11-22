@@ -5,6 +5,7 @@ using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
+using FractalPlatform.Client.UI.DOM;
 
 namespace FractalPlatform.Weather
 {
@@ -61,22 +62,13 @@ namespace FractalPlatform.Weather
             .SetUIDimension("{'Layout':'Forecast','IsRawPage':true}")
             .OpenForm(result =>
             {
-                //Set GPS coordinates page
-                new
-                {
-                    Latitude = lat,
-                    Longitude = lng
-                }
-                .ToCollection(Constants.FIRST_DOC_ID)
-                .SetDimension(DimensionType.Validation, "{'Latitude':{'IsRequired':true,'Type':'float'},'Longitude':{'IsRequired':true,'Type':'float'}}")
-                .SetDimension(DimensionType.Theme, "{'DefaultTheme':'White','ChooseThemeOnAllPages':false}")
-                .OpenForm(result =>
-                {
+                FirstDocOf("ChooseLocation")
+                .OpenForm(result => {
                     if (result.Result)
                     {
                         var gps = result.Collection
                                         .GetFirstDoc()
-                                        .Values("{'Latitude':$,'Longitude':$}");
+                                        .Values("{'Map':{'Point':{'Lat':$,'Lng':$}}}");
 
                         Weather(gps[0], gps[1]);
                     }
@@ -88,5 +80,7 @@ namespace FractalPlatform.Weather
         {
             Weather("50.4547", "30.5238"); //Kyiv        
         }
+
+        public override BaseRenderForm CreateRenderForm(DOMForm form) => new ExtendedRenderForm(this, form);
     }
 }
