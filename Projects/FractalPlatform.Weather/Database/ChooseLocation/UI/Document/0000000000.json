@@ -2,7 +2,7 @@
   "Style": "Save:Choose",
   "Map": {
     "ControlType": "ChooseMap",
-    "Height": "500px",
-    "Width": "500px"
+    "Width": "1000px",
+    "Height": "500px"
   }
 }
