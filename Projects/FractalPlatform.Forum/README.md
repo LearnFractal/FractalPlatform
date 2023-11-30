@@ -6,11 +6,17 @@ Typical web forum with categories, topics and messages
 
 ## Functionality
 
+For Guest
+
+- Registration on the forum with user info
+- Review existing categories\topics\messages
+
 For User
 
-- Login or Registration of new User info
+- Login to the forum
 - Review existing categories\topics\messages
 - Review existing registered users
+- Edit my user info
 - Create a topic in a category.
 - Leave message in a topic with quote.
 - Search categories/topics/messages in the search box
@@ -22,7 +28,7 @@ For Admin
 - Create/Update/Delete any messages on the web forum
 - Create/Update/Delete any users on the web forum
 
-For User and Admin
+For Guest, User and Admin
 
 - Validate parameters on each form, for e.g.: Unique user name on the registration
 - Track count topics in a category
@@ -45,13 +51,13 @@ For User and Admin
 
 ## Screenshots
 
-![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Register.png?raw=true)
+![Register](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Register.png?raw=true)
 
 ![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Dashboard.png?raw=true)
 
-![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Topics.png?raw=true)
+![Topics](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Topics.png?raw=true)
 
-![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Messages.png?raw=true)
+![Messages](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Messages.png?raw=true)
 
 ## Contacts
 
