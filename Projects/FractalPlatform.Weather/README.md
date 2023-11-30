@@ -1,19 +1,27 @@
-# Weather
+# Weather web application
 
-## Sources
+## Description
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Weather/WeatherApplication.cs)
+Application shows forecast weather for a week based on REST api call in particular GPS coordintates.
+GPS coordianates can be selected on the map.
 
 ## Functionality
 
-Application shows web form based on REST api call.
-In current case application shows forecast weather on the next week by gps coordinates.
+- Make REST api call to get forecast weather for a week
+- Ability to change GPS coordinates on the map for forecase weather
 
-## How it implemented
+## Project
 
-**Video explanation**: No video
+| Code Part  | Volume |
+| ------------- | ------------- |
+| C# code  | 109 code lines  |
+| Database  | 1 document collection  |
+| Designed Screens  | 1 designed screen  |
+| Standard Screens  | 1 standard screen  |
 
 ## Web Link
 
-[Weather](https://fraplat.com/jupiter/?app=Weather)
+[Weather](https://fraplat.com/jupiter/Weather)
+
+## Screenshots
 
