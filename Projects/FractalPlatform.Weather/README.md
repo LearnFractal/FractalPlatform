@@ -25,3 +25,11 @@ GPS coordianates can be selected on the map.
 
 ## Screenshots
 
+![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Weather/Screenshots/Dashboard.png?raw=true)
+
+![Choose Location](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Weather/Screenshots/ChooseLocation.png?raw=true)
+
+## Contacts
+
+Have any questions ? [Contact us](mailto:learn.fractal@gmail.com)
+
