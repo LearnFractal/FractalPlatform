@@ -15,8 +15,8 @@ Application demonstrates the simplest ToDo list with next functionality:
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=202)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=102)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=102)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=202)
 
 ## Web Link
 

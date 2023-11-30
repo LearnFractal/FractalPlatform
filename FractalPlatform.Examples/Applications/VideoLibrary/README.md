@@ -17,8 +17,8 @@ Application demonstrates web catalog of online videos with next functionality:
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=220)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=120)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=120)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=220)
 
 ## Web Link
 

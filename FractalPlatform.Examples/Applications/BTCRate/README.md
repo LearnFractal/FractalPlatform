@@ -13,8 +13,8 @@ In current case application shows BTC price in USD/EUR currencies from Coindesk.
 
 **Video explanation**
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=210)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=110)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=110)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=210)
 
 ## Web Link
 

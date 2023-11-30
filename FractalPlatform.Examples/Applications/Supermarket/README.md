@@ -17,8 +17,8 @@ Admin can change the stock: Add new products, remove products, change price, cha
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=218)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=118)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=118)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=218)
 
 ## Web Link
 

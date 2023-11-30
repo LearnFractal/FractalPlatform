@@ -13,8 +13,8 @@ Application demonstrates how to create photo album with:
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=209)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=109)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=109)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=209)
 
 ## Web Link
 

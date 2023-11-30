@@ -10,8 +10,8 @@ Application shows "Hello Fractal World !" message
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=201)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=101)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=101)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=201)
 
 ## Web Link
 

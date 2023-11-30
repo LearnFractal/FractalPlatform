@@ -17,8 +17,8 @@ On third stage if all answers are right
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=208)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=108)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=108)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=208)
 
 ## Web Link
 

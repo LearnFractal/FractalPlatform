@@ -21,8 +21,8 @@ Application implements freelance exchange market with next functionality:
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=212)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=111)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=112)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=212)
 
 ## Web Link
 

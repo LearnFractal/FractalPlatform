@@ -12,8 +12,8 @@ standard web UI controls and UI components
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=211)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=111)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=111)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=211)
 
 ## Web Link
 

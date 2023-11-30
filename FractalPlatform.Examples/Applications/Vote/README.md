@@ -15,8 +15,8 @@ Application implements small engine for anonymous votes with next functionality:
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=204)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=104)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=104)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=204)
 
 ## Web Link
 

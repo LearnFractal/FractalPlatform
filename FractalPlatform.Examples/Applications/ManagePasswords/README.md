@@ -12,8 +12,8 @@ Application demonstrates how to work with encrypted data in the database.
 
 ## How it implemented
 
-[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=210)
-[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=110)
+- [EN UTube Video](https://fraplat.com/jupiter/UTube?tag=110)
+- [UA UTube Video](https://fraplat.com/jupiter/UTube?tag=210)
 
 ## Web Link
 
