@@ -1,256 +1,409 @@
 ﻿{
-   "Description": "My home channel",
-   "IsLocked": false,
-   "Name": "Home",
-   "NewVideo": "New Video",
-   "OnDate": "10/31/2023 20:15:15",
-   "Owner": "Bazist",
-   "Photo": "home.png",
-   "Subscribe": "Subscribe",
-   "Unsubscribe": "Unsubscribe",
-   "Tags": [
-      "Bike"
-   ],
-   "Videos": [
-      {
-         "CountComments": "1",
-         "CountLikes": "1",
-         "CountViews": 10,
-         "Description": "Trees video",
-         "Name": "Trees",
-         "NewComment": "New Comment",
-         "OnDate": "09/14/2023 15:22:54",
-         "OnDateLabel": "1 months ago",
-         "Preview": "trees.jpg",
-         "UID": "3647AA5E-37C4-404A-B0BB-77ECA774DC3B",
-         "Video": "trees.mp4",
-         "Comments": [
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "09/14/2023 15:24:41",
-               "Text": "Дерева, тестове відео",
-               "Who": "Bazist"
-            }
-         ],
-         "Likes": [
-            "Guest",
-            "Bazist"
-         ]
-      },
-      {
-         "CountComments": "1",
-         "CountLikes": "0",
-         "CountViews": 30,
-         "Description": "На гамаку",
-         "Name": "Me at Gamak",
-         "NewComment": "New Comment",
-         "OnDate": "09/14/2023 15:45:58",
-         "OnDateLabel": "1 months ago",
-         "Preview": "me_at_gamak.jpg",
-         "UID": "E1D08CED-8DDD-4958-84A0-4104BC69E7EB",
-         "Video": "me_at_gamak.mp4",
-         "Comments": [
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "09/14/2023 16:04:44",
-               "Text": "Test comment",
-               "Who": "Guest"
-            }
-         ],
-         "Likes": [
-            "Guest"
-         ]
-      },
-      {
-         "CountComments": "4",
-         "CountLikes": "1",
-         "CountViews": 32,
-         "Description": "Stugna River",
-         "Name": "Stugna ",
-         "NewComment": "New Comment",
-         "OnDate": "09/14/2023 19:16:06",
-         "OnDateLabel": "1 months ago",
-         "Preview": "ce4bedf0bfea4e42b8d109806757e6ff.jpg",
-         "UID": "574151BD-7819-480C-9EEC-BC8A1AEB25CF",
-         "Video": "ce4bedf0bfea4e42b8d109806757e6ff.mp4",
-         "Comments": [
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "09/14/2023 20:39:56",
-               "Text": "nice",
-               "Who": "Guest"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "09/21/2023 21:57:32",
-               "Text": "Test",
-               "Who": "Bazist"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "10/31/2023 16:14:09",
-               "Text": "test",
-               "Who": "Bazist"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "10/31/2023 19:11:35",
-               "Text": "cool",
-               "Who": "Bazist"
-            }
-         ],
-         "Likes": [
-            "Guest",
-            "Bazist"
-         ]
-      },
-      {
-         "CountComments": "2",
-         "CountLikes": "1",
-         "CountViews": 20,
-         "Description": "Вид на Дніпро з зумом",
-         "Name": "Enej",
-         "NewComment": "New Comment",
-         "OnDate": "09/15/2023 13:28:50",
-         "OnDateLabel": "1 months ago",
-         "Preview": "e8dce4b79b1c46eaa0251f1abcfe3937.jpg",
-         "UID": "7CFC3D40-1763-4E80-9BEC-7D8E1CFAC528",
-         "Video": "e8dce4b79b1c46eaa0251f1abcfe3937.mp4",
-         "Comments": [
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "09/15/2023 13:29:13",
-               "Text": "Кафе Еней",
-               "Who": "Bazist"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "09/22/2023 01:16:18",
-               "Text": "Test",
-               "Who": "Bazist"
-            }
-         ],
-         "Likes": [
-            "Guest",
-            "Bazist"
-         ]
-      },
-      {
-         "CountComments": "6",
-         "CountLikes": "1",
-         "CountViews": 48,
-         "Description": "Darnitsky bridge route",
-         "Name": "Bridge",
-         "NewComment": "New Comment",
-         "OnDate": "09/17/2023 10:38:09",
-         "OnDateLabel": "1 months ago",
-         "Preview": "221055edc9c344cc8e231fbc758a4a7f.jpg",
-         "UID": "DEE223D2-5C49-42C6-A819-5C7E5F20A21B",
-         "Video": "221055edc9c344cc8e231fbc758a4a7f.mp4",
-         "Comments": [
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "09/18/2023 21:19:01",
-               "Text": "Hello",
-               "Who": "Guest"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "09/19/2023 20:51:54",
-               "Text": "Test avatar",
-               "Who": "Bazist"
-            },
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "09/22/2023 12:36:10",
-               "Text": "test comment under Guest",
-               "Who": "Guest"
-            },
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "09/22/2023 12:43:32",
-               "Text": "next test",
-               "Who": "Guest"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "10/31/2023 16:11:40",
-               "Text": "cool",
-               "Who": "Bazist"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "10/31/2023 20:15:15",
-               "Text": "testt",
-               "Who": "Bazist"
-            }
-         ],
-         "Likes": [
-            "Guest",
-            "Bazist"
-         ]
-      },
-      {
-         "CountComments": "2",
-         "CountLikes": "1",
-         "CountViews": 26,
-         "Description": "Білки розпочали сезон збору горіхів в моєму саду",
-         "Name": "Білка та горіхи",
-         "NewComment": "New Comment",
-         "OnDate": "09/30/2023 13:04:22",
-         "OnDateLabel": "1 months ago",
-         "Preview": "89d19cb58fac41a997f8cc1031e8c656.jpg",
-         "UID": "6817AD41-7585-4BAC-A9A5-B416453EEB53",
-         "Video": "89d19cb58fac41a997f8cc1031e8c656.mp4",
-         "Comments": [
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "10/31/2023 16:19:42",
-               "Text": "test",
-               "Who": "Bazist"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "10/31/2023 16:19:48",
-               "Text": "Hello",
-               "Who": "Bazist"
-            }
-         ],
-         "Likes": [
-            "Guest",
-            "Bazist"
-         ]
-      },
-      {
-         "CountComments": "2",
-         "CountLikes": "1",
-         "CountViews": 21,
-         "Description": "Dnipro river",
-         "Name": "Dnipro river",
-         "NewComment": "New Comment",
-         "OnDate": "10/05/2023 16:47:30",
-         "OnDateLabel": "1 months ago",
-         "Preview": "663e1edfa70f40b2b3561d1b2a0cd333.jpg",
-         "UID": "0429A015-DF11-48A6-AA92-56D424DA3005",
-         "Video": "663e1edfa70f40b2b3561d1b2a0cd333.mp4",
-         "Comments": [
-            {
-               "Avatar": "avatar.png",
-               "OnDate": "10/06/2023 23:43:20",
-               "Text": "А где это?",
-               "Who": "Guest"
-            },
-            {
-               "Avatar": "bazist.png",
-               "OnDate": "10/31/2023 16:16:41",
-               "Text": "cool",
-               "Who": "Bazist"
-            }
-         ],
-         "Likes": [
-            "Guest",
-            "Bazist"
-         ]
-      }
-   ]
+  "Description": "Fractal Platform channel UA",
+  "IsLocked": false,
+  "Name": "Fractal UA",
+  "NewVideo": "New Video",
+  "OnDate": "10/31/2023 19:39:34",
+  "Owner": "Bazist",
+  "Photo": "fractal.png",
+  "Subscribe": "Subscribe",
+  "Unsubscribe": "Unsubscribe",
+  "Tags": [
+    "Fractal",
+    "LowCode"
+  ],
+  "Videos": [
+    {
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 41,
+      "Description": "Intro video",
+      "Name": "Intro",
+      "NewComment": "New Comment",
+      "OnDate": "2023/09/14",
+      "OnDateLabel": "1 months ago",
+      "Preview": "FractalPlatformIntroRU.jpg",
+      "UID": "200",
+      "Video": "FractalPlatformIntroRU.mp4",
+      "Comments": [
+        {
+          "Avatar": "avatar.png",
+          "OnDate": "09/14/2023 08:11:44",
+          "Text": "First test comment under Rebeca",
+          "Who": "Rebeca"
+        },
+        {
+          "Avatar": "avatar.png",
+          "OnDate": "10/21/2023 11:16:53",
+          "Text": "Second long comment",
+          "Who": "Guest"
+        }
+      ],
+      "Likes": [
+        "Guest",
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "201",
+      "Name": "How to build and deploy app",
+      "Description": "How to build and deploy app",
+      "Preview": "HowToBuildAndDeployAppRU.jpg",
+      "Video": "HowToBuildAndDeployAppRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "202",
+      "Name": "Create ToDo list app",
+      "Description": "How to create ToDo list app",
+      "Preview": "CreateToDoListRU.jpg",
+      "Video": "CreateToDoListRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "203",
+      "Name": "Create ToDo list with categories app",
+      "Description": "How to create ToDo list with categories app",
+      "Preview": "CreateToDoListWithCategoriesRU.jpg",
+      "Video": "CreateToDoListWithCategoriesRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "204",
+      "Name": "Create Vote app",
+      "Description": "How to create Vote app",
+      "Preview": "CreateVoteRU.jpg",
+      "Video": "CreateVoteRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "205",
+      "Name": "Create Forum app",
+      "Description": "How to create Forum app",
+      "Preview": "CreateForumRU.jpg",
+      "Video": "CreateForumRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "206",
+      "Name": "Create Chat app",
+      "Description": "How to create Chat app",
+      "Preview": "CreateChatRU.jpg",
+      "Video": "CreateChatRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "207",
+      "Name": "Create Login app",
+      "Description": "How to create Login app",
+      "Preview": "CreateLoginRU.jpg",
+      "Video": "CreateLoginRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "208",
+      "Name": "Create Mult table app",
+      "Description": "How to create Mult table app",
+      "Preview": "CreateMultTableRU.jpg",
+      "Video": "CreateMultTableRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "209",
+      "Name": "Create Photo Album app",
+      "Description": "How to create Photo Album app",
+      "Preview": "CreatePhotoAlbumRU.jpg",
+      "Video": "CreatePhotoAlbumRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "210",
+      "Name": "Create BTC Rate app",
+      "Description": "How to create BTC Rate app",
+      "Preview": "CreateBTCRateRU.jpg",
+      "Video": "CreateBTCRateRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "211",
+      "Name": "Create Controls Gallery app",
+      "Description": "How to create Controls Gallery app",
+      "Preview": "CreateControlsGalleryRU.jpg",
+      "Video": "CreateControlsGalleryRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "212",
+      "Name": "Create Freelance Response app - Part 1",
+      "Description": "How to create Freelance Response app - Part 1",
+      "Preview": "CreateFreelanceResponse1RU.jpg",
+      "Video": "CreateFreelanceResponse1RU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "213",
+      "Name": "Create Freelance Response app - Part 2",
+      "Description": "How to create Freelance Response app - Part 2",
+      "Preview": "CreateFreelanceResponse2RU.jpg",
+      "Video": "CreateFreelanceResponse2RU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "214",
+      "Name": "Create Login or Register app",
+      "Description": "How to create Login or Register app",
+      "Preview": "CreateLoginOrRegisterRU.jpg",
+      "Video": "CreateLoginOrRegisterRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "215",
+      "Name": "Create Manage Passwords app",
+      "Description": "How to create Manage Passwords app",
+      "Preview": "CreateManagePasswordsRU.jpg",
+      "Video": "CreateManagePasswordsRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "216",
+      "Name": "Create Online Shop app",
+      "Description": "How to create Online Shop app",
+      "Preview": "CreateOnlineShopRU.jpg",
+      "Video": "CreateOnlineShopRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "217",
+      "Name": "Create Social Network app",
+      "Description": "How to create Social Network app",
+      "Preview": "CreateSocialNetworkRU.jpg",
+      "Video": "CreateSocialNetworkRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "218",
+      "Name": "Create Supermarket app",
+      "Description": "How to create Supermarket app",
+      "Preview": "CreateSupermarketRU.jpg",
+      "Video": "CreateSupermarketRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "219",
+      "Name": "Create Taxi app",
+      "Description": "How to create Taxi app",
+      "Preview": "CreateTaxiRU.jpg",
+      "Video": "CreateTaxiRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "220",
+      "Name": "Create Video Library app",
+      "Description": "How to create Video Library app",
+      "Preview": "CreateVideoLibraryRU.jpg",
+      "Video": "CreateVideoLibraryRU.mp4",
+
+      "CountComments": "2",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    }
+  ]
 }

@@ -439,7 +439,14 @@ namespace FractalPlatform.UTube
         {
             TryAutoLogin();
 
-            Dashboard();
+            if (!Context.HasUrlTag)
+            {
+                Dashboard();
+            }
+            else
+            {
+                OpenVideo(Context.UrlTag);
+            }
         }
 
         public override BaseRenderForm CreateRenderForm(DOMForm form) => new ExtendedRenderForm(this, form);
