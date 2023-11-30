@@ -328,9 +328,9 @@ namespace FractalPlatform.Deployment
 
                 //upload assembly
 #if DEBUG
-                var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\netcoreapp3.1\{assemblyFile}";
+                var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\net8.0-windows\{assemblyFile}";
 #else
-            var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Release\netcoreapp3.1\{assemblyFile}";
+            var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Release\net8.0-windows\{assemblyFile}";
 #endif
 
                 if (File.Exists(filePath))
@@ -382,7 +382,7 @@ namespace FractalPlatform.Deployment
             {
                 var assemblyName = GetAssemblyName(options.Assemblies[0]);
 
-                var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\netcoreapp3.1\{options.Assemblies[0]}";
+                var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\net8.0-windows\{options.Assemblies[0]}";
 
                 var bytes = File.ReadAllBytes(filePath);
 
