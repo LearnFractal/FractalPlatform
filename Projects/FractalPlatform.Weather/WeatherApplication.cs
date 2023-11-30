@@ -11,6 +11,7 @@ namespace FractalPlatform.Weather
 {
     public class WeatherApplication : BaseApplication
     {
+        private const string _apiKey = "AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8z";
         private class DailyInfo
         {
             public DateTime[] time { get; set; }
@@ -66,7 +67,7 @@ namespace FractalPlatform.Weather
             .OpenForm(result =>
             {
                 FirstDocOf("ChooseLocation")
-                .ExtendDocument(DQL("{'Map':{'Point':{'Lat':@Lat,'Lng':@Lng}}}", _lat, _lng))
+                .ExtendDocument(DQL("{'Map':{'Center':{'Lat':@Lat,'Lng':@Lng},'Point':{'Lat':@Lat,'Lng':@Lng}}}", _lat, _lng))
                 .OpenForm(result => {
                     if (result.Result)
                     {
@@ -85,10 +86,17 @@ namespace FractalPlatform.Weather
 
         public override object OnComputedDimension(ComputedInfo computedInfo) 
         {
-		    return REST.Get($"https://maps.googleapis.com/maps/api/geocode/json?latlng={_lat},{_lng}&sensor=true&key=AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8z")
-					   .ToCollection()
-					   .GetFirstDoc()
-                       .Value("{'plus_code':{'compound_code':$}}");
+            if (computedInfo.Variable == "Key")
+            {
+                return _apiKey;
+            }
+            else
+            {
+                return REST.Get($"https://maps.googleapis.com/maps/api/geocode/json?latlng={_lat},{_lng}&sensor=true&key={_apiKey}")
+                           .ToCollection()
+                           .GetFirstDoc()
+                           .Value("{'plus_code':{'compound_code':$}}");
+            }
 		}
 		
 		public override void OnStart()

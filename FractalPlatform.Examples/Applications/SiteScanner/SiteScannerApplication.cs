@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
@@ -15,7 +15,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
         private string GetFromCache(string url)
         {
-            var client = new WebClient();
+            var client = new HttpClient();
 
             string text;
 
@@ -25,7 +25,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
             }
             else
             {
-                text = client.DownloadString(url);
+                text = client.GetStringAsync(url).Result;
 
                 _cache.Add(url, text);
             }
