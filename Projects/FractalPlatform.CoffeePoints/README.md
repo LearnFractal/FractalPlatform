@@ -36,6 +36,8 @@ Application helps strangers to meet each other on the map for short meetings wit
 
 ![FindResult](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.CoffeePoints/Screenshots/FindResult.png?raw=true)
 
+![FindResult](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.CoffeePoints/Screenshots/User.png?raw=true)
+
 ## Contacts
 
 Have you any questions ? [Contact us](mailto:learn.fractal@gmail.com)
