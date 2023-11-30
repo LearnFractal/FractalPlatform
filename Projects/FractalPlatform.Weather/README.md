@@ -31,5 +31,5 @@ GPS coordianates can be selected on the map.
 
 ## Contacts
 
-Have any questions ? [Contact us](mailto:learn.fractal@gmail.com)
+Have you any questions ? [Contact us](mailto:learn.fractal@gmail.com)
 
