@@ -130,21 +130,8 @@ namespace FractalPlatform.UTube
 
         public override bool OnOpenForm(FormInfo formInfo)
         {
-            if (formInfo.Collection.Name == "Dashboard" &&
-                (formInfo.AttrPath.FirstPath == "NewVideos" ||
-                 formInfo.AttrPath.FirstPath == "Subscribes" ||
-                 formInfo.AttrPath.FirstPath == "Recommendations"))
-            {
-                var uid = formInfo.Collection
-                                  .GetWhere(formInfo.AttrPath)
-                                  .Value("{'" + formInfo.AttrPath.FirstPath + "':[{'UID':$}]}");
-
-                OpenVideo(uid);
-
-                return false;
-            }
-            else if (formInfo.Collection.Name == "Channels" &&
-                    formInfo.AttrPath.FirstPath == "Videos")
+            if (formInfo.Collection.Name == "Channels" &&
+                formInfo.AttrPath.FirstPath == "Videos")
             {
                 var uid = DocsWhere("Channels", formInfo.AttrPath)
                           .Value("{'Videos':[{'UID':$}]}");

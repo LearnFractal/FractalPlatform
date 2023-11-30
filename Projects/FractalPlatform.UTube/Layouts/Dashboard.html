@@ -219,13 +219,13 @@
                             <ul class="swiper-wrapper videos__list">
                                 <control attr="NewVideos" repeatable="true">
                                     <li class="swiper-slide video videos-item">
-                                        <a href="@EditRowUrl">
+                                        <a href="@BaseUrl/@AppName/?tag=@UID">
                                             <div class="video__img-wrap">
                                                 <!--
-                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
-                                                <source src="@BaseFilesUrl/@Video.Value" />
-                                            </video>
-                                            -->
+                                                <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                    <source src="@BaseFilesUrl/@Video.Value" />
+                                                </video>
+                                                -->
                                                 <img class="video__img" src="@BaseFilesUrl/@Preview.Value" alt="@Name.Value">
                                                 <div class="btn--settings">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -261,7 +261,7 @@
                                             </div>
                                         </a>
                                         <div class="video__desc">
-                                            <a href="@EditRowUrl">
+                                            <a href="@BaseUrl/@AppName/?tag=@UID">
                                                 <h3 class="video__title">@Name.Value</h3>
                                             </a>
                                             <div class="video__data">
@@ -324,13 +324,13 @@
                             <ul class="swiper-wrapper videos__list">
                                 <control attr="Subscribes" repeatable="true">
                                     <li class="swiper-slide video videos-item">
-                                        <a href="@EditRowUrl">
+                                        <a href="@BaseUrl/@AppName/?tag=@UID">
                                             <div class="video__img-wrap">
                                                 <!--
-                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
-                                                <source src="@BaseFilesUrl/@Video.Value" />
-                                            </video>
-                                            -->
+                                                <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                    <source src="@BaseFilesUrl/@Video.Value" />
+                                                </video>
+                                                -->
                                                 <img class="video__img" src="@BaseFilesUrl/@Preview.Value" alt="@Name.Value">
                                                 <div class="btn--settings">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -366,7 +366,9 @@
                                             </div>
                                         </a>
                                         <div class="video__desc">
-                                            <a href="@EditRowUrl"><h3 class="video__title">@Name.Value</h3></a>
+                                            <a href="@BaseUrl/@AppName/?tag=@UID">
+                                                <h3 class="video__title">@Name.Value</h3>
+                                            </a>
                                             <div class="video__data">
                                                 <p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
@@ -427,13 +429,13 @@
                             <ul class="swiper-wrapper videos__list">
                                 <control attr="Recommendations" repeatable="true">
                                     <li class="swiper-slide video videos-item">
-                                        <a href="@EditRowUrl">
+                                        <a href="@BaseUrl/@AppName/?tag=@UID">
                                             <div class="video__img-wrap">
                                                 <!--
-                                            <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
-                                                <source src="@BaseFilesUrl/@Video.Value" />
-                                            </video>
-                                            -->
+                                                <video id="video" name="Video" class="movie-details__img" width="320" height="180" controls>
+                                                    <source src="@BaseFilesUrl/@Video.Value" />
+                                                </video>
+                                                -->
                                                 <img class="video__img" src="@BaseFilesUrl/@Preview.Value" alt="@Name.Value">
                                                 <div class="btn--settings">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
@@ -469,7 +471,9 @@
                                             </div>
                                         </a>
                                         <div class="video__desc">
-                                            <a href="@EditRowUrl"><h3 class="video__title">@Name.Value</h3></a>
+                                            <a href="@BaseUrl/@AppName/?tag=@UID">
+                                                <h3 class="video__title">@Name.Value</h3>
+                                            </a>
                                             <div class="video__data">
                                                 <p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
