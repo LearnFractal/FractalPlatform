@@ -14,10 +14,10 @@ GPS coordianates can be selected on the map.
 
 | Code Part  | Volume |
 | ------------- | ------------- |
-| C# code  | 109 lines  |
-| Database  | 1 collection  |
-| Designed Screens  | 1 screen  |
-| Standard Screens  | 1 screen  |
+| C# code  | 109 code lines  |
+| Database  | 1 document collection  |
+| Designed Screens  | 1 designed screen  |
+| Standard Screens  | 1 standard screen  |
 
 ## Web Link
 
