@@ -34,3 +34,4 @@ With standard screens
 - [SiteScanner](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SiteScanner)
 - [ImageHosting](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ImageHosting)
 - [Movies](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Movies)
+- [JsonToWebApp](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/JsonToWebApp)
