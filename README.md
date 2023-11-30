@@ -1,12 +1,18 @@
 # List of Examples
+With designed screens
+- [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Seasons)
+- [CoffeePoints](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
+- [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
+- [Forum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Forum)
+- [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Weather)
 
+With standard screens
 - [Hello World](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld)
 - [BTC Rate](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRate)
 - [BTC Rate Stop Loss](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRateStopLoss)
 - [Chat](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Chat)
 - [Controls Gallery](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ControlsGallery)
 - [Dating Game](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/DatingGame)
-- [Forum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Forum)
 - [Login](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Login)
 - [LoginOrRegister](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/LoginOrRegister)
 - [Manage Passwords](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ManagePasswords)
@@ -24,10 +30,7 @@
 - [Vote](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Vote)
 - [WorkOutTracker](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/WorkOutTracker)
 - [FreelanceResponse](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FreelanceResponse)
-- [RawForum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/RawForum)
-- [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Seasons)
-- [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
-- [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Weather)
 - [Electricity](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Electricity)
 - [SiteScanner](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SiteScanner)
 - [ImageHosting](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ImageHosting)
+- [Movies](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Movies)
