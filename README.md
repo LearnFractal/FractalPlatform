@@ -1,10 +1,10 @@
 # List of Examples
 With designed screens
-- [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Seasons)
-- [CoffeePoints](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
-- [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/UTube)
-- [Forum](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Forum)
-- [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Weather)
+- [Seasons](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Seasons)
+- [CoffeePoints](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.CoffeePoints)
+- [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.UTube)
+- [Forum](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Forum)
+- [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Weather)
 
 With standard screens
 - [Hello World](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld)
