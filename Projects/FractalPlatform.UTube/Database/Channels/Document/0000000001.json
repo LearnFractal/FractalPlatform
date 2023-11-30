@@ -33,7 +33,7 @@
     },
     {
       "UID": "102",
-      "Name": "Create ToDo list app",
+      "Name": "ToDo list app",
       "Description": "How to create ToDo list app",
       "Preview": "CreateToDoListEN.jpg",
       "Video": "CreateToDoListEN.mp4",
@@ -51,7 +51,7 @@
     },
     {
       "UID": "103",
-      "Name": "Create ToDo list with categories app",
+      "Name": "ToDo list with categories app",
       "Description": "How to create ToDo list with categories app",
       "Preview": "CreateToDoListWithCategoriesEN.jpg",
       "Video": "CreateToDoListWithCategoriesEN.mp4",
@@ -69,7 +69,7 @@
     },
     {
       "UID": "104",
-      "Name": "Create Vote app",
+      "Name": "Vote app",
       "Description": "How to create Vote app",
       "Preview": "CreateVoteEN.jpg",
       "Video": "CreateVoteEN.mp4",
@@ -87,7 +87,7 @@
     },
     {
       "UID": "105",
-      "Name": "Create Forum app",
+      "Name": "Forum app",
       "Description": "How to create Forum app",
       "Preview": "CreateForumEN.jpg",
       "Video": "CreateForumEN.mp4",
@@ -105,7 +105,7 @@
     },
     {
       "UID": "106",
-      "Name": "Create Chat app",
+      "Name": "Chat app",
       "Description": "How to create Chat app",
       "Preview": "CreateChatEN.jpg",
       "Video": "CreateChatEN.mp4",
@@ -123,7 +123,7 @@
     },
     {
       "UID": "107",
-      "Name": "Create Login app",
+      "Name": "Login app",
       "Description": "How to create Login app",
       "Preview": "CreateLoginEN.jpg",
       "Video": "CreateLoginEN.mp4",
@@ -141,7 +141,7 @@
     },
     {
       "UID": "108",
-      "Name": "Create Mult table app",
+      "Name": "Mult table app",
       "Description": "How to create Mult table app",
       "Preview": "CreateMultTableEN.jpg",
       "Video": "CreateMultTableEN.mp4",
@@ -159,7 +159,7 @@
     },
     {
       "UID": "109",
-      "Name": "Create Photo Album app",
+      "Name": "Photo Album app",
       "Description": "How to create Photo Album app",
       "Preview": "CreatePhotoAlbumEN.jpg",
       "Video": "CreatePhotoAlbumEN.mp4",

@@ -65,7 +65,7 @@
     },
     {
       "UID": "202",
-      "Name": "Create ToDo list app",
+      "Name": "ToDo list app",
       "Description": "How to create ToDo list app",
       "Preview": "CreateToDoListRU.jpg",
       "Video": "CreateToDoListRU.mp4",
@@ -83,7 +83,7 @@
     },
     {
       "UID": "203",
-      "Name": "Create ToDo list with categories app",
+      "Name": "ToDo list with categories app",
       "Description": "How to create ToDo list with categories app",
       "Preview": "CreateToDoListWithCategoriesRU.jpg",
       "Video": "CreateToDoListWithCategoriesRU.mp4",
@@ -101,7 +101,7 @@
     },
     {
       "UID": "204",
-      "Name": "Create Vote app",
+      "Name": "Vote app",
       "Description": "How to create Vote app",
       "Preview": "CreateVoteRU.jpg",
       "Video": "CreateVoteRU.mp4",
@@ -119,7 +119,7 @@
     },
     {
       "UID": "205",
-      "Name": "Create Forum app",
+      "Name": "Forum app",
       "Description": "How to create Forum app",
       "Preview": "CreateForumRU.jpg",
       "Video": "CreateForumRU.mp4",
@@ -137,7 +137,7 @@
     },
     {
       "UID": "206",
-      "Name": "Create Chat app",
+      "Name": "Chat app",
       "Description": "How to create Chat app",
       "Preview": "CreateChatRU.jpg",
       "Video": "CreateChatRU.mp4",
@@ -155,7 +155,7 @@
     },
     {
       "UID": "207",
-      "Name": "Create Login app",
+      "Name": "Login app",
       "Description": "How to create Login app",
       "Preview": "CreateLoginRU.jpg",
       "Video": "CreateLoginRU.mp4",
@@ -173,7 +173,7 @@
     },
     {
       "UID": "208",
-      "Name": "Create Mult table app",
+      "Name": "Mult table app",
       "Description": "How to create Mult table app",
       "Preview": "CreateMultTableRU.jpg",
       "Video": "CreateMultTableRU.mp4",
@@ -191,7 +191,7 @@
     },
     {
       "UID": "209",
-      "Name": "Create Photo Album app",
+      "Name": "Photo Album app",
       "Description": "How to create Photo Album app",
       "Preview": "CreatePhotoAlbumRU.jpg",
       "Video": "CreatePhotoAlbumRU.mp4",
@@ -209,7 +209,7 @@
     },
     {
       "UID": "210",
-      "Name": "Create BTC Rate app",
+      "Name": "BTC Rate app",
       "Description": "How to create BTC Rate app",
       "Preview": "CreateBTCRateRU.jpg",
       "Video": "CreateBTCRateRU.mp4",
@@ -227,7 +227,7 @@
     },
     {
       "UID": "211",
-      "Name": "Create Controls Gallery app",
+      "Name": "Controls Gallery app",
       "Description": "How to create Controls Gallery app",
       "Preview": "CreateControlsGalleryRU.jpg",
       "Video": "CreateControlsGalleryRU.mp4",
@@ -245,7 +245,7 @@
     },
     {
       "UID": "212",
-      "Name": "Create Freelance Response app - Part 1",
+      "Name": "Freelance Response app - Part 1",
       "Description": "How to create Freelance Response app - Part 1",
       "Preview": "CreateFreelanceResponse1RU.jpg",
       "Video": "CreateFreelanceResponse1RU.mp4",
@@ -263,7 +263,7 @@
     },
     {
       "UID": "213",
-      "Name": "Create Freelance Response app - Part 2",
+      "Name": "Freelance Response app - Part 2",
       "Description": "How to create Freelance Response app - Part 2",
       "Preview": "CreateFreelanceResponse2RU.jpg",
       "Video": "CreateFreelanceResponse2RU.mp4",
@@ -281,7 +281,7 @@
     },
     {
       "UID": "214",
-      "Name": "Create Login or Register app",
+      "Name": "Login or Register app",
       "Description": "How to create Login or Register app",
       "Preview": "CreateLoginOrRegisterRU.jpg",
       "Video": "CreateLoginOrRegisterRU.mp4",
@@ -299,7 +299,7 @@
     },
     {
       "UID": "215",
-      "Name": "Create Manage Passwords app",
+      "Name": "Manage Passwords app",
       "Description": "How to create Manage Passwords app",
       "Preview": "CreateManagePasswordsRU.jpg",
       "Video": "CreateManagePasswordsRU.mp4",
@@ -317,7 +317,7 @@
     },
     {
       "UID": "216",
-      "Name": "Create Online Shop app",
+      "Name": "Online Shop app",
       "Description": "How to create Online Shop app",
       "Preview": "CreateOnlineShopRU.jpg",
       "Video": "CreateOnlineShopRU.mp4",
@@ -335,7 +335,7 @@
     },
     {
       "UID": "217",
-      "Name": "Create Social Network app",
+      "Name": "Social Network app",
       "Description": "How to create Social Network app",
       "Preview": "CreateSocialNetworkRU.jpg",
       "Video": "CreateSocialNetworkRU.mp4",
@@ -353,7 +353,7 @@
     },
     {
       "UID": "218",
-      "Name": "Create Supermarket app",
+      "Name": "Supermarket app",
       "Description": "How to create Supermarket app",
       "Preview": "CreateSupermarketRU.jpg",
       "Video": "CreateSupermarketRU.mp4",
@@ -371,7 +371,7 @@
     },
     {
       "UID": "219",
-      "Name": "Create Taxi app",
+      "Name": "Taxi app",
       "Description": "How to create Taxi app",
       "Preview": "CreateTaxiRU.jpg",
       "Video": "CreateTaxiRU.mp4",
@@ -389,7 +389,7 @@
     },
     {
       "UID": "220",
-      "Name": "Create Video Library app",
+      "Name": "Video Library app",
       "Description": "How to create Video Library app",
       "Preview": "CreateVideoLibraryRU.jpg",
       "Video": "CreateVideoLibraryRU.mp4",

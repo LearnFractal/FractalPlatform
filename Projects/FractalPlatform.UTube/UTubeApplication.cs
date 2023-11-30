@@ -99,6 +99,8 @@ namespace FractalPlatform.UTube
         {
             CloseIfOpenedForm("VideoDashboard");
 
+            Context.UrlTag = uid;
+
             if (!Context.User.IsGuest)
             {
                 if (!DocsWhere("Users", "{'Name':@UserName,'History':[Any,{'UID':@UID}]}", uid)
