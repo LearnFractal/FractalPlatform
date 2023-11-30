@@ -18,7 +18,8 @@ Application demonstrates ToDo list with categories with next functionality:
 
 ## How it implemented
 
-**Video explanation**: No video
+[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=203)
+[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=103)
 
 ## Web Link
 

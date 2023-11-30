@@ -11,7 +11,8 @@ Application moderates anonimous chat where users can send messages
 
 ## How it implemented
 
-[Video explanation](https://booben.com/jupiter/files)
+[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=206)
+[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=106)
 
 ## Web Link
 

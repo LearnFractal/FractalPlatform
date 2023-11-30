@@ -26,7 +26,8 @@ Application moderates a simple social network with next functionality:
 
 ## How it implemented
 
-**Video explanation**: No video
+[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=217)
+[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=117)
 
 ## Web Link
 

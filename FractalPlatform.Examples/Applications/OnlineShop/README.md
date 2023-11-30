@@ -23,7 +23,8 @@ Additional functionality
 
 ## How it implemented
 
-**Video explanation**: No video
+[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=216)
+[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=116)
 
 ## Web Link
 

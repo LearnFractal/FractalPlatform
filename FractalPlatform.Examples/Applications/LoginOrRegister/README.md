@@ -11,7 +11,8 @@ Application demonstrates how to works with user credentials
 
 ## How it implemented
 
-**Video explanation**: No video
+[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=214)
+[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=114)
 
 ## Web Link
 

@@ -18,7 +18,8 @@ Application demonstrates the simple platform for Taxi company with next function
 
 ## How it implemented
 
-**Video explanation**: No video
+[EN UTube Video](https://fraplat.com/jupiter/UTube?tag=219)
+[UA UTube Video](https://fraplat.com/jupiter/UTube?tag=119)
 
 ## Web Link
 
