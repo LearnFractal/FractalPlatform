@@ -10,7 +10,7 @@ GPS coordianates can be selected on the map.
 - Make REST api call to get forecast weather for a week
 - Ability to change GPS coordinates on the map for forecase weather
 
-## Code
+## Project
 
 | Code Part  | Volume |
 | ------------- | ------------- |
