@@ -45,13 +45,13 @@ For User and Admin
 
 ## Screenshots
 
-![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.CoffeePoints/Forum/Register.png?raw=true)
+![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Register.png?raw=true)
 
-![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.CoffeePoints/Forum/Dashboard.png?raw=true)
+![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Dashboard.png?raw=true)
 
-![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.CoffeePoints/Forum/Topics.png?raw=true)
+![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Topics.png?raw=true)
 
-![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.CoffeePoints/Forum/Messages.png?raw=true)
+![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Forum/Screenshots/Messages.png?raw=true)
 
 ## Contacts
 
