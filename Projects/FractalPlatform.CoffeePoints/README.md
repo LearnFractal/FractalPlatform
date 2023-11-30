@@ -1,26 +1,36 @@
-# Coffee Points
+# Coffee Points web application
 
-## Sources
+## Description
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.CoffeePoints/CoffeePointsApplication.cs)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.CoffeePoints/Layouts)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.CoffeePoints/Files)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.CoffeePoints/Database)
+Application helps strangers to meet each other on the map for short meetings with coffee, drink, talk, eat and so on:
 
 ## Functionality
 
-Application helps users to meet each other on the map for short meetings with coffee, drink, talk, eat and so on:
+- Review all proposed meetings across strangers on the map
+- Propose your location with Goal, Time, Location, Contacts etc.
+- Facet search strangers by different parameters such as Goal, Time, Location etc.
+- Proposition for a meeting is valid for a one week.
 
-- Review locations for meetings on map
-- Propose location on the map
-- Upload photo, goal, time and other parameters
-- Find users by facet search
-- and so on.
+## Project
 
-## How it implemented
-
-**Video explanation**: No video
+| Code Part  | Volume |
+| ------------- | ------------- |
+| C# code  | 142 code lines  |
+| Database  | 5 document collections  |
+| Designed Screens  | 4 designed screens  |
+| Standard Screens  | 0 standard screens  |
 
 ## Web Link
 
-[Coffee Points](https://fraplat.com/jupiter/CoffeePoints)
+[CoffeePoints](https://fraplat.com/jupiter/CoffeePoints)
+
+## Screenshots
+
+![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Weather/Screenshots/Dashboard.png?raw=true)
+
+![Choose Location](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Weather/Screenshots/ChooseLocation.png?raw=true)
+
+## Contacts
+
+Have you any questions ? [Contact us](mailto:learn.fractal@gmail.com)
+
