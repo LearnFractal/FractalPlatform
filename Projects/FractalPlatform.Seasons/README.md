@@ -60,7 +60,23 @@ For User and Admin
 
 ## Screenshots
 
+![Login](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/Login.png?raw=true)
+
 ![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/Dashboard.png?raw=true)
+
+![Movie1](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/Movie1.png?raw=true)
+
+![Movie2](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/Movie2.png?raw=true)
+
+![User1](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/User1.png?raw=true)
+
+![User2](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/User2.png?raw=true)
+
+![Users](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/Users.png?raw=true)
+
+![EditUser](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/EditUser.png?raw=true)
+
+![Register](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/Register.png?raw=true)
 
 ## Contacts
 
