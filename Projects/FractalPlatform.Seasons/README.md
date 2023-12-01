@@ -1,26 +1,67 @@
-# Seasons
+# Seasons web application
 
-## Sources
+## Description
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Seasons/SeasonsApplication.cs)
-- [Layouts](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Seasons/Layouts)
-- [Files](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Seasons/Files)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Seasons/Database)
+Online theatre without advirtisements with elements of social network.
 
 ## Functionality
 
-Application helps users to meet each other on the map for short meetings with coffee, drink, talk, eat and so on:
+For Guest
 
-- Review locations for meetings on map
-- Propose location on the map
-- Upload photo, goal, time and other parameters
-- Find users by facet search
-- and so on.
+- Register on the web site
 
-## How it implemented
+For User
 
-**Video explanation**: No video
+- Login on the web site
+- Review recommended, most rated movies
+- Review movie with basic info: name, year, country, genre, description, actors and so on
+- View movie as video without advirtisement
+- Find/Filter movies by genre, year, country
+- Search movies in search text box
+- Search users in search text box
+- Edit my user info
+- Review all registered users
+- Review all play lists of users
+- Add a movie to my play list
+- Move movie to my Best movies list after watching
+- Remove movie from my Best movies list
+- Move movie to my Good movies list after watching
+- Remove movie from my Good movies list
+- Review users who has particular movie in their play list
+- Review list of all users
+- Add comment under movie
+
+For Admin
+
+- Create/Update/Delete any movie on the web site
+- Create/Update/Delete any actor on the web site
+- Create/Update/Delete any user info on the web site
+- Create/Update/Delete any play list on the web site
+
+For User and Admin
+
+- Track count views of movies
+- Track count likes of movies
+- Track rating of movies
+- Track count comments of movies
+
+## Project
+
+| Code Part  | Volume |
+| ------------- | ------------- |
+| C# code  | 473 code lines  |
+| Database  | 9 document collections  |
+| Designed Screens  | 5 designed screens  |
+| Standard Screens  | 4 standard screens  |
 
 ## Web Link
 
-[Coffee Points](https://fraplat.com/jupiter/CoffeePoints)
+[Seasons](https://fraplat.com/jupiter/Seasons)
+
+## Screenshots
+
+![Dashboard](https://github.com/LearnFractal/FractalPlatform/blob/main/Projects/FractalPlatform.Seasons/Screenshots/Dashboard.png?raw=true)
+
+## Contacts
+
+Have you any questions ? [Contact us](mailto:learn.fractal@gmail.com)
