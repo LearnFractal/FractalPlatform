@@ -127,8 +127,6 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
         public override bool OnTimerDimension(TimerInfo timerInfo)
         {
-            return false;
-
             var users = DocsOf("Users").Select<UserInfo>();
 
             _cache.Clear();
@@ -139,8 +137,7 @@ namespace FractalPlatform.Examples.Applications.SiteScanner
 
                 user.LastScanTime = DateTime.Now;
 
-                DocsWhere("Users", "{'Name':@Name}", user.Name)
-                      .UpdateByObject(user);
+                DocsWhere("Users", "{'Name':@Name}", user.Name).UpdateByObject(user);
             }
 
             return true;
