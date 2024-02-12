@@ -1,4 +1,4 @@
-﻿namespace FractalPlatform.Client.WebApp.Applications.DatingGame
+﻿namespace FractalPlatform.Examples.Applications.DatingGame
 {
     public enum GameStatus
     {

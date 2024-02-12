@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Text;
-using System;
+﻿using System;
 using System.Linq;
-using FractalPlatform.Client.UI.DOM;
-using FractalPlatform.Client.App;
-using FractalPlatform.Client.UI.DOM.Controls.Component;
+using System.Text;
 using System.Globalization;
+using System.Collections.Generic;
+using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Client.UI.DOM.Controls.Component;
 
 namespace FractalPlatform.Examples.Applications.SocialNetwork
 {

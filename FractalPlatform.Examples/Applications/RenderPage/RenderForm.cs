@@ -1,7 +1,7 @@
-﻿using FractalPlatform.Client.UI.DOM.Controls;
-using System.Text;
+﻿using System.Text;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Client.UI.DOM.Controls;
 
 namespace FractalPlatform.Examples.Applications.RenderPage
 {

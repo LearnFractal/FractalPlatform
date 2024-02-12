@@ -1,9 +1,8 @@
-﻿using FractalPlatform.Client;
+﻿using System.Data;
+using System.Text;
 using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI.DOM;
 using FractalPlatform.Client.UI.DOM.Controls.Grid;
-using System.Data;
-using System.Text;
 
 namespace FractalPlatform.Examples.Applications.PhotoAlbum
 {

@@ -1,19 +1,14 @@
-﻿using FractalPlatform.CreateLayouts;
-using Microsoft.Web.WebView2.Core;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Helpers;
-using System.Web.UI;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
+using Newtonsoft.Json;
+using Microsoft.Web.WebView2.Core;
+using FractalPlatform.CreateLayouts;
 
 namespace FractalPlatform.CreateLayout
 {

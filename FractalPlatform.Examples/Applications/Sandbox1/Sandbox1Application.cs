@@ -1,6 +1,6 @@
-﻿using FractalPlatform.Client.App;
+﻿using System.Linq;
+using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
-using System.Linq;
 
 namespace FractalPlatform.Examples.Applications.Sandbox1
 {

@@ -1,5 +1,4 @@
-﻿using FractalPlatform.Client.WebApp.Applications.DatingGame;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace FractalPlatform.Examples.Applications.DatingGame
 {
