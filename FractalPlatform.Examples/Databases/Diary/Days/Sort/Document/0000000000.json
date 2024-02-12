@@ -1,0 +1,15 @@
+{
+  "Name": { "Index": 1 },
+  "Configure": { "Index": 2 },
+  "Report": { "Index": 3 },
+  "Results": [
+    {
+      "Exercise": {
+        "Sort": {
+          "Enabled": true,
+          "IsAscending": false
+        }
+      }
+    }
+  ]
+}
