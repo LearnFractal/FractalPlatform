@@ -1,3 +1,4 @@
 {
-  "Style": "Save:false"
+  "Style": "Save:false",
+  "ReadOnly": true
 }
