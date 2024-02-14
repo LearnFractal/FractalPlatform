@@ -36,7 +36,8 @@
   "Finance": {
     "Donate": false,
     "Withdrawal": false,
-    "Ivestment": false
+    "Ivestment": false,
+    "Payments": false
   },
   "Project": {
     "Articles": false,
