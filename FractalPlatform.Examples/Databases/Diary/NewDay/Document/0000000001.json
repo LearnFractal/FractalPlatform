@@ -26,6 +26,7 @@
     "Other": {
       "Tuthbrush": false,
       "Shower": false,
+      "Cleaning": false,
       "Walking": false,
       "Pray": false,
       "Donate": false,
