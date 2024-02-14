@@ -36,7 +36,8 @@
   "Project": {
     "Articles": false,
     "Code": false,
-    "Employees": false
+    "Team": false,
+    "Upwork": false
   },
   "Work": {
     "English": false,
