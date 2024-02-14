@@ -1,15 +1,10 @@
 {
-  "Name": { "Index": 1 },
-  "Configure": { "Index": 2 },
-  "Report": { "Index": 3 },
-  "Results": [
-    {
-      "Exercise": {
-        "Sort": {
-          "Enabled": true,
-          "IsAscending": false
-        }
-      }
-    }
-  ]
+  "Restrictions": { "Index": 1 },
+  "Individual": { "Index": 2 },
+  "Communicate": { "Index": 3 },
+  "Tuthbrush": { "Index": 4 },
+  "Shower": { "Index": 5 },
+  "Walking": { "Index": 6 },
+  "Pray": { "Index": 7 },
+  "Project": { "Index": 8 }
 }
