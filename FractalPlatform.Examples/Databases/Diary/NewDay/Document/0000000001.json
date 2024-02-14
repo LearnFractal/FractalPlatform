@@ -29,10 +29,14 @@
       "Cleaning": false,
       "Walking": false,
       "Pray": false,
-      "Donate": false,
       "Clothes": false,
       "Meditation": false
     }
+  },
+  "Finance": {
+    "Donate": false,
+    "Withdrawal": false,
+    "Ivestment": false
   },
   "Project": {
     "Articles": false,
