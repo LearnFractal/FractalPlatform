@@ -1,10 +1,10 @@
 {
   "Restrictions": { "Index": 1 },
-  "Individual": { "Index": 2 },
-  "Communicate": { "Index": 3 },
-  "Tuthbrush": { "Index": 4 },
-  "Shower": { "Index": 5 },
-  "Walking": { "Index": 6 },
-  "Pray": { "Index": 7 },
-  "Project": { "Index": 8 }
+  "Individual": {
+    "Sport": { "Index": 2 },
+    "Communicate": { "Index": 3 },
+    "Other": { "Index": 4 }
+  },
+  "Project": { "Index": 5 },
+  "Work": { "Index": 6 }
 }
