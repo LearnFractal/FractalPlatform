@@ -1,0 +1,44 @@
+﻿{
+  "Restrictions": {
+    "NoAlcohol": 10,
+    "NoCoffee": 10,
+    "NoCensor": 10,
+    "NoPravda": 10,
+    "NoEatAfter18": 10,
+    "NoSugar": 10,
+    "NoTV": 10,
+    "NoAngry": 10
+  },
+  "Individual": {
+    "Sport": {
+      "Stairs": 10,
+      "Bike": 10,
+      "Swimming": 10,
+      "Gym": 10,
+      "Spine": 10
+    },
+    "Communicate": {
+      "Friends": 10,
+      "Girls": 10,
+      "Childrens": 10
+    },
+    "Other": {
+      "Tuthbrush": 10,
+      "Shower": 10,
+      "Walking": 10,
+      "Pray": 10,
+      "Donate": 10,
+      "Clothes": 10,
+      "Meditation": 10
+    }
+  },
+  "Project": {
+    "Articles": 10,
+    "Code": 10,
+    "Employees": 10
+  },
+  "Work": {
+    "English": 10,
+    "Job": 10
+  }
+}

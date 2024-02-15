@@ -8,5 +8,6 @@
   "Finance": { "Index": 5 },
   "Project": { "Index": 6 },
   "Work": { "Index": 7 },
-  "OnDate": { "Index": 8 }
+  "OnDate": { "Index": 8 },
+  "Points": { "Index": 9 }
 }

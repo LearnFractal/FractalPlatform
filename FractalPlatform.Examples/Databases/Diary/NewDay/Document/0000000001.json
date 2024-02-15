@@ -1,5 +1,6 @@
 ﻿{
   "OnDate": "",
+  "Points": 0,
   "Restrictions": {
     "NoAlcohol": false,
     "NoCoffee": false,
@@ -8,7 +9,9 @@
     "NoEatAfter18": false,
     "NoSugar": false,
     "NoTV": false,
-    "NoAngry": false
+    "NoAngry": false,
+    "NoBread": false,
+    "NoBlackTea": false
   },
   "Individual": {
     "Sport": {
