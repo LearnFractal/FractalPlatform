@@ -19,7 +19,7 @@ namespace FractalPlatform.Examples.Applications.Diary
                             if (result.Result)
                             {
                                 var points = DocsOf("Points").ToStorage();
-                                var day = DocsOf("Days").GetDoc(result.TargetDocID);
+                                var day = DocsWhere("Days", result.TargetDocID);
 
                                 var sumPoints = 0;
 
