@@ -18,33 +18,31 @@ namespace FractalPlatform.Examples.Applications.Diary
                         {
                             if (result.Result)
                             {
-                                var points = DocsOf("Points").ToStorage();
+                                var points = DocsOf("Points").ToCollection();
                                 var day = DocsWhere("Days", result.TargetDocID);
 
                                 var sumPoints = 0;
 
-                                day.ToStorage()
-                                      .ScanKeysAndValues2(Context,
-                                                          KeyMap.Empty,
-                                                          (keyMap, attrValue, data) =>
-                                                          {
-                                                              if (attrValue.GetBoolValue())
-                                                              {
-                                                                  var currKeyMap = keyMap.Clone();
-                                                                  currKeyMap.SetDocID2(Constants.FIRST_DOC_ID);
+                                day.ToCollection()
+                                    .ScanKeysAndValues((attrPath, attrValue) =>
+                                                       {
+                                                           if (attrValue.GetBoolValue())
+                                                           {
+                                                               var currAttrPath = attrPath.Clone();
 
-                                                                  AttrValue currPoints;
+                                                               attrPath.DocID = Constants.FIRST_DOC_ID;
 
-                                                                  if (points.GetValueByKey2(Context, currKeyMap, out currPoints))
-                                                                  {
-                                                                      sumPoints += currPoints.GetIntValue();
-                                                                  }
-                                                              }
+                                                               var currPoints = points.GetValueByPath(currAttrPath);
 
-                                                              return true;
-                                                          },
-                                                          null,
-                                                          result.TargetDocID);
+                                                               if (currPoints != null)
+                                                               {
+                                                                   sumPoints += currPoints.GetIntValue();
+                                                               }
+                                                           }
+
+                                                           return true;
+                                                       },
+                                                       result.TargetDocID);
 
                                 day.Update("{'Points':@Points}", sumPoints);
                             }
