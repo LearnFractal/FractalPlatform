@@ -38,7 +38,7 @@ namespace FractalPlatform.Examples.Applications.Diary
                                                                   if (points.GetValueByKey2(Context, currKeyMap, out currPoints))
                                                                   {
                                                                       sumPoints += currPoints.GetIntValue();
-                                                                  };
+                                                                  }
                                                               }
 
                                                               return true;
