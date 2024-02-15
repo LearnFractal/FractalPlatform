@@ -2,7 +2,6 @@
 using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
-using FractalPlatform.Database.Storages;
 
 namespace FractalPlatform.Examples.Applications.Diary
 {
