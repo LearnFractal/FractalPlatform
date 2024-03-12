@@ -462,6 +462,17 @@
       }
     },
     {
+      "Description": "QR code picture",
+      "Name": "Picture - QRCode",
+      "Dimensions": {
+        "Document": "{'Control':'Some encoded text'}",
+        "UI": "{'ControlType':'Picture','Style':'Type:QRCode'}"
+      },
+      "Example": {
+        "Control": "Some encoded text"
+      }
+    },
+    {
       "Description": "Embedded mp4 video",
       "Name": "Video - mp4",
       "Dimensions": {
