@@ -9,8 +9,8 @@
   "Gender": {
     "ControlType": "ComboBox"
   },
-  "Capcha": {
-    "Style": "Type:Capcha"
+  "Captcha": {
+    "Style": "Type:Captcha"
   },
   "Avatar": {
     "ControlType": "UploadFile"

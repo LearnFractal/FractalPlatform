@@ -9,7 +9,7 @@
 
 Application implements freelance exchange market with next functionality:
 
-1. User registration with capcha and upload photo
+1. User registration with captcha and upload photo
 2. User login
 3. Three roles in the system: Developer, Customer, Admin
 4. Create Task with status, description, photo, video and archive

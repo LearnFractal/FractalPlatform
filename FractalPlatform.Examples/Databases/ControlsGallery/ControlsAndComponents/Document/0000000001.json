@@ -323,10 +323,10 @@
     },
     {
       "Description": "Filter against bots",
-      "Name": "TextBox - Capcha",
+      "Name": "TextBox - Captcha",
       "Dimensions": {
         "Document": "{'Control':'Enter number here'}",
-        "UI": "{'ControlType':'TextBox','Style':'Type:Capcha'}"
+        "UI": "{'ControlType':'TextBox','Style':'Type:Captcha'}"
       },
       "Example": {
         "Control": "Enter number here"
