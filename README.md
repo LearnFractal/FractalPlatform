@@ -36,3 +36,5 @@ With standard screens
 - [ImageHosting](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ImageHosting)
 - [Movies](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Movies)
 - [JsonToWebApp](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/JsonToWebApp)
+- [TextToQRCode](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/TextToQRCode)
+- [PressureCalc](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/PressureCalc)
