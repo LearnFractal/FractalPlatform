@@ -5,7 +5,8 @@ With designed screens
 - [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.UTube)
 - [Forum](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Forum)
 - [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Weather)
-
+- [CorpChat](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.CorpChat)
+  
 With standard screens
 - [Hello World](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld)
 - [BTC Rate](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRate)
