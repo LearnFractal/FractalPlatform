@@ -15,5 +15,5 @@ Encode text to QR code
 
 ## Web Link
 
-[JsonToWebApp](https://fraplat.com/jupiter/TextToQRCode)
+[TextToQRCode](https://fraplat.com/jupiter/TextToQRCode)
 
