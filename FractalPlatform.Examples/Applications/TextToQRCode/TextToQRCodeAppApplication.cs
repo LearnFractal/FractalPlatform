@@ -4,7 +4,7 @@ using FractalPlatform.Database.Engine;
 
 namespace FractalPlatform.Examples.Applications.TextToQRCode
 {
-    public class TextToQRCodeAppApplication : BaseApplication
+    public class TextToQRCodeApplication : BaseApplication
     {
         public override void OnStart()
         {
@@ -18,7 +18,7 @@ namespace FractalPlatform.Examples.Applications.TextToQRCode
                                          .Value("{'Text':$}")
                       }
                       .ToCollection(Constants.FIRST_DOC_ID, string.Empty)
-                      .SetUIDimension("{'QRCode':{'ControlType':'Picture','Style':'Type:QRCode'}}")
+                      .SetUIDimension("{'QRCode':{'ControlType':'Picture','Style':'Save:false;Type:QRCode'}}")
                       .OpenForm();
                   });
         }
