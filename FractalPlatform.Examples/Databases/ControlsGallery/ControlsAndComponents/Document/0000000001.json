@@ -323,10 +323,10 @@
     },
     {
       "Description": "Filter against bots",
-      "Name": "TextBox - Capcha",
+      "Name": "TextBox - Captcha",
       "Dimensions": {
         "Document": "{'Control':'Enter number here'}",
-        "UI": "{'ControlType':'TextBox','Style':'Type:Capcha'}"
+        "UI": "{'ControlType':'TextBox','Style':'Type:Captcha'}"
       },
       "Example": {
         "Control": "Enter number here"
@@ -459,6 +459,17 @@
       },
       "Example": {
         "Control": "https://memepedia.ru/wp-content/uploads/2020/11/kot-priemlemo-shablon.jpg"
+      }
+    },
+    {
+      "Description": "QR code picture",
+      "Name": "Picture - QRCode",
+      "Dimensions": {
+        "Document": "{'Control':'Some encoded text'}",
+        "UI": "{'ControlType':'Picture','Style':'Type:QRCode'}"
+      },
+      "Example": {
+        "Control": "Some encoded text"
       }
     },
     {

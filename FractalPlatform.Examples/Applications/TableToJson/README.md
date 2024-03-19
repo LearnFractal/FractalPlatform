@@ -15,5 +15,5 @@ Convert excel table to json
 
 ## Web Link
 
-[TableToJson](https://fraplat.com/mars/TableToJson)
+[TableToJson](https://fraplat.com/jupiter/TableToJson)
 

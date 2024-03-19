@@ -28,7 +28,7 @@ namespace FractalPlatform.Examples.Applications.ImageHosting
                     Captcha = ""
                 }
                 .ToCollection(Constants.FIRST_DOC_ID, string.Empty)
-                .SetUIDimension("{'Style':'Save:Upload;Cancel:false','Title':{'ControlType':'Label'},'Image':{'ControlType':'UploadFile'},'Captcha':{'Style':'Type:Capcha'}}")
+                .SetUIDimension("{'Style':'Save:Upload;Cancel:false','Title':{'ControlType':'Label'},'Image':{'ControlType':'UploadFile'},'Captcha':{'Style':'Type:Captcha'}}")
                 .SetDimension(DimensionType.Validation, "{'Image':{'IsRequired':true}}")
                 .OpenForm(result =>
                 {

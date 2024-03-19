@@ -1,0 +1,13 @@
+{
+  "Restrictions": { "Index": 1 },
+  "Individual": {
+    "Sport": { "Index": 2 },
+    "Communicate": { "Index": 3 },
+    "Other": { "Index": 4 }
+  },
+  "Finance": { "Index": 5 },
+  "Project": { "Index": 6 },
+  "Work": { "Index": 7 },
+  "OnDate": { "Index": 8 },
+  "Points": { "Index": 9 }
+}

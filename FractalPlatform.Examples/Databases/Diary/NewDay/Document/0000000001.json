@@ -1,0 +1,55 @@
+﻿{
+  "OnDate": "",
+  "Points": 0,
+  "Restrictions": {
+    "NoAlcohol": false,
+    "NoCoffee": false,
+    "NoCensor": false,
+    "NoPravda": false,
+    "NoEatAfter18": false,
+    "NoSugar": false,
+    "NoTV": false,
+    "NoAngry": false,
+    "NoBread": false,
+    "NoBlackTea": false
+  },
+  "Individual": {
+    "Sport": {
+      "Stairs": false,
+      "Bike": false,
+      "Swimming": false,
+      "Gym": false,
+      "Spine": false
+    },
+    "Communicate": {
+      "Friends": false,
+      "Girls": false,
+      "Childrens": false
+    },
+    "Other": {
+      "Tuthbrush": false,
+      "Shower": false,
+      "Cleaning": false,
+      "Walking": false,
+      "Pray": false,
+      "Clothes": false,
+      "Meditation": false
+    }
+  },
+  "Finance": {
+    "Donate": false,
+    "Withdrawal": false,
+    "Ivestment": false,
+    "Payments": false
+  },
+  "Project": {
+    "Articles": false,
+    "Code": false,
+    "Team": false,
+    "Upwork": false
+  },
+  "Work": {
+    "English": false,
+    "Job": false
+  }
+}

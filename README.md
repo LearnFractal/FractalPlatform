@@ -5,7 +5,8 @@ With designed screens
 - [UTube](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.UTube)
 - [Forum](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Forum)
 - [Weather](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Weather)
-
+- [CorpChat](https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.CorpChat)
+  
 With standard screens
 - [Hello World](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld)
 - [BTC Rate](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRate)
@@ -35,3 +36,5 @@ With standard screens
 - [ImageHosting](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ImageHosting)
 - [Movies](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Movies)
 - [JsonToWebApp](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/JsonToWebApp)
+- [TextToQRCode](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/TextToQRCode)
+- [PressureCalc](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/PressureCalc)

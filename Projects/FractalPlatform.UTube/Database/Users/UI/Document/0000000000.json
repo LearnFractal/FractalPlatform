@@ -1,5 +1,5 @@
 {
-  "Style": "Hide:Photo,Avatar,Value,Password,History,Subscribes,Capcha,RepeatPassword,UID;Add:false;HasLabel:true;Type:Link",
+  "Style": "Hide:Photo,Avatar,Value,Password,History,Subscribes,Captcha,RepeatPassword,UID;Add:false;HasLabel:true;Type:Link",
   "Name": {
     "ReadOnly": true
   },
@@ -21,7 +21,7 @@
   "Roles": {
     "Visible": false
   },
-  "Capcha": {
+  "Captcha": {
     "Visible": false
   },
   "RepeatPassword": {

@@ -1,0 +1,9 @@
+{
+  "Style": "Save:Create QR Code;Cancel:false",
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Text": {
+    "ControlType": "RichTextBox"
+  }
+}

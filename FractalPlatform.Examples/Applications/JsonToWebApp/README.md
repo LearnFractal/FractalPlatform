@@ -15,5 +15,5 @@ Build CRUD Web Application based on any json text
 
 ## Web Link
 
-[JsonToWebApp](https://fraplat.com/mars/JsonToWebApp)
+[JsonToWebApp](https://fraplat.com/jupiter/JsonToWebApp)
 

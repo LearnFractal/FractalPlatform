@@ -149,7 +149,7 @@ namespace FractalPlatform.Forum
                                                       .GetWhere(computedInfo.AttrPath)
                                                       .Value("{'Description':$}") ?? string.Empty;
 
-                        return description.Substring(0, description.IndexOf("\n"));
+                        return description.Contains("\n") ? description.Substring(0, description.IndexOf("\n")) : description;
                     }
                 case "DescriptionHtml":
                     {
