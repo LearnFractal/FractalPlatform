@@ -1,0 +1,35 @@
+{
+  "Formula": "MyChannel",
+  "Videos": [
+    {
+      "Comments": {
+        "Allow": {
+          "Write": [
+            "Guest",
+            "User"
+          ]
+        }
+      },
+      "CountViews": {
+        "Allow": {
+          "Write": [
+            "Guest",
+            "User"
+          ]
+        }
+      },
+      "Likes": {
+        "Allow": {
+          "Write": [
+            "User"
+          ]
+        },
+        "Disallow": {
+          "Write": [
+            "Guest"
+          ]
+        }
+      }
+    }
+  ]
+}

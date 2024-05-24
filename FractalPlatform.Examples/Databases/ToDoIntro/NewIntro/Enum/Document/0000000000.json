@@ -1,0 +1,46 @@
+﻿{
+  "Feedback": {
+    "Stars": {
+      "Items": [ 1, 2, 3, 4, 5 ]
+    },
+    "Position": {
+      "Items": [
+        "Student",
+        "Frontend Developer",
+        "Backend Developer",
+        "Full Stack Developer",
+        "Tech Lead/Architect",
+        "Manager",
+        "Sales",
+        "DevOps/Admin",
+        "Investor"
+      ]
+    },
+    "Expirience": {
+      "Items": [
+        "No Expirience",
+        "< 1 years",
+        "1-5 years",
+        "5-10 years",
+        "10-20 years",
+        "> 20 years"
+      ]
+    },
+    "Gender": {
+      "Items": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "Age": {
+      "Items": [
+        "15-20",
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60"
+      ]
+    }
+  }
+}

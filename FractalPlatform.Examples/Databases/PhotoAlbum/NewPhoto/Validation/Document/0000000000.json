@@ -1,0 +1,8 @@
+{
+  "Title": {
+    "IsRequired": true
+  },
+  "Photo": {
+    "IsRequired": true
+  }
+}

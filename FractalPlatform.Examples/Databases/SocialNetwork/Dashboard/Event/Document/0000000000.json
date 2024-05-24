@@ -1,0 +1,11 @@
+{
+  "MyUser": {
+    "OnClick": "MyUser"
+  },
+  "Users": {
+    "OnClick": "Users"
+  },
+  "NewPost": {
+    "OnClick": "NewPost"
+  }
+}

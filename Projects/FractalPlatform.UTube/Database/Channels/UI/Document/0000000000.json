@@ -1,0 +1,72 @@
+{
+  "Style": "Add:false;Hide:Photo,Tags,Videos,Likes,NewVideo,IsLocked,Video,Preview,Comments,NewComment,Subscribe,Unsubscribe;Type:Link",
+  "Name": {
+    "Enabled": false
+  },
+  "Owner": {
+    "Enabled": false
+  },
+  "OnDate": {
+    "Enabled": false
+  },
+  "Photo": {
+    "ControlType": "Picture"
+  },
+  "Tags": {
+    "ControlType": "Tags"
+  },
+  "Videos": [
+    {
+      "Style": "Save:false",
+      "Name": {
+        "ReadOnly": true
+      },
+      "Description": {
+        "ReadOnly": true
+      },
+      "UID": {
+        "Visible": false
+      },
+      "Video": {
+        "ControlType": "Media",
+        "Style": "Type:Video"
+      },
+      "OnDate": {
+        "Enabled": false
+      },
+      "OnDateLabel": {
+        "Enabled": false
+      },
+      "CountViews": {
+        "Enabled": false
+      },
+      "CountLikes": {
+        "Enabled": false
+      },
+      "CountComments": {
+        "Enabled": false
+      },
+      "Likes": {
+        "ControlType": "Likes"
+      },
+      "Comments": {
+        "ControlType": "Comments"
+      },
+      "NewComment": {
+        "ControlType": "Button"
+      }
+    }
+  ],
+  "NewVideo": {
+    "ControlType": "Button",
+    "Visible": true
+  },
+  "Subscribe": {
+    "ControlType": "Button",
+    "Visible": true
+  },
+  "Unsubscribe": {
+    "ControlType": "Button",
+    "Visible": true
+  }
+}

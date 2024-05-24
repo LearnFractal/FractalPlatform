@@ -1,0 +1,9 @@
+{
+  "Name": {"Index": 1},
+  "Password": { "Index": 2 },
+  "RepeatPassword": {"Index": 3},
+  "Captcha": { "Index": 4 },
+  "Age": { "Index": 5 },
+  "Gender": {"Index": 6},
+  "Photo": { "Index": 7 }
+}

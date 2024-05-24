@@ -1,0 +1,179 @@
+﻿{
+  "Description": "Fractal Platform channel EN",
+  "IsLocked": false,
+  "Name": "Fractal EN",
+  "NewVideo": "New Video",
+  "OnDate": "10/31/2023 19:39:34",
+  "Owner": "Bazist",
+  "Photo": "fractal.png",
+  "Subscribe": "Subscribe",
+  "Unsubscribe": "Unsubscribe",
+  "Tags": [
+    "Fractal",
+    "LowCode"
+  ],
+  "Videos": [
+    {
+      "UID": "101",
+      "Name": "How to build and deploy app",
+      "Description": "How to build and deploy app",
+      "Preview": "HowToBuildAndDeployAppEN.jpg",
+      "Video": "HowToBuildAndDeployAppEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "102",
+      "Name": "ToDo list app",
+      "Description": "How to create ToDo list app",
+      "Preview": "CreateToDoListEN.jpg",
+      "Video": "CreateToDoListEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "103",
+      "Name": "ToDo list with categories app",
+      "Description": "How to create ToDo list with categories app",
+      "Preview": "CreateToDoListWithCategoriesEN.jpg",
+      "Video": "CreateToDoListWithCategoriesEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "104",
+      "Name": "Vote app",
+      "Description": "How to create Vote app",
+      "Preview": "CreateVoteEN.jpg",
+      "Video": "CreateVoteEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "105",
+      "Name": "Forum app",
+      "Description": "How to create Forum app",
+      "Preview": "CreateForumEN.jpg",
+      "Video": "CreateForumEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "106",
+      "Name": "Chat app",
+      "Description": "How to create Chat app",
+      "Preview": "CreateChatEN.jpg",
+      "Video": "CreateChatEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "107",
+      "Name": "Login app",
+      "Description": "How to create Login app",
+      "Preview": "CreateLoginEN.jpg",
+      "Video": "CreateLoginEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "108",
+      "Name": "Mult table app",
+      "Description": "How to create Mult table app",
+      "Preview": "CreateMultTableEN.jpg",
+      "Video": "CreateMultTableEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    },
+    {
+      "UID": "109",
+      "Name": "Photo Album app",
+      "Description": "How to create Photo Album app",
+      "Preview": "CreatePhotoAlbumEN.jpg",
+      "Video": "CreatePhotoAlbumEN.mp4",
+
+      "CountComments": "0",
+      "CountLikes": "2",
+      "CountViews": 1,
+      "NewComment": "New Comment",
+      "OnDate": "2023/11/30",
+      "OnDateLabel": "1 days ago",
+      "Likes": [
+        "Bazist",
+        "Rebeca"
+      ]
+    }
+  ]
+}

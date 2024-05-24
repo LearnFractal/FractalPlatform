@@ -1,0 +1,39 @@
+﻿{
+  "Age": 21,
+  "Gender": "Male",
+  "Language": "EN",
+  "Name": "Tim",
+  "Password": "296996F7EA4B73CEB529AD18692C3C31",
+  "Photo": "tim.png",
+  "RequestFriend": "Request Friend",
+  "Friends": [
+    {
+      "Approved": true,
+      "Name": "Rebeca"
+    }
+  ],
+  "Posts": [
+    {
+      "Avatar": "tim.png",
+      "Message": "Hello from Tim !",
+      "NewComment": "New Comment",
+      "OnDate": "06/29/2022 11:24:12",
+      "Photo": "post2.jpg",
+      "UID": "B942FCCB-0584-485E-BE0A-3DE324F8BD76",
+      "Who": "Tim",
+      "Comments": [
+        {
+          "Avatar": "rebeca.png",
+          "OnDate": "03/08/2023 10:59:05",
+          "Picture": "",
+          "Text": "Testtt",
+          "Who": "Rebeca"
+        }
+      ],
+      "Likes": [
+        "Test",
+        "Rebeca"
+      ]
+    }
+  ]
+}

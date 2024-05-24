@@ -1,0 +1,51 @@
+{
+  "Login": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Password": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "LoginButton": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "NewTopic": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "EditTopics": {
+    "Allow": {
+      "Read": [
+        "Admin"
+      ]
+    }
+  },
+  "Register": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Users": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "Name": { "Index": 1 },
+  "LastScanTime": { "Index": 2 },
+  "TelegramUserID": { "Index": 3 },
+  "Tags": { "Index": 4 }
+}

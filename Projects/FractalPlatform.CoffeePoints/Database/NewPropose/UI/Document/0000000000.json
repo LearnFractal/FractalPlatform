@@ -1,0 +1,15 @@
+{
+  "Layout": "NewPropose",
+  "IsRawPage": true,
+
+  "Contacts": {
+    "Photo": {
+      "ControlType": "UploadFile"
+    }
+  },
+  "Map": {
+    "ControlType": "ChooseMap",
+    "Width": "100%",
+    "Height": "600px"
+  }
+}

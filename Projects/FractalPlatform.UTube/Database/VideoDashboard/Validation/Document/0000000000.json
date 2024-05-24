@@ -1,0 +1,6 @@
+{
+  "Comment": {
+    "IsRequired": true,
+    "ValidateOnControl": "NewComment"
+  }
+}

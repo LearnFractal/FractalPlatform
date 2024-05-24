@@ -1,0 +1,20 @@
+{
+  "LoginButton": {
+    "OnClick": "Login"
+  },
+  "LogoutButton": {
+    "OnClick": "Logout"
+  },
+  "Register": {
+    "OnClick": "Register"
+  },
+  "MyUser": {
+    "OnClick": "MyUser"
+  },
+  "MyDashboard": {
+    "OnClick": "MyDashboard"
+  },
+  "NewOrder": {
+    "OnClick": "NewOrder"
+  }
+}

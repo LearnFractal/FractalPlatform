@@ -1,0 +1,44 @@
+{
+  "EditUser": {
+    "Formula": "@MyProfile"
+  },
+  "PlayList": [
+    {
+      "AddToBestList": {
+        "Formula": "@MyProfile"
+      },
+      "AddToGoodList": {
+        "Formula": "@MyProfile"
+      },
+      "RemoveFromList": {
+        "Formula": "@MyProfile"
+      }
+    }
+  ],
+  "BestMovies": [
+    {
+      "AddToBestList": {
+        "Formula": "@MyProfile"
+      },
+      "AddToGoodList": {
+        "Formula": "@MyProfile"
+      },
+      "RemoveFromList": {
+        "Formula": "@MyProfile"
+      }
+    }
+  ],
+  "GoodMovies": [
+    {
+      "AddToBestList": {
+        "Formula": "@MyProfile"
+      },
+      "AddToGoodList": {
+        "Formula": "@MyProfile"
+      },
+      "RemoveFromList": {
+        "Formula": "@MyProfile"
+      }
+    }
+  ]
+}

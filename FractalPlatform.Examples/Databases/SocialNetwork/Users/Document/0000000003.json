@@ -1,0 +1,58 @@
+﻿{
+  "Age": 20,
+  "Gender": "Female",
+  "Language": "EN",
+  "Name": "Rebeca",
+  "Password": "3A59A77F69F69E81EBF3E4B44F3C872B",
+  "Photo": "rebeca.png",
+  "RequestFriend": "Request Friend",
+  "Friends": [
+    {
+      "Approved": true,
+      "Name": "Tim"
+    },
+    {
+      "Approved": true,
+      "Name": "Bob"
+    }
+  ],
+  "Posts": [
+    {
+      "Avatar": "rebeca.png",
+      "Message": "Hello from Rebeca !",
+      "NewComment": "New Comment",
+      "OnDate": "06/21/2022 11:24:12",
+      "Photo": "post3.jpg",
+      "UID": "C942FCCB-0584-485E-BE0A-3DE324F8BD76",
+      "Who": "Rebeca",
+      "Likes": [
+        "Test"
+      ]
+    },
+    {
+      "Avatar": "rebeca.png",
+      "Message": "New Hello",
+      "NewComment": "New Comment",
+      "OnDate": "1/9/2023 4:17:14 AM",
+      "Photo": "2c2ad6aee19a4b4798f5480ca6e4320c.jpg",
+      "UID": "E54B6F9B-BADC-41E8-B88B-F9F5747AD3CE",
+      "Who": "Rebeca",
+      "Likes": [
+        "Test",
+        "Rebeca"
+      ]
+    },
+    {
+      "Avatar": "rebeca.png",
+      "Message": "Hello New Day !",
+      "NewComment": "New Comment",
+      "OnDate": "03/08/2023 10:37:54",
+      "Photo": "1404e460a9b4468895a174b2d74de6c4.jpg",
+      "UID": "1FDF5515-297D-426F-8B2F-70A75DBE6EAC",
+      "Who": "Rebeca",
+      "Likes": [
+        "Test"
+      ]
+    }
+  ]
+}

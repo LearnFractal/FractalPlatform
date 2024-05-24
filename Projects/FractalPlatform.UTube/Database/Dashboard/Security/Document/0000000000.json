@@ -1,0 +1,72 @@
+{
+  "Login": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Logout": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Register": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Users": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "MyUser": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "NewChannel": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "MyChannels": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Channels": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "History": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "ClearHistory": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  }
+}

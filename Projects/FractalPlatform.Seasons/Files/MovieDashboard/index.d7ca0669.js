@@ -1,0 +1,2 @@
+document.addEventListener("click",(function(t){if(!t.target.classList.contains("filters-dropdown__item"))return;let e=Array.from(t.target.parentElement.children);t.target.parentElement.classList.contains("isActive")?(e.forEach((t=>{t.classList.add("isHidden")})),t.target.classList.remove("isHidden"),t.target.parentElement.classList.remove("isActive")):(t.target.parentElement.classList.add("isActive"),e.forEach((t=>{t.classList.remove("isHidden")})))}));
+//# sourceMappingURL=index.d7ca0669.js.map

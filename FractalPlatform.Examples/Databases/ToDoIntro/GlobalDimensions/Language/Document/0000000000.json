@@ -1,0 +1,470 @@
+﻿{
+  "AutoCreateNotFoundKeys": true,
+  "DefaultLanguage": "EN",
+  "Languages": [
+    "EN",
+    "UA"
+  ],
+  "Values": [
+    {
+      "EN": "Intro course",
+      "UA": "Початковий курс"
+    },
+    {
+      "EN": "Welcome",
+      "UA": "Вітання"
+    },
+    {
+      "EN": "Welcome to Fractal Platform !",
+      "UA": "Вітаємо в Fractal Platform !"
+    },
+    {
+      "EN": "This is on boarding tutorial",
+      "UA": "Це ознайомчий курс"
+    },
+    {
+      "EN": "NextPage",
+      "UA": "Наступна Сторінка"
+    },
+    {
+      "EN": "Learn JSON format",
+      "UA": "Вивчаємо JSON формат"
+    },
+    {
+      "EN": "Let's start from JSON",
+      "UA": "Давайте почнемо з JSON"
+    },
+    {
+      "EN": "What is JSON in 1 minute learn video",
+      "UA": "Що таке JSON вивчаємо в відео за 1 хвилину"
+    },
+    {
+      "EN": "PrevPage",
+      "UA": "Попередня сторінка"
+    },
+    {
+      "EN": "That's it. We can describe almost all objects in the real word in JSON",
+      "UA": "Це все. Ми можеме описати майже всі обєкти в реальному світі за допомогою JSON"
+    },
+    {
+      "EN": "Step 1 of 4",
+      "UA": "Крок 1 з 4"
+    },
+    {
+      "EN": "Let's make you first application - ToDo list",
+      "UA": "Давайте створимо перший наш додаток - ToDo list"
+    },
+    {
+      "EN": "First of all let's create JSON that describes our ToDo list.",
+      "UA": "Перш за все давайте створимо JSON що описує наш ToDo list."
+    },
+    {
+      "EN": "That's it ! You have created your first application.",
+      "UA": "Це все ! Ви щойно створили ваш перший веб додаток."
+    },
+    {
+      "EN": "Click 'Test Me!' button to check your app !",
+      "UA": "Натисніть 'Test Me!' посилання щоб перевірити Ваш перший додаток !"
+    },
+    {
+      "EN": "Test Me!",
+      "UA": "Test Me!"
+    },
+    {
+      "EN": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD (Create/Read/Update/Delete operations). It is so easy !",
+      "UA": "Зазвичай в Fractal Platform якщо у вас є JSON (Document) - у Вас є CRUD (Create/Read/Update/Delete операції) додаток. Це так просто !"
+    },
+    {
+      "EN": "Step 2 of 4",
+      "UA": "Крок 2 з 4"
+    },
+    {
+      "EN": "Yep. It was easy, but what about categories in ToDo list ?",
+      "UA": "Хм. Це було просто, але що якщо я хочу додати категорії в мій ToDo list ?"
+    },
+    {
+      "EN": "Let's split our tasks by Education and Home categories",
+      "UA": "Давайте розділимо задачі на Education та Home категорії"
+    },
+    {
+      "EN": "Here we modified JSON to add categories.",
+      "UA": "Ось тут ми змінили наш JSON щоб додати категорії."
+    },
+    {
+      "EN": "Well done ! We created our app. FP can handles any JSON as domain model.",
+      "UA": "Гарна робота ! Ми щойно створили наш додаток. FP може побудувати додаток на будь-якому JSON."
+    },
+    {
+      "EN": "Wow that was amaizing. In other langs you have to write much more code to add such functionality",
+      "UA": "Це було чудово. В інших мовах програмування нам потрібно було написати значно більше коду для такої функціональності"
+    },
+    {
+      "EN": "Step 3 of 4",
+      "UA": "Крок 3 з 4"
+    },
+    {
+      "EN": "Well. This is standard auto generated interface. But what if I want to add a validation ?",
+      "UA": "Так. Це був стандартний авто генерований інтерфейс. Але що робити якщо я хочу додати, наприклад, валідацію ?"
+    },
+    {
+      "EN": "For example, I want to validate fields before save",
+      "UA": "Для прикладу, Я хочу перевіряти поля перед зберіганням"
+    },
+    {
+      "EN": "Fractal Platform contains Dimensions. You can imagine it as deck of cards",
+      "UA": "Fractal Platform має Dimensions (виміри). Ви можете уявити собі це як гральну колоду карт"
+    },
+    {
+      "EN": "Each card in this deck it is a Dimension that describes logic in some aspect.",
+      "UA": "Кожна карта в цій колоді представляє собою Dimension (вимір), що описує певну аспектну логіку."
+    },
+    {
+      "EN": "The deck contains at least one card. We call it main Document",
+      "UA": "Кожна колода має що найменьше одну карту. Ми називаємо це основний Document"
+    },
+    {
+      "EN": "Let's add Validation dimension, that describes how to validate attributes in Document",
+      "UA": "Давайте додамо Validation вимір, що описує як потрібно валідувати атрибут в документі"
+    },
+    {
+      "EN": "Dimensions help to us do not mix business logic in one layer.",
+      "UA": "Dimensions (виміри) допомогають нам не змішувати нашу бізнесс логіку в одному прошарку."
+    },
+    {
+      "EN": "Almost all logic can be described in Dimensions as part of app config.",
+      "UA": "Майже вся логіка додатку може бути описана в Dimensions (вимірах) як частина конфігурації."
+    },
+    {
+      "EN": "Time to test our application !",
+      "UA": "Час протестувати наш додаток !"
+    },
+    {
+      "EN": "Step 4 of 4",
+      "UA": "Крок 4 з 4"
+    },
+    {
+      "EN": "We need to do some more serious for our ToDo list. We need to do Report !",
+      "UA": "Давайте спробуємо додати більш серйозну функіональність для нашого ToDo list. Нам потрібен Report !"
+    },
+    {
+      "EN": "Let's start from button. We need to add button attribute in our Document",
+      "UA": "Давайте почнемо з кнопки. Додамо новий атрибут в наш Document"
+    },
+    {
+      "EN": "And we need describe in UI dimension that this attribute is button",
+      "UA": "В UI dimension (вимірі) нам необхідно вказати що цей атрибут є кнопка"
+    },
+    {
+      "EN": "Now we need handle OnClick event in our Application and build Report.",
+      "UA": "Тепер нам необхідно перехопити OnClick подію в нашому додатку та побудувати там Report."
+    },
+    {
+      "EN": "Wow. Now we have Report in our application as dynamic form !",
+      "UA": "Це все. Ми тепер маємо Report в нашому додатку як динамічная форма !"
+    },
+    {
+      "EN": "Conclusion",
+      "UA": "Висновки"
+    },
+    {
+      "EN": "Fractal Platform it is low code platform that:",
+      "UA": "Fractal Platform це low code платформа яка:"
+    },
+    {
+      "EN": "1. Very easy for programming. Just create JSON and you have your first version of app",
+      "UA": "1. Дуже проста для програмування. Просто створіть JSON та ви будете мати першу версію вашого додатка"
+    },
+    {
+      "EN": "2. Very flexible for modifications. You can add or remove Dimensions even without reload app",
+      "UA": "2. Дуже гнучка для модифікацій. Ви можете додати або видалити Dimensions (виміри) навіть без перезавантаження додатку"
+    },
+    {
+      "EN": "3. Very fast for applications. Huge possibilities to tune performance or scale",
+      "UA": "3. Дя створення швидких додатків. Дуже гарні можливості для налаштування швидкодії та масштабування"
+    },
+    {
+      "EN": "and this tutorial was created on Fractal Platform in few hours !",
+      "UA": "і звісно цей веб додаток теж був створений на Fractal Platform за кілька годин !"
+    },
+    {
+      "EN": "Review on GitHub our examples",
+      "UA": "Review on GitHub our examples"
+    },
+    {
+      "EN": "Offer",
+      "UA": "Offer"
+    },
+    {
+      "EN": "Fractal Platform has:",
+      "UA": "Fractal Platform has:"
+    },
+    {
+      "EN": "Image1",
+      "UA": "Image1"
+    },
+    {
+      "EN": "Promo",
+      "UA": "Promo"
+    },
+    {
+      "EN": "Email",
+      "UA": "Email"
+    },
+    {
+      "EN": "Feedback",
+      "UA": "Відгук"
+    },
+    {
+      "EN": "If you enjoy this tutorial, please leave feedback",
+      "UA": "Якщо вам спобобався цей курс, будь-ласка оцініть його"
+    },
+    {
+      "EN": "Stars",
+      "UA": "Оцінка"
+    },
+    {
+      "EN": "1",
+      "UA": "1"
+    },
+    {
+      "EN": "2",
+      "UA": "2"
+    },
+    {
+      "EN": "3",
+      "UA": "3"
+    },
+    {
+      "EN": "4",
+      "UA": "4"
+    },
+    {
+      "EN": "5",
+      "UA": "5"
+    },
+    {
+      "EN": "Name",
+      "UA": "Ім'я"
+    },
+    {
+      "EN": "Contacts",
+      "UA": "Контакти"
+    },
+    {
+      "EN": "Finish",
+      "UA": "Завершити"
+    },
+    {
+      "EN": "MessageBox",
+      "UA": "Повідомлення"
+    },
+    {
+      "EN": "Thank you, Have a nice day !",
+      "UA": "Дякуємо, Гарного дня !"
+    },
+    {
+      "EN": "Cancel",
+      "UA": "Закрити"
+    },
+    {
+      "EN": "ToDoList",
+      "UA": "ToDoList"
+    },
+    {
+      "EN": "Report",
+      "UA": "Звіт"
+    },
+    {
+      "EN": "Title",
+      "UA": "Назва"
+    },
+    {
+      "EN": "Categories",
+      "UA": "Категорії"
+    },
+    {
+      "EN": "Number",
+      "UA": "Номер"
+    },
+    {
+      "EN": "Category",
+      "UA": "Категорія"
+    },
+    {
+      "EN": "Tasks",
+      "UA": "Задачі"
+    },
+    {
+      "EN": "Save",
+      "UA": "Зберегти"
+    },
+    {
+      "EN": "Categories item",
+      "UA": "Елемент категорії"
+    },
+    {
+      "EN": "Completed",
+      "UA": "Завершено"
+    },
+    {
+      "EN": "Task",
+      "UA": "Задача"
+    },
+    {
+      "EN": "Tasks item",
+      "UA": "Елемент задачі"
+    },
+    {
+      "EN": "Want to be a Developer as part of team ? Or have idea for a new Project ?",
+      "UA": "Хочешь бути розробником в команді ? Або маєш ідею для нового проекту ?"
+    },
+    {
+      "EN": "Please register on Fractal Platform by promo code",
+      "UA": "Будь ласка реєструйся на Fractal Platform по промо коду"
+    },
+    {
+      "EN": "Fractal Platform provides full lifecycle for developers and customers from learning",
+      "UA": "Fractal Platform надає повний цикл для розробників та клієнтів від навчання"
+    },
+    {
+      "EN": "to participate in real projects as part of team",
+      "UA": "до участі в реальних проектах як частина команди"
+    },
+    {
+      "EN": "Register",
+      "UA": "Зареєструватися"
+    },
+    {
+      "EN": "1",
+      "UA": "1"
+    },
+    {
+      "EN": "2",
+      "UA": "2"
+    },
+    {
+      "EN": "3",
+      "UA": "3"
+    },
+    {
+      "EN": "4",
+      "UA": "4"
+    },
+    {
+      "EN": "5",
+      "UA": "5"
+    },
+    {
+      "EN": "Position",
+      "UA": "Посада"
+    },
+    {
+      "EN": "Student",
+      "UA": "Студент"
+    },
+    {
+      "EN": "Frontend Developer",
+      "UA": "Frontend Розробник"
+    },
+    {
+      "EN": "Backend Developer",
+      "UA": "Backend Розробник"
+    },
+    {
+      "EN": "Full Stack Developer",
+      "UA": "Full Stack Розробник"
+    },
+    {
+      "EN": "Tech Lead/Architect",
+      "UA": "Технічний Лідер/Архітектор"
+    },
+    {
+      "EN": "Sales",
+      "UA": "Продажі"
+    },
+    {
+      "EN": "Manager",
+      "UA": "Менеджер"
+    },
+    {
+      "EN": "DevOps/Admin",
+      "UA": "ДевОпс/Адмін"
+    },
+    {
+      "EN": "Investor",
+      "UA": "Інвестор"
+    },
+    {
+      "EN": "Expirience",
+      "UA": "Досвід"
+    },
+    {
+      "EN": "No Expirience",
+      "UA": "Немає досвіду"
+    },
+    {
+      "EN": "< 1 years",
+      "UA": "< 1 років"
+    },
+    {
+      "EN": "1-5 years",
+      "UA": "1-5 років"
+    },
+    {
+      "EN": "5-10 years",
+      "UA": "5-10 років"
+    },
+    {
+      "EN": "10-20 years",
+      "UA": "10-20 років"
+    },
+    {
+      "EN": "> 20 years",
+      "UA": "> 20 років"
+    },
+    {
+      "EN": "Gender",
+      "UA": "Стать"
+    },
+    {
+      "EN": "Male",
+      "UA": "Чоловіча"
+    },
+    {
+      "EN": "Female",
+      "UA": "Жіноча"
+    },
+    {
+      "EN": "Other",
+      "UA": "Інші"
+    },
+    {
+      "EN": "Age",
+      "UA": "Вік"
+    },
+    {
+      "EN": "15-20",
+      "UA": "15-20"
+    },
+    {
+      "EN": "20-30",
+      "UA": "20-30"
+    },
+    {
+      "EN": "30-40",
+      "UA": "30-40"
+    },
+    {
+      "EN": "40-50",
+      "UA": "40-50"
+    },
+    {
+      "EN": "50-60",
+      "UA": "50-60"
+    },
+    {
+      "EN": "Promo codes temporary not available. Please use Feedback form on the next page.",
+      "UA": "Промокоди тимчасово недоступні. Будь-ласка, заповніть форму на наступній сторінці для реєстрації."
+    }
+  ]
+}

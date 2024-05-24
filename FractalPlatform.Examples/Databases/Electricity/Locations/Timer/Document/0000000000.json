@@ -1,0 +1,4 @@
+{
+  "OnCall": "CheckElectricity",
+  "CallEveryInSec": 300
+}

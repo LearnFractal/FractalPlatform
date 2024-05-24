@@ -1,0 +1,10 @@
+﻿{
+  "Address": "",
+  "IPAddress": "",
+  "Lat": "",
+  "Lng": "",
+  "TelegramUserID": 0,
+  "Description": "",
+  "HasElectricity": true,
+  "LastPingTime": ""
+}

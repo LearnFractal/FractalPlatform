@@ -1,0 +1,102 @@
+﻿using System;
+using System.Linq;
+using FractalPlatform.Client.App;
+using FractalPlatform.Client.UI;
+using FractalPlatform.Common.Enums;
+using FractalPlatform.Database.Engine;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+namespace FractalPlatform.Examples.Applications.MyElectro
+{
+    public class MyElectroApplication : BaseApplication
+    {
+        private static DateTime _nextUpdateTime = DateTime.MinValue;
+        private static string _schedule;
+        private static bool _isExists = true;
+
+        public override void OnStart()
+        {
+            //1. Download data
+            if (DateTime.Now > _nextUpdateTime)
+            {
+                try
+                {
+                    var html = REST.Get("https://www.dtek-kem.com.ua/ua/shutdowns");
+                    var startIndex = html.IndexOf("DisconSchedule.preset") + 23;
+                    var endIndex = html.IndexOf("DisconSchedule.showCurSchedule");
+                    var json = html.Substring(startIndex, endIndex - startIndex);
+                    var data = (JObject)JsonConvert.DeserializeObject(json);
+                    var dtekGroupId = "1";
+
+                    _schedule = data["data"][dtekGroupId][((int)DateTime.Now.DayOfWeek).ToString()].ToString();
+                    _nextUpdateTime = DateTime.Now.AddMinutes(15);
+                }
+                catch { }
+            }
+
+            var isPredictExists = true;
+            var isRealExists = IsPowerLineStatusOnline;
+
+            //2. Transform data
+            string prevElectricity = null;
+            int groupId = 0;
+
+            var schedule = _schedule.ToCollection().ToAttrList().Where(x => DateTime.Now.Hour < int.Parse(x.Key.FirstPath))
+                                    .Select(x =>
+                                    {
+                                        var hour = int.Parse(x.Key.FirstPath);
+                                        var startHour = hour - 1;
+                                        var endHour = hour;
+                                        var electricity = x.Value.ToString().Replace("yes", "ПРИСУТНЄ").Replace("no", "ВІДСУТНЄ").Replace("maybe", "НЕВІДОМО");
+
+                                        if (prevElectricity == null || prevElectricity != electricity)
+                                        {
+                                            groupId++;
+                                            prevElectricity = electricity;
+                                        }
+
+                                        if ((hour - 1) == DateTime.Now.Hour)
+                                        {
+                                            isPredictExists = x.Value.ToString() != "no";
+                                        }
+
+                                        return new
+                                        {
+                                            StartHour = startHour,
+                                            EndHour = endHour,
+                                            Electricity = electricity,
+                                            GroupId = groupId
+                                        };
+                                    })
+                                    .GroupBy(x => x.GroupId,
+                                             (k, g) => new
+                                             {
+                                                 StartHour = g.Min(x => x.StartHour),
+                                                 EndHour = g.Max(x => x.EndHour),
+                                                 Electricity = g.First().Electricity
+                                             })
+                                    .Select(x => new
+                                    {
+                                        Time = $"{x.StartHour.ToString("00")}:00 - {x.EndHour.ToString("00")}:00",
+                                        Electricity = x.Electricity
+                                    })
+                                    .ToList();
+
+            //show "electro on" only by prediction, because server can be switched to reserve battery by manualy
+            _isExists = _isExists ? isRealExists : isPredictExists && isRealExists;
+
+            //3. Show data
+            new
+            {
+                Exists = _isExists ? $"На зараз світло => ПРИСУТНЄ" : "На зараз світло => ВІДСУТНЄ",
+                Label = "ДТЕК прогнозує наявність світла:",
+                Schedule = schedule
+            }
+            .ToCollection("Моніторинг")
+            .SetUIDimension("{'Style':'HasLabel:false;Hide:Number;Cancel:Refresh','ReadOnly':true,'Label':{'ControlType':'Label'},'Exists':{'ControlType':'Label'}}")
+            .SetDimension(DimensionType.Theme, "{'DefaultTheme': 'LightBlue', 'ChooseThemeOnLoginPage': false, 'ChooseThemeOnAllPages': false}")
+            .OpenForm();
+        }
+    }
+}

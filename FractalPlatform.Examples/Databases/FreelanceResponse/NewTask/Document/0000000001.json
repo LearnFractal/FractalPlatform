@@ -1,0 +1,29 @@
+{
+   "Archive": "",
+   "Description": "",
+   "Developer": "",
+   "EndDate": "",
+   "MaxPrice": 10000,
+   "MinPrice": 100,
+   "NewAccept": "I want this task",
+   "NewCustomerRate": "Rate Customer",
+   "NewDemo": "I have demo",
+   "OnDate": "",
+   "Picture": "",
+   "Reject": "Reject Task",
+   "StartDate": "",
+   "Status": "New",
+   "TaskNumber": "T-00001",
+   "TenderModel": "TheBestDemo",
+   "Title": "",
+   "Video": "",
+   "Who": "",
+   "PaymentTypes": [
+      "ZSU",
+      "Card",
+      "Crypto"
+   ],
+   "Skills": [
+      "C#"
+   ]
+}

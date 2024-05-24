@@ -1,0 +1,15 @@
+﻿{
+   "Link": "https://google.com",
+   "Who": "Bob555",
+   "Products": [
+      {
+         "Count": 10,
+         "Price": 20,
+         "Product": "Orange0"
+      }
+   ],
+   "Shop": {
+      "Address": "Avenue0",
+      "Name": "Shop0"
+   }
+}

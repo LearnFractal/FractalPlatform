@@ -1,0 +1,13 @@
+﻿{
+  "ChangeType": "Change Type",
+  "MyUser": "My User",
+  "Type": "Movies",
+  "Genre": "Жанр",
+  "Year": "Рік",
+  "Country": "Країна",
+  "Portion": 24,
+  "NewMovie": "New Movie",
+  "EditMovies": "Edit Movies",
+  "EditActors": "Edit Actors",
+  "EditUsers": "Edit Users"
+}

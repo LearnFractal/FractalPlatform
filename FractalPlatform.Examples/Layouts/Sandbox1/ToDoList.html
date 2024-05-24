@@ -1,0 +1,4179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0015)https://d.tube/ -->
+<html><head>
+<script src="@BaseUrl/js/frmain.js"></script> 
+                                               <link rel="stylesheet" href="@BaseUrl/css/@UserTheme.css">
+                                               <link rel="stylesheet" href="@BaseUrl/css/calendar.css">
+                                               @Styles<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="@BaseFilesUrl/ToDoList/8d571fb7c5a6d913c55442d701ccf1c8c78f246d.css">
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="@BaseFilesUrl/ToDoList/5b395954b09ca827b92cfa120d7e5d91ea74ecc4.css">
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="@BaseFilesUrl/ToDoList/96bb225b7409353449d429e8f246cb2c3de9d6e6.css">
+  <link rel="shortcut icon" type="image/png" href="https://d.tube/DTube_files/images/dtubefavicon.png">
+  <title>DTube</title>
+  <meta name="description" content="DTube is a community powered video sharing platform where users vote on videos to reward creators, curators, influencers and viewers in cryptocurrency">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style> .ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {   -webkit-transform: translate3d(212px, 0, 0);           transform: translate3d(212px, 0, 0); }</style></head>
+<body 
+<form action="/@InstanceName" enctype="multipart/form-data" method="post"> 
+                                                <input type="hidden" name="EditKey" value="" />
+                                                <input type="hidden" name="MenuAction" value="" />
+                                                <input type="hidden" name="App" value="@AppName" />
+                                                <input type="hidden" name="FormName" value="@FormName" />
+                                                <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
+                                                <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
+                                                <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
+                                                <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
+                                                <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
+                                                <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
+                                                <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
+                                                <input type="submit" id="btnSave" name="btn" value="Save" style="display:none"/>
+                                                <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
+                                                <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none"/>
+                                                <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none"/>
+                                                <input type="submit" id="btnFilter" name="btn" value="Filter" style="display:none" />
+                                                <input type="submit" id="btnAdd" name="btn" value="Add" style="display:none" />
+                                                <input type="submit" id="btnDel" name="btn" value="Del" style="display:none" />class="pushable">
+  <script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.4.4.1%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22production%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2Flocalhost%3A3000%2F%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22appId%22%3A%22150zjr3301zki1vu3if5%22%2C%22autoupdateVersion%22%3A%22f99492306a9c2e8b74ec8d57b6be22b8eb19f240%22%2C%22autoupdateVersionRefreshable%22%3A%22e86b152ee079afa62b62b6d5106ea59d50331e9d%22%2C%22autoupdateVersionCordova%22%3A%22none%22%7D"));</script>
+  <script type="text/javascript" src="@BaseFilesUrl/ToDoList/b903c5327d4433cd1b89a7f9423f918fd2a634ea.js.download"></script>
+  <script type="text/javascript">Meteor.disconnect();</script>
+
+<div id="__blaze-root"><body 
+<form action="/@InstanceName" enctype="multipart/form-data" method="post"> 
+                                                <input type="hidden" name="EditKey" value="" />
+                                                <input type="hidden" name="MenuAction" value="" />
+                                                <input type="hidden" name="App" value="@AppName" />
+                                                <input type="hidden" name="FormName" value="@FormName" />
+                                                <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
+                                                <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
+                                                <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
+                                                <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
+                                                <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
+                                                <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
+                                                <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
+                                                <input type="submit" id="btnSave" name="btn" value="Save" style="display:none"/>
+                                                <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
+                                                <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none"/>
+                                                <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none"/>
+                                                <input type="submit" id="btnFilter" name="btn" value="Filter" style="display:none" />
+                                                <input type="submit" id="btnAdd" name="btn" value="Add" style="display:none" />
+                                                <input type="submit" id="btnDel" name="btn" value="Del" style="display:none" />class="pushable">
+  
+    
+    <div class="ui large borderless main menu fixed" style="height:57px; z-index:9000;">
+      <div class="left floated menu" style="width:60%">
+        
+          <div class="sidebartoggleicon item header needsclick" style="cursor: pointer;">
+            <i class="sidebar icon needsclick" style="font-size:1.4em; margin:1px 0 0 0;"></i>
+          </div>
+          <a href="https://d.tube/" class="blacklogo header item" id="textlogo">
+            <img alt="" style="width:90px;" src="@BaseFilesUrl/ToDoList/DTube_Black.svg">
+          </a>
+          <a href="https://d.tube/" class="whitelogo header item dsp-non" id="textlogo">
+            <img alt="" style="width:90px;" src="@BaseFilesUrl/ToDoList/DTube_White.svg">
+          </a>
+          
+        
+        <div class="ui item grid tablet only computer" style="width:inherit;">
+          <div class="ui search wid-ful">
+            <div class="ui icon input wid-ful">
+              
+                <input id="dsearch" type="text" name="search" placeholder="Search" autocomplete="off">
+              
+              <i class="search link icon" id="searchIcon"></i>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="right floated menu">
+        <a id="mobilesearch" class="ui item grid mobile only" style="margin:0px;padding: 0.92857143em 1.14285714em;">
+          <i class="search icon" style="font-size:1.3em; margin:0;padding:0;"></i>
+        </a>
+        
+        
+          <div class="topbarLogin">
+            <a href="https://d.tube/login">
+        <div class="ui right labeled icon button red dtube pos-rel">
+            <div style="display:inline-block; padding: 0.8em 1em;">
+                Login
+            </div>
+            <i class="icon sign in red" style="background:white;opacity:1;"></i>
+        </div>
+    </a>
+          </div>
+        
+      </div>
+    </div>
+  
+    <div id="sidebar" class="ui desktop sidebar left vertical inverted labeled icon menu uncover visible" style="z-index: 10;">
+      <div style="height:100%;">
+    <nav class="sectionslist">
+      <a href="https://d.tube/" class="item pdg-non">
+        <div id="homesidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non activemenu">
+          <i class="home icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Home</span>
+        </div>
+      </a>
+      <a href="https://d.tube/publish" class="item pdg-non">
+        <div id="uploadsidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="upload icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Upload</span>
+        </div>
+      </a>
+      
+      <!-- <a href='/golive' class="item pdg-non">
+        <div id="golivesidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="podcast icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">{{ translate 'SIDEBAR_GO_LIVE'}}</span>
+        </div>
+      </a> -->
+      <!-- <a href='/live' class="item pdg-non">
+        <div id="livesidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="tv icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">{{ translate 'SIDEBAR_LIVESTREAMS'}}</span>
+        </div>
+      </a> -->
+      <a href="https://d.tube/hotvideos" class="item pdg-non">
+        <div id="hotsidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="fire icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Hot Videos</span>
+        </div>
+      </a>
+      <a href="https://d.tube/trendingvideos" class="item pdg-non">
+        <div id="trendingsidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="trophy icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Trending Videos</span>
+        </div>
+      </a>
+      <a href="https://d.tube/newvideos" class="item pdg-non">
+        <div id="newsidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="hourglass start icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">New Videos</span>
+        </div>
+      </a>
+      <a href="https://d.tube/watchlater" class="item pdg-non">
+        <div id="watchlatersidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="time icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Watch Later</span>
+        </div>
+      </a>
+      <a href="https://d.tube/history" class="item pdg-non">
+        <div id="watchagainsidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="history icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Watch Again</span>
+        </div>
+      </a>
+      <a href="https://d.tube/election" class="item pdg-non">
+        <div id="electionsidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="users icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Leaders</span>
+        </div>
+      </a>
+      <a href="https://d.tube/settings" class="item pdg-non">
+        <div id="settingssidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="cogs icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Settings</span>
+        </div>
+      </a>
+      <a href="https://d.tube/wiki/faq/README" class="item pdg-non">
+        <div id="helpsidebarmenu" class="menuitem dtubesidebarmenu dsp-inh pdg-non">
+          <i class="question circle icon dtubesidebaricon"></i>
+          <span class="dtubesidebartitle">Help</span>
+        </div>
+      </a>
+    </nav>
+    <div class="ui divider"></div>
+
+    
+
+    <div class="ui divider"></div>
+    
+      
+      <div class="sidebarlink" style="color: red; padding: 10px 10px 70px 10px; font-weight: 600; font-size: 14px; line-height: 1.5em;">
+        <a href="https://peakd.com/@dtube" target="_blank" id="blog">
+          <span class="sidebarlink">Blog</span>
+        </a>-
+        <a href="https://discord.gg/dtube" target="_blank" id="discord">
+          <span class="sidebarlink">Discord</span>
+        </a>-
+        <a href="https://github.com/dtube" target="_blank" id="github">
+          <span class="sidebarlink">Github</span>
+        </a>
+        <br>
+        <a href="https://token.d.tube/" target="_blank" id="discord">
+          <span class="sidebarlink">DTube Coin</span>
+        </a>-
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKOTqbGYZPyJdml2YfVVb8fAQoTjhhJtnnU-gBVNzmPi_mnw/viewform" target="_blank" id="discord">
+          <span class="sidebarlink">Partnership</span>
+        </a>
+        <br>
+        <a href="https://stats.d.tube/" target="_blank" id="discord">
+          <span class="sidebarlink">Stats</span>
+        </a>-
+        <a href="https://avalonblocks.com/#/" target="_blank" id="discord">
+          <span class="sidebarlink">Explorer</span>
+        </a>
+      </div>
+      
+    
+  </div>
+    </div>
+  
+
+  <div class="dt dimoverlay"></div>
+
+     <div id="mobileselector" class="dt drawer bottom">
+         
+         
+     </div>
+  <div class="pusher" style="transform: translate3d(105px, 0, 0) !important;">
+    <div class="article">
+      
+        <main class="ui maingrid content">
+          
+  
+    
+    
+    
+    
+    <div class="ui container">
+        
+        
+        <div class="ui left aligned grid" style="margin-bottom:0rem; margin-left:0rem; margin-right:0rem;">
+        <div class="left floated aligned ten wide column block-header" style="padding-left:0px;">
+            <h2><a href="https://d.tube/hotvideos">
+   New Videos
+</a></h2>
+          </div>
+          <div class="floated right aligned two wide column" style="padding-right:0px; margin-top: 8px;">
+              <a href="https://d.tube/hotvideos" style="color:#666666"><h5>Show All</h5></a>
+          </div>
+        </div>
+          <div class="owl-carousel owl-theme wid-ful owl-loaded owl-drag" style="background: transparent!important;" id="23kj909ygm">
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+  <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1495px, 0px, 0px); transition: all 0s ease 0s; width: 5557px;"><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk" title="Crypto Play to earn game Terra core">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.4M</span>
+        
+          <span class="videosnapduration">02:19</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk">
+          <span class="customtitlelink">Crypto Play to earn game Terra core</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/alokkumar121">
+        <span class="customlink">alokkumar121</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            79DTC
+          
+        </div>
+        <div class="videosnaptime">
+        12 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz" title="Deity greeting, guru puja damaodarastaka ">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>144K</span>
+        
+          <span class="videosnapduration">40:48</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(1).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz">
+          <span class="customtitlelink">Deity greeting, guru puja damaodarastaka </span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/harinamamrita108">
+        <span class="customlink">harinamamrita108</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            6DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr" title="Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>429K</span>
+        
+          <span class="videosnapduration">05:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(2).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr">
+          <span class="customtitlelink">Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            7DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/lfu-radio/l71w4tqijc4" title="Entrevista a Gustavo Corma Parte II">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>589K</span>
+        
+          <span class="videosnapduration">33:02</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(3).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/lfu-radio/l71w4tqijc4">
+          <span class="customtitlelink">Entrevista a Gustavo Corma Parte II</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/lfu-radio">
+        <span class="customlink">lfu-radio</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            22DTC
+          
+        </div>
+        <div class="videosnaptime">
+        10 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/wiljman76/kv2vkbhhd80" title="Luminade Studios - Stream 021 - Matthew 09 - SotS 046 - Layer it on">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.2M</span>
+        
+          <span class="videosnapduration">28:53</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(4).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/wiljman76/kv2vkbhhd80">
+          <span class="customtitlelink">Luminade Studios - Stream 021 - Matthew 09 - SotS 046 - Layer it on</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/wiljman76">
+        <span class="customlink">wiljman76</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            73DTC
+          
+        </div>
+        <div class="videosnaptime">
+        14 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/realsort99/k36s0dn943k" title="class 1-  আমাদের প্রথম ক্লাস">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>753K</span>
+        
+          <span class="videosnapduration">01:09</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(5).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/realsort99/k36s0dn943k">
+          <span class="customtitlelink">class 1-  আমাদের প্রথম ক্লাস</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/realsort99">
+        <span class="customlink">realsort99</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            57DTC
+          
+        </div>
+        <div class="videosnaptime">
+        16 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/ronisracing001/mpstfdjuani" title="Split Second SUNSET FIRE, Dry Docks Detonator, Cobretti Gt500">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>778K</span>
+        
+          <span class="videosnapduration">03:58</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(6).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/ronisracing001/mpstfdjuani">
+          <span class="customtitlelink">Split Second SUNSET FIRE, Dry Docks Detonator, Cobretti Gt500</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/ronisracing001">
+        <span class="customlink">ronisracing001</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        18 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/reseller/sqwzasg8ieh" title="Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">05:21</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(7).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/reseller/sqwzasg8ieh">
+          <span class="customtitlelink">Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/reseller">
+        <span class="customlink">reseller</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mes/9rp55gbfdab" title="Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>708K</span>
+        
+          <span class="videosnapduration">26:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(8).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mes/9rp55gbfdab">
+          <span class="customtitlelink">Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mes">
+        <span class="customlink">mes</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            26DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/maneco64/olpqlzk4gh7" title="UK Bank on the Brink of Collapse.">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>11M</span>
+        
+          <span class="videosnapduration">15:46</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(9).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/maneco64/olpqlzk4gh7">
+          <span class="customtitlelink">UK Bank on the Brink of Collapse.</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/maneco64">
+        <span class="customlink">maneco64</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            81DTC
+          
+        </div>
+        <div class="videosnaptime">
+        21 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl" title="Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>529K</span>
+        
+          <span class="videosnapduration">19:58</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(10).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl">
+          <span class="customtitlelink">Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            17DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk" title="Crypto Play to earn game Terra core">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.4M</span>
+        
+          <span class="videosnapduration">02:19</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk">
+          <span class="customtitlelink">Crypto Play to earn game Terra core</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/alokkumar121">
+        <span class="customlink">alokkumar121</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            79DTC
+          
+        </div>
+        <div class="videosnaptime">
+        12 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz" title="Deity greeting, guru puja damaodarastaka ">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>144K</span>
+        
+          <span class="videosnapduration">40:48</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(1).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz">
+          <span class="customtitlelink">Deity greeting, guru puja damaodarastaka </span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/harinamamrita108">
+        <span class="customlink">harinamamrita108</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            6DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr" title="Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>429K</span>
+        
+          <span class="videosnapduration">05:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(2).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr">
+          <span class="customtitlelink">Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            7DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/lfu-radio/l71w4tqijc4" title="Entrevista a Gustavo Corma Parte II">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>589K</span>
+        
+          <span class="videosnapduration">33:02</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(3).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/lfu-radio/l71w4tqijc4">
+          <span class="customtitlelink">Entrevista a Gustavo Corma Parte II</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/lfu-radio">
+        <span class="customlink">lfu-radio</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            22DTC
+          
+        </div>
+        <div class="videosnaptime">
+        10 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/wiljman76/kv2vkbhhd80" title="Luminade Studios - Stream 021 - Matthew 09 - SotS 046 - Layer it on">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.2M</span>
+        
+          <span class="videosnapduration">28:53</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(4).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/wiljman76/kv2vkbhhd80">
+          <span class="customtitlelink">Luminade Studios - Stream 021 - Matthew 09 - SotS 046 - Layer it on</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/wiljman76">
+        <span class="customlink">wiljman76</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            73DTC
+          
+        </div>
+        <div class="videosnaptime">
+        14 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/realsort99/k36s0dn943k" title="class 1-  আমাদের প্রথম ক্লাস">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>753K</span>
+        
+          <span class="videosnapduration">01:09</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(5).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/realsort99/k36s0dn943k">
+          <span class="customtitlelink">class 1-  আমাদের প্রথম ক্লাস</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/realsort99">
+        <span class="customlink">realsort99</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            57DTC
+          
+        </div>
+        <div class="videosnaptime">
+        16 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/ronisracing001/mpstfdjuani" title="Split Second SUNSET FIRE, Dry Docks Detonator, Cobretti Gt500">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>778K</span>
+        
+          <span class="videosnapduration">03:58</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(6).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/ronisracing001/mpstfdjuani">
+          <span class="customtitlelink">Split Second SUNSET FIRE, Dry Docks Detonator, Cobretti Gt500</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/ronisracing001">
+        <span class="customlink">ronisracing001</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        18 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/reseller/sqwzasg8ieh" title="Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">05:21</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(7).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/reseller/sqwzasg8ieh">
+          <span class="customtitlelink">Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/reseller">
+        <span class="customlink">reseller</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mes/9rp55gbfdab" title="Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>708K</span>
+        
+          <span class="videosnapduration">26:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(8).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mes/9rp55gbfdab">
+          <span class="customtitlelink">Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mes">
+        <span class="customlink">mes</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            26DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/maneco64/olpqlzk4gh7" title="UK Bank on the Brink of Collapse.">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>11M</span>
+        
+          <span class="videosnapduration">15:46</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(9).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/maneco64/olpqlzk4gh7">
+          <span class="customtitlelink">UK Bank on the Brink of Collapse.</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/maneco64">
+        <span class="customlink">maneco64</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            81DTC
+          
+        </div>
+        <div class="videosnaptime">
+        21 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl" title="Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>529K</span>
+        
+          <span class="videosnapduration">19:58</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(10).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl">
+          <span class="customtitlelink">Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            17DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/geneeverett33/75bh4q32fk3" title="🎥 Twilight Zone Episode Review “A World Of His Own” 🍿">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.3M</span>
+        
+          <span class="videosnapduration">12:36</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(11).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/geneeverett33/75bh4q32fk3">
+          <span class="customtitlelink">🎥 Twilight Zone Episode Review “A World Of His Own” 🍿</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/geneeverett33">
+        <span class="customlink">geneeverett33</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            56DTC
+          
+        </div>
+        <div class="videosnaptime">
+        11 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk" title="Crypto Play to earn game Terra core">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.4M</span>
+        
+          <span class="videosnapduration">02:19</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk">
+          <span class="customtitlelink">Crypto Play to earn game Terra core</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/alokkumar121">
+        <span class="customlink">alokkumar121</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            79DTC
+          
+        </div>
+        <div class="videosnaptime">
+        12 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz" title="Deity greeting, guru puja damaodarastaka ">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>144K</span>
+        
+          <span class="videosnapduration">40:48</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(1).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz">
+          <span class="customtitlelink">Deity greeting, guru puja damaodarastaka </span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/harinamamrita108">
+        <span class="customlink">harinamamrita108</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            6DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div></div></div><div class="owl-nav"></div><div class="owl-dots disabled"></div></div>
+  <div class="ui divider"></div>
+        
+        
+        <div class="ui left aligned grid" style="margin-bottom:0rem; margin-left:0rem; margin-right:0rem;">
+            <div class="left floated aligned ten wide column block-header" style="padding-left:0px;">
+                <h2><a href="https://d.tube/trendingvideos">
+   Subscribes
+</a></h2>
+              </div>
+              <div class="floated right aligned two wide column" style="padding-right:0px; margin-top: 8px;">
+                  <a href="https://d.tube/trendingvideos" style="color:#666666"><h5>Show All</h5></a>
+              </div>
+            </div>
+          <div class="owl-carousel owl-theme wid-ful owl-loaded owl-drag" style="background: transparent!important;" id="e8zh3qp0jg">
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+  <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1495px, 0px, 0px); transition: all 0s ease 0s; width: 5557px;"><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/brianphobos/e9f7o3i1xuj" title="Bitcoin Cash And Bitcoin SV Pumps">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>6M</span>
+        
+          <span class="videosnapduration">07:08</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(12).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/brianphobos/e9f7o3i1xuj">
+          <span class="customtitlelink">Bitcoin Cash And Bitcoin SV Pumps</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/brianphobos">
+        <span class="customlink">brianphobos</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            60DTC
+          
+        </div>
+        <div class="videosnaptime">
+        3 days ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mdaminulislam/a0h8hjlqg33" title="Morning walk in nature is good for health!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>2.1M</span>
+        
+          <span class="videosnapduration">04:01</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(13).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mdaminulislam/a0h8hjlqg33">
+          <span class="customtitlelink">Morning walk in nature is good for health!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mdaminulislam">
+        <span class="customlink">mdaminulislam</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            96DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 days ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mes/9rp55gbfdab" title="Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>708K</span>
+        
+          <span class="videosnapduration">26:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(8).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mes/9rp55gbfdab">
+          <span class="customtitlelink">Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mes">
+        <span class="customlink">mes</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            26DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/xhadhin13/k48mep8xi12" title="Win the game">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.4M</span>
+        
+          <span class="videosnapduration">00:55</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(14).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/xhadhin13/k48mep8xi12">
+          <span class="customtitlelink">Win the game</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/xhadhin13">
+        <span class="customlink">xhadhin13</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            80DTC
+          
+        </div>
+        <div class="videosnaptime">
+        a day ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/masscut00/t32ljrz5m7i" title="Parra for Cuva - Swept Away (feat. Anna Naklab &amp; Mr. Gramo)">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>3.1M</span>
+        
+          <span class="videosnapduration">05:48</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(15).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/masscut00/t32ljrz5m7i">
+          <span class="customtitlelink">Parra for Cuva - Swept Away (feat. Anna Naklab &amp; Mr. Gramo)</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/masscut00">
+        <span class="customlink">masscut00</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            82DTC
+          
+        </div>
+        <div class="videosnaptime">
+        3 days ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/9qhh12o7nw3" title="Serving Up Fire Coffee at the Straw Art Gallery - Puerto Nuevo, Mexico - Artistic Mixology">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">02:03</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(16).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/9qhh12o7nw3">
+          <span class="customtitlelink">Serving Up Fire Coffee at the Straw Art Gallery - Puerto Nuevo, Mexico - Artistic Mixology</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            74DTC
+          
+        </div>
+        <div class="videosnaptime">
+        a day ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/realsort99/k36s0dn943k" title="class 1-  আমাদের প্রথম ক্লাস">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>753K</span>
+        
+          <span class="videosnapduration">01:09</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(5).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/realsort99/k36s0dn943k">
+          <span class="customtitlelink">class 1-  আমাদের প্রথম ক্লাস</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/realsort99">
+        <span class="customlink">realsort99</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            57DTC
+          
+        </div>
+        <div class="videosnaptime">
+        16 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/maneco64/olpqlzk4gh7" title="UK Bank on the Brink of Collapse.">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>11M</span>
+        
+          <span class="videosnapduration">15:46</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(9).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/maneco64/olpqlzk4gh7">
+          <span class="customtitlelink">UK Bank on the Brink of Collapse.</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/maneco64">
+        <span class="customlink">maneco64</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            81DTC
+          
+        </div>
+        <div class="videosnaptime">
+        21 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/reseller/sqwzasg8ieh" title="Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">05:21</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(7).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/reseller/sqwzasg8ieh">
+          <span class="customtitlelink">Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/reseller">
+        <span class="customlink">reseller</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk" title="Crypto Play to earn game Terra core">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.4M</span>
+        
+          <span class="videosnapduration">02:19</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk">
+          <span class="customtitlelink">Crypto Play to earn game Terra core</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/alokkumar121">
+        <span class="customlink">alokkumar121</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            79DTC
+          
+        </div>
+        <div class="videosnaptime">
+        12 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/geneeverett33/75bh4q32fk3" title="🎥 Twilight Zone Episode Review “A World Of His Own” 🍿">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.3M</span>
+        
+          <span class="videosnapduration">12:36</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(11).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/geneeverett33/75bh4q32fk3">
+          <span class="customtitlelink">🎥 Twilight Zone Episode Review “A World Of His Own” 🍿</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/geneeverett33">
+        <span class="customlink">geneeverett33</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            56DTC
+          
+        </div>
+        <div class="videosnaptime">
+        11 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/brianphobos/e9f7o3i1xuj" title="Bitcoin Cash And Bitcoin SV Pumps">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>6M</span>
+        
+          <span class="videosnapduration">07:08</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(12).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/brianphobos/e9f7o3i1xuj">
+          <span class="customtitlelink">Bitcoin Cash And Bitcoin SV Pumps</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/brianphobos">
+        <span class="customlink">brianphobos</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            60DTC
+          
+        </div>
+        <div class="videosnaptime">
+        3 days ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mdaminulislam/a0h8hjlqg33" title="Morning walk in nature is good for health!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>2.1M</span>
+        
+          <span class="videosnapduration">04:01</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(13).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mdaminulislam/a0h8hjlqg33">
+          <span class="customtitlelink">Morning walk in nature is good for health!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mdaminulislam">
+        <span class="customlink">mdaminulislam</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            96DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 days ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mes/9rp55gbfdab" title="Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>708K</span>
+        
+          <span class="videosnapduration">26:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(8).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mes/9rp55gbfdab">
+          <span class="customtitlelink">Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mes">
+        <span class="customlink">mes</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            26DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/xhadhin13/k48mep8xi12" title="Win the game">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.4M</span>
+        
+          <span class="videosnapduration">00:55</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(14).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/xhadhin13/k48mep8xi12">
+          <span class="customtitlelink">Win the game</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/xhadhin13">
+        <span class="customlink">xhadhin13</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            80DTC
+          
+        </div>
+        <div class="videosnaptime">
+        a day ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/masscut00/t32ljrz5m7i" title="Parra for Cuva - Swept Away (feat. Anna Naklab &amp; Mr. Gramo)">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>3.1M</span>
+        
+          <span class="videosnapduration">05:48</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(15).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/masscut00/t32ljrz5m7i">
+          <span class="customtitlelink">Parra for Cuva - Swept Away (feat. Anna Naklab &amp; Mr. Gramo)</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/masscut00">
+        <span class="customlink">masscut00</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            82DTC
+          
+        </div>
+        <div class="videosnaptime">
+        3 days ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/9qhh12o7nw3" title="Serving Up Fire Coffee at the Straw Art Gallery - Puerto Nuevo, Mexico - Artistic Mixology">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">02:03</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(16).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/9qhh12o7nw3">
+          <span class="customtitlelink">Serving Up Fire Coffee at the Straw Art Gallery - Puerto Nuevo, Mexico - Artistic Mixology</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            74DTC
+          
+        </div>
+        <div class="videosnaptime">
+        a day ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/realsort99/k36s0dn943k" title="class 1-  আমাদের প্রথম ক্লাস">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>753K</span>
+        
+          <span class="videosnapduration">01:09</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(5).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/realsort99/k36s0dn943k">
+          <span class="customtitlelink">class 1-  আমাদের প্রথম ক্লাস</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/realsort99">
+        <span class="customlink">realsort99</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            57DTC
+          
+        </div>
+        <div class="videosnaptime">
+        16 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/maneco64/olpqlzk4gh7" title="UK Bank on the Brink of Collapse.">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>11M</span>
+        
+          <span class="videosnapduration">15:46</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(9).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/maneco64/olpqlzk4gh7">
+          <span class="customtitlelink">UK Bank on the Brink of Collapse.</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/maneco64">
+        <span class="customlink">maneco64</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            81DTC
+          
+        </div>
+        <div class="videosnaptime">
+        21 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/reseller/sqwzasg8ieh" title="Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">05:21</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(7).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/reseller/sqwzasg8ieh">
+          <span class="customtitlelink">Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/reseller">
+        <span class="customlink">reseller</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk" title="Crypto Play to earn game Terra core">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.4M</span>
+        
+          <span class="videosnapduration">02:19</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/alokkumar121/b4ydpqxpajk">
+          <span class="customtitlelink">Crypto Play to earn game Terra core</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/alokkumar121">
+        <span class="customlink">alokkumar121</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            79DTC
+          
+        </div>
+        <div class="videosnaptime">
+        12 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/geneeverett33/75bh4q32fk3" title="🎥 Twilight Zone Episode Review “A World Of His Own” 🍿">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.3M</span>
+        
+          <span class="videosnapduration">12:36</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(11).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/geneeverett33/75bh4q32fk3">
+          <span class="customtitlelink">🎥 Twilight Zone Episode Review “A World Of His Own” 🍿</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/geneeverett33">
+        <span class="customlink">geneeverett33</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            56DTC
+          
+        </div>
+        <div class="videosnaptime">
+        11 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/wiljman76/kv2vkbhhd80" title="Luminade Studios - Stream 021 - Matthew 09 - SotS 046 - Layer it on">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.2M</span>
+        
+          <span class="videosnapduration">28:53</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(4).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/wiljman76/kv2vkbhhd80">
+          <span class="customtitlelink">Luminade Studios - Stream 021 - Matthew 09 - SotS 046 - Layer it on</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/wiljman76">
+        <span class="customlink">wiljman76</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            73DTC
+          
+        </div>
+        <div class="videosnaptime">
+        14 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/brianphobos/e9f7o3i1xuj" title="Bitcoin Cash And Bitcoin SV Pumps">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>6M</span>
+        
+          <span class="videosnapduration">07:08</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(12).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/brianphobos/e9f7o3i1xuj">
+          <span class="customtitlelink">Bitcoin Cash And Bitcoin SV Pumps</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/brianphobos">
+        <span class="customlink">brianphobos</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            60DTC
+          
+        </div>
+        <div class="videosnaptime">
+        3 days ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mdaminulislam/a0h8hjlqg33" title="Morning walk in nature is good for health!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>2.1M</span>
+        
+          <span class="videosnapduration">04:01</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(13).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mdaminulislam/a0h8hjlqg33">
+          <span class="customtitlelink">Morning walk in nature is good for health!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mdaminulislam">
+        <span class="customlink">mdaminulislam</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            96DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 days ago
+      </div>
+    </div>
+    
+  </div></div></div></div><div class="owl-nav"></div><div class="owl-dots disabled"></div></div>
+  <div class="ui divider"></div>
+        
+        
+        <div class="ui left aligned grid" style="margin-bottom:0rem; margin-left:0rem; margin-right:0rem;">
+            <div class="left floated aligned ten wide column block-header" style="padding-left:0px;">
+                <h2><a href="https://d.tube/newvideos">
+   Recommendations
+</a></h2>
+              </div>
+              <div class="floated right aligned two wide column" style="padding-right:0px; margin-top: 8px;">
+                  <a href="https://d.tube/newvideos" style="color:#666666"><h5>Show All</h5></a>
+              </div>
+            </div>
+          <div class="owl-carousel owl-theme wid-ful owl-loaded owl-drag" style="background: transparent!important;" id="lp8mww68uf">
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+      
+  
+  
+    
+  <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1495px, 0px, 0px); transition: all 0s ease 0s; width: 5557px;"><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl" title="Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>529K</span>
+        
+          <span class="videosnapduration">19:58</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(10).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl">
+          <span class="customtitlelink">Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            17DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/kenan-grace01/tghc9b9u0ry" title="Rivian is Making people RICH! But, Not How You think!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>12K</span>
+        
+          <span class="videosnapduration">08:39</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(17).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/kenan-grace01/tghc9b9u0ry">
+          <span class="customtitlelink">Rivian is Making people RICH! But, Not How You think!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/kenan-grace01">
+        <span class="customlink">kenan-grace01</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.36DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/rongibsonchannel/bafybeiehzfg5hfotem27vddbcjuucgvgyynu6guon2ac5575z" title="WAR ROOM [3 of 3] Thursday 10/5/23 • JESSE LEE PETERSON, ATTY LEXIS ANDERSON - OWEN SUES &quot;X&quot; TWITTER • Infowars">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.5K</span>
+        
+          <span class="videosnapduration">43:01</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/XYevP6PuTNg6_640x360.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/rongibsonchannel/bafybeiehzfg5hfotem27vddbcjuucgvgyynu6guon2ac5575z">
+          <span class="customtitlelink">WAR ROOM [3 of 3] Thursday 10/5/23 • JESSE LEE PETERSON, ATTY LEXIS ANDERSON - OWEN SUES "X" TWITTER • Infowars</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/rongibsonchannel">
+        <span class="customlink">rongibsonchannel</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.03DTC
+          
+        </div>
+        <div class="videosnaptime">
+        7 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/truehnchannel3.0/om0jd8w258l" title="EMILIE I - ON HER PRINCESS SECRET SERVICE">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>2.3K</span>
+        
+          <span class="videosnapduration">02:02</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(18).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/truehnchannel3.0/om0jd8w258l">
+          <span class="customtitlelink">EMILIE I - ON HER PRINCESS SECRET SERVICE</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/truehnchannel3.0">
+        <span class="customlink">truehnchannel3.0</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.04DTC
+          
+        </div>
+        <div class="videosnaptime">
+        7 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/rongibsonchannel/bafybeiegqlcmnv2otamdptvt4zoyufenkktrakb3rrexral4l" title="WAR ROOM [2 of 3] Thursday 10/5/23 • News, Reports &amp; Analysis • Infowars">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.5K</span>
+        
+          <span class="videosnapduration">42:19</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/EmsxkYpNuDid_640x360.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/rongibsonchannel/bafybeiegqlcmnv2otamdptvt4zoyufenkktrakb3rrexral4l">
+          <span class="customtitlelink">WAR ROOM [2 of 3] Thursday 10/5/23 • News, Reports &amp; Analysis • Infowars</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/rongibsonchannel">
+        <span class="customlink">rongibsonchannel</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.02DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr" title="Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>429K</span>
+        
+          <span class="videosnapduration">05:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(2).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr">
+          <span class="customtitlelink">Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            7DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/rongibsonchannel/bafybeifzvayvtjajqacxanozuieftz575r4nhuwgijaa7avsw" title="WAR ROOM [1 of 3] Thursday 10/5/23 • BREAKING: DONALD TRUMP TO VISIT U.S. CAPITOL, News &amp; Analysis • Infowars">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.5K</span>
+        
+          <span class="videosnapduration">42:46</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/4KbnYfB1pjR8_640x360.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/rongibsonchannel/bafybeifzvayvtjajqacxanozuieftz575r4nhuwgijaa7avsw">
+          <span class="customtitlelink">WAR ROOM [1 of 3] Thursday 10/5/23 • BREAKING: DONALD TRUMP TO VISIT U.S. CAPITOL, News &amp; Analysis • Infowars</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/rongibsonchannel">
+        <span class="customlink">rongibsonchannel</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.02DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/reseller/sqwzasg8ieh" title="Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">05:21</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(7).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/reseller/sqwzasg8ieh">
+          <span class="customtitlelink">Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/reseller">
+        <span class="customlink">reseller</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz" title="Deity greeting, guru puja damaodarastaka ">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>144K</span>
+        
+          <span class="videosnapduration">40:48</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(1).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz">
+          <span class="customtitlelink">Deity greeting, guru puja damaodarastaka </span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/harinamamrita108">
+        <span class="customlink">harinamamrita108</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            6DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/cutepetz/z5lxjh468jx" title="केवल घर के सामान से करो शानदार जादू 😱😍 Magic Tricks Tutorial #103">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1K</span>
+        
+          <span class="videosnapduration">06:05</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(19).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/cutepetz/z5lxjh468jx">
+          <span class="customtitlelink">केवल घर के सामान से करो शानदार जादू 😱😍 Magic Tricks Tutorial #103</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/cutepetz">
+        <span class="customlink">cutepetz</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.03DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mes/9rp55gbfdab" title="Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>708K</span>
+        
+          <span class="videosnapduration">26:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(8).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mes/9rp55gbfdab">
+          <span class="customtitlelink">Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mes">
+        <span class="customlink">mes</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            26DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl" title="Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>529K</span>
+        
+          <span class="videosnapduration">19:58</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(10).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl">
+          <span class="customtitlelink">Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            17DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item active" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/kenan-grace01/tghc9b9u0ry" title="Rivian is Making people RICH! But, Not How You think!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>12K</span>
+        
+          <span class="videosnapduration">08:39</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(17).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/kenan-grace01/tghc9b9u0ry">
+          <span class="customtitlelink">Rivian is Making people RICH! But, Not How You think!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/kenan-grace01">
+        <span class="customlink">kenan-grace01</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.36DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/rongibsonchannel/bafybeiehzfg5hfotem27vddbcjuucgvgyynu6guon2ac5575z" title="WAR ROOM [3 of 3] Thursday 10/5/23 • JESSE LEE PETERSON, ATTY LEXIS ANDERSON - OWEN SUES &quot;X&quot; TWITTER • Infowars">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.5K</span>
+        
+          <span class="videosnapduration">43:01</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/XYevP6PuTNg6_640x360.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/rongibsonchannel/bafybeiehzfg5hfotem27vddbcjuucgvgyynu6guon2ac5575z">
+          <span class="customtitlelink">WAR ROOM [3 of 3] Thursday 10/5/23 • JESSE LEE PETERSON, ATTY LEXIS ANDERSON - OWEN SUES "X" TWITTER • Infowars</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/rongibsonchannel">
+        <span class="customlink">rongibsonchannel</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.03DTC
+          
+        </div>
+        <div class="videosnaptime">
+        7 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/truehnchannel3.0/om0jd8w258l" title="EMILIE I - ON HER PRINCESS SECRET SERVICE">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>2.3K</span>
+        
+          <span class="videosnapduration">02:02</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(18).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/truehnchannel3.0/om0jd8w258l">
+          <span class="customtitlelink">EMILIE I - ON HER PRINCESS SECRET SERVICE</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/truehnchannel3.0">
+        <span class="customlink">truehnchannel3.0</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.04DTC
+          
+        </div>
+        <div class="videosnaptime">
+        7 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/rongibsonchannel/bafybeiegqlcmnv2otamdptvt4zoyufenkktrakb3rrexral4l" title="WAR ROOM [2 of 3] Thursday 10/5/23 • News, Reports &amp; Analysis • Infowars">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.5K</span>
+        
+          <span class="videosnapduration">42:19</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/EmsxkYpNuDid_640x360.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/rongibsonchannel/bafybeiegqlcmnv2otamdptvt4zoyufenkktrakb3rrexral4l">
+          <span class="customtitlelink">WAR ROOM [2 of 3] Thursday 10/5/23 • News, Reports &amp; Analysis • Infowars</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/rongibsonchannel">
+        <span class="customlink">rongibsonchannel</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.02DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr" title="Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>429K</span>
+        
+          <span class="videosnapduration">05:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(2).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/yhamk0kqclr">
+          <span class="customtitlelink">Smash of the Day - Link Takes Two - Super Smash Bros Ultimate - Nintendo - October 4, 2023</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            7DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/rongibsonchannel/bafybeifzvayvtjajqacxanozuieftz575r4nhuwgijaa7avsw" title="WAR ROOM [1 of 3] Thursday 10/5/23 • BREAKING: DONALD TRUMP TO VISIT U.S. CAPITOL, News &amp; Analysis • Infowars">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.5K</span>
+        
+          <span class="videosnapduration">42:46</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/4KbnYfB1pjR8_640x360.jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/rongibsonchannel/bafybeifzvayvtjajqacxanozuieftz575r4nhuwgijaa7avsw">
+          <span class="customtitlelink">WAR ROOM [1 of 3] Thursday 10/5/23 • BREAKING: DONALD TRUMP TO VISIT U.S. CAPITOL, News &amp; Analysis • Infowars</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/rongibsonchannel">
+        <span class="customlink">rongibsonchannel</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.02DTC
+          
+        </div>
+        <div class="videosnaptime">
+        8 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/reseller/sqwzasg8ieh" title="Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1.1M</span>
+        
+          <span class="videosnapduration">05:21</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(7).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/reseller/sqwzasg8ieh">
+          <span class="customtitlelink">Rare Find: Vintage 1985 Nintendo NES M6 Demo Display Kiosk for Sale!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/reseller">
+        <span class="customlink">reseller</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            46DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz" title="Deity greeting, guru puja damaodarastaka ">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>144K</span>
+        
+          <span class="videosnapduration">40:48</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(1).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/harinamamrita108/4fnehnx1dfz">
+          <span class="customtitlelink">Deity greeting, guru puja damaodarastaka </span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/harinamamrita108">
+        <span class="customlink">harinamamrita108</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            6DTC
+          
+        </div>
+        <div class="videosnaptime">
+        an hour ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/cutepetz/z5lxjh468jx" title="केवल घर के सामान से करो शानदार जादू 😱😍 Magic Tricks Tutorial #103">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>1K</span>
+        
+          <span class="videosnapduration">06:05</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(19).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/cutepetz/z5lxjh468jx">
+          <span class="customtitlelink">केवल घर के सामान से करो शानदार जादू 😱😍 Magic Tricks Tutorial #103</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/cutepetz">
+        <span class="customlink">cutepetz</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.03DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/mes/9rp55gbfdab" title="Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>708K</span>
+        
+          <span class="videosnapduration">26:47</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(8).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/mes/9rp55gbfdab">
+          <span class="customtitlelink">Problems Plus 20: Sum of Infinite Series Equals ln 2. Amazing!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/mes">
+        <span class="customlink">mes</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            26DTC
+          
+        </div>
+        <div class="videosnaptime">
+        2 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/durga0333/tjjbt9dk7ou" title="Naina Ke Teer 😱 Renuka Panwar | Dance 💃Challenge video | Mk Studio vlog">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>2.7K</span>
+        
+          <span class="videosnapduration">11:23</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(20).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/durga0333/tjjbt9dk7ou">
+          <span class="customtitlelink">Naina Ke Teer 😱 Renuka Panwar | Dance 💃Challenge video | Mk Studio vlog</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/durga0333">
+        <span class="customlink">durga0333</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.12DTC
+          
+        </div>
+        <div class="videosnaptime">
+        4 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl" title="Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>529K</span>
+        
+          <span class="videosnapduration">19:58</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(10).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/jeffjagoe/q2oqjz6n7wl">
+          <span class="customtitlelink">Apex Legends - Ranked Leagues - Season 18 / Resurrection - [2nd Place with 1 of 3 Squad Kills]</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/jeffjagoe">
+        <span class="customlink">jeffjagoe</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            17DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div><div class="owl-item cloned" style="width: 211.714px; margin-right: 2px;"><div class="videosnap wid-ful" style="max-width:210px;">
+    <a href="https://d.tube/v/kenan-grace01/tghc9b9u0ry" title="Rivian is Making people RICH! But, Not How You think!">
+      <div id="snaphover" class="videosnapsnap wid-ful" style="height:118px;">
+        <div class="pos-abs wid-ful" style="z-index:1; height:118px;">
+        <span class="videoscore"><i class="bolt icon"></i>12K</span>
+        
+          <span class="videosnapduration">08:39</span>
+        
+        
+          
+          <div id="watchlater" class="addwatchlater snapbutton right floated pos-abs dsp-non" title="Watch later" style="float: right;right: 5px;background: black;top: 5px;border-radius: 4px;opacity: 0.9;z-index:999;">
+              <i class="time icon" style="padding: 0px;color:white;margin: 8px;font-size: 1.2em;">
+                  <span style="z-index:9000;"></span>
+                </i>
+              </div>
+          
+        
+        <div id="snapload" class="ui snaploader pos-abs wid-ful loaded" style="z-index:-1; background-color: rgba(167, 167, 167, 0.85); height:118px; display: block; text-align: center;">
+            <i class="icon photo nosnap" style="font-size:28px;margin-top:40px;"></i>
+            <div class="ui text nosnap" style="margin-top:10px;">Missing Image</div>
+          </div> 
+        <img id="snapimg" class="sprite" src="@BaseFilesUrl/ToDoList/mqdefault(17).jpg" width="100%" height="100%" style="max-height:118px;" alt="" onerror="Template.videosnap.fallback(this)">
+      </div>
+        <br>
+      </div>
+    </a>
+    <div class="boxdisplayer">
+      <div class="videosnaptitle">
+        <a href="https://d.tube/v/kenan-grace01/tghc9b9u0ry">
+          <span class="customtitlelink">Rivian is Making people RICH! But, Not How You think!</span>
+        </a>
+      </div>
+    </div>
+    <div class="videosnapauthor">
+      <a href="https://d.tube/c/kenan-grace01">
+        <span class="customlink">kenan-grace01</span>
+      </a>
+    </div>
+    <div class="videosnapdetails">
+        <div class="videosnaprest">
+          
+            0.36DTC
+          
+        </div>
+        <div class="videosnaptime">
+        5 hours ago
+      </div>
+    </div>
+    
+  </div></div></div></div><div class="owl-nav"></div><div class="owl-dots disabled"></div></div>
+  <div class="ui divider"></div>
+        
+        
+        
+    </div>
+  
+  
+  
+        </main>
+      
+    </div>
+  </div>
+  <div class="ui grid centered sticky" style="position: fixed; bottom: 0px; margin: auto; width: 100%; z-index: 999;">
+        <div class="ui small compact message announcement transition hidden" style="width: 100%;">
+            <i class="close large icon" style="top: 35%; bottom: 35%;"></i>
+            <div class="header">
+            Avalon's 6th hardfork "Space Odyssey"
+            </div>
+            <p>
+                Find out about the
+                <a style="color: #F01A30" href="https://d.tube/v/dtube/hf6-announcement">changes</a> that you need to know about the latest network upgrade.
+            </p>
+        </div>
+    </div>
+  <!-- Not Enough Bandwidth Modal -->
+    <div class="ui small modal nobandwidth" style="z-index:1001; position: fixed; top:50%; left:50%; transform: translate(-50%, -50%)">
+        <div class="header" style="border-bottom: 0">
+            You need more bandwidth power!
+        </div>
+        <div class="content">
+            You lack <strong> bytes</strong> to broadcast that blockchain transaction.
+            
+            Keep more DTC in your account to have more bandwidth power. 1 DTC generates +10 bytes / hour.
+        </div>
+        <div class="actions">
+            <div id="closePopup" class="ui right labeled icon button grey dtube pos-rel">
+                <div style="display:inline-block;padding: 0.8em 1em;">
+                    Close
+                </div>
+                <i class="icon x" style="background:white;opacity:1;"></i>
+            </div>
+        </div>
+    </div>
+  <!-- Not Enough Bandwidth Modal -->
+    <div class="ui small modal nopermission" style="z-index:1001; position: fixed; top:50%; left:50%; transform: translate(-50%, -50%)">
+        <div class="header" style="border-bottom: 0">
+            Missing required permission
+        </div>
+        <div class="content">
+            You are logged in with a custom key that does not have the permission to perform this transaction. To proceed, please enter another custom key that has undefined permission or your master key. The key that you have entered below will only be used to broadcast this transaction.<br><br>
+            <div class="field">
+                <div class="ui left icon input" style="width: 100%;">
+                <i class="key icon"></i>
+                <input id="retryKey" type="password" name="privatekey" placeholder="Key">
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div id="cancelTransact" class="ui right labeled icon button grey dtube pos-rel">
+                <div style="display:inline-block; padding: 0.8em 1em;">
+                    Cancel
+                </div>
+                <i class="icon x" style="background:white;opacity:1;"></i>
+            </div>
+            <div id="proceedTransact" class="ui right labeled icon button red dtube pos-rel">
+                <div style="display:inline-block; padding: 0.8em 1em;">
+                    Proceed
+                </div>
+                <i class="icon check red" style="background:white;opacity:1;"></i>
+                <i class="icon white loading spinner dsp-non" style="background-color: transparent;opacity:1;"></i>
+            </div>
+        </div>
+    </div>
+</form></body></div></form></body></html>

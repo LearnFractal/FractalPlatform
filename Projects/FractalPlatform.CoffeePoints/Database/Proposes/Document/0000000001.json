@@ -1,0 +1,44 @@
+﻿{
+  "OnDate": "2023/11/29",
+  "Contacts": {
+    "Name": "Bob",
+    "Photo": "Men.png",
+    "Gender": "Male",
+    "Age": 20,
+    "Messanger": "@Bob"
+  },
+  "Day": {
+    "Friday": true,
+    "Monday": true,
+    "Saturday": true,
+    "Sunday": true,
+    "Thursday": true,
+    "Tuesday": true,
+    "Wednesday": true
+  },
+  "Goal": {
+    "Drink": true,
+    "Eat": true,
+    "Talk": true,
+    "Coffee": true,
+    "TalkAbout": ""
+  },
+  "Map": {
+    "Key": "",
+    "Title": "Choose a location",
+    "Zoom": 15,
+    "Center": {
+      "Lat": "50.4329658690059",
+      "Lng": "30.57958332067064"
+    },
+    "Point": {
+      "Lat": "50.43501057610151",
+      "Lng": "30.58470741251077"
+    }
+  },
+  "Time": {
+    "Afternoon": true,
+    "Evening": true,
+    "Morning": true
+  }
+}

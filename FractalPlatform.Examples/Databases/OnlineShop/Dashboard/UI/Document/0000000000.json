@@ -1,0 +1,17 @@
+﻿{
+  "Style": "Save:Search",
+  "Layout": "Dashboard",
+  "MobileLayout": "Dashboard",
+  "Header": {
+    "ControlType": "Header",
+    "LayoutLocation": "Header"
+  },
+  "Filters": {
+    "ControlType": "Filters",
+    "LayoutLocation": "Filters"
+  },
+  "Products": {
+    "ControlType": "Products",
+    "LayoutLocation": "Products"
+  }
+}

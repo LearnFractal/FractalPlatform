@@ -1,0 +1,40 @@
+﻿{
+  "AddToPlayList": "Add To Play List",
+  "CommentsCount": "",
+  "Country": "США, Великобританія",
+  "Countries": [ "США", "Великобританія" ],
+  "Description": "Історія життя американського фізика Роберта Оппенгеймера, який очолював перші розробки ядерної зброї.",
+  "Duration": "174 хв/02:54",
+  "Genre": "Films",
+  "IMDB": "8.60",
+  "Name": "Оппенгеймер",
+  "Picture": "Oppenheimer.jpg",
+  "Quality": "BDRip",
+  "Rating": "8.428",
+  "RecommendAge": "16+",
+  "Translation": "Професійний (багатоголосий)",
+  "Type": "films",
+  "Video": "Oppenheimer.mp4",
+  "Views": 1,
+  "ViewUsers": "View Users",
+  "Year": 2023,
+  "Actors": [
+    {
+      "Name": "Кілліан Мерфі",
+      "Role": "Роберт Оппенгеймер"
+    },
+    {
+      "Name": "Джош Хартнетт",
+      "Role": "Эрнест Лоуренс"
+    },
+    {
+      "Name": "Флоренс Паг",
+      "Role": "Джин Тетлок"
+    },
+    {
+      "Name": "Емілі Блант",
+      "Role": "Кетрін Оппенгеймер"
+    }
+  ],
+  "Series": [ "Oppenheimer.mp4" ]
+}

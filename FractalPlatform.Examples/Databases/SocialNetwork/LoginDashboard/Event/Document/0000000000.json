@@ -1,0 +1,8 @@
+{
+  "Login": {
+    "OnClick": "Login"
+  },
+  "Register": {
+    "OnClick": "Register"
+  }
+}

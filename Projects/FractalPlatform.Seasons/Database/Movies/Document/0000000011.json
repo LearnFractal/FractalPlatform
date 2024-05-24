@@ -1,0 +1,40 @@
+﻿{
+  "AddToPlayList": "Add To Play List",
+  "CommentsCount": "",
+  "Country": "США",
+  "Countries": [ "США" ],
+  "Description": "Тьмяне світло сліпих ліхтарів, скелети фабричних труб, що задихаються у власному диму. Вавилонські вежі хмарочосів, все це пекло Нового часу, Нью-Йорк.",
+  "Duration": "113 хв/01:53",
+  "Genre": "Films",
+  "IMDB": "8.40",
+  "Name": "Таксист",
+  "Picture": "Taxi Driver.jpg",
+  "Quality": "BDRip",
+  "Rating": "7.974",
+  "RecommendAge": "16+",
+  "Translation": "Професійний (багатоголосий)",
+  "Type": "films",
+  "Video": "TaxiDriver.mp4",
+  "Views": 1,
+  "ViewUsers": "View Users",
+  "Year": 1976,
+  "Actors": [
+    {
+      "Name": "Роберт де Ніро",
+      "Role": "Трэвис Бикл"
+    },
+    {
+      "Name": "Джоді Фостер",
+      "Role": "Айрис «Изи» Стинсма"
+    },
+    {
+      "Name": "Пітер Бойл",
+      "Role": "таксист «Колдун»"
+    },
+    {
+      "Name": "Сібіл Шепард",
+      "Role": "Бетси"
+    }
+  ],
+  "Series": [ "TaxiDriver.mp4" ]
+}

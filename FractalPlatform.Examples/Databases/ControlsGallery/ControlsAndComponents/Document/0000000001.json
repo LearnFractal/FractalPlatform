@@ -1,0 +1,585 @@
+﻿{
+  "Title": "List of Controls & Components",
+  "Components": [
+    {
+      "Description": "Radio button choose",
+      "Name": "RadioButton",
+      "Dimensions": {
+        "Document": "{'Control':{'Option1':true,'Option2':false}}",
+        "UI": "{'ControlType':'RadioButton'}"
+      },
+      "Example": {
+        "Control": {
+          "Option1": true,
+          "Option2": false
+        }
+      }
+    },
+    {
+      "Description": "Render tags",
+      "Name": "Tags",
+      "Dimensions": {
+        "Document": "{'Control':['One','Two','Three']}",
+        "UI": "{'ControlType':'Tags'}"
+      },
+      "Example": {
+        "Control": [
+          "One",
+          "Two",
+          "Three"
+        ]
+      }
+    },
+    {
+      "Description": "Like adds user name to Control array",
+      "Name": "Likes",
+      "Dimensions": {
+        "Document": "{'Control':['Test']}",
+        "UI": "{'ControlType':'Likes'}"
+      },
+      "Example": {
+        "Control": [
+          "Test"
+        ]
+      }
+    },
+    {
+      "Description": "List of messages",
+      "Name": "Messages",
+      "Dimensions": {
+        "Document": "{'Control':[{'OnDate':'2023-01-01','Text':'Hello World !','Who':'Guest'}]}",
+        "UI": "{'ControlType':'Messages'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "OnDate": "2023-01-01",
+            "Text": "Hello World !",
+            "Who": "Guest"
+          }
+        ]
+      }
+    },
+    {
+      "Description": "List of comments",
+      "Name": "Comments",
+      "Dimensions": {
+        "Document": "{'Control':[{'Avatar':'Guest.png','OnDate':'2023-01-01','Picture':'Message.jpg','Text':'Hello World !','Who':'Guest'}]}",
+        "UI": "{'ControlType':'Comments'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Avatar": "",
+            "OnDate": "2023-01-01",
+            "Picture": "",
+            "Text": "Hello World !",
+            "Who": "Guest"
+          }
+        ]
+      }
+    },
+    {
+      "Description": "Line graphs chart",
+      "Name": "LineGraphs Chart",
+      "Dimensions": {
+        "Document": "{'Control':'{'Title':{'Name':'LineGraph','X':'Time','Y':'Value'},'Lines':[{'Name':'One','Points':[{'X':1,'Y':1},{'X':2,'Y':2},{'X':3,'Y':3}]},{'Name':'Two','Points':[{'X':1,'Y':1},{'X':2,'Y':3},{'X':3,'Y':5}]}]}'}",
+        "UI": "{'ControlType':'Chart','Style':'Type:LineGraphs'}"
+      },
+      "Example": {
+        "Control": {
+          "Lines": [
+            {
+              "Name": "One",
+              "Points": [
+                {
+                  "X": 1,
+                  "Y": 1
+                },
+                {
+                  "X": 2,
+                  "Y": 2
+                },
+                {
+                  "X": 3,
+                  "Y": 3
+                }
+              ]
+            },
+            {
+              "Name": "Two",
+              "Points": [
+                {
+                  "X": 1,
+                  "Y": 1
+                },
+                {
+                  "X": 2,
+                  "Y": 3
+                },
+                {
+                  "X": 3,
+                  "Y": 5
+                }
+              ]
+            }
+          ],
+          "Title": {
+            "Name": "LineGraphs",
+            "X": "Time",
+            "Y": "Value"
+          }
+        }
+      }
+    },
+    {
+      "Description": "Bar Chart",
+      "Name": "Bar Chart",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}",
+        "UI": "{'ControlType':'Chart','Style':'Type:Bar'}"
+      },
+      "Example": {
+        "Control": {
+          "Columns": [
+            {
+              "Name": "One",
+              "Value": 10
+            },
+            {
+              "Name": "Two",
+              "Value": 20
+            },
+            {
+              "Name": "Three",
+              "Value": 30
+            }
+          ],
+          "Title": {
+            "Name": "Bar",
+            "X": "Bars",
+            "Y": "Value"
+          }
+        }
+      }
+    },
+    {
+      "Description": "Bar Group Chart",
+      "Name": "Bar Group Chart",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'Left','Group':'One','Value':10},{'Name':'Right','Group':'One','Value':20},{'Name':'Left','Group':'Two','Value':30},{'Name':'Right','Group':'Two','Value':40}]}}",
+        "UI": "{'ControlType':'Chart','Style':'Type:Bar'}"
+      },
+      "Example": {
+        "Control": {
+          "Columns": [
+            {
+              "Name": "Left",
+              "Group": "One",
+              "Value": 10
+            },
+            {
+              "Name": "Right",
+              "Group": "One",
+              "Value": 20
+            },
+            {
+              "Name": "Left",
+              "Group": "Two",
+              "Value": 30
+            },
+            {
+              "Name": "Right",
+              "Group": "Two",
+              "Value": 40
+            }
+          ],
+          "Title": {
+            "Name": "Bar",
+            "X": "Bars",
+            "Y": "Value"
+          }
+        }
+      }
+    },
+    {
+      "Description": "Pie Chart",
+      "Name": "Pie Chart",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':'Pie','Parts':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}",
+        "UI": "{'ControlType':'Chart','Style':'Type:Pie'}"
+      },
+      "Example": {
+        "Control": {
+          "Parts": [
+            {
+              "Name": "One",
+              "Value": 10
+            },
+            {
+              "Name": "Two",
+              "Value": 20
+            },
+            {
+              "Name": "Three",
+              "Value": 30
+            }
+          ],
+          "Title": "Pie"
+        }
+      }
+    },
+    {
+      "Description": "Map",
+      "Name": "Map",
+      "Dimensions": {
+        "Document": "{'Control':{'Title':'My Map','Key':'','Zoom':15,'Center':{'Lat':'50.4329658690059','Lng':'30.57958332067064'},'Points':[{'Lat':'50.4329658690059','Lng':'30.57958332067064'}]}}",
+        "UI": "{'ControlType':'Map'}"
+      },
+      "Example": {
+        "Control": {
+          "Title": "My Map",
+          "Key": "",
+          "Zoom": 15,
+          "Center": {
+            "Lat": "50.4329658690059",
+            "Lng": "30.57958332067064"
+          },
+          "Points": [
+            {
+              "Lat": "50.4329658690059",
+              "Lng": "30.57958332067064"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Description": "Address",
+      "Name": "Address",
+      "Dimensions": {
+        "Document": "{'Control':{'Country':'Ukraine','City':'Kyiv','District':'Area','Street':'Avenue','House':'1','Appartment':'1'}}",
+        "UI": "{'ControlType':'Address'}"
+      },
+      "Example": {
+        "Control": {
+          "Country": "Ukraine",
+          "City": "Kyiv",
+          "District": "Area",
+          "Street": "Avenue",
+          "House": "1",
+          "Appartment": "1"
+        }
+      }
+    },
+    {
+      "Description": "Receive web browser parameters on client side, such as GPS coordinates.",
+      "Name": "BrowserParams",
+      "Dimensions": {
+        "Document": "{'Control':{'Lat':'','Lng':''}}",
+        "UI": "{'ControlType':'BrowserParams'}"
+      },
+      "Example": {
+        "Control": {
+          "Lat": "",
+          "Lng": ""
+        }
+      }
+    }
+  ],
+  "Controls": [
+    {
+      "Description": "Label of text",
+      "Name": "Label",
+      "Dimensions": {
+        "Document": "{'Control':'This is Label'}",
+        "UI": "{'ControlType':'Label'}"
+      },
+      "Example": {
+        "Control": "This is Label"
+      }
+    },
+    {
+      "Description": "Hyper link to a resource",
+      "Name": "Link",
+      "Dimensions": {
+        "Document": "{'Control':'This is Link'}",
+        "UI": "{'ControlType':'Link'}"
+      },
+      "Example": {
+        "Control": "This is Link"
+      }
+    },
+    {
+      "Description": "Text box",
+      "Name": "TextBox",
+      "Dimensions": {
+        "Document": "{'Control':'This is TextBox'}",
+        "UI": "{'ControlType':'TextBox'}"
+      },
+      "Example": {
+        "Control": "This is TextBox"
+      }
+    },
+    {
+      "Description": "Filter against bots",
+      "Name": "TextBox - Captcha",
+      "Dimensions": {
+        "Document": "{'Control':'Enter number here'}",
+        "UI": "{'ControlType':'TextBox','Style':'Type:Captcha'}"
+      },
+      "Example": {
+        "Control": "Enter number here"
+      }
+    },
+    {
+      "Description": "User password",
+      "Name": "TextBox - Password",
+      "Dimensions": {
+        "Document": "{'Control':'This is Password'}",
+        "UI": "{'ControlType':'TextBox','Style':'Type:Password'}"
+      },
+      "Example": {
+        "Control": "This is Password"
+      }
+    },
+    {
+      "Description": "Text box multi line",
+      "Name": "RichTextBox",
+      "Dimensions": {
+        "Document": "{'Control':'This is RichTextBox'}",
+        "UI": "{'ControlType':'RichTextBox'}"
+      },
+      "Example": {
+        "Control": "This is RichTextBox"
+      }
+    },
+    {
+      "Description": "Check box",
+      "Name": "CheckBox",
+      "Dimensions": {
+        "Document": "{'Control':true}",
+        "UI": "{'ControlType':'CheckBox'}"
+      },
+      "Example": {
+        "Control": true
+      }
+    },
+    {
+      "Description": "Regular button",
+      "Name": "Button",
+      "Dimensions": {
+        "Document": "{'Control':'This is Button'}",
+        "UI": "{'ControlType':'Button'}"
+      },
+      "Example": {
+        "Control": "This is Button"
+      }
+    },
+    {
+      "Description": "Button as link",
+      "Name": "Button - Link",
+      "Dimensions": {
+        "Document": "{'Control':'This is Button'}",
+        "UI": "{'ControlType':'Button','Style':'Type:Link'}"
+      },
+      "Example": {
+        "Control": "This is Button"
+      }
+    },
+    {
+      "Description": "Submit button sends changed values on form",
+      "Name": "Button - Submit",
+      "Dimensions": {
+        "Document": "{'Control':'This is submit Button'}",
+        "UI": "{'ControlType':'Button','Style':'Type:Submit'}"
+      },
+      "Example": {
+        "Control": "This is submit Button"
+      }
+    },
+    {
+      "Description": "Enumerate values",
+      "Name": "ComboBox",
+      "Dimensions": {
+        "Document": "{'Control':'One'}",
+        "Enum": "{'Control':{'Items':['One','Two','Three']}}",
+        "UI": "{'ControlType':'ComboBox'}"
+      },
+      "Example": {
+        "Control": "One"
+      }
+    },
+    {
+      "Description": "Grid",
+      "Name": "Grid",
+      "Dimensions": {
+        "Document": "{'Control':[{'Name':'Bob','Age':15},{'Name':'Rebeca','Age':20}]}",
+        "UI": "{'ControlType':'Grid','Style':'Type:'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Age": 15,
+            "Name": "Bob"
+          },
+          {
+            "Age": 20,
+            "Name": "Rebeca"
+          }
+        ]
+      }
+    },
+    {
+      "Description": "Grid with link rows",
+      "Name": "Grid - Link",
+      "Dimensions": {
+        "Document": "{'Control':[{'Name':'Bob','Age':15},{'Name':'Rebeca','Age':20}]}",
+        "UI": "{'ControlType':'Grid','Style':'Type:Link'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Age": 15,
+            "Name": "Bob"
+          },
+          {
+            "Age": 20,
+            "Name": "Rebeca"
+          }
+        ]
+      }
+    },
+    {
+      "Description": "Picture",
+      "Name": "Picture",
+      "Dimensions": {
+        "Document": "{'Control':'https://memepedia.ru/wp-content/uploads/2020/11/kot-priemlemo-shablon.jpg'}",
+        "UI": "{'ControlType':'Picture'}"
+      },
+      "Example": {
+        "Control": "https://memepedia.ru/wp-content/uploads/2020/11/kot-priemlemo-shablon.jpg"
+      }
+    },
+    {
+      "Description": "QR code picture",
+      "Name": "Picture - QRCode",
+      "Dimensions": {
+        "Document": "{'Control':'Some encoded text'}",
+        "UI": "{'ControlType':'Picture','Style':'Type:QRCode'}"
+      },
+      "Example": {
+        "Control": "Some encoded text"
+      }
+    },
+    {
+      "Description": "Embedded mp4 video",
+      "Name": "Video - mp4",
+      "Dimensions": {
+        "Document": "{'Control':'MyVideo.mp4'}",
+        "UI": "{'ControlType':'Media'}"
+      },
+      "Example": {
+        "Control": "MyVideo.mp4"
+      }
+    },
+    {
+      "Description": "Embedded youtube video",
+      "Name": "Video - youtube",
+      "Dimensions": {
+        "Document": "{'Control':'https://www.youtube.com/watch?v=LhOSM6uCWxk'}",
+        "UI": "{'ControlType':'Media','Style':'Type:Youtube'}"
+      },
+      "Example": {
+        "Control": "https://www.youtube.com/watch?v=LhOSM6uCWxk"
+      }
+    },
+    {
+      "Description": "Embedded mp3 audio",
+      "Name": "Audio - mp3",
+      "Dimensions": {
+        "Document": "{'Control':'MyAudio.mp3'}",
+        "UI": "{'ControlType':'Media','Style':'Type:Audio'}"
+      },
+      "Example": {
+        "Control": "MyAudio.mp3"
+      }
+    },
+    {
+      "Description": "Calendar",
+      "Name": "Calendar",
+      "Dimensions": {
+        "Document": "{'Control':'2023-01-01'}",
+        "UI": "{'ControlType':'Calendar'}"
+      },
+      "Example": {
+        "Control": "2023-01-01"
+      }
+    },
+    {
+      "Description": "Time",
+      "Name": "Time",
+      "Dimensions": {
+        "Document": "{'Control':'12:30'}",
+        "UI": "{'ControlType':'Time'}"
+      },
+      "Example": {
+        "Control": "12:30"
+      }
+    },
+    {
+      "Description": "Upload file to server",
+      "Name": "UploadFile",
+      "Dimensions": {
+        "Document": "{'Control':''}",
+        "UI": "{'ControlType':'UploadFile'}"
+      },
+      "Example": {
+        "Control": ""
+      }
+    },
+    {
+      "Description": "Phone",
+      "Name": "Phone",
+      "Dimensions": {
+        "Document": "{'Control':'+380981112233'}",
+        "UI": "{'ControlType':'Phone'}"
+      },
+      "Example": {
+        "Control": "+380981112233"
+      }
+    },
+    {
+      "Description": "TreeView",
+      "Name": "TreeView",
+      "Dimensions": {
+        "Document": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'},{'Parent':'MyChildB','MyChildC','Text':'My Child C'}]}",
+        "UI": "{'ControlType':'TreeView','Style':'Type:'}"
+      },
+      "Example": {
+        "Control": [
+          {
+            "Parent": null,
+            "Name": "MyParent",
+            "Text": "My Parent"
+          },
+          {
+            "Parent": "MyParent",
+            "Name": "MyChildA",
+            "Text": "My Child A"
+          },
+          {
+            "Parent": "MyParent",
+            "Name": "MyChildB",
+            "Text": "My Child B"
+          },
+          {
+            "Parent": "MyChildB",
+            "Name": "MyChildC",
+            "Text": "My Child C"
+          }
+        ]
+      }
+    }
+  ]
+}

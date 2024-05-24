@@ -1,0 +1,18 @@
+﻿{
+   "Address": "Kyiv",
+   "Description": "",
+   "HasElectricity": true,
+   "IPAddress": "127.0.0.1",
+   "LastPingTime": "09/27/2023 15:12:04",
+   "Lat": "50.4329658690059",
+   "Lng": "30.57958332067064",
+   "TelegramUserID": "5018512422",
+   "TextMessages": [
+      {
+         "IsSent": true,
+         "Message": "Electricity available",
+         "Provider": "Telegram",
+         "Receiver": 5018512422
+      }
+   ]
+}

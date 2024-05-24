@@ -1,0 +1,18 @@
+{
+  "NewOrders": {
+    "Items": [
+      {
+        "Text": "Take",
+        "Action": "Take"
+      }
+    ]
+  },
+  "ActiveOrders": {
+    "Items": [
+      {
+        "Text": "Complete",
+        "Action": "Complete"
+      }
+    ]
+  }
+}

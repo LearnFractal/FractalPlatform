@@ -1,0 +1,4 @@
+{
+  "OnCall": "CheckBTCRate",
+  "CallEveryInSec": 60
+}

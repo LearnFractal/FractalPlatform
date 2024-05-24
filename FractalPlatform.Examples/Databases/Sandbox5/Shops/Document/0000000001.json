@@ -1,0 +1,22 @@
+{
+  "Shop": {
+    "3Dplast": true,
+    "3Dfilament": true,
+    "LBL": true,
+    "MonoFilament": true,
+    "DasPlast": true,
+    "U3DF": true,
+    "Fainyi": true,
+    "Pochatok": true,
+    "Filament": true,
+    "Pexiwire": true
+  },
+  "Color": {
+    "Всі": true,
+    "Cиній": true,
+    "Білий": true,
+    "Зелений": true,
+    "Жовтий": true,
+    "Чорний": true
+  }
+}

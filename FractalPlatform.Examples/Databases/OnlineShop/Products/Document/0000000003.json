@@ -1,0 +1,8 @@
+﻿{
+  "Name": "Apple",
+  "Description": "",
+  "Quantity": 1000,
+  "Price": 10,
+  "Categories": [ "Foods" ],
+  "OpenButton": "Open"
+}

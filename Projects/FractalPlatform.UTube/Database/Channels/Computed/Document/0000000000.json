@@ -1,0 +1,18 @@
+{
+  "Videos": [
+    {
+      "CountLikes": {
+        "Formula": "@CountLikes"
+      },
+      "CountComments": {
+        "Formula": "@CountComments"
+      },
+      "OnDateLabel": {
+        "Formula": "@OnDateLabel"
+      },
+      "Preview": {
+        "Formula": "@Preview"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+   "Cars":{
+      "CollectionName":"Cars",
+      "Attribute":"Id",
+      "IsArray":true
+   },
+   "Companies":{
+      "CollectionName":"Companies",
+      "Attribute":"Id",
+      "IsArray":true
+   }
+}

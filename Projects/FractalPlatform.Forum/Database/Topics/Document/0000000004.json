@@ -1,0 +1,48 @@
+﻿{
+  "Category": "Home",
+  "CountMessages": 3,
+  "CountViews": 26,
+  "Description": "slash",
+  "DescriptionShort": "slash",
+  "DescriptionHtml": "slash",
+  "OnDate": "07/13/2023 17:21:33",
+  "Title": "Slash",
+  "LastMessage": {
+    "OnDate": "07/13/2023 17:28:45",
+    "Who": "Bazist"
+  },
+  "Messages": [
+    {
+      "CountMessages": "13",
+      "Message": "\\slash",
+      "MessageHtml": "\\slash",
+      "NewQuoteMessage": "",
+      "OnDate": "07/13/2023 17:21:41",
+      "Registered": "07/07/2023 14:02:56",
+      "Who": "Bazist"
+    },
+    {
+      "CountMessages": "13",
+      "Message": "[QUOTE=Bazist]\\slash[/QUOTE]\n\nnew slash",
+      "MessageHtml": "<div style=\\'border-style:ridge;\\'>Bazist writes:<br/>\\\\slash</div>\\n\\nnew slash",
+      "NewQuoteMessage": "",
+      "OnDate": "07/13/2023 17:22:28",
+      "Registered": "07/07/2023 14:02:56",
+      "Who": "Bazist"
+    },
+    {
+      "CountMessages": "13",
+      "Message": "\\slash",
+      "MessageHtml": "\\slash",
+      "NewQuoteMessage": "",
+      "OnDate": "07/13/2023 17:24:27",
+      "Registered": "07/07/2023 14:02:56",
+      "Who": "Bazist"
+    }
+  ],
+  "Who": {
+    "CountMessages": "13",
+    "Name": "Bazist",
+    "Registered": "07/07/2023 14:02:56"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "Minvalue": {
+    "Index": 1
+  },
+  "MaxValue": {
+    "Index": 2
+  },
+  "Receiver": {
+    "Index": 3
+  },
+  "IsSendMessage": {
+    "Index": 4
+  }
+}

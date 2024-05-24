@@ -1,0 +1,21 @@
+{
+  "Who": {
+    "Name": {
+      "Formula": "@UserName"
+    }
+  },
+  "OnDate": {
+    "Formula": "@Now"
+  },
+  "Category": {
+    "Formula": "@Category"
+  },
+  "LastMessage": {
+    "Who": {
+      "Formula": "@UserName"
+    },
+    "OnDate": {
+      "Formula": "@Now"
+    }
+  }
+}

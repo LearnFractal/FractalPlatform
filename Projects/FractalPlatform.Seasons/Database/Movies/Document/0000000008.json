@@ -1,0 +1,42 @@
+﻿{
+  "AddToPlayList": "Add To Play List",
+  "CommentsCount": "",
+  "Country": "США",
+  "Countries": [ "США" ],
+  "Description": "Вересень 2008 року. Світова економічна криза вже почалася, але Америка ще не знає, яка катастрофа чекає попереду, і лише група топ-менеджерів на Уолл-Стріт шукає рецепт порятунку. Це був найстрашніший годинник у їхньому житті",
+  "Duration": "106 хв/01:46",
+  "Genre": "Films",
+  "IMDB": "7.10",
+  "Name": "Межа ризику",
+  "Picture": "Margin Call.jpg",
+  "Quality": "BDRip",
+  "Rating": "6.822",
+  "RecommendAge": "16+",
+  "Translation": "Професійний (багатоголосий)",
+  "Type": "films",
+  "Video": "MarginCall.mp4",
+  "Views": 3,
+  "ViewUsers": "View Users",
+  "Year": 2011,
+  "Actors": [
+    {
+      "Name": "Кевін Спейсі",
+      "Role": "Сем Роджерс"
+    },
+    {
+      "Name": "Пол Беттани",
+      "Role": "Вілл Емерсон"
+    },
+    {
+      "Name": "Джеремі Айронс",
+      "Role": "Джон Талд"
+    },
+    {
+      "Name": "Закарі Куінто",
+      "Role": "Пітер Салліван"
+    }
+  ],
+  "Series": [
+    "MarginCall.mp4"
+  ]
+}

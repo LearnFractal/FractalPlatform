@@ -1,0 +1,15 @@
+{
+  "Login": "Login",
+  "Password": "Password",
+  "LoginButton": "Login",
+  "Register": "Register",
+  "Users": "Users",
+  "EditTopic": "Edit Topic",
+  "NewMessage": "New Message",
+  "PageNumbers": "Page Numbers",
+  "Messages": [
+    {
+      "NewQuoteMessage": "New Quote Message"
+    }
+  ]
+}

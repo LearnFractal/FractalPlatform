@@ -1,0 +1,41 @@
+﻿{
+   "Age": 21,
+   "Avatar": "bazist.png",
+   "Gender": "Male",
+   "Language": "EN",
+   "Name": "Bazist",
+   "Password": "7DA55F449235BDC18953A4F8221CFDA8",
+   "History": [
+      {
+         "Description": "Stugna River",
+         "Name": "Stugna ",
+         "OnDate": "09/14/2023 19:16:06",
+         "UID": "574151BD-7819-480C-9EEC-BC8A1AEB25CF"
+      },
+      {
+         "Description": "Білки розпочали сезон збору горіхів в моєму саду",
+         "Name": "Білка та горіхи",
+         "OnDate": "09/30/2023 13:04:22",
+         "UID": "6817AD41-7585-4BAC-A9A5-B416453EEB53"
+      },
+      {
+         "Description": "Вид на Дніпро з зумом",
+         "Name": "Enej",
+         "OnDate": "09/15/2023 13:28:50",
+         "UID": "7CFC3D40-1763-4E80-9BEC-7D8E1CFAC528"
+      },
+      {
+         "Description": "Trees video",
+         "Name": "Trees",
+         "OnDate": "09/14/2023 15:22:54",
+         "UID": "3647AA5E-37C4-404A-B0BB-77ECA774DC3B"
+      }
+   ],
+   "Roles": [
+      "Admin",
+      "User"
+   ],
+   "Subscribes": [
+      "Music"
+   ]
+}

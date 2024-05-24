@@ -1,0 +1,6 @@
+{
+  "IsRequired": true,
+  "Age": {
+    "MinValue": 18
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "Layout": "User",
+  "IsRawPage": true,
+  "Name": {
+    "ReadOnly": true
+  },
+  "Password": {
+    "Visible": false
+  },
+  "RepeatPassword": {
+    "Visible": false
+  },
+  "Avatar": {
+    "ControlType": "UploadFile"
+  },
+  "Captcha": {
+    "Visible": false
+  },
+  "BestMoviesCount": {
+    "Visible": false
+  },
+  "CommentsCount": {
+    "Visible": false
+  },
+  "EditUser": {
+    "Visible": false
+  },
+  "PlayListCount": {
+    "Visible": false
+  },
+  "Registered": {
+    "Visible": false
+  },
+  "Theme": {
+    "Visible": false
+  },
+  "BestMovies": {
+    "Visible": false
+  },
+  "GoodMovies": {
+    "Visible": false
+  },
+  "PlayList": {
+    "Visible": false
+  },
+  "Roles": {
+    "Visible": false
+  }
+}

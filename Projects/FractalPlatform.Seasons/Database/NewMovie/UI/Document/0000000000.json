@@ -1,0 +1,26 @@
+{
+  "AddToPlayList": {
+    "Visible": false
+  },
+  "AddToBestList": {
+    "Visible": false
+  },
+  "AddToGoodList": {
+    "Visible": false
+  },
+  "RemoveFromList": {
+    "Visible": false
+  },
+  "ViewUsers": {
+    "Visible": false
+  },
+  "Views": {
+    "Visible": false
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "Picture": {
+    "ControlType": "UploadFile"
+  }
+}

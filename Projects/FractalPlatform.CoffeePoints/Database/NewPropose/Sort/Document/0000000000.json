@@ -1,0 +1,30 @@
+{
+  "Goal": {
+    "Drink": { "Index": 1 },
+    "Eat": { "Index": 2 },
+    "Talk": { "Index": 3 },
+    "TalkAbout": { "Index": 4 }
+  },
+  "Day": {
+    "Monday": { "Index": 5 },
+    "Tuesday": { "Index": 6 },
+    "Wednesday": { "Index": 7 },
+    "Thursday": { "Index": 8 },
+    "Friday": { "Index": 9 },
+    "Saturday": { "Index": 10 },
+    "Sunday": { "Index": 11 }
+  },
+  "Time": {
+    "Morning": { "Index": 12 },
+    "Afternoon": { "Index": 13 },
+    "Evening": { "Index": 14 }
+  },
+  "Contacts": {
+    "Name": { "Index": 15 },
+    "Photo": { "Index": 16 },
+    "Messanger": { "Index": 17 }
+  },
+  "Map": {
+    "Index": 18
+  }
+}

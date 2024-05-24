@@ -1,0 +1,9 @@
+{
+  "Style": "Save:Send;",
+  "Message": {
+    "ControlType": "RichTextBox"
+  },
+  "TextMessages": {
+    "Visible": false
+  }
+}

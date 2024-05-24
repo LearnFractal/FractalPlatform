@@ -1,0 +1,67 @@
+﻿{
+   "Description": "Rebeca music channel",
+   "IsLocked": false,
+   "Name": "Music",
+   "NewVideo": "New Video",
+   "OnDate": "10/31/2023 13:31:29",
+   "Owner": "Rebeca",
+   "Photo": "music.png",
+   "Subscribe": "Subscribe",
+   "Unsubscribe": "Unsubscribe",
+   "Tags": [
+      "Music"
+   ],
+   "Videos": [
+    {
+      "CountComments": "5",
+      "CountLikes": "3",
+      "CountViews": 69,
+      "Description": "DJ Vengerov",
+      "Name": "Kazantip",
+      "NewComment": "New Comment",
+      "OnDate": "2023/09/14",
+      "OnDateLabel": "1 months ago",
+      "UID": "333",
+      "Video": "kazantip.mp4",
+      "Preview": "",
+      "Comments": [
+        {
+          "Avatar": "avatar.png",
+          "OnDate": "09/14/2023 08:37:37",
+          "Text": "test",
+          "Who": "Rebeca"
+        },
+        {
+          "Avatar": "avatar.png",
+          "OnDate": "09/14/2023 10:05:15",
+          "Text": "Serega pishet",
+          "Who": "Rebeca"
+        },
+        {
+          "Avatar": "avatar.png",
+          "OnDate": "09/14/2023 10:42:24",
+          "Text": "Тест після реєстрації",
+          "Who": "Serega"
+        },
+        {
+          "Avatar": "avatar.png",
+          "OnDate": "09/15/2023 12:05:56",
+          "Text": "Виглядає непогано",
+          "Who": "Guest"
+        },
+        {
+          "Avatar": "avatar.png",
+          "OnDate": "10/06/2023 22:52:57",
+          "Text": "Tt test tetrtetest",
+          "Who": "Guest"
+        }
+      ],
+      "Likes": [
+        "Guest",
+        "Bazist",
+        "Rebeca",
+        "Serega"
+      ]
+    }
+   ]
+}

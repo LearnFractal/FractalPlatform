@@ -1,0 +1,30 @@
+﻿{
+  "Category": "Home",
+  "CountMessages": 3,
+  "CountViews": 33,
+  "Description": "Desc2",
+  "DescriptionShort": "Desc2",
+  "DescriptionHtml": "Desc2",
+  "OnDate": "07/07/2023 14:02:56",
+  "Title": "My Second Topic",
+  "LastMessage": {
+    "OnDate": "07/08/2023 14:10:51",
+    "Who": "Bazist"
+  },
+  "Messages": [
+    {
+      "CountMessages": "15",
+      "Message": "Test",
+      "MessageHtml": "Test",
+      "NewQuoteMessage": "",
+      "OnDate": "07/08/2023 14:10:51",
+      "Registered": "07/07/2023 14:02:56",
+      "Who": "Bazist"
+    }
+  ],
+  "Who": {
+    "CountMessages": "15",
+    "Name": "Bazist",
+    "Registered": "07/07/2023 14:02:56"
+  }
+}

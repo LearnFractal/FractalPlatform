@@ -1,0 +1,42 @@
+﻿{
+  "AddToPlayList": "Add To Play List",
+  "CommentsCount": "",
+  "Country": "США",
+  "Countries": [ "США" ],
+  "Description": "Успішного банкіра Енді Дюфрейна звинувачено у вбивстві власної дружини та її коханця. Опинившись у в\\'язниці під назвою Шоушенк, він стикається з жорстокістю та беззаконням, що панують по обидва боки ґрат. Кожен, хто потрапляє до цих стін, стає їх рабом до кінця життя",
+  "Duration": "142 хв/02:22",
+  "Genre": "Films",
+  "IMDB": "9.30",
+  "Name": "Втеча з Шоушенка",
+  "Picture": "The Shawshank Redemption.jpg",
+  "Quality": "BDRip",
+  "Rating": "9.218",
+  "RecommendAge": "16+",
+  "Translation": "Професійний (багатоголосий)",
+  "Type": "films",
+  "Video": "ShawshankRedemption.mp4",
+  "Views": 4,
+  "ViewUsers": "View Users",
+  "Year": 1994,
+  "Actors": [
+    {
+      "Name": "Тім Роббінс",
+      "Role": "Енді Дюфрейн"
+    },
+    {
+      "Name": "Морган Фріман",
+      "Role": "Елліс Бойд «Ред» Реддінг"
+    },
+    {
+      "Name": "Боб Гантон",
+      "Role": "начальник в\\'язниці Семюел Нортон"
+    },
+    {
+      "Name": "Вільям Седлер",
+      "Role": "Хейвуд"
+    }
+  ],
+  "Series": [
+    "ShawshankRedemption.mp4"
+  ]
+}

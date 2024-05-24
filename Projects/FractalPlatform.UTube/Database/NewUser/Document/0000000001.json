@@ -1,0 +1,12 @@
+{
+  "Age": 20,
+  "Captcha": "",
+  "Gender": "",
+  "Name": "",
+  "Password": "",
+  "Avatar": "",
+  "Language": "EN",
+  "Roles": [
+    "User"
+  ]
+}

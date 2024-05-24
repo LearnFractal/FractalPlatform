@@ -1,0 +1,30 @@
+{
+  "Style": "Hide:Photo,Avatar,Value,Password,History,Subscribes,Captcha,RepeatPassword,UID;Add:false;HasLabel:true;Type:Link",
+  "Name": {
+    "ReadOnly": true
+  },
+  "Avatar": {
+    "ControlType": "Picture"
+  },
+  "Password": {
+    "Visible": false
+  },
+  "Language": {
+    "ReadOnly": true
+  },
+  "Subscribes": {
+    "ControlType": "Tags"
+  },
+  "History": {
+    "Visible": false
+  },
+  "Roles": {
+    "Visible": false
+  },
+  "Captcha": {
+    "Visible": false
+  },
+  "RepeatPassword": {
+    "Visible": false
+  }
+}

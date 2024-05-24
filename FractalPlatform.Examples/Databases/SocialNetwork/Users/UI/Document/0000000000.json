@@ -1,0 +1,44 @@
+{
+  "ReadOnly": true,
+  "Style": "Save:false;Hide:UID,Avatar,Who,Photo,Value,Password,Friends,Posts,RequestFriend,NewComment;Add:false;HasLabel:true",
+  "Photo": {
+    "ControlType": "Picture"
+  },
+  "Password": {
+    "Visible": false
+  },
+  "Language": {
+    "ReadOnly": true
+  },
+  "Posts": [
+    {
+      "UID": {
+        "Visible": false
+      },
+      "Avatar": {
+        "ControlType": "Picture"
+      },
+      "Message": {
+        "ControlType": "RichTextBox"
+      },
+      "NewComment": {
+        "ControlType": "Button"
+      },
+      "Photo": {
+        "ControlType": "Picture"
+      },
+      "Likes": {
+        "ControlType": "Likes",
+        "ReadOnly": false
+      },
+      "Comments": {
+        "ControlType": "Comments",
+        "ReadOnly": false
+      }
+    }
+  ],
+  "RequestFriend": {
+    "ControlType": "Button",
+    "ReadOnly": false
+  }
+}

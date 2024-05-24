@@ -1,0 +1,32 @@
+﻿{
+  "Title": "This is my ToDo list !",
+  "ReportButton": "Report",
+  "Categories": [
+    {
+      "Category": "Education",
+      "Tasks": [
+        {
+          "Completed": false,
+          "Task": "Create ToDo list"
+        },
+        {
+          "Completed": true,
+          "Task": "Create Report"
+        }
+      ]
+    },
+    {
+      "Category": "Home",
+      "Tasks": [
+        {
+          "Completed": false,
+          "Task": "Cook a lunch"
+        },
+        {
+          "Completed": false,
+          "Task": "Clean a room"
+        }
+      ]
+    }
+  ]
+}

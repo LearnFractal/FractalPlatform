@@ -1,0 +1,25 @@
+﻿{
+  "NewComment": "New Comment",
+  "OnDate": "2022-07-07",
+  "Picture": "Rebeca.png",
+  "Text": "Hello World !",
+  "Title": "Fractal Platform - Hello World 555!",
+  "Who": "Bazist",
+  "Likes": [ "Bazist", "Lexa" ],
+  "Comments": [
+    {
+      "Avatar": "Rebeca.png",
+      "OnDate": "09.06.2022 18:42:24",
+      "Picture": "",
+      "Text": "Hello Comment !",
+      "Who": "Bazist"
+    },
+    {
+      "Avatar": "Rebeca.png",
+      "OnDate": "09.06.2022 22:00:32",
+      "Picture": "",
+      "Text": "Hello Comment 2 !",
+      "Who": "Bazist"
+    }
+  ]
+}

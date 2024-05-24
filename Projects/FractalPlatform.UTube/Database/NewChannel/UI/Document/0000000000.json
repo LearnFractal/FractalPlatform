@@ -1,0 +1,27 @@
+{
+  "Style": "Save:Create",
+  "Owner": {
+    "Enabled": false
+  },
+  "OnDate": {
+    "Enabled": false
+  },
+  "Photo": {
+    "ControlType": "UploadFile"
+  },
+  "Tags": {
+    "ControlType": "Tags"
+  },
+  "NewVideo": {
+    "Visible": false
+  },
+  "Subscribe": {
+    "Visible": false
+  },
+  "Unsubscribe": {
+    "Visible": false
+  },
+  "IsLocked": {
+    "Visible": false
+  }
+}

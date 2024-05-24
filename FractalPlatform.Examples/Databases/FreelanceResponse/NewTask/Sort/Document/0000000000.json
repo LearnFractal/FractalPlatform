@@ -1,0 +1,53 @@
+{
+  "TaskNumber": {
+    "Index": 1
+  },
+  "OnDate": {
+    "Index": 2
+  },
+  "Who": {
+    "Index": 3
+  },
+  "Title": {
+    "Index": 4
+  },
+  "Description": {
+    "Index": 5
+  },
+  "Skills": {
+    "Index": 6
+  },
+  "Archive": {
+    "Index": 7
+  },
+  "Video": {
+    "Index": 8
+  },
+  "Picture": {
+    "Index": 9
+  },
+  "PaymentTypes": {
+    "Index": 10
+  },
+  "MinPrice": {
+    "Index": 11
+  },
+  "MaxPrice": {
+    "Index": 12
+  },
+  "Developer": {
+    "Index": 13
+  },
+  "TenderModel": {
+    "Index": 14
+  },
+  "Status": {
+    "Index": 15
+  },
+  "StartDate": {
+    "Index": 16
+  },
+  "EndDate": {
+    "Index": 17
+  }
+}

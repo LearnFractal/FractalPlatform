@@ -1,0 +1,15 @@
+{
+  "Login": "",
+  "Password": "",
+  "LoginButton": "Login",
+  "Logout": "Log Out",
+  "Register": "Register",
+  "Users": "Users",
+  "EditCategories": "Edit Categories",
+  "PageNumbers": "Page Numbers",
+  "Categories": [
+    {
+      "Title": ""
+    }
+  ]
+}

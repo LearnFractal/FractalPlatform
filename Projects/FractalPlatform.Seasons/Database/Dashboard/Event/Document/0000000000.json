@@ -1,0 +1,14 @@
+{
+  "Genre": {
+    "OnChange": "Genre"
+  },
+  "Year": {
+    "OnChange": "Year"
+  },
+  "Country": {
+    "OnChange": "Country"
+  },
+  "Portion": {
+    "OnChange": "Portion"
+  }
+}
