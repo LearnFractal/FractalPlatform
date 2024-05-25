@@ -4,6 +4,6 @@
     "ControlType": "Label"
   },
   "Table": {
-    "ControlType": "RichTextBox"
+    "ControlType": "UploadFile"
   }
 }
