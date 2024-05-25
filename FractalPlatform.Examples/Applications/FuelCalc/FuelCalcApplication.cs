@@ -32,7 +32,7 @@ namespace FractalPlatform.Examples.Applications.FuelCalc
                             OnePersonPay = pricePerKm * prms.DistanceInKm / prms.NumberOfPeopeles
                         }
                     }
-                    .ToCollection()
+                    .ToCollection(Constants.FIRST_DOC_ID)
                     .SetUIDimension("{'Style':'Save:false','ReadOnly':true,'Title':{'ControlType':'Label'}}")
                     .OpenForm();
                 });

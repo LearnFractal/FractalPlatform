@@ -18,7 +18,7 @@ namespace FractalPlatform.Examples.Applications.BTCRate
                 USD = query.Value("{'bpi':{'USD':{'rate':$}}}"),
                 EUR = query.Value("{'bpi':{'EUR':{'rate':$}}}")
             }
-            .ToCollection()
+            .ToCollection(Constants.FIRST_DOC_ID)
             .SetUIDimension("{'ReadOnly':true,'Style':'Cancel:Refresh'}")
             .SetDimension(DimensionType.Theme, "{'DefaultTheme':'White'}")
             .OpenForm(result => Rate());
