@@ -9,35 +9,13 @@ namespace FractalPlatform.Examples.Applications.Movies
 {
     public class MoviesApplication : BaseApplication
     {
-        private object _obj = new
-        {
-            Title = "Watch all seasons",
-            Seasons = Directory.GetDirectories(@"d:\Movies")
-                                   .Select(d => new
-                                   {
-                                       Series = Directory.GetFileName(d),
-                                       Episodes = Directory.GetFiles(d, "*.mp4")
-                                                           .Select(f => new
-                                                           {
-                                                               Title = Directory.GetFileName(f),
-                                                               Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
-                                                               Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}",
-                                                               NextEpisode = "Next episode"
-                                                           })
-                                   })
-        };
-
         public override bool OnEventDimension(EventInfo eventInfo)
         {
-            var idx = eventInfo.AttrPath.Key.GetLastIndexLevel2();
+            Context.FormFactory.ActiveFormParentKey.IncreaseLastIndexLevel2();
 
-            eventInfo.AttrPath.Key.SetLastIndexLevel2(idx++);
+            Context.FormFactory.NeedRefreshForm();
 
-            FirstDocOf("Series")
-                   .ExtendDocument(_obj.ToJson())
-                   .OpenForm(eventInfo.AttrPath.Key.ToDQL2());
-
-            return true;
+            return false;
         }
 
         public override void OnStart()
@@ -50,8 +28,26 @@ namespace FractalPlatform.Examples.Applications.Movies
                               .GetFirstDoc()
                               .IsEquals("{'Password':$}", "ps"))
                     {
+                        var obj = new
+                        {
+                            Title = "Watch all seasons",
+                            Seasons = Directory.GetDirectories(@"d:\Movies")
+                                   .Select(d => new
+                                   {
+                                       Series = Directory.GetFileName(d),
+                                       Episodes = Directory.GetFiles(d, "*.mp4")
+                                                           .Select(f => new
+                                                           {
+                                                               NextEpisode = "Next episode",
+                                                               Title = Directory.GetFileName(f),
+                                                               Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
+                                                               Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
+                                                           })
+                                   })
+                        };
+
                         FirstDocOf("Series")
-                              .ExtendDocument(_obj.ToJson())
+                              .ExtendDocument(obj.ToJson())
                               .OpenForm();
                     }
                     else
