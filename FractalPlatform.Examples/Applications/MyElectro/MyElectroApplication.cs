@@ -28,8 +28,9 @@ namespace FractalPlatform.Examples.Applications.MyElectro
                     var json = html.Substring(startIndex, endIndex - startIndex);
                     var data = (JObject)JsonConvert.DeserializeObject(json);
                     var dtekGroupId = "1";
+                    var dayOfWeek = DateTime.Now.DayOfWeek != DayOfWeek.Sunday ? (int)DateTime.Now.DayOfWeek : 7;
 
-                    _schedule = data["data"][dtekGroupId][((int)DateTime.Now.DayOfWeek).ToString()].ToString();
+                    _schedule = data["data"][dtekGroupId][dayOfWeek.ToString()].ToString();
                     _nextUpdateTime = DateTime.Now.AddMinutes(15);
                 }
                 catch { }
