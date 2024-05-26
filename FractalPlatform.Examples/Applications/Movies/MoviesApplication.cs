@@ -11,7 +11,7 @@ namespace FractalPlatform.Examples.Applications.Movies
     {
         public override bool OnEventDimension(EventInfo eventInfo)
         {
-            Context.FormFactory.ActiveFormParentKey.IncreaseLastIndexLevel2();
+            Context.FormFactory.ActiveFormParentAttrPath.IncreaseLastIndex();
 
             Context.FormFactory.NeedRefreshForm();
 
