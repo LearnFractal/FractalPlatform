@@ -9,11 +9,15 @@ namespace FractalPlatform.Examples.Applications.Movies
 {
     public class MoviesApplication : BaseApplication
     {
+        private static AttrPath _lastEpisode;
+
         public override bool OnEventDimension(EventInfo eventInfo)
         {
             Context.FormFactory.ActiveFormParentAttrPath.IncreaseLastIndex();
 
             Context.FormFactory.NeedRefreshForm();
+
+            _lastEpisode = Context.FormFactory.ActiveFormParentAttrPath;
 
             return false;
         }
@@ -49,6 +53,22 @@ namespace FractalPlatform.Examples.Applications.Movies
                         FirstDocOf("Series")
                               .ExtendDocument(obj.ToJson())
                               .OpenForm();
+
+                        //show last episode
+                        if (_lastEpisode != null)
+                        {
+                            FirstDocOf("Series")
+                              .ExtendDocument(obj.ToJson())
+                              .OpenForm(result =>
+                              {
+                                  if (!result.Result)
+                                  {
+                                      _lastEpisode = null;
+                                  }
+                              });
+
+                            Context.FormFactory.ActiveFormParentAttrPath = _lastEpisode;
+                        }
                     }
                     else
                     {
