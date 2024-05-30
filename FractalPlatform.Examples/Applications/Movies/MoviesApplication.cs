@@ -45,7 +45,8 @@ namespace FractalPlatform.Examples.Applications.Movies
                                                                NextEpisode = "Next episode",
                                                                Title = Directory.GetFileName(f),
                                                                Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
-                                                               Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
+                                                               Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}",
+                                                               Download = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
                                                            })
                                    })
                         };
