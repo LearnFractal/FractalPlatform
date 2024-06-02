@@ -70,13 +70,26 @@ namespace FractalPlatform.Examples.Applications.Movies
 
         public override void OnStart()
         {
+            const string password = "ps";
+
+            if (Context.HasUrlTag && Context.UrlTag == password)
+            {
+                OpenSeasons();
+
+                return;
+            }
+            else
+            {
+                Context.UrlTag = password;
+            }
+
             InputBox("Password", "Enter password", result =>
             {
                 if (result.Result)
                 {
                     if (result.Collection
                               .GetFirstDoc()
-                              .IsEquals("{'Password':$}", "ps"))
+                              .IsEquals("{'Password':$}", password))
                     {
                         OpenSeasons();
                     }
