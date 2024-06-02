@@ -29,13 +29,6 @@ namespace FractalPlatform.Examples.Applications.Movies
             return false;
         }
 
-        public override bool OnOpenForm(FormInfo formInfo)
-        {
-            Context.UrlTag = formInfo.AttrPath.ToString();
-
-            return base.OnOpenForm(formInfo);
-        }
-
         private void OpenSeasons()
         {
             var obj = new
@@ -77,15 +70,6 @@ namespace FractalPlatform.Examples.Applications.Movies
 
         public override void OnStart()
         {
-            if (Context.HasUrlTag)
-            {
-                OpenSeasons();
-
-                Context.FormFactory.ActiveFormParentAttrPath = AttrPath.Parse(Context.UrlTag);
-
-                return;
-            }
-
             InputBox("Password", "Enter password", result =>
             {
                 if (result.Result)
