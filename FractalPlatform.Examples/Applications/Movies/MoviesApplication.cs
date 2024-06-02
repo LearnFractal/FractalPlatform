@@ -19,23 +19,29 @@ namespace FractalPlatform.Examples.Applications.Movies
 
             _lastEpisode = Context.FormFactory.ActiveFormParentAttrPath;
 
+            if (!Context.FormFactory.ActiveCollection.GetWhere(_lastEpisode).Any())
+            {
+                CloseAllForms();
+
+                MessageBox("You watched last episode", "Next episode", MessageBoxButtonType.Ok, result => OpenSeasons());
+            }
+
             return false;
         }
 
-        public override void OnStart()
+        public override bool OnOpenForm(FormInfo formInfo)
         {
-            InputBox("Password", "Enter password", result =>
+            Context.UrlTag = formInfo.AttrPath.ToString();
+
+            return base.OnOpenForm(formInfo);
+        }
+
+        private void OpenSeasons()
+        {
+            var obj = new
             {
-                if (result.Result)
-                {
-                    if (result.Collection
-                              .GetFirstDoc()
-                              .IsEquals("{'Password':$}", "ps"))
-                    {
-                        var obj = new
-                        {
-                            Title = "Watch all seasons",
-                            Seasons = Directory.GetDirectories(@"d:\Movies")
+                Title = "Watch all seasons",
+                Seasons = Directory.GetDirectories(@"d:\Movies")
                                    .Select(d => new
                                    {
                                        Series = Directory.GetFileName(d),
@@ -49,27 +55,46 @@ namespace FractalPlatform.Examples.Applications.Movies
                                                                Download = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
                                                            })
                                    })
-                        };
+            };
 
-                        FirstDocOf("Series")
-                              .ExtendDocument(obj.ToJson())
-                              .OpenForm();
+            FirstDocOf("Series")
+                  .ExtendDocument(obj.ToJson())
+                  .OpenForm();
 
-                        //show last episode
-                        if (_lastEpisode != null)
-                        {
-                            FirstDocOf("Series")
-                              .ExtendDocument(obj.ToJson())
-                              .OpenForm(result =>
-                              {
-                                  if (!result.Result)
-                                  {
-                                      _lastEpisode = null;
-                                  }
-                              });
+            if (_lastEpisode != null) //show last episode
+            {
+                FirstDocOf("Series")
+                  .ExtendDocument(obj.ToJson())
+                  .OpenForm(result =>
+                  {
+                      if (!result.Result)
+                      {
+                          _lastEpisode = null;
+                      }
+                  });
+            }
+        }
 
-                            Context.FormFactory.ActiveFormParentAttrPath = _lastEpisode;
-                        }
+        public override void OnStart()
+        {
+            if (Context.HasUrlTag)
+            {
+                OpenSeasons();
+
+                Context.FormFactory.ActiveFormParentAttrPath = AttrPath.Parse(Context.UrlTag);
+
+                return;
+            }
+
+            InputBox("Password", "Enter password", result =>
+            {
+                if (result.Result)
+                {
+                    if (result.Collection
+                              .GetFirstDoc()
+                              .IsEquals("{'Password':$}", "ps"))
+                    {
+                        OpenSeasons();
                     }
                     else
                     {
