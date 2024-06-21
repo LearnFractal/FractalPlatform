@@ -16,12 +16,12 @@ namespace FractalPlatform.Examples.Applications.MyElectro
         private static string _today;
         private static string _tomorrow;
 
-        private object GetSchedule(string schedule)
+        private object GetSchedule(string schedule, bool isTomorrow)
         {
             string prevElectricity = null;
             int groupId = 0;
 
-            return schedule.ToCollection().ToAttrList().Where(x => DateTime.Now.Hour < int.Parse(x.Key.FirstPath))
+            return schedule.ToCollection().ToAttrList()
                                     .Select(x =>
                                     {
                                         var hour = int.Parse(x.Key.FirstPath);
@@ -50,6 +50,7 @@ namespace FractalPlatform.Examples.Applications.MyElectro
                                                  EndHour = g.Max(x => x.EndHour),
                                                  Electricity = g.First().Electricity
                                              })
+                                    .Where(x => DateTime.Now.Hour < x.EndHour || isTomorrow)
                                     .Select(x => new
                                     {
                                         Час = $"{x.StartHour.ToString("00")}:00 - {x.EndHour.ToString("00")}:00",
@@ -86,8 +87,8 @@ namespace FractalPlatform.Examples.Applications.MyElectro
             {
                 Exists = IsPowerLineStatusOnline ? $"На зараз світло => ПРИСУТНЄ" : "На зараз світло => ВІДСУТНЄ",
                 Label = "ДТЕК прогнозує наявність світла:",
-                Сьогодні = GetSchedule(_today),
-                Завтра = GetSchedule(_tomorrow)
+                Сьогодні = GetSchedule(_today, false),
+                Завтра = GetSchedule(_tomorrow, true)
             }
             .ToCollection("Моніторинг")
             .SetUIDimension("{'Style':'Hide:Number;Cancel:Refresh','ReadOnly':true,'Label':{'ControlType':'Label'},'Exists':{'ControlType':'Label'}}")
