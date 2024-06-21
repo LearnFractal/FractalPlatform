@@ -8,13 +8,16 @@
     {
       "Episodes": [
         {
-          "Style": "Type:Link;Hide:Size,Episode,NextEpisode;HasLabel:true",
+          "Style": "Type:Link;Hide:Size,Episode,NextEpisode,Download;HasLabel:true",
           "Episode": {
             "ControlType": "Media",
             "Style": "Type:Video"
           },
           "NextEpisode": {
             "ControlType": "Button"
+          },
+          "Download": {
+            "ControlType": "Link"
           }
         }
       ]

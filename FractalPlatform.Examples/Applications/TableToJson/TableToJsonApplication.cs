@@ -12,7 +12,7 @@ namespace FractalPlatform.Examples.Applications.TableToJson
         {
             var lines = text.Split('\n');
 
-            var columns = lines[0].Split('\t');
+            var columns = lines[0].Split(new[] { '\t', ',' });
 
             var sb = new StringBuilder();
 
@@ -20,7 +20,7 @@ namespace FractalPlatform.Examples.Applications.TableToJson
 
             for (int i = 1; i < lines.Length; i++)
             {
-                var cells = lines[i].Split("\t");
+                var cells = lines[i].Split(new[] { '\t', ',' });
 
                 if (columns.Length == cells.Length)
                 {

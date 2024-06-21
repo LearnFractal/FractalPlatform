@@ -9,50 +9,89 @@ namespace FractalPlatform.Examples.Applications.Movies
 {
     public class MoviesApplication : BaseApplication
     {
-        private object _obj = new
+        private static AttrPath _lastEpisode;
+
+        public override bool OnEventDimension(EventInfo eventInfo)
         {
-            Title = "Watch all seasons",
-            Seasons = Directory.GetDirectories(@"d:\Movies")
+            Context.FormFactory.ActiveFormParentAttrPath.IncreaseLastIndex();
+
+            Context.FormFactory.NeedRefreshForm();
+
+            _lastEpisode = Context.FormFactory.ActiveFormParentAttrPath;
+
+            if (!Context.FormFactory.ActiveCollection.GetWhere(_lastEpisode).Any())
+            {
+                CloseAllForms();
+
+                MessageBox("You watched last episode", "Next episode", MessageBoxButtonType.Ok, result => OpenSeasons());
+            }
+
+            return false;
+        }
+
+        private void OpenSeasons()
+        {
+            var obj = new
+            {
+                Title = "Watch all seasons",
+                Seasons = Directory.GetDirectories(@"d:\Movies")
                                    .Select(d => new
                                    {
                                        Series = Directory.GetFileName(d),
                                        Episodes = Directory.GetFiles(d, "*.mp4")
                                                            .Select(f => new
                                                            {
+                                                               NextEpisode = "Next episode",
                                                                Title = Directory.GetFileName(f),
                                                                Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
                                                                Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}",
-                                                               NextEpisode = "Next episode"
+                                                               Download = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
                                                            })
                                    })
-        };
-
-        public override bool OnEventDimension(EventInfo eventInfo)
-        {
-            var idx = eventInfo.AttrPath.Key.GetLastIndexLevel2();
-
-            eventInfo.AttrPath.Key.SetLastIndexLevel2(idx++);
+            };
 
             FirstDocOf("Series")
-                   .ExtendDocument(_obj.ToJson())
-                   .OpenForm(eventInfo.AttrPath.Key.ToDQL2());
+                  .ExtendDocument(obj.ToJson())
+                  .OpenForm();
 
-            return true;
+            if (_lastEpisode != null) //show last episode
+            {
+                FirstDocOf("Series")
+                  .ExtendDocument(obj.ToJson())
+                  .OpenForm(result =>
+                  {
+                      if (!result.Result)
+                      {
+                          _lastEpisode = null;
+                      }
+                  });
+            }
         }
 
         public override void OnStart()
         {
+            const string password = "ps";
+
+            if (Context.HasUrlTag && Context.UrlTag == password)
+            {
+                OpenSeasons();
+
+                return;
+            }
+            else
+            {
+                Context.UrlTag = password;
+            }
+
             InputBox("Password", "Enter password", result =>
             {
                 if (result.Result)
                 {
                     if (result.Collection
                               .GetFirstDoc()
-                              .IsEquals("{'Password':$}", "ps"))
+                              .IsEquals("{'Password':$}", password))
                     {
-                        FirstDocOf("Series")
-                              .ExtendDocument(_obj.ToJson())
-                              .OpenForm();
+                        OpenSeasons();
                     }
                     else
                     {

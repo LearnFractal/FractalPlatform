@@ -11,7 +11,7 @@ namespace FractalPlatform.Weather
 {
     public class WeatherApplication : BaseApplication
     {
-        private const string _apiKey = "AIzaSyArKSXONd_MzNG8cNAhIwz-Zb5jaDG8z";
+        private const string _apiKey = "AIzaSyCwOrdckrXQNjKXhiG7ZRsKy0459ck8VDU";
         private class DailyInfo
         {
             public DateTime[] time { get; set; }

@@ -10,10 +10,11 @@
 
 Application demonstrates online theatre with series and episodes with next functionality:
 
-- Read list of seasons from the server
-- Create web site that contains list of videos with pagination
+- Read list of series from the server
 - User is available to search episodes by name in the search text box
-- User can view a episodes in the web browser
+- User can view an episode in the web browser
+- User can move to the next episode by Next episode button
+- The site remember last episode to continue watching
 
 ## How it implemented
 
@@ -21,5 +22,5 @@ Application demonstrates online theatre with series and episodes with next funct
 
 ## Web Link
 
-[Seasons](https://fraplat.com/jupiter/Movies)
+[Movies](https://fraplat.com/jupiter/Movies)
 
