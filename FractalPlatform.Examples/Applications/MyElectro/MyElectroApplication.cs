@@ -73,7 +73,7 @@ namespace FractalPlatform.Examples.Applications.MyElectro
                     var data = (JObject)JsonConvert.DeserializeObject(json);
                     var dtekGroupId = "1";
                     var today = DateTime.Now.DayOfWeek != DayOfWeek.Sunday ? (int)DateTime.Now.DayOfWeek : 7;
-                    var tomorrow = (today + 1) % 7 + 1;
+                    var tomorrow = today < 7 ? today + 1 : 1;
 
                     _today = data["data"][dtekGroupId][today.ToString()].ToString();
                     _tomorrow = data["data"][dtekGroupId][tomorrow.ToString()].ToString();
