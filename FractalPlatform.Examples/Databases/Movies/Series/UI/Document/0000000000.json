@@ -11,7 +11,7 @@
           "Style": "Type:Link;Hide:Size,Episode,NextEpisode,Download;HasLabel:true",
           "Episode": {
             "ControlType": "Media",
-            "Style": "Type:Video"
+            "Style": "Type:Video;HasLabel:false"
           },
           "NextEpisode": {
             "ControlType": "Button"
