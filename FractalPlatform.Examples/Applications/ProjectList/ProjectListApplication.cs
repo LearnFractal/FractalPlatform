@@ -7,7 +7,7 @@ namespace FractalPlatform.Examples.Applications.ProjectList
     {
         public override void OnStart()
         {
-            ModifyFirstDocOf("ProjectListList").OpenForm();
+            ModifyFirstDocOf("Projects").OpenForm();
         }
     }
 }
