@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.TableToJson
 
             var sb = new StringBuilder();
 
-            sb.Append("{'Rows':[");
+            sb.Append("{\"Rows\":[");
 
             for (int i = 1; i < lines.Length; i++)
             {

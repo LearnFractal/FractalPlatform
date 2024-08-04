@@ -1,0 +1,20 @@
+{
+  "Style": "Type:Link;Hide:Link,Source,Image",
+  "ReadOnly": true,
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Projects": [
+    {
+      "Link": {
+        "ControlType": "Link"
+      },
+      "Source": {
+        "ControlType": "Link"
+      },
+      "Image": {
+        "ControlType": "Picture"
+      }
+    }
+  ]
+}
