@@ -1,15 +1,15 @@
 {
-  "Style": "Type:Link;Hide:Link,Source,Image",
+  "Style": "Type:Link;Hide:Open Application,Open Sources,Image",
   "ReadOnly": true,
   "Title": {
     "ControlType": "Label"
   },
   "Projects": [
     {
-      "Link": {
+      "Open Application": {
         "ControlType": "Link"
       },
-      "Source": {
+      "Open Sources": {
         "ControlType": "Link"
       },
       "Image": {
