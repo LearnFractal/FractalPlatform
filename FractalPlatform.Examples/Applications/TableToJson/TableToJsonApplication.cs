@@ -38,6 +38,7 @@ namespace FractalPlatform.Examples.Applications.TableToJson
                             sb.Append(',');
                         }
 
+                        var attr = columns[j].Trim();
                         var val = cells[j].Trim();
 
                         bool boolVal;
@@ -46,11 +47,11 @@ namespace FractalPlatform.Examples.Applications.TableToJson
                         if (bool.TryParse(val, out boolVal) ||
                             decimal.TryParse(val, out numVal))
                         {
-                            sb.Append($"\"{columns[j].Trim()}\": {val.ToLower()}");
+                            sb.Append($"\"{attr}\": {val.ToLower()}");
                         }
                         else
                         {
-                            sb.Append($"\"{columns[j].Trim()}\": \"{val}\"");
+                            sb.Append($"\"{attr}\": \"{val}\"");
                         }
                     }
 
