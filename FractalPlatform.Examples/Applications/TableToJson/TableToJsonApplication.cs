@@ -38,7 +38,20 @@ namespace FractalPlatform.Examples.Applications.TableToJson
                             sb.Append(',');
                         }
 
-                        sb.Append($"\"{columns[j].Trim()}\": \"{cells[j].Trim()}\"");
+                        var val = cells[j].Trim();
+
+                        bool boolVal;
+                        decimal numVal;
+
+                        if (bool.TryParse(val, out boolVal) ||
+                            decimal.TryParse(val, out numVal))
+                        {
+                            sb.Append($"\"{columns[j].Trim()}\": {val.ToLower()}");
+                        }
+                        else
+                        {
+                            sb.Append($"\"{columns[j].Trim()}\": \"{val}\"");
+                        }
                     }
 
                     sb.Append('}');
