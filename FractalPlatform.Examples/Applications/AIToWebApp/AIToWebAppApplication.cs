@@ -24,8 +24,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 					  {
 						  var codeBlock = response.CodeBlocks[0];
 
-						  codeBlock.Text
-								  .ToCollection("App")
+						  codeBlock.Text.ToCollection("App")
 								  .SetThemeDimension(ThemeType.LightBlue)
 								  .SetUIDimension("{'Style':'Save:Rebuild;Type:Link'}")
 								  .SetDimension(DimensionType.Sort)
