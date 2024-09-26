@@ -1,6 +1,7 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM;
+using System.Linq;
 
 namespace FractalPlatform.Examples.Applications.Chat
 {
@@ -17,6 +18,7 @@ namespace FractalPlatform.Examples.Applications.Chat
                                          result.Collection
                                                .GetFirstDoc()
                                                .Values("{'Who':$,'Message':$}")
+                                               .Select(x => x.Replace("<", "&lt;").Replace(">", "&gt;"))
                                                .ToArray());
                        }
 
