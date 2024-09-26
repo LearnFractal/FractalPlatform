@@ -38,7 +38,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 			if (info.Action == "ExistingApps")
 			{
 				return DocsOf("Apps")
-						.SetUIDimension("{'ReadOnly':true}")
+						.SetUIDimension("{'ReadOnly':true,'Style':'Type:Link'}")
 						.OpenForm("{'AppName':$,'Question':$,'OnDate':$}");
 			}
 
