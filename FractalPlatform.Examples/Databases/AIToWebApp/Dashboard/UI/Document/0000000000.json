@@ -1,5 +1,9 @@
 {
   "Style": "Save:Build My CRUD Web App !;Cancel:false",
+  "EnterNumber": {
+    "ControlType": "TextBox",
+    "Style": "Type:Captcha"
+  },
   "Title": {
     "ControlType": "Label"
   },
