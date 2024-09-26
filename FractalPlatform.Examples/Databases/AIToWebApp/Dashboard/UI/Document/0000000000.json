@@ -7,7 +7,7 @@
       "ControlType": "Label"
     },
     "Question": {
-      "ControlType": "RichTextBox",
+      "ControlType": "RichTextBox"
     }
   },
   "ExistingApps": [
