@@ -27,7 +27,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 						  codeBlock.Text
 								  .ToCollection("App")
 								  .SetThemeDimension(ThemeType.LightBlue)
-								  .SetUIDimension("{'Style':'Save:Rebuild'}")
+								  .SetUIDimension("{'Style':'Save:Rebuild;Type:Link'}")
 								  .SetDimension(DimensionType.Sort)
 								  .OpenForm(result =>
 								  {
