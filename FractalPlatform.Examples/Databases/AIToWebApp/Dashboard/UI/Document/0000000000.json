@@ -1,15 +1,14 @@
 {
   "Style": "Save:Build My CRUD Web App !;Cancel:false",
   "ReadOnly": true,
-  "AppName": {
-    "ReadOnly": false
-  },
-  "Title": {
-    "ControlType": "Label"
-  },
-  "Question": {
-    "ControlType": "RichTextBox",
-    "ReadOnly": false
+  "NewApp": {
+    "ReadOnly": false,
+    "Title": {
+      "ControlType": "Label"
+    },
+    "Question": {
+      "ControlType": "RichTextBox",
+    }
   },
   "ExistingApps": [
     {

@@ -3,7 +3,6 @@ using FractalPlatform.Client.UI;
 using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
-using System.Collections.Generic;
 
 namespace FractalPlatform.Examples.Applications.AIToWebApp
 {
@@ -20,9 +19,10 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 					{
 						if (result.Result)
 						{
+							var appName = collection.FindFirstValue("AppName");
 							var question = collection.FindFirstValue("Question");
 
-							Dashboard(question);
+							Dashboard(appName, question);
 						}
 					});
 		}
@@ -45,23 +45,23 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 			}
 		}
 
-		private void Dashboard(string question)
+		private void Dashboard(string appName, string question)
 		{
 			var apps = DocsOf("Apps").ToStorage("{'AppName':$,'OnDate':$}");
 
 			FirstDocOf("Dashboard")
 				  .ToCollection()
 				  .MergeToArrayPath(apps, "ExistingApps", Constants.FIRST_DOC_ID, true)
-				  .ExtendDocument(DQL("{'Question':@Question}", question))
+				  .ExtendDocument(DQL("{'NewApp':{'AppName':@AppName,'Question':@Question}}", appName, question))
 				  .OpenForm(result =>
 				  {
 					  Collection collection;
 
 					  var appAndQuestion = result.Collection
 												 .GetFirstDoc()
-												 .Values("{'AppName':$,'Question':$}");
+												 .Values("{'NewApp':{'AppName':$,'Question':$}}");
 
-					  var query = DocsWhere("Apps", "{'Question':@Question}", question);
+					  var query = DocsWhere("Apps", "{'Question':@Question}", appAndQuestion[1]);
 
 					  if (query.Any())
 					  {
@@ -100,6 +100,6 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 				  });
 		}
 
-		public override void OnStart() => Dashboard("List of most popular youtube videos with amount of views. Add link to youtube.");
+		public override void OnStart() => Dashboard("Popular youtube videos", "List of most popular youtube videos with amount of views. Add link to youtube.");
 	}
 }
