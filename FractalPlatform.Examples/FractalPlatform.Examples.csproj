@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Databases\AIToWebApp\Apps\Document\" />
     <Folder Include="Databases\BTCRateStopLoss\" />
     <Folder Include="Databases\FreelanceResponse\" />
     <Folder Include="Databases\SocialNetwork\" />

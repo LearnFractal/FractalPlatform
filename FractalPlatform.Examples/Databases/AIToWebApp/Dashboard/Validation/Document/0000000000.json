@@ -1,4 +1,9 @@
 {
+  "AppName": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 32
+  },
   "Question": {
     "IsRequired": true,
     "MinLen": 16,
