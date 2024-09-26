@@ -33,7 +33,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 			{
 				var docID = info.Collection.GetWhere(info.AttrPath).UIntValue("{'ExistingApps':[{'DocID':$}]}");
 
-				var collection = DocsWhere("ExistingApps", docID).ToCollection();
+				var collection = DocsWhere("Apps", docID).ToCollection();
 				
 				OpenApp(collection);
 
