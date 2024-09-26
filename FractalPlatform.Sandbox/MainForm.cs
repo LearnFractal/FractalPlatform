@@ -306,9 +306,9 @@ namespace FractalPlatform.Sandbox
             if (e.Control && e.KeyCode == Keys.D)
             {
 #if DEBUG
-                var workingDirectory = @$"{Utils.GetSolutionPath()}\FractalPlatform.Deployment\bin\Debug\net8.0-windows";
+                var workingDirectory = @$"{Utils.GetSolutionPath()}\FractalPlatform.Deployment\bin\Debug\net8.0";
 #else
-                var workingDirectory = @$"{Utils.GetSolutionPath()}\FractalPlatform.Deployment\bin\Release\net8.0-windows";
+                var workingDirectory = @$"{Utils.GetSolutionPath()}\FractalPlatform.Deployment\bin\Release\net8.0";
 #endif
 
                 Process.Start(new ProcessStartInfo 
