@@ -1,0 +1,6 @@
+{
+  "Style": "Save:Rebuild;Type:Link",
+  "AppName": { "Visible": false },
+  "Question": { "Visible": false },
+  "OnDate": { "Visible": false }
+}

@@ -1,6 +1,5 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
-using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 
@@ -8,67 +7,63 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 {
 	public class AIToWebAppApplication : BaseApplication
 	{
-		public void OpenApp(Collection collection)
-		{
-			collection.SetThemeDimension(ThemeType.LightBlue)
-					.SetUIDimension(@"{'Style':'Save:Rebuild;Type:Link',
-									   'AppName':{'Visible':false},
-									   'Question':{'Visible':false}}")
-					.SetDimension(DimensionType.Sort)
-					.OpenForm(result =>
-					{
-						if (result.Result)
-						{
-							var appName = collection.FindFirstValue("AppName");
-							var question = collection.FindFirstValue("Question");
+		private bool OpenApp(uint docID) =>
+			DocsWhere("Apps", docID).OpenForm(result =>
+			 {
+				 if (result.Result)
+				 {
+					 var appName = result.Collection.FindFirstValue("AppName");
+					 var question = result.Collection.FindFirstValue("Question");
 
-							Dashboard(appName, question);
-						}
-					});
-		}
+					 Dashboard(appName, question);
+				 }
+			 });
 
 		public override bool OnOpenForm(FormInfo info)
 		{
-			if (info.AttrPath.FirstPath == "ExistingApps")
+			if (info.Collection.Name == "Apps" &&
+				info.DocID != Constants.ANY_DOC_ID &&
+				info.AttrPath.IsEmpty)
 			{
-				var docID = info.Collection.GetWhere(info.AttrPath).UIntValue("{'ExistingApps':[{'DocID':$}]}");
-
-				var collection = DocsWhere("Apps", docID).ToCollection();
-				
-				OpenApp(collection);
+				OpenApp(info.DocID);
 
 				return false;
 			}
-			else
+
+			return base.OnOpenForm(info);
+		}
+
+		public override bool OnEventDimension(EventInfo info)
+		{
+			if (info.Action == "ExistingApps")
 			{
-				return base.OnOpenForm(info);
+				return DocsOf("Apps")
+						.SetUIDimension("{'ReadOnly':true}")
+						.OpenForm("{'AppName':$,'Question':$,'OnDate':$}");
 			}
+
+			return base.OnEventDimension(info);
 		}
 
 		private void Dashboard(string appName, string question)
 		{
-			var apps = DocsOf("Apps").ToStorage("{'AppName':$,'OnDate':$}");
-
 			FirstDocOf("Dashboard")
 				  .ToCollection()
-				  .MergeToArrayPath(apps, "ExistingApps", Constants.FIRST_DOC_ID, true)
-				  .ExtendDocument(DQL("{'NewApp':{'AppName':@AppName,'Question':@Question}}", appName, question))
+				  .ExtendDocument(DQL("{'AppName':@AppName,'Question':@Question}", appName, question))
 				  .SetThemeDimension(ThemeType.LightGreen)
 				  .OpenForm(result =>
 				  {
-					  Collection collection;
+					  uint docID;
 
 					  var appAndQuestion = result.Collection
 												 .GetFirstDoc()
-												 .Values("{'NewApp':{'AppName':$,'Question':$}}");
+												 .Values("{'AppName':$,'Question':$}");
 
 					  var query = DocsWhere("Apps", "{'Question':@Question}", appAndQuestion[1]);
 
 					  if (query.Any())
 					  {
-						  appAndQuestion = query.Values("{'AppName':$,'Question':$}");
-
-						  collection = query.ToCollection();
+						  docID = query.GetFirstID();
 					  }
 					  else
 					  {
@@ -83,11 +78,11 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 						  {
 							  var codeBlock = response.CodeBlocks[0];
 
-							  collection = codeBlock.Text
+							  var collection = codeBlock.Text
 												    .ToCollection(appAndQuestion[0])
 													.ExtendDocument(DQL("{'AppName':@AppName,'Question':@Question,'OnDate':@Now}", appAndQuestion[0], appAndQuestion[1]));
 
-							  AddDoc("Apps", collection.ToJson());
+							  docID = AddDoc("Apps", collection.ToJson());
 						  }
 						  else
 						  {
@@ -97,7 +92,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 						  }
 					  }
 
-					  OpenApp(collection);
+					  OpenApp(docID);
 				  });
 		}
 

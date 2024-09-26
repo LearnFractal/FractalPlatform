@@ -1,14 +1,12 @@
 {
-  "NewApp": {
-    "AppName": {
-      "Index": 1
-    },
-    "Title": {
-      "Index": 2
-    },
-    "Question": {
-      "Index": 3
-    }
+  "AppName": {
+    "Index": 1
+  },
+  "Title": {
+    "Index": 2
+  },
+  "Question": {
+    "Index": 3
   },
   "ExistingApps": {
     "Index": 4
