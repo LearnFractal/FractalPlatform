@@ -1,0 +1,44 @@
+{
+  "LoginButton": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "LogoutButton": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "MyUser": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "MyDashboard": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "NewOrder": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Register": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+﻿{
+  "OnDate": "",
+  "Goal": {
+    "Drink": false,
+    "Eat": false,
+    "Coffee": false,
+    "Talk": false,
+    "TalkAbout": ""
+  },
+  "Day": {
+    "Monday": false,
+    "Tuesday": false,
+    "Wednesday": false,
+    "Thursday": false,
+    "Friday": false,
+    "Saturday": false,
+    "Sunday": false
+  },
+  "Time": {
+    "Morning": false,
+    "Afternoon": false,
+    "Evening": false
+  },
+  "Contacts": {
+    "Name": "",
+    "Photo": "",
+    "Gender": "Male",
+    "Age": 20,
+    "Messanger": ""
+  },
+  "Map": {
+    "Key": "",
+    "Title": "",
+    "Zoom": 15,
+    "Center": {
+      "Lat": "50.4329658690059",
+      "Lng": "30.57958332067064"
+    },
+    "Point": {
+      "Lat": "",
+      "Lng": ""
+    }
+  }
+}

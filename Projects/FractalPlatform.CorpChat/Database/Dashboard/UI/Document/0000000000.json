@@ -1,0 +1,15 @@
+{
+  "Layout": "Dashboard",
+  "IsRawPage": true,
+  "Map": {
+    "ControlType": "Map",
+    "Width": 1500,
+    "Height": 800
+  },
+  "Find": {
+    "ControlType": "Button"
+  },
+  "Propose": {
+    "ControlType": "Button"
+  }
+}

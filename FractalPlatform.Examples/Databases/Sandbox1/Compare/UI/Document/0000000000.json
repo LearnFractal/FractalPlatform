@@ -1,0 +1,17 @@
+{
+  "Style": "Save:Compare;Cancel:false",
+  "Title": {
+    "ControlType": "Label"
+  },
+  "First": {
+    "ChooseProjects": {
+      "ControlType": "Label"
+    },
+    "OrChooseProject": {
+      "ControlType": "Label"
+    }
+  },
+  "Second": {
+    "ReadOnly": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "Style": "Save:Зарегестрироваться!;Cancel:false",
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Picture": {
+    "ControlType": "Picture"
+  }
+}

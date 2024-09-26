@@ -1,0 +1,18 @@
+﻿{
+  "Title": "Choose technologies to compare sources of RealWorld (conduit) apps",
+  "First implementation": {
+    "ChooseProjects": "Choose frontend + backend projects",
+    "Frontend": "None",
+    "Backend": "None",
+    "OrChooseProject": "OR choose a fullstack project",
+    "Fullstack": "None"
+  },
+  "Second implementation": {
+    "FractalPlatform": "Fractal Platform | C# | https://github.com/LearnFractal/FractalPlatform.RealWorld"
+  },
+  "Useful links": {
+    "Mother of all demo apps": "https://github.com/gothinkster/realworld",
+    "List of demo implementations": "https://codebase.show/projects/realworld",
+    "Deployed web app on Fractal Platform": "https://fraplat.com/jupiter/RealWorld"
+  }
+}

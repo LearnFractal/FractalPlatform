@@ -1,0 +1,36 @@
+{
+  "Style": "Save:Create",
+  "Archive": {
+    "ControlType": "UploadFile"
+  },
+  "Video": {
+    "ControlType": "UploadFile"
+  },
+  "Picture": {
+    "ControlType": "UploadFile"
+  },
+  "Comment": {
+    "ControlType": "RichTextBox"
+  },
+  "Who": {
+    "Visible": false
+  },
+  "OnDate": {
+    "Visible": false
+  },
+  "AcceptDemo": {
+    "Visible": false
+  },
+  "NewUserRate": {
+    "Visible": false
+  },
+  "Chat": {
+    "Visible": false
+  },
+  "Message": {
+    "Visible": false
+  },
+  "SendMessage": {
+    "Visible": false
+  }
+}

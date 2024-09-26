@@ -1,0 +1,18 @@
+﻿{
+  "PlayListCount": {
+    "Formula": "@PlayListCount"
+  },
+  "BestMoviesCount": {
+    "Formula": "@BestMoviesCount"
+  },
+  "CommentsCount": {
+    "Formula": "@CommentsCount"
+  },
+  "PlayList": [
+    {
+      "OnDateLabel": {
+        "Formula": "@OnDateLabel"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "UID": {
+    "Formula": "@NewGuid"
+  },
+  "OnDate": {
+    "Formula": "@Now"
+  }
+}

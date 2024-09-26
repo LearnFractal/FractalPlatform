@@ -1,0 +1,17 @@
+{
+  "Login": "",
+  "Password": "",
+  "LoginButton": "Login",
+  "Logout": "Log Out",
+  "Register": "Register",
+  "Users": "Users",
+  "EditTopics": "Edit Topics",
+  "NewTopic": "New Topic",
+  "PageNumbers": "Page Numbers",
+  "Category": "",
+  "Topics": [
+    {
+      "OnDate": ""
+    }
+  ]
+}

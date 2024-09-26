@@ -1,0 +1,19 @@
+{
+  "Style": "HasLabel:true",
+  "OnDate": {
+    "ControlType": "Calendar",
+    "Enabled": false
+  },
+  "Who": {
+    "Enabled": false
+  },
+  "Avatar": {
+    "Visible": false
+  },
+  "Text": {
+    "ControlType": "RichTextBox"
+  },
+  "Picture": {
+    "ControlType": "UploadFile"
+  }
+}

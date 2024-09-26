@@ -1,0 +1,62 @@
+{
+  "Login": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Password": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "LoginButton": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "NewMessage": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Register": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Users": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Messages": [
+    {
+      "NewQuoteMessage": {
+        "Disallow": {
+          "Read": [
+            "Guest"
+          ]
+        }
+      }
+    }
+  ],
+  "EditTopic": {
+    "Allow": {
+      "Read": [
+        "Admin"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "Age": {
+    "MinValue": 1,
+    "MaxValue": 150
+  },
+  "Weight": {
+    "MinValue": 5,
+    "MaxValue": 300
+  }
+}

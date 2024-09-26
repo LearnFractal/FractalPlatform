@@ -1,0 +1,28 @@
+{
+  "CollVersion": 2,
+  "ViewPosts": {
+    "Receive": {
+      "Query": "Collection.GetWhere({'Name':Document.UserName}).OrWhere({'Friends':[Any,{'Name':Document.UserName,'Approved':true}]}).Select({'Posts':[R,$]})",
+      "Version": "0",
+      "Enabled": true,
+      "Connection": {
+        "Host": "localhost",
+        "Port": "4477",
+        "DatabaseName": "SocialNetwork",
+        "CollectionName": "Users"
+      },
+      "Download": {
+        "Mode": "ByView",
+        "TimeInSec": "0"
+      }
+    },
+    "Send": {
+      "ResolveConficts": "Overwrite",
+      "Enabled": true,
+      "Upload": {
+        "Mode": "ByView",
+        "TimeInSec": "0"
+      }
+    }
+  }
+}

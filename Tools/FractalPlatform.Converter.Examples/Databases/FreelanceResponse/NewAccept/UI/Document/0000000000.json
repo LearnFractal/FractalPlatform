@@ -1,0 +1,24 @@
+{
+  "Style": "Save:Accept",
+  "Who": {
+    "Visible": false
+  },
+  "OnDate": {
+    "Visible": false
+  },
+  "Accepted": {
+    "Visible": false
+  },
+  "Completed": {
+    "Visible": false
+  },
+  "Rating": {
+    "Visible": false
+  },
+  "Comment": {
+    "ControlType": "RichTextBox"
+  },
+  "AcceptDeveloper": {
+    "Visible": false
+  }
+}

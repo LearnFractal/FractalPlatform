@@ -1,0 +1,78 @@
+﻿{
+   "CollVersion": 2,
+   "ActiveOrders": {
+      "Receive": {
+         "Enabled": true,
+         "Query": "Collection.GetDoc(1).AndWhere({\'Orders\':[{\'Who\':Document.Name,\'IsCompleted\':false}]}).Select({\'Orders\':[$]})",
+         "Version": "0",
+         "Connection": {
+            "CollectionName": "Orders",
+            "DatabaseName": "Taxi",
+            "Host": "localhost",
+            "Port": "4477"
+         },
+         "Download": {
+            "Mode": "ByVersion",
+            "TimeInSec": "0"
+         }
+      },
+      "Send": {
+         "Enabled": true,
+         "ResolveConficts": "Overwrite",
+         "Upload": {
+            "Mode": "ByVersion",
+            "TimeInSec": "0"
+         }
+      }
+   },
+   "CompletedOrders": {
+      "Receive": {
+         "Enabled": true,
+         "Query": "Collection.GetDoc(1).AndWhere({\'Orders\':[{\'Who\':Document.Name,\'IsCompleted\':true}]}).Select({\'Orders\':[$]})",
+         "Version": "0",
+         "Connection": {
+            "CollectionName": "Orders",
+            "DatabaseName": "Taxi",
+            "Host": "localhost",
+            "Port": "4477"
+         },
+         "Download": {
+            "Mode": "ByVersion",
+            "TimeInSec": "0"
+         }
+      },
+      "Send": {
+         "Enabled": true,
+         "ResolveConficts": "Overwrite",
+         "Upload": {
+            "Mode": "ByVersion",
+            "TimeInSec": "0"
+         }
+      }
+   },
+   "NewOrders": {
+      "Receive": {
+         "Enabled": true,
+         "Query": "Collection.GetDoc(1).AndWhere({\'Orders\':[{\'Who\':\'\'}]}).Select({\'Orders\':[$]})",
+         "Version": "0",
+         "Connection": {
+            "CollectionName": "Orders",
+            "DatabaseName": "Taxi",
+            "Host": "localhost",
+            "Port": "4477"
+         },
+         "Download": {
+            "Mode": "ByVersion",
+            "TimeInSec": "0"
+         }
+      },
+      "Send": {
+         "Enabled": true,
+         "ResolveConficts": "Overwrite",
+         "Upload": {
+            "Mode": "ByVersion",
+            "TimeInSec": "0"
+         }
+      }
+   }
+}

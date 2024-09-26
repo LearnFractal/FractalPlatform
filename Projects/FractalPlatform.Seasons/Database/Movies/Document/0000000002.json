@@ -1,0 +1,54 @@
+﻿{
+  "AddToPlayList": "Add To Play List",
+  "CommentsCount": "",
+  "Country": "США",
+  "Countries": [ "США" ],
+  "Description": "Історія про життя Арнольда Шварценеггера, починаючи з тих днів, коли він піднімав тяжкості, і закінчуючи його успіхами в Голлівуді, його роботою на посаді губернатора Каліфорнії, а також радощами та негараздами його сімейного життя.",
+  "Duration": "63 хв/01:03",
+  "Genre": "Films",
+  "IMDB": "8.00",
+  "Name": "Арнольд",
+  "Picture": "arnold-ex-fs.net.jpg",
+  "Quality": "BDRip",
+  "Rating": "7.972",
+  "RecommendAge": "16+",
+  "Translation": "Професійний (багатоголосий)",
+  "Type": "films",
+  "Video": "Arnold_s1.mp4",
+  "Views": 5,
+  "ViewUsers": "View Users",
+  "Year": 2023,
+  "Actors": [
+    {
+      "Name": "Арнольд Шварценеггер",
+      "Role": "Арнольд Шварценеггер"
+    },
+    {
+      "Name": "Джеймс Кэмерон",
+      "Role": "Джеймс Кэмерон"
+    },
+    {
+      "Name": "Кен Уоллер",
+      "Role": "Кен Уоллер"
+    },
+    {
+      "Name": "Линда Хэмилтон",
+      "Role": "Линда Хэмилтон"
+    }
+  ],
+  "Comments": [
+    {
+      "Avatar": "Ti.png",
+      "Name": "Ti",
+      "Text": "Test comment",
+      "ViewUser": "View User"
+    },
+    {
+      "Avatar": "bazist.png",
+      "Name": "Bazist",
+      "Text": "test",
+      "ViewUser": "View User"
+    }
+  ],
+  "Series": [ "Arnold_s1.mp4", "Arnold_s2.mp4", "Arnold_s3.mp4" ]
+}

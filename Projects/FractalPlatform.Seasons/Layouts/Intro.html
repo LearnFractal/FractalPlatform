@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    @Styles
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Онлайн - кінотеатр</title>
+    <link rel="stylesheet" href="@BaseFilesUrl/Intro/index.a29fce5e.css">
+</head>
+<body>
+    @StartForm
+    <header class="header">
+        <div class="container">
+            <a lang="en" href="/" class="logo link">
+                <img src="@BaseFilesUrl/LOGO.svg" width="50" alt="Logo">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="main-page section">
+            <div class="main-page__container container">
+                <div class="main-page__box">
+                    <h1 class="main-page__title">Онлайн - кінотеатр</h1>
+                    <h2 class="main-page__subtitle">без реклами, де ви можете ділитися списками <br> відтворення з друзями</h2>
+                    <ul class="benefits__list">
+                        <li class="benefits__item">
+                            <svg class="benefits__icon" width="36" height="36">
+                                <use href="@BaseFilesUrl/Intro/icons.a238eec9.svg#icon-users"></use>
+                            </svg>
+                            <control attr="CountUsers">
+                                <p class="benefits__text">Наші фільми дивиться <span>@Value</span> користувачів</p>
+                            </control>
+                        </li>
+                        <li class="benefits__item">
+                            <svg class="benefits__icon" width="36" height="36">
+                                <use href="@BaseFilesUrl/Intro/icons.a238eec9.svg#icon-screen"></use>
+                            </svg>
+                            <control attr="CountMovies">
+                                <p class="benefits__text">На нашій на платформі <span>@Value</span> фільмів</p>
+                            </control>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-page__box">
+                    <div class="main-page__box-inner">
+                        <div class="auth-form">
+                            <label class="auth-form__label">
+                                <control attr="Login">
+                                    <input class="auth-form__input" type="text" name="@Name" placeholder="Логін">
+                                </control>
+                            </label>
+                            <label class="auth-form__label">
+                                <control attr="Password">
+                                    <input class="auth-form__input" type="password" name="@Name" placeholder="Пароль">
+                                </control>
+                            </label>
+                        </div>
+                        <ul class="auth-form__btn-list">
+                            <li class="auth-form__btn-item">
+                                <control attr="LoginButton">
+                                    <button class="auth-form__btn" type="button" name="@Name" onclick="@ClickSubmit">Увійти</button>
+                                </control>
+                            </li>
+                            <li class="auth-form__btn-item">
+                                <control attr="RegisterButton">
+                                    <button class="auth-form__btn auth-form__btn--transparent" type="button" name="@Name" onclick="@ClickSubmit">Новий користувач</button>
+                                </control>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="@BaseFilesUrl/Intro/pages.0155c232.js"></script>
+    @EndForm
+</body>
+</html>

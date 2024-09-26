@@ -1,0 +1,30 @@
+{
+  "Style": "Save:Create",
+  "Who": {
+    "Visible": false
+  },
+  "OnDate": {
+    "Visible": false
+  },
+  "CountMessages": {
+    "Visible": false
+  },
+  "CountViews": {
+    "Visible": false
+  },
+  "LastMessage": {
+    "Visible": false
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "DescriptionShort": {
+    "Visible": false
+  },
+  "DescriptionHtml": {
+    "Visible": false
+  },
+  "Category": {
+    "Visible": false
+  }
+}

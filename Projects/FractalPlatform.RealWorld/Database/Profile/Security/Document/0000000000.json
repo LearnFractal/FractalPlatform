@@ -1,0 +1,15 @@
+{
+  "FollowUser": {
+    "Formula": "FollowUser"
+  },
+  "UnfollowUser": {
+    "Formula": "UnfollowUser"
+  },
+  "Settings": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  }
+}

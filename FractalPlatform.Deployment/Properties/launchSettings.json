@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "FractalPlatform.Deployment": {
+      "commandName": "Project"
+    }
+  }
+}

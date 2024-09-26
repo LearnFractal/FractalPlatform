@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @Styles
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>UTube video page</title>
+    <link rel="stylesheet" href="@BaseFilesUrl/VideoDashboard/index.f937bc34.css">
+</head>
+<body class="isLoading">
+    @StartForm
+    <header class="header">
+        <div class="container">
+            <a lang="en" href="@BaseUrl/@AppName" class="link logo">UTube</a>
+            <label class="header__search">
+                <control attr="">
+                    <input @FilterText.TextBox type="search" placeholder="Search">
+                    <button @Filter.Button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 25" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.76 13.77L20.49 19.5L19 20.99L13.27 15.26C12.2 16.03 10.91 16.5 9.5 16.5C5.91 16.5 3 13.59 3 10C3 6.41 5.91 3.5 9.5 3.5C13.09 3.5 16 6.41 16 10C16 11.41 15.53 12.7 14.76 13.77ZM9.5 5.5C7.01 5.5 5 7.51 5 10C5 12.49 7.01 14.5 9.5 14.5C11.99 14.5 14 12.49 14 10C14 7.51 11.99 5.5 9.5 5.5Z" fill="#9F9EA1"></path>
+                        </svg>
+                    </button>
+                </control>
+            </label>
+            <control attr="">
+                <button @MyUser.Button alt="@UserName" class="header__btn">@MyUserLabel</button>
+            </control>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <div class="container">
+                <control attr="">
+                    <div>
+                        <video id="video" name="Video" class="movie-details__img" width="100%" height="800" controls>
+                            <source src="@BaseFilesUrl/@Video.Value" />
+                        </video>
+                    </div>
+                    <div class="video__desc">
+                        <p class="video__date">@Description.Value</p>
+                        <div class="video__data">
+                            <button onclick="return false;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                    <path d="M8 3.5C4.36364 3.5 1.25818 5.40197 0 8.08674C1.25818 10.7715 4.36364 12.6735 8 12.6735C11.6364 12.6735 14.7418 10.7715 16 8.08674C14.7418 5.40197 11.6364 3.5 8 3.5ZM8 11.1446C5.99273 11.1446 4.36364 9.77465 4.36364 8.08674C4.36364 6.39882 5.99273 5.02891 8 5.02891C10.0073 5.02891 11.6364 6.39882 11.6364 8.08674C11.6364 9.77465 10.0073 11.1446 8 11.1446ZM8 6.25204C6.79273 6.25204 5.81818 7.07154 5.81818 8.08674C5.81818 9.10193 6.79273 9.92143 8 9.92143C9.20727 9.92143 10.1818 9.10193 10.1818 8.08674C10.1818 7.07154 9.20727 6.25204 8 6.25204Z"></path>
+                                </svg>
+                                @CountViews.Value
+                            </button>
+                            <button @NewLike.Button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewbox="0 0 16 17" fill="none">
+                                    <g clip-path="url(#clip0_79_42)">
+                                        <path d="M1.33325 13.8334H2.66659C3.03325 13.8334 3.33325 13.5334 3.33325 13.1667V7.16671C3.33325 6.80004 3.03325 6.50004 2.66659 6.50004H1.33325V13.8334ZM14.5533 9.08671C14.6266 8.92004 14.6666 8.74004 14.6666 8.55337V7.83337C14.6666 7.10004 14.0666 6.50004 13.3333 6.50004H9.66658L10.2799 3.40004C10.3133 3.25337 10.2933 3.09337 10.2266 2.96004C10.0733 2.66004 9.87992 2.38671 9.63992 2.14671L9.33325 1.83337L5.05992 6.10671C4.80659 6.36004 4.66658 6.70004 4.66658 7.05337V12.28C4.66658 13.1334 5.36659 13.8334 6.22658 13.8334H11.6333C12.0999 13.8334 12.5399 13.5867 12.7799 13.1867L14.5533 9.08671Z"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_79_42">
+                                            <rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                @CountLikes.Value
+                            </button>
+                        </div>
+                        <h1 class="video__title" style="height:30px">@Name.Value</h1>
+                        <div class="video__owner video-owner">
+                            <img class="video-owner__img" src="@BaseFilesUrl/@Channel.Photo.Value" alt="@Channel.Name.Value" width="48" height="48">
+                            <p class="video-owner__login">@Channel.Name.Value</p>
+                        </div>
+                    </div>
+                </control>
+            </div>
+        </section>
+        <section class="comments section">
+            <div class="comments__container container">
+                <control attr="">
+                    <span class="comments__numbers">Comments @CountComments.Value</span>
+                </control>
+                <div class="comments__wrap">
+                    <div class="comments__new">
+                        <control attr="">
+                            <a class="user__link" @MyUser.Link>
+                                <img src="@BaseFilesUrl/@UserAvatar" style="border-radius: 50%" alt="user" width="48" height="48">
+                            </a>
+                            <label>
+                                <input type="text" @Comment.TextBox placeholder="Add a comment"> <button @NewComment.Button type="submit">Leave a comment</button>
+                            </label>
+                        </control>
+                    </div>
+                    <ul class="comments__list">
+                        <control attr="Comments" repeatable="true">
+                            <li class="comments__item">
+                                <img src="@BaseFilesUrl/@Avatar.Value" style="border-radius: 50%" alt="@ector" width="48" height="48">
+                                <div class="comments__desc">
+                                    <span class="comments__user">@Who.Value</span> <span class="comments__date">@OnDate.Value</span>
+                                    <p class="comments__text">@Text.Value</p>
+                                </div>
+                            </li>
+                        </control>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="loader">
+        <div class="backdrop loader__backdrop">
+            <div class="lds-roller loader__content">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script src="@BaseFilesUrl/VideoDashboard/index.5f4e27f1.js"></script>
+    @EndForm
+</body>
+</html>

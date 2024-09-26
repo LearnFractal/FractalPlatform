@@ -1,0 +1,11 @@
+{
+  "Title": {
+    "IsUnique": true
+  },
+  "Comment": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256,
+    "ValidateOnControl": "AddComment"
+  }
+}

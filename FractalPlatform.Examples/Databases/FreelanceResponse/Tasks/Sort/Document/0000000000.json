@@ -1,0 +1,134 @@
+{
+  "TaskNumber": {
+    "Index": 1,
+    "Sort": {
+      "Enabled": true,
+      "IsAscending": false
+    }
+  },
+  "OnDate": {
+    "Index": 2
+  },
+  "Who": {
+    "Index": 3
+  },
+  "Title": {
+    "Index": 4
+  },
+  "Description": {
+    "Index": 5
+  },
+  "Skills": {
+    "Index": 6
+  },
+  "Archive": {
+    "Index": 7
+  },
+  "Video": {
+    "Index": 8
+  },
+  "Picture": {
+    "Index": 9
+  },
+  "PaymentTypes": {
+    "Index": 10
+  },
+  "MinPrice": {
+    "Index": 11
+  },
+  "MaxPrice": {
+    "Index": 12
+  },
+  "Developer": {
+    "Index": 13
+  },
+  "TenderModel": {
+    "Index": 14
+  },
+  "Status": {
+    "Index": 15
+  },
+  "StartDate": {
+    "Index": 16
+  },
+  "EndDate": {
+    "Index": 17
+  },
+  "NewCustomerRate": {
+    "Index": 18
+  },
+  "NewAccept": {
+    "Index": 19
+  },
+  "NewDemo": {
+    "Index": 20
+  },
+  "Reject": {
+    "Index": 21
+  },
+  "Accepts": [
+    {
+      "OnDate": {
+        "Index": 22
+      },
+      "Who": {
+        "Index": 23
+      },
+      "Accepted": {
+        "Index": 24
+      },
+      "Completed": {
+        "Index": 25
+      },
+      "Rating": {
+        "Index": 26
+      },
+      "MinPrice": {
+        "Index": 27
+      },
+      "Comment": {
+        "Index": 28
+      },
+      "AcceptDeveloper": {
+        "Index": 29
+      }
+    }
+  ],
+  "Demos": [
+    {
+      "OnDate": {
+        "Index": 30
+      },
+      "Who": {
+        "Index": 31
+      },
+      "Archive": {
+        "Index": 32
+      },
+      "Video": {
+        "Index": 33
+      },
+      "Picture": {
+        "Index": 34
+      },
+      "Comment": {
+        "Index": 35
+      },
+      "AcceptDemo": {
+        "Index": 36
+      },
+      "NewUserRate": {
+        "Index": 37
+      },
+      "Chat": {
+        "Index": 38
+      },
+      "Message": {
+        "Index": 39
+      },
+      "SendMessage": {
+        "Index": 40
+      }
+    }
+  ]
+}

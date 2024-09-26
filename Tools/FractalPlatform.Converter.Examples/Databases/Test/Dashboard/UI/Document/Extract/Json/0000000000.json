@@ -1,0 +1,11 @@
+{
+   "Cars":{
+      "ControlType":"Button"
+   },
+   "Companies":{
+      "ControlType":"Button"
+   },
+   "Users":{
+      "ControlType":"Button"
+   }
+}

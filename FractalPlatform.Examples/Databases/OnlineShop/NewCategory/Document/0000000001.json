@@ -1,0 +1,12 @@
+﻿{
+  "Name": "",
+  "Description": "",
+  "Filters": [
+    {
+      "Name": "Price",
+      "Text": "0-100",
+      "Query": "{'Price':Range(0,100)}",
+      "Checked": false
+    }
+  ]
+}

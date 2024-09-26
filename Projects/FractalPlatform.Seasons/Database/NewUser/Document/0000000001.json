@@ -1,0 +1,16 @@
+{
+  "Name": "",
+  "Password": "",
+  "RepeatPassword": "",
+  "Age": 20,
+  "Captcha": "",
+  "Gender": "",
+  "Avatar": "",
+  "CountMessages": 0,
+  "Registered": "",
+  "BestMoviesCount": 0,
+  "CommentsCount": 0,
+  "EditUser": "Edit Profile",
+  "PlayListCount": 0,
+  "Theme": "Dark"
+}

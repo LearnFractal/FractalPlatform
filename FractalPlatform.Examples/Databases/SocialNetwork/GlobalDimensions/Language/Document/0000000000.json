@@ -1,0 +1,348 @@
+﻿{
+   "AutoCreateNotFoundKeys": true,
+   "DefaultLanguage": "EN",
+   "Languages": [
+      "EN",
+      "UA",
+      "RU",
+      "GE"
+   ],
+   "Regexps": [
+      {
+         "Description": "Ignore numbers in values",
+         "Label": "[NUMBER]",
+         "Regexp": "[0-9]+"
+      },
+      {
+         "Description": "Ignore names in values",
+         "Label": ": [NAME]",
+         "Regexp": ": [a-zA-Z0-9]+"
+      }
+   ],
+   "Values": [
+      {
+         "EN": "LoginDashboard",
+         "GE": "LoginDashboard",
+         "RU": "Вход в систему",
+         "UA": "Вхід в систему"
+      },
+      {
+         "EN": "Log In",
+         "GE": "Log In",
+         "RU": "Войти",
+         "UA": "Увійти"
+      },
+      {
+         "EN": "Register",
+         "GE": "Register",
+         "RU": "Зарегестрироваться",
+         "UA": "Зареєструватися"
+      },
+      {
+         "EN": "Document",
+         "GE": "Document",
+         "RU": "Документ",
+         "UA": "Документ"
+      },
+      {
+         "EN": "Name",
+         "GE": "Name",
+         "RU": "Имя",
+         "UA": "Ім'я"
+      },
+      {
+         "EN": "Password",
+         "GE": "Password",
+         "RU": "Пароль",
+         "UA": "Пароль"
+      },
+      {
+         "EN": "Login",
+         "GE": "Login",
+         "RU": "Войти",
+         "UA": "Увійти"
+      },
+      {
+         "EN": "Cancel",
+         "GE": "Cancel",
+         "RU": "Закрыть",
+         "UA": "Закрити"
+      },
+      {
+         "EN": "Rebeca",
+         "GE": "Rebeca",
+         "RU": "Rebeca",
+         "UA": "Rebeca"
+      },
+      {
+         "EN": "Log Out",
+         "GE": "Log Out",
+         "RU": "Выйти",
+         "UA": "Вийти"
+      },
+      {
+         "EN": "My User",
+         "GE": "My User",
+         "RU": "Мой пользователь",
+         "UA": "Мій користувач"
+      },
+      {
+         "EN": "Users",
+         "GE": "Users",
+         "RU": "Пользователи",
+         "UA": "Користувачі"
+      },
+      {
+         "EN": "New Post",
+         "GE": "New Post",
+         "RU": "Добавить пост",
+         "UA": "Додати пост"
+      },
+      {
+         "EN": "Filter",
+         "GE": "Filter",
+         "RU": "Фильтр",
+         "UA": "Фільтр"
+      },
+      {
+         "EN": "Age",
+         "GE": "Age",
+         "RU": "Возраст",
+         "UA": "Вік"
+      },
+      {
+         "EN": "Gender",
+         "GE": "Gender",
+         "RU": "Пол",
+         "UA": "Стать"
+      },
+      {
+         "EN": "Male",
+         "GE": "Male",
+         "RU": "Мужской",
+         "UA": "Чоловіча"
+      },
+      {
+         "EN": "Female",
+         "GE": "Female",
+         "RU": "Женский",
+         "UA": "Жіноча"
+      },
+      {
+         "EN": "Other",
+         "GE": "Other",
+         "RU": "Другое",
+         "UA": "Інше"
+      },
+      {
+         "EN": "Language",
+         "GE": "Language",
+         "RU": "Язык",
+         "UA": "Мова"
+      },
+      {
+         "EN": "Photo",
+         "GE": "Photo",
+         "RU": "Фото",
+         "UA": "Фото"
+      },
+      {
+         "EN": "Friend",
+         "GE": "Friend",
+         "RU": "Добавить в друзья",
+         "UA": "Додати в друзі"
+      },
+      {
+         "EN": "Unfriend",
+         "GE": "Unfriend",
+         "RU": "Удалить из друзей",
+         "UA": "Видалити з друзів"
+      },
+      {
+         "EN": "Friends",
+         "GE": "Friends",
+         "RU": "Друзья",
+         "UA": "Друзі"
+      },
+      {
+         "EN": "Number",
+         "GE": "Number",
+         "RU": "Номер",
+         "UA": "Номер"
+      },
+      {
+         "EN": "Approved",
+         "GE": "Approved",
+         "RU": "Одобрено",
+         "UA": "Схвалено"
+      },
+      {
+         "EN": "Posts",
+         "GE": "Posts",
+         "RU": "Посты",
+         "UA": "Пости"
+      },
+      {
+         "EN": "Avatar",
+         "GE": "Avatar",
+         "RU": "Аватар",
+         "UA": "Аватар"
+      },
+      {
+         "EN": "Who",
+         "GE": "Who",
+         "RU": "Кто",
+         "UA": "Хто"
+      },
+      {
+         "EN": "OnDate",
+         "GE": "OnDate",
+         "RU": "Дата",
+         "UA": "Дата"
+      },
+      {
+         "EN": "Message",
+         "GE": "Message",
+         "RU": "Сообщение",
+         "UA": "Повідомлення"
+      },
+      {
+         "EN": "Likes",
+         "GE": "Likes",
+         "RU": "Понравилось",
+         "UA": "Вподобайки"
+      },
+      {
+         "EN": "NewComment",
+         "GE": "NewComment",
+         "RU": "Добавить комментарий",
+         "UA": "Додати коментар"
+      },
+      {
+         "EN": "Save",
+         "GE": "Save",
+         "RU": "Сохранить",
+         "UA": "Зберегти"
+      },
+      {
+         "EN": "Documents",
+         "GE": "Documents",
+         "RU": "Документы",
+         "UA": "Документи"
+      },
+      {
+         "EN": "RequestFriend",
+         "GE": "RequestFriend",
+         "RU": "Запрос в друзья",
+         "UA": "Запит в друзі"
+      },
+      {
+         "EN": "Request Friend",
+         "GE": "Request Friend",
+         "RU": "Запрос в друзья",
+         "UA": "Запит в друзі"
+      },
+      {
+         "EN": "NewPost",
+         "GE": "NewPost",
+         "RU": "Добавить пост",
+         "UA": "Додати пост"
+      },
+      {
+         "EN": "NewUser",
+         "GE": "NewUser",
+         "RU": "Новый пользователь",
+         "UA": "Новий користувач"
+      },
+      {
+         "EN": "Captcha",
+         "GE": "Captcha",
+         "RU": "Проверка",
+         "UA": "Перевірка"
+      },
+      {
+         "EN": "LogOut",
+         "GE": "LogOut",
+         "RU": "LogOut",
+         "UA": "LogOut"
+      },
+      {
+         "EN": "UID",
+         "GE": "UID",
+         "RU": "UID",
+         "UA": "UID"
+      },
+      {
+         "EN": "Value",
+         "GE": "Value",
+         "RU": "Value",
+         "UA": "Value"
+      },
+      {
+         "EN": "MessageBox",
+         "GE": "MessageBox",
+         "RU": "MessageBox",
+         "UA": "MessageBox"
+      },
+      {
+         "EN": "You have sent friend request.",
+         "GE": "You have sent friend request.",
+         "RU": "You have sent friend request.",
+         "UA": "You have sent friend request."
+      },
+      {
+         "EN": "Tim",
+         "GE": "Tim",
+         "RU": "Tim",
+         "UA": "Tim"
+      },
+      {
+         "EN": "New Comment",
+         "GE": "New Comment",
+         "RU": "New Comment",
+         "UA": "New Comment"
+      },
+      {
+         "EN": "Posts item",
+         "GE": "Posts item",
+         "RU": "Posts item",
+         "UA": "Posts item"
+      },
+      {
+         "EN": "Your have already sent friend request.",
+         "GE": "Your have already sent friend request.",
+         "RU": "Your have already sent friend request.",
+         "UA": "Your have already sent friend request."
+      },
+      {
+         "EN": "Friends item",
+         "GE": "Friends item",
+         "RU": "Friends item",
+         "UA": "Friends item"
+      },
+      {
+         "EN": "Text",
+         "GE": "Text",
+         "RU": "Text",
+         "UA": "Text"
+      },
+      {
+         "EN": "Picture",
+         "GE": "Picture",
+         "RU": "Picture",
+         "UA": "Picture"
+      },
+      {
+         "EN": "Comments",
+         "GE": "Comments",
+         "RU": "Comments",
+         "UA": "Comments"
+      },
+      {
+         "EN": "Bob",
+         "GE": "Bob",
+         "RU": "Bob",
+         "UA": "Bob"
+      }
+   ]
+}

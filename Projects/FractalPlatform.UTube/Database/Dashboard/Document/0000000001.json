@@ -1,0 +1,43 @@
+{
+  "FilterText": "",
+  "Filter": "Filter",
+  "Channels": "Channels",
+  "ClearHistory": "Clear History",
+  "History": "History",
+  "Login": "Login",
+  "Logout": "Logout",
+  "MyChannels": "My Channels",
+  "MyUser": "My User",
+  "MyUserLabel": "",
+  "NewChannel": "New Channel",
+  "Register": "Register",
+  "UserName": "",
+  "Users": "Users",
+  "NewVideos": [
+    {
+      "CountLikes": 1,
+      "CountViews": 1,
+      "Name": "My First Video",
+      "OnDate": "",
+      "Video": ""
+    }
+  ],
+  "Recommendations": [
+    {
+      "CountLikes": 1,
+      "CountViews": 1,
+      "Name": "My Third Video",
+      "OnDate": "",
+      "Video": ""
+    }
+  ],
+  "Subscribes": [
+    {
+      "CountLikes": 1,
+      "CountViews": 1,
+      "Name": "My Second Video",
+      "OnDate": "",
+      "Video": ""
+    }
+  ]
+}

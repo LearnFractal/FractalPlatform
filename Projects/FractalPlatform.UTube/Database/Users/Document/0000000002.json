@@ -1,0 +1,19 @@
+﻿{
+  "Age": 20,
+  "Gender": "Female",
+  "Language": "EN",
+  "Name": "Rebeca",
+  "Password": "3A59A77F69F69E81EBF3E4B44F3C872B",
+  "Avatar": "1588edfcfac64d92a60af8fcc0e0a383.png",
+  "History": [
+    {
+      "Description": "Darnitsky bridge route",
+      "Name": "Bridge",
+      "OnDate": "09/17/2023 10:38:09",
+      "UID": "DEE223D2-5C49-42C6-A819-5C7E5F20A21B"
+    }
+  ],
+  "Roles": [
+    "User"
+  ]
+}

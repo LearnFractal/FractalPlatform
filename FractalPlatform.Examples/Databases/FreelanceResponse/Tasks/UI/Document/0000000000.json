@@ -1,0 +1,83 @@
+{
+  "Style": "Save:false;HasLabel:true;Hide:Accepts,Demos,Archive,Video,Picture,Developer,BestDemo,Description,NewCustomerRate,NewUserRate,NewAccept,NewDemo,Reject,AcceptDeveloper,AcceptDemo,Message,NewUserRate,SendMessage,Chat",
+  "ReadOnly": true,
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "Skills": {
+    "ControlType": "Tags"
+  },
+  "Archive": {
+    "ControlType": "Link"
+  },
+  "Video": {
+    "ControlType": "Media",
+    "Style": "Type:Video"
+  },
+  "Picture": {
+    "ControlType": "Picture"
+  },
+  "PaymentTypes": {
+    "ControlType": "Tags"
+  },
+  "NewCustomerRate": {
+    "ControlType": "Button",
+    "Visible": false
+  },
+  "NewAccept": {
+    "ControlType": "Button",
+    "Visible": false
+  },
+  "NewDemo": {
+    "ControlType": "Button",
+    "Visible": false
+  },
+  "Reject": {
+    "ControlType": "Button",
+    "Visible": false
+  },
+  "Accepts": [
+    {
+      "Comment": {
+        "ControlType": "RichTextBox"
+      },
+      "AcceptDeveloper": {
+        "ControlType": "Button"
+      }
+    }
+  ],
+  "Demos": [
+    {
+      "Archive": {
+        "ControlType": "Link"
+      },
+      "Video": {
+        "ControlType": "Media",
+        "Style": "Type:Video"
+      },
+      "Picture": {
+        "ControlType": "Picture"
+      },
+      "Comment": {
+        "ControlType": "RichTextBox"
+      },
+      "AcceptDemo": {
+        "ControlType": "Button"
+      },
+      "NewUserRate": {
+        "ControlType": "Button"
+      },
+      "Chat": {
+        "ControlType": "Comments"
+      },
+      "Message": {
+        "ControlType": "RichTextBox",
+        "ReadOnly": false
+      },
+      "SendMessage": {
+        "ControlType": "Button",
+        "Style": "Type:Submit"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Name": "Bob",
+  "Password": "Bob",
+  "NewOrders": [
+    {
+      "Who": "",
+      "From": "Test",
+      "To": "Test",
+      "Price": 0,
+      "IsCompleted": false
+    }
+  ]
+}

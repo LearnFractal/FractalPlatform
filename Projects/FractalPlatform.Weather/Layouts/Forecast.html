@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk" style="--doc-height: 771px;">
+<head>
+    @Styles
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Погода</title>
+    <meta name="csrf-token" content="44fd1adbeae7f950d2f3a2ade31637ee">
+    <link href="@BaseFilesUrl/Forecast/m.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/emotions.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/comments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/share.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/weather.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/weather(1).css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/weather(1).css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/breadcrumbs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/auth.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="@BaseFilesUrl/Forecast/libs.min.css">
+    <link rel="stylesheet" href="@BaseFilesUrl/Forecast/app.css">
+    <style>
+        :root {
+            --doc-height: 100%;
+        }
+
+        body.dark {
+            color: #8c91b6;
+            background-color: #182039;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script src="@BaseFilesUrl/Forecast/f(4).txt"></script>
+    <script src="@BaseFilesUrl/Forecast/f(5).txt" id="google_shimpl"></script>
+    <script async="" src="@BaseFilesUrl/Forecast/js"></script>
+    <link href="@BaseFilesUrl/Forecast/active_menu_item.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/class_toggle.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/modal_click.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/ajax_views.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/carousel.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/password_show.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/reset_captcha.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/cookie_toggle_class.css" rel="stylesheet" type="text/css" media="all">
+    <link href="@BaseFilesUrl/Forecast/scroll2.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" async="" src="@BaseFilesUrl/Forecast/f(6).txt"></script>
+    <meta http-equiv="origin-trial" content="A+xK4jmZTgh1KBVry/UZKUE3h6Dr9HPPioFS4KNCzify+KEoOii7z/goKS2zgbAOwhpZ1GZllpdz7XviivJM9gcAAACFeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiQXR0cmlidXRpb25SZXBvcnRpbmdDcm9zc0FwcFdlYiIsImV4cGlyeSI6MTcwNzI2Mzk5OSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    <script attributionsrc="" type="text/javascript" async="" src="@BaseFilesUrl/Forecast/f(7).txt"></script>
+</head>
+<body>
+    <form action="/@InstanceName" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="EditKey" value="" />
+        <input type="hidden" name="MenuAction" value="" />
+        <input type="hidden" name="App" value="@AppName" />
+        <input type="hidden" name="FormName" value="@FormName" />
+        <input type="submit" id="btnSaveOnEnter" name="btn" value="Save" onclick="return !isPreventSaveOnEnter;" style="display:none;" />
+        <input type="submit" id="btnSortGridColumn" name="btn" value="SortGridColumn" style="display:none;" />
+        <input type="submit" id="btnEditLanguage" name="btn" value="EditLanguage" style="display:none;" />
+        <input type="submit" id="btnEditTheme" name="btn" value="EditTheme" style="display:none;" />
+        <input type="submit" id="btnEventClick" name="btn" value="EventClick" style="display:none;" />
+        <input type="submit" id="btnEventChange" name="btn" value="EventChange" style="display:none;" />
+        <input type="submit" id="btnMenuClick" name="btn" value="MenuClick" style="display:none;" />
+        <input type="submit" id="btnSave" name="btn" value="Save" style="display:none" />
+        <input type="submit" id="btnRefresh" name="btn" value="Refresh" style="display:none;" />
+        <input type="submit" id="btnUpdate" name="btn" value="Update" style="display:none" />
+        <input type="submit" id="btnCancel" name="btn" value="Cancel" style="display:none" />
+        <input type="submit" id="btnFilter" name="btn" value="Filter" style="display:none" />
+        <input type="submit" id="btnAdd" name="btn" value="Add" style="display:none" />
+        <input type="submit" id="btnDel" name="btn" value="Del" style="display:none" />
+
+        <div id="content-page" class="content-page home-page" data-m-action="ajax_views" style="height: auto !important; min-height: 0px !important; width: auto">
+            <div class="container" style="height: auto !important;">
+
+                <h1 class="h3 mt-3 mb-2">
+                    <control attr="">
+                        Погода в @City на сьогодні (@Latitude.Value, @Longitude.Value)
+                    </control>
+                </h1>
+
+                <div class="row first-items">
+                    <div class="col-lg-9f position-relative">
+                        <div class="daily-wrapper">
+                            <div class="row" style="width:2000px">
+                                <control attr="Forecast" repeatable="true">
+                                    <div class="col-1">
+                                        <a class="card">
+                                            <div class="card-body">
+                                                <ul class="list-group list-group-flush text-left px-0">
+                                                    <li class="list-group-item px-0 text-center">
+                                                        <h5>
+                                                            @Day.Value
+                                                            <br>
+                                                            @Date.Value
+                                                        </h5>
+                                                    </li>
+                                                    <li class="list-group-item px-0 text-center">
+                                                        <img src="@BaseFilesUrl/Forecast/@Picture.Value" height="48">
+                                                        <p>
+
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item px-0 text-center">
+                                                        <h4>
+                                                            @MaxTemp.Value °
+                                                        </h4>
+                                                    </li>
+                                                    <li class="list-group-item px-0 text-center">
+                                                        <h4>
+                                                            @MinTemp.Value °
+                                                        </h4>
+                                                    </li>
+                                                    <li class="list-group-item px-0">
+                                                        <small class="text-black-50">
+                                                            Опади
+                                                        </small>
+                                                        <span class="float-right">
+                                                            @Precipitation.Value mm
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </control>
+                                <a href="@SavePageUrl">Змінити GPS координати</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

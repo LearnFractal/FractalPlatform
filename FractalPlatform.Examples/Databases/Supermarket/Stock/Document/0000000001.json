@@ -1,0 +1,24 @@
+{
+  "Who": "Bob",
+  "Shop": {
+    "Name": "Shop0",
+    "Address": "Avenue0"
+  },
+  "Products": [
+    {
+      "Product": "Orange0",
+      "Count": 10,
+      "Price": 20
+    },
+    {
+      "Product": "Potato0",
+      "Count": 30,
+      "Price": 40
+    },
+    {
+      "Product": "Apple0",
+      "Count": 50,
+      "Price": 60
+    }
+  ]
+}

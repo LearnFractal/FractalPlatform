@@ -1,0 +1,38 @@
+{
+   "Id":"a989c538-2286-4282-b575-24ea420d0d73",
+   "Name":"Bob",
+   "Phones":[
+      {
+         "Id":"cb9b9440-243f-47d3-ab02-1765d20506ad",
+         "Value":"ModelB"
+      },
+      {
+         "Id":"25c7ed6c-d46c-4c8f-afd9-9baafe1501eb",
+         "Value":"ModelA"
+      }
+   ],
+   "Home":{
+      "Id":"4ef19cd6-0097-499f-8912-6bd278d3b250",
+      "Address":"Street",
+      "House":10
+   },
+   "Childs":[
+      {
+         "Id":"f3d8e138-fa5a-4d98-8f55-0ca64996a2cc",
+         "Name":"Ted",
+         "Description":"Some description"
+      },
+      {
+         "Id":"6c466733-5e0a-4a0e-92a1-29fae12907eb",
+         "Name":"Tom",
+         "Description":null
+      }
+   ],
+   "Cars":[
+      "a56d2e08-98d6-488f-8ed8-54cfd8631f75",
+      "3dcbaec9-bad6-47c3-8b4e-5a817faa87e5"
+   ],
+   "Companies":[
+      "51655334-0429-4549-96ad-48ae8187caf4"
+   ]
+}

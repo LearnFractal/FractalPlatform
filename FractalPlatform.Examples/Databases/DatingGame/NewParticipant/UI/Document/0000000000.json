@@ -1,0 +1,7 @@
+{
+  "Style": "Add:false;Del:false",
+  "Gender": { "ControlType": "ComboBox" },
+  "Photo": { "ControlType": "UploadFile" },
+  "Answers": { "Visible": false },
+  "Choose": { "Visible": false }
+}

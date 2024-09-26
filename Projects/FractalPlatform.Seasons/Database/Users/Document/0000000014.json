@@ -1,0 +1,58 @@
+﻿{
+  "Age": 21,
+  "Avatar": "Mike.png",
+  "Captcha": "2853",
+  "CountMessages": 0,
+  "Gender": "Male",
+  "Name": "Mike",
+  "Password": "1C40E2E4E588129E85B1FDE327E5A77B",
+  "Registered": "10/25/2023 19:14:46",
+  "RepeatPassword": "",
+  "BestMoviesCount": 0,
+  "CommentsCount": 0,
+  "PlayListCount": 0,
+  "EditUser": "Edit Profile",
+  "Theme": "Dark",
+  "BestMovies": [
+    {
+      "Name": "Краса по-американськи",
+      "OnDate": "10/25/2023 22:02:33",
+      "Remove": "Remove",
+      "Share": "Share"
+    }
+  ],
+  "GoodMovies": [
+    {
+      "Name": "Інтерстеллар",
+      "OnDate": "10/25/2023 22:02:38",
+      "Remove": "Remove",
+      "Share": "Share"
+    }
+  ],
+  "PlayList": [
+    {
+      "BestMovie": "Best Movie",
+      "GoodMovie": "Good Movie",
+      "Name": "Арнольд",
+      "OnDate": "10/25/2023 14:19:23",
+      "OnDateLabel": "",
+      "Remove": "Remove"
+    },
+    {
+      "BestMovie": "Best Movie",
+      "GoodMovie": "Good Movie",
+      "Name": "Аватар",
+      "OnDate": "10/25/2023 22:32:13",
+      "OnDateLabel": "",
+      "Remove": "Remove"
+    },
+    {
+      "BestMovie": "Best Movie",
+      "GoodMovie": "Good Movie",
+      "Name": "Втеча з Шоушенка",
+      "OnDate": "10/27/2023 01:05:32",
+      "OnDateLabel": "",
+      "Remove": "Remove"
+    }
+  ]
+}

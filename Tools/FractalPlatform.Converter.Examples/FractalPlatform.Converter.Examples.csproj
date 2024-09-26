@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Compile Remove="Databases\SocialNetwork\NewFolder\**" />
+    <Compile Remove="Files\PhotoAlbum\**" />
+    <EmbeddedResource Remove="Databases\SocialNetwork\NewFolder\**" />
+    <EmbeddedResource Remove="Files\PhotoAlbum\**" />
+    <None Remove="Databases\SocialNetwork\NewFolder\**" />
+    <None Remove="Files\PhotoAlbum\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\" />
+    <Folder Include="Layouts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FractalPlatform.Client">
+      <HintPath>..\..\Bin\FractalPlatform.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="FractalPlatform.Common">
+      <HintPath>..\..\Bin\FractalPlatform.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FractalPlatform.Database">
+      <HintPath>..\..\Bin\FractalPlatform.Database.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

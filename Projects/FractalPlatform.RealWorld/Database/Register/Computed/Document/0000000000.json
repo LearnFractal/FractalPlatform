@@ -1,0 +1,5 @@
+{
+  "OnDate": {
+    "Formula": "@Now"
+  }
+}

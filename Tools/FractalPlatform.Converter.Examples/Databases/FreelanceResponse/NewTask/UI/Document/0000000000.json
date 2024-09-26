@@ -1,0 +1,60 @@
+{
+  "Style": "Save:Create;HasLabel:true",
+  "TaskNumber": {
+    "ReadOnly": true
+  },
+  "OnDate": {
+    "ReadOnly": true
+  },
+  "Who": {
+    "ReadOnly": true
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "Skills": {
+    "ControlType": "Tags"
+  },
+  "Archive": {
+    "ControlType": "UploadFile"
+  },
+  "Video": {
+    "ControlType": "UploadFile"
+  },
+  "Picture": {
+    "ControlType": "UploadFile"
+  },
+  "PaymentTypes": {
+    "ControlType": "Tags"
+  },
+  "Developer": {
+    "Visible": false
+  },
+  "Status": {
+    "Visible": false
+  },
+  "StartDate": {
+    "ControlType": "Calendar"
+  },
+  "EndDate": {
+    "ControlType": "Calendar"
+  },
+  "NewCustomerRate": {
+    "Visible": false
+  },
+  "NewAccept": {
+    "Visible": false
+  },
+  "NewDemo": {
+    "Visible": false
+  },
+  "Reject": {
+    "Visible": false
+  },
+  "Rates": {
+    "Visible": false
+  },
+  "Demos": {
+    "Visible": false
+  }
+}

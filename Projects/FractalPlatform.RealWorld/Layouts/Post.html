@@ -1,0 +1,32 @@
+@Header.Partial
+
+<div class="editor-page">
+    <div class="container page">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12">
+                <control attr="">
+                    <fieldset class="form-group">
+                        <input @Title.TextBox class="form-control form-control-lg" type="text" placeholder="Post Title">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <textarea @Text.TextBox class="form-control" rows="8" placeholder="Write your post (in markdown)">@Text.Value</textarea>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <control attr="Tags" type="standard">
+                        </control>
+                        <div class="tag-list">
+                            <control attr="Tags" repeatable="true">
+                                <span class="label label-pill label-default"><i class="ion-close-round"></i>@Value</span>
+                            </control>
+                        </div>
+                    </fieldset>
+                    <button onclick="@SavePageScript" class="btn btn-lg btn-primary pull-xs-right">
+                        Create Post
+                    </button>
+                </control>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Footer.Partial

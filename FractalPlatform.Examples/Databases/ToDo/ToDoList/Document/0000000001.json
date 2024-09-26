@@ -1,0 +1,14 @@
+{
+  "Title": "My Todo List",
+  "Location": "Home",
+  "ToDos": [
+    {
+      "Completed": false,
+      "Task": "Buy food"
+    },
+    {
+      "Completed": false,
+      "Task": "Clean room"
+    }
+  ]
+}

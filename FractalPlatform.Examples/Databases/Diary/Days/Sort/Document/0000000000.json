@@ -1,0 +1,8 @@
+{
+  "OnDate": { "Index": 1 },
+  "Points": { "Index": 2 },
+  "Restrictions": { "Index": 3 },
+  "Sport": { "Index": 4 },
+  "Project": { "Index": 5 },
+  "Work": { "Index": 6 }
+}

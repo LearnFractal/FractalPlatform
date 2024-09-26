@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    @Styles
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Онлайн - кінотеатр</title>
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/index.27681652.css">
+    <style>
+        select {
+            background-color: #212328
+        }
+    </style>
+</head>
+<body style="background-color: #212328">
+    @StartForm
+        <header class="header">
+            <div class="container">
+                <a lang="en" href="/" class="link logo">
+                    <img src="@BaseFilesUrl/LOGO.svg" width="50" alt="Logo">
+                </a>
+                <nav>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=films&click=changetype&newSession=false">Фільми</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=series&click=changetype&newSession=false">Серіали</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=cartoons&click=changetype&newSession=false">Мультфільми</a>
+                        </li>
+                    </ul>
+                </nav>
+                <label class="search__label">
+                    <script>
+                        function filter(value) {
+                            if (value != "") {
+                                @FilterPageScript;
+                            }
+                        }
+                    </script>
+                    <input class="search__input" type="text" name="FilterText" value="" id="search" placeholder="Пошук" onclick="filter(this.value);">
+                </label>
+                <control attr="MyUser">
+                    <button class="burger-menu" type="button" onclick="@ClickSubmit">
+                        <svg class="burger-menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                            <path d="M0 24H24V21.3333H0V24ZM0 6.66667V17.3333L5.33333 12L0 6.66667ZM10.6667 18.6667H24V16H10.6667V18.6667ZM0 0V2.66667H24V0H0ZM10.6667 8H24V5.33333H10.6667V8ZM10.6667 13.3333H24V10.6667H10.6667V13.3333Z" fill="white"></path>
+                        </svg>
+                    </button>
+                </control>
+            </div>
+        </header>
+        <main>
+            <section class="movies section">
+                <h2 class="movies__title visually-hidden">
+                    Movie
+                </h2>
+                <div class="movies__container">
+                    <div class="filters">
+                        <div class="filters__box">
+                            <div class="filters-category">
+                                <ul class="filters-category__list">
+                                    <li class="filters-category__item">
+                                        <a class="@CurrentFilms filters-category__btn" href="@BaseFormUrl\?tag=films&click=changetype&newSession=false">
+                                            Фільми
+                                        </a>
+                                    </li>
+                                    <li class="filters-category__item">
+                                        <a class="@CurrentSeries filters-category__btn" href="@BaseFormUrl\?tag=series&click=changetype&newSession=false">
+                                            Серіали
+                                        </a>
+                                    </li>
+                                    <li class="filters-category__item">
+                                        <a class="@CurrentCartoons filters-category__btn" href="@BaseFormUrl\?tag=cartoons&click=changetype&newSession=false">
+                                            Мультфільми
+                                        </a>
+                                    </li>
+                                    <control attr="NewMovie">
+                                        <li class="nav__item">
+                                            <a href="@ClickUrl"><span class="nav__link">New Movie</span></a>
+                                        </li>
+                                    </control>
+                                    <control attr="EditMovies">
+                                        <li class="nav__item">
+                                            <a href="@ClickUrl"><span class="nav__link">Edit Movies</span></a>
+                                        </li>
+                                    </control>
+                                    <control attr="EditActors">
+                                        <li class="nav__item">
+                                            <a href="@ClickUrl"><span class="nav__link">Edit Actors</span></a>
+                                        </li>
+                                    </control>
+                                    <control attr="EditUsers">
+                                        <li class="nav__item">
+                                            <a href="@ClickUrl"><span class="nav__link">Edit Users</span></a>
+                                        </li>
+                                    </control>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filters__box" style="width:150px">
+                            <control attr="Genre" type="standard">
+                            </control>
+                            <control attr="Year" type="standard">
+                            </control>
+                            <control attr="Country" type="standard">
+                            </control>
+                            <!--
+                           <div class="filters-dropdown filters-genre">
+                               <ul class="filters-dropdown__list filters-genre__list">
+                                   <li class="filters-dropdown__item filters-genre__item">Жанр</li>
+                                   <li class="filters-dropdown__item filters-genre__item isHidden">Вестерн</li>
+                                   <li class="filters-dropdown__item filters-genre__item isHidden">Фентезі</li>
+                                   <li class="filters-dropdown__item filters-genre__item isHidden">Драма</li>
+                               </ul>
+                           </div>
+                           <div class="filters-dropdown filters-year">
+                               <ul class="filters-dropdown__list filters-year__list">
+                                   <li class="filters-dropdown__item filters-year__item">Рік</li>
+                                   <li class="filters-dropdown__item filters-year__item isHidden">2023</li>
+                                   <li class="filters-dropdown__item filters-year__item isHidden">2022</li>
+                                   <li class="filters-dropdown__item filters-year__item isHidden">2021</li>
+                               </ul>
+                           </div>
+                           <div class="filters-country filters-dropdown">
+                               <ul class="filters-country__list filters-dropdown__list">
+                                   <li class="filters-country__item filters-dropdown__item">Країна</li>
+                                   <li class="filters-country__item filters-dropdown__item isHidden">Австралія</li>
+                                   <li class="filters-country__item filters-dropdown__item isHidden">Італія</li>
+                                   <li class="filters-country__item filters-dropdown__item isHidden">Франція</li>
+                               </ul>
+                           </div>
+                           <div class="filters-dropdown filters-perpage">
+                               <ul class="filters-dropdown__list filters-perpage__list">
+                                   <li class="filters-dropdown__item filters-perpage__item">42</li>
+                                   <li class="filters-dropdown__item filters-perpage__item isHidden">24</li>
+                                   <li class="filters-dropdown__item filters-perpage__item isHidden">84</li>
+                               </ul>
+                           </div>
+                        -->
+                        </div>
+                    </div>
+                    <ul class="movies__list">
+                        <control attr="Movies" repeatable="true">
+                            <li class="movie movies__item" onclick="@EditRowScript">
+                                <div class="movie__img-wrap">
+                                    <img class="movie__img" src="@BaseFilesUrl/@Picture.Value" alt="movie" width="200" height="304">
+                                    <p class="movie__viewing">
+                                        <svg class="movie__icon--eyes" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewbox="0 0 17 16" fill="none">
+                                            <path d="M8.27202 4C4.73928 4 1.72233 5.84777 0.5 8.45603C1.72233 11.0643 4.73928 12.9121 8.27202 12.9121C11.8048 12.9121 14.8217 11.0643 16.044 8.45603C14.8217 5.84777 11.8048 4 8.27202 4ZM8.27202 11.4267C6.32195 11.4267 4.73928 10.0958 4.73928 8.45603C4.73928 6.81621 6.32195 5.48534 8.27202 5.48534C10.2221 5.48534 11.8048 6.81621 11.8048 8.45603C11.8048 10.0958 10.2221 11.4267 8.27202 11.4267ZM8.27202 6.67362C7.09915 6.67362 6.15238 7.46976 6.15238 8.45603C6.15238 9.44229 7.09915 10.2384 8.27202 10.2384C9.44489 10.2384 10.3917 9.44229 10.3917 8.45603C10.3917 7.46976 9.44489 6.67362 8.27202 6.67362Z" fill="white"></path>
+                                        </svg> @Views.Value
+                                    </p>
+                                    <p class="movie__rating">@Rating.Value</p>
+                                    <button class="movie__btn movie__btn-card" onclick="@AddToPlayList.ClickSubmit" style="z-index:100">
+                                        <svg class="movie__icon--card" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+                                            <path d="M19.8444 3.56352V5.54397H16.7356V8.51466H14.663V5.54397H11.5542V3.56352H14.663V0.592834H16.7356V3.56352H19.8444ZM16.7356 17.4267H2.22781V3.56352H8.44543V1.58306H2.22781C1.08792 1.58306 0.155273 2.47427 0.155273 3.56352V17.4267C0.155273 18.516 1.08792 19.4072 2.22781 19.4072H16.7356C17.8755 19.4072 18.8081 18.516 18.8081 17.4267V11.4853H16.7356V17.4267ZM12.5905 11.4853V15.4463H14.663V11.4853H12.5905ZM8.44543 15.4463H10.518V7.52443H8.44543V15.4463ZM6.37289 15.4463V9.50489H4.30035V15.4463H6.37289Z" fill="white"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="movie__btn movie__btn-users" onclick="@ViewUsers.ClickSubmit" style="z-index:100">
+                                        <svg class="movie__icon--users" xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewbox="0 0 20 16" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1025 8.99255C15.3059 9.80945 16.1492 10.9162 16.1492 12.3919V15.027H19.6627V12.3919C19.6627 10.477 16.5269 9.34391 14.1025 8.99255Z" fill="white"></path>
+                                            <path d="M7.36508 7.99999C9.30554 7.99999 10.8786 6.42694 10.8786 4.48647C10.8786 2.54601 9.30554 0.972961 7.36508 0.972961C5.42462 0.972961 3.85156 2.54601 3.85156 4.48647C3.85156 6.42694 5.42462 7.99999 7.36508 7.99999Z" fill="white"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6355 7.99999C14.5767 7.99999 16.149 6.42769 16.149 4.48647C16.149 2.54526 14.5767 0.972961 12.6355 0.972961C12.2227 0.972961 11.8362 1.0608 11.4673 1.18377C12.1963 2.0885 12.6355 3.23918 12.6355 4.48647C12.6355 5.73377 12.1963 6.88445 11.4673 7.78918C11.8362 7.91215 12.2227 7.99999 12.6355 7.99999Z" fill="white"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.36492 8.87836C5.01965 8.87836 0.337891 10.0554 0.337891 12.3919V15.027H14.3919V12.3919C14.3919 10.0554 9.71019 8.87836 7.36492 8.87836Z" fill="white"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="movie__desc">
+                                    <h3 class="movie__title">@Name.Value</h3>
+                                    <span class="movie__year">@Year.Value</span>
+                                    <span class="movie__country">@Country.Value</span>
+                                </div>
+                            </li>
+                        </control>
+                    </ul>
+                    <!--
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                            <button class="pagination__btn">1</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">2</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">3</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">...</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">10</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Назад</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Вперед</button>
+                        </li>
+                    </ul>
+                </div>
+                -->
+                </div>
+            </section>
+        </main>
+        <script src="@BaseFilesUrl/Dashboard/index.d7ca0669.js"></script>
+    @EndForm
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "Receiver": {
+    "IsRequired": true
+  },
+  "Message": {
+    "IsRequired": true
+  }
+}

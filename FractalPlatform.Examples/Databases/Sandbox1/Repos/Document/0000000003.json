@@ -1,0 +1,145 @@
+{
+  "Title": "Fullstack",
+  "Projects": [
+    {
+      "Name": "ActixWeb + SQLx + Tera",
+      "Repository": "https://github.com/Bechma/realworld-actix-fullstack",
+      "Language": "Rust"
+    },
+    {
+      "Name": "Angular + Django REST Framework",
+      "Repository": "https://github.com/thanhdev/realworld-django-rest-framework-angular",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Ash + Phoenix LiveView",
+      "Repository": "https://github.com/team-alembic/realworld",
+      "Language": "Elixir"
+    },
+    {
+      "Name": "Buffalo",
+      "Repository": "https://github.com/remast/gobuff_realworld_example_app",
+      "Language": "Go"
+    },
+    {
+      "Name": "Bun + Andale + SQLite + HTMX",
+      "Repository": "https://github.com/hesxenon/realworld-htmx",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Couchbase + Couchbase Ruby ORM",
+      "Repository": "https://github.com/hummusonrails/realworld-couchbase-ruby-orm/tree/main",
+      "Language": "Ruby"
+    },
+    {
+      "Name": "Django + HTMX + Alpine.JS",
+      "Repository": "https://github.com/danjac/realworld",
+      "Language": "Python"
+    },
+    {
+      "Name": "Drash + PostgreSQL + Vue.js",
+      "Repository": "https://github.com/drashland/deno-drash-realworld-example-app",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Express + Next.js + Sequelize",
+      "Repository": "https://github.com/cirosantilli/node-express-sequelize-nextjs-realworld-example-app",
+      "Language": "JavaScript"
+    },
+    {
+      "Name": "Express + React + Sequelize",
+      "Repository": "https://github.com/TonyMckes/conduit-realworld-example-app",
+      "Language": "JavaScript"
+    },
+    {
+      "Name": "Fiber + HTMX",
+      "Repository": "https://github.com/agmadt/realworld-fiber-htmx",
+      "Language": "Go"
+    },
+    {
+      "Name": "Hasura",
+      "Repository": "https://github.com/andrewMacmurray/realworld-hasura",
+      "Language": "Elm"
+    },
+    {
+      "Name": "KVision + Spring Boot",
+      "Repository": "https://github.com/rjaros/kvision-realworld-example-app-fullstack",
+      "Language": "Kotlin"
+    },
+    {
+      "Name": "Laravel + HTMX",
+      "Repository": "https://github.com/agmadt/realworld-laravel-htmx",
+      "Language": "PHP"
+    },
+    {
+      "Name": "Laravel + Livewire + Alpine.JS",
+      "Repository": "https://github.com/sawirricardo/realworld-tall-app",
+      "Language": "PHP"
+    },
+    {
+      "Name": "Laravel + Vue.js + PostgreSQL",
+      "Repository": "https://github.com/sawirricardo/realworld-laravel-inertia-vue",
+      "Language": "PHP"
+    },
+    {
+      "Name": "Laravel + Vue.js + TypeScript",
+      "Repository": "https://github.com/sawirricardo/realworld-laravel-inertia-vue-ts",
+      "Language": "PHP"
+    },
+    {
+      "Name": "Layr + React",
+      "Repository": "https://github.com/layrjs/react-layr-realworld-example-app",
+      "Language": "JavaScript"
+    },
+    {
+      "Name": "Leptos + axum + SQLx",
+      "Repository": "https://github.com/Bechma/realworld-leptos/",
+      "Language": "Rust"
+    },
+    {
+      "Name": "Meteor + Blaze + DDP",
+      "Repository": "https://github.com/peernohell/meteor-realworld-example-app",
+      "Language": "JavaScript"
+    },
+    {
+      "Name": "NestJS + Angular + GraphQL + Cassandra + Microservices",
+      "Repository": "https://github.com/makafsal/conduit",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Next.js + Apollo + Prisma + Tailwind CSS + React",
+      "Repository": "https://github.com/jimleestone/next-real-world",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Next.js + NextAuth.js + Prisma + React + Next-intl",
+      "Repository": "https://github.com/likui628/next-fullstack-realworld-app",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Next.js + tRPC + Prisma",
+      "Repository": "https://github.com/gutentag2012/realworld-nextjs-trpc-prisma",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Rakkas",
+      "Repository": "https://github.com/rakkasjs/rakkas-realworld",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "RedwoodJS",
+      "Repository": "https://github.com/TristanWYL/redwood-realworld-example-app",
+      "Language": "TypeScript"
+    },
+    {
+      "Name": "Ruby on Rails + Couchbase",
+      "Repository": "https://github.com/hummusonrails/realworld-yew",
+      "Language": "Ruby"
+    },
+    {
+      "Name": "Ruby on Rails + Next.js",
+      "Repository": "https://github.com/lifeiscontent/realworld",
+      "Language": "JavaScript"
+    }
+  ]
+}

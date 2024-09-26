@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    @Styles
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Онлайн - кінотеатр</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="@BaseFilesUrl/UsersDashboard/index.5584d580.css">
+</head>
+<body style="background-color: #212328">
+    @StartForm
+    <header class="header">
+        <div class="container">
+            <a lang="en" href="/" class="link logo">
+                <img src="@BaseFilesUrl/LOGO.svg" width="50" alt="Logo">
+            </a>
+            <nav>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=films&click=changetype&newSession=false">Фільми</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=series&click=changetype&newSession=false">Серіали</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=cartoons&click=changetype&newSession=false">Мультфільми</a>
+                    </li>
+                </ul>
+            </nav>
+            <label class="search__label">
+                <script>
+                    function filter(value) {
+                        if (value != "") {
+                            @FilterPageScript;
+                        }
+                    }
+                </script>
+                <input class="search__input" type="text" name="FilterText" value="" id="search" placeholder="Пошук" onclick="filter(this.value);">
+            </label>
+            <control attr="AllUsers">
+                <button class="header__btn" onclick="@ClickSubmit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewbox="0 0 20 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1016 8.99255C15.3049 9.80945 16.1482 10.9162 16.1482 12.3919V15.027H19.6617V12.3919C19.6617 10.477 16.5259 9.34391 14.1016 8.99255Z" fill="white"></path>
+                        <path d="M7.36508 7.99999C9.30554 7.99999 10.8786 6.42694 10.8786 4.48647C10.8786 2.54601 9.30554 0.972961 7.36508 0.972961C5.42462 0.972961 3.85156 2.54601 3.85156 4.48647C3.85156 6.42694 5.42462 7.99999 7.36508 7.99999Z" fill="white"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.635 7.99999C14.5763 7.99999 16.1486 6.42769 16.1486 4.48647C16.1486 2.54526 14.5763 0.972961 12.635 0.972961C12.2222 0.972961 11.8357 1.0608 11.4668 1.18377C12.1959 2.0885 12.635 3.23918 12.635 4.48647C12.635 5.73377 12.1959 6.88445 11.4668 7.78918C11.8357 7.91215 12.2222 7.99999 12.635 7.99999Z" fill="white"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.36492 8.87836C5.01965 8.87836 0.337891 10.0554 0.337891 12.3919V15.027H14.3919V12.3919C14.3919 10.0554 9.71019 8.87836 7.36492 8.87836Z" fill="white"></path>
+                    </svg>
+                </button>
+            </control>
+        </div>
+    </header>
+    <main>
+        <section class="movies movies-for-the-future section">
+            <div class="movies__container">
+                <div class="filters__box">
+                    <h2 class="movies__title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewbox="0 0 20 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1016 8.99255C15.3049 9.80945 16.1482 10.9162 16.1482 12.3919V15.027H19.6617V12.3919C19.6617 10.477 16.5259 9.34391 14.1016 8.99255Z" fill="white"></path>
+                            <path d="M7.36508 7.99999C9.30554 7.99999 10.8786 6.42694 10.8786 4.48647C10.8786 2.54601 9.30554 0.972961 7.36508 0.972961C5.42462 0.972961 3.85156 2.54601 3.85156 4.48647C3.85156 6.42694 5.42462 7.99999 7.36508 7.99999Z" fill="white"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.635 7.99999C14.5763 7.99999 16.1486 6.42769 16.1486 4.48647C16.1486 2.54526 14.5763 0.972961 12.635 0.972961C12.2222 0.972961 11.8357 1.0608 11.4668 1.18377C12.1959 2.0885 12.635 3.23918 12.635 4.48647C12.635 5.73377 12.1959 6.88445 11.4668 7.78918C11.8357 7.91215 12.2222 7.99999 12.635 7.99999Z" fill="white"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.36492 8.87836C5.01965 8.87836 0.337891 10.0554 0.337891 12.3919V15.027H14.3919V12.3919C14.3919 10.0554 9.71019 8.87836 7.36492 8.87836Z" fill="white"></path>
+                        </svg>
+                        Користувачі Seasons
+                    </h2>
+                    <!--
+                    <div class="filters-dropdown filters-perpage">
+                        <ul class="filters-dropdown__list filters-perpage__list">
+                            <li class="filters-dropdown__item filters-perpage__item">20</li>
+                            <li class="filters-dropdown__item filters-perpage__item isHidden">40</li>
+                            <li class="filters-dropdown__item filters-perpage__item isHidden">80</li>
+                        </ul>
+                    </div>
+                    -->
+                </div>
+                <div class="users">
+                    <ul class="users__list">
+                        <control attr="Users" repeatable="true">
+                            <li class="user users__item" onclick="@EditRowScript">
+                                <img class="user__img" style="border-radius: 50%" src="@BaseFilesUrl/@Avatar.Value" alt="user" width="168" height="168">
+                                <div class="user__bg"></div>
+                                <div class="user__desc">
+                                    <p class="user__name">@Name.Value</p>
+                                    <p class="user__sex">@Gender.Value</p>
+                                    <p class="user__age">@Age.Value</p>
+                                    <p class="user__statistics">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                            <path d="M12.5 6C7.95455 6 4.07273 8.37746 2.5 11.7334C4.07273 15.0894 7.95455 17.4668 12.5 17.4668C17.0455 17.4668 20.9273 15.0894 22.5 11.7334C20.9273 8.37746 17.0455 6 12.5 6ZM12.5 15.5557C9.99091 15.5557 7.95455 13.8433 7.95455 11.7334C7.95455 9.62352 9.99091 7.91114 12.5 7.91114C15.0091 7.91114 17.0455 9.62352 17.0455 11.7334C17.0455 13.8433 15.0091 15.5557 12.5 15.5557ZM12.5 9.44005C10.9909 9.44005 9.77273 10.4644 9.77273 11.7334C9.77273 13.0024 10.9909 14.0268 12.5 14.0268C14.0091 14.0268 15.2273 13.0024 15.2273 11.7334C15.2273 10.4644 14.0091 9.44005 12.5 9.44005Z" fill="white"></path>
+                                        </svg>
+                                        @PlayListCount.Value
+                                    </p>
+                                    <p class="user__statistics">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewbox="0 0 24 23" fill="none">
+                                            <path d="M12 18.4847L19.416 23L17.448 14.49L24 8.76421L15.372 8.02579L12 0L8.628 8.02579L0 8.76421L6.552 14.49L4.584 23L12 18.4847Z" fill="white"></path>
+                                        </svg>
+                                        @BestMoviesCount.Value
+                                    </p>
+                                    <p class="user__statistics">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewbox="0 0 22 22" fill="none">
+                                            <path d="M21.8218 2.33332C21.8218 1.14166 20.8577 0.166656 19.666 0.166656H2.33268C1.14102 0.166656 0.166016 1.14166 0.166016 2.33332V15.3333C0.166016 16.525 1.14102 17.5 2.33268 17.5H17.4993L21.8327 21.8333L21.8218 2.33332ZM17.4993 13.1667H4.49935V11H17.4993V13.1667ZM17.4993 9.91666H4.49935V7.74999H17.4993V9.91666ZM17.4993 6.66666H4.49935V4.49999H17.4993V6.66666Z" fill="white"></path>
+                                        </svg>
+                                        @CommentsCount.Value
+                                    </p>
+                                </div>
+                            </li>
+                        </control>
+                    </ul>
+                </div>
+                <!--
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                            <button class="pagination__btn">1</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">2</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">3</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">...</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">10</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Назад</button>
+                        </li>
+                        <li class="pagination__item">
+                            <button class="pagination__btn">Вперед</button>
+                        </li>
+                    </ul>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="@BaseFilesUrl/UsersDashboard/index.d7ca0669.js"></script>
+    @EndForm
+</body>
+</html>

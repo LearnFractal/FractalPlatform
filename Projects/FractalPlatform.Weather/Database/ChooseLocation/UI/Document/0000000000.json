@@ -1,0 +1,8 @@
+{
+  "Style": "Save:Choose",
+  "Map": {
+    "ControlType": "ChooseMap",
+    "Width": "1000px",
+    "Height": "500px"
+  }
+}

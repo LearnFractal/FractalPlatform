@@ -1,0 +1,24 @@
+{
+  "Style": "Save:Register",
+  "Password": {
+    "Style": "Type:Password"
+  },
+  "Gender": {
+    "ControlType": "ComboBox"
+  },
+  "Captcha": {
+    "Style": "Type:Captcha"
+  },
+  "Avatar": {
+    "ControlType": "UploadFile"
+  },
+  "Subscribes": {
+    "Visible": false
+  },
+  "Language": {
+    "Visible": false
+  },
+  "Roles": {
+    "Visible": false
+  }
+}

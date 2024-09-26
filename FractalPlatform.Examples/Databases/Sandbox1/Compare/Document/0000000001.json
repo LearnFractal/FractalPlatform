@@ -1,0 +1,13 @@
+﻿{
+  "Title": "Choose technologies to compare sources of RealWorld (conduit) apps",
+  "First": {
+    "ChooseProjects": "Choose frontend + backend projects",
+    "Frontend": "None",
+    "Backend": "None",
+    "OrChooseProject": "OR choose a fullstack project",
+    "Fullstack": "None"
+  },
+  "Second": {
+    "FractalPlatform": "Fractal Platform | C# | https://github.com/LearnFractal/FractalPlatform.RealWorld"
+  }
+}

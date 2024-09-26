@@ -1,0 +1,6 @@
+﻿{
+  "Name": { "Index": 1 },
+  "Description": { "Index": 2 },
+  "Quantity": { "Index": 3 },
+  "Price": { "Index": 4 }
+}

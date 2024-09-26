@@ -1,0 +1,11 @@
+{
+  "TenderModel": {
+    "Items": [
+      "TheBestDemo",
+      "TheBestDeveloper"
+    ]
+  },
+  "Status": {
+    "Items": [ "New", "InProgress", "Rejected", "Completed" ]
+  }
+}

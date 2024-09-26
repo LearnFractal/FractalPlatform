@@ -1,0 +1,28 @@
+﻿{
+  "OnDate": "",
+  "Points": 0,
+  "Restrictions": {
+    "NoAlcohol": false,
+    "NoCoffee": false,
+    "NoPolitics": false,
+    "NoEatAfter18": false,
+    "NoSugar": false,
+    "NoBread": false,
+    "NoTV" :  false
+  },
+  "Sport": {
+    "Stairs": false,
+    "Gym": false,
+    "HangOn": false
+  },
+  "Project": {
+    "Think": false,
+    "Communicate": false,
+    "Code": false
+  },
+  "Work": {
+    "English": false,
+    "Read": false,
+    "Job": false
+  }
+}

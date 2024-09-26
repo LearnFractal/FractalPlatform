@@ -1,0 +1,32 @@
+{
+  "PlayList": [
+    {
+      "Name": {
+        "CollectionName": "Movies",
+        "Attribute": "Name",
+        "IsArray": false,
+        "IsEmbedded": false
+      }
+    }
+  ],
+  "BestMovies": [
+    {
+      "Name": {
+        "CollectionName": "Movies",
+        "Attribute": "Name",
+        "IsArray": false,
+        "IsEmbedded": false
+      }
+    }
+  ],
+  "GoodMovies": [
+    {
+      "Name": {
+        "CollectionName": "Movies",
+        "Attribute": "Name",
+        "IsArray": false,
+        "IsEmbedded": false
+      }
+    }
+  ]
+}

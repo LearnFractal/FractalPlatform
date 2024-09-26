@@ -1,0 +1,17 @@
+{
+  "Title": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 128
+  },
+  "About": {
+    "IsRequired": false,
+    "MinLen": 3,
+    "MaxLen": 1024
+  },
+  "Text": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 1024
+  }
+}

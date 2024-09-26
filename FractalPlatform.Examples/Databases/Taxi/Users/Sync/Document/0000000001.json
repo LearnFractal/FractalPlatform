@@ -1,0 +1,17 @@
+﻿{
+   "ActiveOrders": {
+      "IsMasterDataChangedOnSlave": false,
+      "MasterCollVersion": 1,
+      "SlaveCollVersion": 2
+   },
+   "CompletedOrders": {
+      "IsMasterDataChangedOnSlave": false,
+      "MasterCollVersion": 1,
+      "SlaveCollVersion": 2
+   },
+   "NewOrders": {
+      "IsMasterDataChangedOnSlave": false,
+      "MasterCollVersion": 1,
+      "SlaveCollVersion": 2
+   }
+}

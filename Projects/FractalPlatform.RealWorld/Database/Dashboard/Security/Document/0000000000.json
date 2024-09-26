@@ -1,0 +1,51 @@
+{
+  "MyUser": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Login": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Logout": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Register": {
+    "Allow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "AddArticle": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Settings": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "YourFeed": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Messages": [
+    {
+      "OnDate": "2023-01-01",
+      "Who": "Bot",
+      "Message": "Chat is opened"
+    }
+  ],
+  "Who": "",
+  "Message": ""
+}

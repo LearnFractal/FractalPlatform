@@ -1,0 +1,23 @@
+{
+  "Address": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "IPAddress": {
+    "IsRequired": true,
+    "MinLen": 7,
+    "MaxLen": 15
+  },
+  "Lat": {
+    "IsRequired": true,
+    "Type": "float"
+  },
+  "Lng": {
+    "IsRequired": true,
+    "Type": "float"
+  },
+  "TelegramUserID": {
+    "Type": "int"
+  }
+}

@@ -1,0 +1,723 @@
+{
+  "Title": "Backend",
+  "Projects": [
+    {
+      "Name": "realworldapiminimal",
+      "Repository": "https://github.com/Erikvdv/realworldapiminimal",
+      "Language": "C#",
+      "Framework": ".NET Minimal API"
+    },
+    {
+      "Name": "realworld-v1-rust-actix-web-diesel",
+      "Repository": "https://github.com/snamiki1212/realworld-v1-rust-actix-web-diesel",
+      "Language": "Rust",
+      "Framework": "ActixWeb"
+    },
+    {
+      "Name": "adonis-realworld-example-app",
+      "Repository": "https://github.com/Utwo/adonis-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "Adonis"
+    },
+    {
+      "Name": "adonisjs-tdd-typescript-example-app",
+      "Repository": "https://github.com/giuliana-bezerra/adonisjs-tdd-typescript-example-app",
+      "Language": "TypeScript",
+      "Framework": "Adonis"
+    },
+    {
+      "Name": "realworld-aiohttp",
+      "Repository": "https://github.com/stkrizh/realworld-aiohttp",
+      "Language": "Python",
+      "Framework": "AIOHTTP"
+    },
+    {
+      "Name": "realworld-camel-springboot",
+      "Repository": "https://github.com/jacekszymanski/realworld-camel-springboot",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "aspnetcore-realworld-example-app",
+      "Repository": "https://github.com/gothinkster/aspnetcore-realworld-example-app",
+      "Language": "C#",
+      "Framework": "ASP.NET Core"
+    },
+    {
+      "Name": "realworlddotnet",
+      "Repository": "https://github.com/Erikvdv/realworlddotnet",
+      "Language": "C#",
+      "Framework": "ASP.NET Core"
+    },
+    {
+      "Name": "realworld-aspnet-couchbase",
+      "Repository": "https://github.com/mgroves/realworld-aspnet-couchbase",
+      "Language": "C#",
+      "Framework": "ASP.NET Core"
+    },
+    {
+      "Name": "realworld-microservices",
+      "Repository": "https://github.com/profjordanov/realworld-microservices",
+      "Language": "C#",
+      "Framework": "ASP.NET Core"
+    },
+    {
+      "Name": "realworld-aws-lambda-dynamodb-go",
+      "Repository": "https://github.com/chrisxue815/realworld-aws-lambda-dynamodb-go",
+      "Language": "Go",
+      "platform": "AWS Lambda"
+    },
+    {
+      "Name": "realworld-dynamodb-lambda",
+      "Repository": "https://github.com/anishkny/realworld-dynamodb-lambda",
+      "Language": "JavaScript",
+      "platform": "AWS Lambda"
+    },
+    {
+      "Name": "realworld_python-lambda-DDB",
+      "Repository": "https://github.com/ldw3097/realworld_python-lambda-DDB",
+      "Language": "Python",
+      "platform": "AWS Lambda"
+    },
+    {
+      "Name": "realworld-axum-prisma",
+      "Repository": "https://github.com/chojs23/realworld-axum-prisma",
+      "Language": "Rust",
+      "Framework": "axum"
+    },
+    {
+      "Name": "realworld-rust-axum-sqlx",
+      "Repository": "https://github.com/JoeyMckenzie/realworld-rust-axum-sqlx",
+      "Language": "Rust",
+      "Framework": "axum"
+    },
+    {
+      "Name": "realworld-starter-kit",
+      "Repository": "https://github.com/MarmaladeSky/realworld-starter-kit",
+      "Language": "Scala"
+    },
+    {
+      "Name": "tiny-routes-realworld-example-app",
+      "Repository": "https://github.com/jeko2000/tiny-routes-realworld-example-app",
+      "Language": "Common Lisp",
+      "Framework": "clack"
+    },
+    {
+      "Name": "go-realworld-clean",
+      "Repository": "https://github.com/err0r500/go-realworld-clean",
+      "Language": "Go"
+    },
+    {
+      "Name": "colmena-realworld-example-app",
+      "Repository": "https://github.com/schoolhouse-io/colmena-realworld-example-app",
+      "Language": "Ruby"
+    },
+    {
+      "Name": "realworld",
+      "Repository": "https://github.com/ditsmod/realworld",
+      "Language": "TypeScript",
+      "Framework": "Ditsmod"
+    },
+    {
+      "Name": "realworld-django-ninja",
+      "Repository": "https://github.com/c4ffein/realworld-django-ninja",
+      "Language": "Python",
+      "Framework": "Django Ninja"
+    },
+    {
+      "Name": "realWorld-DjangoRestFramework",
+      "Repository": "https://github.com/Sean-Miningah/realWorld-DjangoRestFramework",
+      "Language": "Python",
+      "Framework": "Django REST Framework"
+    },
+    {
+      "Name": "medium-graphql-backend",
+      "Repository": "https://github.com/ramzitannous/medium-graphql-backend",
+      "Language": "Python",
+      "Framework": "Django"
+    },
+    {
+      "Name": "dropwizard-realworld-example-app",
+      "Repository": "https://github.com/srbe/dropwizard-realworld-example-app",
+      "Language": "Java",
+      "Framework": "Dropwizard"
+    },
+    {
+      "Name": "golang-echo-realworld-example-app",
+      "Repository": "https://github.com/xesina/golang-echo-realworld-example-app",
+      "Language": "Go",
+      "Framework": "Echo"
+    },
+    {
+      "Name": "golang-grpc-realworld-example",
+      "Repository": "https://github.com/raahii/golang-grpc-realworld-example",
+      "Language": "Go",
+      "Framework": "Echo"
+    },
+    {
+      "Name": "bun-elysia-drizzle-sqlite",
+      "Repository": "https://github.com/remuspoienar/bun-elysia-drizzle-sqlite",
+      "Language": "TypeScript",
+      "Framework": "Elysia"
+    },
+    {
+      "Name": "express-bookshelf-realworld-example-app",
+      "Repository": "https://github.com/tanem/express-bookshelf-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "Conduit",
+      "Repository": "https://github.com/MacklinEngineering/Conduit",
+      "Language": "TypeScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "realworld-backend-elm",
+      "Repository": "https://github.com/andrewMacmurray/realworld-backend-elm",
+      "Language": "Elm",
+      "Framework": "Express"
+    },
+    {
+      "Name": "typescript-firestore-terraform-realworld-backend",
+      "Repository": "https://github.com/cloud-engineering-recipes/typescript-firestore-terraform-realworld-backend",
+      "Language": "TypeScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "realworld-nodejs-example-app",
+      "Repository": "https://github.com/kenyipp/realworld-nodejs-example-app",
+      "Language": "TypeScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "realWorld-server",
+      "Repository": "https://github.com/winterrrrrff/realWorld-server",
+      "Language": "JavaScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "realWorld-server-ottomanjs",
+      "Repository": "https://github.com/couchbase-examples/realWorld-server-ottomanjs",
+      "Language": "JavaScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "realworld-express-prisma",
+      "Repository": "https://github.com/SeuRonao/realworld-express-prisma",
+      "Language": "TypeScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "realword-exress-sequelize",
+      "Repository": "https://github.com/chojs23/realword-exress-sequelize",
+      "Language": "JavaScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "fastapi-odmantic-realworld-example",
+      "Repository": "https://github.com/art049/fastapi-odmantic-realworld-example",
+      "Language": "Python",
+      "Framework": "FastAPI"
+    },
+    {
+      "Name": "fastapi-realworld-backend",
+      "Repository": "https://github.com/borys25ol/fastapi-realworld-backend",
+      "Language": "Python",
+      "Framework": "FastAPI"
+    },
+    {
+      "Name": "fastify-realworld-example-app",
+      "Repository": "https://github.com/avanelli/fastify-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "Fastify"
+    },
+    {
+      "Name": "feathers-realworld-example-app",
+      "Repository": "https://github.com/randyscotsmithey/feathers-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "Feathers"
+    },
+    {
+      "Name": "golang-fiber-realworld-example-app",
+      "Repository": "https://github.com/alpody/golang-fiber-realworld-example-app",
+      "Language": "Go",
+      "Framework": "Fiber"
+    },
+    {
+      "Name": "realworld-fiber-sqlc",
+      "Repository": "https://github.com/dashhhik/realworld-fiber-sqlc",
+      "Language": "Go",
+      "Framework": "Fiber"
+    },
+    {
+      "Name": "conduit-flask",
+      "Repository": "https://github.com/shivaylamba/conduit-flask",
+      "Language": "Python"
+    },
+    {
+      "Name": "golang-gin-realworld-example-app",
+      "Repository": "https://github.com/gothinkster/golang-gin-realworld-example-app",
+      "Language": "Go",
+      "Framework": "Gin"
+    },
+    {
+      "Name": "golang-realworld-example-app",
+      "Repository": "https://github.com/k0kishima/golang-realworld-example-app",
+      "Language": "Go",
+      "Framework": "Gin"
+    },
+    {
+      "Name": "realworld-gin-sqlc",
+      "Repository": "https://github.com/aliml92/realworld-gin-sqlc",
+      "Language": "Go",
+      "Framework": "Gin"
+    },
+    {
+      "Name": "go-realworld",
+      "Repository": "https://github.com/0xdod/go-realworld",
+      "Language": "Go",
+      "Framework": "net/http"
+    },
+    {
+      "Name": "realworld-go-kit",
+      "Repository": "https://github.com/JoeyMckenzie/realworld-go-kit",
+      "Language": "Go",
+      "Framework": "go-kit"
+    },
+    {
+      "Name": "grpc-realworld-example",
+      "Repository": "https://github.com/godspeedchu/grpc-realworld-example",
+      "Language": "Java",
+      "Framework": "gRPC"
+    },
+    {
+      "Name": "hanami-realworld-example-app",
+      "Repository": "https://github.com/blrB/hanami-realworld-example-app",
+      "Language": "Ruby",
+      "Framework": "Hanami"
+    },
+    {
+      "Name": "hapipal-realworld-example-app",
+      "Repository": "https://github.com/devinivy/hapipal-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "hapi pal"
+    },
+    {
+      "Name": "real_world",
+      "Repository": "https://github.com/hexagonkt/real_world",
+      "Language": "Kotlin",
+      "Framework": "Hexagon"
+    },
+    {
+      "Name": "realworld-backend",
+      "Repository": "https://github.com/labasubagia/realworld-backend",
+      "Language": "Go"
+    },
+    {
+      "Name": "kotlin-http4k-realworld-example-app",
+      "Repository": "https://github.com/alisabzevari/kotlin-http4k-realworld-example-app",
+      "Language": "Kotlin",
+      "Framework": "http4k"
+    },
+    {
+      "Name": "realworld-backend-go-httprouter-jet-postgresql",
+      "Repository": "https://github.com/marcusmonteirodesouza/realworld-backend-go-httprouter-jet-postgresql",
+      "Language": "Go"
+    },
+    {
+      "Name": "realworld-intersystems-iris",
+      "Repository": "https://github.com/daimor/realworld-intersystems-iris",
+      "Language": "ObjectScript",
+      "Framework": "InterSystems IRIS"
+    },
+    {
+      "Name": "kotlin-javalin-realworld-example-app",
+      "Repository": "https://github.com/Rudge/kotlin-javalin-realworld-example-app",
+      "Language": "Kotlin",
+      "Framework": "Javalin"
+    },
+    {
+      "Name": "koa-boilerplate",
+      "Repository": "https://github.com/eflem00/koa-boilerplate",
+      "Language": "TypeScript",
+      "Framework": "Koa"
+    },
+    {
+      "Name": "realworld-kotlin-ktor",
+      "Repository": "https://github.com/dragneelfps/realworld-kotlin-ktor",
+      "Language": "Kotlin",
+      "Framework": "Ktor"
+    },
+    {
+      "Name": "ktor-realworld-sample",
+      "Repository": "https://github.com/skinnydoo/ktor-realworld-sample",
+      "Language": "Kotlin",
+      "Framework": "Ktor"
+    },
+    {
+      "Name": "laravel-realworld-example-app",
+      "Repository": "https://github.com/f1amy/laravel-realworld-example-app",
+      "Language": "PHP",
+      "Framework": "Laravel"
+    },
+    {
+      "Name": "laravel-realworld-example-app",
+      "Repository": "https://github.com/alexeymezenin/laravel-realworld-example-app",
+      "Language": "PHP",
+      "Framework": "Laravel"
+    },
+    {
+      "Name": "realworld-laravel-layered-architecture",
+      "Repository": "https://github.com/yukicountry/realworld-laravel-layered-architecture",
+      "Language": "PHP",
+      "Framework": "Laravel"
+    },
+    {
+      "Name": "realworld",
+      "Repository": "https://github.com/martenframework/realworld",
+      "Language": "Crystal",
+      "Framework": "Marten"
+    },
+    {
+      "Name": "masonite-realworld-example-app",
+      "Repository": "https://github.com/vaibhavmule/masonite-realworld-example-app",
+      "Language": "Python",
+      "Framework": "Masonite"
+    },
+    {
+      "Name": "realworld-backend-micronaut",
+      "Repository": "https://github.com/alexey-lapin/realworld-backend-micronaut",
+      "Language": "Java",
+      "Framework": "Micronaut"
+    },
+    {
+      "Name": "nodejs-neo4j-realworld-example",
+      "Repository": "https://github.com/neo4j-examples/nodejs-neo4j-realworld-example/tree/master/src",
+      "Language": "JavaScript",
+      "Framework": "Express"
+    },
+    {
+      "Name": "nestjs-neo4j-realworld-example",
+      "Repository": "https://github.com/neo4j-examples/nestjs-neo4j-realworld-example",
+      "Language": "TypeScript",
+      "Framework": "NestJS"
+    },
+    {
+      "Name": "microservices-realworld-app",
+      "Repository": "https://github.com/jsBlackBelt/microservices-realworld-app",
+      "Language": "TypeScript",
+      "Framework": "NestJS"
+    },
+    {
+      "Name": "nestjs-realworld-example-app",
+      "Repository": "https://github.com/mikro-orm/nestjs-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "NestJS"
+    },
+    {
+      "Name": "medium-graphql-nestjs",
+      "Repository": "https://github.com/ramzitannous/medium-graphql-nestjs",
+      "Language": "TypeScript",
+      "Framework": "NestJS"
+    },
+    {
+      "Name": "medium-nest-prisma",
+      "Repository": "https://github.com/mr-scrpt/medium-nest-prisma",
+      "Language": "TypeScript",
+      "Framework": "NestJS"
+    },
+    {
+      "Name": "realworld-nestjs-prisma-mongodb",
+      "Repository": "https://github.com/gearhead041/realworld-nestjs-prisma-mongodb",
+      "Language": "TypeScript",
+      "Framework": "NestJS"
+    },
+    {
+      "Name": "nestjs-realworld-example-app",
+      "Repository": "https://github.com/lujakob/nestjs-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "NestJS"
+    },
+    {
+      "Name": "realworld-go",
+      "Repository": "https://github.com/borosr/realworld-go",
+      "Language": "Go",
+      "Framework": "net/http"
+    },
+    {
+      "Name": "realworld-go-oapi-codegen-chi-pgx",
+      "Repository": "https://github.com/vincentserpoul/realworld-go-oapi-codegen-chi-pgx",
+      "Language": "Go",
+      "Framework": "oapi-codegen"
+    },
+    {
+      "Name": "realworld-oatpp",
+      "Repository": "https://github.com/formoon/realworld-oatpp",
+      "Language": "C++",
+      "Framework": "Oat++"
+    },
+    {
+      "Name": "realworld-oat-poco",
+      "Repository": "https://github.com/yukaitung/realworld-oat-poco",
+      "Language": "C++",
+      "Framework": "Oat++"
+    },
+    {
+      "Name": "crystalworld",
+      "Repository": "https://github.com/vladfaust/crystalworld",
+      "Language": "Crystal",
+      "Framework": "Onyx"
+    },
+    {
+      "Name": "openliberty-realworld-api",
+      "Repository": "https://github.com/appiepollo14/openliberty-realworld-api",
+      "Language": "Java",
+      "Framework": "OpenLiberty"
+    },
+    {
+      "Name": "realworld-phoenix",
+      "Repository": "https://github.com/tamanugi/realworld-phoenix",
+      "Language": "Elixir",
+      "Framework": "Phoenix"
+    },
+    {
+      "Name": "clojure-polylith-realworld-example-app",
+      "Repository": "https://github.com/furkan3ayraktar/clojure-polylith-realworld-example-app",
+      "Language": "Clojure",
+      "Framework": "Polylith"
+    },
+    {
+      "Name": "pyramid-realworld-example-app",
+      "Repository": "https://github.com/niteoweb/pyramid-realworld-example-app",
+      "Language": "Python",
+      "Framework": "Pyramid"
+    },
+    {
+      "Name": "quarkus-realworld-api",
+      "Repository": "https://github.com/appiepollo14/quarkus-realworld-api",
+      "Language": "Java",
+      "Framework": "Quarkus"
+    },
+    {
+      "Name": "kotlin-quarkus-realworld-example-app",
+      "Repository": "https://github.com/u-ways/kotlin-quarkus-realworld-example-app",
+      "Language": "Kotlin",
+      "Framework": "Quarkus"
+    },
+    {
+      "Name": "realworld-python-quart-sql",
+      "Repository": "https://github.com/marcusmonteirodesouza/realworld-python-quart-sql",
+      "Language": "Python",
+      "Framework": "Quart"
+    },
+    {
+      "Name": "ruby-on-rails-realworld-example-app",
+      "Repository": "https://github.com/alexeymezenin/ruby-on-rails-realworld-example-app",
+      "Language": "Ruby",
+      "Framework": "Rails"
+    },
+    {
+      "Name": "realworld-rust-rocket",
+      "Repository": "https://github.com/TatriX/realworld-rust-rocket",
+      "Language": "Rust",
+      "Framework": "Rocket"
+    },
+    {
+      "Name": "realworld-sanic",
+      "Repository": "https://github.com/ankur26/realworld-sanic",
+      "Language": "Python",
+      "Framework": "Sanic"
+    },
+    {
+      "Name": "realworld-scotty-hs",
+      "Repository": "https://github.com/toptobes/realworld-scotty-hs",
+      "Language": "Haskell",
+      "Framework": "Scotty"
+    },
+    {
+      "Name": "haskell-realworld-example",
+      "Repository": "https://github.com/nodew/haskell-realworld-example",
+      "Language": "Haskell",
+      "Framework": "Servant"
+    },
+    {
+      "Name": "dart-shelf-realworld-example-app",
+      "Repository": "https://github.com/marcusmonteirodesouza/dart-shelf-realworld-example-app",
+      "Language": "Dart",
+      "Framework": "Shelf"
+    },
+    {
+      "Name": "spincast-realworld",
+      "Repository": "https://github.com/spincast/spincast-realworld",
+      "Language": "Java",
+      "Framework": "Spincast"
+    },
+    {
+      "Name": "realworld-springboot-java",
+      "Repository": "https://github.com/raeperd/realworld-springboot-java",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "kotlin-spring-realworld-example-app",
+      "Repository": "https://github.com/gothinkster/kotlin-spring-realworld-example-app",
+      "Language": "Kotlin",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-spring-exposed",
+      "Repository": "https://github.com/sabercon/realworld-spring-exposed",
+      "Language": "Kotlin",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-spring-boot-native",
+      "Repository": "https://github.com/softwaremill/realworld-spring-boot-native",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "spring-webflux-mongodb-r2dbc",
+      "Repository": "https://github.com/alphawyu/spring-webflux-mongodb-r2dbc",
+      "Language": "Kotlin",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "spring-boot-realworld-example-app",
+      "Repository": "https://github.com/gothinkster/spring-boot-realworld-example-app",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld",
+      "Repository": "https://github.com/joyheros/realworld",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-springboot",
+      "Repository": "https://github.com/zoooo-hs/realworld-springboot",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-springboot-kotlin",
+      "Repository": "https://github.com/raeperd/realworld-springboot-kotlin",
+      "Language": "Kotlin",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-backend-spring-ddd",
+      "Repository": "https://github.com/borovikovd/realworld-backend-spring-ddd",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-backend-spring-boot-java-keycloak-postgresql",
+      "Repository": "https://github.com/marcusmonteirodesouza/realworld-backend-spring-boot-java-keycloak-postgresql",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "kotlin-springboot-pdstarter-kit",
+      "Repository": "https://github.com/Blackmesa-Canteen/kotlin-springboot-pdstarter-kit",
+      "Language": "Kotlin",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-java17-springboot3",
+      "Repository": "https://github.com/shirohoo/realworld-java17-springboot3",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-springboot",
+      "Repository": "https://github.com/gabrielgua/realworld-springboot",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "spring-realworld-conduit-api",
+      "Repository": "https://github.com/sivaprasadreddy/spring-realworld-conduit-api",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-spring-webflux",
+      "Repository": "https://github.com/a-mountain/realworld-spring-webflux",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "realworld-spring-webflux-kt",
+      "Repository": "https://github.com/a-mountain/realworld-spring-webflux-kt",
+      "Language": "Kotlin",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "spring-webflux.fn-mongodb-spock",
+      "Repository": "https://github.com/alphawyu/spring-webflux.fn-mongodb-spock",
+      "Language": "Java",
+      "Framework": "Spring Boot"
+    },
+    {
+      "Name": "couchbase-springboot-realworld-example-app",
+      "Repository": "https://github.com/couchbase-examples/couchbase-springboot-realworld-example-app",
+      "Language": "Java",
+      "Framework": "Spring Data Couchbase"
+    },
+    {
+      "Name": "symfony-realworld-example-app",
+      "Repository": "https://github.com/igoryok-zp/symfony-realworld-example-app",
+      "Language": "PHP",
+      "frameworks": "Symfony"
+    },
+    {
+      "Name": "realword-tide-sqlite-backend",
+      "Repository": "https://github.com/Retamogordo/realword-tide-sqlite-backend",
+      "Language": "Rust",
+      "Framework": "Tide"
+    },
+    {
+      "Name": "realworld_service",
+      "Repository": "https://github.com/dmtai/realworld_service",
+      "Language": "C++",
+      "Framework": "userver"
+    },
+    {
+      "Name": "swift-vapor-layered-realworld-example-app",
+      "Repository": "https://github.com/iq3addLi/swift-vapor-layered-realworld-example-app",
+      "Language": "Swift",
+      "Framework": "Vapor"
+    },
+    {
+      "Name": "conduit",
+      "Repository": "https://github.com/AndierZ/conduit",
+      "Language": "Java",
+      "Framework": "Vert.x"
+    },
+    {
+      "Name": "realworld-warp",
+      "Repository": "https://github.com/formoon/realworld-warp",
+      "Language": "Rust",
+      "Framework": "Warp"
+    },
+    {
+      "Name": "haskell-yesod-realworld-example-app",
+      "Repository": "https://github.com/tzemanovic/haskell-yesod-realworld-example-app",
+      "Language": "Haskell"
+    },
+    {
+      "Name": "yii2-realworld-example-app",
+      "Repository": "https://github.com/albertborsos/yii2-realworld-example-app",
+      "Language": "PHP"
+    },
+    {
+      "Name": "realworld-tapir-zio",
+      "Repository": "https://github.com/softwaremill/realworld-tapir-zio",
+      "Language": "Scala",
+      "Framework": "ZIO"
+    }
+  ]
+}

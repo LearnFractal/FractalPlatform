@@ -1,0 +1,17 @@
+{
+  "TaskNumber": {
+    "Formula": "@NewTaskNumber"
+  },
+  "OnDate": {
+    "Formula": "@Now"
+  },
+  "Who": {
+    "Formula": "@UserName"
+  },
+  "StartDate": {
+    "Formula": "@Now"
+  },
+  "EndDate": {
+    "Formula": "@Now"
+  }
+}

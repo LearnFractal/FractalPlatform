@@ -1,0 +1,92 @@
+﻿{
+  "ReadOnly": true,
+  "Style": "Save:Finish;Cancel:false;Type:Link",
+  "Welcome": {
+    "Title": { "ControlType": "Label" },
+    "Desc1'": { "ControlType": "Label" },
+    "Picture1": { "ControlType": "Picture" }
+  },
+  "Learn JSON format": {
+    "Title": { "ControlType": "Label" },
+    "Desc1": { "ControlType": "Label" },
+    "Video1": { "ControlType": "Media", "Style": "Type:Youtube" },
+    "Desc2": { "ControlType": "Label" },
+    "Picture2": { "ControlType": "Picture" }
+  },
+  "Step 1 of 4": {
+    "Tilte": { "ControlType": "Label" },
+    "Desc1": { "ControlType": "Label" },
+    "Picture1": { "ControlType": "Picture" },
+    "Desc2": { "ControlType": "Label" },
+    "Desc2a": { "ControlType": "Label" },
+    "ToDoListV1": { "ControlType": "Button" },
+    "Desc3": { "ControlType": "Label" },
+    "Picture3": { "ControlType": "Picture" }
+  },
+  "Step 2 of 4": {
+    "Tilte": { "ControlType": "Label" },
+    "Desc1": { "ControlType": "Label" },
+    "Picture1": { "ControlType": "Picture" },
+    "Desc2": { "ControlType": "Label" },
+    "Picture2": { "ControlType": "Picture" },
+    "Desc3": { "ControlType": "Label" },
+    "Desc3a": { "ControlType": "Label" },
+    "ToDoListV2": { "ControlType": "Button" },
+    "Desc4": { "ControlType": "Label" },
+    "Picture4": { "ControlType": "Picture" }
+  },
+  "Step 3 of 4": {
+    "Tilte": { "ControlType": "Label" },
+    "Desc1": { "ControlType": "Label" },
+    "Picture1": { "ControlType": "Picture" },
+    "Desc2": { "ControlType": "Label" },
+    "Picture2": { "ControlType": "Picture" },
+    "Desc3": { "ControlType": "Label" },
+    "Picture3": { "ControlType": "Picture" },
+    "Desc4": { "ControlType": "Label" },
+    "Picture4": { "ControlType": "Picture" },
+    "Desc5": { "ControlType": "Label" },
+    "Picture5": { "ControlType": "Picture" },
+    "Desc6": { "ControlType": "Label" },
+    "Picture6": { "ControlType": "Picture" },
+    "Desc7": { "ControlType": "Label" },
+    "Desc7a": { "ControlType": "Label" },
+    "ToDoListV3": { "ControlType": "Button" }
+  },
+  "Step 4 of 4": {
+    "Title": { "ControlType": "Label" },
+    "Desc1": { "ControlType": "Label" },
+    "Picture1": { "ControlType": "Picture" },
+    "Desc2": { "ControlType": "Label" },
+    "Picture2": { "ControlType": "Picture" },
+    "Desc3": { "ControlType": "Label" },
+    "Picture3": { "ControlType": "Picture" },
+    "Desc4": { "ControlType": "Label" },
+    "ToDoList": { "ControlType": "Button" }
+  },
+  "Conclusion": {
+    "Title": { "ControlType": "Label" },
+    "Desc1": { "ControlType": "Label" },
+    "Desc2": { "ControlType": "Label" },
+    "Desc3": { "ControlType": "Label" },
+    "Desc4": { "ControlType": "Label" },
+    "Review on GitHub our examples": { "ControlType": "Link" }
+  },
+  "Offer": {
+    "Title": { "ControlType": "Label" },
+    "Desc1": { "ControlType": "Label" },
+    "Desc1a": { "ControlType": "Label" },
+    "Desc1b": { "ControlType": "Label" },
+    "Promo": { "ControlType": "Label" },
+    "Register": { "ControlType": "Label" },
+    "Picture1": {"ControlType": "Picture"}
+  },
+  "Feedback": {
+    "ReadOnly": false,
+    "Title": { "ControlType": "Label" },
+    "Feedback": {
+      "ControlType": "RichTextBox",
+      "Style": "HasLabel:true"
+    }
+  }
+}

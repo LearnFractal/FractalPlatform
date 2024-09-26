@@ -1,0 +1,7 @@
+{
+  "Style": "Save:Rate;HasLabel:true",
+  "TaskNumber": { "Visible": false },
+  "OnDate": { "Visible": false },
+  "Who": { "Visible": false },
+  "Comment": { "ControlType": "RichTextBox" }
+}

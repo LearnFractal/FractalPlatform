@@ -1,0 +1,17 @@
+﻿{
+  "Header": {
+    "Category": "",
+    "SearchText": "",
+    "SearchButton": "Search",
+    "NewCategory": "NewCategory",
+    "Categories": "Categories",
+    "NewProduct": "NewProduct",
+    "Products": "Products"
+  },
+  "Filters": {
+
+  },
+  "Products": {
+
+  }
+}

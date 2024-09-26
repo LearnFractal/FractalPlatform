@@ -1,0 +1,93 @@
+﻿{ 
+  "Welcome": {
+    "Title": "Welcome to Fractal Platform !",
+    "Desc1'": "This is on boarding tutorial",
+    "Picture1": "onboarding.png"
+  },
+  "Learn JSON format": {
+    "Title": "Let's start from JSON",
+    "Desc1": "What is JSON in 1 minute learn video",
+    "Video1": "https://www.youtube.com/embed/7mj-p1Os6QA",
+    "Desc2": "That's it. We can describe almost all objects in the real word in JSON",
+    "Picture2": "basic-JSON.jpg"
+  },
+  "Step 1 of 4": {
+    "Tilte": "Let's make you first application - ToDo list",
+    "Desc1": "First of all let's create JSON that describes our ToDo list.",
+    "Picture1": "ToDoListV1.png",
+    "Desc2": "That's it ! You have created your first application.",
+    "Desc2a": "Click 'Test Me!' button to check your app !",
+    "ToDoListV1": "Test Me!",
+    "Desc3": "Basically in Fractal Platform if you have JSON (Document) - you have basic CRUD (Create/Read/Update/Delete operations). It is so easy !",
+    "Picture3": "Web_Fractal_Developers.gif"
+  },
+  "Step 2 of 4": {
+    "Tilte": "Yep. It was easy, but what about categories in ToDo list ?",
+    "Desc1": "Let's split our tasks by Education and Home categories",
+    "Picture1": "home_work_school.jpg",
+    "Desc2": "Here we modified JSON to add categories.",
+    "Picture2": "ToDoListV2.png",
+    "Desc3": "Well done ! We created our app. FP can handles any JSON as domain model.",
+    "Desc3a": "Click 'Test Me!' button to check your app !",
+    "ToDoListV2": "Test Me!",
+    "Desc4": "Wow that was amaizing. In other langs you have to write much more code to add such functionality",
+    "Picture4": "think_about_app.jpg"
+  },
+  "Step 3 of 4": {
+    "Tilte": "Well. This is standard auto generated interface. But what if I want to add a validation ?",
+    "Desc1": "For example, I want to validate fields before save",
+    "Picture1": "Validation.png",
+    "Desc2": "Fractal Platform contains Dimensions. You can imagine it as deck of cards",
+    "Picture2": "DeckOfCard.jpg",
+    "Desc3": "Each card in this deck it is a Dimension that describes logic in some aspect.",
+    "Picture3": "DocumentAndDimension.png",
+    "Desc4": "The deck contains at least one card. We call it main Document",
+    "Picture4": "Document.png",
+    "Desc5": "Let's add Validation dimension, that describes how to validate attributes in Document",
+    "Picture5": "ValidationJson.png",
+    "Desc6": "Dimensions help to us do not mix business logic in one layer.",
+    "Picture6": "MessOfCode.jpg",
+    "Desc7": "Almost all logic can be described in Dimensions as part of app config.",
+    "Desc7a": "Time to test our application !",
+    "ToDoListV3": "Test Me!"
+  },
+  "Step 4 of 4": {
+    "Title": "We need to do some more serious for our ToDo list. We need to do Report !",
+    "Desc1": "Let's start from button. We need to add button attribute in our Document",
+    "Picture1": "AddButton.png",
+    "Desc2": "And we need describe in UI dimension that this attribute is button",
+    "Picture2": "UIDimension.png",
+    "Desc3": "Now we need handle OnClick event in our Application and build Report.",
+    "Picture3": "ButtonClick.png",
+    "Desc4": "Wow. Now we have Report in our application as dynamic form !",
+    "ToDoList": "Test Me!"
+  },
+  "Conclusion": {
+    "Title": "Fractal Platform it is low code platform that:",
+    "Desc1": "1. Very easy for programming. Just create JSON and you have your first version of app",
+    "Desc2": "2. Very flexible for modifications. You can add or remove Dimensions even without reload app",
+    "Desc3": "3. Very fast for applications. Huge possibilities to tune performance or scale",
+    "Desc4": "and this tutorial was created on Fractal Platform in few hours !",
+    "Review on GitHub our examples": "https://github.com/LearnFractal"
+  },
+  "Offer": {
+    "Title": "Want to be a Developer as part of team ? Or have idea for a new Project ?",
+    "Desc1": "Please register on Fractal Platform by promo code",
+    "Desc1a": "Fractal Platform provides full lifecycle for developers and customers from learning",
+    "Desc1b": "to participate in real projects as part of team",
+    "Promo": "Promo codes temporary not available. Please use Feedback form on the next page.",
+    "Register": "",
+    "Picture1": "Projects.jpg"
+  },
+  "Feedback": {
+    "Title": "If you enjoy this tutorial, please leave feedback",
+    "Stars": 5,
+    "Position": "Student",
+    "Expirience": "No Expirience",
+    "Gender": "Male",
+    "Age": "15-20",
+    "Name": "",
+    "Contacts": "your@gmail.com",
+    "Feedback": ""
+  }
+}

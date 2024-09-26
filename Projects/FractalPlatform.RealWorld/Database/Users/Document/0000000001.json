@@ -1,0 +1,11 @@
+﻿{
+  "About": "My bio",
+  "Avatar": "http://i.imgur.com/Qr71crq.jpg",
+  "Email": "bob@gmail.com",
+  "Name": "Bob",
+  "OnDate": "09/10/2024",
+  "Password": "111",
+  "Followers": [
+    "Ted"
+  ]
+}

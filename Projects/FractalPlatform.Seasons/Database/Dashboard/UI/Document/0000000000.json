@@ -1,0 +1,8 @@
+﻿{
+  "Layout": "Dashboard",
+  "IsRawPage": true,
+  "Style": "HasLabel:false",
+  "MyUser": {
+    "ControlType": "Button"
+  }
+}

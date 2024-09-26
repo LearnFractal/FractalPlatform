@@ -1,0 +1,17 @@
+﻿{
+  "AddToPlayList": "Add To Play List",
+  "AddToBestList": "Add To Best List",
+  "AddToGoodList": "Add To Good List",
+  "RemoveFromList": "Remove From List",
+  "Country": "",
+  "Description": "",
+  "Name": "",
+  "Picture": "",
+  "Rating": 0,
+  "Type": "",
+  "Video": "",
+  "Views": 0,
+  "ViewUsers": "",
+  "Year": 0,
+  "Series": ["Serie1.mp4"]
+}

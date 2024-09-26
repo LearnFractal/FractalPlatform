@@ -1,0 +1,10 @@
+{
+  "Contacts": {
+    "Gender": {
+      "Items": [
+        "Male",
+        "Female"
+      ]
+    }
+  }
+}

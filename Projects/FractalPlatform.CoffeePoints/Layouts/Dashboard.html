@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @Styles
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Coffee Points</title>
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/index.b0e6b6e7.css">
+</head>
+<body class="isLoading">
+    @StartForm
+    <header class="header">
+        <div class="container header__container">
+            <h1 class="main-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewbox="0 0 36 37" fill="none">
+                    <g clip-path="url(#clip0_1420_10674)">
+                        <path d="M18 9.5C19.6569 9.5 21 8.15685 21 6.5C21 4.84315 19.6569 3.5 18 3.5C16.3431 3.5 15 4.84315 15 6.5C15 8.15685 16.3431 9.5 18 9.5Z" fill="#657BDF"></path>
+                        <path d="M23.835 12.665C23.25 12.08 22.245 11 20.295 11C19.98 11 18.165 11 16.485 11C12.36 10.985 9 7.625 9 3.5H6C6 8.24 9.165 12.26 13.5 13.565V33.5H16.5V24.5H19.5V33.5H22.5V15.575L28.425 21.5L30.54 19.385L23.835 12.665Z" fill="#657BDF"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1420_10674">
+                            <rect width="36" height="36" fill="white" transform="translate(0 0.5)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Friends
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <h2 class="title visually-hidden">Map</h2>
+            <div class="map">
+                <control attr="Map" type="standard">
+                </control>
+            </div>
+        </section>
+        <section class="section users">
+            <h2 class="title visually-hidden">Users</h2>
+            <div class="container users__container">
+                <ul class="users__list">
+                    <control attr="Proposes" repeatable="true">
+                        <li class="user user--@Contacts.Gender.Computed users__item" onclick="@EditRowScript">
+                            <a class="user__link" href="#">
+                                <div class="user__img-wrap">
+                                    <img class="user__img" src="@BaseFilesUrl/@Contacts.Photo.Value" alt="user" width="124" height="124">
+                                    <svg class="user__icon--plus" xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewbox="0 0 19 16" fill="none">
+                                        <path d="M18.0329 8.99225H10.4066V15.7364H7.86454V8.99225H0.238281V6.74419H7.86454V0H10.4066V6.74419H18.0329V8.99225Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="user__desc">
+                                    <h3 class="user__title">@Contacts.Name.Value, @Contacts.Age.Value years old </h3>
+                                    <ul class="options__list">
+                                        <li class="option option--goal options__item">
+                                            <h4 class="option__title">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                                    <g clip-path="url(#clip0_1463_1517)">
+                                                        <path d="M10.4974 18.6667H18.0807C19.6907 18.6667 20.9974 17.36 20.9974 15.75C20.9974 14.14 19.6907 12.8333 18.0807 12.8333H18.0224C17.7424 10.8617 16.0507 9.33333 13.9974 9.33333C12.3641 9.33333 10.9641 10.3017 10.3107 11.69H10.1241C8.3624 11.8767 6.9974 13.3583 6.9974 15.1667C6.9974 17.1033 8.56073 18.6667 10.4974 18.6667ZM26.8307 3.5H1.16406V24.5H26.8307V3.5ZM24.4974 22.1783H3.4974V5.82167H24.4974V22.1783Z"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1463_1517">
+                                                            <rect width="28" height="28" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Goal
+                                            </h4>
+                                            <ul class="option__list option__list--goal">
+                                                <li @Goal.Drink.Computed class="option__item option__item--goal option__item--goal-drink">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                                        <g clip-path="url(#clip0_1463_1523)">
+                                                            <path d="M21 5V3H3V5L11 14V19H6V21H18V19H13V14L21 5ZM7.43 7L5.66 5H18.35L16.57 7H7.43Z" fill="#449DEF"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1463_1523">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </li>
+                                                <li @Goal.Eat.Computed class="option__item option__item--goal option__item--goal-eat">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                                        <g clip-path="url(#clip0_1463_1527)">
+                                                            <path d="M16 6V14H19V22H21V2C18.24 2 16 4.24 16 6ZM11 9H9V2H7V9H5V2H3V9C3 11.21 4.79 13 7 13V22H9V13C11.21 13 13 11.21 13 9V2H11V9Z" fill="#449DEF"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1463_1527">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </li>
+                                                <li @Goal.Coffee.Computed class="option__item option__item--goal option__item--goal-coffee">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                                        <g clip-path="url(#clip0_1463_1531)">
+                                                            <path d="M20 3H4V17H18V10H20C21.11 10 22 9.1 22 8V5C22 3.9 21.1 3 20 3ZM20 8H18V5H20V8ZM4 19H20V21H4V19Z" fill="#449DEF"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1463_1531">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </li>
+                                                <li @Goal.Talk.Computed class="option__item option__item--goal option__item--goal-talk">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                                        <g clip-path="url(#clip0_1463_1535)">
+                                                            <path d="M9 13C11.2091 13 13 11.2091 13 9C13 6.79086 11.2091 5 9 5C6.79086 5 5 6.79086 5 9C5 11.2091 6.79086 13 9 13Z" fill="#449DEF"></path>
+                                                            <path d="M9 15C6.33 15 1 16.34 1 19V21H17V19C17 16.34 11.67 15 9 15ZM15.08 7.05C15.92 8.23 15.92 9.76 15.08 10.94L16.76 12.63C18.78 10.61 18.78 7.56 16.76 5.36L15.08 7.05ZM20.07 2L18.44 3.63C21.21 6.65 21.21 11.19 18.44 14.37L20.07 16C23.97 12.11 23.98 6.05 20.07 2Z" fill="#449DEF"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1463_1535">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="option option-=day options__item">
+                                            <h4 class="option__title">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewbox="0 0 29 28" fill="none">
+                                                    <g clip-path="url(#clip0_1463_1542)">
+                                                        <path d="M25 3.50002H21.5V1.16669H19.1667V3.50002H9.83333V1.16669H7.5V3.50002H4V24.5H25V3.50002ZM22.6667 22.1667H6.33333V9.33335H22.6667V22.1667ZM8.66667 11.6667H14.5V17.5H8.66667V11.6667Z"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1463_1542">
+                                                            <rect width="28" height="28" fill="white" transform="translate(0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Day
+                                            </h4>
+                                            <ul class="option__list option-day__list">
+                                                <li @Day.Monday.Computed class="option__item option-day__item--1">Mon.</li>
+                                                <li @Day.Tuesday.Computed class="option__item option-day__item--2">Tues.</li>
+                                                <li @Day.Wednesday.Computed class="option__item option-day__item--3">Wed.</li>
+                                                <li @Day.Thursday.Computed class="option__item option-day__item--4">Thurs.</li>
+                                                <li @Day.Friday.Computed class="option__item option-day__item--5">Fri.</li>
+                                                <li @Day.Saturday.Computed class="option__item option-day__item--6">Sat.</li>
+                                                <li @Day.Sunday.Computed class="option__item option-day__item--7">Sun.</li>
+                                            </ul>
+                                        </li>
+                                        <li class="option option--time options__item">
+                                            <h4 class="option__title">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewbox="0 0 29 28" fill="none">
+                                                    <g clip-path="url(#clip0_1463_1565)">
+                                                        <path d="M12.1641 9.33337V16.3334L17.6474 19.7167L18.5807 18.3167L13.9141 15.5167V9.33337H12.1641Z"></path>
+                                                        <path d="M21.4054 14C21.4637 14.385 21.4987 14.77 21.4987 15.1667C21.4987 19.7167 17.882 23.3334 13.332 23.3334C8.78203 23.3334 5.16536 19.7167 5.16536 15.1667C5.16536 10.6167 8.78203 7.00002 13.332 7.00002C14.1487 7.00002 14.9304 7.11669 15.6654 7.33835V4.93502C14.9187 4.76002 14.137 4.66669 13.332 4.66669C7.4987 4.66669 2.83203 9.33335 2.83203 15.1667C2.83203 21 7.4987 25.6667 13.332 25.6667C19.1654 25.6667 23.832 21 23.832 15.1667C23.832 14.77 23.8087 14.385 23.762 14H21.4054Z"></path>
+                                                        <path d="M23.8333 5.83337V2.33337H21.5V5.83337H18V8.16671H21.5V11.6667H23.8333V8.16671H27.3333V5.83337H23.8333Z"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1463_1565">
+                                                            <rect width="28" height="28" fill="white" transform="translate(0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Time
+                                            </h4>
+                                            <ul class="option__list option__list--time">
+                                                <li @Time.Morning.Computed class="option__item option__item--time">Morning</li>
+                                                <li @Time.Afternoon.Computed class="option__item option__item--time">Afternoon</li>
+                                                <li @Time.Evening.Computed class="option__item option__item--time">Evening</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                    </control>
+                </ul>
+            </div>
+        </section>
+        <div class="btns">
+            <div class="container">
+                <div class="btn__wrap">
+                    <control attr="">
+                        <button class="btn--propose" type="button" @Find.Button>FIND</button>
+                        <button class="btn--propose" type="button" @Propose.Button>PROPOSE</button>
+                    </control>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="@BaseFilesUrl/Dashboard/index.a8a7798e.js"></script>
+    @EndForm
+</body>
+</html>

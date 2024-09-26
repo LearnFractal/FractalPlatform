@@ -1,0 +1,19 @@
+{
+  "Name": {
+    "Formula": "@UniqueUser",
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Password": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Email": {
+    "Formula": "@UniqueEmail",
+    "IsRequired": true,
+    "MinLen": 5,
+    "MaxLen": 128
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Name": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 128
+  },
+  "Password": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 128
+  }
+}

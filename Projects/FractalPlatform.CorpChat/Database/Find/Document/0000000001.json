@@ -1,0 +1,30 @@
+﻿{
+  "Goal": {
+    "Drink": false,
+    "Eat": false,
+    "Coffee": false,
+    "Talk": false
+  },
+  "Day": {
+    "Monday": false,
+    "Tuesday": false,
+    "Wednesday": false,
+    "Thursday": false,
+    "Friday": false,
+    "Saturday": false,
+    "Sunday": false
+  },
+  "Time": {
+    "Morning": false,
+    "Afternoon": false,
+    "Evening": false
+  },
+  "Gender": {
+    "Male": false,
+    "Female": false
+  },
+  "Age": {
+    "Min": 18,
+    "Max": 60
+  }
+}

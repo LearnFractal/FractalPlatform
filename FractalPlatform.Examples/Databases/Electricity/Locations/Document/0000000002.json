@@ -1,0 +1,18 @@
+﻿{
+   "Address": "Lviv",
+   "Description": "test point 2",
+   "HasElectricity": true,
+   "IPAddress": "127.0.0.1",
+   "LastPingTime": "09/27/2023 15:12:04",
+   "Lat": "49.84395251649464",
+   "Lng": "24.026309322098676",
+   "TelegramUserID": "5018512422",
+   "TextMessages": [
+      {
+         "IsSent": true,
+         "Message": "Electricity available",
+         "Provider": "Telegram",
+         "Receiver": 5018512422
+      }
+   ]
+}

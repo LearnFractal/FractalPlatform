@@ -1,0 +1,17 @@
+{
+  "ReadOnly": true,
+  "TextMessages": {
+    "Visible": false
+  },
+  "Tags": [
+    {
+      "Sites": [
+        {
+          "URL": {
+            "ControlType": "Link" 
+          }
+        }
+      ]
+    }
+  ]
+}

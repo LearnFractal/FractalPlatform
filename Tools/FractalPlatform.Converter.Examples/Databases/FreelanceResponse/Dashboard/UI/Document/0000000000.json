@@ -1,0 +1,28 @@
+{
+  "Style": "Save:false;Cancel:false",
+  "User": {
+    "ControlType": "Label"
+  },
+  "Logout": {
+    "ControlType": "Button",
+    "Style": "Type:Link"
+  },
+  "Tasks": {
+    "ControlType": "Button"
+  },
+  "MyTasks": {
+    "ControlType": "Button"
+  },
+  "CompletedTasks": {
+    "ControlType": "Button"
+  },
+  "Users": {
+    "ControlType": "Button"
+  },
+  "NewTask": {
+    "ControlType": "Button"
+  },
+  "Reports": {
+    "ControlType": "Button"
+  }
+}

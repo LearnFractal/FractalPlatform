@@ -1,0 +1,9 @@
+{
+  "Style": "Save:Build My CRUD Web App !;Cancel:false;Inject:true",
+  "Title": {
+    "ControlType": "Label"
+  },
+  "JSON": {
+    "ControlType": "RichTextBox"
+  }
+}

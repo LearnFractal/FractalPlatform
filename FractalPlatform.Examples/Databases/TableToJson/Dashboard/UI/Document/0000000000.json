@@ -1,0 +1,9 @@
+{
+  "Style": "Save:Build Json;Cancel:false;",
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Table": {
+    "ControlType": "UploadFile"
+  }
+}

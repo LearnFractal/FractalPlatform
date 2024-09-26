@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)https://sqlru.net/ -->
+<html lang="ru" dir="ltr">
+<head>
+    @Styles
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Разработка приложений баз данных">
+    <title>Форум про розробку на Fractal Platform</title>
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/forum.css" media="screen" title="Default Forum Theme">
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/jquery-ui.css" media="screen">
+    <script src="@BaseFilesUrl/Dashboard/jquery.js.download"></script>
+    <script async="" src="@BaseFilesUrl/Dashboard/jquery-ui.js.download"></script>
+    <script src="@BaseFilesUrl/Dashboard/lib.js.download"></script>
+</head>
+<body>
+    @StartForm
+        <div class="content">
+
+            <!-- Table for sidebars. -->
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="UserControlPanel">
+                                <ul>
+                                    <li>
+                                        <control attr="Users">
+                                            <a href="@ClickUrl" title="Участники" @ReadOnly @Disabled value="@Value" name="@Name">
+                                                <img src="@BaseFilesUrl/Dashboard/top_members.png" alt="" width="16" height="16">
+                                                Учасники
+                                            </a>
+                                        </control>
+                                    </li>
+                                    <li>
+                                        <control attr="Register">
+                                            <a href="@ClickUrl" title="Регистрация" @ReadOnly @Disabled value="@Value" name="@Name">
+                                                <img src="@BaseFilesUrl/Dashboard/top_register.png" alt="" width="16" height="18">
+                                                Реєстрація
+                                            </a>
+                                        </control>
+                                    </li>
+                                    <li>
+                                        <control attr="EditCategories">
+                                            <a href="@ClickUrl" title="Категории" @ReadOnly @Disabled value="@Value" name="@Name">
+                                                Редагувати категорії
+                                            </a>
+                                        </control>
+                                    </li>
+                                    <li>
+                                        <img src="@BaseFilesUrl/Dashboard/top_login.png" alt="" width="16" height="16">
+                                        @UserName
+                                    </li>
+                                </ul>
+                            </div>
+                            <table cellspacing="1" cellpadding="2" class="ContentTable">
+                                <tbody>
+                                    <tr>
+                                        <th colspan="3" class="wa">Форум</th>
+                                        <th class="nw hide1">Повідомлень</th>
+                                        <th class="nw hide1">Тем</th>
+                                        <th class="nw ac hide2">Останнє повідомлення</th>
+                                    </tr>
+                                    <control attr="Categories" repeatable="true">
+                                        <tr style="display: table-row" class="row child-c3">
+                                            <td class="RowStyleA wo hide2">
+                                                <img src="@BaseFilesUrl/Dashboard/icon1.gif" alt="Иконка форума">
+                                            </td>
+                                            <td class="RowStyleB ac wo hide2">
+                                                <img src="@BaseFilesUrl/Dashboard/existing_content.png" width="30" height="30">
+                                            </td>
+                                            <td class="RowStyleA wa">
+                                                <a href="@EditRowUrl" class="big">
+                                                    <span>
+                                                        @Title.Value
+                                                    </span>
+                                                </a>
+                                                <br>
+                                                <span>
+                                                    @Description.Value
+                                                </span>
+                                            </td>
+                                            <td class="RowStyleB ac hide1">
+                                                <span>
+                                                    @CountMessages.Value
+                                                </span>
+                                            </td>
+                                            <td class="RowStyleB ac hide1">
+                                                <span>
+                                                    @CountTopics.Value
+                                                </span>
+                                            </td>
+                                            <td class="RowStyleA ac nw hide2">
+                                                <span class="DateText">
+                                                    <span>
+                                                        @LastMessage.OnDate.Value
+                                                    </span>
+                                                </span>
+                                                <br>
+                                                Від:
+                                                <a href="@LastMessage.Who.ClickUrl">
+                                                    <span>
+                                                        @LastMessage.Who.Value
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </control>
+                                </tbody>
+                            </table>
+                            <div class="fr">
+                                <input type="hidden" name="SQ" value="0">
+                                <table border="0" cellspacing="0" cellpadding="3">
+                                    <tbody>
+                                        <tr class="SmallText">
+                                            <td>
+                                                <control attr="Login">
+                                                    <label>
+                                                        Им'я:<br>
+                                                        <input class="SmallText" type="text" name="@Name" size="18" @ReadOnly @Disabled value="@Value">
+                                                    </label>
+                                                </control>
+                                            </td>
+                                            <td>
+                                                <control attr="Password">
+                                                    <label>
+                                                        Пароль:<br>
+                                                        <input class="SmallText" type="password" name="@Name" size="18" @ReadOnly @Disabled value="@Value">
+                                                    </label>
+                                                </control>
+                                            </td>
+                                            <td>
+                                                &nbsp;<br>
+                                                <control attr="LoginButton">
+                                                    <input type="submit" class="button" name="@Name" value="@Value" @ReadOnly @Disabled onclick="@ClickSubmit">
+                                                </control>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <control attr="PageNumbers" type="standard">
+                            </control>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    @EndForm
+</body>
+</html>

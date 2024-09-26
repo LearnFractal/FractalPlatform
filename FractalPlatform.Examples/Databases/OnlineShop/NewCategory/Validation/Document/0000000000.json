@@ -1,0 +1,31 @@
+﻿{
+  "Name": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Description": {
+    "IsRequired": true,
+    "MinLen": 3,
+    "MaxLen": 256
+  },
+  "Filters": [
+    {
+      "Name": {
+        "IsRequired": true,
+        "MinLen": 3,
+        "MaxLen": 256
+      },
+      "Text": {
+        "IsRequired": true,
+        "MinLen": 3,
+        "MaxLen": 256
+      },
+      "Query": {
+        "IsRequired": true,
+        "MinLen": 3,
+        "MaxLen": 256
+      }
+    }
+  ]
+}

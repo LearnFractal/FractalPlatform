@@ -1,0 +1,34 @@
+{
+  "FollowUser": {
+    "Formula": "FollowUser"
+  },
+  "UnfollowUser": {
+    "Formula": "UnfollowUser"
+  },
+  "AddLike": {
+    "Formula": "AddLike"
+  },
+  "RemoveLike": {
+    "Formula": "RemoveLike"
+  },
+  "EditArticle": {
+    "Formula": "EditArticle"
+  },
+  "RemoveArticle": {
+    "Formula": "RemoveArticle"
+  },
+  "AddComment": {
+    "Disallow": {
+      "Read": [
+        "Guest"
+      ]
+    }
+  },
+  "Comments": [
+    {
+      "RemoveComment": {
+        "Formula": "RemoveComment"
+      }
+    }
+  ]
+}

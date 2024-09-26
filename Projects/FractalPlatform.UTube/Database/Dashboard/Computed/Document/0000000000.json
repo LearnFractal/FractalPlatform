@@ -1,0 +1,8 @@
+{
+  "UserName": {
+    "Formula": "@UserName"
+  },
+  "MyUserLabel": {
+    "Formula": "@MyUserLabel"
+  }
+}

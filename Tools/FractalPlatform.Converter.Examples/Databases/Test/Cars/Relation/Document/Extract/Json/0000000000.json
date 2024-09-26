@@ -1,0 +1,7 @@
+{
+   "Users":{
+      "CollectionName":"Users",
+      "Attribute":"Id",
+      "IsArray":true
+   }
+}

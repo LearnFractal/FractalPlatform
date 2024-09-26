@@ -1,0 +1,362 @@
+{
+  "Title": "Frontend",
+  "Projects": [
+    {
+      "Name": "Conduit_Android_Kotlin",
+      "Repository": "https://github.com/coding-blocks-archives/Conduit_Android_Kotlin",
+      "Language": "Kotlin",
+      "Type": "Mobile"
+    },
+    {
+      "Name": "Conduit-Android-kotlin",
+      "Repository": "https://github.com/Marvel999/Conduit-Android-kotlin",
+      "Language": "Kotlin",
+      "Type": "Mobile"
+    },
+    {
+      "Name": "angular-realworld-example-app",
+      "Repository": "https://github.com/khaledosman/angular-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Angular"
+    },
+    {
+      "Name": "angular-conduit-signals",
+      "Repository": "https://github.com/AndyT2503/angular-conduit-signals",
+      "Language": "TypeScript",
+      "Framework": "Angular"
+    },
+    {
+      "Name": "ng-realworld-ssr",
+      "Repository": "https://github.com/iancharlesdouglas/ng-realworld-ssr",
+      "Language": "TypeScript",
+      "Framework": "Angular"
+    },
+    {
+      "Name": "angular-ngrx-nx-realworld-example-app",
+      "Repository": "https://github.com/stefanoslig/angular-ngrx-nx-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Angular"
+    },
+    {
+      "Name": "apprun-realworld-example-app",
+      "Repository": "https://github.com/gothinkster/apprun-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "AppRun"
+    },
+    {
+      "Name": "realworld-astro",
+      "Repository": "https://github.com/joma1021/realworld-astro",
+      "Language": "TypeScript",
+      "Framework": "Astro"
+    },
+    {
+      "Name": "BlazorConduit",
+      "Repository": "https://github.com/JoeyMckenzie/BlazorConduit",
+      "Language": "C#",
+      "Framework": "Blazor"
+    },
+    {
+      "Name": "crizmas-mvc-realworld-example-app",
+      "Repository": "https://github.com/gothinkster/crizmas-mvc-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "crizmas-mvc"
+    },
+    {
+      "Name": "elm-conduit",
+      "Repository": "https://github.com/dwayne/elm-conduit",
+      "Language": "Elm"
+    },
+    {
+      "Name": "ember-realworld",
+      "Repository": "https://github.com/gothinkster/ember-realworld",
+      "Language": "JavaScript",
+      "Framework": "Ember.js"
+    },
+    {
+      "Name": "conduit",
+      "Repository": "https://github.com/Jaydeep0604/conduit",
+      "Language": "Dart",
+      "Framework": "Flutter",
+      "Type": "Mobile"
+    },
+    {
+      "Name": "purescript-halogen-realworld",
+      "Repository": "https://github.com/thomashoneyman/purescript-halogen-realworld",
+      "Language": "PureScript",
+      "Framework": "Halogen"
+    },
+    {
+      "Name": "conduit",
+      "Repository": "https://github.com/rlander/conduit",
+      "Language": "ClojureScript",
+      "Framework": "Hoplon"
+    },
+    {
+      "Name": "hyperapp-realworld-example-app",
+      "Repository": "https://github.com/kwasniew/hyperapp-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "Hyperapp"
+    },
+    {
+      "Name": "imba-realworld-example-app",
+      "Repository": "https://github.com/cartonalexandre/imba-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "Imba"
+    },
+    {
+      "Name": "realworld-kingly-svelte",
+      "Repository": "https://github.com/brucou/realworld-kingly-svelte",
+      "Language": "JavaScript",
+      "Framework": "Svelte"
+    },
+    {
+      "Name": "kvision-realworld-example-app",
+      "Repository": "https://github.com/rjaros/kvision-realworld-example-app",
+      "Language": "Kotlin",
+      "Framework": "KVision"
+    },
+    {
+      "Name": "mint-realworld",
+      "Repository": "https://github.com/mint-lang/mint-realworld",
+      "Language": "Mint"
+    },
+    {
+      "Name": "Conduit-SwiftUI",
+      "Repository": "https://github.com/girish54321/Conduit-SwiftUI",
+      "Language": "Swift",
+      "Framework": "SwiftUI",
+      "Type": "Mobile"
+    },
+    {
+      "Name": "neomjs-realworld-example-app",
+      "Repository": "https://github.com/neomjs/neomjs-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "neo.mjs"
+    },
+    {
+      "Name": "next-realworld-example-app",
+      "Repository": "https://github.com/reck1ess/next-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Next.js"
+    },
+    {
+      "Name": "realworld-front",
+      "Repository": "https://github.com/salahadin-dinsafa/realworld-front",
+      "Language": "TypeScript",
+      "Framework": "Next.js"
+    },
+    {
+      "Name": "nuxt3-realworld-example-app",
+      "Repository": "https://github.com/k0kishima/nuxt3-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Nuxt"
+    },
+    {
+      "Name": "nuxt3-realworld-example-app",
+      "Repository": "https://github.com/MR-Mostafa/nuxt3-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Nuxt"
+    },
+    {
+      "Name": "owl-realworld-app",
+      "Repository": "https://github.com/Coding-Dodo/owl-realworld-app",
+      "Language": "JavaScript",
+      "Framework": "OWL (Odoo Web Library)"
+    },
+    {
+      "Name": "preact-realworld-example-app",
+      "Repository": "https://github.com/mutoe/preact-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Preact"
+    },
+    {
+      "Name": "realworld-qwik",
+      "Repository": "https://github.com/joma1021/realworld-qwik",
+      "Language": "TypeScript",
+      "Framework": "Qwik"
+    },
+    {
+      "Name": "conduit",
+      "Repository": "https://github.com/jacekschae/conduit",
+      "Language": "ClojureScript",
+      "Framework": "re-frame"
+    },
+    {
+      "Name": "ts-redux-react-realworld-example-app",
+      "Repository": "https://github.com/angelguzmaning/ts-redux-react-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "purescript-react-realworld",
+      "Repository": "https://github.com/jonasbuntinx/purescript-react-realworld",
+      "Language": "PureScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "realworld",
+      "Repository": "https://github.com/Kisilov-Vadim/realworld",
+      "Language": "TypeScript",
+      "Framework": "React Native",
+      "Type": "Mobile"
+    },
+    {
+      "Name": "conduitrn",
+      "Repository": "https://github.com/flexsurfer/conduitrn",
+      "Language": "ClojureScript",
+      "Framework": "React Native",
+      "Type": "Mobile"
+    },
+    {
+      "Name": "realworld",
+      "Repository": "https://github.com/antonTykhomyrovWix/realworld",
+      "Language": "TypeScript",
+      "Framework": "React Native",
+      "Type": "Mobile"
+    },
+    {
+      "Name": "realworld-react-fsd",
+      "Repository": "https://github.com/yurisldk/realworld-react-fsd",
+      "Language": "TypeScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "react-recoil-realworld-example-app",
+      "Repository": "https://github.com/sukam09/react-recoil-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "react-redux-realworld-example-app",
+      "Repository": "https://github.com/khaledosman/react-redux-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "rescript-react-realworld-example-app",
+      "Repository": "https://github.com/jihchi/rescript-react-realworld-example-app",
+      "Language": "ReScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "realworld-example",
+      "Repository": "https://github.com/statiumjs/realworld-example",
+      "Language": "JavaScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "react-query-realworld",
+      "Repository": "https://github.com/jiheon788/react-query-realworld",
+      "Language": "TypeScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "react-vite-realworld-example-app",
+      "Repository": "https://github.com/romansndlr/react-vite-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "real-world-example",
+      "Repository": "https://github.com/refinedev/real-world-example",
+      "Language": "TypeScript",
+      "Framework": "React"
+    },
+    {
+      "Name": "realworld-remix",
+      "Repository": "https://github.com/joma1021/realworld-remix",
+      "Language": "TypeScript",
+      "Framework": "Remix"
+    },
+    {
+      "Name": "Conduit",
+      "Repository": "https://github.com/CHRehan/Conduit",
+      "Language": "Kotlin",
+      "Framework": "Retrofit"
+    },
+    {
+      "Name": "riot_realworld_example_app",
+      "Repository": "https://github.com/iq3addLi/riot_realworld_example_app",
+      "Language": "TypeScript",
+      "Framework": "Riot"
+    },
+    {
+      "Name": "san-realworld-app",
+      "Repository": "https://github.com/ecomfe/san-realworld-app",
+      "Language": "JavaScript",
+      "Framework": "San"
+    },
+    {
+      "Name": "seed-rs-realworld",
+      "Repository": "https://github.com/seed-rs/seed-rs-realworld",
+      "Language": "Rust",
+      "Framework": "Seed"
+    },
+    {
+      "Name": "solid-realworld",
+      "Repository": "https://github.com/ryansolid/solid-realworld",
+      "Language": "JavaScript",
+      "Framework": "SolidJS"
+    },
+    {
+      "Name": "solid-realworld",
+      "Repository": "https://github.com/stevej2608/solid-realworld",
+      "Language": "TypeScript",
+      "Framework": "SolidJS"
+    },
+    {
+      "Name": "stencil-realworld-app",
+      "Repository": "https://github.com/khaledosman/stencil-realworld-app",
+      "Language": "TypeScript",
+      "Framework": "Stencil"
+    },
+    {
+      "Name": "realworld",
+      "Repository": "https://github.com/sveltejs/realworld",
+      "Language": "JavaScript",
+      "Framework": "Svelte"
+    },
+    {
+      "Name": "event-driven-web-components-realworld-example-app",
+      "Repository": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
+      "Language": "JavaScript",
+      "Framework": "Vanilla JS"
+    },
+    {
+      "Name": "nuxt3-realworld-app",
+      "Repository": "https://github.com/bogdan0083/nuxt3-realworld-app",
+      "Language": "TypeScript",
+      "Framework": "Vue.js"
+    },
+    {
+      "Name": "vue3-realworld-app",
+      "Repository": "https://github.com/niyaco/vue3-realworld-app",
+      "Language": "TypeScript",
+      "Framework": "Vue.js"
+    },
+    {
+      "Name": "vue3-realworld-example-app",
+      "Repository": "https://github.com/mutoe/vue3-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Vue.js"
+    },
+    {
+      "Name": "vue-realworld-example-app",
+      "Repository": "https://github.com/khaledosman/vue-realworld-example-app",
+      "Language": "TypeScript",
+      "Framework": "Vue.js"
+    },
+    {
+      "Name": "vue-ts-realworld-app",
+      "Repository": "https://github.com/AlexBrohshtut/vue-ts-realworld-app",
+      "Language": "TypeScript",
+      "Framework": "Vue.js"
+    },
+    {
+      "Name": "rust-yew-realworld-example-app",
+      "Repository": "https://github.com/jetli/rust-yew-realworld-example-app",
+      "Language": "Rust",
+      "Framework": "Yew"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+﻿{
+  "Name": "Bazist",
+  "Configure": "Configure",
+  "Report": "Report",
+  "Results": [
+    {
+      "Exercise": "HorizontalBar",
+      "OnDate": "03/03/2023 14:00:25",
+      "Set1": 3,
+      "Set2": 3,
+      "Set3": 3,
+      "Set4": 1,
+      "Sum": 10
+    },
+    {
+      "Exercise": "Pushups",
+      "OnDate": "03/03/2023 14:00:25",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 18,
+      "Set4": 0,
+      "Sum": 58
+    },
+    {
+      "Exercise": "Triceps",
+      "OnDate": "03/03/2023 14:00:25",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 0,
+      "Sum": 60
+    },
+    {
+      "Exercise": "Sit-ups",
+      "OnDate": "03/04/2023 14:01:22",
+      "Set1": 30,
+      "Set2": 20,
+      "Set3": 0,
+      "Set4": 0,
+      "Sum": 50
+    },
+    {
+      "Exercise": "HorizontalBar",
+      "OnDate": "03/06/2023 14:01:22",
+      "Set1": 3,
+      "Set2": 4,
+      "Set3": 4,
+      "Set4": 1,
+      "Sum": 12
+    },
+    {
+      "Exercise": "Pushups",
+      "OnDate": "03/06/2023 14:01:22",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 5,
+      "Sum": 65
+    },
+    {
+      "Exercise": "Triceps",
+      "OnDate": "03/06/2023 14:01:22",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 5,
+      "Sum": 65
+    },
+    {
+      "Exercise": "Sit-ups",
+      "OnDate": "03/07/2023 14:01:22",
+      "Set1": 25,
+      "Set2": 25,
+      "Set3": 25,
+      "Set4": 0,
+      "Sum": 75
+    },
+    {
+      "Exercise": "HorizontalBar",
+      "OnDate": "03/08/2023 14:01:22",
+      "Set1": 6,
+      "Set2": 6,
+      "Set3": 6,
+      "Set4": 0,
+      "Sum": 18
+    },
+    {
+      "Exercise": "Bars",
+      "OnDate": "03/08/2023 14:01:22",
+      "Set1": 10,
+      "Set2": 10,
+      "Set3": 6,
+      "Set4": 0,
+      "Sum": 26
+    },
+    {
+      "Exercise": "Triceps",
+      "OnDate": "03/08/2023 14:01:22",
+      "Set1": 20,
+      "Set2": 20,
+      "Set3": 20,
+      "Set4": 15,
+      "Sum": 75
+    }
+  ]
+}

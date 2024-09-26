@@ -1,0 +1,26 @@
+﻿{
+  "Project": {
+    "Code": 15,
+    "Communicate": 15,
+    "Think": 15
+  },
+  "Restrictions": {
+    "NoAlcohol": 10,
+    "NoCoffee": 10,
+    "NoEatAfter18": 10,
+    "NoPolitics": 20,
+    "NoSugar": 10,
+    "NoBread": 10,
+    "NoTV": 10
+  },
+  "Sport": {
+    "Gym": 15,
+    "Stairs": 15,
+    "HangOn": 15
+  },
+  "Work": {
+    "English": 20,
+    "Job": 20,
+    "Read": 20
+  }
+}

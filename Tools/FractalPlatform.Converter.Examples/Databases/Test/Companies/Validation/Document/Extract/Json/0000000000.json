@@ -1,0 +1,14 @@
+{
+   "Name":{
+      "Type":"string",
+      "MinLen":0,
+      "MaxLen":32,
+      "IsRequired":false
+   },
+   "Description":{
+      "Type":"string",
+      "MinLen":0,
+      "MaxLen":32,
+      "IsRequired":false
+   }
+}

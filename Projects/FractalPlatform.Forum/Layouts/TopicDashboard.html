@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    @Styles
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Как &quot;зацепить&quot; базу?  ">
+    <control attr="Title">
+        <title>@Value</title>
+    </control>
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/forum.css" media="screen" title="Default Forum Theme">
+    <link rel="stylesheet" href="@BaseFilesUrl/Dashboard/jquery-ui.css" media="screen">
+    <script src="@BaseFilesUrl/Dashboard/jquery.js.download"></script>
+    <script async="" src="@BaseFilesUrl/Dashboard/jquery-ui.js.download"></script>
+    <script src="@BaseFilesUrl/Dashboard/lib.js.download"></script>
+</head>
+<body>
+    @StartForm
+    <!--  -->
+
+    <div class="content">
+
+        <!-- Table for sidebars. -->
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="UserControlPanel">
+                            <ul>
+                                <li>
+                                    <input type="text" name="FilterText" value="@FilterText" />
+                                    <a href="@FilterPageUrl" title="Поиск">
+                                        <img src="@BaseFilesUrl/Dashboard/top_search.png" alt="" width="16" height="16"> Пошук
+                                    </a>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <control attr="Users">
+                                        <a href="@ClickUrl" title="Участники" @ReadOnly @Disabled value="@Value" name="@Name">
+                                            <img src="@BaseFilesUrl/Dashboard/top_members.png" alt="" width="16" height="16">
+                                            Учасники
+                                        </a>
+                                    </control>
+                                </li>
+                                <li>
+                                    <control attr="Register">
+                                        <a href="@ClickUrl" title="Регистрация" @ReadOnly @Disabled value="@Value" name="@Name">
+                                            <img src="@BaseFilesUrl/Dashboard/top_register.png" alt="" width="16" height="18">
+                                            Реєстрація
+                                        </a>
+                                    </control>
+                                </li>
+                                <li>
+                                    <control attr="EditTopic">
+                                        <a href="@ClickUrl" title="Топики" @ReadOnly @Disabled value="@Value" name="@Name">
+                                            Редагувати топік
+                                        </a>
+                                    </control>
+                                </li>
+                                <li>
+                                    <img src="@BaseFilesUrl/Dashboard/top_login.png" alt="" width="16" height="16">
+                                    @UserName
+                                </li>
+                            </ul>
+                        </div>
+                        <table cellspacing="0" cellpadding="0" class="ContentTable">
+                            <tbody>
+                                <control attr="">
+                                    <tr>
+                                        <td class="MsgSpacer">
+                                            <table cellspacing="0" cellpadding="0" class="MsgTable">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/Dashboard/min.png" alt="-" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_1"></a><a name="msg_2540"></a><span class="MsgSubText"><a href="" class="MsgSubText">@Title.Value </a></span> </td>
+                                                        <td class="MsgR1 vt ar"><span class="DateText">@OnDate.Value</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_2&#39;);"><img src="@BaseFilesUrl/Dashboard/down.png" width="16" height="11"></a></td>
+                                                    </tr>
+                                                    <tr class="MsgR2">
+                                                        <td class="MsgR2" colspan="2">
+                                                            <table cellspacing="0" cellpadding="0" class="ContentTable">
+                                                                <tbody>
+                                                                    <tr class="MsgR2">
+                                                                        <td class="msgud">
+                                                                            <img src="@BaseFilesUrl/Dashboard/offline.png" width="16" height="16">&nbsp;
+                                                                            <a href="@Who.Name.ClickUrl">@Who.Name.Value</a>
+                                                                            <br><b>Повідомлень:</b> @Who.CountMessages.Value<br><b>Зареєстрований:</b> @Who.Registered.Value
+
+                                                                        </td>
+                                                                        <td class="msgud"></td>
+                                                                        <td class="msgot"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="MsgR3">
+                                                            <span class="MsgBodyText">
+                                                                @DescriptionHtml.Value
+                                                            </span>
+                                                            <div class="SmallText clear"><p class="fr"></p></div>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </control>
+                                <control attr="Messages" repeatable="true">
+                                    <tr>
+                                        <td class="MsgSpacer">
+                                            <table cellspacing="0" cellpadding="0" class="MsgTable">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="MsgR1 vt al expanded"><img src="@BaseFilesUrl/Dashboard/min.png" alt="-" class="collapsable clickable" style="cursor: pointer;"> <a name="msg_num_2"></a><a name="msg_2542"></a><span class="MsgSubText"><a href="" class="MsgSubText">Re: @Top.Title.Value </a></span> </td>
+                                                        <td class="MsgR1 vt ar">
+                                                            <span class="DateText">@OnDate.Value</span> <a href="javascript://" onclick="chng_focus(&#39;#msg_num_1&#39;);">
+                                                                <img src="@BaseFilesUrl/Dashboard/up.png" width="16" height="11">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="MsgR2">
+                                                        <td class="MsgR2" colspan="2">
+                                                            <table cellspacing="0" cellpadding="0" class="ContentTable">
+                                                                <tbody>
+                                                                    <tr class="MsgR2">
+
+                                                                        <td class="msgud">
+                                                                            <img src="@BaseFilesUrl/Dashboard/offline.png" width="16" height="16">&nbsp;
+                                                                            <a href="@Who.ClickUrl">@Who.Value</a>
+                                                                            <br><b>Повідомлень:</b> @CountMessages.Value<br><b>Зареєстрований:</b> @Registered.Value
+                                                                        </td>
+                                                                        <td class="msgud"></td>
+                                                                        <td class="msgot"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="MsgR3">
+                                                            <span class="MsgBodyText">@MessageHtml.Value</span>
+                                                            <div class="SmallText clear"><p class="fr"></p></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="MsgToolBar">
+                                                            <table border="0" cellspacing="0" cellpadding="0" class="wa">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="al nw">
+                                                                        </td>
+                                                                        <td class="GenText wa ac">&nbsp;</td>
+                                                                        <td class="nw ar">
+                                                                            <control attr="NewQuoteMessage">
+                                                                                <a href="@ClickUrl" @NewMessage.ReadOnly @NewMessage.Disabled value="@Value" name="@Name">
+                                                                                    <img alt="" src="@BaseFilesUrl/Dashboard/msg_quote.gif" width="71" height="18">
+                                                                                </a>
+                                                                            </control>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </control>
+                            </tbody>
+                        </table>
+                        <table border="0" cellspacing="0" cellpadding="0" class="wa">
+                            <tbody>
+                                <tr>
+                                    <td class="vt">&nbsp;</td>
+                                    <td class="GenText ar vb nw">
+                                        <control attr="NewMessage">
+                                            <a href="@ClickUrl" @NewMessage.ReadOnly @NewMessage.Disabled value="@Value" name="@Name">
+                                                <img src="@BaseFilesUrl/Dashboard/post_reply.gif" alt="Відправити відповідь" width="100" height="25">
+                                            </a>
+                                        </control>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="fr">
+                            <input type="hidden" name="SQ" value="0">
+                            <table border="0" cellspacing="0" cellpadding="3">
+                                <tbody>
+                                    <tr class="SmallText">
+                                        <td>
+                                            <control attr="Login">
+                                                <label>
+                                                    Имя:<br>
+                                                    <input class="SmallText" type="text" name="@Name" size="18" @ReadOnly @Disabled value="@Value">
+                                                </label>
+                                            </control>
+                                        </td>
+                                        <td>
+                                            <control attr="Password">
+                                                <label>
+                                                    Пароль:<br>
+                                                    <input class="SmallText" type="password" name="@Name" size="18" @ReadOnly @Disabled value="@Value">
+                                                </label>
+                                            </control>
+                                        </td>
+                                        <td>
+                                            &nbsp;<br>
+                                            <control attr="LoginButton">
+                                                <input type="submit" class="button" name="@Name" value="@Value" @ReadOnly @Disabled onclick="@ClickSubmit">
+                                            </control>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <control attr="PageNumbers" type="standard">
+                        </control>
+                        <center>
+                            <a href="@CancelPageUrl">Наверх</a>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    @EndForm
+</body>
+</html>

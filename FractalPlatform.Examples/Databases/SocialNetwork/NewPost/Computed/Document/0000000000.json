@@ -1,0 +1,14 @@
+{
+  "UID": {
+    "Formula": "@NewGuid"
+  },
+  "Who": {
+    "Formula": "@UserName"
+  },
+  "Avatar": {
+    "Formula": "@Avatar"
+  },
+  "OnDate": {
+    "Formula": "@Now"
+  }
+}

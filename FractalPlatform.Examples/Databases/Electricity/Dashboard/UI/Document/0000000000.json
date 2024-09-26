@@ -1,0 +1,12 @@
+{
+  "Style": "Save:false;Cancel:false",
+  "Map": {
+    "ControlType": "Map"
+  },
+  "NewLocation": {
+    "ControlType": "Button"
+  },
+  "Locations": {
+    "ControlType": "Button"
+  }
+}

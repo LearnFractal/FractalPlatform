@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="Databases_Taxi.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FractalPlatform.Examples\FractalPlatform.Examples.csproj" />
+    <ProjectReference Include="..\Projects\FractalPlatform.CoffeePoints\FractalPlatform.CoffeePoints.csproj" />
+    <ProjectReference Include="..\Projects\FractalPlatform.CorpChat\FractalPlatform.CorpChat.csproj" />
+    <ProjectReference Include="..\Projects\FractalPlatform.Forum\FractalPlatform.Forum.csproj" />
+    <ProjectReference Include="..\Projects\FractalPlatform.RealWorld\FractalPlatform.RealWorld.csproj" />
+    <ProjectReference Include="..\Projects\FractalPlatform.Seasons\FractalPlatform.Seasons.csproj" />
+    <ProjectReference Include="..\Projects\FractalPlatform.UTube\FractalPlatform.UTube.csproj" />
+    <ProjectReference Include="..\Projects\FractalPlatform.Weather\FractalPlatform.Weather.csproj" />
+  </ItemGroup>
+
+</Project>

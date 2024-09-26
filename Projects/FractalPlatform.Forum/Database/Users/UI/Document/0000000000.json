@@ -1,0 +1,14 @@
+{
+  "Password": {
+    "Visible": false
+  },
+  "RepeatPassword": {
+    "Visible": false
+  },
+  "Avatar": {
+    "ControlType": "Picture"
+  },
+  "Captcha": {
+    "Visible": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "Layout": "Dashboard",
+  "OnDate": {
+    "ControlType": "Calendar",
+    "LayoutLocation": "OnDate"
+  },
+  "Title": {
+    "ControlType": "Label",
+    "LayoutLocation": "Title"
+  },
+  "Text": {
+    "ControlType": "RichTextBox",
+    "LayoutLocation": "Text"
+  },
+  "Picture": {
+    "ControlType": "Picture",
+    "LayoutLocation": "Picture"
+  },
+  "Likes": {
+    "ControlType": "Likes",
+    "LayoutLocation": "Likes"
+  },
+  "Comments": {
+    "ControlType": "Comments",
+    "LayoutLocation": "Comments"
+  },
+  "NewComment": {
+    "ControlType": "Button",
+    "LayoutLocation": "NewComment"
+  }
+}

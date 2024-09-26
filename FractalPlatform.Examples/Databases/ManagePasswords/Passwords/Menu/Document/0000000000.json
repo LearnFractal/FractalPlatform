@@ -1,0 +1,10 @@
+{
+   "Passwords": {
+    "Items": [
+      {
+        "Text": "Copy Password",
+        "Action": "CopyPassword"
+      }
+    ]
+   }
+}

@@ -1,0 +1,28 @@
+@Header.Partial
+
+<div class="auth-page">
+    <div class="container page">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-xs-12">
+                <control attr="">
+                    <h1 class="text-xs-center">Sign in</h1>
+                    <p class="text-xs-center">
+                        <a href="@Register.ClickUrl">Need an account?</a>
+                    </p>
+                    <fieldset class="form-group">
+                        <input @Name.TextBox class="form-control form-control-lg" type="text" placeholder="Your Name">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input @Password.TextBox class="form-control form-control-lg" type="password" placeholder="Password">
+                    </fieldset>
+                    <button onclick="@SavePageScript" class="btn btn-lg btn-primary pull-xs-right">
+                        Sign in
+                    </button>
+                </control>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@Footer.Partial

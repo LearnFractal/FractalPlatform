@@ -1,0 +1,9 @@
+{
+  "Videos": [
+    {
+      "Video": {
+        "CreatePreviewForMP4": true
+      }
+    }
+  ]  
+}

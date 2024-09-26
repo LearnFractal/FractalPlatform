@@ -1,0 +1,12 @@
+{
+  "Style": "Save:Create",
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "HasElectricity": {
+    "Visible": false
+  },
+  "LastPingTime": {
+    "Visible": false
+  }
+}

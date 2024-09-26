@@ -1,0 +1,26 @@
+﻿{
+   "OnDate": "09/01/2024 10:12:53",
+   "Points": 0,
+   "Project": {
+      "Code": false,
+      "Communicate": false,
+      "Think": false
+   },
+   "Restrictions": {
+      "NoAlcohol": true,
+      "NoBread": true,
+      "NoCoffee": true,
+      "NoEatAfter18": false,
+      "NoPolitics": false,
+      "NoSugar": false,
+      "NoTV": false
+   },
+   "Sport": {
+      "Gym": false,
+      "Stairs": false
+   },
+   "Work": {
+      "English": false,
+      "Job": false
+   }
+}

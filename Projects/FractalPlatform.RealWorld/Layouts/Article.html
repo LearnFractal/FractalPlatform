@@ -1,0 +1,140 @@
+@Header.Partial
+
+<control attr="">
+    <div class="post-page">
+        <div class="banner">
+            <div class="container">
+                <h1>@Title.Value</h1>
+                <div class="post-meta">
+                    <a href="@Who.ClickUrl"><img src="@Avatar.Value" /></a>
+                    <div class="info">
+                        <a href="@Who.ClickUrl" class="author">@Who.Value</a>
+                        <span class="date">@OnDate.Value</span>
+                    </div>
+                    <control attr="EditArticle">
+                        <a href="@ClickUrl">Edit Article | </a>
+                    </control>
+                    <control attr="RemoveArticle">
+                        <a href="@ClickUrl">Remove Article</a>
+                    </control>
+                    <control attr="FollowUser">
+                        <button @Button class="btn btn-sm btn-outline-secondary">
+                            <i class="ion-plus-round"></i>
+                            &nbsp;
+                            Follow @Top.Who.Value <span class="counter">(@Top.CountFollowers.Value)</span>
+                        </button>
+                    </control>
+                    <control attr="UnfollowUser">
+                        <button @Button class="btn btn-sm btn-outline-secondary">
+                            <i class="ion-plus-round"></i>
+                            &nbsp;
+                            Unfollow @Top.Who.Value <span class="counter">(@Top.CountFollowers.Value)</span>
+                        </button>
+                    </control>
+                    &nbsp;&nbsp;
+                    <control attr="AddLike">
+                        <button @Button class="btn btn-sm btn-outline-primary">
+                            <i class="ion-heart"></i>
+                            &nbsp;
+                            Favorite Post <span class="counter">(@Top.CountLikes.Value)</span>
+                        </button>
+                    </control>
+                    <control attr="RemoveLike">
+                        <button @Button class="btn btn-sm btn-outline-primary">
+                            <i class="ion-heart"></i>
+                            &nbsp;
+                            Unfavorite Post <span class="counter">(@Top.CountLikes.Value)</span>
+                        </button>
+                    </control>
+                </div>
+            </div>
+        </div>
+        <div class="container page">
+            <div class="row post-content">
+                <div class="col-md-12">
+                    @Text.Value
+                </div>
+            </div>
+            <hr />
+            <div class="post-actions">
+                <div class="post-meta">
+                    <a href="@Who.ClickUrl"><img src="@Avatar.Value" /></a>
+                    <div class="info">
+                        <a href="@Who.ClickUrl" class="author">@Who.Value</a>
+                        <span class="date">@OnDate.Value</span>
+                    </div>
+                    <control attr="FollowUser">
+                        <button @Button class="btn btn-sm btn-outline-secondary">
+                            <i class="ion-plus-round"></i>
+                            &nbsp;
+                            Follow @Top.Who.Value <span class="counter">(@Top.CountFollowers.Value)</span>
+                        </button>
+                    </control>
+                    <control attr="UnfollowUser">
+                        <button @Button class="btn btn-sm btn-outline-secondary">
+                            <i class="ion-plus-round"></i>
+                            &nbsp;
+                            Unfollow @Top.Who.Value <span class="counter">(@Top.CountFollowers.Value)</span>
+                        </button>
+                    </control>
+                    &nbsp;
+                    <control attr="AddLike">
+                        <button @Button class="btn btn-sm btn-outline-primary">
+                            <i class="ion-heart"></i>
+                            &nbsp;
+                            Favorite Post <span class="counter">(@Top.CountLikes.Value)</span>
+                        </button>
+                    </control>
+                    <control attr="RemoveLike">
+                        <button @Button class="btn btn-sm btn-outline-primary">
+                            <i class="ion-heart"></i>
+                            &nbsp;
+                            Unfavorite Post <span class="counter">(@Top.CountLikes.Value)</span>
+                        </button>
+                    </control>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <control attr="Comments" repeatable="true">
+                        <div class="card">
+                            <div class="card-block">
+                                <p class="card-text">@Text.Value</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="@Who.ClickUrl" class="comment-author">
+                                    <img src="@Avatar.Value" class="comment-author-img" />
+                                </a>
+                                &nbsp;
+                                <a href="@Who.ClickUrl" class="comment-author">@Who.Value</a>
+                                <span class="date-posted">@OnDate.Value</span>
+                                <span class="mod-options">
+                                    <i class="ion-edit"></i>
+                                    <i class="ion-trash-a"></i>
+                                    <control attr="RemoveComment">
+                                        <a href="@ClickUrl">
+                                            Remove
+                                        </a>
+                                    </control>
+                                </span>
+                            </div>
+                        </div>
+                    </control>
+                    <control attr="AddComment" class="card comment-form">
+                        <div class="card-block">
+                            <textarea @Top.Comment.TextBox class="form-control" placeholder="Write a comment..." rows="3">@Top.Comment.Value</textarea>
+                        </div>
+                        <div class="card-footer">
+                            <img src="@UserAvatar" class="comment-author-img" width="30" height="30" />
+                            <button @Button class="btn btn-sm btn-primary">
+                                Post Comment
+                            </button>
+                        </div>
+                    </control>
+                </div>
+            </div>
+        </div>
+    </div>
+</control>
+
+@Footer.Partial

@@ -1,0 +1,60 @@
+{
+  "NewCustomerRate": {
+    "Visible": {
+      "Formula": "Document.Developer = @UserName"
+    }
+  },
+  "NewAccept": {
+    "Visible": {
+      "Formula": "@NewAccept"
+    }
+  },
+  "NewDemo": {
+    "Visible": {
+      "Formula": "@NewDemo"
+    }
+  },
+  "Reject": {
+    "Visible": {
+      "Formula": "Document.Who = @UserName AND Document.Status IN ['New','InProgress']"
+    }
+  },
+  "Accepts": [
+    {
+      "AcceptDeveloper": {
+        "Visible": {
+          "Formula": "Document.Developer = '' AND Document.Who = @UserName AND Document.TenderModel = 'BestDeveloper'"
+        }
+      }
+    }
+  ],
+  "Demos": [
+    {
+      "AcceptDemo": {
+        "Visible": {
+          "Formula": "Document.Developer = '' AND Document.Who = @UserName"
+        }
+      },
+      "NewUserRate": {
+        "Visible": {
+          "Formula": "Document.Who = @UserName"
+        }
+      },
+      "Chat": {
+        "Visible": {
+          "Formula": "Who = @UserName OR Document.Who = @UserName"
+        }
+      },
+      "Message": {
+        "Visible": {
+          "Formula": "(Who = @UserName OR Document.Who = @UserName) AND Document.Status IN ['New','InProgress']"
+        }
+      },
+      "SendMessage": {
+        "Visible": {
+          "Formula": "(Who = @UserName OR Document.Who = @UserName) AND Document.Status IN ['New','InProgress']"
+        }
+      }
+    }
+  ]
+}

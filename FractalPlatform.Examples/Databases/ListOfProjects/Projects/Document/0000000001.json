@@ -1,0 +1,445 @@
+{
+  "Title": "List of project on Fractal Platform",
+  "Projects": [
+    {
+      "App Name": "BTCRate",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 960,
+      "FP Lines Of Code": 32,
+      "Open Application": "https://fraplat.com/jupiter/BTCRate",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRate",
+      "Description": "Мониторинг цены биткоина",
+      "Image": ""
+    },
+    {
+      "App Name": "BTCRateStopLoss",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 2430,
+      "FP Lines Of Code": 81,
+      "Open Application": "https://fraplat.com/jupiter/BTCRateStopLoss",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BTCRateStopLoss",
+      "Description": "Мониторинг цены биткоина",
+      "Image": ""
+    },
+    {
+      "App Name": "FuelCalc",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 1230,
+      "FP Lines Of Code": 41,
+      "Open Application": "https://fraplat.com/jupiter/FuelCalc",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FuelCalc",
+      "Description": "Расчет количества топлива",
+      "Image": ""
+    },
+    {
+      "App Name": "HelloWorld",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 36,
+      "FP Lines Of Code": 12,
+      "Open Application": "https://fraplat.com/jupiter/HelloWorld",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HelloWorld",
+      "Description": "Простейшее приложение",
+      "Image": ""
+    },
+    {
+      "App Name": "Shelest",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 1200,
+      "FP Lines Of Code": 125,
+      "Open Application": "https://fraplat.com/jupiter/Shelest",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Shelest",
+      "Description": "Список свободных номеров в отеле Shelest.ua + погода",
+      "Image": ""
+    },
+    {
+      "App Name": "MyElectro",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 1100,
+      "FP Lines Of Code": 110,
+      "Open Application": "https://fraplat.com/jupiter/MyElectro",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/MyElctro",
+      "Description": "Прогноз наличия электричества 1й группы с сайте ДТЕК",
+      "Image": ""
+    },
+    {
+      "App Name": "RealWorldComparator",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 2200,
+      "FP Lines Of Code": 220,
+      "Open Application": "https://fraplat.com/jupiter/RealWorldComparator",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/RealWorldComparator",
+      "Description": "Сравнение BE/FE/Fullstack репозиториев RealWorld (conduit) приложения",
+      "Image": ""
+    },
+    {
+      "App Name": "TableToJson",
+      "DB Entities (Tables)": 0,
+      "Classic Lines of Code": 690,
+      "FP Lines Of Code": 23,
+      "Open Application": "https://fraplat.com/jupiter/TableToJson",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/TableToJson",
+      "Description": "Конвертация таблицы в джисон",
+      "Image": ""
+    },
+    {
+      "App Name": "JsonToWebApp",
+      "DB Entities (Tables)": 1,
+      "Classic Lines of Code": 1350,
+      "FP Lines Of Code": 45,
+      "Open Application": "https://fraplat.com/jupiter/JsonToWebApp",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/JsonToWebApp",
+      "Description": "Конвертация джисона в веб апп",
+      "Image": ""
+    },
+    {
+      "App Name": "MultTable",
+      "DB Entities (Tables)": 1,
+      "Classic Lines of Code": 2790,
+      "FP Lines Of Code": 93,
+      "Open Application": "https://fraplat.com/jupiter/MultTable",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/MultTable",
+      "Description": "Тренажер для детей по таблице умножения",
+      "Image": ""
+    },
+    {
+      "App Name": "PressureCalc",
+      "DB Entities (Tables)": 1,
+      "Classic Lines of Code": 660,
+      "FP Lines Of Code": 22,
+      "Open Application": "https://fraplat.com/jupiter/PressureCalc",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/PressureCalc",
+      "Description": "Расчет максимального артериального давления",
+      "Image": ""
+    },
+    {
+      "App Name": "SendTextMessage",
+      "DB Entities (Tables)": 1,
+      "Classic Lines of Code": 750,
+      "FP Lines Of Code": 25,
+      "Open Application": "https://fraplat.com/jupiter/SendTextMessage",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SendTextMessage",
+      "Description": "Отправка сообщения в телеграмм",
+      "Image": ""
+    },
+    {
+      "App Name": "TextToQRCode",
+      "DB Entities (Tables)": 1,
+      "Classic Lines of Code": 780,
+      "FP Lines Of Code": 26,
+      "Open Application": "https://fraplat.com/jupiter/TextToQRCode",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/TextToQRCode",
+      "Description": "Конвертация текста в QR код",
+      "Image": ""
+    },
+    {
+      "App Name": "Uezjunyka",
+      "DB Entities (Tables)": 1,
+      "Classic Lines of Code": 540,
+      "FP Lines Of Code": 18,
+      "Open Application": "https://fraplat.com/jupiter/Uezjunyka",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Uezjunyka",
+      "Description": "Лендинг страница для социальной сети",
+      "Image": ""
+    },
+    {
+      "App Name": "Chat",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 900,
+      "FP Lines Of Code": 30,
+      "Open Application": "https://fraplat.com/jupiter/Chat",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Chat",
+      "Description": "Веб чат",
+      "Image": ""
+    },
+    {
+      "App Name": "Login",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 540,
+      "FP Lines Of Code": 18,
+      "Open Application": "https://fraplat.com/jupiter/Login",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Login",
+      "Description": "Логин пользователя",
+      "Image": ""
+    },
+    {
+      "App Name": "ManagePasswords",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 1950,
+      "FP Lines Of Code": 65,
+      "Open Application": "https://fraplat.com/jupiter/ManagePasswords",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ManagePasswords",
+      "Description": "Хранение зашифрованных паролей",
+      "Image": ""
+    },
+    {
+      "App Name": "SiteScanner",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 4860,
+      "FP Lines Of Code": 162,
+      "Open Application": "https://fraplat.com/jupiter/SiteScanner",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SiteScanner",
+      "Description": "Сканирование сайтов и оповещение в телеграмм",
+      "Image": ""
+    },
+    {
+      "App Name": "ToDo",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 390,
+      "FP Lines Of Code": 13,
+      "Open Application": "https://fraplat.com/jupiter/ToDo",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDo",
+      "Description": "ToDo список",
+      "Image": ""
+    },
+    {
+      "App Name": "WorkOutTracker",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 2250,
+      "FP Lines Of Code": 75,
+      "Open Application": "https://fraplat.com/jupiter/WorkOutTracker",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/WorkOutTracker",
+      "Description": "Журнал спортивніх результатов + отчет",
+      "Image": ""
+    },
+    {
+      "App Name": "ImageHosting",
+      "DB Entities (Tables)": 3,
+      "Classic Lines of Code": 1560,
+      "FP Lines Of Code": 52,
+      "Open Application": "https://fraplat.com/jupiter/ImageHosting",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ImageHosting",
+      "Description": "Хостинг для картинок",
+      "Image": ""
+    },
+    {
+      "App Name": "Movies",
+      "DB Entities (Tables)": 3,
+      "Classic Lines of Code": 1500,
+      "FP Lines Of Code": 50,
+      "Open Application": "https://fraplat.com/jupiter/Movies",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Movies",
+      "Description": "Онлайн кинотеатр фильмов в простом дизайне",
+      "Image": ""
+    },
+    {
+      "App Name": "VideoLibrary",
+      "DB Entities (Tables)": 3,
+      "Classic Lines of Code": 930,
+      "FP Lines Of Code": 31,
+      "Open Application": "https://fraplat.com/jupiter/VideoLibrary",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/VideoLibrary",
+      "Description": "Библиотека видео",
+      "Image": ""
+    },
+    {
+      "App Name": "PhotoAlbum",
+      "DB Entities (Tables)": 3,
+      "Classic Lines of Code": 510,
+      "FP Lines Of Code": 17,
+      "Open Application": "https://fraplat.com/jupiter/PhotoAlbum",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/PhotoAlbum",
+      "Description": "Фото альбом",
+      "Image": ""
+    },
+    {
+      "App Name": "ToDoWithCategories",
+      "DB Entities (Tables)": 3,
+      "Classic Lines of Code": 390,
+      "FP Lines Of Code": 13,
+      "Open Application": "https://fraplat.com/jupiter/ToDoWithCategories",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoWithCategories",
+      "Description": "ToDo список с категориями",
+      "Image": ""
+    },
+    {
+      "App Name": "Weather",
+      "DB Entities (Tables)": 3,
+      "Classic Lines of Code": 3300,
+      "FP Lines Of Code": 110,
+      "Open Application": "https://fraplat.com/jupiter/Weather",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Weather",
+      "Description": "Сайт с погодой",
+      "Image": ""
+    },
+    {
+      "App Name": "Vote",
+      "DB Entities (Tables)": 4,
+      "Classic Lines of Code": 660,
+      "FP Lines Of Code": 22,
+      "Open Application": "https://fraplat.com/jupiter/Vote",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Vote",
+      "Description": "Голосование пользователей на веб сайте",
+      "Image": ""
+    },
+    {
+      "App Name": "LoginOrRegister",
+      "DB Entities (Tables)": 5,
+      "Classic Lines of Code": 540,
+      "FP Lines Of Code": 18,
+      "Open Application": "https://fraplat.com/jupiter/LoginOrRegister",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/LoginOrRegister",
+      "Description": "Логин пользователя или регистрация",
+      "Image": ""
+    },
+    {
+      "App Name": "BigTable",
+      "DB Entities (Tables)": 6,
+      "Classic Lines of Code": 630,
+      "FP Lines Of Code": 21,
+      "Open Application": "https://fraplat.com/jupiter/BigTable",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/BigTable",
+      "Description": "Большая таблица на 250 тыс документов",
+      "Image": ""
+    },
+    {
+      "App Name": "DatingGame",
+      "DB Entities (Tables)": 6,
+      "Classic Lines of Code": 9210,
+      "FP Lines Of Code": 307,
+      "Open Application": "https://fraplat.com/jupiter/DatingGame",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/DatingGame",
+      "Description": "Прототип веб игры",
+      "Image": ""
+    },
+    {
+      "App Name": "Electricity",
+      "DB Entities (Tables)": 7,
+      "Classic Lines of Code": 2670,
+      "FP Lines Of Code": 89,
+      "Open Application": "https://fraplat.com/jupiter/Electricity",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Electricity",
+      "Description": "Мониторинг электричества на карте",
+      "Image": ""
+    },
+    {
+      "App Name": "Taxi",
+      "DB Entities (Tables)": 7,
+      "Classic Lines of Code": 2490,
+      "FP Lines Of Code": 83,
+      "Open Application": "https://fraplat.com/jupiter/Taxi",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Taxi",
+      "Description": "Прототип базовой функциональности заказа такси",
+      "Image": ""
+    },
+    {
+      "App Name": "SocialNetwork",
+      "DB Entities (Tables)": 8,
+      "Classic Lines of Code": 6030,
+      "FP Lines Of Code": 201,
+      "Open Application": "https://fraplat.com/jupiter/SocialNetwork",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/SocialNetwork",
+      "Description": "Прототип социальной сети",
+      "Image": ""
+    },
+    {
+      "App Name": "OnlineShop",
+      "DB Entities (Tables)": 9,
+      "Classic Lines of Code": 5280,
+      "FP Lines Of Code": 176,
+      "Open Application": "https://fraplat.com/jupiter/OnlineShop",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/OnlineShop",
+      "Description": "Прототип базовой функциональности онлайн магазина",
+      "Image": ""
+    },
+    {
+      "App Name": "Supermarket",
+      "DB Entities (Tables)": 10,
+      "Classic Lines of Code": 4140,
+      "FP Lines Of Code": 138,
+      "Open Application": "https://fraplat.com/jupiter/Supermarket",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Supermarket",
+      "Description": "Прототип базовой функциональности корзины заказа",
+      "Image": ""
+    },
+    {
+      "App Name": "RealWorld",
+      "DB Entities (Tables)": 13,
+      "Classic Lines of Code": 3310,
+      "FP Lines Of Code": 331,
+      "Open Application": "https://fraplat.com/jupiter/RealWorld",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform.RealWorld",
+      "Description": "RealWorld (conduit) demo app",
+      "Image": ""
+    },
+    {
+      "App Name": "ControlsGallery",
+      "DB Entities (Tables)": 16,
+      "Classic Lines of Code": 1440,
+      "FP Lines Of Code": 48,
+      "Open Application": "https://fraplat.com/jupiter/ControlsGallery",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ControlsGallery",
+      "Description": "Галерея контролов доступных в ФП",
+      "Image": ""
+    },
+    {
+      "App Name": "FreelanceResponse",
+      "DB Entities (Tables)": 16,
+      "Classic Lines of Code": 11730,
+      "FP Lines Of Code": 391,
+      "Open Application": "https://fraplat.com/jupiter/FreelanceResponse",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FreelanceResponse",
+      "Description": "Прототип фриланс биржи",
+      "Image": ""
+    },
+    {
+      "App Name": "Seasons",
+      "DB Entities (Tables)": 17,
+      "Classic Lines of Code": 14190,
+      "FP Lines Of Code": 473,
+      "Open Application": "https://fraplat.com/jupiter/Seasons",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Seasons",
+      "Description": "Онлайн кинотеатр и соц сеть с дизайном",
+      "Image": ""
+    },
+    {
+      "App Name": "Forum",
+      "DB Entities (Tables)": 19,
+      "Classic Lines of Code": 9270,
+      "FP Lines Of Code": 309,
+      "Open Application": "https://fraplat.com/jupiter/Forum",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.Forum",
+      "Description": "Форум с дизайном",
+      "Image": ""
+    },
+    {
+      "App Name": "UTube",
+      "DB Entities (Tables)": 20,
+      "Classic Lines of Code": 13290,
+      "FP Lines Of Code": 443,
+      "Open Application": "https://fraplat.com/jupiter/UTube",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.UTube",
+      "Description": "Прототип Youtube с дизайном",
+      "Image": ""
+    },
+    {
+      "App Name": "CoffeePoints",
+      "DB Entities (Tables)": 24,
+      "Classic Lines of Code": 4260,
+      "FP Lines Of Code": 142,
+      "Open Application": "https://fraplat.com/jupiter/CoffeePoints",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/Projects/FractalPlatform.CoffeePoints",
+      "Description": "Сайт для офлайн встреч с дизайном",
+      "Image": ""
+    },
+    {
+      "App Name": "ToDoIntro",
+      "DB Entities (Tables)": 29,
+      "Classic Lines of Code": 1680,
+      "FP Lines Of Code": 56,
+      "Open Application": "https://fraplat.com/jupiter/ToDoIntro",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDoIntro",
+      "Description": "Многостраничная презентация с формой обратной связи",
+      "Image": ""
+    },
+    {
+      "App Name": "FractalPlatform",
+      "DB Entities (Tables)": 200,
+      "Classic Lines of Code": 135000,
+      "FP Lines Of Code": 4500,
+      "Open Application": "https://fraplat.com/jupiter/FractalPlatform",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FractalPlatform",
+      "Description": "Прототип: Jira+Teams+Educations+Cloud Portal",
+      "Image": ""
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+﻿{
+   "ExpiredAnswers": "",
+   "ExpiredChooses": "",
+   "ExpiredParticipants": "",
+   "ID": 1,
+   "Status": "Finished",
+   "Answers": [
+      {
+         "Answer": "",
+         "From": "Bob",
+         "Question": "",
+         "To": ""
+      }
+   ],
+   "Participants": {
+      "Boys": [
+         {
+            "Contacts": "",
+            "Match": "",
+            "Name": "",
+            "Number": 1,
+            "Photo": ""
+         }
+      ],
+      "Girls": [
+         {
+            "Contacts": "",
+            "Match": "",
+            "Name": "",
+            "Number": 2,
+            "Photo": ""
+         }
+      ]
+   }
+}

@@ -1,0 +1,12 @@
+{
+  "Actors": [
+    {
+      "Name": {
+        "CollectionName": "Actors",
+        "Attribute": "Name",
+        "IsArray": false,
+        "IsEmbedded": false
+      }
+    }
+  ]
+}

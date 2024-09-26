@@ -1,0 +1,79 @@
+@Header.Partial
+
+<div class="profile-page">
+    <div class="user-info">
+        <div class="container">
+            <div class="row">
+                <control attr="">
+                    <div class="col-md-10 col-md-offset-1">
+                        <img src="@Avatar.Value" class="user-img" />
+                        <h4>@Who.Value</h4>
+                        <p>
+                            @About.Value
+                        </p>
+                        <control attr="FollowUser">
+                            <button @Button class="btn btn-sm btn-outline-secondary">
+                                <i class="ion-plus-round"></i>
+                                &nbsp;
+                                Follow @Top.Who.Value <span class="counter">(@Top.CountFollowers.Value)</span>
+                            </button>
+                        </control>
+                        <control attr="UnfollowUser">
+                            <button @Button class="btn btn-sm btn-outline-secondary">
+                                <i class="ion-plus-round"></i>
+                                &nbsp;
+                                Unfollow @Top.Who.Value <span class="counter">(@Top.CountFollowers.Value)</span>
+                            </button>
+                        </control>
+                    </div>
+                </control>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <control attr="">
+                    <div class="posts-toggle">
+                        <ul class="nav nav-pills outline-active">
+                            <li class="nav-item">
+                                <a class="nav-link @MyPostsActive" @MyPosts.Link>My Posts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @LikedPostsActive" @LikedPosts.Link>Favorited Posts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </control>
+                <control attr="Posts" repeatable="true">
+                    <div class="post-preview">
+                        <div class="post-meta">
+                            <a href="@Who.ClickUrl"><img src="@Avatar.Value" /></a>
+                            <div class="info">
+                                <a href="@Who.ClickUrl" class="author">@Who.Value</a>
+                                <span class="date">@OnDate.Value</span>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm pull-xs-right">
+                                <i class="ion-heart"></i> @CountLikes.Value
+                            </button>
+                        </div>
+                        <a href="@EditRowUrl" class="preview-link">
+                            <h1>
+                                @Title.Value
+                            </h1>
+                            <p>
+                                @Text.Value
+                            </p>
+                        </a>
+                    </div>
+                </control>
+                <span style="font-size: 2rem">
+                    <control attr="PageNumbers" type="standard">
+                    </control>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Footer.Partial

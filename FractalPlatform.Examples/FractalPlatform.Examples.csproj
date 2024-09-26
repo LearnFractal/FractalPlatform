@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Databases\OnlineShop\Orders\**" />
+    <Compile Remove="Databases\SocialNetwork\NewFolder\**" />
+    <Compile Remove="Files\PhotoAlbum\**" />
+    <Compile Remove="Files\Seasons\**" />
+    <EmbeddedResource Remove="Databases\OnlineShop\Orders\**" />
+    <EmbeddedResource Remove="Databases\SocialNetwork\NewFolder\**" />
+    <EmbeddedResource Remove="Files\PhotoAlbum\**" />
+    <EmbeddedResource Remove="Files\Seasons\**" />
+    <None Remove="Databases\OnlineShop\Orders\**" />
+    <None Remove="Databases\SocialNetwork\NewFolder\**" />
+    <None Remove="Files\PhotoAlbum\**" />
+    <None Remove="Files\Seasons\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Databases\BTCRateStopLoss\" />
+    <Folder Include="Databases\FreelanceResponse\" />
+    <Folder Include="Databases\SocialNetwork\" />
+    <Folder Include="Databases\Uezjunyka\Uezjunyka\Document\" />
+    <Folder Include="Databases\VideoLibrary\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FractalPlatform.Client">
+      <HintPath>..\Bin\FractalPlatform.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="FractalPlatform.Common">
+      <HintPath>..\Bin\FractalPlatform.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FractalPlatform.Database">
+      <HintPath>..\Bin\FractalPlatform.Database.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

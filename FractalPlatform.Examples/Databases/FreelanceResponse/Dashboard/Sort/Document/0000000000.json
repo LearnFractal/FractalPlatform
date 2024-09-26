@@ -1,0 +1,10 @@
+{
+  "User": { "Index": 1 },
+  "Logout": { "Index": 2 },
+  "Tasks": { "Index": 3 },
+  "MyTasks": { "Index": 4 },
+  "CompletedTasks": { "Index": 5 },
+  "Users": { "Index": 6 },
+  "NewTask": { "Index": 7 },
+  "Reports": { "Index": 8 }
+}

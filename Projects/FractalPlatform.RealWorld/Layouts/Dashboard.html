@@ -1,0 +1,71 @@
+@Header.Partial
+
+<div class="home-page">
+    <div class="banner">
+        <div class="container">
+            <h1 class="logo-font">conduit</h1>
+            <p>A place to share your knowledge.</p>
+        </div>
+    </div>
+    <div class="container page">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="feed-toggle">
+                    <ul class="nav nav-pills outline-active">
+                        <control attr="YourFeed">
+                            <li class="nav-item">
+                                <a class="nav-link @YourFeedActive" href="@ClickUrl">Your Feed</a>
+                            </li>
+                        </control>
+                        <control attr="GlobalFeed">
+                            <li class="nav-item">
+                                <a class="nav-link @GlobalFeedActive" href="@ClickUrl">Global Feed</a>
+                            </li>
+                        </control>
+                        <li class="nav-item" @TagFeedVisible>
+                            <span class="nav-link active">#@TagFeedValue</span>
+                        </li>
+                    </ul>
+                </div>
+                <control attr="Posts" repeatable="true">
+                    <div class="post-preview">
+                        <div class="post-meta">
+                            <a href="@Who.ClickUrl"><img src="@Avatar.Value" /></a>
+                            <div class="info">
+                                <a href="@Who.ClickUrl" class="author">@Who.Value</a>
+                                <span class="date">@OnDate.Value</span>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm pull-xs-right">
+                                <i class="ion-heart"></i> @CountLikes.Value
+                            </button>
+                        </div>
+                        <a href="@EditRowUrl" class="preview-link">
+                            <h1>
+                                @Title.Value
+                            </h1>
+                            <p>
+                                @Text.Value
+                            </p>
+                        </a>
+                    </div>
+                </control>
+                <span style="font-size: 2rem">
+                    <control attr="PageNumbers" type="standard">
+                    </control>
+                </span>
+            </div>
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <p>Popular Tags</p>
+                    <div class="tag-list">
+                        <control attr="PopularTags" repeatable="true">
+                            <a href="@BaseUrl/@AppName/?tag=@Value" class="label label-pill label-default">@Value</a>
+                        </control>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Footer.Partial

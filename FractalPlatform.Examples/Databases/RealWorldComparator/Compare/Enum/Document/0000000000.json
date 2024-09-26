@@ -1,0 +1,21 @@
+{
+  "First implementation": {
+    "Frontend": {
+      "Formula": "Frontend"
+    },
+    "Backend": {
+      "Formula": "Backend"
+    },
+    "Fullstack": {
+      "Formula": "Fullstack"
+    }
+  },
+  "Second implementation": {
+    "FractalPlatform": {
+      "Items": [
+        "None",
+        "Fractal Platform | C# | https://github.com/LearnFractal/FractalPlatform.RealWorld"
+      ]
+    }
+  }
+}

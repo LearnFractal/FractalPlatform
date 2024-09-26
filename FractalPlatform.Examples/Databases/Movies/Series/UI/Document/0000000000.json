@@ -1,0 +1,26 @@
+{
+  "ReadOnly": true,
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Style": "Type:Link;Hide:Episodes",
+  "Seasons": [
+    {
+      "Episodes": [
+        {
+          "Style": "Type:Link;Hide:Size,Episode,NextEpisode,Download;HasLabel:true",
+          "Episode": {
+            "ControlType": "Media",
+            "Style": "Type:Video;HasLabel:false"
+          },
+          "NextEpisode": {
+            "ControlType": "Button"
+          },
+          "Download": {
+            "ControlType": "Link"
+          }
+        }
+      ]
+    }
+  ]
+}

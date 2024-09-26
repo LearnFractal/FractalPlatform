@@ -1,0 +1,13 @@
+﻿{
+   "Name": "Bob",
+   "Password": "Bob",
+   "NewOrders": [
+      {
+         "From": "Kiev",
+         "IsCompleted": false,
+         "Price": 10,
+         "To": "Lviv",
+         "Who": ""
+      }
+   ]
+}

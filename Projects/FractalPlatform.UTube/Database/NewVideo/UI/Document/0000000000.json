@@ -1,0 +1,36 @@
+{
+  "Style": "HasLabel:true",
+  "UID": {
+    "Visible": false
+  },
+  "Video": {
+    "ControlType": "UploadFile"
+  },
+  "Preview": {
+    "Visible": false
+  },
+  "Description": {
+    "ControlType": "RichTextBox"
+  },
+  "OnDate": {
+    "Visible": false
+  },
+  "Likes": {
+    "Visible": false
+  },
+  "CountViews": {
+    "Visible": false
+  },
+  "CountLikes": {
+    "Visible": false
+  },
+  "CountComments": {
+    "Visible": false
+  },
+  "OnDateLabel": {
+    "Visible": false
+  },
+  "NewComment": {
+    "Visible": false
+  }
+}

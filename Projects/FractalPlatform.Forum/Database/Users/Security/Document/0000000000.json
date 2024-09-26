@@ -1,0 +1,7 @@
+{
+  "Allow": {
+    "Write": [
+      "Admin"
+    ]
+  }
+}

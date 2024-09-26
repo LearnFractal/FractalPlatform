@@ -1,0 +1,11 @@
+{
+  "Map": {
+    "Index": 1
+  },
+  "Find": {
+    "Index": 2
+  },
+  "Propose": {
+    "Index": 3
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Style": "Save:Register",
+  "Password": {
+    "Style": "Type:Password"
+  },
+  "Gender": {
+    "ControlType": "ComboBox"
+  },
+  "Captcha": {
+    "Style": "Type:Captcha"
+  },
+  "Photo": {
+    "ControlType": "UploadFile"
+  },
+  "RequestFriend": {
+    "Visible": false
+  }
+}

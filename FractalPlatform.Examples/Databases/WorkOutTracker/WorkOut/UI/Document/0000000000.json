@@ -1,0 +1,24 @@
+{
+  "Style": "Hide:Configure,Report,Results;Type:Link",
+  "Name": {
+    "ReadOnly": true
+  },
+  "Configure": {
+    "ControlType": "Button",
+    "Style": "Type:Link"
+  },
+  "Report": {
+    "ControlType": "Button",
+    "Style": "Type:Link"
+  },
+  "Results": [
+    {
+      "OnDate": {
+        "ReadOnly": true
+      },
+      "Sum": {
+        "ReadOnly": true
+      }
+    }
+  ]
+}

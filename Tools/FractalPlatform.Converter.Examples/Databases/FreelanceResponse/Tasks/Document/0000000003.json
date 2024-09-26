@@ -1,0 +1,29 @@
+{
+  "Archive": "8b1f04b061084e4ab36c06c200009fbd.jpg",
+  "Description": "Task - TheBestDeveloper - InProgress",
+  "Developer": "Developer",
+  "EndDate": "03/22/2023 22:00:17",
+  "MaxPrice": 10000,
+  "MinPrice": 100,
+  "NewAccept": "I want this task",
+  "NewCustomerRate": "Rate Customer",
+  "NewDemo": "I have demo",
+  "OnDate": "03/22/2023 22:00:17",
+  "Picture": "",
+  "Reject": "Reject Task",
+  "StartDate": "03/22/2023 22:00:17",
+  "Status": "InProgress",
+  "TaskNumber": "T-00003",
+  "TenderModel": "TheBestDemo",
+  "Title": "Task - TheBestDeveloper - InProgress",
+  "Video": "",
+  "Who": "Customer",
+  "PaymentTypes": [
+    "ZSU",
+    "Card",
+    "Crypto"
+  ],
+  "Skills": [
+    "C#"
+  ]
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    @Styles
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Онлайн - кінотеатр</title>
+    <link rel="stylesheet" href="@BaseFilesUrl/MovieDashboard/index.ad0eec93.css">
+</head>
+<body style="background-color: #212328">
+    @StartForm
+    <header class="header">
+        <div class="container">
+            <a lang="en" href="/" class="link logo">
+                <img src="@BaseFilesUrl/LOGO.svg" width="50" alt="Logo">
+            </a>
+            <nav>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=films&click=changetype&newSession=false">Фільми</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=series&click=changetype&newSession=false">Серіали</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="@BaseAppUrl\Dashboard\?tag=cartoons&click=changetype&newSession=false">Мультфільми</a>
+                    </li>
+                </ul>
+            </nav>
+            <label class="search__label">
+                <script>
+                    function filter(value) {
+                        if (value != "") {
+                            @FilterPageScript;
+                        }
+                    }
+                </script>
+                <input class="search__input" type="text" name="FilterText" value="" id="search" placeholder="Пошук" onclick="filter(this.value);">
+            </label>
+            <control attr="MyUser">
+                <button class="burger-menu" type="button" onclick="@ClickSubmit">
+                    <svg class="burger-menu__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                        <path d="M0 24H24V21.3333H0V24ZM0 6.66667V17.3333L5.33333 12L0 6.66667ZM10.6667 18.6667H24V16H10.6667V18.6667ZM0 0V2.66667H24V0H0ZM10.6667 8H24V5.33333H10.6667V8ZM10.6667 13.3333H24V10.6667H10.6667V13.3333Z" fill="white"></path>
+                    </svg>
+                </button>
+            </control>
+        </div>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details__container">
+                <div class="movie-details__box">
+                    <control attr="">
+                        <div class="movie-details__desc-wrap">
+                            <h1 class="movie-details__title">@Name.Value</h1>
+                            <p class="movie-details__desc">@Year.Value, @Country.Value</p>
+                        </div>
+                        <button class="movie-details__btn" onclick="@ViewUsers.ClickSubmit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewbox="0 0 25 18" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6292 10.2713C19.1704 11.3175 20.2504 12.735 20.2504 14.625V18H24.7504V14.625C24.7504 12.1725 20.7341 10.7213 17.6292 10.2713Z" fill="white"></path>
+                                <path d="M8.99951 9C11.4848 9 13.4995 6.98528 13.4995 4.5C13.4995 2.01472 11.4848 0 8.99951 0C6.51423 0 4.49951 2.01472 4.49951 4.5C4.49951 6.98528 6.51423 9 8.99951 9Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7499 9C18.2362 9 20.2499 6.98625 20.2499 4.5C20.2499 2.01375 18.2362 0 15.7499 0C15.2212 0 14.7262 0.1125 14.2537 0.27C15.1874 1.42875 15.7499 2.9025 15.7499 4.5C15.7499 6.0975 15.1874 7.57125 14.2537 8.73C14.7262 8.8875 15.2212 9 15.7499 9Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 10.1247C5.99625 10.1247 0 11.6322 0 14.6247V17.9997H18V14.6247C18 11.6322 12.0037 10.1247 9 10.1247Z" fill="white"></path>
+                            </svg>
+                            Список користувачів
+                        </button>
+                        <button class="movie-details__btn" onclick="@AddToPlayList.ClickSubmit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32" fill="none">
+                                <g clip-path="url(#clip0_841_1384)">
+                                    <path d="M25.5 17.2857H17.7857V25H15.2143V17.2857H7.5V14.7143H15.2143V7H17.7857V14.7143H25.5V17.2857Z" fill="white"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_841_1384">
+                                        <rect width="32" height="32" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Додати до списку перегляду
+                        </button>
+                    </control>
+                </div>
+                <div class="movie-details__box">
+                    <control attr="">
+                        <img class="movie-details__img" src="@BaseFilesUrl/@Picture.Value" alt="@Name.Value" width="318" height="413">
+                        <video id="video" name="Video" class="movie-details__img" width="954" height="414" controls>
+                            <source id="source" src="@BaseFilesUrl/@Video.Value" />
+                        </video>
+                    </control>
+                </div>
+                <div class="movie-details__box">
+                    <div class="details movie-details__box-inner">
+                        <control attr="">
+                            <ul class="details__list">
+                                <li class="details__item">
+                                    <p class="details__key">Серія:</p>
+                                    <p class="details__value">
+                                        <script>
+                                            var video = document.getElementById('video');
+                                            var source = document.getElementById('source');
+
+                                            function playVideo(val) {
+                                                video.pause()
+                                                source.setAttribute('src', val);
+                                                video.load();
+                                                video.play();
+                                            }
+                                        </script>
+                                        <select id="select" style="background-color:#212328">
+                                            <control attr="Series" repeatable="true">
+                                                <option value="@BaseFilesUrl/@Value">@Value</option>
+                                            </control>
+                                        </select>
+                                        <script>
+                                            var select = document.getElementById('select');
+                                            select.selectedIndex = 0;
+                                            select.onchange = "playVideo(this.value)";
+                                        </script>
+                                    </p>
+                                </li>
+                                <li class="details__item">
+                                    <p class="details__key">Рік:</p>
+                                    <p class="details__value">@Year.Value</p>
+                                </li>
+                                <li class="details__item">
+                                    <p class="details__key">Країна:</p>
+                                    <p class="details__value">@Country.Value</p>
+                                </li>
+                                <li class="details__item">
+                                    <p class="details__key">Жанр:</p>
+                                    <p class="details__value">@Genre.Value</p>
+                                </li>
+                                <li class="details__item">
+                                    <p class="details__key">Переклад:</p>
+                                    <p class="details__value">@Translation.Value</p>
+                                </li>
+                                <li class="details__item">
+                                    <p class="details__key">Якість:</p>
+                                    <p class="details__value">@Quality.Value</p>
+                                </li>
+                                <li class="details__item">
+                                    <p class="details__key">Час:</p>
+                                    <p class="details__value">@Duration.Value</p>
+                                </li>
+                                <li class="details__item">
+                                    <p class="details__key">Вік:</p>
+                                    <p class="details__value">16+</p>
+                                </li>
+                            </ul>
+                        </control>
+                    </div>
+                    <div class="movie-details__box-inner">
+                        <control attr="">
+                            <div class="movie-details__ratings">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewbox="0 0 17 16" fill="none">
+                                        <path d="M8.27202 4C4.73928 4 1.72233 5.84777 0.5 8.45603C1.72233 11.0643 4.73928 12.9121 8.27202 12.9121C11.8048 12.9121 14.8217 11.0643 16.044 8.45603C14.8217 5.84777 11.8048 4 8.27202 4ZM8.27202 11.4267C6.32195 11.4267 4.73928 10.0958 4.73928 8.45603C4.73928 6.81621 6.32195 5.48534 8.27202 5.48534C10.2221 5.48534 11.8048 6.81621 11.8048 8.45603C11.8048 10.0958 10.2221 11.4267 8.27202 11.4267ZM8.27202 6.67362C7.09915 6.67362 6.15238 7.46976 6.15238 8.45603C6.15238 9.44229 7.09915 10.2384 8.27202 10.2384C9.44489 10.2384 10.3917 9.44229 10.3917 8.45603C10.3917 7.46976 9.44489 6.67362 8.27202 6.67362Z" fill="#F2FF5E"></path>
+                                    </svg>
+                                    @Views.Value
+                                </p>
+                                <p>
+                                    IMDb
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                                        <path d="M7.99967 11.5133L12.1197 14L11.0263 9.31331L14.6663 6.15998L9.87301 5.75331L7.99967 1.33331L6.12634 5.75331L1.33301 6.15998L4.97301 9.31331L3.87967 14L7.99967 11.5133Z" fill="#4777DE"></path>
+                                    </svg>
+                                    @IMDB.Value <!--<span>24376</span>-->
+                                </p>
+                                <p>
+                                    Seasons
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                                        <path d="M8.00065 11.5133L12.1207 14L11.0273 9.31331L14.6673 6.15998L9.87398 5.75331L8.00065 1.33331L6.12732 5.75331L1.33398 6.15998L4.97398 9.31331L3.88065 14L8.00065 11.5133Z" fill="#F2FF5E"></path>
+                                    </svg>
+                                    @Rating.Value <!--<span>15</span>-->
+                                </p>
+                                <ul class="like__list">
+                                    <li class="like__item">
+                                        <button class="like__btn" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32" fill="none">
+                                                <g clip-path="url(#clip0_814_5569)">
+                                                    <path d="M2.66602 26.6667H5.33268C6.06602 26.6667 6.66602 26.0667 6.66602 25.3334V13.3334C6.66602 12.6 6.06602 12 5.33268 12H2.66602V26.6667ZM29.106 17.1734C29.2527 16.84 29.3327 16.48 29.3327 16.1067V14.6667C29.3327 13.2 28.1327 12 26.666 12H19.3327L20.5593 5.80002C20.626 5.50669 20.586 5.18669 20.4527 4.92002C20.146 4.32002 19.7593 3.77335 19.2794 3.29335L18.666 2.66669L10.1193 11.2134C9.61268 11.72 9.33268 12.4 9.33268 13.1067V23.56C9.33268 25.2667 10.7327 26.6667 12.4527 26.6667H23.266C24.1994 26.6667 25.0793 26.1734 25.5593 25.3734L29.106 17.1734Z" fill="white"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_814_5569">
+                                                        <rect width="32" height="32" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                    <li class="like__item">
+                                        <button class="like__btn" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 32 32" fill="none">
+                                                <g clip-path="url(#clip0_1003_109)">
+                                                    <path d="M29.334 5.33331H26.6673C25.934 5.33331 25.334 5.93331 25.334 6.66665V18.6666C25.334 19.4 25.934 20 26.6673 20H29.334V5.33331ZM2.89398 14.8266C2.74732 15.16 2.66732 15.52 2.66732 15.8933V17.3333C2.66732 18.8 3.86732 20 5.33398 20H12.6673L11.4407 26.2C11.374 26.4933 11.414 26.8133 11.5473 27.08C11.854 27.68 12.2407 28.2266 12.7206 28.7066L13.334 29.3333L21.8807 20.7866C22.3873 20.28 22.6673 19.6 22.6673 18.8933V8.43998C22.6673 6.73331 21.2673 5.33331 19.5473 5.33331H8.73398C7.80065 5.33331 6.92065 5.82664 6.44065 6.62664L2.89398 14.8266Z" fill="white"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1003_109">
+                                                        <rect width="32" height="32" fill="white" transform="matrix(-1 0 0 -1 32 32)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="movie-details__plot">
+                                <p class="plot__label">Сюжет:</p>
+                                <p class="plot__text">@Description.Value</p>
+                            </div>
+                        </control>
+                    </div>
+                </div>
+                <div class="movie-details__box">
+                    <div class="movie-details__box-inner">
+                        <ul class="actors__list">
+                            <control attr="Actors" repeatable="true">
+                                <li class="actors__item">
+                                    <img class="actors__img" src="@BaseFilesUrl/@Picture.Value" alt="actors" width="145" height="152">
+                                    <div class="actors__desc">
+                                        <p class="actors__name">@Name.Value</p>
+                                        <p class="actors__role">@Role.Value</p>
+                                    </div>
+                                </li>
+                            </control>
+                        </ul>
+                    </div>
+                    <div class="comments movie-details__box-inner">
+                        <control attr="">
+                            <p class="comments__label">Що скажете про фільм @Name.Value?</p>
+                            <div class="comment__add-new">
+                                <img class="comment__img" src="@BaseFilesUrl/@UserAvatar" style="border-radius: 50%" alt="user" width="48" height="48">
+                                <input @Comment.TextBox class="comment-form__input" type="text" placeholder="Напишіть ваш відгук про фільм">
+                                <button @AddComment.Button class="comment-form__btn" style="right:50px" type="submit">
+                                    Додати відгук
+                                    <svg mlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="white"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="comments__amount" type="button">
+                                <br />
+                                Comments @CommentsCount.Value
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                                    <path d="M4.94 10.6668L8 7.61347L11.06 10.6668L12 9.72681L8 5.72681L4 9.72681L4.94 10.6668Z" fill="white"></path>
+                                </svg>
+                            </button>
+                        </control>
+                        <ul class="comments__list">
+                            <control attr="Comments" repeatable="true">
+                                <li class="comment comments__item" style="height:48px">
+                                    <a @ViewUser.Link>
+                                        <img class="comment__img" style="border-radius: 50%" src="@BaseFilesUrl/@Avatar.Value" alt="user" width="48" height="48">
+                                    </a>
+                                    <div class="comment__desc">
+                                        <p class="comment__name">@Name.Value</p>
+                                        <p class="comment__text">@Text.Value</p>
+                                        <!--
+                                        <ul class="comment-like__list">
+                                            <li class="comment-like__item">
+                                                <button class="like__btn" type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 32 32" fill="none">
+                                                        <g clip-path="url(#clip0_814_5569)">
+                                                            <path d="M2.66602 26.6667H5.33268C6.06602 26.6667 6.66602 26.0667 6.66602 25.3334V13.3334C6.66602 12.6 6.06602 12 5.33268 12H2.66602V26.6667ZM29.106 17.1734C29.2527 16.84 29.3327 16.48 29.3327 16.1067V14.6667C29.3327 13.2 28.1327 12 26.666 12H19.3327L20.5593 5.80002C20.626 5.50669 20.586 5.18669 20.4527 4.92002C20.146 4.32002 19.7593 3.77335 19.2794 3.29335L18.666 2.66669L10.1193 11.2134C9.61268 11.72 9.33268 12.4 9.33268 13.1067V23.56C9.33268 25.2667 10.7327 26.6667 12.4527 26.6667H23.266C24.1994 26.6667 25.0793 26.1734 25.5593 25.3734L29.106 17.1734Z" fill="white"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_814_5569">
+                                                                <rect width="32" height="32" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                                <span>15</span>
+                                            </li>
+                                            <li class="comment-like__item">
+                                                <button class="like__btn" type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 32 32" fill="none">
+                                                        <g clip-path="url(#clip0_1003_109)">
+                                                            <path d="M29.334 5.33331H26.6673C25.934 5.33331 25.334 5.93331 25.334 6.66665V18.6666C25.334 19.4 25.934 20 26.6673 20H29.334V5.33331ZM2.89398 14.8266C2.74732 15.16 2.66732 15.52 2.66732 15.8933V17.3333C2.66732 18.8 3.86732 20 5.33398 20H12.6673L11.4407 26.2C11.374 26.4933 11.414 26.8133 11.5473 27.08C11.854 27.68 12.2407 28.2266 12.7206 28.7066L13.334 29.3333L21.8807 20.7866C22.3873 20.28 22.6673 19.6 22.6673 18.8933V8.43998C22.6673 6.73331 21.2673 5.33331 19.5473 5.33331H8.73398C7.80065 5.33331 6.92065 5.82664 6.44065 6.62664L2.89398 14.8266Z" fill="white"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1003_109">
+                                                                <rect width="32" height="32" fill="white" transform="matrix(-1 0 0 -1 32 32)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                                <span>0</span>
+                                            </li>
+                                        </ul>
+                                        -->
+                                    </div>
+                                </li>
+                            </control>
+                        </ul>
+                        <div class="comments__blur"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="movies section">
+            <div class="movies__container">
+                <h2 class="movies__title">Рекомендації до перегляду</h2>
+                <ul class="movies__list">
+                    <control attr="Recommends" repeatable="true">
+                        <li class="movie movies__item" onclick="@EditRowScript">
+                            <div class="movie__img-wrap">
+                                <img class="movie__img" src="@BaseFilesUrl/@Picture.Value" alt="movie" width="200" height="304">
+                                <p class="movie__viewing">
+                                    <svg class="movie__icon--eyes" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewbox="0 0 17 16" fill="none">
+                                        <path d="M8.27202 4C4.73928 4 1.72233 5.84777 0.5 8.45603C1.72233 11.0643 4.73928 12.9121 8.27202 12.9121C11.8048 12.9121 14.8217 11.0643 16.044 8.45603C14.8217 5.84777 11.8048 4 8.27202 4ZM8.27202 11.4267C6.32195 11.4267 4.73928 10.0958 4.73928 8.45603C4.73928 6.81621 6.32195 5.48534 8.27202 5.48534C10.2221 5.48534 11.8048 6.81621 11.8048 8.45603C11.8048 10.0958 10.2221 11.4267 8.27202 11.4267ZM8.27202 6.67362C7.09915 6.67362 6.15238 7.46976 6.15238 8.45603C6.15238 9.44229 7.09915 10.2384 8.27202 10.2384C9.44489 10.2384 10.3917 9.44229 10.3917 8.45603C10.3917 7.46976 9.44489 6.67362 8.27202 6.67362Z" fill="white"></path>
+                                    </svg> @Views.Value
+                                </p>
+                                <p class="movie__rating">@Rating.Value</p>
+                                <button class="movie__btn movie__btn-card" onclick="@AddToPlayList.ClickSubmit" style="z-index:100">
+                                    <svg class="movie__icon--card" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
+                                        <path d="M19.8444 3.56352V5.54397H16.7356V8.51466H14.663V5.54397H11.5542V3.56352H14.663V0.592834H16.7356V3.56352H19.8444ZM16.7356 17.4267H2.22781V3.56352H8.44543V1.58306H2.22781C1.08792 1.58306 0.155273 2.47427 0.155273 3.56352V17.4267C0.155273 18.516 1.08792 19.4072 2.22781 19.4072H16.7356C17.8755 19.4072 18.8081 18.516 18.8081 17.4267V11.4853H16.7356V17.4267ZM12.5905 11.4853V15.4463H14.663V11.4853H12.5905ZM8.44543 15.4463H10.518V7.52443H8.44543V15.4463ZM6.37289 15.4463V9.50489H4.30035V15.4463H6.37289Z" fill="white"></path>
+                                    </svg>
+                                </button>
+                                <button class="movie__btn movie__btn-users" onclick="@ViewUsers.ClickSubmit" style="z-index:100">
+                                    <svg class="movie__icon--users" xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewbox="0 0 20 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1025 8.99255C15.3059 9.80945 16.1492 10.9162 16.1492 12.3919V15.027H19.6627V12.3919C19.6627 10.477 16.5269 9.34391 14.1025 8.99255Z" fill="white"></path>
+                                        <path d="M7.36508 7.99999C9.30554 7.99999 10.8786 6.42694 10.8786 4.48647C10.8786 2.54601 9.30554 0.972961 7.36508 0.972961C5.42462 0.972961 3.85156 2.54601 3.85156 4.48647C3.85156 6.42694 5.42462 7.99999 7.36508 7.99999Z" fill="white"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6355 7.99999C14.5767 7.99999 16.149 6.42769 16.149 4.48647C16.149 2.54526 14.5767 0.972961 12.6355 0.972961C12.2227 0.972961 11.8362 1.0608 11.4673 1.18377C12.1963 2.0885 12.6355 3.23918 12.6355 4.48647C12.6355 5.73377 12.1963 6.88445 11.4673 7.78918C11.8362 7.91215 12.2227 7.99999 12.6355 7.99999Z" fill="white"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.36492 8.87836C5.01965 8.87836 0.337891 10.0554 0.337891 12.3919V15.027H14.3919V12.3919C14.3919 10.0554 9.71019 8.87836 7.36492 8.87836Z" fill="white"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="movie__desc">
+                                <h3 class="movie__title">@Name.Value</h3>
+                                <span class="movie__year">@Year.Value</span>
+                                <span class="movie__country">@Country.Value</span>
+                            </div>
+                        </li>
+                    </control>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="@BaseFilesUrl/MovieDashboard/index.d7ca0669.js"></script>
+    @EndForm
+</body>
+</html>

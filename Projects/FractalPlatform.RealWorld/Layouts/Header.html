@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Conduit</title>
+    <link rel="stylesheet" href="https://gothinkster.github.io/conduit/css/style.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:700|Source+Serif+Pro:400,700|Merriweather+Sans:400,700|Source+Sans+Pro:400,300,600,700,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    @Styles
+</head>
+<body>
+    @StartForm
+    <nav class="navbar navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="@BaseUrl/@AppName/?tag=Global">conduit</a>
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="@BaseUrl/@AppName/?tag=Global">Home</a>
+                </li>
+                <control attr="AddArticle">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@ClickUrl">New Post</a>
+                    </li>
+                </control>
+                <control attr="Login">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@ClickUrl">Sign in</a>
+                    </li>
+                </control>
+                <control attr="Logout">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@ClickUrl">Sign out</a>
+                    </li>
+                </control>
+                <control attr="Register">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@ClickUrl">Sign up</a>
+                    </li>
+                </control>
+                <control attr="Settings">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@ClickUrl">Settings</a>
+                    </li>
+                </control>
+            </ul>
+        </div>
+    </nav>

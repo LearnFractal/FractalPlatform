@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Lexa",
+  "Configure": "Configure",
+  "Report": "Report",
+  "Results": [
+    {
+      "Exercise": "HorizontalBar",
+      "OnDate": "03/03/2023 14:00:25",
+      "Set1": 3,
+      "Set2": 3,
+      "Set3": 3,
+      "Set4": 1,
+      "Sum": 10
+    }
+  ]
+}

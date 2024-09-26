@@ -1,0 +1,31 @@
+﻿{
+  "AddComment": "Post Comment",
+  "AddLike": "Add Like",
+  "Avatar": "http://i.imgur.com/Qr71crq.jpg",
+  "Comment": "",
+  "CountFollowers": "1",
+  "CountLikes": "1",
+  "RemoveArticle": "Remove Article",
+  "EditArticle": "Edit Article",
+  "FollowUser": "Follow User",
+  "OnDate": "09/10/2024",
+  "RemoveLike": "Remove Like",
+  "Text": "Test",
+  "Title": "Test Article",
+  "UnfollowUser": "Unfollow User",
+  "Who": "Bob",
+  "Comments": [
+    {
+      "Avatar": "http://i.imgur.com/Qr71crq.jpg",
+      "OnDate": "20240101",
+      "Text": "Cool",
+      "Who": "Bob"
+    }
+  ],
+  "Likes": [
+    "Bob"
+  ],
+  "Tags": [
+    "green"
+  ]
+}

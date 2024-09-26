@@ -1,0 +1,14 @@
+{
+  "Style": "Save:Send",
+  "Visible": false,
+  "Message": {
+    "ControlType": "RichTextBox",
+    "Visible": true
+  },
+  "NewQuoteMessage": {
+    "Visible": false
+  },
+  "MessageHtml": {
+    "Visible": false
+  }
+}

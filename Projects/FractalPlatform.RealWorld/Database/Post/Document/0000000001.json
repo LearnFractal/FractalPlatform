@@ -1,0 +1,19 @@
+﻿{
+  "Who": "",
+  "Avatar": "",
+  "OnDate": "",
+  "Title": "",
+  "Text": "",
+  "Tags": [ "green" ],
+  "FollowUser": "Follow User",
+  "UnfollowUser": "Unfollow User",
+  "AddLike": "Add Like",
+  "RemoveLike": "Remove Like",
+  "Likes": [ "Ted" ],
+  "Comment": "",
+  "AddComment": "Add Comment",
+  "EditArticle": "Edit Article",
+  "RemoveArticle": "Remove Article",
+  "CountLikes": 0,
+  "CountFollowers": 0
+}

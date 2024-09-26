@@ -1,0 +1,20 @@
+{
+  "Style": "CollLabel:;Type:Link;Hide:Open Application,Open Sources,Image",
+  "ReadOnly": true,
+  "Title": {
+    "ControlType": "Label"
+  },
+  "Projects": [
+    {
+      "Open Application": {
+        "ControlType": "Link"
+      },
+      "Open Sources": {
+        "ControlType": "Link"
+      },
+      "Image": {
+        "ControlType": "Picture"
+      }
+    }
+  ]
+}

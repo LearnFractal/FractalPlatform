@@ -1,0 +1,14 @@
+{
+  "Results": [
+    {
+      "OnDate": {
+        "Formula": "@Now",
+        "Calculation": "OnSave"
+      },
+      "Sum": {
+        "Formula": "Set1+Set2+Set3+Set4",
+        "Calculation": "OnReadAndSave"
+      }
+    }
+  ]
+}
