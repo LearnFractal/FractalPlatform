@@ -2,19 +2,56 @@
 using FractalPlatform.Client.UI;
 using FractalPlatform.Common.Enums;
 using FractalPlatform.Database.Engine;
+using FractalPlatform.Database.Engine.Info;
 using System.Collections.Generic;
 
 namespace FractalPlatform.Examples.Applications.AIToWebApp
 {
 	public class AIToWebAppApplication : BaseApplication
 	{
+		public void OpenApp(Collection collection)
+		{
+			collection.SetThemeDimension(ThemeType.LightBlue)
+					.SetUIDimension(@"{'Style':'Save:Rebuild;Type:Link',
+									   'AppName':{'Visible':false},
+									   'Question':{'Visible':false}}")
+					.SetDimension(DimensionType.Sort)
+					.OpenForm(result =>
+					{
+						if (result.Result)
+						{
+							var question = collection.FindFirstValue("Question");
+
+							Dashboard(question);
+						}
+					});
+		}
+
+		public override bool OnOpenForm(FormInfo info)
+		{
+			if (info.AttrPath.FirstPath == "Apps")
+			{
+				var docID = info.Collection.GetWhere(info.AttrPath).UIntValue("{'Apps':[{'DocID':$}]}");
+
+				var collection = DocsWhere("Apps", docID).ToCollection();
+				
+				OpenApp(collection);
+
+				return false;
+			}
+			else
+			{
+				return base.OnOpenForm(info);
+			}
+		}
+
 		private void Dashboard(string question)
 		{
 			var apps = DocsOf("Apps").ToStorage("{'AppName':$,'Question':$}");
 
 			FirstDocOf("Dashboard")
 				  .ToCollection()
-				  .MergeToArrayPath(apps, "Apps")
+				  .MergeToArrayPath(apps, "Apps", Constants.FIRST_DOC_ID, true)
 				  .ExtendDocument(DQL("{'Question':@Question}", question))
 				  .OpenForm(result =>
 				  {
@@ -60,18 +97,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 						  }
 					  }
 
-					  collection.SetThemeDimension(ThemeType.LightBlue)
-								.SetUIDimension(@"{'Style':'Save:Rebuild;Type:Link',
-												   'AppName':{'Visible':false},
-												   'Question':{'Visible':false}}")
-								.SetDimension(DimensionType.Sort)
-								.OpenForm(result =>
-								{
-									  if (result.Result)
-									  {
-										  Dashboard(question);
-									  }
-								});
+					  OpenApp(collection);
 				  });
 		}
 
