@@ -53,6 +53,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 				  .ToCollection()
 				  .MergeToArrayPath(apps, "ExistingApps", Constants.FIRST_DOC_ID, true)
 				  .ExtendDocument(DQL("{'NewApp':{'AppName':@AppName,'Question':@Question}}", appName, question))
+				  .SetThemeDimension(ThemeType.LightGreen)
 				  .OpenForm(result =>
 				  {
 					  Collection collection;
