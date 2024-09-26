@@ -16,7 +16,10 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 									   .GetFirstDoc()
 									   .Value("{'Question':$}");
 
-					  var newQuestion = $"Create a json where {question}. Name of json attributes should start from capital letter. Json should starts from " + "{ bracket";
+					  var newQuestion = @$"Create a json where {question}.
+					  Json should starts from {{ bracket.
+					  Name of json attributes should start from capital letter.
+					  If json has gps coordinates, than it should be in format {{'gps':'1.11,2.22'}}.";
 
 					  var response = AI.Generate(newQuestion, "gpt-4o");
 
