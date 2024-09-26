@@ -29,11 +29,11 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 
 		public override bool OnOpenForm(FormInfo info)
 		{
-			if (info.AttrPath.FirstPath == "Apps")
+			if (info.AttrPath.FirstPath == "ExistingApps")
 			{
-				var docID = info.Collection.GetWhere(info.AttrPath).UIntValue("{'Apps':[{'DocID':$}]}");
+				var docID = info.Collection.GetWhere(info.AttrPath).UIntValue("{'ExistingApps':[{'DocID':$}]}");
 
-				var collection = DocsWhere("Apps", docID).ToCollection();
+				var collection = DocsWhere("ExistingApps", docID).ToCollection();
 				
 				OpenApp(collection);
 
@@ -47,16 +47,19 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 
 		private void Dashboard(string question)
 		{
-			var apps = DocsOf("Apps").ToStorage("{'AppName':$,'Question':$}");
+			var apps = DocsOf("Apps").ToStorage("{'AppName':$,'OnDate':$}");
 
 			FirstDocOf("Dashboard")
 				  .ToCollection()
-				  .MergeToArrayPath(apps, "Apps", Constants.FIRST_DOC_ID, true)
+				  .MergeToArrayPath(apps, "ExistingApps", Constants.FIRST_DOC_ID, true)
 				  .ExtendDocument(DQL("{'Question':@Question}", question))
 				  .OpenForm(result =>
 				  {
-					  List<string> appAndQuestion;
 					  Collection collection;
+
+					  var appAndQuestion = result.Collection
+												 .GetFirstDoc()
+												 .Values("{'AppName':$,'Question':$}");
 
 					  var query = DocsWhere("Apps", "{'Question':@Question}", question);
 
@@ -68,10 +71,6 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 					  }
 					  else
 					  {
-						  appAndQuestion = result.Collection
-												 .GetFirstDoc()
-												 .Values("{'AppName':$,'Question':$}");
-
 						  var newQuestion = @$"Create a json where {appAndQuestion[1]}.
 							Json should starts from {{ bracket.
 							Name of json attributes should start from capital letter.
@@ -85,9 +84,9 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 
 							  collection = codeBlock.Text
 												    .ToCollection(appAndQuestion[0])
-													.ExtendDocument(DQL("{'AppName':@AppName,'Question':@Question}", appAndQuestion[0], appAndQuestion[1]));
+													.ExtendDocument(DQL("{'AppName':@AppName,'Question':@Question,'OnDate':@Now}", appAndQuestion[0], appAndQuestion[1]));
 
-							  Client.AddDoc(collection.ToJson());
+							  AddDoc("Apps", collection.ToJson());
 						  }
 						  else
 						  {

@@ -11,7 +11,7 @@
     "ControlType": "RichTextBox",
     "ReadOnly": false
   },
-  "Apps": [
+  "ExistingApps": [
     {
       "DocID": {
         "Visible": false
