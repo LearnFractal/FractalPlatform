@@ -73,8 +73,10 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 						if (!string.IsNullOrEmpty(ext) &&
 							ext != ".png" &&
 							ext != ".jpg" &&
-							ext != ".gif" &&
 							ext != ".jpeg" &&
+							ext != ".gif" &&
+							ext != ".bmp" &&
+							ext != ".webp" &&
 							ext != ".md" &&
 							ext != ".gitignore" &&
 							ext != ".ico")
