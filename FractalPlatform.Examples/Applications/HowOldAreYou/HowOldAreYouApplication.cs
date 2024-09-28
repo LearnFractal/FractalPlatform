@@ -16,16 +16,16 @@ namespace FractalPlatform.Examples.Applications.HowOldAreYou
 				if (result.Result)
 				{
 					var question = result.Collection.FindFirstValue("Question");
-					var image = result.Collection.FindFirstValue("Image");
+					var photo = result.Collection.FindFirstValue("Photo");
 
-					var bytes = ReadFileBytes(image);
+					var bytes = ReadFileBytes(photo);
 
 					var answer = AI.Generate(question, AIModel.GPT4o, AIImage.FromBytes(bytes));
 
 					new
 					{
 						Age = $"Your age by photo: {answer.Text}",
-						Image = image
+						Photo = photo
 					}
 					.ToCollection("Photo")
 					.SetThemeDimension(ThemeType.LightBlue)

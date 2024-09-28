@@ -10,7 +10,7 @@
     "ControlType": "TextBox",
     "Style": "Type:Captcha"
   },
-  "Image": {
+  "Photo": {
     "ControlType": "UploadFile"
   }
 }
