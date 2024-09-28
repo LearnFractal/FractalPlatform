@@ -102,6 +102,26 @@
       "Image": ""
     },
     {
+      "App Name": "AIWhatYouSee",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 13500,
+      "FP Lines Of Code": 25,
+      "Open Application": "https://fraplat.com/jupiter/AIWhatYouSee",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/AIWhatYouSee",
+      "Description": "Определение что находится на изображении через LLM",
+      "Image": ""
+    },
+    {
+      "App Name": "HowOldAreYou",
+      "DB Entities (Tables)": 2,
+      "Classic Lines of Code": 500,
+      "FP Lines Of Code": 38,
+      "Open Application": "https://fraplat.com/jupiter/HowOldAreYou",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HowOldAreYou",
+      "Description": "Определение возраста по фото через LLM",
+      "Image": ""
+    },
+    {
       "App Name": "MultTable",
       "DB Entities (Tables)": 1,
       "Classic Lines of Code": 2790,

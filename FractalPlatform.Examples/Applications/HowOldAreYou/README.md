@@ -1,13 +1,13 @@
-# AI To Web App
+# How old are you
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/AIToWebApp/AIToWebAppApplication.cs)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/AIToWebApp)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/HowOldAreYou/HowOldAreYouApplication.cs)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/HowOldAreYou)
 
 ## Functionality
 
-Build CRUD Web Application based on any question to AI
+Identify age by photo through AI (gpt-4o)
 
 ## How it implemented
 
@@ -15,5 +15,5 @@ Build CRUD Web Application based on any question to AI
 
 ## Web Link
 
-[AIToWebApp](https://fraplat.com/jupiter/AIToWebApp)
+[HowOldAreYou](https://fraplat.com/jupiter/HowOldAreYou)
 

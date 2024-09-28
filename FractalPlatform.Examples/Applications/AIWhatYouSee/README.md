@@ -1,13 +1,13 @@
-# AI To Web App
+# AI What You See
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/AIToWebApp/AIToWebAppApplication.cs)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/AIToWebApp)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/AIWhatYouSee/AIWhatYouSeeApplication.cs)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/AIWhatYouSee)
 
 ## Functionality
 
-Build CRUD Web Application based on any question to AI
+AI try identify details by the photo
 
 ## How it implemented
 
@@ -15,5 +15,5 @@ Build CRUD Web Application based on any question to AI
 
 ## Web Link
 
-[AIToWebApp](https://fraplat.com/jupiter/AIToWebApp)
+[AIWhatYouSee](https://fraplat.com/jupiter/AIWhatYouSee)
 
