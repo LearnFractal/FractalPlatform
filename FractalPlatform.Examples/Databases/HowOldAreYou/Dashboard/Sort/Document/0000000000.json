@@ -1,11 +1,14 @@
 {
-  "Image": {
+  "Label": {
     "Index": 1
   },
-  "EnterNumber": {
+  "Image": {
     "Index": 2
   },
-  "Question": {
+  "EnterNumber": {
     "Index": 3
+  },
+  "Question": {
+    "Index": 4
   }
 }

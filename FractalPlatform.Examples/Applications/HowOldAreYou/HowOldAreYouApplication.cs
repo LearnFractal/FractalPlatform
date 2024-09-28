@@ -9,13 +9,9 @@ namespace FractalPlatform.Examples.Applications.HowOldAreYou
 {
 	public class HowOldAreYouApplication : BaseApplication
 	{
-		public override bool OnUploadFiles(IEnumerable<UploadFileInfo> fileInfos)
-		{
-			return base.OnUploadFiles(fileInfos);
-		}
-
 		public override void OnStart() =>
-			FirstDocOf("Dashboard").OpenForm(result =>
+			FirstDocOf("Dashboard")
+			.OpenForm(result =>
 			{
 				if (result.Result)
 				{
@@ -28,11 +24,12 @@ namespace FractalPlatform.Examples.Applications.HowOldAreYou
 
 					new
 					{
-						Age = $"Your age: {answer}",
+						Age = $"Your age by photo: {answer.Text}",
 						Image = image
 					}
 					.ToCollection("Photo")
-					.SetUIDimension("{'Age':{'ControlType':'Label'},'Image':{'ControlType':'Picture'}}")
+					.SetThemeDimension(ThemeType.LightBlue)
+					.SetUIDimension("{'ReadOnly':true,'Age':{'ControlType':'Label'},'Image':{'ControlType':'Picture'}}")
 					.OpenForm();
 				}
 			});

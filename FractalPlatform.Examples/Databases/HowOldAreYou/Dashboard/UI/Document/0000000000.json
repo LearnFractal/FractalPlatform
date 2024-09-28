@@ -1,5 +1,8 @@
 {
   "Style": "Save:Analyze;Cancel:false",
+  "Label": {
+    "ControlType": "Label"
+  },
   "Question": {
     "Visible": false
   },
