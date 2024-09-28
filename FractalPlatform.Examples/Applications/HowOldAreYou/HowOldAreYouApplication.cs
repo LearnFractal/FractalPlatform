@@ -2,8 +2,6 @@
 using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Clients;
 using FractalPlatform.Database.Engine;
-using FractalPlatform.Database.Engine.Info;
-using System.Collections.Generic;
 
 namespace FractalPlatform.Examples.Applications.HowOldAreYou
 {
