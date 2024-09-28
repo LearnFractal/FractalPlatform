@@ -12,14 +12,14 @@ namespace FractalPlatform.Examples.Applications.Sandbox2
     {
         public override void OnStart() 
         {
-			var bytes = File.ReadAllBytes(@"C:\Users\tuzvy\OneDrive\Pictures\Me4.jpg");
+			var bytes = File.ReadAllBytes(@"C:\Users\tuzvy\OneDrive\Pictures\Me5.jpg");
 
             var list = new List<bool>();
 
             for (int i = 0; i < 100; i++)
             {
-                var text = AI.Generate("Do you see a person who lies on the picture. Just say YES or NO",
-                                        AIModel.Llava,
+                var text = AI.Generate("I strongly needed identify age by the photo. Just say range in format: 20-25. Range should be no longer than 5 years.",
+                                        AIModel.GPT4o,
                                         AIImage.FromBytes(bytes));
 
                 list.Add(text.Text.ToLower().Contains("yes"));
