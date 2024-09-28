@@ -1,0 +1,10 @@
+{
+  "Style": "Save:Analyze;Cancel:false",
+  "EnterNumber": {
+    "ControlType": "TextBox",
+    "Style": "Type:Captcha"
+  },
+  "Image": {
+    "ControlType": "UploadFile"
+  }
+}
