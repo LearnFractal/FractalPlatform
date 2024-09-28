@@ -1,5 +1,6 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
+using FractalPlatform.Database.Clients;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 
@@ -72,7 +73,7 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 							Name of json attributes should start from capital letter.
 							If json has gps coordinates, than it should be in format {{'gps':'1.11,2.22'}}.";
 
-						  var response = AI.Generate(newQuestion, "gpt-4o");
+						  var response = AI.Generate(newQuestion, AIModel.GPT4o);
 
 						  if (response.CodeBlocks.Count > 0)
 						  {

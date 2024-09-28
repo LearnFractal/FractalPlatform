@@ -1,34 +1,19 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
+using FractalPlatform.Database.Clients;
 using FractalPlatform.Database.Engine;
+using System.IO;
 
 namespace FractalPlatform.Examples.Applications.Sandbox2
 {
     public class Sandbox2Application : BaseApplication
     {
-        private void Ollama(string question, string answer)
+        public override void OnStart() 
         {
-			new
-			{
-				Question = question,
-				Answer = answer
-			}
-			.ToCollection("Ollama")
-            .SetUIDimension("{'Style':'Save:Send;Cancel:false','Answer':{'ControlType':'RichTextBox','ReadOnly':true}}")
-            .SetThemeDimension(ThemeType.LightBlue)
-			.OpenForm(result =>
-			{
-                if (result.Result)
-                {
-                    var question = result.Collection.FindFirstValue("Question");
+            var bytes = File.ReadAllBytes(@"C:\Users\tuzvy\OneDrive\Pictures\Denmark.jpg");
 
-                    var answer = AI.Generate(question).Text;
-
-                    Ollama(question, answer);
-                }
-			});
-		}
-
-		public override void OnStart() => Ollama(string.Empty, string.Empty);
+            var text = AI.Generate("What you see on this image ?", AIModel.GPT4o, AIImage.FromBytes(bytes));
+        
+        }
     }
 }
