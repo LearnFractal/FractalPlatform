@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.AIWhatYouSee
 
 					var bytes = ReadFileBytes(image);
 
-					var answer = AI.Generate(question, AIModel.Llava, AIImage.FromBytes(bytes));
+					var answer = AI.Generate(question, AIModel.GPT4oMini, AIImage.FromBytes(bytes));
 
 					MessageBox(answer.Text, MessageBoxButtonType.Ok);
 				}
