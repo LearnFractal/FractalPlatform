@@ -29,7 +29,7 @@ namespace FractalPlatform.Examples.Applications.HowOldAreYou
 					}
 					.ToCollection("Photo")
 					.SetThemeDimension(ThemeType.LightBlue)
-					.SetUIDimension("{'ReadOnly':true,'Age':{'ControlType':'Label'},'Image':{'ControlType':'Picture'}}")
+					.SetUIDimension("{'ReadOnly':true,'Age':{'ControlType':'Label'},'Photo':{'ControlType':'Picture'}}")
 					.OpenForm();
 				}
 			});
