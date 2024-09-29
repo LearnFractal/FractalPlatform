@@ -43,7 +43,7 @@ namespace FractalPlatform.Examples.Applications.ImageHosting
                         Image = Context.UrlTag
                     }
                     .ToCollection(string.Empty)
-                    .SetUIDimension("{'Style':'Save:false;Cancel:View','Title':{'ControlType':'Label'},'URL':{'ReadOnly':true},'Image':{'ControlType':'Picture'}}")
+                    .SetUIDimension("{'Style':'Save:false;Cancel:View','Title':{'ControlType':'Label'},'URL':{'ControlType':'TextBox','ReadOnly':true},'Image':{'ControlType':'Picture'}}")
                     .OpenForm();
                 });
             }
