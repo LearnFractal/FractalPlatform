@@ -1,8 +1,6 @@
 ﻿using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Common.Clients;
-using FractalPlatform.Database.Engine.Info;
-using System.Collections.Generic;
 
 namespace FractalPlatform.Examples.Applications.AIWhatYouSee
 {
