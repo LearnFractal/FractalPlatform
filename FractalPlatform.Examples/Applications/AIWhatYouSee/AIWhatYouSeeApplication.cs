@@ -8,11 +8,6 @@ namespace FractalPlatform.Examples.Applications.AIWhatYouSee
 {
 	public class AIWhatYouSeeApplication : BaseApplication
 	{
-		public override bool OnUploadFiles(IEnumerable<UploadFileInfo> fileInfos)
-		{
-			return base.OnUploadFiles(fileInfos);
-		}
-
 		public override void OnStart() =>
 			FirstDocOf("Dashboard").OpenForm(result =>
 			{
