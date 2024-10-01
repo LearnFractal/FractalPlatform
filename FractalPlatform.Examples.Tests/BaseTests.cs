@@ -1,5 +1,5 @@
 using FractalPlatform.Client.App;
-using FractalPlatform.Database.Clients;
+using FractalPlatform.Common.Clients;
 
 namespace FractalPlatform.Examples.Tests
 {

@@ -7,7 +7,7 @@ using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine.Info;
 using FractalPlatform.Database.Engine;
 using Newtonsoft.Json;
-using FractalPlatform.Database.Clients;
+using FractalPlatform.Common.Clients;
 using System;
 
 namespace FractalPlatform.Examples.Applications.Sandbox1
