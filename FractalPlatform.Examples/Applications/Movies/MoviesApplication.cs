@@ -42,7 +42,7 @@ namespace FractalPlatform.Examples.Applications.Movies
                                                            .Select(f => new
                                                            {
                                                                NextEpisode = "Next episode",
-                                                               Title = Directory.GetFileName(f),
+                                                               Title = Directory.GetFileName(f).Replace(".mp4", ""),
                                                                Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
                                                                Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}",
                                                                Download = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
