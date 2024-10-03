@@ -16,7 +16,7 @@ namespace FractalPlatform.Examples.Applications.VideoLibrary
                       Videos = Directory.GetFiles(@"c:\VideoLibrary", "*.mp4")
                                   .Select(x => new
                                   {
-                                      Title = Directory.GetFileName(x),
+                                      Title = Directory.GetFileName(x).Replace(".mp4", ""),
                                       Size = $"{Directory.GetFileInfo(x).Length / 1024 / 1024} mb",
                                       Video = Directory.GetFileName(x)
                                   })
