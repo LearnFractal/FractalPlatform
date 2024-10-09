@@ -14,25 +14,42 @@ namespace FractalPlatform.Examples.Applications.Sandbox1
 {
 	public class Sandbox1Application : BaseApplication
 	{
+		private void GetFilesFromZip(Stream zipStream)
+		{
+			using (ZipArchive archive = new ZipArchive(zipStream))
+			{
+				foreach (ZipArchiveEntry entry in archive.Entries)
+				{
+					var ext = Path.GetExtension(entry.FullName);
+
+					using (var stream = entry.Open())
+					{
+						using (var tr = new StreamReader(stream, System.Text.Encoding.GetEncoding("windows-1251")))
+						{
+							var lines = new List<string>();
+
+							while (!tr.EndOfStream)
+							{
+								var line = tr.ReadLine();
+
+								lines.Add(line);
+							}
+
+							File.AppendAllLines(@"C:\ffmpeg\test.txt", lines);
+
+						}
+					}
+				}
+			}
+
+		}
+
 		public override void OnStart()
 		{
-			/*
-			@"Сгенерируй два джисона. Один описывает кратко пользователя. 
-					Другой описывает валидацию полей. 
-					Используй только атрибуты для валидации: MinLen, MaxLen, IsRequired 
-					Пример: Джисон {'Name':'John'}
-					Валидация: {'Name':{'MinLen':3,'MaxLen':256}}"
-			*/
+			var bytes = File.OpenRead(@"C:\Users\tuzvy\Downloads\20241004163046-56.zip");
 
-			//var xx = AI.Generate("Create a html to represent data of User. Data in this html should be marked by tag <control attr='name'></control> where name is name of user. Mark other Users props by this rule");
+			GetFilesFromZip(bytes);
 
-			//foreach (var item in xx.CodeBlocks)
-			//{
-			//	Console.WriteLine(item);
-			//}
-
-
-			
 		}
 	}
 }
