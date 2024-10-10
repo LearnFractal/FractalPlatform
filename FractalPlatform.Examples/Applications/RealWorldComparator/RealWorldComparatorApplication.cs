@@ -21,7 +21,7 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 		private class FileType
 		{
 			public string Extension { get; set; }
-			public int Lines { get; set; }
+			public int LinesOfCode { get; set; }
 			public long Length { get; set; }
 		}
 
@@ -93,7 +93,7 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 									files.Add(new FileType
 									{
 										Extension = ext,
-										Lines = lines.Count(),
+										LinesOfCode = lines.Count(),
 										Length = entry.Length
 									});
 								}
@@ -107,6 +107,7 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 								 (k, g) => new FileType
 								 {
 									 Extension = k,
+									 LinesOfCode = g.Sum(x => x.LinesOfCode),
 									 Length = g.Sum(x => x.Length)
 								 })
 								 .OrderByDescending(x => x.Length)
