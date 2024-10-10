@@ -21,6 +21,7 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 		private class FileType
 		{
 			public string Extension { get; set; }
+			public int Lines { get; set; }
 			public long Length { get; set; }
 		}
 
@@ -81,11 +82,22 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 							ext != ".gitignore" &&
 							ext != ".ico")
 						{
-							files.Add(new FileType
+							using (var stream = entry.Open())
 							{
-								Extension = ext,
-								Length = entry.Length
-							});
+								using (var sr = new StreamReader(stream))
+								{
+									var lines = sr.ReadToEnd()
+												  .Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries)
+												  .Where(x => !string.IsNullOrEmpty(x));
+
+									files.Add(new FileType
+									{
+										Extension = ext,
+										Lines = lines.Count(),
+										Length = entry.Length
+									});
+								}
+							}
 						}
 					}
 				}
