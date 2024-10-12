@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
+using System.Security.Policy;
 using System.Windows.Forms;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM.Controls;
@@ -37,7 +38,11 @@ namespace FractalPlatform.Sandbox.Controls
 
         private void BtnLink_Click(object sender, System.EventArgs e)
         {
-            Process.Start(DOMControl.Value);
-        }
+			Process.Start(new ProcessStartInfo
+			{
+				FileName = DOMControl.Value,
+				UseShellExecute = true
+			});
+		}
     }
 }
