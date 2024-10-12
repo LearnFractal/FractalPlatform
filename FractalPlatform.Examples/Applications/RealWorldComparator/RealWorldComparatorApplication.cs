@@ -6,6 +6,7 @@ using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine.Info;
 using FractalPlatform.Database.Engine;
+using System;
 
 namespace FractalPlatform.Examples.Applications.RealWorldComparator
 {
@@ -59,6 +60,30 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 			return GetFilesFromZip(zipData);
 		}
 
+		private bool IsTextFile(Stream stream)
+		{
+			try
+			{
+				var buffer = new byte[512];
+				int bytesRead = stream.Read(buffer, 0, buffer.Length);
+
+				for (int i = 0; i < bytesRead; i++)
+				{
+					byte currentByte = buffer[i];
+					// If the byte is not a typical readable character (ASCII or UTF-8 control char)
+					if (currentByte > 0x7F && currentByte < 0xA0)
+					{
+						return false;  // File contains non-text data
+					}
+				}
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+			return true;
+		}
+
 		private List<FileType> GetFilesFromZip(byte[] zipData)
 		{
 			var files = new List<FileType>();
@@ -80,7 +105,8 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 							ext != ".webp" &&
 							ext != ".md" &&
 							ext != ".gitignore" &&
-							ext != ".ico")
+							ext != ".ico" &&
+							IsTextFile(entry.Open()))
 						{
 							using (var stream = entry.Open())
 							{
