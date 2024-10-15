@@ -7,7 +7,6 @@ using FractalPlatform.Client.UI.DOM;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 using FractalPlatform.Database.Dimensions.Filter;
-using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
 namespace FractalPlatform.UTube

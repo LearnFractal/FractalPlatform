@@ -96,16 +96,10 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 					{
 						var ext = Path.GetExtension(entry.FullName);
 
+						var exts = new[] { ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp", ".md", ".gitignore", ".ico" };
+
 						if (!string.IsNullOrEmpty(ext) &&
-							ext != ".png" &&
-							ext != ".jpg" &&
-							ext != ".jpeg" &&
-							ext != ".gif" &&
-							ext != ".bmp" &&
-							ext != ".webp" &&
-							ext != ".md" &&
-							ext != ".gitignore" &&
-							ext != ".ico" &&
+							!exts.Contains(ext) &&
 							IsTextFile(entry.Open()))
 						{
 							using (var stream = entry.Open())

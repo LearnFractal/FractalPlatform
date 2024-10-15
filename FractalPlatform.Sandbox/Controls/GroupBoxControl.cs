@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Collections.Generic;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM.Controls;
 

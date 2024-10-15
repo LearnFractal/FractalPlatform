@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
-using System.Security.Policy;
 using System.Windows.Forms;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Client.UI.DOM.Controls;
