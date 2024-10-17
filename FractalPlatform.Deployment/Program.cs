@@ -400,7 +400,12 @@ namespace FractalPlatform.Deployment
 
                 if (args.Length > 0)
                 {
-                    options.AppNames = args.ToList();
+                    options.AppNames = new List<string> { args[0] };
+
+                    if (args.Length > 1)
+                    {
+                        options.DeploymentKey = args[1];
+                    }
                 }
 
                 if (options.AppNames == null)
