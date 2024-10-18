@@ -1,0 +1,6 @@
+{
+  "Limit": {
+    "MaxCount": 20,
+    "Strategy": "HideOld"
+  }
+}
