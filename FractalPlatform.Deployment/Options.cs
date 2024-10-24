@@ -23,5 +23,7 @@ namespace FractalPlatform.Deployment
         public string DeploymentKey { get; set; }
 
         public bool IsRunBrowser { get; set; }
+
+        public bool IsMultithread { get; set; }
     }
 }

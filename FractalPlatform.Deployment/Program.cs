@@ -233,6 +233,7 @@ namespace FractalPlatform.Deployment
                                          string fileName,
                                          byte[] fileBytes,
                                          string deploymentKey,
+                                         bool isMultithread,
                                          string deploymentParams = null)
         {
             using (var client = new HttpClient())
@@ -241,7 +242,7 @@ namespace FractalPlatform.Deployment
                 {
                     content.Add(new StreamContent(new MemoryStream(fileBytes)), "upload", fileName);
 
-                    var url = $"{baseUrl}/{appName}/UploadFile/?fileType={fileType}&deploymentKey={deploymentKey}&deploymentParams={deploymentParams}";
+                    var url = $"{baseUrl}/{appName}/UploadFile/?fileType={fileType}&deploymentKey={deploymentKey}&isMultithread={isMultithread}&deploymentParams={deploymentParams}";
 
                     var response = await client.PostAsync(url, content);
 
@@ -262,7 +263,8 @@ namespace FractalPlatform.Deployment
                                               bool isDeployDatabase,
                                               bool isRecreateDatabase,
                                               bool isDeployFiles,
-                                              bool isDeployApplication)
+                                              bool isDeployApplication,
+                                              bool isMultithread)
         {
             var assemblyName = GetAssemblyName(assemblyFile);
 
@@ -283,6 +285,7 @@ namespace FractalPlatform.Deployment
                                           $"{appName}.zip",
                                           fileBytes,
                                           deploymentKey,
+                                          isMultithread,
                                           isRecreateDatabase.ToString());
                     }
                     finally
@@ -308,7 +311,8 @@ namespace FractalPlatform.Deployment
                                           "Files",
                                           $"{appName}.zip",
                                           fileBytes,
-                                          deploymentKey);
+                                          deploymentKey,
+                                          isMultithread);
                     }
                     finally
                     {
@@ -333,7 +337,8 @@ namespace FractalPlatform.Deployment
                                           "Layouts",
                                           $"{appName}.zip",
                                           fileBytes,
-                                          deploymentKey);
+                                          deploymentKey,
+                                          isMultithread);
                     }
                     finally
                     {
@@ -352,7 +357,13 @@ namespace FractalPlatform.Deployment
                 {
                     var fileBytes = await File.ReadAllBytesAsync(filePath);
 
-                    await UploadAsync(baseUrl, appName, "Assembly", assemblyFile, fileBytes, deploymentKey);
+                    await UploadAsync(baseUrl,
+                                      appName,
+                                      "Assembly",
+                                      assemblyFile,
+                                      fileBytes,
+                                      deploymentKey,
+                                      isMultithread);
                 }
             }
         }
@@ -375,7 +386,8 @@ namespace FractalPlatform.Deployment
                         options.IsDeployDatabase,
                         options.IsRecreateDatabase,
                         options.IsDeployFiles,
-                        options.IsDeployApplication).Wait();
+                        options.IsDeployApplication,
+                        options.IsMultithread).Wait();
 
             Console.WriteLine($"{appName} application is deployed !");
 
@@ -415,6 +427,8 @@ namespace FractalPlatform.Deployment
                                 options.BaseUrl = args[3];
 
                                 options.IsRunBrowser = false;
+
+                                options.IsMultithread = true;
                             }
                         }
                     }
