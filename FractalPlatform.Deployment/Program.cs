@@ -404,11 +404,16 @@ namespace FractalPlatform.Deployment
 
                     if (args.Length > 1)
                     {
-                        options.DeploymentKey = args[1];
+                        options.Assemblies = new List<string> { args[1] };
 
                         if (args.Length > 2)
                         {
-                            options.BaseUrl = args[2];
+                            options.DeploymentKey = args[2];
+
+                            if (args.Length > 3)
+                            {
+                                options.BaseUrl = args[3];
+                            }
                         }
                     }
                 }
