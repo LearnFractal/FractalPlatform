@@ -413,6 +413,8 @@ namespace FractalPlatform.Deployment
                             if (args.Length > 3)
                             {
                                 options.BaseUrl = args[3];
+
+                                options.IsRunBrowser = false;
                             }
                         }
                     }
