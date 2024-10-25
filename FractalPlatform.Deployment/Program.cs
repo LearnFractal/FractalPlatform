@@ -426,9 +426,14 @@ namespace FractalPlatform.Deployment
                             {
                                 options.BaseUrl = args[3];
 
-                                options.IsRunBrowser = false;
+                                if (args.Length > 4)
+                                {
+                                    options.IsRecreateDatabase = bool.Parse(args[4]);
 
-                                options.IsMultithread = true;
+                                    options.IsRunBrowser = false;
+
+                                    options.IsMultithread = true;
+                                }
                             }
                         }
                     }
