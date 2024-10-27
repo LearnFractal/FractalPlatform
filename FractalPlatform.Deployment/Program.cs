@@ -506,6 +506,8 @@ namespace FractalPlatform.Deployment
                                     options.IsRunBrowser = false;
 
                                     options.IsMultithread = true;
+
+                                    options.IsRebuildApplication = true;
                                 }
                             }
                         }
