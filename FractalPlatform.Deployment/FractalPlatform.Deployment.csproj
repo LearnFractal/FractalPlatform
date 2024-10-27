@@ -17,20 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Build" Version="17.11.4" ExcludeAssets="runtime"/>
+    <PackageReference Include="Microsoft.Build" Version="17.11.4" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.7.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\FractalPlatform.Examples\FractalPlatform.Examples.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.CoffeePoints\FractalPlatform.CoffeePoints.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.CorpChat\FractalPlatform.CorpChat.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.Forum\FractalPlatform.Forum.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.RealWorld\FractalPlatform.RealWorld.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.Seasons\FractalPlatform.Seasons.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.UTube\FractalPlatform.UTube.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.Weather\FractalPlatform.Weather.csproj" />
   </ItemGroup>
 
 </Project>

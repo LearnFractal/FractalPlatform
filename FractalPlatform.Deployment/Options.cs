@@ -17,7 +17,9 @@ namespace FractalPlatform.Deployment
         public bool IsRecreateDatabase { get; set; }
 
         public bool IsDeployFiles { get; set; }
-  
+
+        public bool IsRebuildApplication { get; set; }
+
         public bool IsDeployApplication { get; set; }
 
         public string DeploymentKey { get; set; }
@@ -25,7 +27,5 @@ namespace FractalPlatform.Deployment
         public bool IsRunBrowser { get; set; }
 
         public bool IsMultithread { get; set; }
-
-        public bool IsRebuild { get; set; }
     }
 }
