@@ -567,7 +567,11 @@ namespace FractalPlatform.Deployment
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Error: {ex.Message}");
-                Console.ReadKey();
+
+                if (args.Length == 0)
+                {
+                    Console.ReadKey();
+                }
             }
 
             Console.ResetColor();
