@@ -24,3 +24,8 @@ Application demonstrates online theatre with series and episodes with next funct
 
 [Movies](https://fraplat.com/jupiter/Movies)
 
+## Open app in Fractal Studio
+
+[Play with Movies in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Movies+template)
+
+

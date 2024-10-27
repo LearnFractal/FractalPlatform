@@ -22,3 +22,8 @@ Application demonstrates the simplest ToDo list with next functionality:
 
 [ToDo](https://fraplat.com/jupiter/?app=ToDo)
 
+## Open app in Fractal Studio
+
+[Play with ToDo in sandbox](https://fraplat.com/mars/FractalStudio/?tag=ToDo+template)
+
+

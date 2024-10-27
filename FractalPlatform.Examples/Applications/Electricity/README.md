@@ -17,3 +17,8 @@ Application shows locations with electricity and notify if electricity has gone 
 
 [Electricity](https://fraplat.com/jupiter/Electricity)
 
+## Open app in Fractal Studio
+
+[Play with Electricity in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Electricity+template)
+
+

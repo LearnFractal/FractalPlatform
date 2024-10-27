@@ -17,3 +17,8 @@ Convert excel table to json
 
 [TableToJson](https://fraplat.com/jupiter/TableToJson)
 
+## Open app in Fractal Studio
+
+[Play with TableToJson in sandbox](https://fraplat.com/mars/FractalStudio/?tag=TableToJson+template)
+
+

@@ -17,3 +17,8 @@ Template application for test purposes
 
 [Template](https://fraplat.com/jupiter/Template)
 
+## Open app in Fractal Studio
+
+[Play with Template in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Template+template)
+
+

@@ -28,3 +28,8 @@ Application implements freelance exchange market with next functionality:
 
 [FreelanceResponse](https://fraplat.com/jupiter/?app=FreelanceResponse)
 
+## Open app in Fractal Studio
+
+[Play with FreelanceResponse in sandbox](https://fraplat.com/mars/FractalStudio/?tag=FreelanceResponse+template)
+
+

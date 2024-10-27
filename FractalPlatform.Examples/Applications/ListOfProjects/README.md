@@ -17,3 +17,8 @@ List of projects application for demo purposes
 
 [ProjectList](https://fraplat.com/jupiter/ListOfProjects)
 
+## Open app in Fractal Studio
+
+[Play with ProjectList in sandbox](https://fraplat.com/mars/FractalStudio/?tag=ProjectList+template)
+
+

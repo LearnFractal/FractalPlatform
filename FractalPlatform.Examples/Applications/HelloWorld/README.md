@@ -17,3 +17,8 @@ Application shows "Hello Fractal World !" message
 
 [HelloWorld](https://fraplat.com/jupiter/?app=HelloWorld)
 
+## Open app in Fractal Studio
+
+[Play with HelloWorld in sandbox](https://fraplat.com/mars/FractalStudio/?tag=HelloWorld+template)
+
+

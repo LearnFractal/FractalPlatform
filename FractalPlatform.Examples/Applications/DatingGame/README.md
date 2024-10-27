@@ -28,3 +28,8 @@ Details of implementation
 
 [DatingGame](https://fraplat.com/jupiter/?app=DatingGame)
 
+## Open app in Fractal Studio
+
+[Play with DatingGame in sandbox](https://fraplat.com/mars/FractalStudio/?tag=DatingGame+template)
+
+

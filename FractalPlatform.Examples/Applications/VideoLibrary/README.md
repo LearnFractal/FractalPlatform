@@ -24,3 +24,8 @@ Application demonstrates web catalog of online videos with next functionality:
 
 [VideoLibrary](https://fraplat.com/jupiter/?app=VideoLibrary)
 
+## Open app in Fractal Studio
+
+[Play with VideoLibrary in sandbox](https://fraplat.com/mars/FractalStudio/?tag=VideoLibrary+template)
+
+

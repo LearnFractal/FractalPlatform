@@ -24,3 +24,7 @@ Application demonstrates ToDo list with categories with next functionality:
 ## Web Link
 
 [ToDoWithCategories](https://fraplat.com/jupiter/?app=ToDoWithCategories)
+
+## Open app in Fractal Studio
+
+[Play with ToDoWithCategories in sandbox](https://fraplat.com/mars/FractalStudio/?tag=ToDoWithCategories+template)

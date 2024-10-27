@@ -18,3 +18,8 @@ Application demonstrates how to works with user credentials
 
 [Login](https://fraplat.com/jupiter/?app=Login)
 
+## Open app in Fractal Studio
+
+[Play with Login in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Login+template)
+
+

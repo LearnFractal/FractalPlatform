@@ -17,3 +17,8 @@ Identify age by photo through AI (gpt-4o)
 
 [HowOldAreYou](https://fraplat.com/jupiter/HowOldAreYou)
 
+## Open app in Fractal Studio
+
+[Play with HowOldAreYou in sandbox](https://fraplat.com/mars/FractalStudio/?tag=HowOldAreYou+template)
+
+

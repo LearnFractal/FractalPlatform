@@ -25,3 +25,8 @@ Application demonstrates the simple platform for Taxi company with next function
 
 [Taxi](https://fraplat.com/jupiter/?app=Taxi)
 
+## Open app in Fractal Studio
+
+[Play with Taxi in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Taxi+template)
+
+

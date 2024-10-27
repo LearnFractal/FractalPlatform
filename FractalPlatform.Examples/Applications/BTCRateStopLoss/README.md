@@ -18,3 +18,8 @@ Also in case of exceed limits it sends message to telegram
 
 [BTCRateStopLoss](https://fraplat.com/jupiter/?app=BTCRateStopLoss)
 
+## Open app in Fractal Studio
+
+[Play with BTCRateStopLoss in sandbox](https://fraplat.com/mars/FractalStudio/?tag=BTCRateStopLoss+template)
+
+

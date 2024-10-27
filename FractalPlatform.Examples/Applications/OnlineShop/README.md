@@ -30,3 +30,6 @@ Additional functionality
 
 [OnlineShop](https://fraplat.com/jupiter/?app=OnlineShop)
 
+## Open app in Fractal Studio
+
+[Play with OnlineShop in sandbox](https://fraplat.com/mars/FractalStudio/?tag=OnlineShop+template)

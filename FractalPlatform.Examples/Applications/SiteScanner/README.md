@@ -19,3 +19,8 @@ then send user notification via telegram
 
 [SiteScanner](https://fraplat.com/jupiter/SiteScanner)
 
+## Open app in Fractal Studio
+
+[Play with SiteScanner in sandbox](https://fraplat.com/mars/FractalStudio/?tag=SiteScanner+template)
+
+

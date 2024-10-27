@@ -26,3 +26,8 @@ Send text message:
 
 [SendTextMessage](https://fraplat.com/jupiter/?app=SendTextMessage)
 
+## Open app in Fractal Studio
+
+[Play with SendTextMessage in sandbox](https://fraplat.com/mars/FractalStudio/?tag=SendTextMessage+template)
+
+

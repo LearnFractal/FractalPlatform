@@ -24,3 +24,8 @@ On third stage if all answers are right
 
 [MultTable](https://fraplat.com/jupiter/?app=MultTable)
 
+## Open app in Fractal Studio
+
+[Play with MultTable in sandbox](https://fraplat.com/mars/FractalStudio/?tag=MultTable+template)
+
+

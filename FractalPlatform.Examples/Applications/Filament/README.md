@@ -20,3 +20,8 @@ Filaments application
 
 [Filament](https://fraplat.com/jupiter/Filament)
 
+## Open app in Fractal Studio
+
+[Play with Filament in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Filament+template)
+
+

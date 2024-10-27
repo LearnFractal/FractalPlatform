@@ -20,3 +20,8 @@ Application demonstrates how to create photo album with:
 
 [PhotoAlbum](https://fraplat.com/jupiter/?app=PhotoAlbum)
 
+## Open app in Fractal Studio
+
+[Play with PhotoAlbum in sandbox](https://fraplat.com/mars/FractalStudio/?tag=PhotoAlbum+template)
+
+

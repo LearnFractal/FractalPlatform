@@ -1,17 +1,13 @@
-# ToDo List
+# Uezjunyka
 
 ## Sources
 
-- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ToDo/ToDoApplication.cs)
-- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/ToDo)
+- [Application](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/Uezjunyka/UezjunykaApplication.cs)
+- [Database](https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Databases/Uezjunyka)
 
 ## Functionality
 
-Application demonstrates the simplest ToDo list with next functionality:
-- Add task
-- Edit task
-- Mark task as Completed
-- Delete task from list
+Fun application
 
 ## How it implemented
 
@@ -19,5 +15,10 @@ Application demonstrates the simplest ToDo list with next functionality:
 
 ## Web Link
 
-[ToDo](https://fraplat.com/jupiter/?app=ToDo)
+[Uezjunyka](https://fraplat.com/jupiter/?app=Uezjunyka)
+
+## Open app in Fractal Studio
+
+[Play with Uezjunyka in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Uezjunyka+template)
+
 

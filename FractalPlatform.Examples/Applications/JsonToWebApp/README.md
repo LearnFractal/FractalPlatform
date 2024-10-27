@@ -17,3 +17,8 @@ Build CRUD Web Application based on any json text
 
 [JsonToWebApp](https://fraplat.com/jupiter/JsonToWebApp)
 
+## Open app in Fractal Studio
+
+[Play with JsonToWebApp in sandbox](https://fraplat.com/mars/FractalStudio/?tag=JsonToWebApp+template)
+
+

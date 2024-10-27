@@ -17,3 +17,8 @@ AI try identify details by the photo
 
 [AIWhatYouSee](https://fraplat.com/jupiter/AIWhatYouSee)
 
+## Open app in Fractal Studio
+
+[Play with AIWhatYouSee in sandbox](https://fraplat.com/mars/FractalStudio/?tag=AIWhatYouSee+template)
+
+

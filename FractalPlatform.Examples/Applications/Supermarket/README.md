@@ -24,3 +24,8 @@ Admin can change the stock: Add new products, remove products, change price, cha
 
 [Supermarket](https://fraplat.com/jupiter/?app=Supermarket)
 
+## Open app in Fractal Studio
+
+[Play with Supermarket in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Supermarket+template)
+
+

@@ -20,3 +20,8 @@ In current case application shows BTC price in USD/EUR currencies from Coindesk.
 
 [BTCRate](https://fraplat.com/jupiter/BTCRate)
 
+## Open app in Fractal Studio
+
+[Play with BTCRate in sandbox](https://fraplat.com/mars/FractalStudio/?tag=BTCRate+template)
+
+

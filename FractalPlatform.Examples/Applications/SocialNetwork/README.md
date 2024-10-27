@@ -33,3 +33,8 @@ Application moderates a simple social network with next functionality:
 
 [SocialNetwork](https://fraplat.com/jupiter/?app=SocialNetwork)
 
+## Open app in Fractal Studio
+
+[Play with SocialNetwork in sandbox](https://fraplat.com/mars/FractalStudio/?tag=SocialNetwork+template)
+
+

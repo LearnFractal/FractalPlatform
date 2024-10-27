@@ -19,3 +19,8 @@ Search criteria: amount adults, amount nights, scan period (from 1 to 30 days)
 
 [Shelest](https://fraplat.com/mars/Shelest)
 
+## Open app in Fractal Studio
+
+[Play with Shelest in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Shelest+template)
+
+

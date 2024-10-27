@@ -17,3 +17,8 @@ Calculate maximum blood pressure based on weight and age
 
 [PressureCalc](https://fraplat.com/jupiter/PressureCalc)
 
+## Open app in Fractal Studio
+
+[Play with PressureCalc in sandbox](https://fraplat.com/mars/FractalStudio/?tag=PressureCalc+template)
+
+

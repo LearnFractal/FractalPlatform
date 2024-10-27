@@ -24,3 +24,8 @@ for new users with next functionality:
 
 [ToDoIntro](https://fraplat.com/jupiter/?app=ToDoIntro)
 
+## Open app in Fractal Studio
+
+[Play with ToDoIntro in sandbox](https://fraplat.com/mars/FractalStudio/?tag=ToDoIntro+template)
+
+

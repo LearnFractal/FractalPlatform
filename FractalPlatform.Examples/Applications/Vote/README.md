@@ -22,3 +22,8 @@ Application implements small engine for anonymous votes with next functionality:
 
 [Vote](https://fraplat.com/jupiter/?app=Vote)
 
+## Open app in Fractal Studio
+
+[Play with Vote in sandbox](https://fraplat.com/mars/FractalStudio/?tag=Vote+template)
+
+

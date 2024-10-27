@@ -18,3 +18,6 @@ Monitor electricity in my location.
 
 [MyElectro](https://fraplat.com/jupiter/MyElectro)
 
+## Open app in Fractal Studio
+
+[Play with MyElectro in sandbox](https://fraplat.com/mars/FractalStudio/?tag=MyElectro+template)
