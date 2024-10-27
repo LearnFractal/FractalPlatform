@@ -10,6 +10,7 @@ using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using Microsoft.Build.Evaluation;
 using Microsoft.Build.Execution;
+using Microsoft.Build.Framework;
 using Microsoft.Build.Locator;
 using Microsoft.Build.Logging;
 using Newtonsoft.Json;
@@ -384,9 +385,10 @@ namespace FractalPlatform.Deployment
             var projectCollection = new ProjectCollection();
             var project = projectCollection.LoadProject(projFile);
 
+            var captureLogger = new CaptureLogger();
             var buildParameters = new BuildParameters(projectCollection)
             {
-                Loggers = new[] { new ConsoleLogger() } // Logger to output build messages
+                Loggers = new[] { captureLogger }
             };
 
             var buildProperties = new Dictionary<string, string>
@@ -400,156 +402,174 @@ namespace FractalPlatform.Deployment
 
             var buildRequestData = new BuildRequestData(project.FullPath, buildProperties, null, new[] { "Restore", "Build" }, null);
 
-            var buildResult = BuildManager.DefaultBuildManager.Build(buildParameters, buildRequestData);
+            var buildManager = BuildManager.DefaultBuildManager;
 
-            if (buildResult.OverallResult != BuildResultCode.Success)
+            buildManager.BeginBuild(buildParameters);
+
+            var buildResult = buildManager.BuildRequest(buildRequestData);
+
+            buildManager.EndBuild();
+
+            if (buildResult.OverallResult == BuildResultCode.Success)
             {
+                Console.WriteLine($"Build {appName} succeded.");
+
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("=============================");
+
+                foreach (var error in captureLogger.Errors)
+                {
+                    Console.WriteLine($"Error: {error}");
+                }
+                Console.WriteLine("=============================");
+
+                Console.WriteLine($"Build {appName} FAILED.");
+
                 return false;
             }
-
-            Console.WriteLine($"Build {appName} succeded.");
-
-            return true;
         }
 
-        static void Deploy(Options options, string appName)
+    static void Deploy(Options options, string appName)
+    {
+        Console.WriteLine($"Start deploying {appName} application to {options.BaseUrl} host ...");
+
+        var assembly = options.Assemblies.FirstOrDefault(assembly => IsAssemblyHasApp(assembly, appName));
+
+        if (assembly == null)
         {
-            Console.WriteLine($"Start deploying {appName} application to {options.BaseUrl} host ...");
-
-            var assembly = options.Assemblies.FirstOrDefault(assembly => IsAssemblyHasApp(assembly, appName));
-
-            if (assembly == null)
-            {
-                throw new InvalidOperationException($"'{appName}' application is not found in assemblies.");
-            }
-
-            UploadAsync(options.BaseUrl,
-                        appName,
-                        assembly,
-                        options.DeploymentKey,
-                        options.IsDeployDatabase,
-                        options.IsRecreateDatabase,
-                        options.IsDeployFiles,
-                        options.IsDeployApplication,
-                        options.IsMultithread).Wait();
-
-            Console.WriteLine($"{appName} application is deployed !");
-
-            if (options.IsRunBrowser)
-            {
-                var url = string.Format($"{options.BaseUrl}/{appName}");
-
-                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
-            }
+            throw new InvalidOperationException($"'{appName}' application is not found in assemblies.");
         }
 
-        static void Main(string[] args)
+        UploadAsync(options.BaseUrl,
+                    appName,
+                    assembly,
+                    options.DeploymentKey,
+                    options.IsDeployDatabase,
+                    options.IsRecreateDatabase,
+                    options.IsDeployFiles,
+                    options.IsDeployApplication,
+                    options.IsMultithread).Wait();
+
+        Console.WriteLine($"{appName} application is deployed !");
+
+        if (options.IsRunBrowser)
         {
-            try
+            var url = string.Format($"{options.BaseUrl}/{appName}");
+
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        try
+        {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            var appSettings = File.ReadAllText("appsettings.json");
+
+            var options = JsonConvert.DeserializeObject<Options>(appSettings);
+
+            if (args.Length > 0)
             {
-                Console.BackgroundColor = ConsoleColor.Black;
-                Console.ForegroundColor = ConsoleColor.Green;
+                options.AppNames = new List<string> { args[0] };
 
-                var appSettings = File.ReadAllText("appsettings.json");
-
-                var options = JsonConvert.DeserializeObject<Options>(appSettings);
-
-                if (args.Length > 0)
+                if (args.Length > 1)
                 {
-                    options.AppNames = new List<string> { args[0] };
+                    options.Assemblies = new List<string> { args[1] };
 
-                    if (args.Length > 1)
+                    if (args.Length > 2)
                     {
-                        options.Assemblies = new List<string> { args[1] };
+                        options.DeploymentKey = args[2];
 
-                        if (args.Length > 2)
+                        if (args.Length > 3)
                         {
-                            options.DeploymentKey = args[2];
+                            options.BaseUrl = args[3];
 
-                            if (args.Length > 3)
+                            if (args.Length > 4)
                             {
-                                options.BaseUrl = args[3];
+                                options.IsRecreateDatabase = bool.Parse(args[4]);
 
-                                if (args.Length > 4)
-                                {
-                                    options.IsRecreateDatabase = bool.Parse(args[4]);
+                                options.IsRunBrowser = false;
 
-                                    options.IsRunBrowser = false;
+                                options.IsMultithread = true;
 
-                                    options.IsMultithread = true;
-
-                                    options.IsRebuild = true;
-                                }
+                                options.IsRebuild = true;
                             }
                         }
                     }
                 }
+            }
 
-                if (options.AppNames == null)
+            if (options.AppNames == null)
+            {
+                options.AppNames = new List<string>();
+
+                foreach (var assemblyFile in options.Assemblies)
                 {
-                    options.AppNames = new List<string>();
-
-                    foreach (var assemblyFile in options.Assemblies)
-                    {
-                        var assemblyName = GetAssemblyName(assemblyFile);
+                    var assemblyName = GetAssemblyName(assemblyFile);
 
 #if DEBUG
-                        var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\net8.0\{assemblyFile}";
+                    var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\net8.0\{assemblyFile}";
 #else
                     var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Release\net8.0\{assemblyFile}";
 #endif
 
-                        var bytes = File.ReadAllBytes(filePath);
+                    var bytes = File.ReadAllBytes(filePath);
 
-                        var assembly = Assembly.Load(bytes);
+                    var assembly = Assembly.Load(bytes);
 
-                        foreach (var type in assembly.GetTypes().Where(x => x.Name.EndsWith("Application")))
+                    foreach (var type in assembly.GetTypes().Where(x => x.Name.EndsWith("Application")))
+                    {
+                        var appName = type.Name.Replace("Application", "");
+
+                        if (options.ExcludeAppNames == null ||
+                            !options.ExcludeAppNames.Contains(appName))
                         {
-                            var appName = type.Name.Replace("Application", "");
-
-                            if (options.ExcludeAppNames == null ||
-                                !options.ExcludeAppNames.Contains(appName))
-                            {
-                                options.AppNames.Add(appName);
-                            }
+                            options.AppNames.Add(appName);
                         }
                     }
-
-                    options.IsRunBrowser = false;
                 }
 
+                options.IsRunBrowser = false;
+            }
+
+            if (options.IsRebuild)
+            {
+                MSBuildLocator.RegisterDefaults();
+            }
+
+            Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
+
+            foreach (var appName in options.AppNames)
+            {
                 if (options.IsRebuild)
                 {
-                    MSBuildLocator.RegisterDefaults();
-                }
-
-                Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
-
-                foreach (var appName in options.AppNames)
-                {
-                    if (options.IsRebuild)
-                    {
-                        if (Rebuild(appName))
-                        {
-                            Deploy(options, appName);
-                        }
-                    }
-                    else
+                    if (Rebuild(appName))
                     {
                         Deploy(options, appName);
                     }
                 }
-
-                Console.WriteLine("All applications are deployed !");
-            }
-            catch (Exception ex)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Error: {ex.Message}");
-                Console.ReadKey();
+                else
+                {
+                    Deploy(options, appName);
+                }
             }
 
-            Console.ResetColor();
+            Console.WriteLine("All applications are deployed !");
         }
+        catch (Exception ex)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"Error: {ex.Message}");
+            Console.ReadKey();
+        }
+
+        Console.ResetColor();
     }
+}
 }
