@@ -478,8 +478,6 @@ namespace FractalPlatform.Deployment
 
                                     options.IsMultithread = true;
 
-                                    MSBuildLocator.RegisterDefaults();
-
                                     options.IsRebuild = true;
                                 }
                             }
@@ -518,6 +516,11 @@ namespace FractalPlatform.Deployment
                     }
 
                     options.IsRunBrowser = false;
+                }
+
+                if (options.IsRebuild)
+                {
+                    MSBuildLocator.RegisterDefaults();
                 }
 
                 Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
