@@ -373,36 +373,47 @@ namespace FractalPlatform.Deployment
             }
         }
 
-        static void Deploy(Options options, string appName)
+        static bool Rebuild(string appName)
         {
-            if (options.IsRebuild)
+            Console.WriteLine($"Start build {appName} application ...");
+
+            var assemblyName = $"FractalPlatform.{appName}";
+
+            var projFile = @$"{FindAssemblyPath(assemblyName)}\{assemblyName}.csproj";
+
+            var projectCollection = new ProjectCollection();
+            var project = projectCollection.LoadProject(projFile);
+
+            var buildParameters = new BuildParameters(projectCollection)
             {
-                Console.WriteLine($"Start build {appName} application ...");
+                Loggers = new[] { new ConsoleLogger() } // Logger to output build messages
+            };
 
-                var assemblyName = $"FractalPlatform.{appName}";
+            var buildProperties = new Dictionary<string, string>
+            {
+#if DEBUG
+                { "Configuration", "Debug" } // Set the build configuration to Debug
+#else
+                { "Configuration", "Release" } // Set the build configuration to Release
+#endif
+            };
 
-                var projFile = @$"{FindAssemblyPath(assemblyName)}\{assemblyName}.csproj";
+            var buildRequestData = new BuildRequestData(project.FullPath, buildProperties, null, new[] { "Restore", "Build" }, null);
 
-                var projectCollection = new ProjectCollection();
-                var project = projectCollection.LoadProject(projFile);
+            var buildResult = BuildManager.DefaultBuildManager.Build(buildParameters, buildRequestData);
 
-                var buildParameters = new BuildParameters(projectCollection)
-                {
-                    Loggers = new[] { new ConsoleLogger() } // Logger to output build messages
-                };
-
-                var buildRequestData = new BuildRequestData(project.FullPath, new Dictionary<string, string>(), null, new[] { "Restore", "Build" }, null);
-
-                var buildResult = BuildManager.DefaultBuildManager.Build(buildParameters, buildRequestData);
-
-                if (buildResult.OverallResult != BuildResultCode.Success)
-                {
-                    return;
-                }
-
-                Console.WriteLine($"Build {appName} succeded.");
+            if (buildResult.OverallResult != BuildResultCode.Success)
+            {
+                return false;
             }
 
+            Console.WriteLine($"Build {appName} succeded.");
+
+            return true;
+        }
+
+        static void Deploy(Options options, string appName)
+        {
             Console.WriteLine($"Start deploying {appName} application to {options.BaseUrl} host ...");
 
             var assembly = options.Assemblies.FirstOrDefault(assembly => IsAssemblyHasApp(assembly, appName));
@@ -475,12 +486,12 @@ namespace FractalPlatform.Deployment
                         }
                     }
                 }
-               
+
                 if (options.AppNames == null)
                 {
-					options.AppNames = new List<string>();
+                    options.AppNames = new List<string>();
 
-					foreach (var assemblyFile in options.Assemblies)
+                    foreach (var assemblyFile in options.Assemblies)
                     {
                         var assemblyName = GetAssemblyName(assemblyFile);
 
@@ -513,7 +524,17 @@ namespace FractalPlatform.Deployment
 
                 foreach (var appName in options.AppNames)
                 {
-                    Deploy(options, appName);
+                    if (options.IsRebuild)
+                    {
+                        if (Rebuild(appName))
+                        {
+                            Deploy(options, appName);
+                        }
+                    }
+                    else
+                    {
+                        Deploy(options, appName);
+                    }
                 }
 
                 Console.WriteLine("All applications are deployed !");
