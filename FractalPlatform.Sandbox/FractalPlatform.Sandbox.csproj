@@ -22,18 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FractalPlatform.Deployment\FractalPlatform.Deployment.csproj" />
-    <ProjectReference Include="..\FractalPlatform.Examples\FractalPlatform.Examples.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.CoffeePoints\FractalPlatform.CoffeePoints.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.CorpChat\FractalPlatform.CorpChat.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.Forum\FractalPlatform.Forum.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.RealWorld\FractalPlatform.RealWorld.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.Seasons\FractalPlatform.Seasons.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.UTube\FractalPlatform.UTube.csproj" />
-    <ProjectReference Include="..\Projects\FractalPlatform.Weather\FractalPlatform.Weather.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="FractalPlatform.Client">
       <HintPath>..\Bin\FractalPlatform.Client.dll</HintPath>
     </Reference>
