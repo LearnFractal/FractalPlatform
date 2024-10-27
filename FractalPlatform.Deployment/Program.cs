@@ -6,7 +6,12 @@ using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
+using Microsoft.Build.Evaluation;
+using Microsoft.Build.Execution;
+using Microsoft.Build.Locator;
+using Microsoft.Build.Logging;
 using Newtonsoft.Json;
 
 namespace FractalPlatform.Deployment
@@ -370,6 +375,34 @@ namespace FractalPlatform.Deployment
 
         static void Deploy(Options options, string appName)
         {
+            if (options.IsRebuild)
+            {
+                Console.WriteLine($"Start build {appName} application ...");
+
+                var assemblyName = $"FractalPlatform.{appName}";
+
+                var projFile = @$"{FindAssemblyPath(assemblyName)}\{assemblyName}.csproj";
+
+                var projectCollection = new ProjectCollection();
+                var project = projectCollection.LoadProject(projFile);
+
+                var buildParameters = new BuildParameters(projectCollection)
+                {
+                    Loggers = new[] { new ConsoleLogger() } // Logger to output build messages
+                };
+
+                var buildRequestData = new BuildRequestData(project.FullPath, new Dictionary<string, string>(), null, new[] { "Restore", "Build" }, null);
+
+                var buildResult = BuildManager.DefaultBuildManager.Build(buildParameters, buildRequestData);
+
+                if (buildResult.OverallResult != BuildResultCode.Success)
+                {
+                    return;
+                }
+
+                Console.WriteLine($"Build {appName} succeded.");
+            }
+
             Console.WriteLine($"Start deploying {appName} application to {options.BaseUrl} host ...");
 
             var assembly = options.Assemblies.FirstOrDefault(assembly => IsAssemblyHasApp(assembly, appName));
@@ -433,12 +466,16 @@ namespace FractalPlatform.Deployment
                                     options.IsRunBrowser = false;
 
                                     options.IsMultithread = true;
+
+                                    MSBuildLocator.RegisterDefaults();
+
+                                    options.IsRebuild = true;
                                 }
                             }
                         }
                     }
                 }
-
+               
                 if (options.AppNames == null)
                 {
 					options.AppNames = new List<string>();

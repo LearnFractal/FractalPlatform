@@ -25,5 +25,7 @@ namespace FractalPlatform.Deployment
         public bool IsRunBrowser { get; set; }
 
         public bool IsMultithread { get; set; }
+
+        public bool IsRebuild { get; set; }
     }
 }
