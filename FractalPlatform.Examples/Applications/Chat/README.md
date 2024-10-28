@@ -16,7 +16,7 @@ Application moderates anonimous chat where users can send messages
 
 ## Web Link
 
-[Chat](https://fraplat.com/jupiter/?app=Chat)
+[Chat](https://fraplat.com/jupiter/Chat)
 
 ## Open app in Fractal Studio
 

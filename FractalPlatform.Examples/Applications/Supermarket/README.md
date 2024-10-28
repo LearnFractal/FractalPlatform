@@ -22,7 +22,7 @@ Admin can change the stock: Add new products, remove products, change price, cha
 
 ## Web Link
 
-[Supermarket](https://fraplat.com/jupiter/?app=Supermarket)
+[Supermarket](https://fraplat.com/jupiter/Supermarket)
 
 ## Open app in Fractal Studio
 

@@ -17,7 +17,7 @@ Application demonstrates how to work with encrypted data in the database.
 
 ## Web Link
 
-[ManagePasswords](https://fraplat.com/jupiter/?app=ManagePasswords)
+[ManagePasswords](https://fraplat.com/jupiter/ManagePasswords)
 
 ## Open app in Fractal Studio
 

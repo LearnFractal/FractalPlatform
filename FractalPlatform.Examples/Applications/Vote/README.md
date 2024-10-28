@@ -20,7 +20,7 @@ Application implements small engine for anonymous votes with next functionality:
 
 ## Web Link
 
-[Vote](https://fraplat.com/jupiter/?app=Vote)
+[Vote](https://fraplat.com/jupiter/Vote)
 
 ## Open app in Fractal Studio
 

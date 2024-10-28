@@ -16,7 +16,7 @@ Application demonstrates how to works with user credentials
 
 ## Web Link
 
-[LoginOrRegister](https://fraplat.com/jupiter/?app=LoginOrRegister)
+[LoginOrRegister](https://fraplat.com/jupiter/LoginOrRegister)
 
 ## Open app in Fractal Studio
 

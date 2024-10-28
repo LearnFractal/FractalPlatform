@@ -23,7 +23,7 @@ Application demonstrates the simple platform for Taxi company with next function
 
 ## Web Link
 
-[Taxi](https://fraplat.com/jupiter/?app=Taxi)
+[Taxi](https://fraplat.com/jupiter/Taxi)
 
 ## Open app in Fractal Studio
 

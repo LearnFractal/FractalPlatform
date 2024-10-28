@@ -22,7 +22,7 @@ for new users with next functionality:
 
 ## Web Link
 
-[ToDoIntro](https://fraplat.com/jupiter/?app=ToDoIntro)
+[ToDoIntro](https://fraplat.com/jupiter/ToDoIntro)
 
 ## Open app in Fractal Studio
 

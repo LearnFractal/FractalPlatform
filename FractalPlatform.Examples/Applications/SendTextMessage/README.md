@@ -24,7 +24,7 @@ Send text message:
 
 ## Web Link
 
-[SendTextMessage](https://fraplat.com/jupiter/?app=SendTextMessage)
+[SendTextMessage](https://fraplat.com/jupiter/SendTextMessage)
 
 ## Open app in Fractal Studio
 

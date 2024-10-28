@@ -22,7 +22,7 @@ Application demonstrates web catalog of online videos with next functionality:
 
 ## Web Link
 
-[VideoLibrary](https://fraplat.com/jupiter/?app=VideoLibrary)
+[VideoLibrary](https://fraplat.com/jupiter/VideoLibrary)
 
 ## Open app in Fractal Studio
 

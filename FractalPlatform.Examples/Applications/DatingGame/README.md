@@ -26,7 +26,7 @@ Details of implementation
 
 ## Web Link
 
-[DatingGame](https://fraplat.com/jupiter/?app=DatingGame)
+[DatingGame](https://fraplat.com/jupiter/DatingGame)
 
 ## Open app in Fractal Studio
 

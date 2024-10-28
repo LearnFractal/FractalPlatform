@@ -31,7 +31,7 @@ Application moderates a simple social network with next functionality:
 
 ## Web Link
 
-[SocialNetwork](https://fraplat.com/jupiter/?app=SocialNetwork)
+[SocialNetwork](https://fraplat.com/jupiter/SocialNetwork)
 
 ## Open app in Fractal Studio
 

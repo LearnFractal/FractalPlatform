@@ -23,7 +23,7 @@ Application demonstrates ToDo list with categories with next functionality:
 
 ## Web Link
 
-[ToDoWithCategories](https://fraplat.com/jupiter/?app=ToDoWithCategories)
+[ToDoWithCategories](https://fraplat.com/jupiter/ToDoWithCategories)
 
 ## Open app in Fractal Studio
 

@@ -16,7 +16,7 @@ Also in case of exceed limits it sends message to telegram
 
 ## Web Link
 
-[BTCRateStopLoss](https://fraplat.com/jupiter/?app=BTCRateStopLoss)
+[BTCRateStopLoss](https://fraplat.com/jupiter/BTCRateStopLoss)
 
 ## Open app in Fractal Studio
 

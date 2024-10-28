@@ -28,7 +28,7 @@ Additional functionality
 
 ## Web Link
 
-[OnlineShop](https://fraplat.com/jupiter/?app=OnlineShop)
+[OnlineShop](https://fraplat.com/jupiter/OnlineShop)
 
 ## Open app in Fractal Studio
 

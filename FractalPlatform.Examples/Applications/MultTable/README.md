@@ -22,7 +22,7 @@ On third stage if all answers are right
 
 ## Web Link
 
-[MultTable](https://fraplat.com/jupiter/?app=MultTable)
+[MultTable](https://fraplat.com/jupiter/MultTable)
 
 ## Open app in Fractal Studio
 

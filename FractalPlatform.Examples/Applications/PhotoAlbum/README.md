@@ -18,7 +18,7 @@ Application demonstrates how to create photo album with:
 
 ## Web Link
 
-[PhotoAlbum](https://fraplat.com/jupiter/?app=PhotoAlbum)
+[PhotoAlbum](https://fraplat.com/jupiter/PhotoAlbum)
 
 ## Open app in Fractal Studio
 

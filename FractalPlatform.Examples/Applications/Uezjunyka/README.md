@@ -15,7 +15,7 @@ Fun application
 
 ## Web Link
 
-[Uezjunyka](https://fraplat.com/jupiter/?app=Uezjunyka)
+[Uezjunyka](https://fraplat.com/jupiter/Uezjunyka)
 
 ## Open app in Fractal Studio
 

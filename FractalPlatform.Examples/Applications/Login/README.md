@@ -16,7 +16,7 @@ Application demonstrates how to works with user credentials
 
 ## Web Link
 
-[Login](https://fraplat.com/jupiter/?app=Login)
+[Login](https://fraplat.com/jupiter/Login)
 
 ## Open app in Fractal Studio
 

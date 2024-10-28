@@ -26,7 +26,7 @@ Application implements freelance exchange market with next functionality:
 
 ## Web Link
 
-[FreelanceResponse](https://fraplat.com/jupiter/?app=FreelanceResponse)
+[FreelanceResponse](https://fraplat.com/jupiter/FreelanceResponse)
 
 ## Open app in Fractal Studio
 

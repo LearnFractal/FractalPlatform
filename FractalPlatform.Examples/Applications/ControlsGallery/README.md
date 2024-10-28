@@ -17,7 +17,7 @@ standard web UI controls and UI components
 
 ## Web Link
 
-[ControlsGallery](https://fraplat.com/jupiter/?app=ControlsGallery)
+[ControlsGallery](https://fraplat.com/jupiter/ControlsGallery)
 
 ## Open app in Fractal Studio
 

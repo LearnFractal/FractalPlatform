@@ -15,7 +15,7 @@ Application shows "Hello Fractal World !" message
 
 ## Web Link
 
-[HelloWorld](https://fraplat.com/jupiter/?app=HelloWorld)
+[HelloWorld](https://fraplat.com/jupiter/HelloWorld)
 
 ## Open app in Fractal Studio
 

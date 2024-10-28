@@ -20,7 +20,7 @@ Application demonstrates the simplest ToDo list with next functionality:
 
 ## Web Link
 
-[ToDo](https://fraplat.com/jupiter/?app=ToDo)
+[ToDo](https://fraplat.com/jupiter/ToDo)
 
 ## Open app in Fractal Studio
 
