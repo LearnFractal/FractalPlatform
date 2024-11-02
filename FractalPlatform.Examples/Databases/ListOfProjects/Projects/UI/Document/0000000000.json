@@ -12,6 +12,9 @@
       "Open Sources": {
         "ControlType": "Link"
       },
+      "Open in Fractal Studio": {
+        "ControlType": "Link"
+      },
       "Image": {
         "ControlType": "Picture"
       }

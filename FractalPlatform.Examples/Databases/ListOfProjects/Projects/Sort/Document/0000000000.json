@@ -25,8 +25,11 @@
       "Open Sources": {
         "Index": 8
       },
-      "Image": {
+      "Open in Fractal Studio": {
         "Index": 9
+      },
+      "Image": {
+        "Index": 10
       }
     }
   ]
