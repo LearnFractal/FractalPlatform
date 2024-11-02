@@ -1,5 +1,5 @@
 {
-  "Style": "CollLabel:;Type:Link;Hide:Open Application,Open Sources,Image",
+  "Style": "CollLabel:;Type:Link;Hide:Open Application,Open Sources,Open in Fractal Studio,Image",
   "ReadOnly": true,
   "Title": {
     "ControlType": "Label"
