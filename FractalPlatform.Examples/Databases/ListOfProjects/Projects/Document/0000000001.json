@@ -462,6 +462,16 @@
       "Image": ""
     },
     {
+      "App Name": "FractalStudio",
+      "DB Entities (Tables)": 8,
+      "Classic Lines of Code": 15500,
+      "FP Lines Of Code": 3500,
+      "Open Application": "https://fraplat.com/jupiter/FractalPlatform",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/FractalStudio",
+      "Description": "Online студия для разработки/отладки/деплоя приложений на FP",
+      "Image": ""
+    },
+    {
       "App Name": "FractalPlatform",
       "DB Entities (Tables)": 200,
       "Classic Lines of Code": 135000,
