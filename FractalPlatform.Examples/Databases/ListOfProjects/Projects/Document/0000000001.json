@@ -134,6 +134,17 @@
       "Image": ""
     },
     {
+      "App Name": "ListOfProjects",
+      "DB Entities (Tables)": 1,
+      "Classic Lines of Code": 250,
+      "FP Lines Of Code": 10,
+      "Open Application": "https://fraplat.com/jupiter/ListOfProjects",
+      "Open Sources": "https://github.com/LearnFractal/FractalPlatform/tree/main/FractalPlatform.Examples/Applications/ListOfProjects",
+      "Open in Fractal Studio": "https://fraplat.com/mars/FractalStudio/?tag=ListOfProjects+template",
+      "Description": "Список примеров проектов на FP",
+      "Image": ""
+    },
+    {
       "App Name": "MultTable",
       "DB Entities (Tables)": 1,
       "Classic Lines of Code": 2790,
