@@ -547,11 +547,18 @@ namespace FractalPlatform.Deployment
 
                 Console.WriteLine($"Start deploying {options.AppNames.Count} applications ...");
 
+                bool isNeedRegisterDefaults = true;
+
                 foreach (var appName in options.AppNames)
                 {
                     if (options.IsRebuildApplication)
                     {
-                        MSBuildLocator.RegisterDefaults();
+                        if (isNeedRegisterDefaults)
+                        {
+                            MSBuildLocator.RegisterDefaults();
+
+                            isNeedRegisterDefaults = false;
+                        }
 
                         Rebuild(appName);
                     }
