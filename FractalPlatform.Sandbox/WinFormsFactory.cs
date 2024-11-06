@@ -59,7 +59,7 @@ namespace FractalPlatform.Sandbox
                 resultEvent = context.Application
                                      .ExecuteWithSaveContext(context,
                                                              () => context.Application
-                                                                          .OnOpenForm(new FormInfo(collection, new AttrPath(parentKey), docID)));
+                                                                          .OnOpenFormWithDebug(new FormInfo(collection, new AttrPath(parentKey), docID)));
 
                 _isFormOpening = false;
             }
@@ -182,7 +182,7 @@ namespace FractalPlatform.Sandbox
                 ActiveForm.Context
                           .Application
                           .ExecuteWithSaveContext(ActiveForm.Context,
-                                                  () => ActiveForm.Context.Application.OnCloseForm(new Database.Engine.Info.FormInfo(ActiveForm.Collection,
+                                                  () => ActiveForm.Context.Application.OnCloseFormWithDebug(new FormInfo(ActiveForm.Collection,
                                                                          new AttrPath(ActiveForm.ParentKey),
                                                                          ActiveForm.DocID))))
             {
