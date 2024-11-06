@@ -152,7 +152,7 @@ namespace FractalPlatform.Sandbox
             var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Release\net8.0\{assemblyFile}";
 #endif
 
-                var assembly = Assembly.LoadFile(filePath);
+                var assembly = Assembly.LoadFrom(filePath);
 
                 Type type;
                 string workingFolder;

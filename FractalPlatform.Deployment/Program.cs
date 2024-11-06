@@ -528,9 +528,7 @@ namespace FractalPlatform.Deployment
                     var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Release\net8.0\{assemblyFile}";
 #endif
 
-                        var bytes = File.ReadAllBytes(filePath);
-
-                        var assembly = Assembly.Load(bytes);
+                        var assembly = Assembly.LoadFrom(filePath);
 
                         foreach (var type in assembly.GetTypes().Where(x => x.Name.EndsWith("Application")))
                         {
