@@ -11,8 +11,8 @@ namespace FractalPlatform.Examples.Applications.AIWhatYouSee
 			{
 				if (result.Result)
 				{
-					var question = result.Collection.FindFirstValue("Question");
-					var image = result.Collection.FindFirstValue("Image");
+					var question = result.FindFirstValue("Question");
+					var image = result.FindFirstValue("Image");
 
 					var bytes = ReadFileBytes(image);
 

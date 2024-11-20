@@ -142,7 +142,7 @@ namespace FractalPlatform.RealWorld
 						{
 							if (result.Result)
 							{
-								var nameAndPass = result.Collection.FindFirstValues("Name", "Password");
+								var nameAndPass = result.FindFirstValues("Name", "Password");
 
 								TryLogin(nameAndPass[0], nameAndPass[1]);
 
@@ -163,21 +163,21 @@ namespace FractalPlatform.RealWorld
 					return DocsWhere("Articles", info.DocID).Delete("{'Likes':[@UserName]}");
 				case "FollowUser":
 					{
-						var who = info.Collection.FindFirstValue("Who");
+						var who = info.FindFirstValue("Who");
 
 						return DocsWhere("Users", "{'Name':@Who}", who)
 								.Update("{'Followers':[Add,@UserName]}");
 					}
 				case "UnfollowUser":
 					{
-						var who = info.Collection.FindFirstValue("Who");
+						var who = info.FindFirstValue("Who");
 
 						return DocsWhere("Users", "{'Name':@Who}", who)
 								.Delete("{'Followers':[@UserName]}");
 					}
 				case "AddComment":
 					{
-						var comment = info.Collection.FindFirstValue("Comment");
+						var comment = info.FindFirstValue("Comment");
 
 						return DocsWhere("Articles", info.DocID)
 								.Update("{'Comments':[Add,{'Who':@UserName,'Avatar':@UserAvatar,'OnDate':@Now,'Text':@Text,'RemoveComment':''}]}", comment);
@@ -238,7 +238,7 @@ namespace FractalPlatform.RealWorld
 			{
 				if (result.Result)
 				{
-					var nameAndPass = result.Collection.FindFirstValues("Name", "Password");
+					var nameAndPass = result.FindFirstValues("Name", "Password");
 
 					if (TryLogin(nameAndPass[0], nameAndPass[1]))
 					{

@@ -376,8 +376,8 @@ namespace FractalPlatform.UTube
                     }
                 case "NewComment":
                     {
-                        var uid = info.Collection.FindFirstValue("UID");
-                        var comment = info.Collection.FindFirstValue("Comment");
+                        var uid = info.FindFirstValue("UID");
+                        var comment = info.FindFirstValue("Comment");
 
                         DocsWhere("Channels", "{'Videos':[{'UID':@UID}]}", uid)
                             .Update("{'Videos':[{'Comments':[Add,{'Who':@UserName,'OnDate':@Now,'Avatar':@Avatar,'Text':@Comment}]}]}",
@@ -389,7 +389,7 @@ namespace FractalPlatform.UTube
                     }
                 case "NewLike":
                     {
-                        var uid = info.Collection.FindFirstValue("UID");
+                        var uid = info.FindFirstValue("UID");
 
                         if(!DocsWhere("Channels", "{'Videos':[{'UID':@UID,'Likes':[Any,@UserName]}]}", uid).Any())
                         {
@@ -403,7 +403,7 @@ namespace FractalPlatform.UTube
                     }
                 case "Filter":
                     {
-                        var filter = info.Collection.FindFirstValue("FilterText");
+                        var filter = info.FindFirstValue("FilterText");
 
                         Dashboard(filter);
 

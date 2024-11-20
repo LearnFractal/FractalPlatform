@@ -109,7 +109,7 @@ namespace FractalPlatform.Examples.Applications.Shelest
             {
                 if (result.Result)
                 {
-                    var vals = result.Collection.FindFirstValues("Nights", "Adults", "ScanDays");
+                    var vals = result.FindFirstValues("Nights", "Adults", "ScanDays");
                     
                     Dashboard(int.Parse(vals[0]), int.Parse(vals[1]), int.Parse(vals[2]));
                 }

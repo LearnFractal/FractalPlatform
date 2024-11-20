@@ -277,9 +277,9 @@ namespace FractalPlatform.Seasons
                     }
                 case "AddComment":
                     {
-                        var movie = info.Collection.FindFirstValue("Name");
+                        var movie = info.FindFirstValue("Name");
 
-                        var text = info.Collection.FindFirstValue("Comment");
+                        var text = info.FindFirstValue("Comment");
 
                         DocsWhere("Movies", "{'Name':@Name}", movie)
                         .Update("{'Comments':[Add,{'Name':@Name,'Avatar':@Avatar,'Text':@Text, 'ViewUser':'View User'}]}", Context.User.Name, Context.User.Avatar, text);
@@ -456,7 +456,7 @@ namespace FractalPlatform.Seasons
             }
         }
 
-        public override bool OnSecurityDimension(SecurityInfo info) => info.Collection.FindFirstValue("Name") == Context.User.Name; //@MyProfile variable
+        public override bool OnSecurityDimension(SecurityInfo info) => info.FindFirstValue("Name") == Context.User.Name; //@MyProfile variable
 
         public override void OnStart()
         {

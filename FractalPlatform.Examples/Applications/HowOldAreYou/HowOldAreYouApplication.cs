@@ -13,8 +13,8 @@ namespace FractalPlatform.Examples.Applications.HowOldAreYou
 			{
 				if (result.Result)
 				{
-					var question = result.Collection.FindFirstValue("Question");
-					var photo = result.Collection.FindFirstValue("Photo");
+					var question = result.FindFirstValue("Question");
+					var photo = result.FindFirstValue("Photo");
 
 					var bytes = ReadFileBytes(photo);
 

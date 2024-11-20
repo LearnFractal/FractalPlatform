@@ -13,8 +13,8 @@ namespace FractalPlatform.Examples.Applications.AIToWebApp
 			 {
 				 if (result.Result)
 				 {
-					 var appName = result.Collection.FindFirstValue("AppName");
-					 var question = result.Collection.FindFirstValue("Question");
+					 var appName = result.FindFirstValue("AppName");
+					 var question = result.FindFirstValue("Question");
 
 					 Dashboard(appName, question);
 				 }

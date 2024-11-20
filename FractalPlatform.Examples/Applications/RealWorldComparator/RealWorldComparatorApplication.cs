@@ -141,10 +141,10 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 			FirstDocOf("Compare")
 				.OpenForm(result =>
 			{
-				var frontend = result.Collection.FindFirstValue("Frontend");
-				var backend = result.Collection.FindFirstValue("Backend");
-				var fullstack = result.Collection.FindFirstValue("Fullstack");
-				var fractalPlatform = result.Collection.FindFirstValue("FractalPlatform");
+				var frontend = result.FindFirstValue("Frontend");
+				var backend = result.FindFirstValue("Backend");
+				var fullstack = result.FindFirstValue("Fullstack");
+				var fractalPlatform = result.FindFirstValue("FractalPlatform");
 
 				if ((fullstack == "None" && frontend != "None" && backend != "None") ||
 				   (fullstack != "None" && frontend == "None" && backend == "None"))
