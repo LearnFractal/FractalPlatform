@@ -528,6 +528,17 @@
       }
     },
     {
+      "Description": "Raw",
+      "Name": "Raw",
+      "Dimensions": {
+        "Document": "{'Control':'<b>Bold text</b>'}",
+        "UI": "{'ControlType':'Raw'}"
+      },
+      "Example": {
+        "Control": "<b>Bold text</b>"
+      }
+    },
+    {
       "Description": "Upload file to server",
       "Name": "UploadFile",
       "Dimensions": {
