@@ -591,6 +591,17 @@
           }
         ]
       }
+    },
+    {
+      "Description": "GPS coordinates on map",
+      "Name": "GPS",
+      "Dimensions": {
+        "Document": "{'Control':'50.450001,30.523333'}",
+        "UI": "{'ControlType':'GPS'}"
+      },
+      "Example": {
+        "Control": "50.450001,30.523333"
+      }
     }
   ]
 }
