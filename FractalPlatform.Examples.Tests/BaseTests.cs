@@ -11,7 +11,7 @@ namespace FractalPlatform.Examples.Tests
         {
             _app = new T();
 
-            _app.REST = new RESTClient();
+            _app.REST = new RESTClient(null);
         }
     }
 }

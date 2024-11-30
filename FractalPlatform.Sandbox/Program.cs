@@ -182,6 +182,8 @@ namespace FractalPlatform.Sandbox
 
                     var formFactory = new WinFormsFactory();
 
+                    var serviceBus = new ServiceBus();
+
                     var app = (BaseApplication)Activator.CreateInstance(type);
 
                     Console.WriteLine($"Init {options.AppName} application ...");
@@ -191,6 +193,7 @@ namespace FractalPlatform.Sandbox
                              null,
                              null,
                              formFactory,
+                             serviceBus,
                              Directory.Exists(dbPath) ? dbName : null);
 
                     RunTimers(app);
