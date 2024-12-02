@@ -1,28 +1,28 @@
-﻿{
-  "OnDate": "",
-  "Points": 0,
-  "Restrictions": {
-    "NoAlcohol": false,
-    "NoCoffee": false,
-    "NoPolitics": false,
-    "NoEatAfter18": false,
-    "NoSugar": false,
-    "NoBread": false,
-    "NoTV" :  false
-  },
-  "Sport": {
-    "Stairs": false,
-    "Gym": false,
-    "HangOn": false
-  },
-  "Project": {
-    "Think": false,
-    "Communicate": false,
-    "Code": false
-  },
-  "Work": {
-    "English": false,
-    "Read": false,
-    "Job": false
-  }
+{
+   "OnDate": "",
+   "Points": 0,
+   "Project": {
+      "Code": false,
+      "Communicate": false,
+      "Think": false
+   },
+   "Restrictions": {
+      "NoAlcohol": false,
+      "NoBread": false,
+      "NoCoffee": false,
+      "NoEatAfter18": false,
+      "NoPolitics": false,
+      "NoSugar": false,
+      "NoTV": false
+   },
+   "Sport": {
+      "Gym": false,
+      "HangOn": false,
+      "Stairs": false
+   },
+   "Work": {
+      "English": false,
+      "Job": false,
+      "Read": false
+   }
 }

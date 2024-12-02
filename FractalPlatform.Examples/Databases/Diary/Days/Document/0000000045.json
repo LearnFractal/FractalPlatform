@@ -1,21 +1,21 @@
 {
-   "OnDate": "08/22/2024 14:49:29",
-   "Points": 40,
+   "OnDate": "11/13/2024 22:39:46",
+   "Points": 0,
    "Project": {
-      "Code": false,
+      "Code": true,
       "Communicate": false,
       "Think": false
    },
    "Restrictions": {
       "NoAlcohol": true,
       "NoBread": true,
-      "NoCoffee": false,
-      "NoEatAfter18": false,
-      "NoPolitics": false,
-      "NoSugar": false
+      "NoCoffee": true,
+      "NoEatAfter18": true,
+      "NoPolitics": true,
+      "NoSugar": true
    },
    "Sport": {
-      "Gym": false,
+      "Gym": true,
       "Stairs": false
    },
    "Work": {
