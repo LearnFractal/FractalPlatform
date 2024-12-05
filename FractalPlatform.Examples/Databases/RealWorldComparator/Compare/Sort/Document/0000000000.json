@@ -1,0 +1,18 @@
+﻿{
+  "Title": { "Index": 1 },
+  "First implementation": {
+    "ChooseProjects": { "Index": 2 },
+    "Frontend": { "Index": 3 },
+    "Backend": { "Index": 4 },
+    "OrChooseProject": { "Index": 5 },
+    "Fullstack": { "Index": 6 }
+  },
+  "Second implementation": {
+    "FractalPlatform": { "Index": 7 }
+  },
+  "Useful links": {
+    "Mother of all demo apps": { "Index": 8 },
+    "List of demo implementations": { "Index": 9 },
+    "Deployed web app on Fractal Platform": { "Index": 10 }
+  }
+}
