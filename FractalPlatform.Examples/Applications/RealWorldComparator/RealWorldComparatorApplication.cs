@@ -106,10 +106,8 @@ namespace FractalPlatform.Examples.Applications.RealWorldComparator
 							{
 								using (var sr = new StreamReader(stream))
 								{
-									var delims = new[] { "\r", "\n" };
-
 									var lines = sr.ReadToEnd()
-												  .Split(delims, StringSplitOptions.RemoveEmptyEntries)
+												  .Split(Constants.NewLineDelimeters, StringSplitOptions.RemoveEmptyEntries)
 												  .Where(x => !string.IsNullOrEmpty(x));
 
 									files.Add(new FileType
