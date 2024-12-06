@@ -63,12 +63,12 @@ namespace FractalPlatform.Examples.Applications.MultTable
                                   {
                                       if (sbDoc.Length > 1)
                                       {
-                                          sbDoc.Append(",\n");
-                                          sbVal.Append(",\n");
+                                          sbDoc.AppendLine(",");
+                                          sbVal.AppendLine(",");
                                       }
 
-                                      sbDoc.Append($"\"{i} : {j} =\":\"\"");
-                                      sbVal.Append($"\"{i} : {j} =\":").Append("{\"Formula\":\"@Value = " + (i / j).ToString() + "\"}");
+                                      sbDoc.Append($"'{i} : {j} =':''");
+                                      sbVal.Append($"'{i} : {j} =':").Append("{'Formula':'@Value = " + (i / j).ToString() + "'}");
                                   }
                               }
                           }
