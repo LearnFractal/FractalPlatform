@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter.Examples", "Tools\FractalPlatform.Converter.Examples\FractalPlatform.Converter.Examples.csproj", "{E031A9E0-106F-4CE5-BB60-71FFFF45C8AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLib", "TestLib\TestLib.csproj", "{4013A1EA-C84E-4685-9039-29EC3178DE67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +157,14 @@ Global
 		{E031A9E0-106F-4CE5-BB60-71FFFF45C8AF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E031A9E0-106F-4CE5-BB60-71FFFF45C8AF}.Release|x86.ActiveCfg = Release|Any CPU
 		{E031A9E0-106F-4CE5-BB60-71FFFF45C8AF}.Release|x86.Build.0 = Release|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Debug|x86.Build.0 = Debug|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Release|x86.ActiveCfg = Release|Any CPU
+		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -170,6 +180,7 @@ Global
 		{6348296E-CD5C-424D-B652-ABA88A61F314} = {D7922311-428D-469F-A14F-2C52F5725311}
 		{8626F341-03DD-4680-ABBA-8D6AD39E8397} = {D7922311-428D-469F-A14F-2C52F5725311}
 		{E031A9E0-106F-4CE5-BB60-71FFFF45C8AF} = {D7922311-428D-469F-A14F-2C52F5725311}
+		{4013A1EA-C84E-4685-9039-29EC3178DE67} = {F28180B4-148A-4F98-B3B3-EE5E834C1838}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {842F3684-70EF-46AF-AA77-E2F6307580EF}
