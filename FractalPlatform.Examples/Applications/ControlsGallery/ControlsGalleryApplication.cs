@@ -19,15 +19,19 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
                                  .GetWhere(info.AttrPath)
                                  .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}", pathName));
 
-                info.Collection
-                        .GetWhere(info.AttrPath)
-                        .ToCollection(DQL("{@PathName:[$]}", pathName))
-                        .ResetDimension(DimensionType.UI)
-                        .SetDimension(DimensionType.Enum, "{'Controls':[{'Example':{'Control':{'Items':['One','Two','Three']}}}]}")
-                        .SetUIDimension(DQL("{'Style':'Save:false','ReadOnly':true,@PathName:[{'Example':{'ReadOnly':false,'Style':'Save:true','Control':@UIDimension}}]}", pathName, ui))
-                        .OpenForm();
+				var coll = info.Collection
+						.GetWhere(info.AttrPath)
+						.ToCollection(DQL("{@PathName:[$]}", pathName));
 
-                return false;
+				coll.DocumentStorage
+					.RemoveParentAttrs2(Context, 2);
+
+				coll.ResetDimension(DimensionType.UI)
+					.SetDimension(DimensionType.Enum, "{'Example':{'Control':{'Items':['One','Two','Three']}}}")
+					.SetUIDimension(DQL("{'Style':'Save:false','ReadOnly':true,'Example':{'ReadOnly':false,'Style':'Save:true','Control':@UIDimension}}", ui))
+					.OpenForm();
+
+				return false;
             }
             else
             {

@@ -15,7 +15,7 @@ namespace FractalPlatform.Examples.Applications.Filament
                 var attrs = result.Collection.ToAttrList();
                 var shops = attrs.Where(x => x.Key.FirstPath == "Shop" && x.Value.GetBoolValue()).Select(x => x.Key.LastPath);
                 var colors = attrs.Where(x => x.Key.FirstPath == "Color" && x.Value.GetBoolValue()).Select(x => x.Key.LastPath);
-                var products = Regex.Matches(REST.Get("https://filament.in.ua"), "(?<name>[a-zA-Zа-яА-Яі\\-\\s0-9]+[0-9].[0-9]{1,2} кг.)")
+                var products = Regex.Matches(REST.Get("https://filament.in.ua"), @"(?<name>[a-zA-Zа-яА-Яі\-\s0-9]+[0-9].[0-9]{1,2} кг.)")
                                  .Where(x => shops.Any(y => x.Value.Contains(y)) && (colors.Any(y => x.Value.Contains(y)) || colors.Contains("Всі")))
                                  .Select(x => new { Name = x.Value, Price = $"{new Random().Next(100, 700)} грн", Link = "https://shop.com" }).ToList();
                 new
