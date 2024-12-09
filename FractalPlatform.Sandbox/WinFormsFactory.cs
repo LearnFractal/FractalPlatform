@@ -215,5 +215,12 @@ namespace FractalPlatform.Sandbox
                 return false;
             }
         }
+
+        public bool SaveForm()
+        {
+            ActiveForm.SaveForm();
+
+            return true;
+        }
     }
 }
