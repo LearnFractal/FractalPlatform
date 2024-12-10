@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLib", "TestLib\TestLib.csproj", "{4013A1EA-C84E-4685-9039-29EC3178DE67}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Common", "FractalPlatform.Common\FractalPlatform.Common.csproj", "{C0632814-96C7-4A30-949A-FB31ECFA41DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,14 @@ Global
 		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Release|x86.ActiveCfg = Release|Any CPU
 		{4013A1EA-C84E-4685-9039-29EC3178DE67}.Release|x86.Build.0 = Release|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Debug|x86.Build.0 = Debug|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Release|x86.ActiveCfg = Release|Any CPU
+		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
