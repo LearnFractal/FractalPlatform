@@ -34,6 +34,6 @@ namespace FractalPlatform.Common.Clients
 
         public const string DallE3 = "dall-e-3";
 
-		public const string Gemini = "Gemini";
+		public const string Gemini = "gemini";
     }
 }
