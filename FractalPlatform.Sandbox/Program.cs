@@ -171,8 +171,8 @@ namespace FractalPlatform.Sandbox
                     type = assembly.GetType($"{assemblyName}.{appName}Application");
                     workingFolder = @$"{solutionPath}\Projects\{assemblyName}";
                     dbName = "Database";
-                    dbPath = workingFolder;
-                }
+					dbPath = @$"{workingFolder}\Database";
+				}
 
                 Context.BasePath = @$"{solutionPath}\{assemblyName}";
 
