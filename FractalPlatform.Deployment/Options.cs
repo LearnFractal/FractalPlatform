@@ -18,8 +18,6 @@ namespace FractalPlatform.Deployment
 
         public bool IsDeployFiles { get; set; }
 
-        public bool IsRebuildApplication { get; set; }
-
         public bool IsDeployApplication { get; set; }
 
         public string DeploymentKey { get; set; }
