@@ -235,6 +235,7 @@ namespace FractalPlatform.Deployment
 				{
 					ZipFile.CreateFromDirectory(startPath, zipPath);
 				}
+
 				return zipPath;
 			}
 
@@ -276,8 +277,7 @@ namespace FractalPlatform.Deployment
 											  bool isDeployDatabase,
 											  bool isRecreateDatabase,
 											  bool isDeployFiles,
-											  bool isDeployApplication,
-											  bool isMultithread)
+											  bool isDeployApplication)
 		{
 			var assemblyName = GetAssemblyName(assemblyFile);
 
@@ -368,7 +368,7 @@ namespace FractalPlatform.Deployment
 						await UploadAsync(baseUrl,
 										  appName,
 										  "Sources",
-										  assemblyFile,
+										  $"{appName}.zip",
 										  fileBytes,
 										  deploymentKey);
 					}
@@ -398,8 +398,7 @@ namespace FractalPlatform.Deployment
 						options.IsDeployDatabase,
 						options.IsRecreateDatabase,
 						options.IsDeployFiles,
-						options.IsDeployApplication,
-						options.IsMultithread).Wait();
+						options.IsDeployApplication).Wait();
 
 			Console.WriteLine($"{appName} application is deployed !");
 
