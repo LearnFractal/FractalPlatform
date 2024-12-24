@@ -68,9 +68,7 @@ namespace FractalPlatform.Examples.Applications.TableToJson
             FirstDocOf("Dashboard")
                   .OpenForm(result =>
                   {
-                      var fileName = result.Collection
-                                           .GetFirstDoc()
-                                           .Value("{'Table':$}");
+                      var fileName = result.FindFirstValue("Table");
 
                       var text = ReadFileText(fileName);
 

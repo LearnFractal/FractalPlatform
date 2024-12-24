@@ -32,9 +32,7 @@ namespace FractalPlatform.Examples.Applications.ImageHosting
                 .SetDimension(DimensionType.Validation, "{'Image':{'IsRequired':true}}")
                 .OpenForm(result =>
                 {
-                    Context.UrlTag = result.Collection
-                                           .GetFirstDoc()
-                                           .Value("{'Image':$}");
+                    Context.UrlTag = result.FindFirstValue("Image");
 
                     new
                     {

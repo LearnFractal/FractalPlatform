@@ -15,9 +15,7 @@ namespace FractalPlatform.Examples.Applications.ManagePasswords
                           {
                               if (result.Result)
                               {
-                                  var password = result.Collection
-                                                   .GetFirstDoc()
-                                                   .Value("{'EncryptPassword':$}");
+                                  var password = result.FindFirstValue("EncryptPassword");
 
                                   if (password?.Length >= 6)
                                   {

@@ -83,9 +83,7 @@ namespace FractalPlatform.Examples.Applications.Movies
             {
                 if (result.Result)
                 {
-                    if (result.Collection
-                              .GetFirstDoc()
-                              .IsEquals("{'Password':$}", password))
+                    if (result.FindFirstValue("Password") == password)
                     {
                         Context.UrlTag = password;
 

@@ -12,9 +12,7 @@ namespace FractalPlatform.Examples.Applications.TextToQRCode
                   {
                       new
                       {
-                          QRCode = result.Collection
-                                         .GetFirstDoc()
-                                         .Value("{'Text':$}")
+                          QRCode = result.FindFirstValue("Text")
                       }
                       .ToCollection(string.Empty)
                       .SetUIDimension("{'QRCode':{'ControlType':'Picture','Style':'Save:false;Type:QRCode'}}")

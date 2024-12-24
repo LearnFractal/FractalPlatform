@@ -22,9 +22,7 @@ namespace FractalPlatform.Examples.Applications.JsonToWebApp
             FirstDocOf("Dashboard")
                   .OpenForm(result =>
                   {
-                      var json = result.Collection
-                                       .GetFirstDoc()
-                                       .Value("{'JSON':$}");
+                      var json = result.FindFirstValue("JSON");
 
                       new
                       {
