@@ -285,6 +285,39 @@
           "Lng": ""
         }
       }
+    },
+    {
+      "Description": "Json code editor",
+      "Name": "Json code editor",
+      "Dimensions": {
+        "Document": "{'Control':'{\\'Attr\\':10}'}",
+        "UI": "{'ControlType':'Code','Style':'Type:Json'}"
+      },
+      "Example": {
+        "Control": "{'Attr':10}"
+      }
+    },
+    {
+      "Description": "Html code editor",
+      "Name": "Html code editor",
+      "Dimensions": {
+        "Document": "{'Control':'<b>Test</b>'}",
+        "UI": "{'ControlType':'Code','Style':'Type:Html'}"
+      },
+      "Example": {
+        "Control": "<b>Test</b>"
+      }
+    },
+    {
+      "Description": "CSharp code editor",
+      "Name": "CS code editor",
+      "Dimensions": {
+        "Document": "{'Control':'Console.WriteLine(10);'}",
+        "UI": "{'ControlType':'Code','Style':'Type:CS'}"
+      },
+      "Example": {
+        "Control": "Console.WriteLine(10);"
+      }
     }
   ],
   "Controls": [
