@@ -13,11 +13,11 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
             if (!info.AttrPath.IsEmpty &&
                  info.AttrPath.Count == 2)
             {
-                var pathName = info.AttrPath.GetFirstPath();
+				var pathName = info.AttrPath.GetFirstPath();
 
-                var ui = info.Collection
-                                 .GetWhere(info.AttrPath)
-                                 .Value(DQL("{@PathName:[{'Dimensions':{'UI':$}}]}", pathName));
+				var ui = info.Collection
+								 .GetWhere(info.AttrPath)
+								 .Value(DQL("{@PathName:[{'Dimensions':{'UI':{'Text':$}}}]}", pathName));
 
 				var coll = info.Collection
 						.GetWhere(info.AttrPath)
@@ -28,8 +28,23 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
 
 				coll.ResetDimension(DimensionType.UI)
 					.SetDimension(DimensionType.Enum, "{'Example':{'Control':{'Items':['One','Two','Three']}}}")
-					.SetUIDimension(DQL("{'Style':'Save:false','ReadOnly':true,'Example':{'ReadOnly':false,'Style':'Save:true','Control':@UIDimension}}", ui))
+					.SetUIDimension(DQL(@"{'Style':'Save:false',
+                                           'ReadOnly':true,
+                                           'Dimensions': {
+                                              'DocumentLabel': {'ControlType': 'Label'},
+                                              'Document': {'ControlType':'Code'},
+                                              'EnumLabel': {'ControlType': 'Enum'},
+                                              'Enum': {'ControlType':'Code'},
+                                              'UILabel': {'ControlType': 'Label'},
+                                              'UI': {'ControlType':'Code'}
+                                           },
+                                           'Example': {
+                                              'ReadOnly':false,
+                                              'Style':'Save:true',
+                                              'Control':@UIDimension
+                                           }}", ui))
 					.OpenForm();
+
 
 				return false;
             }

@@ -5,8 +5,14 @@
       "Description": "Radio button choose",
       "Name": "RadioButton",
       "Dimensions": {
-        "Document": "{'Control':{'Option1':true,'Option2':false}}",
-        "UI": "{'ControlType':'RadioButton'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Option1':true,'Option2':false}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'RadioButton'}"
+        }
       },
       "Example": {
         "Control": {
@@ -19,8 +25,14 @@
       "Description": "Render tags",
       "Name": "Tags",
       "Dimensions": {
-        "Document": "{'Control':['One','Two','Three']}",
-        "UI": "{'ControlType':'Tags'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':['One','Two','Three']}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Tags'}"
+        }
       },
       "Example": {
         "Control": [
@@ -34,8 +46,14 @@
       "Description": "Like adds user name to Control array",
       "Name": "Likes",
       "Dimensions": {
-        "Document": "{'Control':['Test']}",
-        "UI": "{'ControlType':'Likes'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':['Test']}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Likes'}"
+        }
       },
       "Example": {
         "Control": [
@@ -47,8 +65,14 @@
       "Description": "List of messages",
       "Name": "Messages",
       "Dimensions": {
-        "Document": "{'Control':[{'OnDate':'2023-01-01','Text':'Hello World !','Who':'Guest'}]}",
-        "UI": "{'ControlType':'Messages'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':[{'OnDate':'2023-01-01','Text':'Hello World !','Who':'Guest'}]}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Messages'}"
+        }
       },
       "Example": {
         "Control": [
@@ -64,8 +88,14 @@
       "Description": "List of comments",
       "Name": "Comments",
       "Dimensions": {
-        "Document": "{'Control':[{'Avatar':'Guest.png','OnDate':'2023-01-01','Picture':'Message.jpg','Text':'Hello World !','Who':'Guest'}]}",
-        "UI": "{'ControlType':'Comments'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':[{'Avatar':'Guest.png','OnDate':'2023-01-01','Picture':'Message.jpg','Text':'Hello World !','Who':'Guest'}]}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Comments'}"
+        }
       },
       "Example": {
         "Control": [
@@ -83,8 +113,14 @@
       "Description": "Line graphs chart",
       "Name": "LineGraphs Chart",
       "Dimensions": {
-        "Document": "{'Control':'{'Title':{'Name':'LineGraph','X':'Time','Y':'Value'},'Lines':[{'Name':'One','Points':[{'X':1,'Y':1},{'X':2,'Y':2},{'X':3,'Y':3}]},{'Name':'Two','Points':[{'X':1,'Y':1},{'X':2,'Y':3},{'X':3,'Y':5}]}]}'}",
-        "UI": "{'ControlType':'Chart','Style':'Type:LineGraphs'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'{'Title':{'Name':'LineGraph','X':'Time','Y':'Value'},'Lines':[{'Name':'One','Points':[{'X':1,'Y':1},{'X':2,'Y':2},{'X':3,'Y':3}]},{'Name':'Two','Points':[{'X':1,'Y':1},{'X':2,'Y':3},{'X':3,'Y':5}]}]}'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Chart','Style':'Type:LineGraphs'}"
+        }
       },
       "Example": {
         "Control": {
@@ -136,8 +172,14 @@
       "Description": "Bar Chart",
       "Name": "Bar Chart",
       "Dimensions": {
-        "Document": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}",
-        "UI": "{'ControlType':'Chart','Style':'Type:Bar'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Chart','Style':'Type:Bar'}"
+        }
       },
       "Example": {
         "Control": {
@@ -167,8 +209,14 @@
       "Description": "Bar Group Chart",
       "Name": "Bar Group Chart",
       "Dimensions": {
-        "Document": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'Left','Group':'One','Value':10},{'Name':'Right','Group':'One','Value':20},{'Name':'Left','Group':'Two','Value':30},{'Name':'Right','Group':'Two','Value':40}]}}",
-        "UI": "{'ControlType':'Chart','Style':'Type:Bar'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Title':{'Name':'Bar','X':'Bars','Y':'Value'},'Columns':[{'Name':'Left','Group':'One','Value':10},{'Name':'Right','Group':'One','Value':20},{'Name':'Left','Group':'Two','Value':30},{'Name':'Right','Group':'Two','Value':40}]}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Chart','Style':'Type:Bar'}"
+        }
       },
       "Example": {
         "Control": {
@@ -206,8 +254,14 @@
       "Description": "Pie Chart",
       "Name": "Pie Chart",
       "Dimensions": {
-        "Document": "{'Control':{'Title':'Pie','Parts':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}",
-        "UI": "{'ControlType':'Chart','Style':'Type:Pie'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Title':'Pie','Parts':[{'Name':'One','Value':10},{'Name':'Two','Value':20},{'Name':'Three','Value':30}]}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Chart','Style':'Type:Pie'}"
+        }
       },
       "Example": {
         "Control": {
@@ -233,8 +287,14 @@
       "Description": "Map",
       "Name": "Map",
       "Dimensions": {
-        "Document": "{'Control':{'Title':'My Map','Key':'','Zoom':15,'Center':{'Lat':'50.4329658690059','Lng':'30.57958332067064'},'Points':[{'Lat':'50.4329658690059','Lng':'30.57958332067064'}]}}",
-        "UI": "{'ControlType':'Map'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Title':'My Map','Key':'','Zoom':15,'Center':{'Lat':'50.4329658690059','Lng':'30.57958332067064'},'Points':[{'Lat':'50.4329658690059','Lng':'30.57958332067064'}]}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Map'}"
+        }
       },
       "Example": {
         "Control": {
@@ -258,8 +318,14 @@
       "Description": "Address",
       "Name": "Address",
       "Dimensions": {
-        "Document": "{'Control':{'Country':'Ukraine','City':'Kyiv','District':'Area','Street':'Avenue','House':'1','Appartment':'1'}}",
-        "UI": "{'ControlType':'Address'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Country':'Ukraine','City':'Kyiv','District':'Area','Street':'Avenue','House':'1','Appartment':'1'}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Address'}"
+        }
       },
       "Example": {
         "Control": {
@@ -276,8 +342,14 @@
       "Description": "Receive web browser parameters on client side, such as GPS coordinates.",
       "Name": "BrowserParams",
       "Dimensions": {
-        "Document": "{'Control':{'Lat':'','Lng':''}}",
-        "UI": "{'ControlType':'BrowserParams'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Lat':'','Lng':''}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'BrowserParams'}"
+        }
       },
       "Example": {
         "Control": {
@@ -290,33 +362,66 @@
       "Description": "Json code editor",
       "Name": "Json code editor",
       "Dimensions": {
-        "Document": "{'Control':'{\\'Attr\\':10}'}",
-        "UI": "{'ControlType':'Code','Style':'Type:Json'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Text':'{\"Attr\":10}','Type':'json','FontSize':14,'IsFormat':true}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Code'}"
+        }
       },
       "Example": {
-        "Control": "{'Attr':10}"
+        "Control": {
+          "Text": "{\"Attr\":10}",
+          "Type": "json",
+          "FontSize": 14,
+          "IsFormat": true
+        }
       }
     },
     {
       "Description": "Html code editor",
       "Name": "Html code editor",
       "Dimensions": {
-        "Document": "{'Control':'<b>Test</b>'}",
-        "UI": "{'ControlType':'Code','Style':'Type:Html'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Text':'&lt;b&gt;Test&lt;/b&gt;','Type':'html','FontSize':14,'IsFormat':true}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Code'}"
+        }
       },
       "Example": {
-        "Control": "<b>Test</b>"
+        "Control": {
+          "Text": "&lt;b&gt;Test&lt;/b&gt;",
+          "Type": "html",
+          "FontSize": 14,
+          "IsFormat": true
+        }
       }
     },
     {
       "Description": "CSharp code editor",
       "Name": "CS code editor",
       "Dimensions": {
-        "Document": "{'Control':'Console.WriteLine(10);'}",
-        "UI": "{'ControlType':'Code','Style':'Type:CS'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':{'Text':'Console.WriteLine(10);','Type':'csharp','FontSize':14,'IsFormat':true}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Code'}"
+        }
       },
       "Example": {
-        "Control": "Console.WriteLine(10);"
+        "Control": {
+          "Text": "Console.WriteLine(10);",
+          "Type": "csharp",
+          "FontSize": 14,
+          "IsFormat": true
+        }
       }
     }
   ],
@@ -325,8 +430,14 @@
       "Description": "Label of text",
       "Name": "Label",
       "Dimensions": {
-        "Document": "{'Control':'This is Label'}",
-        "UI": "{'ControlType':'Label'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is Label'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Label'}"
+        }
       },
       "Example": {
         "Control": "This is Label"
@@ -336,8 +447,14 @@
       "Description": "Hyper link to a resource",
       "Name": "Link",
       "Dimensions": {
-        "Document": "{'Control':'This is Link'}",
-        "UI": "{'ControlType':'Link'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is Link'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Link'}"
+        }
       },
       "Example": {
         "Control": "This is Link"
@@ -347,8 +464,14 @@
       "Description": "Text box",
       "Name": "TextBox",
       "Dimensions": {
-        "Document": "{'Control':'This is TextBox'}",
-        "UI": "{'ControlType':'TextBox'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is TextBox'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'TextBox'}"
+        }
       },
       "Example": {
         "Control": "This is TextBox"
@@ -358,8 +481,14 @@
       "Description": "Filter against bots",
       "Name": "TextBox - Captcha",
       "Dimensions": {
-        "Document": "{'Control':'Enter number here'}",
-        "UI": "{'ControlType':'TextBox','Style':'Type:Captcha'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'Enter number here'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'TextBox','Style':'Type:Captcha'}"
+        }
       },
       "Example": {
         "Control": "Enter number here"
@@ -369,8 +498,14 @@
       "Description": "User password",
       "Name": "TextBox - Password",
       "Dimensions": {
-        "Document": "{'Control':'This is Password'}",
-        "UI": "{'ControlType':'TextBox','Style':'Type:Password'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is Password'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'TextBox','Style':'Type:Password'}"
+        }
       },
       "Example": {
         "Control": "This is Password"
@@ -380,8 +515,14 @@
       "Description": "Text box multi line",
       "Name": "RichTextBox",
       "Dimensions": {
-        "Document": "{'Control':'This is RichTextBox'}",
-        "UI": "{'ControlType':'RichTextBox'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is RichTextBox'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'RichTextBox'}"
+        }
       },
       "Example": {
         "Control": "This is RichTextBox"
@@ -391,8 +532,14 @@
       "Description": "Check box",
       "Name": "CheckBox",
       "Dimensions": {
-        "Document": "{'Control':true}",
-        "UI": "{'ControlType':'CheckBox'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':true}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'CheckBox'}"
+        }
       },
       "Example": {
         "Control": true
@@ -402,8 +549,14 @@
       "Description": "Regular button",
       "Name": "Button",
       "Dimensions": {
-        "Document": "{'Control':'This is Button'}",
-        "UI": "{'ControlType':'Button'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is Button'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Button'}"
+        }
       },
       "Example": {
         "Control": "This is Button"
@@ -413,8 +566,14 @@
       "Description": "Button as link",
       "Name": "Button - Link",
       "Dimensions": {
-        "Document": "{'Control':'This is Button'}",
-        "UI": "{'ControlType':'Button','Style':'Type:Link'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is Button'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Button','Style':'Type:Link'}"
+        }
       },
       "Example": {
         "Control": "This is Button"
@@ -424,8 +583,14 @@
       "Description": "Submit button sends changed values on form",
       "Name": "Button - Submit",
       "Dimensions": {
-        "Document": "{'Control':'This is submit Button'}",
-        "UI": "{'ControlType':'Button','Style':'Type:Submit'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'This is submit Button'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Button','Style':'Type:Submit'}"
+        }
       },
       "Example": {
         "Control": "This is submit Button"
@@ -435,9 +600,18 @@
       "Description": "Enumerate values",
       "Name": "ComboBox",
       "Dimensions": {
-        "Document": "{'Control':'One'}",
-        "Enum": "{'Control':{'Items':['One','Two','Three']}}",
-        "UI": "{'ControlType':'ComboBox'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'One'}"
+        },
+        "EnumLabel": "Enum",
+        "Enum": {
+          "Text": "{'Control':{'Items':['One','Two','Three']}}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'ComboBox'}"
+        }
       },
       "Example": {
         "Control": "One"
@@ -447,8 +621,14 @@
       "Description": "Grid",
       "Name": "Grid",
       "Dimensions": {
-        "Document": "{'Control':[{'Name':'Bob','Age':15},{'Name':'Rebeca','Age':20}]}",
-        "UI": "{'ControlType':'Grid','Style':'Type:'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':[{'Name':'Bob','Age':15},{'Name':'Rebeca','Age':20}]}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Grid','Style':'Type:'}"
+        }
       },
       "Example": {
         "Control": [
@@ -467,8 +647,14 @@
       "Description": "Grid with link rows",
       "Name": "Grid - Link",
       "Dimensions": {
-        "Document": "{'Control':[{'Name':'Bob','Age':15},{'Name':'Rebeca','Age':20}]}",
-        "UI": "{'ControlType':'Grid','Style':'Type:Link'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':[{'Name':'Bob','Age':15},{'Name':'Rebeca','Age':20}]}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Grid','Style':'Type:Link'}"
+        }
       },
       "Example": {
         "Control": [
@@ -487,8 +673,14 @@
       "Description": "Picture",
       "Name": "Picture",
       "Dimensions": {
-        "Document": "{'Control':'https://memepedia.ru/wp-content/uploads/2020/11/kot-priemlemo-shablon.jpg'}",
-        "UI": "{'ControlType':'Picture'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'https://memepedia.ru/wp-content/uploads/2020/11/kot-priemlemo-shablon.jpg'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Picture'}"
+        }
       },
       "Example": {
         "Control": "https://memepedia.ru/wp-content/uploads/2020/11/kot-priemlemo-shablon.jpg"
@@ -498,8 +690,14 @@
       "Description": "QR code picture",
       "Name": "Picture - QRCode",
       "Dimensions": {
-        "Document": "{'Control':'Some encoded text'}",
-        "UI": "{'ControlType':'Picture','Style':'Type:QRCode'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'Some encoded text'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Picture','Style':'Type:QRCode'}"
+        }
       },
       "Example": {
         "Control": "Some encoded text"
@@ -509,8 +707,14 @@
       "Description": "Embedded mp4 video",
       "Name": "Video - mp4",
       "Dimensions": {
-        "Document": "{'Control':'MyVideo.mp4'}",
-        "UI": "{'ControlType':'Media'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'MyVideo.mp4'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Media'}"
+        }
       },
       "Example": {
         "Control": "MyVideo.mp4"
@@ -520,8 +724,14 @@
       "Description": "Embedded youtube video",
       "Name": "Video - youtube",
       "Dimensions": {
-        "Document": "{'Control':'https://www.youtube.com/watch?v=LhOSM6uCWxk'}",
-        "UI": "{'ControlType':'Media','Style':'Type:Youtube'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'https://www.youtube.com/watch?v=LhOSM6uCWxk'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Media','Style':'Type:Youtube'}"
+        }
       },
       "Example": {
         "Control": "https://www.youtube.com/watch?v=LhOSM6uCWxk"
@@ -531,8 +741,14 @@
       "Description": "Embedded mp3 audio",
       "Name": "Audio - mp3",
       "Dimensions": {
-        "Document": "{'Control':'MyAudio.mp3'}",
-        "UI": "{'ControlType':'Media','Style':'Type:Audio'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'MyAudio.mp3'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Media','Style':'Type:Audio'}"
+        }
       },
       "Example": {
         "Control": "MyAudio.mp3"
@@ -542,8 +758,14 @@
       "Description": "Calendar",
       "Name": "Calendar",
       "Dimensions": {
-        "Document": "{'Control':'2023-01-01'}",
-        "UI": "{'ControlType':'Calendar'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'2023-01-01'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Calendar'}"
+        }
       },
       "Example": {
         "Control": "2023-01-01"
@@ -553,8 +775,14 @@
       "Description": "Time",
       "Name": "Time",
       "Dimensions": {
-        "Document": "{'Control':'12:30'}",
-        "UI": "{'ControlType':'Time'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'12:30'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Time'}"
+        }
       },
       "Example": {
         "Control": "12:30"
@@ -564,8 +792,14 @@
       "Description": "Raw",
       "Name": "Raw",
       "Dimensions": {
-        "Document": "{'Control':'<b>Bold text</b>'}",
-        "UI": "{'ControlType':'Raw'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'<b>Bold text</b>'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Raw'}"
+        }
       },
       "Example": {
         "Control": "<b>Bold text</b>"
@@ -575,8 +809,14 @@
       "Description": "Upload file to server",
       "Name": "UploadFile",
       "Dimensions": {
-        "Document": "{'Control':''}",
-        "UI": "{'ControlType':'UploadFile'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':''}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'UploadFile'}"
+        }
       },
       "Example": {
         "Control": ""
@@ -586,8 +826,14 @@
       "Description": "Phone",
       "Name": "Phone",
       "Dimensions": {
-        "Document": "{'Control':'+380981112233'}",
-        "UI": "{'ControlType':'Phone'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'+380981112233'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'Phone'}"
+        }
       },
       "Example": {
         "Control": "+380981112233"
@@ -597,8 +843,14 @@
       "Description": "TreeView",
       "Name": "TreeView",
       "Dimensions": {
-        "Document": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'},{'Parent':'MyChildB','MyChildC','Text':'My Child C'}]}",
-        "UI": "{'ControlType':'TreeView','Style':'Type:'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':[{'Parent':null,'Name':'MyParent','Text':'My Parent'},{'Parent':'MyParent','Name':'MyChildA','Text':'My Child A'},{'Parent':'MyParent','MyChildB','Text':'My Child B'},{'Parent':'MyChildB','MyChildC','Text':'My Child C'}]}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'TreeView','Style':'Type:'}"
+        }
       },
       "Example": {
         "Control": [
@@ -629,8 +881,14 @@
       "Description": "GPS coordinates on map",
       "Name": "GPS",
       "Dimensions": {
-        "Document": "{'Control':'50.450001,30.523333'}",
-        "UI": "{'ControlType':'GPS'}"
+        "DocumentLabel": "Document",
+        "Document": {
+          "Text": "{'Control':'50.450001,30.523333'}"
+        },
+        "UILabel": "UI",
+        "UI": {
+          "Text": "{'ControlType':'GPS'}"
+        }
       },
       "Example": {
         "Control": "50.450001,30.523333"

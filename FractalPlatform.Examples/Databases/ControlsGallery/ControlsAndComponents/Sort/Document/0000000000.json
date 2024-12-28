@@ -5,23 +5,29 @@
       "Name": { "Index": 2 },
       "Description": { "Index": 3 },
       "Dimensions": {
-        "Document": { "Index": 4 },
-        "UI": { "Index": 5 },
-        "Enum": { "Index": 6 }
+        "DocumentLabel": { "Index": 4 },
+        "Document": { "Index": 5 },
+        "UILabel": { "Index": 6 },
+        "UI": { "Index": 7 },
+        "EnumLabel": { "Index": 8 },
+        "Enum": { "Index": 9 }
       },
-      "Example": { "Index": 7 }
+      "Example": { "Index": 10 }
     }
   ],
   "Components": [
     {
-      "Name": { "Index": 10 },
-      "Description": { "Index": 11 },
+      "Name": { "Index": 11 },
+      "Description": { "Index": 12 },
       "Dimensions": {
-        "Document": { "Index": 12 },
-        "UI": { "Index": 13 },
-        "Enum": { "Index": 14 }
+        "DocumentLabel": { "Index": 13 },
+        "Document": { "Index": 14 },
+        "UILabel": { "Index": 15 },
+        "UI": { "Index": 16 },
+        "EnumLabel": { "Index": 17 },
+        "Enum": { "Index": 18 }
       },
-      "Example": { "Index": 15 }
+      "Example": { "Index": 19 }
     }
   ]
 }
