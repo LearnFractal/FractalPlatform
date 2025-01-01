@@ -1,90 +1,158 @@
-﻿using FractalPlatform.Client.App;
+﻿using System.Linq;
+using FractalPlatform.Client.UI.DOM;
+using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 using System;
 
-namespace FractalPlatform.Examples.Applications.Diary
+namespace FractalPlatform.Diary
 {
-    public class DiaryApplication : BaseApplication
-    {
-        private int Calculate(uint docID, Collection collection)
-        {
-            var points = DocsOf("Points").ToCollection();
-            
-            var sumPoints = 0;
+	public class DiaryApplication : BaseApplication
+	{
+		private int Calculate(uint docID, Collection collection)
+		{
+			var points = DocsOf("Points").ToCollection();
 
-            collection.ScanKeysAndValues((attrPath, attrValue) =>
-            {
-                if (attrValue.GetBoolValue())
-                {
-                    var currAttrPath = attrPath.Clone();
+			var sumPoints = 0;
 
-                    currAttrPath.DocID = Constants.FIRST_DOC_ID;
+			collection.ScanKeysAndValues((attrPath, attrValue) =>
+			{
+				if (attrValue.GetBoolValue())
+				{
+					var currAttrPath = attrPath.Clone();
 
-                    sumPoints += points.GetValueByPath(currAttrPath).GetIntValue();
-                }
+					currAttrPath.DocID = Constants.FIRST_DOC_ID;
 
-                return true;
-            },
-            docID);
+					sumPoints += points.GetValueByPath(currAttrPath).GetIntValue();
+				}
 
-            return sumPoints;
-        }
+				return true;
+			},
+			docID);
 
-        public override object OnComputedDimension(ComputedInfo info) =>
-            info.Variable switch
-            {
-                "Points" => Calculate(info.DocID, info.Collection),
-                _ => base.OnComputedDimension(info)
-            };
-        
-        public override bool OnEventDimension(EventInfo info) =>
-            info.Action switch
-            {
-                "NewDay" => CreateNewDocFor("NewDay", "Days")
-                                .OpenForm(result =>
-                                {
-                                    if (result.Result)
-                                    {
-                                        var points = Calculate(result.DocID, result.Collection);
+			return sumPoints;
+		}
 
-                                        MessageBox($"Today you have {points} points.", MessageBoxButtonType.Ok);
-                                    }
-                                }),
-                "Days" => ModifyDocsOf("Days").OpenForm(),
-                "Points" => ModifyDocsOf("Points").OpenForm(),
-                _ => throw new ArgumentException($"{info.Action} event handler not found")
-            };
+		public override object OnComputedDimension(ComputedInfo info) =>
+			info.Variable switch
+			{
+				"Points" => Calculate(info.DocID, info.Collection),
+				_ => base.OnComputedDimension(info)
+			};
 
-        private void Dashboard() => FirstDocOf("Dashboard").OpenForm();
 
-        public override void OnStart()
-        {
-            const string password = "77";
+		private void Dashboard() => FirstDocOf("Dashboard").OpenForm();
 
-            if (Context.UrlTag == password)
-            {
-                Dashboard();
+		public override void OnStart()
+		{
+			const string password = "77";
 
-                return;
-            }
+			if (Context.UrlTag == password)
+			{
+				Dashboard();
 
-            InputBox("Password", "Enter password", result =>
-            {
-                if (result.Collection
-                          .GetFirstDoc()
-                          .IsEquals("{'Password':$}", password))
-                {
-                    Context.UrlTag = password;
+				return;
+			}
 
-                    Dashboard();
-                }
-                else
-                {
-                    MessageBox("Wrong password");
-                }
-            });
-        }
-    }
+			InputBox("Password", "Enter password", result =>
+			{
+				if (result.Collection
+						  .GetFirstDoc()
+						  .IsEquals("{'Password':$}", password))
+				{
+					Context.UrlTag = password;
+
+					Dashboard();
+				}
+				else
+				{
+					MessageBox("Wrong password");
+				}
+			});
+		}
+
+		public override bool OnEventDimension(EventInfo info)
+		{
+
+			var path = info.AttrPath.ToString();
+
+			switch (path)
+			{
+				case @"Days":
+					{
+						ModifyDocsOf("Days").OpenForm();
+
+						break;
+					}
+				case @"NewDay":
+					{
+						CreateNewDocFor("NewDay", "Days")
+									.OpenForm(result =>
+									{
+										if (result.Result)
+										{
+											var points = Calculate(result.DocID, result.Collection);
+
+											MessageBox($"Today you have {points} points.", MessageBoxButtonType.Ok);
+										}
+									});
+
+						break;
+					}
+				case @"Points":
+					{
+						ModifyDocsOf("Points").OpenForm();
+
+						break;
+					}
+				case @"Report":
+					{
+						var number = 0;
+
+						var points = DocsOf("Days")
+									.Values("{'Points':$}")
+									.Select(val => new {
+										X = ++number,
+										Y = double.Parse(val)
+									})
+									.ToList();
+						new
+						{
+							Control = new
+							{
+								Title = new
+								{
+									Name = "MyChart",
+									X = "DocID",
+									Y = "Points"
+								},
+								Lines = new[]
+								{
+								new
+								{
+									Name = "Days",
+									Points = points
+								}
+							}
+							}
+						}
+						.ToCollection("Report")
+						.SetUIDimension("{'ReadOnly':true,'Control':{'ControlType':'Chart','Style':'Type:LineGraphs'}}")
+						.OpenForm();
+
+						break;
+					}
+				default:
+					{
+						return base.OnEventDimension(info);
+					}
+			}
+
+			return true;
+		}
+
+		public override BaseRenderForm CreateRenderForm(DOMForm form) =>
+						new ExtendedRenderForm(this, form);
+	}
 }

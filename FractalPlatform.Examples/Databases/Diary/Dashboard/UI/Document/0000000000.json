@@ -8,5 +8,8 @@
   },
   "Points": {
     "ControlType": "Button"
+  },
+  "Report": {
+    "ControlType": "Button"
   }
 }
