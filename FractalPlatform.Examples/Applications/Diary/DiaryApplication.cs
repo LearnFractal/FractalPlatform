@@ -123,6 +123,12 @@ namespace FractalPlatform.Diary
 										X = ++number,
 										Y = double.Parse(val)
 									})
+									.GroupBy(x => x.X / 7,
+											 (k, g) => new 
+											 { 
+												 X = k,
+												 Y = g.Average(x => x.Y)
+											 })
 									.ToList();
 						new
 						{
@@ -138,7 +144,7 @@ namespace FractalPlatform.Diary
 								{
 								new
 								{
-									Name = "Days",
+									Name = "Weeks",
 									Points = points
 								}
 							}
