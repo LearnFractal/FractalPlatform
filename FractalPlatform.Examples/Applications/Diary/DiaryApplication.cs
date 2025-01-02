@@ -14,12 +14,13 @@ namespace FractalPlatform.Diary
 		private int Calculate(uint docID, Collection collection)
 		{
 			var points = DocsOf("Points")
-							.ToCollection()
-							.ResetDimension(DimensionType.LifeTime);
+							.ToCollection();
 
 			var sumPoints = 0;
 
-			collection.ScanKeysAndValues((attrPath, attrValue) =>
+			collection
+				.ResetDimension(DimensionType.LifeTime)
+				.ScanKeysAndValues((attrPath, attrValue) =>
 			{
 				if (attrValue.GetBoolValue())
 				{
