@@ -4,7 +4,6 @@ using FractalPlatform.Client.App;
 using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
-using System;
 using FractalPlatform.Common.Enums;
 
 namespace FractalPlatform.Diary
