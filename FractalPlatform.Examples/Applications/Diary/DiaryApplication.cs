@@ -112,7 +112,6 @@ namespace FractalPlatform.Diary
 
 						var points = DocsOf("Days")
 									.Values("{'Points':$}")
-									.Where(val => val != null)
 									.Select(val => new {
 										X = ++number,
 										Y = double.Parse(val)
@@ -124,7 +123,7 @@ namespace FractalPlatform.Diary
 							{
 								Title = new
 								{
-									Name = "MyChart",
+									Name = "My Points",
 									X = "DocID",
 									Y = "Points"
 								},
