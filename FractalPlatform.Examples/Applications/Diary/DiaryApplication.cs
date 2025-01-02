@@ -17,9 +17,10 @@ namespace FractalPlatform.Diary
 
 			var sumPoints = 0;
 
+			var storage = collection.GetStorage(DimensionType.LifeTime);
+
 			collection
-				.GetNativeStorage(DimensionType.Document)
-				.ToCollection()
+				.ResetDimension(DimensionType.LifeTime)
 				.ScanKeysAndValues((attrPath, attrValue) =>
 			{
 				if (attrValue.GetBoolValue())
@@ -34,6 +35,8 @@ namespace FractalPlatform.Diary
 				return true;
 			},
 			docID);
+
+			collection.SetDimension(DimensionType.LifeTime, storage);
 
 			return sumPoints;
 		}
