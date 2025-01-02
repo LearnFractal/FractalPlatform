@@ -5,6 +5,7 @@ using FractalPlatform.Client.UI;
 using FractalPlatform.Database.Engine;
 using FractalPlatform.Database.Engine.Info;
 using System;
+using FractalPlatform.Common.Enums;
 
 namespace FractalPlatform.Diary
 {
@@ -12,7 +13,9 @@ namespace FractalPlatform.Diary
 	{
 		private int Calculate(uint docID, Collection collection)
 		{
-			var points = DocsOf("Points").ToCollection();
+			var points = DocsOf("Points")
+							.ToCollection()
+							.ResetDimension(DimensionType.LifeTime);
 
 			var sumPoints = 0;
 
