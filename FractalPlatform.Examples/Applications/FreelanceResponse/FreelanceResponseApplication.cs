@@ -363,7 +363,7 @@ namespace FractalPlatform.Examples.Applications.FreelanceResponse
                     }
                 case "Reports":
                     {
-                        NotImplemented();
+                        NotImplementedMessageBox();
 
                         break;
                     }
