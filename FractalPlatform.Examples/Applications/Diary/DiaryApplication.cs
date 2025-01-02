@@ -19,7 +19,8 @@ namespace FractalPlatform.Diary
 			var sumPoints = 0;
 
 			collection
-				.ResetDimension(DimensionType.LifeTime)
+				.GetNativeStorage(DimensionType.Document)
+				.ToCollection()
 				.ScanKeysAndValues((attrPath, attrValue) =>
 			{
 				if (attrValue.GetBoolValue())
