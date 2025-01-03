@@ -19,7 +19,7 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
 								 .GetWhere(info.AttrPath)
 								 .Value(DQL("{@PathName:[{'Dimensions':{'UI':{'Text':$}}}]}", pathName));
 
-				var coll = info.Collection
+                var coll = info.Collection
 						.GetWhere(info.AttrPath)
 						.ToCollection(DQL("{@PathName:[$]}", pathName));
 
@@ -28,21 +28,22 @@ namespace FractalPlatform.Examples.Applications.ControlsGallery
 
 				coll.ResetDimension(DimensionType.UI)
 					.SetDimension(DimensionType.Enum, "{'Example':{'Control':{'Items':['One','Two','Three']}}}")
-					.SetUIDimension(DQL(@"{'Style':'Save:false',
+					.SetUIDimension(@$"{{'Style':'Save:false',
                                            'ReadOnly':true,
-                                           'Dimensions': {
-                                              'DocumentLabel': {'ControlType': 'Label'},
-                                              'Document': {'ControlType':'Code'},
-                                              'EnumLabel': {'ControlType': 'Enum'},
-                                              'Enum': {'ControlType':'Code'},
-                                              'UILabel': {'ControlType': 'Label'},
-                                              'UI': {'ControlType':'Code'}
-                                           },
-                                           'Example': {
+                                           'Dimensions': {{
+                                              'DocumentLabel': {{'ControlType': 'Label'}},
+                                              'Document': {{'ControlType':'Code'}},
+                                              'EnumLabel': {{'ControlType': 'Label'}},
+                                              'Enum': {{'ControlType':'Code'}},
+                                              'UILabel': {{'ControlType': 'Label'}},
+                                              'UI': {{'ControlType':'Code'}}
+                                           }},
+                                           'Example': {{
                                               'ReadOnly':false,
                                               'Style':'Save:true',
-                                              'Control':@UIDimension
-                                           }}", ui))
+                                              {ui.Substring(1, ui.Length - 2)}
+                                           }}
+                                        }}")
 					.OpenForm();
 
 
