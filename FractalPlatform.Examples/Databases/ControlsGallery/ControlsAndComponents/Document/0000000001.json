@@ -11,7 +11,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'RadioButton'}"
+          "Text": "{'Control': {'ControlType':'RadioButton'}}"
         }
       },
       "Example": {
@@ -31,7 +31,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Tags'}"
+          "Text": "{'Control': {'ControlType':'Tags'}}"
         }
       },
       "Example": {
@@ -52,7 +52,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Likes'}"
+          "Text": "{'Control': {'ControlType':'Likes'}}"
         }
       },
       "Example": {
@@ -71,7 +71,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Messages'}"
+          "Text": "{'Control': {'ControlType':'Messages'}}"
         }
       },
       "Example": {
@@ -94,7 +94,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Comments'}"
+          "Text": "{'Control': {'ControlType':'Comments'}}"
         }
       },
       "Example": {
@@ -119,7 +119,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Chart','Style':'Type:LineGraphs'}"
+          "Text": "{'Control': {'ControlType':'Chart','Style':'Type:LineGraphs'}}"
         }
       },
       "Example": {
@@ -178,7 +178,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Chart','Style':'Type:Bar'}"
+          "Text": "{'Control': {'ControlType':'Chart','Style':'Type:Bar'}}"
         }
       },
       "Example": {
@@ -215,7 +215,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Chart','Style':'Type:Bar'}"
+          "Text": "{'Control': {'ControlType':'Chart','Style':'Type:Bar'}}"
         }
       },
       "Example": {
@@ -260,7 +260,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Chart','Style':'Type:Pie'}"
+          "Text": "{'Control': {'ControlType':'Chart','Style':'Type:Pie'}}"
         }
       },
       "Example": {
@@ -293,7 +293,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Map'}"
+          "Text": "{'Control': {'ControlType':'Map'}}"
         }
       },
       "Example": {
@@ -324,7 +324,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Address'}"
+          "Text": "{'Control': {'ControlType':'Address'}}"
         }
       },
       "Example": {
@@ -348,7 +348,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'BrowserParams'}"
+          "Text": "{'Control': {'ControlType':'BrowserParams'}}"
         }
       },
       "Example": {
@@ -368,7 +368,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Code'}"
+          "Text": "{'Control': {'ControlType':'Code'}}"
         }
       },
       "Example": {
@@ -390,7 +390,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Code'}"
+          "Text": "{'Control': {'ControlType':'Code'}}"
         }
       },
       "Example": {
@@ -412,7 +412,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Code'}"
+          "Text": "{'Control': {'ControlType':'Code'}}"
         }
       },
       "Example": {
@@ -436,7 +436,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Label'}"
+          "Text": "{'Control': {'ControlType':'Label'}}"
         }
       },
       "Example": {
@@ -453,7 +453,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Link'}"
+          "Text": "{'Control': {'ControlType':'Link'}}"
         }
       },
       "Example": {
@@ -470,7 +470,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'TextBox'}"
+          "Text": "{'Control': {'ControlType':'TextBox'}}"
         }
       },
       "Example": {
@@ -487,7 +487,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'TextBox','Style':'Type:Captcha'}"
+          "Text": "{'Control': {'ControlType':'TextBox','Style':'Type:Captcha'}}"
         }
       },
       "Example": {
@@ -504,7 +504,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'TextBox','Style':'Type:Password'}"
+          "Text": "{'Control': {'ControlType':'TextBox','Style':'Type:Password'}}"
         }
       },
       "Example": {
@@ -521,7 +521,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'RichTextBox'}"
+          "Text": "{'Control': {'ControlType':'RichTextBox'}}"
         }
       },
       "Example": {
@@ -538,7 +538,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'CheckBox'}"
+          "Text": "{'Control': {'ControlType':'CheckBox'}}"
         }
       },
       "Example": {
@@ -555,7 +555,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Button'}"
+          "Text": "{'Control': {'ControlType':'Button'}}"
         }
       },
       "Example": {
@@ -572,7 +572,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Button','Style':'Type:Link'}"
+          "Text": "{'Control': {'ControlType':'Button','Style':'Type:Link'}}"
         }
       },
       "Example": {
@@ -589,7 +589,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Button','Style':'Type:Submit'}"
+          "Text": "{'Control': {'ControlType':'Button','Style':'Type:Submit'}}"
         }
       },
       "Example": {
@@ -610,7 +610,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'ComboBox'}"
+          "Text": "{'Control': {'ControlType':'ComboBox'}}"
         }
       },
       "Example": {
@@ -627,7 +627,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Grid','Style':'Type:'}"
+          "Text": "{'Control': {'ControlType':'Grid','Style':'Type:'}}"
         }
       },
       "Example": {
@@ -653,7 +653,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Grid','Style':'Type:Link'}"
+          "Text": "{'Control': {'ControlType':'Grid','Style':'Type:Link'}}"
         }
       },
       "Example": {
@@ -679,7 +679,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Picture'}"
+          "Text": "{'Control': {'ControlType':'Picture'}}"
         }
       },
       "Example": {
@@ -696,7 +696,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Picture','Style':'Type:QRCode'}"
+          "Text": "{'Control': {'ControlType':'Picture','Style':'Type:QRCode'}}"
         }
       },
       "Example": {
@@ -713,7 +713,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Media'}"
+          "Text": "{'Control': {'ControlType':'Media'}}"
         }
       },
       "Example": {
@@ -730,7 +730,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Media','Style':'Type:Youtube'}"
+          "Text": "{'Control': {'ControlType':'Media','Style':'Type:Youtube'}}"
         }
       },
       "Example": {
@@ -747,7 +747,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Media','Style':'Type:Audio'}"
+          "Text": "{'Control': {'ControlType':'Media','Style':'Type:Audio'}}"
         }
       },
       "Example": {
@@ -764,7 +764,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Calendar'}"
+          "Text": "{'Control': {'ControlType':'Calendar'}}"
         }
       },
       "Example": {
@@ -781,7 +781,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Time'}"
+          "Text": "{'Control': {'ControlType':'Time'}}"
         }
       },
       "Example": {
@@ -798,7 +798,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Raw'}"
+          "Text": "{'Control': {'ControlType':'Raw'}}"
         }
       },
       "Example": {
@@ -815,7 +815,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'UploadFile'}"
+          "Text": "{'Control': {'ControlType':'UploadFile'}}"
         }
       },
       "Example": {
@@ -832,7 +832,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'Phone'}"
+          "Text": "{'Control': {'ControlType':'Phone'}}"
         }
       },
       "Example": {
@@ -849,7 +849,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'TreeView','Style':'Type:'}"
+          "Text": "{'Control': {'ControlType':'TreeView','Style':'Type:'}}"
         }
       },
       "Example": {
@@ -887,7 +887,7 @@
         },
         "UILabel": "UI",
         "UI": {
-          "Text": "{'ControlType':'GPS'}"
+          "Text": "{'Control': {'ControlType':'GPS'}}"
         }
       },
       "Example": {
