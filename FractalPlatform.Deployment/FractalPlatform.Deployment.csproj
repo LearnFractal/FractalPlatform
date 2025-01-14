@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="appsettings.autotesting.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.autotesting.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
