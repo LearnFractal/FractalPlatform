@@ -38,7 +38,7 @@ namespace FractalPlatform.Examples.Applications.Movies
                                    .Select(d => new
                                    {
                                        Series = Directory.GetFileName(d),
-                                       Episodes = Directory.GetFiles(d, "*.mp4")
+                                       Episodes = Directory.GetFiles(d, "*.mp4", true)
                                                            .Select(f => new
                                                            {
                                                                NextEpisode = "Next episode",
