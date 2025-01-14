@@ -39,13 +39,18 @@ namespace FractalPlatform.Examples.Applications.Movies
                                    {
                                        Series = Directory.GetFileName(d),
                                        Episodes = Directory.GetFiles(d, "*.mp4", true)
-                                                           .Select(f => new
+                                                           .Select(f =>
                                                            {
-                                                               NextEpisode = "Next episode",
-                                                               Title = Directory.GetFileName(f).Replace(".mp4", ""),
-                                                               Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
-                                                               Episode = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}",
-                                                               Download = @$"{Directory.GetDirectoryInfo(d).Name}\{Directory.GetFileName(f)}"
+                                                               var filePath = @$"{Directory.GetDirectoryInfo(d).Name}\{f.Replace(d, string.Empty).Substring(1).Replace("\\", "/")}";
+
+                                                               return new
+                                                               {
+                                                                   NextEpisode = "Next episode",
+                                                                   Title = Directory.GetFileName(f).Replace(".mp4", ""),
+                                                                   Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
+                                                                   Episode = filePath,
+                                                                   Download = filePath
+                                                               };
                                                            })
                                    })
             };
