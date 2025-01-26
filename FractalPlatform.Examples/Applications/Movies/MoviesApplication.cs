@@ -17,7 +17,10 @@ namespace FractalPlatform.Examples.Applications.Movies
 
             Context.FormFactory.NeedRefreshForm();
 
-            _lastEpisode = Context.FormFactory.ActiveFormParentAttrPath;
+            ViewedEpisode(Context.FormFactory.ActiveCollection,
+                          Context.FormFactory.ActiveFormParentAttrPath);
+
+			_lastEpisode = Context.FormFactory.ActiveFormParentAttrPath;
 
             if (!Context.FormFactory.ActiveCollection.GetWhere(_lastEpisode).Any())
             {
@@ -29,19 +32,23 @@ namespace FractalPlatform.Examples.Applications.Movies
             return false;
         }
 
+        private void ViewedEpisode(Collection collection, AttrPath attrPath)
+        {
+			var episode = collection.GetWhere(attrPath)
+								    .Value("{'Seasons':[{'Episodes':[{'Episode':$}]}]}");
+
+			if (!DocsWhere("Viewed", "{'Viewed':[{'Episode':@Episode}]}", episode).Any())
+			{
+				FirstDocOf("Viewed")
+					.Update("{'LastEpisode':@Episode,'Viewed':[Add,{'Episode':@Episode}]}", episode);
+			}
+		}
+
 		public override bool OnOpenForm(FormInfo info)
 		{
             if (info.AttrPath.HasPath("Episodes"))
             {
-                var episode = info.Collection
-                                  .GetWhere(info.AttrPath)
-                                  .Value("{'Seasons':[{'Episodes':[{'Episode':$}]}]}");
-
-                if (!DocsWhere("Viewed", "{'Viewed':[{'Episode':@Episode}]}", episode).Any())
-                {
-                    FirstDocOf("Viewed")
-                        .Update("{'LastEpisode':@Episode,'Viewed':[Add,{'Episode':@Episode}]}", episode);
-				}
+                ViewedEpisode(info.Collection, info.AttrPath);
             }
 
 			return true;
@@ -98,7 +105,14 @@ namespace FractalPlatform.Examples.Applications.Movies
     						  .GetWhere(info.AttrPath)
 							  .Value("{'Seasons':[{'Episodes':[{'Episode':$}]}]}");
 
-            if (DocsWhere("Viewed", "{'Viewed':[{'Episode':@Episode}]}", episode)
+            if (Context.FormFactory
+                       .ActiveFormParentAttrPath
+                       .HasPath("Episodes"))
+            {
+                return null; //hide Viewed control
+            }
+
+			if (DocsWhere("Viewed", "{'Viewed':[{'Episode':@Episode}]}", episode)
                    .Any())
             {
                 return "Yes";
