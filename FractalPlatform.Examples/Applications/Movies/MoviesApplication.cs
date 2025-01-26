@@ -29,7 +29,25 @@ namespace FractalPlatform.Examples.Applications.Movies
             return false;
         }
 
-        private void OpenSeasons()
+		public override bool OnOpenForm(FormInfo info)
+		{
+            if (info.AttrPath.HasPath("Episodes"))
+            {
+                var episode = info.Collection
+                                  .GetWhere(info.AttrPath)
+                                  .Value("{'Seasons':[{'Episodes':[{'Episode':$}]}]}");
+
+                if (!DocsWhere("Viewed", "{'Viewed':[{'Episode':@Episode}]}", episode).Any())
+                {
+                    FirstDocOf("Viewed")
+                        .Update("{'LastEpisode':@Episode,'Viewed':[Add,{'Episode':@Episode}]}", episode);
+				}
+            }
+
+			return true;
+		}
+
+		private void OpenSeasons()
         {
             var obj = new
             {
@@ -46,10 +64,11 @@ namespace FractalPlatform.Examples.Applications.Movies
                                                                return new
                                                                {
                                                                    NextEpisode = "Next episode",
-                                                                   Title = Directory.GetFileName(f).Replace(".mp4", ""),
+																   Viewed = "No",
+																   Title = Directory.GetFileName(f).Replace(".mp4", ""),
                                                                    Size = $"{Directory.GetFileInfo(f).Length / 1024 / 1024} mb",
                                                                    Episode = filePath,
-                                                                   Download = filePath
+																   Download = filePath
                                                                };
                                                            })
                                    })
@@ -73,7 +92,24 @@ namespace FractalPlatform.Examples.Applications.Movies
             }
         }
 
-        public override void OnStart()
+		public override object OnComputedDimension(ComputedInfo info)
+		{
+			var episode = info.Collection
+    						  .GetWhere(info.AttrPath)
+							  .Value("{'Seasons':[{'Episodes':[{'Episode':$}]}]}");
+
+            if (DocsWhere("Viewed", "{'Viewed':[{'Episode':@Episode}]}", episode)
+                   .Any())
+            {
+                return "Yes";
+            }
+            else
+            {
+                return "No";
+            }
+		}
+
+		public override void OnStart()
         {
             const string password = "ps";
 

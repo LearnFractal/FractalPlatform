@@ -1,0 +1,13 @@
+﻿{
+  "Seasons": [
+    {
+      "Episodes": [
+        {
+          "Viewed": {
+            "Formula": "@Viewed"
+          }
+        }
+      ]
+    }
+  ]
+}
