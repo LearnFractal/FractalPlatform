@@ -1,0 +1,12 @@
+﻿{
+    "OnDate": "",
+    "Name": "Ivan",
+    "Phone": "+310123456",
+    "Email": "ivan@gmail.com",
+    "Description": "Hochu na more",
+    "Tour": {
+        "Code": "T-00001",
+        "FromDate": "2025-01-01",
+        "ToDate": "2025-01-01"
+    }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "Code": "T-00002",
+    "Title": "Испанский уикенд самолетом",
+    "Type": "Sea",
+    "About": "Цена акционная 500 евро",
+    "Duration": "OneDay",
+    "FromCity": "Вроцлав",
+    "Dates": [
+        {
+            "FromDate": "20250101",
+            "ToDate": "20250101"
+        },
+        {
+            "FromDate": "20250105",
+            "ToDate": "20250110"
+        }
+    ],
+    "RequestTour": "Request tour",
+    "Price": "520 евро дети бесплатно",
+    "Description": "День 1, День 2 ...",
+    "Documents": ""
+}

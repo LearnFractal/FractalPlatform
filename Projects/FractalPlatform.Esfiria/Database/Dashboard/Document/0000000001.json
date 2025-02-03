@@ -1,0 +1,20 @@
+﻿{
+    "Header": {
+        "Tours": "Tours",
+        "About": "About",
+        "Contacts": "Contacts",
+        "Feedback": "Feedback"
+    },
+    "ScheduleByMonth": "By month",
+    "OneDayTours": "One day tours",
+    "ToursWithNights": "Tours with nights",
+    "NearestTours": "Nearest tours",
+    "Aboutcompany": "About company",
+    "ChooseTour": "Choose a tour",
+    "Request": {
+        "Name": "",
+        "Phone": "",
+        "IsAgree": false,
+        "Send": "Send"
+    }
+}
