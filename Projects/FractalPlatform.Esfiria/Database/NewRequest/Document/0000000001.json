@@ -1,0 +1,8 @@
+﻿{
+    "Name": "",
+    "Phone": "",
+    "Email": "",
+    "Description": "",
+    "IsBooked": false,
+    "BookTour": "Book Tour"
+}

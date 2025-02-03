@@ -1,0 +1,12 @@
+{
+    "Style": "Save:Send",
+    "Description": {
+        "ControlType": "RichTextBox"
+    },
+    "IsBooked": {
+        "Visible": false
+    },
+    "BookTour": {
+        "Visible": false
+    }
+}

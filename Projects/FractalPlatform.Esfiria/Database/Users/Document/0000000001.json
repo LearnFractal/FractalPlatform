@@ -1,0 +1,13 @@
+﻿{
+   "Name": "Admin",
+   "Password": "123",
+   "Telegram": "5018512422",
+   "TextMessages": [
+      {
+         "IsSent": true,
+         "Message": "You have new request of trip.",
+         "Provider": "Telegram",
+         "Receiver": "5018512422"
+      }
+   ]
+}

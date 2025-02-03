@@ -1,0 +1,8 @@
+{
+    "ReadOnly": true,
+    "Requests": { "ControlType": "Button" },
+    "Tours": { "ControlType": "Button" },
+    "Booked": { "ControlType": "Button" },
+    "NewBook": { "ControlType": "Button" },
+    "UserAdmin": { "ControlType": "Button" }
+}

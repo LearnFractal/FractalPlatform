@@ -1,0 +1,6 @@
+{
+    "Name": { "IsRequired": true },
+    "Phone": { "IsRequired": true },
+    "Email": { "IsRequired": true },
+    "Description": { "IsRequired": true }
+}

@@ -1,0 +1,8 @@
+{
+    "Duration": {
+        "Items": [ "OneDay", "WithNights" ]
+    },
+    "Country": {
+        "Items": [ "Польша", "Италия", "Испания" ]
+    }
+}

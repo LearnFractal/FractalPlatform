@@ -5,14 +5,15 @@
     "About": "Цена акционная 500 евро",
     "Duration": "OneDay",
     "FromCity": "Вроцлав",
-    "Dates": [
+    "Country": "Польша",
+    "Periods": [
         {
-            "FromDate": "20250101",
-            "ToDate": "20250101"
+            "FromDate": "03-01-2025",
+            "ToDate": "03-01-2025"
         },
         {
-            "FromDate": "20250105",
-            "ToDate": "20250110"
+            "FromDate": "03-07-2025",
+            "ToDate": "03-07-2025"
         }
     ],
     "RequestTour": "Request tour",
