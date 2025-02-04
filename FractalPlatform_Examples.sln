@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Converter.E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalPlatform.Common", "FractalPlatform.Common\FractalPlatform.Common.csproj", "{C0632814-96C7-4A30-949A-FB31ECFA41DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalPlatform.Esfiria", "Projects\FractalPlatform.Esfiria\FractalPlatform.Esfiria.csproj", "{0D25194A-51BC-4959-BB49-442EE8C3B5FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,14 @@ Global
 		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Release|x86.ActiveCfg = Release|Any CPU
 		{C0632814-96C7-4A30-949A-FB31ECFA41DA}.Release|x86.Build.0 = Release|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Debug|x86.Build.0 = Debug|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Release|x86.ActiveCfg = Release|Any CPU
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -180,6 +190,7 @@ Global
 		{6348296E-CD5C-424D-B652-ABA88A61F314} = {D7922311-428D-469F-A14F-2C52F5725311}
 		{8626F341-03DD-4680-ABBA-8D6AD39E8397} = {D7922311-428D-469F-A14F-2C52F5725311}
 		{E031A9E0-106F-4CE5-BB60-71FFFF45C8AF} = {D7922311-428D-469F-A14F-2C52F5725311}
+		{0D25194A-51BC-4959-BB49-442EE8C3B5FD} = {F28180B4-148A-4F98-B3B3-EE5E834C1838}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {842F3684-70EF-46AF-AA77-E2F6307580EF}
