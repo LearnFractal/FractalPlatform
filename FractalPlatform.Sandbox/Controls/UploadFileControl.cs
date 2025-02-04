@@ -82,7 +82,7 @@ namespace FractalPlatform.Sandbox.Controls
             {
                 var fileInfo = new FileInfo(openFileDialog.FileName);
 
-                var filePath = GetFilePath();
+                var filePath = domControl.ParentForm.Context.Application.GetFilesPath();
 
                 var newFileName = $"{Guid.NewGuid().ToString().Replace("-", "")}{fileInfo.Extension}";
 

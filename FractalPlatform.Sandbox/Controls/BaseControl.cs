@@ -77,20 +77,6 @@ namespace FractalPlatform.Sandbox.Controls
 			}
 		}
 
-		protected string GetFilePath()
-		{
-			var di = new DirectoryInfo(DOMControl.ParentForm.Context.FilePath);
-
-			if (Directory.Exists(di.FullName))
-			{
-				return di.FullName; //Examples assembly
-			}
-			else
-			{
-				return di.Parent.FullName; //Projects folder
-			}
-		}
-
 		private void CreateContextMenu()
 		{
 			var contextMenu = DOMControl.ContextMenu;

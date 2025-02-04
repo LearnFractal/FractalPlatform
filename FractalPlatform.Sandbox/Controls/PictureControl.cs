@@ -39,7 +39,8 @@ namespace FractalPlatform.Sandbox.Controls
                 }
                 else
                 {
-                    var filePath = Path.Combine(GetFilePath(), domControl.Value);
+                    var filePath = Path.Combine(domControl.ParentForm.Context.Application.GetFilesPath(),
+                                                domControl.Value);
 
                     bxPicture.Image = Image.FromFile(filePath);
                 }
