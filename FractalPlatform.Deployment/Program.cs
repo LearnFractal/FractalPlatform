@@ -517,31 +517,51 @@ namespace FractalPlatform.Deployment
 
 				var options = JsonConvert.DeserializeObject<Options>(appSettings);
 
-				if (args.Length > 0)
+				if (args.Length == 1)
 				{
 					options.AppNames = new List<string> { args[0] };
 
-					if (args.Length > 1)
+					if (args.Length == 2)
 					{
 						options.Assemblies = new List<string> { args[1] };
 
-						if (args.Length > 2)
+						if (args.Length == 3)
 						{
 							options.DeploymentKey = args[2];
 
-							if (args.Length > 3)
+							if (args.Length == 4)
 							{
 								options.BaseUrl = args[3];
 
-								if (args.Length > 4)
+								if (args.Length == 5)
 								{
-									options.IsDeployAssembly = bool.Parse(args[4]);
+									options.IsDeployApplication = bool.Parse(args[4]);
 
-									if (args.Length > 5)
+									if (args.Length == 6)
 									{
-										options.IsRecreateDatabase = bool.Parse(args[5]);
+										options.IsDeployAssembly = bool.Parse(args[5]);
 
-										options.IsRunBrowser = false;
+										if (args.Length == 7)
+										{
+											options.IsDeployDatabase = bool.Parse(args[6]);
+
+											if (args.Length == 8)
+											{
+												options.IsRecreateDatabase = bool.Parse(args[7]);
+
+												if (args.Length == 9)
+												{
+													options.IsDeployFiles = bool.Parse(args[8]);
+
+													if (args.Length == 10)
+													{
+														options.IsRebuildApplication = bool.Parse(args[9]);
+
+														options.IsRunBrowser = false;
+													}
+												}
+											}
+										}
 									}
 								}
 							}
