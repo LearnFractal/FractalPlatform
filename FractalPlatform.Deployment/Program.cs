@@ -506,7 +506,22 @@ namespace FractalPlatform.Deployment
 			}
 		}
 
-		static void Main(string[] args)
+		static void FillOptions(Options options, string[] args)
+		{
+            options.AppNames = args.Length > 0 ? new List<string> { args[0] } : options.AppNames;
+            options.Assemblies = args.Length > 1 ? new List<string> { args[1] } : options.Assemblies;
+			options.DeploymentKey = args.Length > 2 ? args[2] : options.DeploymentKey;
+			options.BaseUrl = args.Length > 3 ? args[3] : options.BaseUrl;
+			options.IsDeployApplication = args.Length > 4 ? bool.Parse(args[4]) : options.IsDeployApplication;
+			options.IsDeployAssembly = args.Length > 5 ? bool.Parse(args[5]) : options.IsDeployAssembly;
+			options.IsDeployDatabase = args.Length > 6 ? bool.Parse(args[6]) : options.IsDeployDatabase;
+			options.IsRecreateDatabase = args.Length > 7 ? bool.Parse(args[7]) : options.IsRecreateDatabase;
+			options.IsDeployFiles = args.Length > 8 ? bool.Parse(args[8]) : options.IsDeployFiles;
+			options.IsRebuildApplication = args.Length > 9 ? bool.Parse(args[9]) : options.IsRebuildApplication;
+            options.IsRunBrowser = args.Length == 0;
+        }
+
+        static void Main(string[] args)
 		{
 			try
 			{
@@ -517,58 +532,8 @@ namespace FractalPlatform.Deployment
 
 				var options = JsonConvert.DeserializeObject<Options>(appSettings);
 
-				if (args.Length == 1)
-				{
-					options.AppNames = new List<string> { args[0] };
-
-					if (args.Length == 2)
-					{
-						options.Assemblies = new List<string> { args[1] };
-
-						if (args.Length == 3)
-						{
-							options.DeploymentKey = args[2];
-
-							if (args.Length == 4)
-							{
-								options.BaseUrl = args[3];
-
-								if (args.Length == 5)
-								{
-									options.IsDeployApplication = bool.Parse(args[4]);
-
-									if (args.Length == 6)
-									{
-										options.IsDeployAssembly = bool.Parse(args[5]);
-
-										if (args.Length == 7)
-										{
-											options.IsDeployDatabase = bool.Parse(args[6]);
-
-											if (args.Length == 8)
-											{
-												options.IsRecreateDatabase = bool.Parse(args[7]);
-
-												if (args.Length == 9)
-												{
-													options.IsDeployFiles = bool.Parse(args[8]);
-
-													if (args.Length == 10)
-													{
-														options.IsRebuildApplication = bool.Parse(args[9]);
-
-														options.IsRunBrowser = false;
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-
+				FillOptions(options, args);
+				
 				if (options.AppNames == null)
 				{
 					options.AppNames = new List<string>();
