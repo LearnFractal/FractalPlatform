@@ -14,7 +14,12 @@ namespace FractalPlatform.Deployment
 		public void Initialize(IEventSource eventSource)
 		{
 			// Capture error messages
-			eventSource.ErrorRaised += (sender, e) => Errors.Add(e.Message);
+			eventSource.ErrorRaised += (sender, e) =>
+			{
+				var message = $"{e.Message} in {e.LineNumber} line number.";
+
+				Errors.Add(message);
+			};
 
 			// Capture warning messages
 			eventSource.WarningRaised += (sender, e) => Warnings.Add(e.Message);
