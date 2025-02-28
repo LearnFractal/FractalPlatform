@@ -6,7 +6,11 @@ using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Build.Evaluation;
+using Microsoft.Build.Execution;
+using Microsoft.Build.Locator;
 using Newtonsoft.Json;
 
 namespace FractalPlatform.Deployment
@@ -277,7 +281,8 @@ namespace FractalPlatform.Deployment
 											  bool isDeployDatabase,
 											  bool isRecreateDatabase,
 											  bool isDeployFiles,
-											  bool isDeployApplication)
+											  bool isDeployApplication,
+											  bool isDeployAssembly)
 		{
 			var assemblyName = GetAssemblyName(assemblyFile);
 
@@ -356,27 +361,117 @@ namespace FractalPlatform.Deployment
 					}
 				}
 
-				//upload sources
-				zipPath = ZipDirectory(ResourceType.Sources, assemblyName, appName);
-
-				if (zipPath != null)
+				if (isDeployAssembly)
 				{
-					var fileBytes = await File.ReadAllBytesAsync(zipPath);
+					//upload assembly
+#if DEBUG
+					var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Debug\net8.0\{assemblyFile}";
+#else
+					var filePath = @$"{FindAssemblyPath(assemblyName)}\bin\Release\net8.0\{assemblyFile}";
+#endif
 
-					try
+					if (File.Exists(filePath))
 					{
+						var fileBytes = await File.ReadAllBytesAsync(filePath);
+
 						await UploadAsync(baseUrl,
 										  appName,
-										  "Sources",
-										  $"{appName}.zip",
+										  "Assembly",
+										  assemblyFile,
 										  fileBytes,
 										  deploymentKey);
 					}
-					finally
+				}
+				else //deploy sources
+				{
+					//upload sources
+					zipPath = ZipDirectory(ResourceType.Sources, assemblyName, appName);
+
+					if (zipPath != null)
 					{
-						File.Delete(zipPath);
+						var fileBytes = await File.ReadAllBytesAsync(zipPath);
+
+						try
+						{
+							await UploadAsync(baseUrl,
+											  appName,
+											  "Sources",
+											  $"{appName}.zip",
+											  fileBytes,
+											  deploymentKey);
+						}
+						finally
+						{
+							File.Delete(zipPath);
+						}
 					}
 				}
+			}
+		}
+
+		static void Rebuild(string appName)
+		{
+			Console.WriteLine($"Start build {appName} application ...");
+
+			var assemblyName = $"FractalPlatform.{appName}";
+
+			var projFile = @$"{FindAssemblyPath(assemblyName)}\{assemblyName}.csproj";
+
+			if (!File.Exists(projFile))
+			{
+				assemblyName = "FractalPlatform.Examples";
+
+				projFile = @$"{FindAssemblyPath(assemblyName)}\{assemblyName}.csproj";
+			}
+
+			var projectCollection = new ProjectCollection();
+			var project = projectCollection.LoadProject(projFile);
+
+			var captureLogger = new CaptureLogger();
+			var buildParameters = new BuildParameters(projectCollection)
+			{
+				Loggers = new[] { captureLogger }
+			};
+
+			var buildProperties = new Dictionary<string, string>
+			{
+#if DEBUG
+                { "Configuration", "Debug" } // Set the build configuration to Debug
+#else
+                { "Configuration", "Release" } // Set the build configuration to Release
+#endif
+            };
+
+			var buildRequestData = new BuildRequestData(project.FullPath, buildProperties, null, new[] { "Restore", "Build" }, null);
+
+			var buildManager = BuildManager.DefaultBuildManager;
+
+			buildManager.BeginBuild(buildParameters);
+
+			var buildResult = buildManager.BuildRequest(buildRequestData);
+
+			buildManager.EndBuild();
+
+			if (buildResult.OverallResult == BuildResultCode.Success)
+			{
+				Console.WriteLine($"Build {appName} succeded.");
+			}
+			else
+			{
+				var sb = new StringBuilder();
+
+				sb.AppendLine("=============================");
+
+				foreach (var error in captureLogger.Errors)
+				{
+					sb.AppendLine($"Error: {error}");
+				}
+
+				sb.AppendLine("=============================");
+
+				sb.AppendLine($"Build {appName} FAILED.");
+
+				throw new Exception(sb.ToString());
 			}
 		}
 
@@ -398,7 +493,8 @@ namespace FractalPlatform.Deployment
 						options.IsDeployDatabase,
 						options.IsRecreateDatabase,
 						options.IsDeployFiles,
-						options.IsDeployApplication).Wait();
+						options.IsDeployApplication,
+						options.IsDeployAssembly).Wait();
 
 			Console.WriteLine($"{appName} application is deployed !");
 
@@ -410,7 +506,22 @@ namespace FractalPlatform.Deployment
 			}
 		}
 
-		static void Main(string[] args)
+		static void FillOptions(Options options, string[] args)
+		{
+            options.AppNames = args.Length > 0 ? new List<string> { args[0] } : options.AppNames;
+            options.Assemblies = args.Length > 1 ? new List<string> { args[1] } : options.Assemblies;
+			options.DeploymentKey = args.Length > 2 ? args[2] : options.DeploymentKey;
+			options.BaseUrl = args.Length > 3 ? args[3] : options.BaseUrl;
+			options.IsDeployApplication = args.Length > 4 ? bool.Parse(args[4]) : options.IsDeployApplication;
+			options.IsDeployAssembly = args.Length > 5 ? bool.Parse(args[5]) : options.IsDeployAssembly;
+			options.IsDeployDatabase = args.Length > 6 ? bool.Parse(args[6]) : options.IsDeployDatabase;
+			options.IsRecreateDatabase = args.Length > 7 ? bool.Parse(args[7]) : options.IsRecreateDatabase;
+			options.IsDeployFiles = args.Length > 8 ? bool.Parse(args[8]) : options.IsDeployFiles;
+			options.IsRebuildApplication = args.Length > 9 ? bool.Parse(args[9]) : options.IsRebuildApplication;
+            options.IsRunBrowser = args.Length == 0;
+        }
+
+        static void Main(string[] args)
 		{
 			try
 			{
@@ -421,6 +532,8 @@ namespace FractalPlatform.Deployment
 
 				var options = JsonConvert.DeserializeObject<Options>(appSettings);
 
+				FillOptions(options, args);
+				
 				if (options.AppNames == null)
 				{
 					options.AppNames = new List<string>();
@@ -456,6 +569,13 @@ namespace FractalPlatform.Deployment
 
 				foreach (var appName in options.AppNames)
 				{
+					if (options.IsRebuildApplication)
+					{
+						MSBuildLocator.RegisterDefaults();
+
+						Rebuild(appName);
+					}
+
 					Deploy(options, appName);
 				}
 
