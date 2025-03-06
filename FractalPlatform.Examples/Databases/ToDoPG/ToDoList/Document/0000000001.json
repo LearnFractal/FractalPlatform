@@ -1,0 +1,35 @@
+﻿{
+   "Title": "My Todo List",
+   "Author": {
+      "Age": 43,
+      "Owner": "Slavik"
+   },
+   "Categories": [
+      {
+         "Location": "Home",
+         "ToDos": [
+            {
+               "Completed": false,
+               "Task": "Buy food"
+            },
+            {
+               "Completed": false,
+               "Task": "Clean room"
+            }
+         ]
+      },
+      {
+         "Location": "Work",
+         "ToDos": [
+            {
+               "Completed": false,
+               "Task": "Create ToDo program"
+            },
+            {
+               "Completed": false,
+               "Task": "Test ToDo program"
+            }
+         ]
+      }
+   ]
+}

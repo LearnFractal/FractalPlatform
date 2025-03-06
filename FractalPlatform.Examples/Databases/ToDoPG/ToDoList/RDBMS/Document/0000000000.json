@@ -1,0 +1,10 @@
+{
+  "Enabled": true,
+  "ConnectionString": "Host=localhost;Port=5432;Database=ToDoPG;Username=postgres;Password=postgres;",
+  "Schema": "tst",
+  "Vendor": "PG",
+  "Mode": {
+    "Read": "RDBMS",
+    "Write": "RDBMS"
+  }
+}
