@@ -569,7 +569,7 @@ namespace FractalPlatform.Deployment
 
 				foreach (var appName in options.AppNames)
 				{
-					if (options.IsRebuildApplication &&
+					if (options.IsRebuildApplication ||
 						options.IsDeployAssembly)
 					{
 						MSBuildLocator.RegisterDefaults();
